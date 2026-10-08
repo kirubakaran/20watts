@@ -15,7 +15,7 @@ const ROOT = path.resolve(import.meta.dirname, "..");
 const COLLECTION = path.join(ROOT, "src/data/collection.json");
 const OUT_DIR = path.join(ROOT, "public/assets");
 const TARGET_WIDTHS = [1024, 2048, 4096];
-const USER_AGENT = "vrmuseum/0.1 (https://github.com/kiru/vrmuseum)";
+const USER_AGENT = "musee/0.1 (https://github.com/kirubakaran/musee)";
 
 function commonsTitleFromUrl(url: string): string {
   const m = /\/commons\/[0-9a-f]\/[0-9a-f]{2}\/([^/?#]+)/.exec(url);
