@@ -3,6 +3,323 @@
   "generatedAt": "2026-10-08T00:00:00Z",
   "artworks": [
     {
+      "id": "zen-21530762",
+      "kind": "model",
+      "title": "Acheulean hand axe, Saint-Acheul",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [],
+      "date": {
+        "year": -300000,
+        "yearStart": -1500000,
+        "yearEnd": -300000,
+        "label": "Lower Palaeolithic, Acheulean (before 300,000 years ago)",
+        "precision": "circa"
+      },
+      "madeIn": {
+        "name": "Saint-Acheul, Amiens",
+        "region": "Somme, Hauts-de-France",
+        "country": "France",
+        "point": {
+          "lat": 49.8919,
+          "lon": 2.2978
+        },
+        "wikidataQid": "Q41604"
+      },
+      "location": {
+        "name": "Chapel Hill, North Carolina",
+        "region": null,
+        "country": "United States",
+        "point": null,
+        "wikidataQid": null,
+        "institution": "Research Laboratories of Archaeology, University of North Carolina at Chapel Hill (North Carolina Archaeological Collection)",
+        "inventoryNumber": "516a5"
+      },
+      "culture": "Acheulean (Homo erectus / Homo heidelbergensis)",
+      "movement": null,
+      "periodSlug": "paleolithic",
+      "medium": "Bifacially knapped flint",
+      "materials": [
+        "flint"
+      ],
+      "genre": [
+        "tool",
+        "hand axe"
+      ],
+      "subjects": [
+        "stone tool",
+        "hand axe",
+        "Lower Palaeolithic",
+        "human evolution"
+      ],
+      "physical": {
+        "widthCm": 6.06,
+        "heightCm": 9.93,
+        "depthCm": 3.14,
+        "weightKg": null
+      },
+      "description": "The hand axe is the signature tool of the Acheulean, a tradition that early humans sustained for well over a million years across Africa, Europe and Asia. Each one was shaped by striking flakes from both faces of a flint nodule until a symmetrical, teardrop cutting edge remained. This example comes from the gravel pits of Saint-Acheul at Amiens, the site that gave the industry its name, and still bears its 1920s collector's label.",
+      "facts": [
+        "The Acheulean is named after Saint-Acheul, a suburb of Amiens, where hand axes were found in the Somme river gravels in the 19th century.",
+        "Hand axes were made from roughly 1.6 million to about 100,000 years ago, chiefly by Homo erectus and its successors, and only rarely by Homo sapiens.",
+        "Jacques Boucher de Perthes's finds in the Somme gravels in the 1840s helped establish that humans had coexisted with extinct Ice Age animals."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Hand_axe",
+      "wikidataQid": "Q479448",
+      "externalIds": {
+        "zenodo": "21530762"
+      },
+      "copyrighted": false,
+      "asset": {
+        "kind": "model",
+        "currentVersionId": "zen-21530762-v1",
+        "versions": [
+          {
+            "id": "zen-21530762-v1",
+            "original": {
+              "url": "https://zenodo.org/api/records/21530762/files/ab5a9c0862974e2b99a951ac4776257e.glb/content",
+              "format": "glb",
+              "bytes": 2283092,
+              "triangles": 60000,
+              "unitScale": 0.03745
+            },
+            "rungs": [
+              {
+                "quality": "thumb",
+                "url": "/assets/zen-21530762/thumb.glb",
+                "bytes": 59312,
+                "triangles": 5666,
+                "textureSize": 512,
+                "draco": true
+              },
+              {
+                "quality": "low",
+                "url": "/assets/zen-21530762/low.glb",
+                "bytes": 174536,
+                "triangles": 20998,
+                "textureSize": 1024,
+                "draco": true
+              },
+              {
+                "quality": "medium",
+                "url": "/assets/zen-21530762/medium.glb",
+                "bytes": 223204,
+                "triangles": 36000,
+                "textureSize": 1024,
+                "draco": true
+              },
+              {
+                "quality": "high",
+                "url": "/assets/zen-21530762/high.glb",
+                "bytes": 288824,
+                "triangles": 60000,
+                "textureSize": 1024,
+                "draco": true
+              }
+            ],
+            "scale": 1,
+            "bounds": {
+              "width": 0.099,
+              "height": 0.06,
+              "depth": 0.036
+            },
+            "credit": {
+              "author": "Research Laboratories of Archaeology, University of North Carolina at Chapel Hill (model by Kay Waller)",
+              "license": {
+                "name": "CC0 1.0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "sourcePage": "https://zenodo.org/records/21530762"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-08T00:00:00Z",
+              "note": "Photogrammetry scan of a real flint hand axe, catalogue 516a5, published CC0 by UNC's Research Laboratories of Archaeology on Sketchfab (https://sketchfab.com/3d-models/acheulean-hand-axe-516a5-ab5a9c0862974e2b99a951ac4776257e, uid ab5a9c0862974e2b99a951ac4776257e, user rla-archaeology) and mirrored as a glb on Zenodo ('Source: Objaverse 1.0 / Sketchfab', DOI 10.5281/zenodo.21530762); anonymous download verified. The RLA description gives the findspot as 'Montieres Amiens, France'; the old collector's ink label visible on the scan reads 'AMIENS - ST. ACHEUL ... Ach. 516A5', i.e. the Acheulean type site (Montières and Saint-Acheul are quarters of Amiens). Raw glb: 60,000 triangles, one texture, bounding box 2.6514 x 1.0572 x 1.5256 units; real length 99.3 mm, so scale = 0.0993/2.6514 = 0.03745 m per unit. Use the raw '<uid>.glb', not the '_normalized' variants. Dimensions (99.3 x 60.6 x 31.4 mm), material and 'Lower Paleolithic (before 300,000 years ago)' from the RLA description; the broader Acheulean range (c. 1.6 million to 100,000 years ago) from Wikipedia 'Hand axe'. Collected 1929 by James Bell Bullitt, donated to UNC. No Smithsonian/Met scan found."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "zenodo",
+            "representation": "scan"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": 1,
+        "back": "none",
+        "yaw": null,
+        "fallbackWidthM": 1.2
+      },
+      "tags": [
+        "acheulean",
+        "stone tool",
+        "homo erectus"
+      ],
+      "pageviews": null,
+      "importance": 0.95,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-08T00:00:00Z",
+      "updatedAt": "2026-10-08T23:10:45.837Z"
+    },
+    {
+      "id": "wm-29686577",
+      "kind": "image",
+      "title": "Löwenmensch (Lion-man) of Hohlenstein-Stadel",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [],
+      "date": {
+        "year": -38000,
+        "yearStart": -39000,
+        "yearEnd": -33000,
+        "label": "c. 40,000 years ago (Aurignacian)",
+        "precision": "circa"
+      },
+      "madeIn": {
+        "name": "Hohlenstein-Stadel cave, Lone valley",
+        "region": "Asselfingen, Baden-Württemberg",
+        "country": "Germany",
+        "point": {
+          "lat": 48.5493,
+          "lon": 10.1724
+        },
+        "wikidataQid": "Q1498134"
+      },
+      "location": {
+        "name": "Museum Ulm",
+        "region": null,
+        "country": "Germany",
+        "point": null,
+        "wikidataQid": null,
+        "institution": "Museum Ulm",
+        "inventoryNumber": null
+      },
+      "culture": "Aurignacian (Upper Palaeolithic)",
+      "movement": null,
+      "periodSlug": "paleolithic",
+      "medium": "Carved mammoth ivory",
+      "materials": [
+        "mammoth ivory"
+      ],
+      "genre": [
+        "sculpture",
+        "figurine"
+      ],
+      "subjects": [
+        "cave lion",
+        "human figure",
+        "therianthrope",
+        "figurine"
+      ],
+      "physical": {
+        "widthCm": null,
+        "heightCm": null,
+        "depthCm": null,
+        "weightKg": null
+      },
+      "description": "A standing figure with a human body and the head of a cave lion, carved from a mammoth tusk with flint tools. Found in fragments in the Hohlenstein-Stadel cave in the Swabian Jura in 1939, it was reassembled over decades from more than two hundred pieces and is among the oldest known figurative sculptures.",
+      "facts": [
+        "Discovered on 25 August 1939 by Otto Völzing, a week before the Second World War halted the dig.",
+        "Radiocarbon dating of its find layer places it between 35,000 and 41,000 years old.",
+        "Seven parallel transverse gouges are carved into the left arm; the 2012-13 restoration raised its height from 29.6 to 31.1 cm."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Lion-man_of_Hohlenstein-Stadel",
+      "wikidataQid": "Q702658",
+      "externalIds": {
+        "commons-curid": "29686577",
+        "commons-file": "Loewenmensch1.jpg"
+      },
+      "copyrighted": false,
+      "asset": {
+        "kind": "image",
+        "currentVersionId": "wm-29686577-v1",
+        "versions": [
+          {
+            "id": "wm-29686577-v1",
+            "original": {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Loewenmensch1.jpg",
+              "width": 2218,
+              "height": 3944,
+              "bytes": 2696761,
+              "mime": "image/jpeg"
+            },
+            "rungs": [
+              {
+                "width": 1280,
+                "height": 2276,
+                "url": "/assets/wm-29686577/1280.jpg",
+                "bytes": 340599
+              },
+              {
+                "width": 2048,
+                "height": 3642,
+                "url": "/assets/wm-29686577/2048.jpg",
+                "bytes": 2696761
+              }
+            ],
+            "loop": null,
+            "credit": {
+              "author": "Dagmar Hollmann",
+              "license": {
+                "name": "CC BY-SA 4.0",
+                "url": "https://creativecommons.org/licenses/by-sa/4.0"
+              },
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Loewenmensch1.jpg"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-08T00:00:00Z",
+              "note": "Original figurine photographed in Museum Ulm, frontal three-quarter view on a plain dark background; this is also the English Wikipedia infobox image. File metadata from the Commons imageinfo API. Object data: Dates: Wikipedia (35,000-41,000 years old; Wikidata inception c. 38,000 BCE). Dimensions 31.1 x 5.6 x 5.9 cm: Wikipedia lead. Find-spot coordinates: Wikidata Q1498134 (Hohlenstein-Stadel). Discovery date: Wikipedia/Wikidata. Museum Ulm inventory number not published on Wikipedia/Wikidata."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "wikimedia-commons"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": 0.5,
+        "back": "mirror",
+        "yaw": null,
+        "fallbackWidthM": 0.6
+      },
+      "tags": [
+        "aurignacian",
+        "ivory",
+        "swabian jura"
+      ],
+      "pageviews": null,
+      "importance": 0.95,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-08T00:00:00Z",
+      "updatedAt": "2026-10-08T23:10:46.193Z"
+    },
+    {
       "id": "wm-31360759",
       "kind": "image",
       "title": "Hand stencils, Leang Pettakere",
@@ -158,7 +475,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-08T00:00:00Z",
-      "updatedAt": "2026-10-08T22:06:16.882Z"
+      "updatedAt": "2026-10-08T23:10:46.440Z"
     },
     {
       "id": "wm-47569433",
@@ -319,7 +636,152 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-08T00:00:00Z",
-      "updatedAt": "2026-10-08T22:06:18.232Z"
+      "updatedAt": "2026-10-08T23:10:46.720Z"
+    },
+    {
+      "id": "wm-1587877",
+      "kind": "image",
+      "title": "Venus of Willendorf",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [],
+      "date": {
+        "year": -28000,
+        "yearStart": -31000,
+        "yearEnd": -18000,
+        "label": "c. 30,000 years ago (Gravettian)",
+        "precision": "circa"
+      },
+      "madeIn": {
+        "name": "Willendorf II site, Willendorf in der Wachau",
+        "region": "Lower Austria",
+        "country": "Austria",
+        "point": {
+          "lat": 48.32327,
+          "lon": 15.40412
+        },
+        "wikidataQid": "Q9374772"
+      },
+      "location": {
+        "name": "Naturhistorisches Museum Wien",
+        "region": null,
+        "country": "Austria",
+        "point": null,
+        "wikidataQid": null,
+        "institution": "Natural History Museum, Vienna",
+        "inventoryNumber": null
+      },
+      "culture": "Gravettian (Upper Palaeolithic)",
+      "movement": null,
+      "periodSlug": "paleolithic",
+      "medium": "Carved oolitic limestone with traces of red ochre",
+      "materials": [
+        "oolitic limestone",
+        "red ochre"
+      ],
+      "genre": [
+        "sculpture",
+        "figurine"
+      ],
+      "subjects": [
+        "female figure",
+        "Venus figurine",
+        "fertility"
+      ],
+      "physical": {
+        "widthCm": null,
+        "heightCm": null,
+        "depthCm": null,
+        "weightKg": null
+      },
+      "description": "A palm-sized female figure with exaggerated breasts, belly and hips, a patterned head without a face, and no feet. It was carved from an oolitic limestone not found locally and once tinted with red ochre. Found in 1908 in loess deposits beside the Danube at Willendorf, it is the best-known of the Palaeolithic Venus figurines.",
+      "facts": [
+        "Recovered on 7 August 1908 during a dig led by Josef Szombathy, Hugo Obermaier and Josef Bayer.",
+        "Radiocarbon dates from the surrounding layers suggest it was buried about 30,000 years ago.",
+        "Its limestone is not local to the Wachau; the name Venus is a modern label, and some scholars prefer Woman of Willendorf."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Venus_of_Willendorf",
+      "wikidataQid": "Q131397",
+      "externalIds": {
+        "commons-curid": "1587877",
+        "commons-file": "Venus of Willendorf 03.jpg"
+      },
+      "copyrighted": false,
+      "asset": {
+        "kind": "image",
+        "currentVersionId": "wm-1587877-v1",
+        "versions": [
+          {
+            "id": "wm-1587877-v1",
+            "original": {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Venus_of_Willendorf_03.jpg",
+              "width": 2308,
+              "height": 3468,
+              "bytes": 1677975,
+              "mime": "image/jpeg"
+            },
+            "rungs": [
+              {
+                "width": 1280,
+                "height": 1924,
+                "url": "/assets/wm-1587877/1280.jpg",
+                "bytes": 627434
+              },
+              {
+                "width": 2048,
+                "height": 3077,
+                "url": "/assets/wm-1587877/2048.jpg",
+                "bytes": 1677975
+              }
+            ],
+            "loop": null,
+            "credit": {
+              "author": "MatthiasKabel",
+              "license": {
+                "name": "CC BY 2.5",
+                "url": "https://creativecommons.org/licenses/by/2.5"
+              },
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Venus_of_Willendorf_03.jpg"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-08T00:00:00Z",
+              "note": "Original figurine at the Naturhistorisches Museum Wien, frontal view on a black background. CC BY (no share-alike). File metadata from the Commons imageinfo API. Object data: Date c. 30,000 BP: Wikipedia infobox; yearStart/yearEnd span the Gravettian range Wikipedia gives (33,000-20,000 years ago). Height 11.1 cm: Wikipedia lead and Wikidata P2048; width/depth not given there. Find-spot coordinates: Wikidata Q9374772 (Willendorf II). NHM inventory number not given on Wikipedia/Wikidata."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "wikimedia-commons"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": 0.5,
+        "back": "mirror",
+        "yaw": null,
+        "fallbackWidthM": 0.5
+      },
+      "tags": [
+        "gravettian",
+        "venus figurine"
+      ],
+      "pageviews": null,
+      "importance": 0.95,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-08T00:00:00Z",
+      "updatedAt": "2026-10-08T23:10:46.996Z"
     },
     {
       "id": "wm-6909701",
@@ -474,7 +936,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-08T00:00:00Z",
-      "updatedAt": "2026-10-08T22:06:18.549Z"
+      "updatedAt": "2026-10-08T23:10:47.148Z"
     },
     {
       "id": "wm-3513129",
@@ -635,7 +1097,178 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-08T00:00:00Z",
-      "updatedAt": "2026-10-08T22:06:19.696Z"
+      "updatedAt": "2026-10-08T23:10:47.491Z"
+    },
+    {
+      "id": "zen-21490444",
+      "kind": "model",
+      "title": "Clovis point (Clovis lanceolate spear point)",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [],
+      "date": {
+        "year": -11000,
+        "yearStart": -11400,
+        "yearEnd": -10700,
+        "label": "c. 11,400–10,700 BCE (Early Paleoindian, Clovis)",
+        "precision": "circa"
+      },
+      "madeIn": {
+        "name": "Piedmont region, North Carolina",
+        "region": "North Carolina",
+        "country": "United States",
+        "point": {
+          "lat": 35.9073,
+          "lon": -79.0499
+        },
+        "wikidataQid": null
+      },
+      "location": {
+        "name": "Chapel Hill, North Carolina",
+        "region": null,
+        "country": "United States",
+        "point": null,
+        "wikidataQid": null,
+        "institution": "Research Laboratories of Archaeology, University of North Carolina at Chapel Hill (North Carolina Archaeological Collection)",
+        "inventoryNumber": null
+      },
+      "culture": "Clovis (Paleoindian)",
+      "movement": null,
+      "periodSlug": "paleolithic",
+      "medium": "Knapped metavolcanic stone, fluted lanceolate projectile point",
+      "materials": [
+        "metavolcanic rock"
+      ],
+      "genre": [
+        "tool",
+        "projectile point"
+      ],
+      "subjects": [
+        "stone tool",
+        "projectile point",
+        "Paleoindian",
+        "hunting"
+      ],
+      "physical": {
+        "widthCm": 3.28,
+        "heightCm": 8.45,
+        "depthCm": 0.67,
+        "weightKg": null
+      },
+      "description": "Clovis points are the fluted, lance-shaped spear tips of the Clovis culture, the earliest widespread tool tradition in the Americas. A shallow channel, or flute, struck from the base on each face let the point be seated in a split wooden or bone shaft. This example, knapped from metavolcanic stone, was found in the Piedmont of North Carolina and donated to the University of North Carolina, whose archaeology laboratory made the scan.",
+      "facts": [
+        "Clovis points are named after Clovis, New Mexico, where the first examples were found in 1929 by Ridgely Whiteman.",
+        "All known Clovis points date to roughly 13,400–12,700 years ago, often in association with mammoth and other Ice Age animal remains.",
+        "Finished points were fluted on both faces so they could be hafted; the technique was passed between knappers across the continent."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Clovis_point",
+      "wikidataQid": "Q140654",
+      "externalIds": {
+        "zenodo": "21490444"
+      },
+      "copyrighted": false,
+      "asset": {
+        "kind": "model",
+        "currentVersionId": "zen-21490444-v1",
+        "versions": [
+          {
+            "id": "zen-21490444-v1",
+            "original": {
+              "url": "https://zenodo.org/api/records/21490444/files/f5a48834fc66497ebc416ef94ec2eeeb.glb/content",
+              "format": "glb",
+              "bytes": 3126688,
+              "triangles": 87188,
+              "unitScale": 0.0335
+            },
+            "rungs": [
+              {
+                "quality": "thumb",
+                "url": "/assets/zen-21490444/thumb.glb",
+                "bytes": 52104,
+                "triangles": 4358,
+                "textureSize": 512,
+                "draco": true
+              },
+              {
+                "quality": "low",
+                "url": "/assets/zen-21490444/low.glb",
+                "bytes": 214584,
+                "triangles": 30514,
+                "textureSize": 1024,
+                "draco": true
+              },
+              {
+                "quality": "medium",
+                "url": "/assets/zen-21490444/medium.glb",
+                "bytes": 281144,
+                "triangles": 52312,
+                "textureSize": 1024,
+                "draco": true
+              },
+              {
+                "quality": "high",
+                "url": "/assets/zen-21490444/high.glb",
+                "bytes": 374072,
+                "triangles": 87188,
+                "textureSize": 1024,
+                "draco": true
+              }
+            ],
+            "scale": 1,
+            "bounds": {
+              "width": 0.033,
+              "height": 0.085,
+              "depth": 0.007
+            },
+            "credit": {
+              "author": "Research Laboratories of Archaeology, University of North Carolina at Chapel Hill (model by Steve Davis)",
+              "license": {
+                "name": "CC0 1.0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "sourcePage": "https://zenodo.org/records/21490444"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-08T00:00:00Z",
+              "note": "Photogrammetry scan of a real Clovis point, published CC0 by UNC's Research Laboratories of Archaeology on Sketchfab (https://sketchfab.com/3d-models/clovis-lanceolate-f5a48834fc66497ebc416ef94ec2eeeb, uid f5a48834fc66497ebc416ef94ec2eeeb, user rla-archaeology) and mirrored as a glb on Zenodo ('Source: Objaverse 1.0 / Sketchfab', DOI 10.5281/zenodo.21490444), which downloads anonymously (verified HTTP 200, 3.1 MB). Raw Sketchfab-export glb: 87,188 triangles, one texture, no Draco; bounding box 2.5213 x 0.216 x 0.9737 units. Real length 84.5 mm (RLA description), so scale = 0.0845/2.5213 = 0.0335 m per unit; drop into data/originals/<id>/ with provenance 'sketchfab' and set scale accordingly. The record also carries '_normalized' variants (unit-cube rescaled) which should NOT be used. Dimensions (84.5 x 32.8 x 6.7 mm) and findspot from the RLA description; date range from Wikipedia 'Clovis point' (13,400-12,700 years ago). No Smithsonian or Met scan of a Clovis point was found (3d.si.edu blocked scripted access; the Smithsonian's Sketchfab mirror has none)."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "zenodo",
+            "representation": "scan"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": 1,
+        "back": "none",
+        "yaw": null,
+        "fallbackWidthM": 1.2
+      },
+      "tags": [
+        "clovis",
+        "paleoindian",
+        "stone tool"
+      ],
+      "pageviews": null,
+      "importance": 0.85,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-08T00:00:00Z",
+      "updatedAt": "2026-10-08T23:10:48.130Z"
     },
     {
       "id": "wm-80059616",
@@ -793,7 +1426,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-08T00:00:00Z",
-      "updatedAt": "2026-10-08T22:06:21.365Z"
+      "updatedAt": "2026-10-08T23:10:48.559Z"
     },
     {
       "id": "wm-33749461",
@@ -953,7 +1586,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-08T00:00:00Z",
-      "updatedAt": "2026-10-08T22:06:22.378Z"
+      "updatedAt": "2026-10-08T23:10:48.928Z"
     },
     {
       "id": "wm-265811",
@@ -1109,7 +1742,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-08T00:00:00Z",
-      "updatedAt": "2026-10-08T22:06:22.675Z"
+      "updatedAt": "2026-10-08T23:10:49.061Z"
     },
     {
       "id": "wm-153807790",
@@ -1269,7 +1902,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-08T00:00:00Z",
-      "updatedAt": "2026-10-08T22:06:23.929Z"
+      "updatedAt": "2026-10-08T23:10:49.472Z"
     },
     {
       "id": "wm-146391319",
@@ -1429,7 +2062,759 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-08T00:00:00Z",
-      "updatedAt": "2026-10-08T22:06:25.710Z"
+      "updatedAt": "2026-10-08T23:10:49.895Z"
+    },
+    {
+      "id": "wm-57854047",
+      "kind": "image",
+      "title": "Proto-cuneiform tablet: account of barley distribution",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [],
+      "date": {
+        "year": -3000,
+        "yearStart": -3100,
+        "yearEnd": -2900,
+        "label": "ca. 3100–2900 BCE (Jemdet Nasr period)",
+        "precision": "circa"
+      },
+      "madeIn": {
+        "name": "Southern Mesopotamia (find-spot unrecorded; placed at Uruk)",
+        "region": "Mesopotamia",
+        "country": "Iraq",
+        "point": {
+          "lat": 31.3259,
+          "lon": 45.6374
+        },
+        "wikidataQid": null
+      },
+      "location": {
+        "name": "The Metropolitan Museum of Art, New York",
+        "region": null,
+        "country": "United States",
+        "point": null,
+        "wikidataQid": null,
+        "institution": "The Metropolitan Museum of Art",
+        "inventoryNumber": "1988.433.1"
+      },
+      "culture": "Sumerian",
+      "movement": null,
+      "periodSlug": "ancient-near-east",
+      "medium": "Clay, impressed with a stylus and a cylinder seal",
+      "materials": [
+        "clay"
+      ],
+      "genre": [
+        "document",
+        "writing"
+      ],
+      "subjects": [
+        "writing",
+        "accounting",
+        "barley",
+        "cylinder seal impression",
+        "hunting dogs",
+        "boars"
+      ],
+      "physical": {
+        "widthCm": null,
+        "heightCm": null,
+        "depthCm": null,
+        "weightKg": null
+      },
+      "description": "A small clay tablet recording the distribution of barley in the pictographic proto-cuneiform script, the earliest stage of writing in Mesopotamia. Numerical notations are pressed into the clay with the round end of a stylus beside signs for the commodity and its recipients. The reverse and edges were rolled with a cylinder seal showing a man with hunting dogs and boars.",
+      "facts": [
+        "Dated by the Met to about 3100-2900 BCE, the Jemdet Nasr period, when writing was still largely pictographic.",
+        "The tablet measures 5.4 by 6 by 4.1 cm and entered the Met in 1988 as a Raymond and Beverly Sackler gift purchase.",
+        "Proto-cuneiform tablets are almost all administrative records, listing goods, rations and labour rather than language as speech."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Proto-cuneiform",
+      "wikidataQid": null,
+      "externalIds": {
+        "commons-curid": "57854047",
+        "commons-file": "Cuneiform tablet- administrative account of barley distribution with cylinder seal impression of a male figure, hunting dogs, and boars MET DT847.jpg"
+      },
+      "copyrighted": false,
+      "asset": {
+        "kind": "image",
+        "currentVersionId": "wm-57854047-v1",
+        "versions": [
+          {
+            "id": "wm-57854047-v1",
+            "original": {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Cuneiform_tablet-_administrative_account_of_barley_distribution_with_cylinder_seal_impression_of_a_male_figure%2C_hunting_dogs%2C_and_boars_MET_DT847.jpg",
+              "width": 3787,
+              "height": 3429,
+              "bytes": 2217720,
+              "mime": "image/jpeg"
+            },
+            "rungs": [
+              {
+                "width": 1280,
+                "height": 1159,
+                "url": "/assets/wm-57854047/1280.jpg",
+                "bytes": 331428
+              },
+              {
+                "width": 2048,
+                "height": 1854,
+                "url": "/assets/wm-57854047/2048.jpg",
+                "bytes": 2217720
+              }
+            ],
+            "loop": null,
+            "credit": {
+              "author": "The Metropolitan Museum of Art (Open Access)",
+              "license": {
+                "name": "CC0 1.0",
+                "url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+              },
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Cuneiform_tablet-_administrative_account_of_barley_distribution_with_cylinder_seal_impression_of_a_male_figure,_hunting_dogs,_and_boars_MET_DT847.jpg"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-08T00:00:00Z",
+              "note": "Met studio photograph of the obverse on a plain grey ground, donated to Commons under CC0 as part of the Met Open Access programme. Met object 329081, accession 1988.433.1; the Met's current primary image is https://images.metmuseum.org/CRDImages/an/original/DP293243.jpg (also CC0). Dates, dimensions and period from the Met collection API. Object data: All object data from the Met collection API object 329081 (date ca. 3100-2900 BCE, Jemdet Nasr period, Sumerian, clay, 5.4 x 6 x 4.1 cm, accession 1988.433.1, credit line 'Purchase, Raymond and Beverly Sackler Gift, 1988'). The Met records only 'Mesopotamia' as geography, so no find-spot coordinates are given; if a geo position is required, Uruk (Wikidata Q168518, 31.3259, 45.6374), the main source of proto-cuneiform tablets, is a defensible approximation but should be labelled as such."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "wikimedia-commons"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": 0.5,
+        "back": "mirror",
+        "yaw": null,
+        "fallbackWidthM": 0.5
+      },
+      "tags": [
+        "cuneiform",
+        "writing",
+        "sumer"
+      ],
+      "pageviews": null,
+      "importance": 0.9,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-08T00:00:00Z",
+      "updatedAt": "2026-10-08T23:10:50.161Z"
+    },
+    {
+      "id": "wm-164288965",
+      "kind": "image",
+      "title": "Nebra sky disc",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [],
+      "date": {
+        "year": -1600,
+        "yearStart": -1800,
+        "yearEnd": -1600,
+        "label": "c. 1800–1600 BCE (Early Bronze Age)",
+        "precision": "circa"
+      },
+      "madeIn": {
+        "name": "Mittelberg hill near Nebra (Unstrut)",
+        "region": "Saxony-Anhalt",
+        "country": "Germany",
+        "point": {
+          "lat": 51.28389,
+          "lon": 11.52
+        },
+        "wikidataQid": "Q504051"
+      },
+      "location": {
+        "name": "Landesmuseum für Vorgeschichte, Halle (Saale)",
+        "region": null,
+        "country": "Germany",
+        "point": null,
+        "wikidataQid": null,
+        "institution": "Halle State Museum of Prehistory",
+        "inventoryNumber": null
+      },
+      "culture": "Únětice culture (Early Bronze Age)",
+      "movement": null,
+      "periodSlug": "bronze-age",
+      "medium": "Bronze disc with gold inlays",
+      "materials": [
+        "bronze",
+        "gold"
+      ],
+      "genre": [
+        "artefact",
+        "astronomy"
+      ],
+      "subjects": [
+        "sun",
+        "crescent moon",
+        "stars",
+        "Pleiades",
+        "solar boat",
+        "astronomy"
+      ],
+      "physical": {
+        "widthCm": null,
+        "heightCm": null,
+        "depthCm": null,
+        "weightKg": null
+      },
+      "description": "A bronze disc with a blue-green patina inlaid with gold symbols: a full sun or moon, a crescent, a cluster of seven stars read as the Pleiades, two horizon arcs marking the solstice sunrise and sunset, and a boat. Buried on the Mittelberg near Nebra with swords, axes and arm spirals, it is the oldest known concrete depiction of the night sky.",
+      "facts": [
+        "Found in 1999 by two unlicensed metal-detectorists and recovered by police in a sting in Basel in 2002.",
+        "About 30 cm across and 2.2 kg; 38 to 40 holes were punched around the rim before burial.",
+        "Added to the UNESCO Memory of the World Register in 2013."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Nebra_sky_disc",
+      "wikidataQid": "Q157094",
+      "externalIds": {
+        "commons-curid": "164288965",
+        "commons-file": "Himmelsscheibe von Nebra - Landesmuseum für Vorgeschichte in Halle - HD.jpg"
+      },
+      "copyrighted": false,
+      "asset": {
+        "kind": "image",
+        "currentVersionId": "wm-164288965-v1",
+        "versions": [
+          {
+            "id": "wm-164288965-v1",
+            "original": {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Himmelsscheibe_von_Nebra_-_Landesmuseum_f%C3%BCr_Vorgeschichte_in_Halle_-_HD.jpg",
+              "width": 9061,
+              "height": 8941,
+              "bytes": 39440311,
+              "mime": "image/jpeg"
+            },
+            "rungs": [
+              {
+                "width": 1280,
+                "height": 1263,
+                "url": "/assets/wm-164288965/1280.jpg",
+                "bytes": 550836
+              },
+              {
+                "width": 3840,
+                "height": 3789,
+                "url": "/assets/wm-164288965/3840.jpg",
+                "bytes": 5332358
+              }
+            ],
+            "loop": null,
+            "credit": {
+              "author": "Shonagon",
+              "license": {
+                "name": "CC0 1.0",
+                "url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+              },
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Himmelsscheibe_von_Nebra_-_Landesmuseum_für_Vorgeschichte_in_Halle_-_HD.jpg"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-08T00:00:00Z",
+              "note": "Original disc photographed in its permanent display at the Landesmuseum für Vorgeschichte, Halle, square frontal view on a dark ground; 39 MB original, so fetch via Commons thumbnail widths. The widely used 'Nebra disc 1.jpg' (Frank Vincentz, PD) was taken at the Gasometer Oberhausen 'Der schöne Schein' show, which exhibited replicas, so it is avoided. File metadata from the Commons imageinfo API. Object data: Date c. 1800-1600 BCE, culture, diameter about 30 cm and weight 2.2 kg: Wikipedia lead and infobox (citing the Halle museum). Wikidata Q157094 instead gives 32 cm and 2,050 g; the museum's own page could not be scraped for numbers. Find-spot coordinates 51.28389, 11.52 (Mittelberg): Wikipedia infobox coord and Wikidata P625. Halle inventory number not published on Wikipedia/Wikidata."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "wikimedia-commons"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": 0.5,
+        "back": "mirror",
+        "yaw": null,
+        "fallbackWidthM": 0.6
+      },
+      "tags": [
+        "bronze age",
+        "unetice",
+        "astronomy"
+      ],
+      "pageviews": null,
+      "importance": 0.9,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-08T00:00:00Z",
+      "updatedAt": "2026-10-08T23:10:50.524Z"
+    },
+    {
+      "id": "wm-57852675",
+      "kind": "image",
+      "title": "Neck-amphora with a wedding procession, by Exekias",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "Exekias",
+          "slug": null,
+          "wikidataQid": "Q358541",
+          "wikipediaUrl": null,
+          "birthYear": null,
+          "deathYear": null,
+          "role": "potter and painter (attributed)"
+        }
+      ],
+      "date": {
+        "year": -540,
+        "yearStart": -540,
+        "yearEnd": -540,
+        "label": "ca. 540 BC",
+        "precision": "year"
+      },
+      "madeIn": {
+        "name": "Athens",
+        "region": "Attica",
+        "country": "Greece",
+        "point": {
+          "lat": 37.98417,
+          "lon": 23.72806
+        },
+        "wikidataQid": "Q1524"
+      },
+      "location": {
+        "name": "The Metropolitan Museum of Art",
+        "region": null,
+        "country": "United States",
+        "point": null,
+        "wikidataQid": null,
+        "institution": "The Metropolitan Museum of Art, New York",
+        "inventoryNumber": "17.230.14a, b"
+      },
+      "culture": "Greek, Attic",
+      "movement": "Archaic black-figure",
+      "periodSlug": "ancient-greece",
+      "medium": "Terracotta, black-figure",
+      "materials": [
+        "terracotta"
+      ],
+      "genre": [
+        "pottery",
+        "vase painting"
+      ],
+      "subjects": [
+        "wedding procession",
+        "chariot",
+        "horses",
+        "man",
+        "woman",
+        "kithara player",
+        "foot soldier"
+      ],
+      "physical": {
+        "widthCm": null,
+        "heightCm": null,
+        "depthCm": null,
+        "weightKg": null
+      },
+      "description": "Lidded neck-amphora attributed to Exekias, the leading Athenian black-figure potter-painter of the mid sixth century BC. On the body a couple ride in a four-horse chariot in a procession, accompanied by a kithara player and a foot soldier, beneath a band of palmettes and lotus on the neck. Exekias' work is marked by precise incision and dignified, static compositions; the lid with its bud-shaped knob survives with the vase.",
+      "facts": [
+        "Exekias was active in Athens between roughly 545 and 530 BC and worked as both potter and painter.",
+        "The vase stands 47 cm high and 24.8 cm in diameter and is in the Metropolitan Museum of Art (Rogers Fund, 1917).",
+        "Black-figure decoration is painted in a clay slip that fires black, with details incised through to the red clay."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Exekias",
+      "wikidataQid": "Q29383807",
+      "externalIds": {
+        "commons-curid": "57852675",
+        "commons-file": "Terracotta neck-amphora (jar) with lid and knob (27.16) MET DP218568.jpg"
+      },
+      "copyrighted": false,
+      "asset": {
+        "kind": "image",
+        "currentVersionId": "wm-57852675-v1",
+        "versions": [
+          {
+            "id": "wm-57852675-v1",
+            "original": {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Terracotta_neck-amphora_%28jar%29_with_lid_and_knob_%2827.16%29_MET_DP218568.jpg",
+              "width": 3208,
+              "height": 4000,
+              "bytes": 1823736,
+              "mime": "image/jpeg"
+            },
+            "rungs": [
+              {
+                "width": 1280,
+                "height": 1596,
+                "url": "/assets/wm-57852675/1280.jpg",
+                "bytes": 359282
+              },
+              {
+                "width": 2048,
+                "height": 2554,
+                "url": "/assets/wm-57852675/2048.jpg",
+                "bytes": 1823736
+              }
+            ],
+            "loop": null,
+            "credit": {
+              "author": "The Metropolitan Museum of Art (Open Access photograph DP218568)",
+              "license": {
+                "name": "CC0 1.0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Terracotta_neck-amphora_(jar)_with_lid_and_knob_(27.16)_MET_DP218568.jpg"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-08T00:00:00Z",
+              "note": "Met Open Access studio photograph, donated to Commons by the Met; same file served by the Met at https://images.metmuseum.org/CRDImages/gr/original/DP218568.jpg (object 250551). Clean frontal view on a plain grey ground, lid in place. Date, dimensions, accession and culture from the Met collection API (object 250551); creator attribution and depicted subjects from Wikidata Q29383807; Exekias' active dates from en.wikipedia 'Exekias'. The Met page itself returned HTTP 429 during sourcing, so the curatorial text was not read."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "wikimedia-commons"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": 0.5,
+        "back": "mirror",
+        "yaw": null,
+        "fallbackWidthM": 0.5
+      },
+      "tags": [
+        "greek",
+        "black-figure",
+        "exekias"
+      ],
+      "pageviews": null,
+      "importance": 0.85,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-08T00:00:00Z",
+      "updatedAt": "2026-10-08T23:10:50.760Z"
+    },
+    {
+      "id": "wm-3153928",
+      "kind": "image",
+      "title": "Rosetta Stone",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [],
+      "date": {
+        "year": -196,
+        "yearStart": -196,
+        "yearEnd": -196,
+        "label": "196 BCE (Ptolemaic period)",
+        "precision": "year"
+      },
+      "madeIn": {
+        "name": "Fort Julien near Rashid (Rosetta), Nile Delta",
+        "region": "Beheira Governorate",
+        "country": "Egypt",
+        "point": {
+          "lat": 31.43972,
+          "lon": 30.38944
+        },
+        "wikidataQid": "Q3077898"
+      },
+      "location": {
+        "name": "British Museum, London",
+        "region": null,
+        "country": "United Kingdom",
+        "point": null,
+        "wikidataQid": null,
+        "institution": "British Museum",
+        "inventoryNumber": "EA24"
+      },
+      "culture": "Ptolemaic Egypt",
+      "movement": null,
+      "periodSlug": "ancient-egypt",
+      "medium": "Granodiorite stele, incised",
+      "materials": [
+        "granodiorite"
+      ],
+      "genre": [
+        "stele",
+        "inscription"
+      ],
+      "subjects": [
+        "hieroglyphs",
+        "Demotic script",
+        "Greek script",
+        "royal decree",
+        "Ptolemy V"
+      ],
+      "physical": {
+        "widthCm": null,
+        "heightCm": null,
+        "depthCm": null,
+        "weightKg": null
+      },
+      "description": "A broken granodiorite stele carrying a priestly decree issued at Memphis in 196 BCE for the young king Ptolemy V, written three times: in Egyptian hieroglyphs, in Demotic and in Greek. Found by French soldiers in 1799 built into Fort Julien at Rashid, it passed to Britain in 1801 and gave scholars the key to reading Egyptian hieroglyphs.",
+      "facts": [
+        "Found in July 1799 by Pierre-François Bouchard during the French campaign in Egypt and ceded to Britain under the Capitulation of Alexandria in 1801.",
+        "Measures 112.3 by 75.7 by 28.4 cm and weighs about 760 kg; the stone is granodiorite, not basalt as long assumed.",
+        "Jean-François Champollion announced the decipherment of the Egyptian scripts in 1822, building on Thomas Young's work."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Rosetta_Stone",
+      "wikidataQid": "Q48584",
+      "externalIds": {
+        "commons-curid": "3153928",
+        "commons-file": "Rosetta Stone.JPG"
+      },
+      "copyrighted": false,
+      "asset": {
+        "kind": "image",
+        "currentVersionId": "wm-3153928-v1",
+        "versions": [
+          {
+            "id": "wm-3153928-v1",
+            "original": {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/2/23/Rosetta_Stone.JPG",
+              "width": 3665,
+              "height": 4288,
+              "bytes": 7199616,
+              "mime": "image/jpeg"
+            },
+            "rungs": [
+              {
+                "width": 1280,
+                "height": 1498,
+                "url": "/assets/wm-3153928/1280.jpg",
+                "bytes": 643665
+              },
+              {
+                "width": 2048,
+                "height": 2396,
+                "url": "/assets/wm-3153928/2048.jpg",
+                "bytes": 7199616
+              }
+            ],
+            "loop": null,
+            "credit": {
+              "author": "Hans Hillewaert",
+              "license": {
+                "name": "CC BY-SA 4.0",
+                "url": "https://creativecommons.org/licenses/by-sa/4.0"
+              },
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Rosetta_Stone.JPG"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-08T00:00:00Z",
+              "note": "Original stele in the British Museum, frontal view with the background cut to black; all three scripts legible, no visitors or glass reflections. Wikipedia infobox image. File metadata from the Commons imageinfo API. Object data: Date 196 BCE, dimensions 112.3 x 75.7 x 28.4 cm and weight c. 760 kg: Wikipedia Description section (citing the British Museum) and Wikidata. Inventory EA24: Wikidata P217. Find-spot: Fort Julien, Wikidata Q3077898 coordinates; the stele was probably originally set up in a temple, possibly at Sais, per Wikipedia, so madeIn records the find-spot."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "wikimedia-commons"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": 0.5,
+        "back": "mirror",
+        "yaw": null,
+        "fallbackWidthM": 0.8
+      },
+      "tags": [
+        "ptolemaic",
+        "hieroglyphs",
+        "decipherment"
+      ],
+      "pageviews": null,
+      "importance": 1,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-08T00:00:00Z",
+      "updatedAt": "2026-10-08T23:10:51.041Z"
+    },
+    {
+      "id": "wm-23752160",
+      "kind": "image",
+      "title": "Alexander Mosaic (Battle of Issus)",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [],
+      "date": {
+        "year": -110,
+        "yearStart": -120,
+        "yearEnd": -100,
+        "label": "c. 120–100 BC",
+        "precision": "circa"
+      },
+      "madeIn": {
+        "name": "House of the Faun, Pompeii",
+        "region": "Campania",
+        "country": "Italy",
+        "point": {
+          "lat": 40.75125,
+          "lon": 14.48458
+        },
+        "wikidataQid": "Q1547308"
+      },
+      "location": {
+        "name": "Museo Archeologico Nazionale di Napoli",
+        "region": null,
+        "country": "Italy",
+        "point": null,
+        "wikidataQid": null,
+        "institution": "National Archaeological Museum, Naples",
+        "inventoryNumber": null
+      },
+      "culture": "Roman",
+      "movement": "Hellenistic mosaic (Roman copy after a Hellenistic painting)",
+      "periodSlug": "ancient-rome",
+      "medium": "Floor mosaic, opus vermiculatum",
+      "materials": [
+        "stone tesserae",
+        "glass tesserae"
+      ],
+      "genre": [
+        "mosaic",
+        "history painting"
+      ],
+      "subjects": [
+        "Alexander the Great",
+        "Darius III",
+        "Battle of Issus",
+        "cavalry",
+        "chariot",
+        "horses"
+      ],
+      "physical": {
+        "widthCm": null,
+        "heightCm": null,
+        "depthCm": null,
+        "weightKg": null
+      },
+      "description": "Roman floor mosaic from the House of the Faun at Pompeii, usually dated to about 120–100 BC and thought to copy a lost Hellenistic painting, perhaps by Philoxenus of Eretria. It shows Alexander the Great, bare-headed at the left, charging the Persian king Darius III, who turns in his chariot as his army breaks. Excavated in 1831 and moved to Naples in 1843, it is among the most detailed battle scenes to survive from antiquity.",
+      "facts": [
+        "Discovered in 1831 in the House of the Faun, Pompeii, and transferred to Naples in September 1843.",
+        "Made of roughly one to one and a half million tesserae about 2 mm wide, laid in curving opus vermiculatum.",
+        "The scene depicts more than fifty figures; it is traditionally identified as the Battle of Issus (333 BC)."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Alexander_Mosaic",
+      "wikidataQid": "Q841762",
+      "externalIds": {
+        "commons-curid": "23752160",
+        "commons-file": "Alexander (Battle of Issus) Mosaic.jpg"
+      },
+      "copyrighted": false,
+      "asset": {
+        "kind": "image",
+        "currentVersionId": "wm-23752160-v1",
+        "versions": [
+          {
+            "id": "wm-23752160-v1",
+            "original": {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Alexander_%28Battle_of_Issus%29_Mosaic.jpg",
+              "width": 6000,
+              "height": 3730,
+              "bytes": 4345293,
+              "mime": "image/jpeg"
+            },
+            "rungs": [
+              {
+                "width": 1280,
+                "height": 796,
+                "url": "/assets/wm-23752160/1280.jpg",
+                "bytes": 440018
+              },
+              {
+                "width": 3840,
+                "height": 2387,
+                "url": "/assets/wm-23752160/3840.jpg",
+                "bytes": 3656150
+              }
+            ],
+            "loop": null,
+            "credit": {
+              "author": "Unknown Roman mosaicist; reproduction credited to 'art database' (PD-Art)",
+              "license": {
+                "name": "Public domain",
+                "url": null
+              },
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Alexander_(Battle_of_Issus)_Mosaic.jpg"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-08T00:00:00Z",
+              "note": "Flat frontal reproduction of the whole mosaic cropped to its border, 6000 px wide; licensed on Commons as public domain (PD-Art reproduction of a PD 2D work). Date and subject from en.wikipedia 'Alexander Mosaic'; dimensions 582 x 313 cm from it.wikipedia 'Battaglia di Isso (mosaico)' and de.wikipedia 'Alexandermosaik' (Wikidata Q841762 gives width 513 cm, which disagrees; the two Wikipedias agree on 582). Place of making: made for the floor of the House of the Faun, Pompeii (coordinates of the house from Wikidata Q1547308). Inventory number not verified, left null."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "wikimedia-commons"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": 0.5,
+        "back": "mirror",
+        "yaw": null,
+        "fallbackWidthM": 5.82
+      },
+      "tags": [
+        "roman",
+        "pompeii",
+        "alexander"
+      ],
+      "pageviews": null,
+      "importance": 0.95,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-08T00:00:00Z",
+      "updatedAt": "2026-10-08T23:10:51.438Z"
     },
     {
       "id": "wm-7203375",
@@ -1588,7 +2973,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-08T00:00:00Z",
-      "updatedAt": "2026-10-08T22:06:26.566Z"
+      "updatedAt": "2026-10-08T23:10:51.694Z"
     },
     {
       "id": "wm-845223",
@@ -1748,7 +3133,150 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-08T00:00:00Z",
-      "updatedAt": "2026-10-08T22:06:27.412Z"
+      "updatedAt": "2026-10-08T23:10:51.977Z"
+    },
+    {
+      "id": "wm-44550",
+      "kind": "image",
+      "title": "Book of Kells, Chi Rho page (folio 34r)",
+      "titleOriginal": "Codex Cenannensis",
+      "altTitles": [],
+      "creators": [],
+      "date": {
+        "year": 800,
+        "yearStart": 800,
+        "yearEnd": 800,
+        "label": "c. 800",
+        "precision": "year"
+      },
+      "madeIn": {
+        "name": "Iona Abbey (or Kells), Columban monastery",
+        "region": "Inner Hebrides, Scotland (or County Meath, Ireland)",
+        "country": "United Kingdom",
+        "point": {
+          "lat": 56.33,
+          "lon": -6.41
+        },
+        "wikidataQid": "Q610"
+      },
+      "location": {
+        "name": "Library of Trinity College Dublin",
+        "region": null,
+        "country": "Ireland",
+        "point": null,
+        "wikidataQid": null,
+        "institution": "Trinity College Dublin",
+        "inventoryNumber": "MS A. I. [58] (MS 58), folio 34r"
+      },
+      "culture": "Insular (Irish/Scottish)",
+      "movement": "Insular illumination",
+      "periodSlug": "early-medieval",
+      "medium": "Ink and pigments on calf vellum",
+      "materials": [
+        "vellum",
+        "ink",
+        "pigments"
+      ],
+      "genre": [
+        "illuminated manuscript"
+      ],
+      "subjects": [
+        "Chi Rho monogram",
+        "Gospel of Matthew",
+        "interlace",
+        "spirals",
+        "angels",
+        "cats and mice"
+      ],
+      "physical": {
+        "widthCm": null,
+        "heightCm": null,
+        "depthCm": null,
+        "weightKg": null
+      },
+      "description": "The Chi Rho page opens the account of Christ's birth in Matthew's Gospel: the Greek letters Chi, Rho and Iota, the abbreviation of 'Christ', fill the page with spirals, interlace, animals and tiny human figures. The Book of Kells, a Latin Gospel book made in a Columban monastery around 800, is the most elaborately decorated of the Insular manuscripts. It has been at Trinity College Dublin since the seventeenth century.",
+      "facts": [
+        "The manuscript has 340 folios of calf vellum, each page about 33 by 25 cm, bound since 1953 in four volumes.",
+        "It contains ten full-page illustrations and was made in a Columban monastery in Ireland or Scotland around 800.",
+        "UNESCO added the Book of Kells to its Memory of the World Register in 2011."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Book_of_Kells",
+      "wikidataQid": "Q204221",
+      "externalIds": {
+        "commons-curid": "44550",
+        "commons-file": "KellsFol034rChiRhoMonogram.jpg"
+      },
+      "copyrighted": false,
+      "asset": {
+        "kind": "image",
+        "currentVersionId": "wm-44550-v1",
+        "versions": [
+          {
+            "id": "wm-44550-v1",
+            "original": {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/e/ee/KellsFol034rChiRhoMonogram.jpg",
+              "width": 1123,
+              "height": 1558,
+              "bytes": 478526,
+              "mime": "image/jpeg"
+            },
+            "rungs": [
+              {
+                "width": 1024,
+                "height": 1421,
+                "url": "/assets/wm-44550/1024.jpg",
+                "bytes": 478526
+              }
+            ],
+            "loop": null,
+            "credit": {
+              "author": "Unknown Columban scribes/illuminators, c. 800; reproduction uploader not stated (PD-Art)",
+              "license": {
+                "name": "Public domain",
+                "url": null
+              },
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:KellsFol034rChiRhoMonogram.jpg"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-08T00:00:00Z",
+              "note": "Best colour reproduction of the Chi Rho page on Commons; only 1123 x 1558 px, below the 2000 px target. Every other Commons copy of fol. 34r is smaller (484 x 641 PNG) or a black-and-white lantern slide (KU Leuven GD017031, 3797 x 3230). A larger scan of a different full-page illumination (fol. 32v, 2202 x 2918, from Trinity College Dublin's digital collections) is listed as alternative 1. Trinity's own digital collection is not used because its image licence was not verified as free. Dates, size (33 x 25.5 cm), vellum and shelfmark from Wikidata Q204221 and en.wikipedia 'Book of Kells'; place of creation is uncertain (a Columban monastery in Ireland or Scotland), Iona chosen with coordinates from Wikidata Q610."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "wikimedia-commons"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": 0.5,
+        "back": "mirror",
+        "yaw": null,
+        "fallbackWidthM": 0.255
+      },
+      "tags": [
+        "insular",
+        "manuscript",
+        "gospel"
+      ],
+      "pageviews": null,
+      "importance": 0.95,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-08T00:00:00Z",
+      "updatedAt": "2026-10-08T23:10:52.097Z"
     },
     {
       "id": "wm-2653186",
@@ -1909,7 +3437,166 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-08T00:00:00Z",
-      "updatedAt": "2026-10-08T22:06:28.678Z"
+      "updatedAt": "2026-10-08T23:10:52.348Z"
+    },
+    {
+      "id": "wm-140519854",
+      "kind": "image",
+      "title": "Travelers Among Mountains and Streams",
+      "titleOriginal": "谿山行旅圖",
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "Fan Kuan",
+          "slug": null,
+          "wikidataQid": "Q1278559",
+          "wikipediaUrl": null,
+          "birthYear": 960,
+          "deathYear": 1030,
+          "role": "painter"
+        }
+      ],
+      "date": {
+        "year": 1000,
+        "yearStart": 1000,
+        "yearEnd": 1020,
+        "label": "c. 1000 (Northern Song)",
+        "precision": "circa"
+      },
+      "madeIn": {
+        "name": "Huayuan (Yaozhou District, Tongchuan)",
+        "region": "Shaanxi",
+        "country": "China",
+        "point": {
+          "lat": 34.91378,
+          "lon": 108.97299
+        },
+        "wikidataQid": "Q1201033"
+      },
+      "location": {
+        "name": "National Palace Museum",
+        "region": null,
+        "country": "Taiwan",
+        "point": null,
+        "wikidataQid": null,
+        "institution": "National Palace Museum, Taipei",
+        "inventoryNumber": "故畫000826"
+      },
+      "culture": "Chinese, Northern Song",
+      "movement": "Northern Song monumental landscape (Northern Landscape style)",
+      "periodSlug": "song-dynasty",
+      "medium": "Hanging scroll, ink and light colour on silk",
+      "materials": [
+        "silk",
+        "ink",
+        "mineral pigments"
+      ],
+      "genre": [
+        "landscape",
+        "hanging scroll"
+      ],
+      "subjects": [
+        "mountains",
+        "waterfall",
+        "travellers with mules",
+        "temple roofs among trees",
+        "landscape"
+      ],
+      "physical": {
+        "widthCm": null,
+        "heightCm": null,
+        "depthCm": null,
+        "weightKg": null
+      },
+      "description": "A single cliff face rises almost the full height of the silk, with a thread of waterfall at its right and a mule train and travellers reduced to specks along the stream at its foot. Fan Kuan, a recluse who studied the mountains of Shaanxi directly, painted it around 1000; it is the defining work of Northern Song monumental landscape. The painter's signature, hidden among the foliage at lower right, was only rediscovered in 1958.",
+      "facts": [
+        "Ink and light colour on silk, 206.3 by 103.3 cm, in the National Palace Museum, Taipei.",
+        "Fan Kuan's half-hidden signature in the leaves at the lower right was rediscovered in 1958.",
+        "The Ming painter-critic Dong Qichang is said to have called it the finest painting of the Song dynasty."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Fan_Kuan",
+      "wikidataQid": "Q15907822",
+      "externalIds": {
+        "commons-curid": "140519854",
+        "commons-file": "谿山行旅图轴.溪山行旅图.宋.范宽.绢本浅设色.台北故宫博物院藏.jpg"
+      },
+      "copyrighted": false,
+      "asset": {
+        "kind": "image",
+        "currentVersionId": "wm-140519854-v1",
+        "versions": [
+          {
+            "id": "wm-140519854-v1",
+            "original": {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/b/b1/%E8%B0%BF%E5%B1%B1%E8%A1%8C%E6%97%85%E5%9B%BE%E8%BD%B4.%E6%BA%AA%E5%B1%B1%E8%A1%8C%E6%97%85%E5%9B%BE.%E5%AE%8B.%E8%8C%83%E5%AE%BD.%E7%BB%A2%E6%9C%AC%E6%B5%85%E8%AE%BE%E8%89%B2.%E5%8F%B0%E5%8C%97%E6%95%85%E5%AE%AB%E5%8D%9A%E7%89%A9%E9%99%A2%E8%97%8F.jpg",
+              "width": 11105,
+              "height": 24176,
+              "bytes": 71898645,
+              "mime": "image/jpeg"
+            },
+            "rungs": [
+              {
+                "width": 1280,
+                "height": 2786,
+                "url": "/assets/wm-140519854/1280.jpg",
+                "bytes": 837336
+              },
+              {
+                "width": 3840,
+                "height": 8361,
+                "url": "/assets/wm-140519854/3840.jpg",
+                "bytes": 10837124
+              }
+            ],
+            "loop": null,
+            "credit": {
+              "author": "Fan Kuan (painter); scan via shuge.org from the National Palace Museum open data",
+              "license": {
+                "name": "Public domain",
+                "url": null
+              },
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:谿山行旅图轴.溪山行旅图.宋.范宽.绢本浅设色.台北故宫博物院藏.jpg"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-08T00:00:00Z",
+              "note": "Very large (11105 x 24176 px, 72 MB) scan of the whole hanging scroll including the silk mounting and the Qianlong-era title slip; PD-Art of a c. 1000 painting. The 800 px preview was checked and is clean. Dimensions 206.3 x 103.3 cm, dates (1000–1020) and NPM inventory 故畫000826 from Wikidata Q15907822 and zh.wikipedia '谿山行旅圖'. Fan Kuan's dates from en.wikipedia (c. 960 – c. 1030; Wikidata gives 956–1026, zh.wikipedia c. 950 – c. 1032). Place of painting is not recorded; madeIn uses the painter's native Huayuan (today Yaozhou District, Tongchuan, Shaanxi, per zh.wikipedia), coordinates from Wikidata Q1201033. No English Wikipedia article exists for the painting, so the painter's article is linked."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "wikimedia-commons"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": 0.5,
+        "back": "mirror",
+        "yaw": null,
+        "fallbackWidthM": 1.1
+      },
+      "tags": [
+        "song dynasty",
+        "shan shui",
+        "chinese painting"
+      ],
+      "pageviews": null,
+      "importance": 0.95,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-08T00:00:00Z",
+      "updatedAt": "2026-10-08T23:10:52.732Z"
     },
     {
       "id": "wm-50410532",
@@ -2074,147 +3761,297 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-07T00:00:00Z",
-      "updatedAt": "2026-10-08T22:06:29.118Z"
+      "updatedAt": "2026-10-08T23:10:53.145Z"
     },
     {
-      "id": "si-nasm_A19700102000",
-      "kind": "model",
-      "title": "Apollo 11 Command Module Columbia",
+      "id": "wm-55983942",
+      "kind": "image",
+      "title": "Plaque with Warrior and Attendants",
       "titleOriginal": null,
-      "altTitles": [
-        "Columbia",
-        "CM-107"
-      ],
+      "altTitles": [],
       "creators": [
         {
-          "name": "North American Rockwell",
-          "slug": "north-american-rockwell",
-          "wikidataQid": "Q1356326",
-          "wikipediaUrl": "https://en.wikipedia.org/wiki/North_American_Aviation",
+          "name": "Ìgùn Ẹ́rọ̀nwwọ̀n (royal brass-casting guild) artists",
+          "slug": null,
+          "wikidataQid": null,
+          "wikipediaUrl": null,
           "birthYear": null,
           "deathYear": null,
-          "role": "manufacturer"
+          "role": "caster"
         }
       ],
       "date": {
-        "year": 1969,
-        "yearStart": 1968,
-        "yearEnd": 1969,
-        "label": "1969",
+        "year": 1555,
+        "yearStart": 1540,
+        "yearEnd": 1570,
+        "label": "ca. 1540–70",
+        "precision": "circa"
+      },
+      "madeIn": {
+        "name": "Benin City (royal court of the Kingdom of Benin)",
+        "region": "Edo State",
+        "country": "Nigeria",
+        "point": {
+          "lat": 6.3176,
+          "lon": 5.6145
+        },
+        "wikidataQid": "Q320704"
+      },
+      "location": {
+        "name": "The Metropolitan Museum of Art",
+        "region": null,
+        "country": "United States",
+        "point": null,
+        "wikidataQid": null,
+        "institution": "The Metropolitan Museum of Art, New York (Michael C. Rockefeller Wing)",
+        "inventoryNumber": "1990.332"
+      },
+      "culture": "Edo peoples, Court of Benin",
+      "movement": "Benin court art",
+      "periodSlug": "benin-kingdom",
+      "medium": "Cast brass (lost-wax)",
+      "materials": [
+        "brass"
+      ],
+      "genre": [
+        "relief",
+        "sculpture"
+      ],
+      "subjects": [
+        "warrior chief",
+        "attendants",
+        "shields",
+        "ceremonial sword",
+        "coral-bead regalia",
+        "river-leaf background pattern"
+      ],
+      "physical": {
+        "widthCm": null,
+        "heightCm": null,
+        "depthCm": null,
+        "weightKg": null
+      },
+      "description": "A high-relief brass plaque from the royal palace of Benin showing a warrior chief in coral-bead regalia, flanked by two shield-bearing soldiers and smaller attendants, against a background incised with the river-leaf pattern. Plaques of this kind were cast by the royal brass guild around 1540–70 and nailed to the pillars of the palace. Benin's palace plaques and heads were seized by the British punitive expedition of 1897 and dispersed to museums and collectors; this one entered the Metropolitan Museum as a gift of Mr. and Mrs. Klaus G. Perls in 1990.",
+      "facts": [
+        "Cast in brass by the lost-wax method by the Ìgùn Ẹ́rọ̀nwwọ̀n guild of the Oba's court, about 1540–70.",
+        "The British expedition of 1897 removed thousands of objects from Benin City; the British Museum alone acquired 203 plaques in 1898.",
+        "Height 47.6 cm, width 38.1 cm, depth 10.8 cm; the holes at the corners held the nails that fixed it to a palace pillar."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Benin_Bronzes",
+      "wikidataQid": "Q29384362",
+      "externalIds": {
+        "commons-curid": "55983942",
+        "commons-file": "Plaque- Warrior and Attendants MET DT1231.jpg"
+      },
+      "copyrighted": false,
+      "asset": {
+        "kind": "image",
+        "currentVersionId": "wm-55983942-v1",
+        "versions": [
+          {
+            "id": "wm-55983942-v1",
+            "original": {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Plaque-_Warrior_and_Attendants_MET_DT1231.jpg",
+              "width": 2978,
+              "height": 3722,
+              "bytes": 2564487,
+              "mime": "image/jpeg"
+            },
+            "rungs": [
+              {
+                "width": 1280,
+                "height": 1600,
+                "url": "/assets/wm-55983942/1280.jpg",
+                "bytes": 588062
+              },
+              {
+                "width": 2048,
+                "height": 2560,
+                "url": "/assets/wm-55983942/2048.jpg",
+                "bytes": 2564487
+              }
+            ],
+            "loop": null,
+            "credit": {
+              "author": "The Metropolitan Museum of Art (Open Access photograph DT1231)",
+              "license": {
+                "name": "CC0 1.0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Plaque-_Warrior_and_Attendants_MET_DT1231.jpg"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-08T00:00:00Z",
+              "note": "Met Open Access studio photograph on a plain grey ground, donated to Commons by the Met; the same file is served by the Met at https://images.metmuseum.org/CRDImages/ao/original/DT1231.jpg (object 316393, a Met highlight). Title, date 'ca. 1540–70', medium, dimensions, culture, geography and credit line from the Met collection API; Wikidata Q29384362 dates it more broadly to the 16th–17th century. The Met web page, which carries the object-specific provenance chain, returned HTTP 429 on every attempt, so the chain before the 1990 Perls gift is not confirmed here; the 1897 context is from en.wikipedia 'Benin Bronzes'. Coordinates are Benin City (Wikidata Q320704), seat of the royal court where the brass-casting guild worked."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "wikimedia-commons"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": 0.5,
+        "back": "mirror",
+        "yaw": null,
+        "fallbackWidthM": 0.45
+      },
+      "tags": [
+        "benin",
+        "brass",
+        "edo"
+      ],
+      "pageviews": null,
+      "importance": 0.9,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-08T00:00:00Z",
+      "updatedAt": "2026-10-08T23:10:53.396Z"
+    },
+    {
+      "id": "si-nasm_A19610048000",
+      "kind": "model",
+      "title": "1903 Wright Flyer",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "Wilbur and Orville Wright",
+          "slug": null,
+          "wikidataQid": "Q35820",
+          "wikipediaUrl": null,
+          "birthYear": null,
+          "deathYear": null,
+          "role": "designers and builders"
+        }
+      ],
+      "date": {
+        "year": 1903,
+        "yearStart": 1903,
+        "yearEnd": 1903,
+        "label": "1903",
         "precision": "year"
       },
       "madeIn": {
-        "name": "Downey",
-        "region": "California",
+        "name": "Dayton, Ohio",
+        "region": "Ohio",
         "country": "United States",
         "point": {
-          "lat": 33.9401,
-          "lon": -118.1332
+          "lat": 39.7667,
+          "lon": -84.2
         },
-        "wikidataQid": "Q488064"
+        "wikidataQid": "Q34739"
       },
       "location": {
-        "name": "Washington, D.C.",
+        "name": "National Air and Space Museum, Washington, D.C.",
         "region": null,
         "country": "United States",
-        "point": {
-          "lat": 38.8882,
-          "lon": -77.0199
-        },
-        "wikidataQid": "Q61",
+        "point": null,
+        "wikidataQid": null,
         "institution": "Smithsonian National Air and Space Museum",
-        "inventoryNumber": "A19700102000"
+        "inventoryNumber": "A19610048000"
       },
       "culture": "American",
       "movement": null,
-      "periodSlug": null,
-      "medium": "aluminium honeycomb, stainless steel honeycomb, ablative heat shield",
+      "periodSlug": "modern",
+      "medium": "Aircraft: spruce and ash airframe covered in muslin, cast-aluminium crankcase engine",
       "materials": [
+        "wood",
+        "muslin",
         "aluminium",
-        "stainless steel",
-        "phenolic epoxy resin"
+        "steel wire"
       ],
       "genre": [
-        "spacecraft",
-        "engineering"
+        "aircraft",
+        "machine"
       ],
       "subjects": [
-        "Apollo 11",
-        "Moon landing",
-        "spaceflight"
+        "aviation",
+        "first powered flight",
+        "engineering"
       ],
       "physical": {
-        "widthCm": 391,
-        "heightCm": 323,
-        "depthCm": 391,
-        "weightKg": 5557
+        "widthCm": 1230,
+        "heightCm": 280,
+        "depthCm": 640,
+        "weightKg": 274
       },
-      "description": "Columbia is the command module of Apollo 11, the first mission to land humans on the Moon, and the only part of that spacecraft to return to Earth. Michael Collins orbited the Moon alone in it while Armstrong and Aldrin were on the surface; all three rode it home through re-entry on 24 July 1969. The scan shows the exterior as it stands today, with the heat shield charred from re-entry.",
+      "description": "The Wright Flyer is the biplane in which Orville and Wilbur Wright made the first sustained, controlled flights of a powered, heavier-than-air aircraft at Kill Devil Hills, North Carolina, on 17 December 1903. Built in the brothers' Dayton bicycle shop, it combined a wing-warping control system with a purpose-built 12-horsepower petrol engine and twin pusher propellers. This is the Smithsonian's laser scan of the original aircraft as it hangs in the National Air and Space Museum.",
       "facts": [
-        "The crew wrote on the cabin walls during the flight, including a calendar Collins kept and the words \"Spacecraft 107, alias Apollo 11, alias Columbia. The Best Ship to Come Down the Line. God Bless Her.\"",
-        "Collins named it after Jules Verne's cannon Columbiad and the ship Columbia Rediviva, the first American vessel to circle the globe.",
-        "After the flight it toured all fifty state capitals before coming to the Smithsonian in 1971.",
-        "The ablative heat shield reached about 2,800 °C during re-entry."
+        "Four flights were made on 17 December 1903; the longest covered 852 ft (260 m) in 59 seconds.",
+        "The 12-horsepower engine was built from scratch in six weeks by the Wrights' mechanic Charlie Taylor, with a cast-aluminium crankcase.",
+        "The Flyer joined the Smithsonian collection in 1948 after a long dispute between Orville Wright and the Institution over who flew first."
       ],
-      "wikipediaUrl": "https://en.wikipedia.org/wiki/Command_module_Columbia",
-      "wikidataQid": "Q85753536",
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Wright_Flyer",
+      "wikidataQid": "Q688605",
       "externalIds": {
-        "si-edan": "edanmdm:nasm_A19700102000",
-        "si-3d-exterior": "d8c6457e-4ebc-11ea-b77f-2e728ce88125",
-        "si-3d-interior": "d8c63e8a-4ebc-11ea-b77f-2e728ce88125"
+        "smithsonian-3d": "nasm_A19610048000"
       },
       "copyrighted": false,
       "asset": {
         "kind": "model",
-        "currentVersionId": "si-nasm_A19700102000-v1",
+        "currentVersionId": "si-nasm_A19610048000-v1",
         "versions": [
           {
-            "id": "si-nasm_A19700102000-v1",
+            "id": "si-nasm_A19610048000-v1",
             "original": {
-              "url": "https://3d-api.si.edu/content/document/d8c6457e-4ebc-11ea-b77f-2e728ce88125/document.json",
+              "url": "https://3d-api.si.edu/content/document/d8c62e5e-4ebc-11ea-b77f-2e728ce88125/document.json",
               "format": "voyager-document",
-              "bytes": null,
-              "triangles": 241224
+              "bytes": 94029,
+              "triangles": 166463
             },
             "rungs": [
               {
                 "quality": "thumb",
-                "url": "/assets/si-nasm_A19700102000/thumb.glb",
-                "bytes": 404476,
-                "triangles": 41224,
+                "url": "/assets/si-nasm_A19610048000/thumb.glb",
+                "bytes": 1168960,
+                "triangles": 60365,
                 "textureSize": 512,
                 "draco": true
               },
               {
                 "quality": "low",
-                "url": "/assets/si-nasm_A19700102000/low.glb",
-                "bytes": 1737216,
-                "triangles": 241224,
+                "url": "/assets/si-nasm_A19610048000/low.glb",
+                "bytes": 4637324,
+                "triangles": 166463,
                 "textureSize": 1024,
                 "draco": true
               },
               {
                 "quality": "medium",
-                "url": "/assets/si-nasm_A19700102000/medium.glb",
-                "bytes": 3485356,
-                "triangles": 241224,
+                "url": "/assets/si-nasm_A19610048000/medium.glb",
+                "bytes": 11378520,
+                "triangles": 166463,
                 "textureSize": 2048,
                 "draco": true
               },
               {
                 "quality": "high",
-                "url": "/assets/si-nasm_A19700102000/high.glb",
-                "bytes": 8784868,
-                "triangles": 241224,
+                "url": "/assets/si-nasm_A19610048000/high.glb",
+                "bytes": 27677144,
+                "triangles": 166463,
                 "textureSize": 4096,
                 "draco": true
               }
             ],
             "scale": 1,
             "bounds": {
-              "width": 3.905,
-              "height": 2.741,
-              "depth": 3.922
+              "width": 12.287,
+              "height": 2.787,
+              "depth": 6.423
             },
             "credit": {
               "author": "Smithsonian Institution, Digitization Program Office",
@@ -2222,12 +4059,12 @@
                 "name": "CC0 1.0",
                 "url": "https://creativecommons.org/publicdomain/zero/1.0/"
               },
-              "sourcePage": "https://3d.si.edu/object/3d/d8c6457e-4ebc-11ea-b77f-2e728ce88125"
+              "sourcePage": "https://3d.si.edu/object/3d/1903-wright-flyer:d8c62e5e-4ebc-11ea-b77f-2e728ce88125"
             },
             "contributed": {
               "by": null,
-              "at": "2026-10-07T00:00:00Z",
-              "note": "Initial import from Smithsonian 3D (exterior scan)"
+              "at": "2026-10-08T00:00:00Z",
+              "note": "Voyager document (scene units cm) with three sub-models (engine, filler, wings), each with Thumb/Low/Medium/High Draco glb tiers on cdn.3d-api.si.edu, so it goes straight through the existing smithsonian-3d pipeline. document.json is 94 kB; the High tier is three glbs (wright_flyer_engine_mesh-53k-4096-high.glb etc.). EDAN record edanmdm:nasm_A19610048000. Licence: the Smithsonian publishes the same scan as CC0 on its official Sketchfab account (uid c91467735c6743af872e65107a79beda, 'This media file is in the public domain') and a Commons STL export is tagged CC0; the 3d.si.edu object page itself returned HTTP 403 to scripted requests today, so confirm the CC0 badge there by eye before import. Dimensions and date from the NASM collection record (airandspace.si.edu/collection-objects/1903-wright-flyer/nasm_A19610048000): wingspan 12.3 m, length 6.4 m, height 2.8 m, empty weight 274 kg, gross 341 kg. First-flight facts from Wikipedia 'Wright Flyer'."
             },
             "moderation": {
               "status": "approved",
@@ -2243,18 +4080,18 @@
       },
       "display": {
         "scale": 1,
-        "baseHeight": 0.3,
+        "baseHeight": 0.2,
         "back": "none",
         "yaw": null,
         "fallbackWidthM": 1.2
       },
       "tags": [
-        "spacecraft",
-        "apollo",
-        "nasa"
+        "aviation",
+        "wright brothers",
+        "first flight"
       ],
       "pageviews": null,
-      "importance": 0.9,
+      "importance": 1,
       "moderation": {
         "status": "approved",
         "reviewedBy": null,
@@ -2263,8 +4100,8 @@
         "flags": []
       },
       "source": "wikipedia-import",
-      "createdAt": "2026-10-07T00:00:00Z",
-      "updatedAt": "2026-10-08T22:06:30.400Z"
+      "createdAt": "2026-10-08T00:00:00Z",
+      "updatedAt": "2026-10-08T23:11:19.002Z"
     },
     {
       "id": "sf-895fd0fbc7cc42aab8f3300a85420b91",
@@ -2460,7 +4297,668 @@
       },
       "source": "admin",
       "createdAt": "2026-10-07T00:00:00Z",
-      "updatedAt": "2026-10-08T22:06:34.315Z"
+      "updatedAt": "2026-10-08T23:11:22.965Z"
+    },
+    {
+      "id": "wm-14902369",
+      "kind": "image",
+      "title": "Bombe drums (Bletchley Park rebuild)",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "Alan Turing",
+          "slug": null,
+          "wikidataQid": "Q7251",
+          "wikipediaUrl": null,
+          "birthYear": 1912,
+          "deathYear": 1954,
+          "role": "designer (with Gordon Welchman's diagonal board; engineered by Harold Keen, British Tabulating Machine Company)"
+        }
+      ],
+      "date": {
+        "year": 1940,
+        "yearStart": 1940,
+        "yearEnd": 1945,
+        "label": "1940 (original design; drums shown are a 1995–2008 rebuild)",
+        "precision": "circa"
+      },
+      "madeIn": {
+        "name": "Letchworth, Hertfordshire",
+        "region": "Hertfordshire, England",
+        "country": "United Kingdom",
+        "point": {
+          "lat": 51.978,
+          "lon": -0.23
+        },
+        "wikidataQid": "Q19801"
+      },
+      "location": {
+        "name": "The National Museum of Computing, Bletchley Park",
+        "region": null,
+        "country": "United Kingdom",
+        "point": null,
+        "wikidataQid": null,
+        "institution": "The National Museum of Computing",
+        "inventoryNumber": null
+      },
+      "culture": "British",
+      "movement": null,
+      "periodSlug": "modern",
+      "medium": "Electromechanical cipher-breaking machine component: Bakelite and metal rotor drum with 104 wire brushes",
+      "materials": [
+        "Bakelite",
+        "brass",
+        "steel",
+        "copper wire"
+      ],
+      "genre": [
+        "machine part",
+        "cryptography"
+      ],
+      "subjects": [
+        "cryptography",
+        "Second World War",
+        "computing",
+        "Enigma"
+      ],
+      "physical": {
+        "widthCm": null,
+        "heightCm": null,
+        "depthCm": null,
+        "weightKg": null
+      },
+      "description": "The bombe was the electromechanical machine with which Bletchley Park found the daily settings of German Enigma cipher machines. Designed by Alan Turing, refined by Gordon Welchman and engineered by Harold Keen at the British Tabulating Machine Company, each bombe carried 108 spinning drums, every drum wired to mimic one Enigma rotor. The drums shown here belong to the working reconstruction completed at Bletchley Park in 2008; the wartime machines were all broken up after the war.",
+      "facts": [
+        "The first bombe, named 'Victory', was installed in Hut 1 at Bletchley Park on 18 March 1940.",
+        "Each bombe was about 7 ft wide, 6 ft 6 in tall and 2 ft deep, weighed about a ton, and had 108 positions for drums arranged in 36 triplets.",
+        "Each drum carried 104 wire brushes in four concentric circles of 26, giving two sets of input and output contacts on its mounting plate."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Bombe",
+      "wikidataQid": "Q480476",
+      "externalIds": {
+        "commons-curid": "14902369",
+        "commons-file": "Bombe Drums and Mounting Plate.jpg"
+      },
+      "copyrighted": false,
+      "asset": {
+        "kind": "image",
+        "currentVersionId": "wm-14902369-v1",
+        "versions": [
+          {
+            "id": "wm-14902369-v1",
+            "original": {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Bombe_Drums_and_Mounting_Plate.jpg",
+              "width": 2093,
+              "height": 3140,
+              "bytes": 389000,
+              "mime": "image/jpeg"
+            },
+            "rungs": [
+              {
+                "width": 1280,
+                "height": 1920,
+                "url": "/assets/wm-14902369/1280.jpg",
+                "bytes": 592111
+              },
+              {
+                "width": 2048,
+                "height": 3072,
+                "url": "/assets/wm-14902369/2048.jpg",
+                "bytes": 389000
+              }
+            ],
+            "loop": null,
+            "credit": {
+              "author": "Ted Coles (TedColes)",
+              "license": {
+                "name": "CC0 1.0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Bombe_Drums_and_Mounting_Plate.jpg"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-08T00:00:00Z",
+              "note": "REPLICA: this shows drums on the working bombe rebuilt by John Harper's 'Phoenix' team of the BCS Computer Conservation Society (1994–2008), now at The National Museum of Computing on the Bletchley Park estate. All wartime bombes were dismantled after 1945 and no free photograph of a surviving original drum was found on Commons (Category:Bletchley Park Bombe has 62 files, all of the rebuild or wartime prints) or in the Science Museum Group collection; no 3D scan exists on Smithsonian, Met, SMG or Sketchfab. Chosen because it shows one Enigma-equivalent's three drums beside the bare mounting plates with their 104 contacts, which explains the mechanism; photographed 2011 at Bletchley Park. The physical size of a drum is not given by Wikipedia or the museum, so dimensions are null. Dates and mechanism facts from Wikipedia 'Bombe' (first bombe 'Victory' installed 18 March 1940; 108 drum positions; 104 brushes per drum; rebuild switched on 17 July 2008)."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "wikimedia-commons"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": 0.5,
+        "back": "mirror",
+        "yaw": null,
+        "fallbackWidthM": 0.6
+      },
+      "tags": [
+        "bombe",
+        "enigma",
+        "bletchley park",
+        "replica"
+      ],
+      "pageviews": null,
+      "importance": 0.8,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-08T00:00:00Z",
+      "updatedAt": "2026-10-08T23:11:24.626Z"
+    },
+    {
+      "id": "wm-24825633",
+      "kind": "image",
+      "title": "The first point-contact transistor (Bell Labs display)",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "John Bardeen and Walter Brattain",
+          "slug": null,
+          "wikidataQid": null,
+          "wikipediaUrl": null,
+          "birthYear": null,
+          "deathYear": null,
+          "role": "inventors (Bell Labs, under William Shockley's group)"
+        }
+      ],
+      "date": {
+        "year": 1947,
+        "yearStart": 1947,
+        "yearEnd": 1947,
+        "label": "December 1947",
+        "precision": "year"
+      },
+      "madeIn": {
+        "name": "Bell Telephone Laboratories, Murray Hill, New Jersey",
+        "region": "New Jersey",
+        "country": "United States",
+        "point": {
+          "lat": 40.6833,
+          "lon": -74.4003
+        },
+        "wikidataQid": "Q984466"
+      },
+      "location": {
+        "name": "Nokia Bell Labs, Murray Hill, New Jersey",
+        "region": null,
+        "country": "United States",
+        "point": null,
+        "wikidataQid": null,
+        "institution": "Nokia Bell Labs",
+        "inventoryNumber": null
+      },
+      "culture": "American",
+      "movement": null,
+      "periodSlug": "modern",
+      "medium": "Germanium point-contact transistor: germanium slab, gold-foil contacts on a plastic wedge, spring, Perspex mount",
+      "materials": [
+        "germanium",
+        "gold",
+        "plastic",
+        "Perspex"
+      ],
+      "genre": [
+        "electronic component"
+      ],
+      "subjects": [
+        "electronics",
+        "semiconductors",
+        "invention",
+        "computing"
+      ],
+      "physical": {
+        "widthCm": null,
+        "heightCm": null,
+        "depthCm": null,
+        "weightKg": null
+      },
+      "description": "On 16 December 1947 John Bardeen and Walter Brattain of Bell Telephone Laboratories made a slab of germanium amplify an electrical signal by pressing two closely spaced gold contacts against its surface. Their point-contact transistor, demonstrated to Bell executives a week later, was the first working transistor and the ancestor of every semiconductor device since. The device shown is the display at Bell Labs in Murray Hill, generally identified as a replica of the original.",
+      "facts": [
+        "The critical experiment on 16 December 1947 used a block of germanium with two very closely spaced gold contacts held against it by a spring.",
+        "Brattain made the two contacts by slitting a strip of gold foil wrapped over the point of a plastic triangle, leaving a gap of less than 0.1 mm.",
+        "The invention was demonstrated to Bell Labs management on 23 December 1947 and announced publicly in June 1948."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Point-contact_transistor",
+      "wikidataQid": "Q1515631",
+      "externalIds": {
+        "commons-curid": "24825633",
+        "commons-file": "The First Transistor ever made, built in 1947 - Bell Labs.jpg"
+      },
+      "copyrighted": false,
+      "asset": {
+        "kind": "image",
+        "currentVersionId": "wm-24825633-v1",
+        "versions": [
+          {
+            "id": "wm-24825633-v1",
+            "original": {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/e/e5/The_First_Transistor_ever_made%2C_built_in_1947_-_Bell_Labs.jpg",
+              "width": 2048,
+              "height": 1535,
+              "bytes": 920490,
+              "mime": "image/jpeg"
+            },
+            "rungs": [
+              {
+                "width": 1280,
+                "height": 960,
+                "url": "/assets/wm-24825633/1280.jpg",
+                "bytes": 137331
+              }
+            ],
+            "loop": null,
+            "credit": {
+              "author": "Windell Oskay",
+              "license": {
+                "name": "CC BY 2.0",
+                "url": "https://creativecommons.org/licenses/by/2.0/"
+              },
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:The_First_Transistor_ever_made,_built_in_1947_-_Bell_Labs.jpg"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-08T00:00:00Z",
+              "note": "PROBABLY A REPLICA: the photo (Flickr 'Bell Labs 004', 2012) shows the point-contact transistor display at Bell Labs, Murray Hill, New Jersey; Commons titles it 'the first transistor ever made' and a second Commons photo of the same display (File:1st-Transistor.jpg, geotagged at Murray Hill) says 'original exhibited in Bell Laboratories', but the IEEE milestone page describes the Bell Labs Technology Showcase item as 'a replica of Bell Labs' first point-contact transistor' and Invention & Technology credits a 1997 Lucent replica, so treat it as a replica unless Nokia Bell Labs confirms otherwise; no free photo of a confirmed original was found, and no 3D scan exists (Smithsonian, Met, SMG, Sketchfab searched). The device is a germanium slab with two gold-foil contacts on a plastic wedge pressed by a spring, in a Perspex mount about the size of a hand; dimensions are not published by Wikipedia or Bell Labs, so null. Dates from Wikipedia 'Point-contact transistor' (first worked 16 December 1947, demonstrated 23 December 1947)."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "wikimedia-commons"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": 0.5,
+        "back": "mirror",
+        "yaw": null,
+        "fallbackWidthM": 0.6
+      },
+      "tags": [
+        "transistor",
+        "bell labs",
+        "semiconductor"
+      ],
+      "pageviews": null,
+      "importance": 0.9,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-08T00:00:00Z",
+      "updatedAt": "2026-10-08T23:11:25.006Z"
+    },
+    {
+      "id": "si-nasm_A19700102000",
+      "kind": "model",
+      "title": "Apollo 11 Command Module Columbia",
+      "titleOriginal": null,
+      "altTitles": [
+        "Columbia",
+        "CM-107"
+      ],
+      "creators": [
+        {
+          "name": "North American Rockwell",
+          "slug": "north-american-rockwell",
+          "wikidataQid": "Q1356326",
+          "wikipediaUrl": "https://en.wikipedia.org/wiki/North_American_Aviation",
+          "birthYear": null,
+          "deathYear": null,
+          "role": "manufacturer"
+        }
+      ],
+      "date": {
+        "year": 1969,
+        "yearStart": 1968,
+        "yearEnd": 1969,
+        "label": "1969",
+        "precision": "year"
+      },
+      "madeIn": {
+        "name": "Downey",
+        "region": "California",
+        "country": "United States",
+        "point": {
+          "lat": 33.9401,
+          "lon": -118.1332
+        },
+        "wikidataQid": "Q488064"
+      },
+      "location": {
+        "name": "Washington, D.C.",
+        "region": null,
+        "country": "United States",
+        "point": {
+          "lat": 38.8882,
+          "lon": -77.0199
+        },
+        "wikidataQid": "Q61",
+        "institution": "Smithsonian National Air and Space Museum",
+        "inventoryNumber": "A19700102000"
+      },
+      "culture": "American",
+      "movement": null,
+      "periodSlug": null,
+      "medium": "aluminium honeycomb, stainless steel honeycomb, ablative heat shield",
+      "materials": [
+        "aluminium",
+        "stainless steel",
+        "phenolic epoxy resin"
+      ],
+      "genre": [
+        "spacecraft",
+        "engineering"
+      ],
+      "subjects": [
+        "Apollo 11",
+        "Moon landing",
+        "spaceflight"
+      ],
+      "physical": {
+        "widthCm": 391,
+        "heightCm": 323,
+        "depthCm": 391,
+        "weightKg": 5557
+      },
+      "description": "Columbia is the command module of Apollo 11, the first mission to land humans on the Moon, and the only part of that spacecraft to return to Earth. Michael Collins orbited the Moon alone in it while Armstrong and Aldrin were on the surface; all three rode it home through re-entry on 24 July 1969. The scan shows the exterior as it stands today, with the heat shield charred from re-entry.",
+      "facts": [
+        "The crew wrote on the cabin walls during the flight, including a calendar Collins kept and the words \"Spacecraft 107, alias Apollo 11, alias Columbia. The Best Ship to Come Down the Line. God Bless Her.\"",
+        "Collins named it after Jules Verne's cannon Columbiad and the ship Columbia Rediviva, the first American vessel to circle the globe.",
+        "After the flight it toured all fifty state capitals before coming to the Smithsonian in 1971.",
+        "The ablative heat shield reached about 2,800 °C during re-entry."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Command_module_Columbia",
+      "wikidataQid": "Q85753536",
+      "externalIds": {
+        "si-edan": "edanmdm:nasm_A19700102000",
+        "si-3d-exterior": "d8c6457e-4ebc-11ea-b77f-2e728ce88125",
+        "si-3d-interior": "d8c63e8a-4ebc-11ea-b77f-2e728ce88125"
+      },
+      "copyrighted": false,
+      "asset": {
+        "kind": "model",
+        "currentVersionId": "si-nasm_A19700102000-v1",
+        "versions": [
+          {
+            "id": "si-nasm_A19700102000-v1",
+            "original": {
+              "url": "https://3d-api.si.edu/content/document/d8c6457e-4ebc-11ea-b77f-2e728ce88125/document.json",
+              "format": "voyager-document",
+              "bytes": null,
+              "triangles": 241224
+            },
+            "rungs": [
+              {
+                "quality": "thumb",
+                "url": "/assets/si-nasm_A19700102000/thumb.glb",
+                "bytes": 404476,
+                "triangles": 41224,
+                "textureSize": 512,
+                "draco": true
+              },
+              {
+                "quality": "low",
+                "url": "/assets/si-nasm_A19700102000/low.glb",
+                "bytes": 1737216,
+                "triangles": 241224,
+                "textureSize": 1024,
+                "draco": true
+              },
+              {
+                "quality": "medium",
+                "url": "/assets/si-nasm_A19700102000/medium.glb",
+                "bytes": 3485356,
+                "triangles": 241224,
+                "textureSize": 2048,
+                "draco": true
+              },
+              {
+                "quality": "high",
+                "url": "/assets/si-nasm_A19700102000/high.glb",
+                "bytes": 8784868,
+                "triangles": 241224,
+                "textureSize": 4096,
+                "draco": true
+              }
+            ],
+            "scale": 1,
+            "bounds": {
+              "width": 3.905,
+              "height": 2.741,
+              "depth": 3.922
+            },
+            "credit": {
+              "author": "Smithsonian Institution, Digitization Program Office",
+              "license": {
+                "name": "CC0 1.0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "sourcePage": "https://3d.si.edu/object/3d/d8c6457e-4ebc-11ea-b77f-2e728ce88125"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-07T00:00:00Z",
+              "note": "Initial import from Smithsonian 3D (exterior scan)"
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "smithsonian-3d",
+            "representation": "scan"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": 0.3,
+        "back": "none",
+        "yaw": null,
+        "fallbackWidthM": 1.2
+      },
+      "tags": [
+        "spacecraft",
+        "apollo",
+        "nasa"
+      ],
+      "pageviews": null,
+      "importance": 0.9,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-07T00:00:00Z",
+      "updatedAt": "2026-10-08T23:11:26.222Z"
+    },
+    {
+      "id": "wm-14619982",
+      "kind": "image",
+      "title": "Cray-1 supercomputer",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "Seymour Cray",
+          "slug": null,
+          "wikidataQid": "Q92765",
+          "wikipediaUrl": null,
+          "birthYear": 1925,
+          "deathYear": 1996,
+          "role": "designer"
+        }
+      ],
+      "date": {
+        "year": 1976,
+        "yearStart": 1975,
+        "yearEnd": 1976,
+        "label": "1976 (announced 1975)",
+        "precision": "circa"
+      },
+      "madeIn": {
+        "name": "Chippewa Falls, Wisconsin",
+        "region": "Wisconsin",
+        "country": "United States",
+        "point": {
+          "lat": 44.9333,
+          "lon": -91.4
+        },
+        "wikidataQid": "Q940349"
+      },
+      "location": {
+        "name": "EPFL, Lausanne",
+        "region": null,
+        "country": "Switzerland",
+        "point": null,
+        "wikidataQid": null,
+        "institution": "École polytechnique fédérale de Lausanne",
+        "inventoryNumber": null
+      },
+      "culture": "American",
+      "movement": null,
+      "periodSlug": "modern",
+      "medium": "Electronic computer: ECL integrated circuits on hand-wired modules in a Freon-cooled C-shaped cabinet",
+      "materials": [
+        "integrated circuits",
+        "copper",
+        "aluminium",
+        "stainless steel",
+        "vinyl upholstery"
+      ],
+      "genre": [
+        "computer",
+        "machine"
+      ],
+      "subjects": [
+        "computing",
+        "supercomputer",
+        "industrial design"
+      ],
+      "physical": {
+        "widthCm": null,
+        "heightCm": null,
+        "depthCm": null,
+        "weightKg": null
+      },
+      "description": "The Cray-1 was the first supercomputer built by Seymour Cray's Cray Research and the fastest computer in the world from 1976 to 1982. Its C-shaped tower kept every wire short, and the padded bench around the base hid the power supplies, while liquid Freon carried away the heat of its hand-wired logic. Eighty or more were sold to weapons laboratories, weather centres and universities; this one stands at EPFL in Lausanne.",
+      "facts": [
+        "The first Cray-1 was installed at Los Alamos National Laboratory in 1976, after being announced in 1975.",
+        "It ran at an 80 MHz clock (12.5 ns cycle) with 64-bit words and vector registers, and contained over 60 miles of wire, no piece longer than three feet.",
+        "Over 80 Cray-1s of all types were sold at $5–8 million each, making Seymour Cray a celebrity and Cray Research a success."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Cray-1",
+      "wikidataQid": "Q1093705",
+      "externalIds": {
+        "commons-curid": "14619982",
+        "commons-file": "Cray 1 IMG 9126.jpg"
+      },
+      "copyrighted": false,
+      "asset": {
+        "kind": "image",
+        "currentVersionId": "wm-14619982-v1",
+        "versions": [
+          {
+            "id": "wm-14619982-v1",
+            "original": {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Cray_1_IMG_9126.jpg",
+              "width": 5616,
+              "height": 3744,
+              "bytes": 1268587,
+              "mime": "image/jpeg"
+            },
+            "rungs": [
+              {
+                "width": 1280,
+                "height": 854,
+                "url": "/assets/wm-14619982/1280.jpg",
+                "bytes": 117386
+              },
+              {
+                "width": 3840,
+                "height": 2559,
+                "url": "/assets/wm-14619982/3840.jpg",
+                "bytes": 805874
+              }
+            ],
+            "loop": null,
+            "credit": {
+              "author": "Rama (Wikimedia Commons)",
+              "license": {
+                "name": "CC BY-SA 2.0 FR",
+                "url": "https://creativecommons.org/licenses/by-sa/2.0/fr/"
+              },
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Cray_1_IMG_9126.jpg"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-08T00:00:00Z",
+              "note": "No 3D scan of a real Cray-1 exists on the Smithsonian, Met, Science Museum Group or Sketchfab (the two Sketchfab Cray-1 models are artist-made, see alternatives), so a photograph is used. This is a Commons Quality Image: the complete machine, tower and padded power-supply bench, photographed in 2011 against a black background in the EPFL hallway in Lausanne; dual-licensed CeCILL / CC BY-SA 2.0 FR, attribution 'Photograph by Rama, Wikimedia Commons, Cc-by-sa-2.0-fr'. The serial number of the EPFL machine is not stated on Commons. Dimensions from Wikipedia 'Cray-1' infobox: height 196 cm, base diameter 263 cm, column diameter 145 cm, weight '5.5 tons' (Cray-1A; unit not specified, 4,990 kg if short tons). Date and sales figures from Wikipedia; 80 MHz clock from the Computer History Museum's Cray-1 exhibit page."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "wikimedia-commons"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": 0.5,
+        "back": "mirror",
+        "yaw": null,
+        "fallbackWidthM": 3
+      },
+      "tags": [
+        "supercomputer",
+        "cray",
+        "computing"
+      ],
+      "pageviews": null,
+      "importance": 0.85,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-08T00:00:00Z",
+      "updatedAt": "2026-10-08T23:11:27.328Z"
     },
     {
       "id": "yt-dQw4w9WgXcQ",
@@ -2650,7 +5148,157 @@
       },
       "source": "admin",
       "createdAt": "2026-10-08T00:00:00Z",
-      "updatedAt": "2026-10-08T22:06:34.725Z"
+      "updatedAt": "2026-10-08T23:11:27.808Z"
+    },
+    {
+      "id": "sf-485c51878bc7449e81379a863ec862f5",
+      "kind": "model",
+      "title": "iPhone (1st generation)",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "Apple Inc.",
+          "slug": null,
+          "wikidataQid": "Q312",
+          "wikipediaUrl": null,
+          "birthYear": null,
+          "deathYear": null,
+          "role": "designer and developer"
+        }
+      ],
+      "date": {
+        "year": 2007,
+        "yearStart": 2007,
+        "yearEnd": 2008,
+        "label": "2007",
+        "precision": "circa"
+      },
+      "madeIn": {
+        "name": "Cupertino, California (designed; assembled by Foxconn in Shenzhen, China)",
+        "region": "California",
+        "country": "United States",
+        "point": {
+          "lat": 37.3175,
+          "lon": -122.0419
+        },
+        "wikidataQid": "Q189471"
+      },
+      "location": {
+        "name": null,
+        "region": null,
+        "country": null,
+        "point": null,
+        "wikidataQid": null,
+        "institution": null,
+        "inventoryNumber": null
+      },
+      "culture": "American",
+      "movement": null,
+      "periodSlug": "contemporary",
+      "medium": "Smartphone: aluminium and black polycarbonate body, 3.5-inch glass multi-touch display",
+      "materials": [
+        "aluminium",
+        "glass",
+        "polycarbonate",
+        "electronics"
+      ],
+      "genre": [
+        "device",
+        "smartphone"
+      ],
+      "subjects": [
+        "mobile phone",
+        "consumer electronics",
+        "industrial design",
+        "computing"
+      ],
+      "physical": {
+        "widthCm": 6.1,
+        "heightCm": 11.5,
+        "depthCm": 1.16,
+        "weightKg": 0.135
+      },
+      "description": "Apple's first iPhone, unveiled by Steve Jobs at Macworld on 9 January 2007 and released that June, replaced the keypad of earlier phones with a 3.5-inch multi-touch screen and a single home button. Combining a phone, an iPod and an internet browser in one slab of aluminium and glass, it set the pattern that nearly every smartphone has followed since. This exhibit is a CC BY artist's model of the handset, not a scan of a particular example.",
+      "facts": [
+        "Announced on 9 January 2007 and released in the United States on 29 June 2007 at $499 for the 4 GB model and $599 for 8 GB.",
+        "It measures 115 x 61 x 11.6 mm and weighs 135 g, with a 3.5-inch 320x480 display and 128 MB of memory.",
+        "About 6.1 million units were sold before it was discontinued on 11 July 2008 in favour of the iPhone 3G."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/IPhone_(1st_generation)",
+      "wikidataQid": "Q621427",
+      "externalIds": {
+        "sketchfab": "485c51878bc7449e81379a863ec862f5"
+      },
+      "copyrighted": false,
+      "asset": {
+        "kind": "model",
+        "currentVersionId": "sf-485c51878bc7449e81379a863ec862f5-v1",
+        "versions": [
+          {
+            "id": "sf-485c51878bc7449e81379a863ec862f5-v1",
+            "original": {
+              "url": "https://sketchfab.com/3d-models/iphone-1st-generation-485c51878bc7449e81379a863ec862f5",
+              "format": "glb",
+              "bytes": null,
+              "triangles": null
+            },
+            "rungs": [],
+            "scale": 1,
+            "bounds": {
+              "width": 1,
+              "height": 1,
+              "depth": 1
+            },
+            "credit": {
+              "author": "skjoldbroder (Sketchfab user skjoldbroder)",
+              "license": {
+                "name": "CC BY 4.0",
+                "url": "https://creativecommons.org/licenses/by/4.0/"
+              },
+              "sourcePage": "https://sketchfab.com/3d-models/iphone-1st-generation-485c51878bc7449e81379a863ec862f5"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-08T00:00:00Z",
+              "note": "Artist-made CC BY 4.0 model by skjoldbroder on Sketchfab (uid 485c51878bc7449e81379a863ec862f5); not a scan. Download the glTF zip by hand into data/originals/sf-485c51878bc7449e81379a863ec862f5/ and run the pipeline."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "sketchfab",
+            "representation": "reconstruction"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": 1,
+        "back": "none",
+        "yaw": null,
+        "fallbackWidthM": 1.2
+      },
+      "tags": [
+        "apple",
+        "smartphone",
+        "reconstruction"
+      ],
+      "pageviews": null,
+      "importance": 0.9,
+      "moderation": {
+        "status": "pending",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": "Awaiting manual download of the Sketchfab model into data/originals",
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-08T00:00:00Z",
+      "updatedAt": "2026-10-08T00:00:00Z"
     }
   ]
 }

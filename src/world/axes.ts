@@ -1,0 +1,71 @@
+/**
+ * Axis cues stencilled on the floor. Both axes are ordered, not to scale,
+ * so the only honest cue is a label: the era printed on the boundary line
+ * you cross when you step into a row, and the longitude printed at the
+ * front edge of each occupied cell. Nothing is drawn where nothing stands.
+ */
+import { Group } from "three";
+import { Text } from "troika-three-text";
+import type { Layout, LayoutConfig } from "../layout/layout";
+import { DEFAULT_LAYOUT } from "../layout/layout";
+
+const FONT = "/fonts/inter-600.woff";
+const INK = 0x5e584e;
+
+/** "35,000 BCE", "c. 200 BCE", "1490s", "1.5 million years ago". */
+export function eraLabel(binStart: number, binYears: number): string {
+  if (binStart <= -1_000_000) return `${(-binStart / 1_000_000).toFixed(1).replace(/\.0$/, "")} million years ago`;
+  if (binStart <= -100_000) return `${(-binStart).toLocaleString("en-US")} years ago`;
+  if (binStart < 0) return `${binStart <= -10_000 ? "" : "c. "}${(-binStart).toLocaleString("en-US")} BCE`;
+  if (binStart === 0) return `1–${binYears - 1} CE`;
+  return `${binStart}s`;
+}
+
+/** "120°W", "0°", "5°E". */
+export function longitudeLabel(binStart: number): string | null {
+  if (!Number.isFinite(binStart)) return null;
+  if (binStart === 0) return "0°";
+  return `${Math.abs(binStart)}°${binStart < 0 ? "W" : "E"}`;
+}
+
+function stencil(text: string, size: number, anchorY: "top" | "bottom"): Text {
+  const t = new Text();
+  t.text = text;
+  t.font = FONT;
+  t.fontSize = size;
+  t.color = INK;
+  t.fillOpacity = 0.55;
+  t.anchorX = "center";
+  t.anchorY = anchorY;
+  // Flat on the floor, reading for a visitor who faces the future (-Z).
+  t.rotation.x = -Math.PI / 2;
+  t.position.y = 0.004;
+  // Pull the glyphs toward the camera in depth so they never fight the floor.
+  t.depthOffset = -1;
+  t.sync();
+  return t;
+}
+
+export function buildAxisCues(layout: Layout, cfg: LayoutConfig = DEFAULT_LAYOUT): Group {
+  const g = new Group();
+  g.name = "axis-cues";
+  const half = cfg.cellPitchZ / 2;
+
+  // Era: on the near boundary of each row, centred on the spine, hanging into the row.
+  for (const tick of layout.timeAxis) {
+    const t = stencil(eraLabel(tick.value, cfg.timeBinYears), 0.7, "top");
+    t.position.set(0, t.position.y, tick.coord + half - 0.5);
+    g.add(t);
+  }
+
+  // Longitude: at the front edge of each occupied cell, small, beside the era label.
+  const lonByRank = new Map(layout.geoAxis.map((t) => [t.rank, t.value]));
+  for (const cell of layout.cells) {
+    const label = longitudeLabel(lonByRank.get(cell.geoRank) ?? Number.NaN);
+    if (!label) continue;
+    const t = stencil(label, 0.3, "bottom");
+    t.position.set(cell.x, t.position.y, cell.z + half - 0.5);
+    g.add(t);
+  }
+  return g;
+}

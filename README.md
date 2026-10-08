@@ -4,16 +4,20 @@ A museum you walk through in VR or on a flat screen, in the browser. One open
 plane, no walls: forward is later in time, right is further east. Works float
 at their true size, and you can walk behind one and see it mirrored.
 
-v1 holds sixteen works. Twelve are cave and rock paintings, photographed
-on the rock or in a full-size facsimile, from the hand stencils of Sulawesi
-(c. 35,000 BCE) through Chauvet, Lascaux, Altamira, Serra da Capivara,
-Bhimbetka, the Cueva de las Manos, Tassili n'Ajjer, Laas Geel and the
-Great Gallery of Utah to an X-ray turtle in Kakadu and a San eland in the
-Drakensberg. Then Leonardo's *Last Supper* at its real 8.8 × 4.6 m, a 1924
-Ford Model T runabout, the Apollo 11 command module *Columbia* as a
-Smithsonian 3D scan, and the rickroll, a frozen frame of Rick Astley at the
-size of a living-room television that starts to move when you walk up to
-it. They step across the floor from Pleistocene Sulawesi to 2007 London.
+v1 holds thirty-two works and one placeholder. They run from an Acheulean
+hand axe (a CC0 photogrammetry scan, 300,000 years old) and the Lion-man of
+Hohlenstein-Stadel through twelve cave and rock paintings from five
+continents, the Venus of Willendorf, a Clovis point (another scan), a
+proto-cuneiform tablet, the Nebra sky disc, an Exekias amphora, the
+Rosetta Stone, the Alexander Mosaic at its real 5.8 m, the Chi Rho page of
+the Book of Kells, Fan Kuan's *Travelers Among Mountains and Streams*, a
+Benin plaque, Leonardo's *Last Supper* at 8.8 × 4.6 m, the 1903 Wright
+Flyer and the Apollo 11 command module *Columbia* as Smithsonian 3D scans, a
+1924 Ford Model T, bombe drums, the first transistor, a Cray-1, and the
+rickroll, a frozen frame of Rick Astley at the size of a living-room
+television that starts to move when you walk up to it. The first iPhone is
+in the catalogue as a CC BY artist's model that must be downloaded from
+Sketchfab by hand (see below) and is hidden until then.
 
 ## Run it
 
@@ -40,9 +44,10 @@ headless Chrome on software GL will peg several cores until it is killed.
 
 ```
 src/data/types.ts        the Artwork record: every attribute we will ever need
-src/data/collection.json the collection (v1: one work)
+src/data/collection.json the collection
 src/layout/layout.ts     (time, geography) -> cell -> world position + facing
 src/world/floor.ts       ground, sky dome, environment light, shadows
+src/world/axes.ts        era and longitude labels stencilled on the floor
 src/world/exhibit.ts     one work in the world: image or glTF, placards, shadow
 src/assets/textures.ts   image ladder; sharper rungs load as you approach
 src/assets/models.ts     glb ladder, same idea for 3D scans
@@ -74,8 +79,14 @@ side from west to east and centred on the spine, so the next era is always
 one cell ahead rather than off to one side. In a sparse collection this
 means a column is not a fixed longitude; once every row has every column
 it is the plain grid. Within a cell, works are packed in a grid, most
-important first. `computeLayout` returns the tick list for each axis so
-later versions can draw cues where time stretches or compresses.
+important first. `computeLayout` returns the tick list for each axis and
+the list of occupied cells.
+
+Those feed the axis cues stencilled on the floor (`src/world/axes.ts`):
+the era is printed on the boundary line you cross when you step into a
+row ("35,000 BCE", "c. 200 BCE", "1490s") and the longitude at the front
+edge of each occupied cell ("115°E"). Since neither axis is to scale, a
+label is the only honest cue, and nothing is drawn where nothing stands.
 
 ### Assets
 
@@ -105,18 +116,25 @@ See `.env.example`.
   `loop.seconds`. The exhibit shows the still from afar and swaps in the
   loop within 14 m, so it is already moving as you arrive from the previous
   cell. Needs ffmpeg on the PATH.
-- **Models from a file** (provenance `sketchfab` or `user-upload`): the
-  source glb or glTF is read from `data/originals/<id>/`, which you populate
-  by hand since those sources need a login. The ladder is built from that one
-  file: textures are resized per tier and re-encoded as WebP, the mesh is
-  simplified for the lower tiers, and the result gets the same metres,
-  origin and Draco treatment as a Smithsonian scan.
+- **Models from a file** (provenance `zenodo`, `sketchfab` or
+  `user-upload`): the source glb or glTF is read from `data/originals/<id>/`.
+  For `zenodo`, or any direct glb URL, the pipeline downloads it there
+  first; for the others you populate the directory by hand since those
+  sources need a login, and until you do the work is skipped with a warning.
+  The ladder is built from that one file: textures are resized per tier and
+  re-encoded as WebP, the mesh is simplified for the lower tiers, and the
+  result gets the same metres, origin and Draco treatment as a Smithsonian
+  scan. Photogrammetry exports are often unitless; `original.unitScale`
+  (metres per file unit) is baked into the rungs.
 - **Models** from Smithsonian 3D: the `original.url` is a Voyager
   `document.json`. Each of its quality tiers is a set of Draco glb parts in
   centimetres; the pipeline merges the parts, converts to metres with the
   base at y = 0 and the footprint centred, re-encodes with Draco, and saves
   `thumb.glb`, `low.glb`, `medium.glb`, `high.glb`. The renderer swaps rungs
-  by texture size as you approach, exactly as it does for images.
+  by texture size as you approach, exactly as it does for images. The
+  Smithsonian CDN omits an intermediate certificate from its TLS chain,
+  which Node does not fetch on its own, so the npm script passes the public
+  Sectigo intermediate in `scripts/certs/` through `NODE_EXTRA_CA_CERTS`.
 
 ### Adding a work
 
@@ -130,6 +148,12 @@ unpack it into `data/originals/<artwork id>/`, set provenance `sketchfab`,
 and run the pipeline. Mark an artist-made model `representation:
 "reconstruction"`; the placard then says so and credits the author, which
 CC BY requires.
+
+The iPhone record is in the catalogue with `moderation.status: "pending"`.
+To show it, log in to Sketchfab, download the glTF zip of model
+`485c51878bc7449e81379a863ec862f5`, unpack it into
+`data/originals/sf-485c51878bc7449e81379a863ec862f5/`, run
+`npm run fetch-assets`, and set the status to `approved`.
 
 A work still in copyright gets `copyrighted: true` and a `Fair use` licence
 on its asset version. The placard then prints "In copyright · shown under
@@ -149,6 +173,19 @@ on each placard: public domain (Mariano Cecowski, HTO, PanBK), CC BY
 Claude Valette, Mateus S. Figueiredo, Bernard Gagnon, Issam Barhoumi, Lukas
 Kaffer). The Chauvet, Lascaux and Altamira photographs show full-size
 facsimiles, since those caves are closed; the placards say so.
+The object photographs are from Wikimedia Commons and the Met's Open Access
+programme: CC0 (The Metropolitan Museum of Art for the proto-cuneiform
+tablet, the Exekias amphora and the Benin plaque; Shonagon for the Nebra
+sky disc; Ted Coles for the bombe drums), CC BY (Matthias Kabel, Windell
+Oskay), CC BY-SA (Dagmar Hollmann, Hans Hillewaert, Rama) and public domain
+reproductions of the Alexander Mosaic, the Book of Kells and Fan Kuan's
+scroll. The Clovis point and the Saint-Acheul hand axe are CC0 photogrammetry
+scans by the Research Laboratories of Archaeology, University of North
+Carolina at Chapel Hill, mirrored on Zenodo. The Wright Flyer scan is CC0
+from the Smithsonian. The bombe drums and the transistor on display at Bell
+Labs are replicas, and the placards say so. The iPhone is "iPhone 1st
+generation" by [skjoldbroder](https://sketchfab.com/skjoldbroder) on
+Sketchfab, CC BY 4.0.
 The Last Supper image is public domain, via Wikimedia Commons. The Columbia
 scan is CC0 from the Smithsonian Institution's Digitization Program Office.
 The Model T is based on "1924 Ford Model T 3d model with interior" by

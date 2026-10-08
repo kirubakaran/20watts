@@ -9,6 +9,7 @@
  *  - `id` is stable for the life of the record and never encodes the image.
  *    Imports from Wikimedia use "wm-<commons page curid>", Smithsonian 3D
  *    imports use "si-<EDAN record id>", Sketchfab imports use "sf-<model uid>",
+ *    Zenodo mirrors use "zen-<record id>", Met images use "met-<object id>",
  *    user additions use "usr-<uuid>".
  */
 
@@ -159,6 +160,12 @@ export interface ModelVersion {
     format: string;
     bytes: number | null;
     triangles: number | null;
+    /**
+     * Metres per unit of the source file, when it is not in metres (many
+     * photogrammetry exports are unitless). The pipeline bakes it into the
+     * rungs, so the rungs are always metres. Omit or 1 for a file in metres.
+     */
+    unitScale?: number;
   };
   /**
    * Ascending by quality. Each rung is one .glb, Y-up, in metres, with the
@@ -174,7 +181,8 @@ export interface ModelVersion {
   contributed: Contribution;
   moderation: Moderation;
   /**
-   * "smithsonian-3d" | "sketchfab" | "user-upload" ...
+   * "smithsonian-3d" | "zenodo" | "sketchfab" | "user-upload" ...
+   * "zenodo" (or any direct glb URL) is downloaded into data/originals.
    * Sources the pipeline cannot fetch itself (Sketchfab needs a login, uploads
    * arrive by hand) are read from data/originals/<artwork id>/ instead.
    */

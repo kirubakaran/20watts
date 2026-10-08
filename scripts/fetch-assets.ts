@@ -18,12 +18,15 @@
  *    the source png or jpg is read from data/originals/<artwork id>/ and
  *    resized into a ladder of JPEG widths.
  *
- *  Models from a file, provenance "sketchfab" or "user-upload":
- *    the source glb or glTF is read from data/originals/<artwork id>/ (put
- *    the unpacked download there by hand). The ladder is built from that one
- *    file: textures are resized per tier and the mesh is simplified for the
- *    lower tiers, then everything gets the same metres, origin and Draco
- *    treatment as below.
+ *  Models from a file, provenance "zenodo", "sketchfab" or "user-upload":
+ *    the source glb or glTF is read from data/originals/<artwork id>/. For
+ *    "zenodo" (any direct glb URL) the pipeline downloads it there first;
+ *    for the others put the unpacked download there by hand, and until it
+ *    is there the work is skipped with a warning. The ladder is built from
+ *    that one file: textures are resized per tier and the mesh is simplified
+ *    for the lower tiers, then everything gets the same metres, origin and
+ *    Draco treatment as below. `original.unitScale` converts unitless or
+ *    non-metre files to metres.
  *
  *  Models, provenance "smithsonian-3d":
  *    `original.url` is a Voyager document.json from 3d-api.si.edu. Each of
@@ -323,9 +326,9 @@ async function fetchSmithsonianModel(artId: string, version: ModelVersion) {
   let bounds = version.bounds;
   for (const quality of QUALITIES) {
     const parts = voyagerParts(doc, quality);
-    const files: string[] = [];
-    for (const p of parts) files.push(path.join(cache, p.uri));
-    for (const [i, p] of parts.entries()) await download(base + p.uri, files[i]!);
+    // Asset URIs are relative to the document in older documents and absolute in newer ones.
+    const files = parts.map((p) => path.join(cache, path.basename(new URL(p.uri, base).pathname)));
+    for (const [i, p] of parts.entries()) await download(new URL(p.uri, base).toString(), files[i]!);
     const file = `${quality}.glb`;
     const r = await mergeParts(files, unitScale, path.join(OUT_DIR, artId, file));
     rungs.push({ quality, url: `/assets/${artId}/${file}`, bytes: r.bytes, triangles: r.triangles, textureSize: r.textureSize, draco: true });
@@ -346,16 +349,26 @@ const LOCAL_TIERS: Record<Quality, TierOptions> = {
   high: { ratio: 1, textureSize: 4096 },
 };
 
-async function buildLocalModel(artId: string, version: ModelVersion) {
+async function buildLocalModel(artId: string, version: ModelVersion): Promise<boolean> {
   const dir = path.join(ORIGINALS_DIR, artId);
-  const files = (await readdir(dir).catch(() => [] as string[])).filter((f) => /\.(glb|gltf)$/i.test(f));
+  const listGlbs = async () => (await readdir(dir).catch(() => [] as string[])).filter((f) => /\.(glb|gltf)$/i.test(f));
+  let files = await listGlbs();
+  if (!files.length && version.provenance === "zenodo") {
+    const name = /\/files\/([^/]+\.glb)\b/i.exec(version.original.url)?.[1] ?? "source.glb";
+    version.original.bytes = await download(version.original.url, path.join(dir, name));
+    files = await listGlbs();
+  }
   const src = files[0];
-  if (!src) throw new Error(`${artId}: put the source .glb or .gltf in ${dir}`);
+  if (!src) {
+    console.warn(`${artId}: skipped, put the source .glb or .gltf in ${dir}`);
+    return false;
+  }
+  const unitScale = version.original.unitScale ?? 1;
   const rungs: ModelRung[] = [];
   let bounds = version.bounds;
   for (const quality of QUALITIES) {
     const file = `${quality}.glb`;
-    const r = await mergeParts([path.join(dir, src)], 1, path.join(OUT_DIR, artId, file), LOCAL_TIERS[quality]);
+    const r = await mergeParts([path.join(dir, src)], unitScale, path.join(OUT_DIR, artId, file), LOCAL_TIERS[quality]);
     rungs.push({ quality, url: `/assets/${artId}/${file}`, bytes: r.bytes, triangles: r.triangles, textureSize: r.textureSize, draco: true });
     bounds = r.bounds;
     console.log(`${artId}: ${quality} ${(r.bytes / 1024).toFixed(0)} KB, ${r.triangles} tris, ${r.textureSize ?? "no"} px textures`);
@@ -363,6 +376,7 @@ async function buildLocalModel(artId: string, version: ModelVersion) {
   version.rungs = rungs;
   version.bounds = { width: round(bounds.width), height: round(bounds.height), depth: round(bounds.depth) };
   version.original.triangles = rungs.at(-1)?.triangles ?? null;
+  return true;
 }
 
 function round(n: number): number {
@@ -386,8 +400,9 @@ async function main() {
     } else {
       for (const version of art.asset.versions) {
         if (version.provenance === "smithsonian-3d") await fetchSmithsonianModel(art.id, version);
-        else if (version.provenance === "sketchfab" || version.provenance === "user-upload") await buildLocalModel(art.id, version);
-        else continue;
+        else if (["zenodo", "sketchfab", "user-upload"].includes(version.provenance)) {
+          if (!(await buildLocalModel(art.id, version))) continue;
+        } else continue;
         touched = true;
       }
     }

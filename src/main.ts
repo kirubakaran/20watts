@@ -5,6 +5,7 @@ import collectionJson from "./data/collection.json";
 import { computeLayout } from "./layout/layout";
 import { buildWorld } from "./world/floor";
 import { Exhibit } from "./world/exhibit";
+import { buildAxisCues } from "./world/axes";
 import { Player } from "./locomotion/player";
 
 // JSON import types are inferred per record; the schema is the source of truth.
@@ -39,6 +40,7 @@ const visible = collection.artworks.filter((a) => a.moderation.status === "appro
 const layout = computeLayout(visible);
 const exhibits = visible.map((a) => new Exhibit(a, layout.placements.get(a.id)!, gpu));
 for (const e of exhibits) scene.add(e.group);
+scene.add(buildAxisCues(layout));
 
 // Spawn in front of the first work, far enough back to take it in.
 // Debug override: ?spawn=x,z,yawDegrees

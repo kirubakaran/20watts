@@ -61,10 +61,21 @@ export interface AxisTick {
   count: number;
 }
 
+/** One occupied cell: a time row crossed with a geography column, in world coordinates. */
+export interface LayoutCell {
+  timeRank: number;
+  geoRank: number;
+  /** Cell centre. */
+  x: number;
+  z: number;
+  count: number;
+}
+
 export interface Layout {
   placements: Map<string, Placement>;
   timeAxis: AxisTick[];
   geoAxis: AxisTick[];
+  cells: LayoutCell[];
 }
 
 /** Works with no known longitude go in a bin past the eastern edge. */
@@ -116,6 +127,7 @@ export function computeLayout(artworks: Artwork[], cfg: LayoutConfig = DEFAULT_L
   const placements = new Map<string, Placement>();
   const timeCounts = new Map<number, number>();
   const geoCounts = new Map<number, number>();
+  const cellList: LayoutCell[] = [];
 
   for (const [key, members] of cells) {
     const [timeRank, geoRank] = key.split(":").map(Number) as [number, number];
@@ -125,6 +137,7 @@ export function computeLayout(artworks: Artwork[], cfg: LayoutConfig = DEFAULT_L
     const row = rowCols.get(timeRank)!;
     const cx = (row.get(geoRank)! - (row.size - 1) / 2) * cfg.cellPitchX;
     const cz = -timeRank * cfg.cellPitchZ;
+    cellList.push({ timeRank, geoRank, x: cx, z: cz, count: members.length });
 
     // Pack members in a square-ish grid, most important at the centre first.
     members.sort((p, q) => importanceOf(q) - importanceOf(p));
@@ -164,5 +177,5 @@ export function computeLayout(artworks: Artwork[], cfg: LayoutConfig = DEFAULT_L
     count: geoCounts.get(rank) ?? 0,
   }));
 
-  return { placements, timeAxis, geoAxis };
+  return { placements, timeAxis, geoAxis, cells: cellList };
 }
