@@ -18,7 +18,10 @@ dates, places) are derived from Wikipedia and Wikidata and are licensed under
 Each artwork's image or model carries its own license, recorded in the
 `credit` field of its asset version and shown on the placard in the museum.
 Works still in copyright are marked `copyrighted: true` and displayed under
-fair use with a label. Rights holders can request removal by opening an issue.
+fair use with a label, limited to a single reduced-resolution frame or a
+silent clip of a few seconds, for the purpose of commentary on the work's
+place in cultural history. Rights holders can request removal by opening an
+issue.
 
 ## Fonts
 

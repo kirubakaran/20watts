@@ -4,10 +4,11 @@ A museum you walk through in VR or on a flat screen, in the browser. One open
 plane, no walls: forward is later in time, right is further east. Works float
 at their true size, and you can walk behind one and see it mirrored.
 
-v1 holds three works: Leonardo's *Last Supper* at its real 8.8 × 4.6 m, a
-1924 Ford Model T runabout, and the Apollo 11 command module *Columbia*, a
-Smithsonian 3D scan. They step diagonally across the floor: 1495 Milan,
-then 1924 Michigan ahead and to the left, then 1969 California further on.
+v1 holds four works: Leonardo's *Last Supper* at its real 8.8 × 4.6 m, a
+1924 Ford Model T runabout, the Apollo 11 command module *Columbia* as a
+Smithsonian 3D scan, and the rickroll, a frozen frame of Rick Astley at the
+size of a living-room television that starts to move when you walk up to
+it. They step across the floor from 1495 Milan to 2007 London.
 
 ## Run it
 
@@ -70,6 +71,11 @@ See `.env.example`.
 
 - **Images** from Wikimedia Commons: the Commons API is asked for a ladder
   of thumbnail widths, saved as `<width>.jpg`.
+- **Moving images** (provenance `video-still`): the source video sits in
+  `data/originals/<id>/`. ffmpeg cuts the still at `loop.start` into the
+  usual JPEG ladder and encodes a silent 640 px H.264 loop of
+  `loop.seconds`. The exhibit shows the still from afar and swaps in the
+  loop within 6 m. Needs ffmpeg on the PATH.
 - **Models from a file** (provenance `sketchfab` or `user-upload`): the
   source glb or glTF is read from `data/originals/<id>/`, which you populate
   by hand since those sources need a login. The ladder is built from that one
@@ -96,6 +102,11 @@ and run the pipeline. Mark an artist-made model `representation:
 "reconstruction"`; the placard then says so and credits the author, which
 CC BY requires.
 
+A work still in copyright gets `copyrighted: true` and a `Fair use` licence
+on its asset version. The placard then prints "In copyright · shown under
+fair use" instead of a licence, and the asset should be small: a single
+reduced frame or a few silent seconds, never the whole thing.
+
 ## License
 
 Code is AGPL-3.0-only. Collection text is CC BY-SA 4.0. Images and models
@@ -108,7 +119,9 @@ scan is CC0 from the Smithsonian Institution's Digitization Program Office.
 The Model T is based on "1924 Ford Model T 3d model with interior" by
 [shubhankar.arch.3d](https://sketchfab.com/shubhankar.arch.3d) on Sketchfab,
 CC BY 4.0.
-Placard text uses Inter (SIL Open Font License). Meshes are decoded with
-Google's Draco (Apache-2.0). Schema fields follow the conventions of
+The rickroll still and loop are cut from Rick Astley's "Never Gonna Give
+You Up" (RCA / Sony Music, directed by Simon West) and shown under fair
+use. Placard text uses Inter (SIL Open Font License). Meshes are decoded
+with Google's Draco (Apache-2.0). Schema fields follow the conventions of
 [A Walkable History of Art](https://github.com/justdataplease/art-history-museum)
 so its Wikipedia-derived dataset can be imported later.

@@ -9,6 +9,15 @@
  *    asks the Commons API for a ladder of thumbnail widths and downloads
  *    them as <width>.jpg.
  *
+ *  Images from a video, provenance "video-still":
+ *    the source video sits in data/originals/<artwork id>/. ffmpeg cuts the
+ *    still at `loop.start` into a ladder of JPEG widths and encodes the
+ *    silent loop as a small H.264 mp4. Needs ffmpeg on the PATH.
+ *
+ *  Images from a file, provenance "screenshot" or "user-upload":
+ *    the source png or jpg is read from data/originals/<artwork id>/ and
+ *    resized into a ladder of JPEG widths.
+ *
  *  Models from a file, provenance "sketchfab" or "user-upload":
  *    the source glb or glTF is read from data/originals/<artwork id>/ (put
  *    the unpacked download there by hand). The ladder is built from that one
@@ -38,7 +47,11 @@ import { MeshoptSimplifier } from "meshoptimizer";
 import draco3d from "draco3dgltf";
 import sharp from "sharp";
 import { readdir } from "node:fs/promises";
-import type { Collection, ImageRung, ModelRung, ModelVersion } from "../src/data/types";
+import { execFile } from "node:child_process";
+import { promisify } from "node:util";
+
+const run = promisify(execFile);
+import type { Collection, ImageRung, ImageVersion, ModelRung, ModelVersion } from "../src/data/types";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
 const COLLECTION = path.join(ROOT, "src/data/collection.json");
@@ -109,6 +122,77 @@ async function fetchCommonsImage(artId: string, version: { original: { url: stri
     console.log(`${artId}: ${t.width}px (${(bytes / 1024).toFixed(0)} KB)`);
   }
   version.rungs = [...rungs.values()].sort((a, b) => a.width - b.width);
+}
+
+const IMAGE_WIDTHS = [640, 1280, 2560, 5120];
+
+async function buildLocalImage(artId: string, version: ImageVersion) {
+  const dir = path.join(ORIGINALS_DIR, artId);
+  const files = (await readdir(dir).catch(() => [] as string[])).filter((f) => /\.(png|jpe?g|webp)$/i.test(f));
+  const src = files[0];
+  if (!src) throw new Error(`${artId}: put the source image in ${dir}`);
+  const srcPath = path.join(dir, src);
+  const meta = await sharp(srcPath).metadata();
+  const width = meta.width ?? 0;
+  const height = meta.height ?? 0;
+  const bytes = (await stat(srcPath)).size;
+  version.original = { url: version.original.url, width, height, bytes, mime: `image/${meta.format ?? "png"}` };
+  const outDir = path.join(OUT_DIR, artId);
+  await mkdir(outDir, { recursive: true });
+  const rungs: ImageRung[] = [];
+  const widths = [...IMAGE_WIDTHS.filter((w) => w < width), width];
+  for (const w of widths) {
+    const file = `${w}.jpg`;
+    const info = await sharp(srcPath).resize({ width: w, withoutEnlargement: true }).jpeg({ quality: 88 }).toFile(path.join(outDir, file));
+    rungs.push({ width: info.width, height: info.height, url: `/assets/${artId}/${file}`, bytes: info.size });
+    console.log(`${artId}: ${info.width}px (${(info.size / 1024).toFixed(0)} KB)`);
+  }
+  version.rungs = rungs;
+}
+
+const LOOP_WIDTH = 640;
+
+async function buildVideoStill(artId: string, version: ImageVersion) {
+  const dir = path.join(ORIGINALS_DIR, artId);
+  const files = (await readdir(dir).catch(() => [] as string[])).filter((f) => /\.(mp4|webm|mov|mkv)$/i.test(f));
+  const src = files[0];
+  if (!src) throw new Error(`${artId}: put the source video in ${dir}`);
+  const loop = version.loop;
+  if (!loop) throw new Error(`${artId}: a video-still version needs \`loop\` with start and seconds`);
+  const srcPath = path.join(dir, src);
+  const outDir = path.join(OUT_DIR, artId);
+  await mkdir(outDir, { recursive: true });
+
+  // The still: one full-size frame, then the usual image ladder from it.
+  const framePath = path.join(dir, `frame-${loop.start}.png`);
+  await run("ffmpeg", ["-v", "error", "-y", "-ss", String(loop.start), "-i", srcPath, "-frames:v", "1", framePath]);
+  const meta = await sharp(framePath).metadata();
+  const width = meta.width ?? 0;
+  const height = meta.height ?? 0;
+  version.original = { url: version.original.url, width, height, bytes: (await stat(srcPath)).size, mime: "video/mp4" };
+  const rungs: ImageRung[] = [];
+  for (const w of [...IMAGE_WIDTHS.filter((x) => x < width), width]) {
+    const file = `${w}.jpg`;
+    const info = await sharp(framePath).resize({ width: w, withoutEnlargement: true }).jpeg({ quality: 88 }).toFile(path.join(outDir, file));
+    rungs.push({ width: info.width, height: info.height, url: `/assets/${artId}/${file}`, bytes: info.size });
+    console.log(`${artId}: still ${info.width}px (${(info.size / 1024).toFixed(0)} KB)`);
+  }
+  version.rungs = rungs;
+
+  // The loop: silent, small, H.264 so every headset browser plays it.
+  const loopFile = `loop-${LOOP_WIDTH}.mp4`;
+  const loopPath = path.join(outDir, loopFile);
+  await run("ffmpeg", [
+    "-v", "error", "-y", "-ss", String(loop.start), "-t", String(loop.seconds), "-i", srcPath,
+    "-an", "-vf", `scale=${LOOP_WIDTH}:-2,fps=25`,
+    "-c:v", "libx264", "-profile:v", "main", "-pix_fmt", "yuv420p", "-crf", "22", "-g", "25", "-movflags", "+faststart",
+    loopPath,
+  ]);
+  const { stdout } = await run("ffprobe", ["-v", "error", "-show_entries", "stream=width,height", "-of", "csv=p=0", loopPath]);
+  const [lw = LOOP_WIDTH, lh = Math.round((LOOP_WIDTH * height) / width)] = stdout.trim().split(",").map(Number);
+  const bytes = (await stat(loopPath)).size;
+  version.loop = { ...loop, url: `/assets/${artId}/${loopFile}`, width: lw, height: lh, bytes };
+  console.log(`${artId}: loop ${loop.seconds}s ${lw}x${lh} (${(bytes / 1024).toFixed(0)} KB)`);
 }
 
 // ---------------------------------------------------------------- models
@@ -293,8 +377,10 @@ async function main() {
     let touched = false;
     if (art.asset.kind === "image") {
       for (const version of art.asset.versions) {
-        if (version.provenance !== "wikimedia-commons") continue;
-        await fetchCommonsImage(art.id, version);
+        if (version.provenance === "wikimedia-commons") await fetchCommonsImage(art.id, version);
+        else if (version.provenance === "video-still") await buildVideoStill(art.id, version);
+        else if (version.provenance === "screenshot" || version.provenance === "user-upload") await buildLocalImage(art.id, version);
+        else continue;
         touched = true;
       }
     } else {

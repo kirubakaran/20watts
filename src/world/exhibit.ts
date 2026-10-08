@@ -21,6 +21,7 @@ import type { Artwork } from "../data/types";
 import { currentImageVersion, currentModelVersion, imageDisplaySize, footprintOf } from "../data/types";
 import { ImageLadder } from "../assets/textures";
 import { ModelLadder } from "../assets/models";
+import { Motion } from "../assets/motion";
 import type { Placement } from "../layout/layout";
 
 const FONT_REGULAR = "/fonts/inter-400.woff";
@@ -28,6 +29,9 @@ const FONT_BOLD = "/fonts/inter-600.woff";
 
 /** Screen pixels a 1 m object at 1 m should get before we ask for a sharper rung. */
 const PX_PER_RADIAN = 1600;
+/** A moving image starts playing inside this distance and stops again beyond the larger one. */
+const MOTION_NEAR = 6;
+const MOTION_FAR = 8;
 
 let shadowTexture: CanvasTexture | null = null;
 function getShadowTexture(): CanvasTexture {
@@ -79,7 +83,11 @@ function sizeLine(a: Artwork): string {
 function makePlacard(a: Artwork, width: number): Group {
   const g = new Group();
   const creators = a.creators.map((c) => {
-    const life = c.birthYear || c.deathYear ? ` (${c.birthYear ?? "?"}–${c.deathYear ?? "?"})` : "";
+    const life =
+      c.birthYear && c.deathYear ? ` (${c.birthYear}–${c.deathYear})`
+      : c.birthYear ? ` (b. ${c.birthYear})`
+      : c.deathYear ? ` (d. ${c.deathYear})`
+      : "";
     return `${c.name}${life}`;
   }).join(", ");
   const place = [a.madeIn.name, a.madeIn.country].filter(Boolean).join(", ");
@@ -128,6 +136,7 @@ export class Exhibit {
   readonly group = new Group();
   private ladder: ImageLadder | ModelLadder | null = null;
   private imageMaterial: MeshBasicMaterial | null = null;
+  private motion: Motion | null = null;
   private modelRoot: Group | null = null;
   private readonly centre = new Vector3();
   private readonly displayWidth: number;
@@ -196,13 +205,14 @@ export class Exhibit {
     if (v && v.rungs.length > 0) {
       this.ladder = new ImageLadder(v.rungs, this.gpu.maxTextureSize, this.gpu.maxAnisotropy);
       this.ladder.onUpgrade((t: Texture) => {
-        if (!this.imageMaterial) return;
+        if (!this.imageMaterial || this.motion?.isPlaying) return;
         this.imageMaterial.map = t;
         this.imageMaterial.color.set(0xffffff);
         this.imageMaterial.needsUpdate = true;
       });
       this.ladder.requestLowest();
     }
+    if (v?.loop) this.motion = new Motion(v.loop);
   }
 
   private buildModel() {
@@ -229,18 +239,33 @@ export class Exhibit {
 
   /** Called every frame with the viewer's world position; upgrades the texture rung as they approach. */
   update(viewerWorldPos: Vector3) {
-    if (!this.ladder) return;
+    if (!this.ladder && !this.motion) return;
     const worldCentre = this.centre.clone().applyMatrix4(this.group.matrixWorld);
     const d = Math.max(viewerWorldPos.distanceTo(worldCentre), 0.5);
-    const desiredPx = (this.displayWidth / d) * PX_PER_RADIAN;
-    // Hysteresis: only ask again when the need has grown by a quarter.
-    if (desiredPx > this.lastRequestedPx * 1.25) {
-      this.lastRequestedPx = desiredPx;
-      this.ladder.request(desiredPx);
+    if (this.ladder) {
+      const desiredPx = (this.displayWidth / d) * PX_PER_RADIAN;
+      // Hysteresis: only ask again when the need has grown by a quarter.
+      if (desiredPx > this.lastRequestedPx * 1.25) {
+        this.lastRequestedPx = desiredPx;
+        this.ladder.request(desiredPx);
+      }
+    }
+    if (this.motion && this.imageMaterial) {
+      if (d < MOTION_NEAR && !this.motion.isPlaying) {
+        this.imageMaterial.map = this.motion.play();
+        this.imageMaterial.color.set(0xffffff);
+        this.imageMaterial.needsUpdate = true;
+      } else if (d > MOTION_FAR && this.motion.isPlaying) {
+        this.motion.pause();
+        const still = this.ladder instanceof ImageLadder ? this.ladder.current : null;
+        if (still) this.imageMaterial.map = still;
+        this.imageMaterial.needsUpdate = true;
+      }
     }
   }
 
   dispose() {
+    this.motion?.dispose();
     this.ladder?.dispose();
     this.imageMaterial?.dispose();
   }

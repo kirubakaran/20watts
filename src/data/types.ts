@@ -100,6 +100,20 @@ export interface ImageRung {
   bytes: number | null;
 }
 
+/**
+ * A short silent clip that replaces the still when the visitor is close.
+ * Cut by the pipeline from the source video in data/originals.
+ */
+export interface MotionLoop {
+  /** Seconds into the source video where the loop (and the still) begin. */
+  start: number;
+  seconds: number;
+  url: string;
+  width: number;
+  height: number;
+  bytes: number | null;
+}
+
 export interface ImageVersion {
   id: string;
   original: {
@@ -111,10 +125,16 @@ export interface ImageVersion {
   };
   /** Ascending by width. Populated by the asset pipeline, served from our host. */
   rungs: ImageRung[];
+  /** Optional motion, for a work that is really a moving image. */
+  loop: MotionLoop | null;
   credit: Credit;
   contributed: Contribution;
   moderation: Moderation;
-  /** "wikimedia-commons" | "user-upload" | "iiif" | "museum-api" ... */
+  /**
+   * "wikimedia-commons" | "video-still" | "screenshot" | "user-upload" | "iiif" ...
+   * "video-still" means the original is a video in data/originals and both
+   * the still and the loop are cut from it.
+   */
   provenance: string;
 }
 
