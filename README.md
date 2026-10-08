@@ -32,14 +32,26 @@ walks, right stick snap-turns.
 src/data/types.ts        the Artwork record: every attribute we will ever need
 src/data/collection.json the collection (v1: one work)
 src/layout/layout.ts     (time, geography) -> cell -> world position + facing
-src/world/floor.ts       ground, light, fog
+src/world/floor.ts       ground, sky dome, environment light, shadows
 src/world/exhibit.ts     one work in the world: image or glTF, placards, shadow
 src/assets/textures.ts   image ladder; sharper rungs load as you approach
 src/assets/models.ts     glb ladder, same idea for 3D scans
 src/locomotion/player.ts desktop and VR movement
 scripts/fetch-assets.ts  pulls images and models from their sources into public/assets
 public/draco/            Draco mesh decoder, copied from three's examples
+public/env/              overcast HDRI used for environment lighting, never drawn
 ```
+
+### Ground and sky
+
+The floor is polished concrete drawn procedurally: one tile per layout
+cell with hairline joints every 4 m and a firmer line on the 16 m cell
+boundary, so the time and geography grid shows without labels. The sky is
+a gradient dome, warm at the horizon and cooler overhead, with the fog
+matched to the horizon. Lighting is a CC0 overcast HDRI from Poly Haven
+used only as the environment map, plus a soft directional light that casts
+shadows for 3D objects and follows the visitor. Paintings opt out of tone
+mapping so their colours stay as scanned.
 
 ### Axes
 
@@ -122,6 +134,8 @@ CC BY 4.0.
 The rickroll still and loop are cut from Rick Astley's "Never Gonna Give
 You Up" (RCA / Sony Music, directed by Simon West) and shown under fair
 use. Placard text uses Inter (SIL Open Font License). Meshes are decoded
-with Google's Draco (Apache-2.0). Schema fields follow the conventions of
+with Google's Draco (Apache-2.0). Environment lighting is "Overcast Soil
+(Pure Sky)" from [Poly Haven](https://polyhaven.com/a/overcast_soil_puresky),
+CC0. Schema fields follow the conventions of
 [A Walkable History of Art](https://github.com/justdataplease/art-history-museum)
 so its Wikipedia-derived dataset can be imported later.

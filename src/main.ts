@@ -1,4 +1,4 @@
-import { PerspectiveCamera, Scene, Timer, Vector3, WebGLRenderer } from "three";
+import { ACESFilmicToneMapping, PCFShadowMap, PerspectiveCamera, Scene, Timer, Vector3, WebGLRenderer } from "three";
 import { VRButton } from "three/addons/webxr/VRButton.js";
 import type { Collection } from "./data/types";
 import collectionJson from "./data/collection.json";
@@ -13,17 +13,22 @@ const collection = collectionJson as unknown as Collection;
 const renderer = new WebGLRenderer({ antialias: true, powerPreference: "high-performance" });
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = PCFShadowMap;
+// Filmic tone mapping for the 3D materials; image planes opt out so paintings stay faithful.
+renderer.toneMapping = ACESFilmicToneMapping;
+renderer.toneMappingExposure = 1.0;
 renderer.xr.enabled = true;
 renderer.xr.setReferenceSpaceType("local-floor");
 document.body.appendChild(renderer.domElement);
 document.body.appendChild(VRButton.createButton(renderer));
 
 const scene = new Scene();
-const camera = new PerspectiveCamera(70, window.innerWidth / window.innerHeight, 0.05, 400);
+const camera = new PerspectiveCamera(70, window.innerWidth / window.innerHeight, 0.05, 1200);
 const player = new Player(renderer, camera, renderer.domElement);
 scene.add(player.rig);
 
-buildWorld(scene);
+const world = buildWorld(scene, renderer);
 
 const gpu = {
   maxTextureSize: renderer.capabilities.maxTextureSize,
@@ -65,6 +70,7 @@ renderer.setAnimationLoop((time) => {
   const dt = Math.min(timer.getDelta(), 0.1);
   player.update(dt);
   player.viewerPosition(eye);
+  world.follow(eye);
   for (const e of exhibits) e.update(eye);
   renderer.render(scene, camera);
 });

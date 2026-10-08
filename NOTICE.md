@@ -28,6 +28,11 @@ issue.
 Inter, by Rasmus Andersson, under the
 [SIL Open Font License 1.1](https://openfontlicense.org/).
 
+## Environment map
+
+`public/env/overcast_soil_puresky_1k.hdr` is "Overcast Soil (Pure Sky)"
+from Poly Haven, dedicated to the public domain under CC0.
+
 ## Bundled libraries
 
 `public/draco/` contains the Draco mesh decoder, copyright Google LLC,

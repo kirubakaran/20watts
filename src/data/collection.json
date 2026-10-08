@@ -634,12 +634,12 @@
         "YouTube"
       ],
       "physical": {
-        "widthCm": 121.8,
-        "heightCm": 68.5,
+        "widthCm": 243.5,
+        "heightCm": 137.0,
         "depthCm": null,
         "weightKg": null
       },
-      "description": "The rickroll: a link that promises one thing and delivers Rick Astley's 1987 video for \"Never Gonna Give You Up\". It began on 4chan in May 2007 as a twist on an older duck-themed prank, spread through the whole internet within a year, and has never gone away. The video itself was shot in London by Simon West and became, through the prank, one of the most-watched clips on YouTube. Shown here at the size of a living-room television, frozen until you come close.",
+      "description": "The rickroll: a link that promises one thing and delivers Rick Astley's 1987 video for \"Never Gonna Give You Up\". It began on 4chan in May 2007 as a twist on an older duck-themed prank, spread through the whole internet within a year, and has never gone away. The video itself was shot in London by Simon West and became, through the prank, one of the most-watched clips on YouTube. Shown here at the size of a 110-inch screen, frozen until you come close.",
       "facts": [
         "On 1 April 2008 YouTube rickrolled its own front page: every featured video linked to this one.",
         "Rick Astley himself rickrolled the 2008 Macy's Thanksgiving Day Parade, popping out of a float mid-song.",
@@ -717,7 +717,7 @@
       },
       "display": {
         "scale": 1,
-        "baseHeight": 0.9,
+        "baseHeight": 0.7,
         "back": "mirror",
         "yaw": null,
         "fallbackWidthM": 1.22

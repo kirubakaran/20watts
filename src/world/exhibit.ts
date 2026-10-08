@@ -230,6 +230,9 @@ export class Exhibit {
       root.scale.setScalar(v.scale * a.display.scale);
       root.position.y = a.display.baseHeight;
       root.name = "model";
+      root.traverse((o) => {
+        if (o instanceof Mesh) o.castShadow = true;
+      });
       this.modelRoot = root;
       this.group.add(root);
     });
