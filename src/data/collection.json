@@ -164,7 +164,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-07T00:00:00Z",
-      "updatedAt": "2026-10-08T02:32:14.322Z"
+      "updatedAt": "2026-10-08T03:32:56.705Z"
     },
     {
       "id": "si-nasm_A19700102000",
@@ -326,7 +326,8 @@
               "reason": null,
               "flags": []
             },
-            "provenance": "smithsonian-3d"
+            "provenance": "smithsonian-3d",
+            "representation": "scan"
           }
         ]
       },
@@ -353,7 +354,203 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-07T00:00:00Z",
-      "updatedAt": "2026-10-08T02:32:26.198Z"
+      "updatedAt": "2026-10-08T03:32:58.255Z"
+    },
+    {
+      "id": "sf-895fd0fbc7cc42aab8f3300a85420b91",
+      "kind": "model",
+      "title": "Ford Model T Runabout",
+      "titleOriginal": null,
+      "altTitles": [
+        "Tin Lizzie",
+        "Model T"
+      ],
+      "creators": [
+        {
+          "name": "Ford Motor Company",
+          "slug": "ford-motor-company",
+          "wikidataQid": "Q44294",
+          "wikipediaUrl": "https://en.wikipedia.org/wiki/Ford_Motor_Company",
+          "birthYear": null,
+          "deathYear": null,
+          "role": "manufacturer"
+        },
+        {
+          "name": "Joseph A. Galamb",
+          "slug": "joseph-galamb",
+          "wikidataQid": "Q717474",
+          "wikipediaUrl": "https://en.wikipedia.org/wiki/J%C3%B3zsef_Galamb",
+          "birthYear": 1881,
+          "deathYear": 1955,
+          "role": "engineer"
+        }
+      ],
+      "date": {
+        "year": 1924,
+        "yearStart": 1908,
+        "yearEnd": 1927,
+        "label": "1924 (produced 1908–1927)",
+        "precision": "year"
+      },
+      "madeIn": {
+        "name": "Highland Park",
+        "region": "Michigan",
+        "country": "United States",
+        "point": {
+          "lat": 42.4106,
+          "lon": -83.0969
+        },
+        "wikidataQid": "Q5758972"
+      },
+      "location": {
+        "name": null,
+        "region": null,
+        "country": null,
+        "point": null,
+        "wikidataQid": null,
+        "institution": null,
+        "inventoryNumber": null
+      },
+      "culture": "American",
+      "movement": null,
+      "periodSlug": null,
+      "medium": "steel body on wood frame, wooden spoke wheels",
+      "materials": [
+        "steel",
+        "vanadium steel",
+        "wood",
+        "rubber",
+        "brass"
+      ],
+      "genre": [
+        "automobile",
+        "engineering"
+      ],
+      "subjects": [
+        "mass production",
+        "assembly line",
+        "motoring"
+      ],
+      "physical": {
+        "widthCm": 168,
+        "heightCm": 180,
+        "depthCm": 340,
+        "weightKg": 550
+      },
+      "description": "The car that put the world on wheels. Ford built more than fifteen million Model Ts between 1908 and 1927, and the moving assembly line at Highland Park cut the price from $780 in 1910 to $290 in 1924, when this two-seat runabout was the cheapest car in the catalogue. Simple, tough and endlessly adaptable, it was voted the most influential car of the twentieth century. This is an artist's reconstruction of the type, not a scan of a particular car.",
+      "facts": [
+        "The assembly line cut the time to build a chassis from twelve and a half hours to ninety-three minutes.",
+        "\"Any customer can have a car painted any colour that he wants, so long as it is black\": from 1914 to 1925, black japan enamel was the only paint that dried fast enough for the line.",
+        "The engine ran on petrol, kerosene or ethanol, and farmers belted the rear wheel to saws, pumps and threshers.",
+        "Pedals, not a gear lever: the Model T's two-speed planetary transmission was worked with the feet."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Ford_Model_T",
+      "wikidataQid": "Q182323",
+      "externalIds": {
+        "sketchfab-uid": "895fd0fbc7cc42aab8f3300a85420b91"
+      },
+      "copyrighted": false,
+      "asset": {
+        "kind": "model",
+        "currentVersionId": "sf-895fd0fbc7cc42aab8f3300a85420b91-v1",
+        "versions": [
+          {
+            "id": "sf-895fd0fbc7cc42aab8f3300a85420b91-v1",
+            "original": {
+              "url": "https://sketchfab.com/3d-models/1924-ford-model-t-3d-model-with-interior-895fd0fbc7cc42aab8f3300a85420b91",
+              "format": "gltf-zip",
+              "bytes": null,
+              "triangles": 430905
+            },
+            "rungs": [
+              {
+                "quality": "thumb",
+                "url": "/assets/sf-895fd0fbc7cc42aab8f3300a85420b91/thumb.glb",
+                "bytes": 500568,
+                "triangles": 59177,
+                "textureSize": 512,
+                "draco": true
+              },
+              {
+                "quality": "low",
+                "url": "/assets/sf-895fd0fbc7cc42aab8f3300a85420b91/low.glb",
+                "bytes": 1061356,
+                "triangles": 161312,
+                "textureSize": 1024,
+                "draco": true
+              },
+              {
+                "quality": "medium",
+                "url": "/assets/sf-895fd0fbc7cc42aab8f3300a85420b91/medium.glb",
+                "bytes": 1746120,
+                "triangles": 260233,
+                "textureSize": 2048,
+                "draco": true
+              },
+              {
+                "quality": "high",
+                "url": "/assets/sf-895fd0fbc7cc42aab8f3300a85420b91/high.glb",
+                "bytes": 2201224,
+                "triangles": 430905,
+                "textureSize": 4096,
+                "draco": true
+              }
+            ],
+            "scale": 1,
+            "bounds": {
+              "width": 3.106,
+              "height": 1.736,
+              "depth": 1.55
+            },
+            "credit": {
+              "author": "shubhankar.arch.3d",
+              "license": {
+                "name": "CC BY 4.0",
+                "url": "https://creativecommons.org/licenses/by/4.0/"
+              },
+              "sourcePage": "https://sketchfab.com/3d-models/1924-ford-model-t-3d-model-with-interior-895fd0fbc7cc42aab8f3300a85420b91"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-07T00:00:00Z",
+              "note": "Downloaded from Sketchfab by hand; artist-made model, not a scan"
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "sketchfab",
+            "representation": "reconstruction"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": 0,
+        "back": "none",
+        "yaw": null,
+        "fallbackWidthM": 1.2
+      },
+      "tags": [
+        "automobile",
+        "ford",
+        "mass-production"
+      ],
+      "pageviews": null,
+      "importance": 0.8,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "admin",
+      "createdAt": "2026-10-07T00:00:00Z",
+      "updatedAt": "2026-10-08T03:33:03.126Z"
     }
   ]
 }

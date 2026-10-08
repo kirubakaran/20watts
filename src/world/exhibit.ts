@@ -63,7 +63,11 @@ function creditLine(a: Artwork): string {
   if (!v) return "";
   const lic = v.credit.license.name;
   const page = v.credit.sourcePage ? new URL(v.credit.sourcePage).hostname : v.provenance;
-  return a.copyrighted ? `© In copyright · shown under fair use · ${page}` : `${lic} · ${page}`;
+  if (a.copyrighted) return `© In copyright · shown under fair use · ${page}`;
+  if ("representation" in v && v.representation === "reconstruction") {
+    return `3D reconstruction by ${v.credit.author ?? "unknown"} · ${lic} · ${page}`;
+  }
+  return `${lic} · ${page}`;
 }
 
 function sizeLine(a: Artwork): string {
@@ -111,7 +115,12 @@ function makePlacard(a: Artwork, width: number): Group {
   body.position.y = -0.085;
   g.add(body);
 
-  for (const t of [title, body]) t.sync();
+  // The body hangs below the title, however many lines the title wraps to.
+  title.sync(() => {
+    const bounds = title.textRenderInfo?.blockBounds;
+    if (bounds) body.position.y = bounds[1] - 0.03;
+  });
+  body.sync();
   return g;
 }
 

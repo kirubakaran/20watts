@@ -9,6 +9,7 @@ import { Group, Material, Mesh, type Object3D, SRGBColorSpace, Texture } from "t
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 import { DRACOLoader } from "three/addons/loaders/DRACOLoader.js";
 import type { ModelRung } from "../data/types";
+import { assetUrl } from "./base";
 
 let sharedLoader: GLTFLoader | null = null;
 function loader(): GLTFLoader {
@@ -64,7 +65,7 @@ export class ModelLadder {
     const rung = this.rungs[i]!;
     if (this.pending.has(rung.url)) return;
     const p = loader()
-      .loadAsync(rung.url)
+      .loadAsync(assetUrl(rung.url))
       .then((gltf) => {
         const root = gltf.scene;
         root.traverse((o) => {

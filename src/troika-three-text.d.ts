@@ -12,6 +12,8 @@ declare module "troika-three-text" {
     anchorX: number | "left" | "center" | "right" | `${number}%`;
     anchorY: number | "top" | "top-baseline" | "middle" | "bottom-baseline" | "bottom" | `${number}%`;
     textAlign: "left" | "right" | "center" | "justify";
+    /** Layout result, available after sync(). blockBounds is [minX, minY, maxX, maxY] in local units. */
+    textRenderInfo: { blockBounds: [number, number, number, number] } | null;
     sync(callback?: () => void): void;
     dispose(): void;
   }

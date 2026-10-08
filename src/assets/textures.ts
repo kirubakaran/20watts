@@ -6,6 +6,7 @@
  */
 import { SRGBColorSpace, Texture, TextureLoader, LinearMipmapLinearFilter, LinearFilter } from "three";
 import type { ImageRung } from "../data/types";
+import { assetUrl } from "./base";
 
 const loader = new TextureLoader();
 
@@ -37,7 +38,7 @@ export class ImageLadder {
   request(desiredPx: number) {
     const rung = this.pick(desiredPx);
     if (!rung || rung.width <= this.bestWidth || this.pending.has(rung.width)) return;
-    const p = loader.loadAsync(rung.url).then((t) => {
+    const p = loader.loadAsync(assetUrl(rung.url)).then((t) => {
       t.colorSpace = SRGBColorSpace;
       t.anisotropy = this.anisotropy;
       t.minFilter = LinearMipmapLinearFilter;

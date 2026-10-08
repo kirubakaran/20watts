@@ -8,7 +8,8 @@
  *    (negative for BCE), timestamps as ISO 8601 strings.
  *  - `id` is stable for the life of the record and never encodes the image.
  *    Imports from Wikimedia use "wm-<commons page curid>", Smithsonian 3D
- *    imports use "si-<EDAN record id>", user additions use "usr-<uuid>".
+ *    imports use "si-<EDAN record id>", Sketchfab imports use "sf-<model uid>",
+ *    user additions use "usr-<uuid>".
  */
 
 export type ArtworkId = string;
@@ -152,8 +153,14 @@ export interface ModelVersion {
   credit: Credit;
   contributed: Contribution;
   moderation: Moderation;
-  /** "smithsonian-3d" | "user-upload" | "sketchfab" ... */
+  /**
+   * "smithsonian-3d" | "sketchfab" | "user-upload" ...
+   * Sources the pipeline cannot fetch itself (Sketchfab needs a login, uploads
+   * arrive by hand) are read from data/originals/<artwork id>/ instead.
+   */
   provenance: string;
+  /** A scan of the actual object, or an artist's reconstruction of its type. */
+  representation: "scan" | "reconstruction";
 }
 
 export interface ImageAsset {

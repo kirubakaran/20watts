@@ -4,10 +4,10 @@ A museum you walk through in VR or on a flat screen, in the browser. One open
 plane, no walls: forward is later in time, right is further east. Works float
 at their true size, and you can walk behind one and see it mirrored.
 
-v1 holds two works: Leonardo's *Last Supper* at its real 8.8 × 4.6 m, and
-the Apollo 11 command module *Columbia*, a 3D scan from the Smithsonian,
-3.9 m across. Walk forward from one and left to reach the other: 1495 Milan
-to 1969 California.
+v1 holds three works: Leonardo's *Last Supper* at its real 8.8 × 4.6 m, a
+1924 Ford Model T runabout, and the Apollo 11 command module *Columbia*, a
+Smithsonian 3D scan. They step diagonally across the floor: 1495 Milan,
+then 1924 Michigan ahead and to the left, then 1969 California further on.
 
 ## Run it
 
@@ -55,11 +55,27 @@ reads the collection, fetches each imported asset from its source, and
 writes a ladder of qualities to `public/assets/<id>/`, recording the rungs
 back into `collection.json`. Each artwork may hold several asset versions
 (imports, user uploads) with their own credit and moderation state;
-`currentVersionId` picks the one shown. Source downloads are cached in
-`.cache/`.
+`currentVersionId` picks the one shown.
+
+Every source file lands in `data/originals/<id>/`, the archive of record:
+written once, never modified, and the one thing to back up, since the
+rungs can always be rebuilt from it. It is gitignored; at release both the
+originals and the served rungs move to the server's data directory, with
+the originals mirrored to a bucket. The rungs under `public/assets` are a
+proof-of-concept convenience so a clone runs without a build step.
+
+The client prepends `VITE_ASSET_BASE` to every rung path, so the same
+catalogue works from the dev server, the production host, or a bucket.
+See `.env.example`.
 
 - **Images** from Wikimedia Commons: the Commons API is asked for a ladder
   of thumbnail widths, saved as `<width>.jpg`.
+- **Models from a file** (provenance `sketchfab` or `user-upload`): the
+  source glb or glTF is read from `data/originals/<id>/`, which you populate
+  by hand since those sources need a login. The ladder is built from that one
+  file: textures are resized per tier and re-encoded as WebP, the mesh is
+  simplified for the lower tiers, and the result gets the same metres,
+  origin and Draco treatment as a Smithsonian scan.
 - **Models** from Smithsonian 3D: the `original.url` is a Voyager
   `document.json`. Each of its quality tiers is a set of Draco glb parts in
   centimetres; the pipeline merges the parts, converts to metres with the
@@ -74,8 +90,11 @@ Append a record to `collection.json` following `src/data/types.ts`, run
 [3d.si.edu](https://3d.si.edu), take the Voyager document id from its page,
 and use `https://3d-api.si.edu/content/document/<id>/document.json` as the
 model version's `original.url` with provenance `smithsonian-3d`. Only CC0
-objects go in. A model from elsewhere needs its glb rungs prepared by hand
-to the same contract: Y-up, metres, base on the floor, footprint centred.
+objects go in. For a Sketchfab model, download the glTF zip from its page,
+unpack it into `data/originals/<artwork id>/`, set provenance `sketchfab`,
+and run the pipeline. Mark an artist-made model `representation:
+"reconstruction"`; the placard then says so and credits the author, which
+CC BY requires.
 
 ## License
 
@@ -86,6 +105,9 @@ carry their own licenses, shown on each placard. See [NOTICE.md](NOTICE.md).
 
 The Last Supper image is public domain, via Wikimedia Commons. The Columbia
 scan is CC0 from the Smithsonian Institution's Digitization Program Office.
+The Model T is based on "1924 Ford Model T 3d model with interior" by
+[shubhankar.arch.3d](https://sketchfab.com/shubhankar.arch.3d) on Sketchfab,
+CC BY 4.0.
 Placard text uses Inter (SIL Open Font License). Meshes are decoded with
 Google's Draco (Apache-2.0). Schema fields follow the conventions of
 [A Walkable History of Art](https://github.com/justdataplease/art-history-museum)

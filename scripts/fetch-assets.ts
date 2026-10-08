@@ -9,6 +9,13 @@
  *    asks the Commons API for a ladder of thumbnail widths and downloads
  *    them as <width>.jpg.
  *
+ *  Models from a file, provenance "sketchfab" or "user-upload":
+ *    the source glb or glTF is read from data/originals/<artwork id>/ (put
+ *    the unpacked download there by hand). The ladder is built from that one
+ *    file: textures are resized per tier and the mesh is simplified for the
+ *    lower tiers, then everything gets the same metres, origin and Draco
+ *    treatment as below.
+ *
  *  Models, provenance "smithsonian-3d":
  *    `original.url` is a Voyager document.json from 3d-api.si.edu. Each of
  *    its Web3D quality tiers (thumb, low, medium, high) is a set of Draco
@@ -16,7 +23,9 @@
  *    glb, converted to metres with the base at y = 0 and the footprint
  *    centred, re-encoded with Draco, and written as <quality>.glb.
  *
- * Source files are cached in .cache/ so re-runs are offline.
+ * Every source file is kept in data/originals/<artwork id>/. That directory
+ * is the archive of record: originals are written once, never modified,
+ * and are the thing to back up. The rungs are rebuilt from them.
  *
  * Usage: npm run fetch-assets
  */
@@ -24,14 +33,17 @@ import { readFile, writeFile, mkdir, stat } from "node:fs/promises";
 import path from "node:path";
 import { Document, NodeIO, getBounds } from "@gltf-transform/core";
 import { ALL_EXTENSIONS } from "@gltf-transform/extensions";
-import { dedup, draco, mergeDocuments, prune, unpartition } from "@gltf-transform/functions";
+import { dedup, draco, mergeDocuments, prune, simplify, textureCompress, unpartition, weld } from "@gltf-transform/functions";
+import { MeshoptSimplifier } from "meshoptimizer";
 import draco3d from "draco3dgltf";
+import sharp from "sharp";
+import { readdir } from "node:fs/promises";
 import type { Collection, ImageRung, ModelRung, ModelVersion } from "../src/data/types";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
 const COLLECTION = path.join(ROOT, "src/data/collection.json");
 const OUT_DIR = path.join(ROOT, "public/assets");
-const CACHE_DIR = path.join(ROOT, ".cache");
+const ORIGINALS_DIR = path.join(ROOT, "data/originals");
 const TARGET_WIDTHS = [1024, 2048, 4096];
 const USER_AGENT = "musee/0.1 (https://github.com/kiru/musee)";
 
@@ -147,7 +159,14 @@ async function io(): Promise<NodeIO> {
  * floor with the footprint centred, Draco-encode, and write to `dest`.
  * Returns the bounds in metres and the triangle and texture statistics.
  */
-async function mergeParts(partFiles: string[], unitScale: number, dest: string) {
+interface TierOptions {
+  /** Fraction of triangles to keep, 1 = all. */
+  ratio: number;
+  /** Longest texture edge after resizing, in pixels. */
+  textureSize: number;
+}
+
+async function mergeParts(partFiles: string[], unitScale: number, dest: string, tier?: TierOptions) {
   const nio = await io();
   const out = new Document();
   for (const file of partFiles) mergeDocuments(out, await nio.read(file));
@@ -171,6 +190,14 @@ async function mergeParts(partFiles: string[], unitScale: number, dest: string) 
   holder.setScale([unitScale, unitScale, unitScale]);
   holder.setTranslation([-cx * unitScale, -b.min[1] * unitScale, -cz * unitScale]);
 
+  if (tier) {
+    await MeshoptSimplifier.ready;
+    await out.transform(
+      weld(),
+      ...(tier.ratio < 1 ? [simplify({ simplifier: MeshoptSimplifier, ratio: tier.ratio, error: 0.001 })] : []),
+      textureCompress({ encoder: sharp, targetFormat: "webp", quality: 85, resize: [tier.textureSize, tier.textureSize] }),
+    );
+  }
   await out.transform(dedup(), prune(), unpartition(), draco({ method: "edgebreaker" }));
 
   let triangles = 0;
@@ -200,9 +227,9 @@ async function mergeParts(partFiles: string[], unitScale: number, dest: string) 
 async function fetchSmithsonianModel(artId: string, version: ModelVersion) {
   const docUrl = version.original.url;
   const docId = /\/document\/([^/]+)\//.exec(docUrl)?.[1] ?? "doc";
-  const cache = path.join(CACHE_DIR, "smithsonian", docId);
-  await download(docUrl, path.join(cache, "document.json"));
-  const doc = JSON.parse(await readFile(path.join(cache, "document.json"), "utf8")) as VoyagerDocument;
+  const cache = path.join(ORIGINALS_DIR, artId);
+  await download(docUrl, path.join(cache, `${docId}.document.json`));
+  const doc = JSON.parse(await readFile(path.join(cache, `${docId}.document.json`), "utf8")) as VoyagerDocument;
   const units = doc.models[0]?.units ?? doc.scenes[0]?.units ?? "m";
   const unitScale = UNITS_TO_METRES[units];
   if (unitScale == null) throw new Error(`Unknown Voyager units "${units}" in ${docUrl}`);
@@ -227,6 +254,33 @@ async function fetchSmithsonianModel(artId: string, version: ModelVersion) {
   version.original.format = "voyager-document";
 }
 
+/** Tiers built from one source file, mirroring the Smithsonian ladder. */
+const LOCAL_TIERS: Record<Quality, TierOptions> = {
+  thumb: { ratio: 0.05, textureSize: 512 },
+  low: { ratio: 0.35, textureSize: 1024 },
+  medium: { ratio: 0.6, textureSize: 2048 },
+  high: { ratio: 1, textureSize: 4096 },
+};
+
+async function buildLocalModel(artId: string, version: ModelVersion) {
+  const dir = path.join(ORIGINALS_DIR, artId);
+  const files = (await readdir(dir).catch(() => [] as string[])).filter((f) => /\.(glb|gltf)$/i.test(f));
+  const src = files[0];
+  if (!src) throw new Error(`${artId}: put the source .glb or .gltf in ${dir}`);
+  const rungs: ModelRung[] = [];
+  let bounds = version.bounds;
+  for (const quality of QUALITIES) {
+    const file = `${quality}.glb`;
+    const r = await mergeParts([path.join(dir, src)], 1, path.join(OUT_DIR, artId, file), LOCAL_TIERS[quality]);
+    rungs.push({ quality, url: `/assets/${artId}/${file}`, bytes: r.bytes, triangles: r.triangles, textureSize: r.textureSize, draco: true });
+    bounds = r.bounds;
+    console.log(`${artId}: ${quality} ${(r.bytes / 1024).toFixed(0)} KB, ${r.triangles} tris, ${r.textureSize ?? "no"} px textures`);
+  }
+  version.rungs = rungs;
+  version.bounds = { width: round(bounds.width), height: round(bounds.height), depth: round(bounds.depth) };
+  version.original.triangles = rungs.at(-1)?.triangles ?? null;
+}
+
 function round(n: number): number {
   return Math.round(n * 1000) / 1000;
 }
@@ -245,8 +299,9 @@ async function main() {
       }
     } else {
       for (const version of art.asset.versions) {
-        if (version.provenance !== "smithsonian-3d") continue;
-        await fetchSmithsonianModel(art.id, version);
+        if (version.provenance === "smithsonian-3d") await fetchSmithsonianModel(art.id, version);
+        else if (version.provenance === "sketchfab" || version.provenance === "user-upload") await buildLocalModel(art.id, version);
+        else continue;
         touched = true;
       }
     }
