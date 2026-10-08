@@ -93,6 +93,8 @@ function makePlacard(a: Artwork, width: number): Group {
   const place = [a.madeIn.name, a.madeIn.country].filter(Boolean).join(", ");
 
   const title = new Text();
+  // Single-sided: the placard on the far side of a work is never seen reversed through its back.
+  title.material.side = FrontSide;
   title.text = a.title + (a.titleOriginal && a.titleOriginal !== a.title ? `  ·  ${a.titleOriginal}` : "");
   title.font = FONT_BOLD;
   title.fontSize = 0.05;
@@ -103,6 +105,7 @@ function makePlacard(a: Artwork, width: number): Group {
   g.add(title);
 
   const body = new Text();
+  body.material.side = FrontSide;
   body.text = [
     creators,
     [a.date.label, place].filter(Boolean).join("  ·  "),
@@ -158,7 +161,8 @@ export class Exhibit {
     if (artwork.kind === "image") this.buildImage();
     else this.buildModel();
 
-    // Placards: one in front, one behind (mirrored). A work hung high enough
+    // Placards: one in front, one behind, each single-sided so you only ever
+    // read the one facing you, on your left either way. A work hung high enough
     // gets its placard underneath; a work that reaches the floor gets it beside.
     const PLACARD_W = 0.9;
     const base = artwork.display.baseHeight;

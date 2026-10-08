@@ -1,7 +1,9 @@
 // Minimal typing for troika-three-text; its bundled declarations are incomplete.
 declare module "troika-three-text" {
-  import { Mesh } from "three";
+  import { Material, Mesh } from "three";
   export class Text extends Mesh {
+    /** The glyph material; troika wraps it, so set side, depth flags etc. on this. */
+    material: Material;
     text: string;
     font: string | null;
     fontSize: number;
