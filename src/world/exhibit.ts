@@ -16,11 +16,11 @@ import {
   Vector3,
   type Texture,
 } from "three";
-import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 import { Text } from "troika-three-text";
 import type { Artwork } from "../data/types";
 import { currentImageVersion, currentModelVersion, imageDisplaySize, footprintOf } from "../data/types";
 import { ImageLadder } from "../assets/textures";
+import { ModelLadder } from "../assets/models";
 import type { Placement } from "../layout/layout";
 
 const FONT_REGULAR = "/fonts/inter-400.woff";
@@ -117,8 +117,9 @@ function makePlacard(a: Artwork, width: number): Group {
 
 export class Exhibit {
   readonly group = new Group();
-  private ladder: ImageLadder | null = null;
+  private ladder: ImageLadder | ModelLadder | null = null;
   private imageMaterial: MeshBasicMaterial | null = null;
+  private modelRoot: Group | null = null;
   private readonly centre = new Vector3();
   private readonly displayWidth: number;
   private lastRequestedPx = 0;
@@ -201,12 +202,20 @@ export class Exhibit {
     if (!v) return;
     const fp = footprintOf(a);
     this.centre.set(0, a.display.baseHeight + fp.height / 2, 0);
-    new GLTFLoader().load(v.url, (gltf) => {
-      const root = gltf.scene;
+    if (v.rungs.length === 0) return;
+    // Rungs are in metres with the base at y = 0 and the footprint centred,
+    // so the only transforms left are the record's own scale and height.
+    const ladder = new ModelLadder(v.rungs, this.gpu.maxTextureSize, this.gpu.maxAnisotropy);
+    ladder.onUpgrade((root: Group) => {
+      if (this.modelRoot) this.group.remove(this.modelRoot);
       root.scale.setScalar(v.scale * a.display.scale);
       root.position.y = a.display.baseHeight;
+      root.name = "model";
+      this.modelRoot = root;
       this.group.add(root);
     });
+    ladder.requestLowest();
+    this.ladder = ladder;
   }
 
   /** Called every frame with the viewer's world position; upgrades the texture rung as they approach. */

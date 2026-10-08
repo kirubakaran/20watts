@@ -7,8 +7,8 @@
  *  - Distances in metres, physical sizes in centimetres, dates as years
  *    (negative for BCE), timestamps as ISO 8601 strings.
  *  - `id` is stable for the life of the record and never encodes the image.
- *    Imports from Wikimedia use "wm-<commons page curid>", user additions
- *    use "usr-<uuid>".
+ *    Imports from Wikimedia use "wm-<commons page curid>", Smithsonian 3D
+ *    imports use "si-<EDAN record id>", user additions use "usr-<uuid>".
  */
 
 export type ArtworkId = string;
@@ -117,19 +117,42 @@ export interface ImageVersion {
   provenance: string;
 }
 
-export interface ModelVersion {
-  id: string;
-  /** A .glb, Y-up, metres. */
+/** One quality tier of a model, served from our host. */
+export interface ModelRung {
+  quality: "thumb" | "low" | "medium" | "high";
   url: string;
   bytes: number | null;
   triangles: number | null;
-  /** Multiplier applied to the file if it is not already in metres. */
+  /** Largest texture edge in pixels; the renderer picks a rung by this. */
+  textureSize: number | null;
+  /** Mesh is KHR_draco_mesh_compression encoded; the loader needs the decoder. */
+  draco: boolean;
+}
+
+export interface ModelVersion {
+  id: string;
+  /** Where the model came from: a glb, or a scene manifest the pipeline understands. */
+  original: {
+    url: string;
+    /** "glb" | "voyager-document" ... */
+    format: string;
+    bytes: number | null;
+    triangles: number | null;
+  };
+  /**
+   * Ascending by quality. Each rung is one .glb, Y-up, in metres, with the
+   * base at y = 0 and the footprint centred on the origin. Populated by the
+   * asset pipeline, which bakes unit and origin fixes into the file.
+   */
+  rungs: ModelRung[];
+  /** Multiplier applied on top of the file, normally 1. */
   scale: number;
   /** Axis-aligned bounds in metres after `scale`. */
   bounds: { width: number; height: number; depth: number };
   credit: Credit;
   contributed: Contribution;
   moderation: Moderation;
+  /** "smithsonian-3d" | "user-upload" | "sketchfab" ... */
   provenance: string;
 }
 

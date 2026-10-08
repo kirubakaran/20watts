@@ -1,21 +1,59 @@
 /**
- * Asset pipeline, v1: for every Wikimedia-sourced image version, ask the
- * Commons API for a ladder of thumbnail widths, download them into
- * public/assets/<artwork id>/<width>.jpg, and write the resulting rungs back
- * into the collection. The museum then serves images from its own host and
- * never hotlinks Commons.
+ * Asset pipeline. Reads the collection, fetches each imported asset from
+ * its source, prepares a ladder of qualities, writes them under
+ * public/assets/<artwork id>/, and records the rungs back into the
+ * collection. The museum then serves everything from its own host and
+ * never hotlinks a source.
+ *
+ *  Images, provenance "wikimedia-commons":
+ *    asks the Commons API for a ladder of thumbnail widths and downloads
+ *    them as <width>.jpg.
+ *
+ *  Models, provenance "smithsonian-3d":
+ *    `original.url` is a Voyager document.json from 3d-api.si.edu. Each of
+ *    its Web3D quality tiers (thumb, low, medium, high) is a set of Draco
+ *    glb parts in centimetres. For each tier the parts are merged into one
+ *    glb, converted to metres with the base at y = 0 and the footprint
+ *    centred, re-encoded with Draco, and written as <quality>.glb.
+ *
+ * Source files are cached in .cache/ so re-runs are offline.
  *
  * Usage: npm run fetch-assets
  */
 import { readFile, writeFile, mkdir, stat } from "node:fs/promises";
 import path from "node:path";
-import type { Collection, ImageRung } from "../src/data/types";
+import { Document, NodeIO, getBounds } from "@gltf-transform/core";
+import { ALL_EXTENSIONS } from "@gltf-transform/extensions";
+import { dedup, draco, mergeDocuments, prune, unpartition } from "@gltf-transform/functions";
+import draco3d from "draco3dgltf";
+import type { Collection, ImageRung, ModelRung, ModelVersion } from "../src/data/types";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
 const COLLECTION = path.join(ROOT, "src/data/collection.json");
 const OUT_DIR = path.join(ROOT, "public/assets");
+const CACHE_DIR = path.join(ROOT, ".cache");
 const TARGET_WIDTHS = [1024, 2048, 4096];
-const USER_AGENT = "musee/0.1 (https://github.com/kirubakaran/musee)";
+const USER_AGENT = "musee/0.1 (https://github.com/kiru/musee)";
+
+async function fetchOk(url: string): Promise<Response> {
+  const res = await fetch(url, { headers: { "User-Agent": USER_AGENT } });
+  if (!res.ok) throw new Error(`HTTP ${res.status} for ${url}`);
+  return res;
+}
+
+/** Download to `dest` unless a non-empty file is already there. Returns the byte size. */
+async function download(url: string, dest: string): Promise<number> {
+  try {
+    const s = await stat(dest);
+    if (s.size > 0) return s.size;
+  } catch {}
+  await mkdir(path.dirname(dest), { recursive: true });
+  const buf = Buffer.from(await (await fetchOk(url)).arrayBuffer());
+  await writeFile(dest, buf);
+  return buf.length;
+}
+
+// ---------------------------------------------------------------- images
 
 function commonsTitleFromUrl(url: string): string {
   const m = /\/commons\/[0-9a-f]\/[0-9a-f]{2}\/([^/?#]+)/.exec(url);
@@ -33,11 +71,10 @@ async function thumbInfo(title: string, width: number): Promise<{ url: string; w
     iiurlwidth: String(width),
     format: "json",
   }).toString();
-  const res = await fetch(api, { headers: { "User-Agent": USER_AGENT } });
-  if (!res.ok) throw new Error(`Commons API ${res.status} for ${title}`);
-  const json = (await res.json()) as { query: { pages: Record<string, { imageinfo?: { thumburl: string; thumbwidth: number; thumbheight: number }[] }> } };
-  const page = Object.values(json.query.pages)[0];
-  const info = page?.imageinfo?.[0];
+  const json = (await (await fetchOk(api.toString())).json()) as {
+    query: { pages: Record<string, { imageinfo?: { thumburl: string; thumbwidth: number; thumbheight: number }[] }> };
+  };
+  const info = Object.values(json.query.pages)[0]?.imageinfo?.[0];
   if (!info) throw new Error(`No imageinfo for ${title}`);
   // Commons snaps to a fixed set of pre-rendered widths; the URL carries the real one.
   const real = /\/(\d+)px-/.exec(info.thumburl);
@@ -46,40 +83,174 @@ async function thumbInfo(title: string, width: number): Promise<{ url: string; w
   return { url, width: realWidth, height: Math.round((info.thumbheight / info.thumbwidth) * realWidth) };
 }
 
-async function download(url: string, dest: string): Promise<number> {
-  try {
-    const s = await stat(dest);
-    if (s.size > 0) return s.size;
-  } catch {}
-  const res = await fetch(url, { headers: { "User-Agent": USER_AGENT } });
-  if (!res.ok) throw new Error(`Download ${res.status} for ${url}`);
-  const buf = Buffer.from(await res.arrayBuffer());
-  await writeFile(dest, buf);
-  return buf.length;
+async function fetchCommonsImage(artId: string, version: { original: { url: string; width: number }; rungs: ImageRung[] }) {
+  const title = commonsTitleFromUrl(version.original.url);
+  const dir = path.join(OUT_DIR, artId);
+  const rungs = new Map<number, ImageRung>();
+  for (const w of TARGET_WIDTHS) {
+    if (w >= version.original.width) break;
+    const t = await thumbInfo(title, w);
+    if (rungs.has(t.width)) continue;
+    const file = `${t.width}.jpg`;
+    const bytes = await download(t.url, path.join(dir, file));
+    rungs.set(t.width, { width: t.width, height: t.height, url: `/assets/${artId}/${file}`, bytes });
+    console.log(`${artId}: ${t.width}px (${(bytes / 1024).toFixed(0)} KB)`);
+  }
+  version.rungs = [...rungs.values()].sort((a, b) => a.width - b.width);
 }
+
+// ---------------------------------------------------------------- models
+
+const QUALITIES = ["thumb", "low", "medium", "high"] as const;
+type Quality = (typeof QUALITIES)[number];
+
+/** The parts of a Voyager document we read. */
+interface VoyagerDocument {
+  scenes: { units?: string }[];
+  models: {
+    units?: string;
+    derivatives: { usage: string; quality: string; assets: { uri: string; type: string; byteSize?: number; numFaces?: number }[] }[];
+  }[];
+}
+
+const UNITS_TO_METRES: Record<string, number> = { mm: 0.001, cm: 0.01, m: 1, km: 1000, in: 0.0254, ft: 0.3048 };
+
+/** For each model, the Web3D glb at `quality`, or the nearest tier it does have. */
+function voyagerParts(doc: VoyagerDocument, quality: Quality): { uri: string; faces: number | null }[] {
+  const order: Quality[] = ["thumb", "low", "medium", "high"];
+  const want = order.indexOf(quality);
+  return doc.models.map((m, i) => {
+    const web = m.derivatives
+      .filter((d) => d.usage === "Web3D")
+      .map((d) => ({ tier: order.indexOf(d.quality.toLowerCase() as Quality), asset: d.assets.find((a) => a.type === "Model") }))
+      .filter((d): d is { tier: number; asset: NonNullable<typeof d.asset> } => d.tier >= 0 && !!d.asset)
+      .sort((a, b) => a.tier - b.tier);
+    const pick = web.filter((d) => d.tier <= want).at(-1) ?? web[0];
+    if (!pick) throw new Error(`Voyager model ${i} has no Web3D derivative`);
+    return { uri: pick.asset.uri, faces: pick.asset.numFaces ?? null };
+  });
+}
+
+let gltfIO: NodeIO | null = null;
+async function io(): Promise<NodeIO> {
+  if (!gltfIO) {
+    gltfIO = new NodeIO().registerExtensions(ALL_EXTENSIONS).registerDependencies({
+      "draco3d.decoder": await draco3d.createDecoderModule(),
+      "draco3d.encoder": await draco3d.createEncoderModule(),
+    });
+  }
+  return gltfIO;
+}
+
+/**
+ * Merge glb parts into one scene, convert to metres, put the base on the
+ * floor with the footprint centred, Draco-encode, and write to `dest`.
+ * Returns the bounds in metres and the triangle and texture statistics.
+ */
+async function mergeParts(partFiles: string[], unitScale: number, dest: string) {
+  const nio = await io();
+  const out = new Document();
+  for (const file of partFiles) mergeDocuments(out, await nio.read(file));
+
+  const root = out.getRoot();
+  const holder = out.createNode("model");
+  for (const scene of root.listScenes()) {
+    for (const child of scene.listChildren()) {
+      scene.removeChild(child);
+      holder.addChild(child);
+    }
+    scene.dispose();
+  }
+  const scene = out.createScene("Scene").addChild(holder);
+  root.setDefaultScene(scene);
+
+  // Measure in source units, then bake scale and origin into the holder node.
+  const b = getBounds(scene);
+  const cx = (b.min[0] + b.max[0]) / 2;
+  const cz = (b.min[2] + b.max[2]) / 2;
+  holder.setScale([unitScale, unitScale, unitScale]);
+  holder.setTranslation([-cx * unitScale, -b.min[1] * unitScale, -cz * unitScale]);
+
+  await out.transform(dedup(), prune(), unpartition(), draco({ method: "edgebreaker" }));
+
+  let triangles = 0;
+  for (const m of root.listMeshes()) {
+    for (const p of m.listPrimitives()) {
+      triangles += Math.round((p.getIndices()?.getCount() ?? p.getAttribute("POSITION")?.getCount() ?? 0) / 3);
+    }
+  }
+  let textureSize = 0;
+  for (const t of root.listTextures()) textureSize = Math.max(textureSize, ...(t.getSize() ?? [0, 0]));
+
+  await mkdir(path.dirname(dest), { recursive: true });
+  const glb = await nio.writeBinary(out);
+  await writeFile(dest, glb);
+  return {
+    bytes: glb.byteLength,
+    triangles,
+    textureSize: textureSize || null,
+    bounds: {
+      width: (b.max[0] - b.min[0]) * unitScale,
+      height: (b.max[1] - b.min[1]) * unitScale,
+      depth: (b.max[2] - b.min[2]) * unitScale,
+    },
+  };
+}
+
+async function fetchSmithsonianModel(artId: string, version: ModelVersion) {
+  const docUrl = version.original.url;
+  const docId = /\/document\/([^/]+)\//.exec(docUrl)?.[1] ?? "doc";
+  const cache = path.join(CACHE_DIR, "smithsonian", docId);
+  await download(docUrl, path.join(cache, "document.json"));
+  const doc = JSON.parse(await readFile(path.join(cache, "document.json"), "utf8")) as VoyagerDocument;
+  const units = doc.models[0]?.units ?? doc.scenes[0]?.units ?? "m";
+  const unitScale = UNITS_TO_METRES[units];
+  if (unitScale == null) throw new Error(`Unknown Voyager units "${units}" in ${docUrl}`);
+  const base = docUrl.slice(0, docUrl.lastIndexOf("/") + 1);
+
+  const rungs: ModelRung[] = [];
+  let bounds = version.bounds;
+  for (const quality of QUALITIES) {
+    const parts = voyagerParts(doc, quality);
+    const files: string[] = [];
+    for (const p of parts) files.push(path.join(cache, p.uri));
+    for (const [i, p] of parts.entries()) await download(base + p.uri, files[i]!);
+    const file = `${quality}.glb`;
+    const r = await mergeParts(files, unitScale, path.join(OUT_DIR, artId, file));
+    rungs.push({ quality, url: `/assets/${artId}/${file}`, bytes: r.bytes, triangles: r.triangles, textureSize: r.textureSize, draco: true });
+    bounds = r.bounds;
+    console.log(`${artId}: ${quality} ${(r.bytes / 1024).toFixed(0)} KB, ${r.triangles} tris, ${r.textureSize ?? "no"} px textures`);
+  }
+  version.rungs = rungs;
+  version.bounds = { width: round(bounds.width), height: round(bounds.height), depth: round(bounds.depth) };
+  version.original.triangles = rungs.at(-1)?.triangles ?? null;
+  version.original.format = "voyager-document";
+}
+
+function round(n: number): number {
+  return Math.round(n * 1000) / 1000;
+}
+
+// ---------------------------------------------------------------- main
 
 async function main() {
   const collection = JSON.parse(await readFile(COLLECTION, "utf8")) as Collection;
   for (const art of collection.artworks) {
-    if (art.asset.kind !== "image") continue;
-    for (const version of art.asset.versions) {
-      if (version.provenance !== "wikimedia-commons") continue;
-      const title = commonsTitleFromUrl(version.original.url);
-      const dir = path.join(OUT_DIR, art.id);
-      await mkdir(dir, { recursive: true });
-      const rungs = new Map<number, ImageRung>();
-      for (const w of TARGET_WIDTHS) {
-        if (w >= version.original.width) break;
-        const t = await thumbInfo(title, w);
-        if (rungs.has(t.width)) continue;
-        const file = `${t.width}.jpg`;
-        const bytes = await download(t.url, path.join(dir, file));
-        rungs.set(t.width, { width: t.width, height: t.height, url: `/assets/${art.id}/${file}`, bytes });
-        console.log(`${art.id}: ${t.width}px (${(bytes / 1024).toFixed(0)} KB)`);
+    let touched = false;
+    if (art.asset.kind === "image") {
+      for (const version of art.asset.versions) {
+        if (version.provenance !== "wikimedia-commons") continue;
+        await fetchCommonsImage(art.id, version);
+        touched = true;
       }
-      version.rungs = [...rungs.values()].sort((a, b) => a.width - b.width);
+    } else {
+      for (const version of art.asset.versions) {
+        if (version.provenance !== "smithsonian-3d") continue;
+        await fetchSmithsonianModel(art.id, version);
+        touched = true;
+      }
     }
-    art.updatedAt = new Date().toISOString();
+    if (touched) art.updatedAt = new Date().toISOString();
   }
   await writeFile(COLLECTION, JSON.stringify(collection, null, 2) + "\n");
   console.log("collection.json updated");

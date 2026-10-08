@@ -24,3 +24,9 @@ fair use with a label. Rights holders can request removal by opening an issue.
 
 Inter, by Rasmus Andersson, under the
 [SIL Open Font License 1.1](https://openfontlicense.org/).
+
+## Bundled libraries
+
+`public/draco/` contains the Draco mesh decoder, copyright Google LLC,
+under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0),
+as distributed with three.js.

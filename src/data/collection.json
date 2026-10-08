@@ -164,7 +164,196 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-07T00:00:00Z",
-      "updatedAt": "2026-10-07T23:41:21.832Z"
+      "updatedAt": "2026-10-08T02:32:14.322Z"
+    },
+    {
+      "id": "si-nasm_A19700102000",
+      "kind": "model",
+      "title": "Apollo 11 Command Module Columbia",
+      "titleOriginal": null,
+      "altTitles": [
+        "Columbia",
+        "CM-107"
+      ],
+      "creators": [
+        {
+          "name": "North American Rockwell",
+          "slug": "north-american-rockwell",
+          "wikidataQid": "Q1356326",
+          "wikipediaUrl": "https://en.wikipedia.org/wiki/North_American_Aviation",
+          "birthYear": null,
+          "deathYear": null,
+          "role": "manufacturer"
+        }
+      ],
+      "date": {
+        "year": 1969,
+        "yearStart": 1968,
+        "yearEnd": 1969,
+        "label": "1969",
+        "precision": "year"
+      },
+      "madeIn": {
+        "name": "Downey",
+        "region": "California",
+        "country": "United States",
+        "point": {
+          "lat": 33.9401,
+          "lon": -118.1332
+        },
+        "wikidataQid": "Q488064"
+      },
+      "location": {
+        "name": "Washington, D.C.",
+        "region": null,
+        "country": "United States",
+        "point": {
+          "lat": 38.8882,
+          "lon": -77.0199
+        },
+        "wikidataQid": "Q61",
+        "institution": "Smithsonian National Air and Space Museum",
+        "inventoryNumber": "A19700102000"
+      },
+      "culture": "American",
+      "movement": null,
+      "periodSlug": null,
+      "medium": "aluminium honeycomb, stainless steel honeycomb, ablative heat shield",
+      "materials": [
+        "aluminium",
+        "stainless steel",
+        "phenolic epoxy resin"
+      ],
+      "genre": [
+        "spacecraft",
+        "engineering"
+      ],
+      "subjects": [
+        "Apollo 11",
+        "Moon landing",
+        "spaceflight"
+      ],
+      "physical": {
+        "widthCm": 391,
+        "heightCm": 323,
+        "depthCm": 391,
+        "weightKg": 5557
+      },
+      "description": "Columbia is the command module of Apollo 11, the first mission to land humans on the Moon, and the only part of that spacecraft to return to Earth. Michael Collins orbited the Moon alone in it while Armstrong and Aldrin were on the surface; all three rode it home through re-entry on 24 July 1969. The scan shows the exterior as it stands today, with the heat shield charred from re-entry.",
+      "facts": [
+        "The crew wrote on the cabin walls during the flight, including a calendar Collins kept and the words \"Spacecraft 107, alias Apollo 11, alias Columbia. The Best Ship to Come Down the Line. God Bless Her.\"",
+        "Collins named it after Jules Verne's cannon Columbiad and the ship Columbia Rediviva, the first American vessel to circle the globe.",
+        "After the flight it toured all fifty state capitals before coming to the Smithsonian in 1971.",
+        "The ablative heat shield reached about 2,800 °C during re-entry."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Command_module_Columbia",
+      "wikidataQid": "Q85753536",
+      "externalIds": {
+        "si-edan": "edanmdm:nasm_A19700102000",
+        "si-3d-exterior": "d8c6457e-4ebc-11ea-b77f-2e728ce88125",
+        "si-3d-interior": "d8c63e8a-4ebc-11ea-b77f-2e728ce88125"
+      },
+      "copyrighted": false,
+      "asset": {
+        "kind": "model",
+        "currentVersionId": "si-nasm_A19700102000-v1",
+        "versions": [
+          {
+            "id": "si-nasm_A19700102000-v1",
+            "original": {
+              "url": "https://3d-api.si.edu/content/document/d8c6457e-4ebc-11ea-b77f-2e728ce88125/document.json",
+              "format": "voyager-document",
+              "bytes": null,
+              "triangles": 241224
+            },
+            "rungs": [
+              {
+                "quality": "thumb",
+                "url": "/assets/si-nasm_A19700102000/thumb.glb",
+                "bytes": 404476,
+                "triangles": 41224,
+                "textureSize": 512,
+                "draco": true
+              },
+              {
+                "quality": "low",
+                "url": "/assets/si-nasm_A19700102000/low.glb",
+                "bytes": 1737216,
+                "triangles": 241224,
+                "textureSize": 1024,
+                "draco": true
+              },
+              {
+                "quality": "medium",
+                "url": "/assets/si-nasm_A19700102000/medium.glb",
+                "bytes": 3485356,
+                "triangles": 241224,
+                "textureSize": 2048,
+                "draco": true
+              },
+              {
+                "quality": "high",
+                "url": "/assets/si-nasm_A19700102000/high.glb",
+                "bytes": 8784868,
+                "triangles": 241224,
+                "textureSize": 4096,
+                "draco": true
+              }
+            ],
+            "scale": 1,
+            "bounds": {
+              "width": 3.905,
+              "height": 2.741,
+              "depth": 3.922
+            },
+            "credit": {
+              "author": "Smithsonian Institution, Digitization Program Office",
+              "license": {
+                "name": "CC0 1.0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "sourcePage": "https://3d.si.edu/object/3d/d8c6457e-4ebc-11ea-b77f-2e728ce88125"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-07T00:00:00Z",
+              "note": "Initial import from Smithsonian 3D (exterior scan)"
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "smithsonian-3d"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": 0.3,
+        "back": "none",
+        "yaw": null,
+        "fallbackWidthM": 1.2
+      },
+      "tags": [
+        "spacecraft",
+        "apollo",
+        "nasa"
+      ],
+      "pageviews": null,
+      "importance": 0.9,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-07T00:00:00Z",
+      "updatedAt": "2026-10-08T02:32:26.198Z"
     }
   ]
 }

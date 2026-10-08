@@ -7,7 +7,8 @@ import { buildWorld } from "./world/floor";
 import { Exhibit } from "./world/exhibit";
 import { Player } from "./locomotion/player";
 
-const collection = collectionJson as Collection;
+// JSON import types are inferred per record; the schema is the source of truth.
+const collection = collectionJson as unknown as Collection;
 
 const renderer = new WebGLRenderer({ antialias: true, powerPreference: "high-performance" });
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
