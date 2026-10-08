@@ -4,11 +4,16 @@ A museum you walk through in VR or on a flat screen, in the browser. One open
 plane, no walls: forward is later in time, right is further east. Works float
 at their true size, and you can walk behind one and see it mirrored.
 
-v1 holds four works: Leonardo's *Last Supper* at its real 8.8 × 4.6 m, a
-1924 Ford Model T runabout, the Apollo 11 command module *Columbia* as a
+v1 holds sixteen works. Twelve are cave and rock paintings, photographed
+on the rock or in a full-size facsimile, from the hand stencils of Sulawesi
+(c. 35,000 BCE) through Chauvet, Lascaux, Altamira, Serra da Capivara,
+Bhimbetka, the Cueva de las Manos, Tassili n'Ajjer, Laas Geel and the
+Great Gallery of Utah to an X-ray turtle in Kakadu and a San eland in the
+Drakensberg. Then Leonardo's *Last Supper* at its real 8.8 × 4.6 m, a 1924
+Ford Model T runabout, the Apollo 11 command module *Columbia* as a
 Smithsonian 3D scan, and the rickroll, a frozen frame of Rick Astley at the
 size of a living-room television that starts to move when you walk up to
-it. They step across the floor from 1495 Milan to 2007 London.
+it. They step across the floor from Pleistocene Sulawesi to 2007 London.
 
 ## Run it
 
@@ -26,6 +31,11 @@ walks, right stick snap-turns.
 `?spawn=x,z,yawDegrees` places you anywhere for debugging, e.g.
 `?spawn=0,-11,180` looks at the back of the first work.
 
+To check a render without a headset, `node scripts/dev/screenshot.mjs
+<url> out.png` starts a headless Chrome, takes one capture and kills it.
+It is bounded on purpose: the museum renders continuously, and a stray
+headless Chrome on software GL will peg several cores until it is killed.
+
 ## Layout
 
 ```
@@ -38,6 +48,7 @@ src/assets/textures.ts   image ladder; sharper rungs load as you approach
 src/assets/models.ts     glb ladder, same idea for 3D scans
 src/locomotion/player.ts desktop and VR movement
 scripts/fetch-assets.ts  pulls images and models from their sources into public/assets
+scripts/dev/screenshot.mjs one bounded headless-Chrome capture, for checking renders
 public/draco/            Draco mesh decoder, copied from three's examples
 public/env/              overcast HDRI used for environment lighting, never drawn
 ```
@@ -57,8 +68,13 @@ mapping so their colours stay as scanned.
 
 Both axes are ordered, not to scale. Works are binned by decade and by
 5° of longitude; only non-empty bins become cells, so empty centuries and
-oceans do not exist in the world. Within a cell, works are packed in a grid,
-most important first. `computeLayout` returns the tick list for each axis so
+oceans do not exist in the world. Empty cells do not exist either: each
+time row holds only the geography cells that have works in it, side by
+side from west to east and centred on the spine, so the next era is always
+one cell ahead rather than off to one side. In a sparse collection this
+means a column is not a fixed longitude; once every row has every column
+it is the plain grid. Within a cell, works are packed in a grid, most
+important first. `computeLayout` returns the tick list for each axis so
 later versions can draw cues where time stretches or compresses.
 
 ### Assets
@@ -126,6 +142,12 @@ carry their own licenses, shown on each placard. See [NOTICE.md](NOTICE.md).
 
 ## Credits
 
+The cave painting photographs come from Wikimedia Commons under the licence
+on each placard: public domain (Mariano Cecowski, HTO, PanBK), CC BY
+(Matthias Kabel, Surfsupusa, Mheidegger) and CC BY-SA (Cahyo Ramadhani,
+Claude Valette, Mateus S. Figueiredo, Bernard Gagnon, Issam Barhoumi, Lukas
+Kaffer). The Chauvet, Lascaux and Altamira photographs show full-size
+facsimiles, since those caves are closed; the placards say so.
 The Last Supper image is public domain, via Wikimedia Commons. The Columbia
 scan is CC0 from the Smithsonian Institution's Digitization Program Office.
 The Model T is based on "1924 Ford Model T 3d model with interior" by

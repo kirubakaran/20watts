@@ -1,7 +1,1916 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-07T00:00:00Z",
+  "generatedAt": "2026-10-08T00:00:00Z",
   "artworks": [
+    {
+      "id": "wm-31360759",
+      "kind": "image",
+      "title": "Hand stencils, Leang Pettakere",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "Unknown Pleistocene painters of Sulawesi",
+          "slug": null,
+          "wikidataQid": null,
+          "wikipediaUrl": null,
+          "birthYear": null,
+          "deathYear": null,
+          "role": "painter"
+        }
+      ],
+      "date": {
+        "year": -35000,
+        "yearStart": -38000,
+        "yearEnd": -20000,
+        "label": "c. 35,000 BCE",
+        "precision": "circa"
+      },
+      "madeIn": {
+        "name": "Leang-Leang, Maros",
+        "region": "South Sulawesi",
+        "country": "Indonesia",
+        "point": {
+          "lat": -4.976,
+          "lon": 119.674
+        },
+        "wikidataQid": null
+      },
+      "location": {
+        "name": "Leang-Leang, Maros",
+        "region": "South Sulawesi",
+        "country": "Indonesia",
+        "point": {
+          "lat": -4.976,
+          "lon": 119.674
+        },
+        "wikidataQid": null,
+        "institution": "Leang-Leang Prehistoric Site",
+        "inventoryNumber": null
+      },
+      "culture": "Sulawesi Pleistocene",
+      "movement": null,
+      "periodSlug": "paleolithic",
+      "medium": "red ochre sprayed over the hand",
+      "materials": [
+        "ochre"
+      ],
+      "genre": [
+        "rock art",
+        "cave painting"
+      ],
+      "subjects": [
+        "hands",
+        "hand stencils"
+      ],
+      "physical": {
+        "widthCm": null,
+        "heightCm": null,
+        "depthCm": null,
+        "weightKg": null
+      },
+      "description": "Hands held against the limestone and sprayed with red ochre, in one of the Maros-Pangkep karst caves of southern Sulawesi. A stencil in the neighbouring cave of Leang Timpuseng is at least 39,900 years old, which made the Sulawesi caves the oldest dated figurative rock art in the world when it was published in 2014, older than anything then dated in Europe.",
+      "facts": [
+        "The age comes from uranium-series dating of the calcite 'cave popcorn' that grew over the paintings, which gives a minimum age.",
+        "A nearby painting of a Sulawesi warty pig at Leang Tedongnge was later dated to at least 45,500 years.",
+        "The stencils are negative images: the hand is the unpainted part."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Prehistoric_rock_art_of_Maros-Pangkep",
+      "wikidataQid": null,
+      "externalIds": {
+        "commons-curid": "31360759",
+        "commons-file": "Hands in Pettakere Cave.jpg"
+      },
+      "copyrighted": false,
+      "asset": {
+        "kind": "image",
+        "currentVersionId": "wm-31360759-v1",
+        "versions": [
+          {
+            "id": "wm-31360759-v1",
+            "original": {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Hands_in_Pettakere_Cave.jpg",
+              "width": 3264,
+              "height": 2448,
+              "bytes": 1543487,
+              "mime": "image/jpeg"
+            },
+            "rungs": [
+              {
+                "width": 1280,
+                "height": 960,
+                "url": "/assets/wm-31360759/1280.jpg",
+                "bytes": 337759
+              },
+              {
+                "width": 2048,
+                "height": 1536,
+                "url": "/assets/wm-31360759/2048.jpg",
+                "bytes": 1543487
+              }
+            ],
+            "loop": null,
+            "credit": {
+              "author": "Cahyo Ramadhani",
+              "license": {
+                "name": "CC BY-SA 3.0",
+                "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+              },
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Hands_in_Pettakere_Cave.jpg"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-08T00:00:00Z",
+              "note": "Import from Wikimedia Commons; photograph of the cave wall"
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "wikimedia-commons"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": 0.5,
+        "back": "mirror",
+        "yaw": null,
+        "fallbackWidthM": 1.6
+      },
+      "tags": [
+        "prehistoric",
+        "rock art",
+        "sulawesi",
+        "hand stencil"
+      ],
+      "pageviews": null,
+      "importance": 0.85,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-08T00:00:00Z",
+      "updatedAt": "2026-10-08T22:06:16.882Z"
+    },
+    {
+      "id": "wm-47569433",
+      "kind": "image",
+      "title": "Panel of the Lions, Chauvet Cave",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "Unknown Aurignacian painters",
+          "slug": null,
+          "wikidataQid": null,
+          "wikipediaUrl": null,
+          "birthYear": null,
+          "deathYear": null,
+          "role": "painter"
+        }
+      ],
+      "date": {
+        "year": -34000,
+        "yearStart": -35000,
+        "yearEnd": -31000,
+        "label": "c. 34,000 BCE",
+        "precision": "circa"
+      },
+      "madeIn": {
+        "name": "Vallon-Pont-d'Arc",
+        "region": "Ardèche",
+        "country": "France",
+        "point": {
+          "lat": 44.3875,
+          "lon": 4.4142
+        },
+        "wikidataQid": "Q374096"
+      },
+      "location": {
+        "name": "Vallon-Pont-d'Arc",
+        "region": "Ardèche",
+        "country": "France",
+        "point": {
+          "lat": 44.3875,
+          "lon": 4.4142
+        },
+        "wikidataQid": "Q374096",
+        "institution": "Grotte Chauvet (sealed; shown from the Grotte Chauvet 2 facsimile)",
+        "inventoryNumber": null
+      },
+      "culture": "Aurignacian",
+      "movement": null,
+      "periodSlug": "paleolithic",
+      "medium": "charcoal and scraping on limestone",
+      "materials": [
+        "charcoal",
+        "limestone"
+      ],
+      "genre": [
+        "rock art",
+        "cave painting"
+      ],
+      "subjects": [
+        "cave lions",
+        "bison",
+        "rhinoceros"
+      ],
+      "physical": {
+        "widthCm": null,
+        "heightCm": null,
+        "depthCm": null,
+        "weightKg": null
+      },
+      "description": "The right part of the Panel of the Lions in the deepest chamber of Chauvet Cave: a pride of lions, drawn without manes, stalks a herd of bison. The charcoal was drawn on a wall first scraped clean, and the artists shaded with their fingers to round the bodies. This photograph is of the full-scale facsimile at Grotte Chauvet 2, since the cave itself has been closed to the public since its discovery in 1994.",
+      "facts": [
+        "Chauvet's oldest drawings are around 36,000 years old, twice the age of Lascaux.",
+        "A rockfall sealed the cave about 21,000 years ago, which is why the drawings survive so well.",
+        "Werner Herzog filmed the panels in 3D for Cave of Forgotten Dreams (2010)."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Chauvet_Cave",
+      "wikidataQid": "Q374096",
+      "externalIds": {
+        "commons-curid": "47569433",
+        "commons-file": "18 PanneauDesLions(PartieDroite)BisonsPoursuivisParDesLions.jpg"
+      },
+      "copyrighted": false,
+      "asset": {
+        "kind": "image",
+        "currentVersionId": "wm-47569433-v1",
+        "versions": [
+          {
+            "id": "wm-47569433-v1",
+            "original": {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/5/5b/18_PanneauDesLions%28PartieDroite%29BisonsPoursuivisParDesLions.jpg",
+              "width": 2160,
+              "height": 1440,
+              "bytes": 2970039,
+              "mime": "image/jpeg"
+            },
+            "rungs": [
+              {
+                "width": 1280,
+                "height": 854,
+                "url": "/assets/wm-47569433/1280.jpg",
+                "bytes": 419112
+              },
+              {
+                "width": 2048,
+                "height": 1365,
+                "url": "/assets/wm-47569433/2048.jpg",
+                "bytes": 2970039
+              }
+            ],
+            "loop": null,
+            "credit": {
+              "author": "Claude Valette",
+              "license": {
+                "name": "CC BY-SA 4.0",
+                "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+              },
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:18_PanneauDesLions(PartieDroite)BisonsPoursuivisParDesLions.jpg"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-08T00:00:00Z",
+              "note": "Import from Wikimedia Commons; photograph of the Grotte Chauvet 2 facsimile"
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "wikimedia-commons"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": 0.5,
+        "back": "mirror",
+        "yaw": null,
+        "fallbackWidthM": 3.5
+      },
+      "tags": [
+        "prehistoric",
+        "rock art",
+        "chauvet",
+        "aurignacian",
+        "facsimile"
+      ],
+      "pageviews": null,
+      "importance": 0.95,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-08T00:00:00Z",
+      "updatedAt": "2026-10-08T22:06:18.232Z"
+    },
+    {
+      "id": "wm-6909701",
+      "kind": "image",
+      "title": "Megaloceros, Lascaux",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "Unknown Magdalenian painters",
+          "slug": null,
+          "wikidataQid": null,
+          "wikipediaUrl": null,
+          "birthYear": null,
+          "deathYear": null,
+          "role": "painter"
+        }
+      ],
+      "date": {
+        "year": -15000,
+        "yearStart": -16000,
+        "yearEnd": -14000,
+        "label": "c. 15,000 BCE",
+        "precision": "circa"
+      },
+      "madeIn": {
+        "name": "Montignac-Lascaux",
+        "region": "Dordogne",
+        "country": "France",
+        "point": {
+          "lat": 45.0536,
+          "lon": 1.17
+        },
+        "wikidataQid": "Q172125"
+      },
+      "location": {
+        "name": "Montignac-Lascaux",
+        "region": "Dordogne",
+        "country": "France",
+        "point": {
+          "lat": 45.0536,
+          "lon": 1.17
+        },
+        "wikidataQid": "Q172125",
+        "institution": "Grotte de Lascaux (sealed; replica photographed at the Anthropos museum, Brno)",
+        "inventoryNumber": null
+      },
+      "culture": "Magdalenian",
+      "movement": null,
+      "periodSlug": "paleolithic",
+      "medium": "mineral pigment on limestone",
+      "materials": [
+        "manganese oxide",
+        "ochre"
+      ],
+      "genre": [
+        "rock art",
+        "cave painting"
+      ],
+      "subjects": [
+        "giant deer",
+        "Megaloceros",
+        "dots"
+      ],
+      "physical": {
+        "widthCm": null,
+        "heightCm": null,
+        "depthCm": null,
+        "weightKg": null
+      },
+      "description": "A giant deer with its enormous antlers thrown back, painted in black manganese with a red ochre ground and a line of black dots beneath. It stands near the end of the Axial Gallery of Lascaux, among the horses and aurochs that made the cave famous after four teenagers found it in 1940. The cave was closed in 1963 because visitors' breath was growing algae and calcite over the paintings; this is a museum replica.",
+      "facts": [
+        "Megaloceros giganteus, the Irish elk, carried antlers up to 3.6 metres across and died out about 7,700 years ago.",
+        "Lascaux holds about 600 painted animals and nearly 1,500 engravings.",
+        "The dots and squares scattered around the animals have never been decoded."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Lascaux",
+      "wikidataQid": "Q172125",
+      "externalIds": {
+        "commons-curid": "6909701",
+        "commons-file": "Lascaux, Megaloceros.jpg"
+      },
+      "copyrighted": false,
+      "asset": {
+        "kind": "image",
+        "currentVersionId": "wm-6909701-v1",
+        "versions": [
+          {
+            "id": "wm-6909701-v1",
+            "original": {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Lascaux%2C_Megaloceros.jpg",
+              "width": 1775,
+              "height": 1744,
+              "bytes": 3361181,
+              "mime": "image/jpeg"
+            },
+            "rungs": [
+              {
+                "width": 1280,
+                "height": 1258,
+                "url": "/assets/wm-6909701/1280.jpg",
+                "bytes": 584874
+              }
+            ],
+            "loop": null,
+            "credit": {
+              "author": "HTO",
+              "license": {
+                "name": "Public domain",
+                "url": null
+              },
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Lascaux,_Megaloceros.jpg"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-08T00:00:00Z",
+              "note": "Import from Wikimedia Commons; photograph of a museum replica, released to the public domain by the photographer"
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "wikimedia-commons"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": 0.5,
+        "back": "mirror",
+        "yaw": null,
+        "fallbackWidthM": 2
+      },
+      "tags": [
+        "prehistoric",
+        "rock art",
+        "lascaux",
+        "magdalenian",
+        "replica"
+      ],
+      "pageviews": null,
+      "importance": 0.95,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-08T00:00:00Z",
+      "updatedAt": "2026-10-08T22:06:18.549Z"
+    },
+    {
+      "id": "wm-3513129",
+      "kind": "image",
+      "title": "Polychrome ceiling, Altamira",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "Unknown Magdalenian painters",
+          "slug": null,
+          "wikidataQid": null,
+          "wikipediaUrl": null,
+          "birthYear": null,
+          "deathYear": null,
+          "role": "painter"
+        }
+      ],
+      "date": {
+        "year": -12500,
+        "yearStart": -14000,
+        "yearEnd": -11000,
+        "label": "c. 12,500 BCE",
+        "precision": "circa"
+      },
+      "madeIn": {
+        "name": "Santillana del Mar",
+        "region": "Cantabria",
+        "country": "Spain",
+        "point": {
+          "lat": 43.3825,
+          "lon": -4.1203
+        },
+        "wikidataQid": "Q133575"
+      },
+      "location": {
+        "name": "Santillana del Mar",
+        "region": "Cantabria",
+        "country": "Spain",
+        "point": {
+          "lat": 43.3825,
+          "lon": -4.1203
+        },
+        "wikidataQid": "Q133575",
+        "institution": "Cueva de Altamira (closed; reproduction photographed at the Deutsches Museum, Munich)",
+        "inventoryNumber": null
+      },
+      "culture": "Magdalenian",
+      "movement": null,
+      "periodSlug": "paleolithic",
+      "medium": "ochre and charcoal on limestone",
+      "materials": [
+        "ochre",
+        "charcoal"
+      ],
+      "genre": [
+        "rock art",
+        "cave painting"
+      ],
+      "subjects": [
+        "bison",
+        "horse",
+        "deer"
+      ],
+      "physical": {
+        "widthCm": null,
+        "heightCm": null,
+        "depthCm": null,
+        "weightKg": null
+      },
+      "description": "The great ceiling of Altamira, where a herd of bison is painted in red ochre and outlined in black over the natural bulges of the rock, so that each animal stands out as if in relief. Found in 1879 by Marcelino Sanz de Sautuola and his young daughter María, it was the first Palaeolithic cave art recognised as such, after two decades of scholars dismissing it as a forgery. The cave is closed to protect the paintings; this is the full-size reproduction in Munich.",
+      "facts": [
+        "The polychrome bison date to around 14,500 years ago; the oldest marks in the cave are over 35,000 years old.",
+        "The ceiling is about 18 metres long and was painted lying down, under a roof little more than a metre high.",
+        "Picasso is often quoted as saying that after Altamira, all is decadence."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Cave_of_Altamira",
+      "wikidataQid": "Q133575",
+      "externalIds": {
+        "commons-curid": "3513129",
+        "commons-file": "Reproduction cave of Altamira 01.jpg"
+      },
+      "copyrighted": false,
+      "asset": {
+        "kind": "image",
+        "currentVersionId": "wm-3513129-v1",
+        "versions": [
+          {
+            "id": "wm-3513129-v1",
+            "original": {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Reproduction_cave_of_Altamira_01.jpg",
+              "width": 3456,
+              "height": 2304,
+              "bytes": 3157075,
+              "mime": "image/jpeg"
+            },
+            "rungs": [
+              {
+                "width": 1280,
+                "height": 854,
+                "url": "/assets/wm-3513129/1280.jpg",
+                "bytes": 222843
+              },
+              {
+                "width": 2048,
+                "height": 1365,
+                "url": "/assets/wm-3513129/2048.jpg",
+                "bytes": 3157075
+              }
+            ],
+            "loop": null,
+            "credit": {
+              "author": "Matthias Kabel",
+              "license": {
+                "name": "CC BY 2.5",
+                "url": "https://creativecommons.org/licenses/by/2.5/"
+              },
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Reproduction_cave_of_Altamira_01.jpg"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-08T00:00:00Z",
+              "note": "Import from Wikimedia Commons; photograph of the Deutsches Museum reproduction"
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "wikimedia-commons"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": 0.5,
+        "back": "mirror",
+        "yaw": null,
+        "fallbackWidthM": 4
+      },
+      "tags": [
+        "prehistoric",
+        "rock art",
+        "altamira",
+        "magdalenian",
+        "replica"
+      ],
+      "pageviews": null,
+      "importance": 0.95,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-08T00:00:00Z",
+      "updatedAt": "2026-10-08T22:06:19.696Z"
+    },
+    {
+      "id": "wm-80059616",
+      "kind": "image",
+      "title": "Nordeste tradition figures, Serra da Capivara",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "Unknown painters of the Nordeste tradition",
+          "slug": null,
+          "wikidataQid": null,
+          "wikipediaUrl": null,
+          "birthYear": null,
+          "deathYear": null,
+          "role": "painter"
+        }
+      ],
+      "date": {
+        "year": -8000,
+        "yearStart": -10000,
+        "yearEnd": -4000,
+        "label": "c. 8000 BCE",
+        "precision": "circa"
+      },
+      "madeIn": {
+        "name": "Serra da Capivara",
+        "region": "Piauí",
+        "country": "Brazil",
+        "point": {
+          "lat": -8.6667,
+          "lon": -42.55
+        },
+        "wikidataQid": "Q267394"
+      },
+      "location": {
+        "name": "Serra da Capivara",
+        "region": "Piauí",
+        "country": "Brazil",
+        "point": {
+          "lat": -8.6667,
+          "lon": -42.55
+        },
+        "wikidataQid": "Q267394",
+        "institution": "Parque Nacional Serra da Capivara",
+        "inventoryNumber": null
+      },
+      "culture": "Nordeste tradition",
+      "movement": null,
+      "periodSlug": "mesolithic",
+      "medium": "red ochre on sandstone",
+      "materials": [
+        "ochre"
+      ],
+      "genre": [
+        "rock art",
+        "cave painting"
+      ],
+      "subjects": [
+        "deer",
+        "hunters"
+      ],
+      "physical": {
+        "widthCm": null,
+        "heightCm": null,
+        "depthCm": null,
+        "weightKg": null
+      },
+      "description": "A red deer-like animal and small human figures on a sandstone shelter in the Serra da Capivara, where more than a thousand painted shelters record hunting, dancing and sex in the lively Nordeste style. The park is at the centre of the argument over when people reached the Americas: its excavator Niède Guidon claims hearths over 30,000 years old, far older than most archaeologists accept.",
+      "facts": [
+        "Serra da Capivara holds the largest concentration of rock art in the Americas.",
+        "The Nordeste tradition is usually dated between about 12,000 and 6,000 years ago.",
+        "Capivara means capybara, the park's name animal."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Serra_da_Capivara_National_Park",
+      "wikidataQid": "Q267394",
+      "externalIds": {
+        "commons-curid": "80059616",
+        "commons-file": "Pintura rupestre no Parque Nacional Serra da Capivara (0356).jpg"
+      },
+      "copyrighted": false,
+      "asset": {
+        "kind": "image",
+        "currentVersionId": "wm-80059616-v1",
+        "versions": [
+          {
+            "id": "wm-80059616-v1",
+            "original": {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Pintura_rupestre_no_Parque_Nacional_Serra_da_Capivara_%280356%29.jpg",
+              "width": 5184,
+              "height": 3456,
+              "bytes": 12399571,
+              "mime": "image/jpeg"
+            },
+            "rungs": [
+              {
+                "width": 1280,
+                "height": 854,
+                "url": "/assets/wm-80059616/1280.jpg",
+                "bytes": 531608
+              },
+              {
+                "width": 3840,
+                "height": 2559,
+                "url": "/assets/wm-80059616/3840.jpg",
+                "bytes": 3633084
+              }
+            ],
+            "loop": null,
+            "credit": {
+              "author": "Mateus S. Figueiredo",
+              "license": {
+                "name": "CC BY-SA 4.0",
+                "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+              },
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Pintura_rupestre_no_Parque_Nacional_Serra_da_Capivara_(0356).jpg"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-08T00:00:00Z",
+              "note": "Import from Wikimedia Commons; photograph of the shelter wall"
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "wikimedia-commons"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": 0.5,
+        "back": "mirror",
+        "yaw": null,
+        "fallbackWidthM": 1.6
+      },
+      "tags": [
+        "prehistoric",
+        "rock art",
+        "brazil",
+        "nordeste"
+      ],
+      "pageviews": null,
+      "importance": 0.75,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-08T00:00:00Z",
+      "updatedAt": "2026-10-08T22:06:21.365Z"
+    },
+    {
+      "id": "wm-33749461",
+      "kind": "image",
+      "title": "Rock Shelter 8, Bhimbetka",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "Unknown Mesolithic painters of central India",
+          "slug": null,
+          "wikidataQid": null,
+          "wikipediaUrl": null,
+          "birthYear": null,
+          "deathYear": null,
+          "role": "painter"
+        }
+      ],
+      "date": {
+        "year": -8000,
+        "yearStart": -10000,
+        "yearEnd": -1000,
+        "label": "c. 8000 BCE",
+        "precision": "circa"
+      },
+      "madeIn": {
+        "name": "Bhimbetka, Raisen",
+        "region": "Madhya Pradesh",
+        "country": "India",
+        "point": {
+          "lat": 22.9384,
+          "lon": 77.6131
+        },
+        "wikidataQid": "Q331603"
+      },
+      "location": {
+        "name": "Bhimbetka, Raisen",
+        "region": "Madhya Pradesh",
+        "country": "India",
+        "point": {
+          "lat": 22.9384,
+          "lon": 77.6131
+        },
+        "wikidataQid": "Q331603",
+        "institution": "Bhimbetka rock shelters",
+        "inventoryNumber": null
+      },
+      "culture": "Indian Mesolithic",
+      "movement": null,
+      "periodSlug": "mesolithic",
+      "medium": "ochre on sandstone",
+      "materials": [
+        "ochre",
+        "haematite"
+      ],
+      "genre": [
+        "rock art",
+        "cave painting"
+      ],
+      "subjects": [
+        "animals",
+        "hunters",
+        "dancers"
+      ],
+      "physical": {
+        "widthCm": null,
+        "heightCm": null,
+        "depthCm": null,
+        "weightKg": null
+      },
+      "description": "A frieze of red animals and small hunters inside one of the sandstone shelters at Bhimbetka, south of Bhopal, where some 750 shelters were painted over and over from the Mesolithic to the medieval period. The oldest figures, like these, are red; later ones are white and show riders, elephants and battles.",
+      "facts": [
+        "The shelters were noticed by the archaeologist V. S. Wakankar from a train window in 1957.",
+        "Stone tools in the shelters go back 100,000 years, long before the paintings.",
+        "Bhimbetka was listed as a World Heritage Site in 2003."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Bhimbetka_rock_shelters",
+      "wikidataQid": "Q331603",
+      "externalIds": {
+        "commons-curid": "33749461",
+        "commons-file": "Rock Shelter 8, Bhimbetka 02.jpg"
+      },
+      "copyrighted": false,
+      "asset": {
+        "kind": "image",
+        "currentVersionId": "wm-33749461-v1",
+        "versions": [
+          {
+            "id": "wm-33749461-v1",
+            "original": {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/9/91/Rock_Shelter_8%2C_Bhimbetka_02.jpg",
+              "width": 5184,
+              "height": 3456,
+              "bytes": 11030698,
+              "mime": "image/jpeg"
+            },
+            "rungs": [
+              {
+                "width": 1280,
+                "height": 854,
+                "url": "/assets/wm-33749461/1280.jpg",
+                "bytes": 405047
+              },
+              {
+                "width": 3840,
+                "height": 2559,
+                "url": "/assets/wm-33749461/3840.jpg",
+                "bytes": 2632049
+              }
+            ],
+            "loop": null,
+            "credit": {
+              "author": "Bernard Gagnon",
+              "license": {
+                "name": "CC BY-SA 3.0",
+                "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+              },
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Rock_Shelter_8,_Bhimbetka_02.jpg"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-08T00:00:00Z",
+              "note": "Import from Wikimedia Commons; photograph of the shelter wall"
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "wikimedia-commons"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": 0.5,
+        "back": "mirror",
+        "yaw": null,
+        "fallbackWidthM": 3
+      },
+      "tags": [
+        "prehistoric",
+        "rock art",
+        "india",
+        "bhimbetka"
+      ],
+      "pageviews": null,
+      "importance": 0.85,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-08T00:00:00Z",
+      "updatedAt": "2026-10-08T22:06:22.378Z"
+    },
+    {
+      "id": "wm-265811",
+      "kind": "image",
+      "title": "Cueva de las Manos",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "Unknown Patagonian painters",
+          "slug": null,
+          "wikidataQid": null,
+          "wikipediaUrl": null,
+          "birthYear": null,
+          "deathYear": null,
+          "role": "painter"
+        }
+      ],
+      "date": {
+        "year": -7300,
+        "yearStart": -11000,
+        "yearEnd": -1000,
+        "label": "c. 7300 BCE",
+        "precision": "circa"
+      },
+      "madeIn": {
+        "name": "Río Pinturas, Santa Cruz",
+        "region": "Patagonia",
+        "country": "Argentina",
+        "point": {
+          "lat": -47.1553,
+          "lon": -70.6594
+        },
+        "wikidataQid": "Q223385"
+      },
+      "location": {
+        "name": "Río Pinturas, Santa Cruz",
+        "region": "Patagonia",
+        "country": "Argentina",
+        "point": {
+          "lat": -47.1553,
+          "lon": -70.6594
+        },
+        "wikidataQid": "Q223385",
+        "institution": "Cueva de las Manos",
+        "inventoryNumber": null
+      },
+      "culture": "Patagonian hunter-gatherers",
+      "movement": null,
+      "periodSlug": "mesolithic",
+      "medium": "mineral pigment blown through bone pipes",
+      "materials": [
+        "iron oxide",
+        "kaolin",
+        "natrojarosite",
+        "manganese oxide"
+      ],
+      "genre": [
+        "rock art",
+        "cave painting"
+      ],
+      "subjects": [
+        "hands",
+        "hand stencils"
+      ],
+      "physical": {
+        "widthCm": null,
+        "heightCm": null,
+        "depthCm": null,
+        "weightKg": null
+      },
+      "description": "Hundreds of hands stencilled in red, white, black and ochre on the wall of a cave above the Río Pinturas in Patagonia. The painters held a hand to the rock and blew pigment over it through a bone pipe; most are left hands, so the pipe was held in the right. Guanaco hunts and geometric patterns were painted around them over several thousand years.",
+      "facts": [
+        "The oldest layer has been dated to around 9,300 years ago.",
+        "Of about 830 hands, only 31 are right hands.",
+        "The cave was listed as a World Heritage Site in 1999."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Cueva_de_las_Manos",
+      "wikidataQid": "Q223385",
+      "externalIds": {
+        "commons-curid": "265811",
+        "commons-file": "SantaCruz-CuevaManos-P2210651b.jpg"
+      },
+      "copyrighted": false,
+      "asset": {
+        "kind": "image",
+        "currentVersionId": "wm-265811-v1",
+        "versions": [
+          {
+            "id": "wm-265811-v1",
+            "original": {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/f/f4/SantaCruz-CuevaManos-P2210651b.jpg",
+              "width": 1600,
+              "height": 1200,
+              "bytes": 1295940,
+              "mime": "image/jpeg"
+            },
+            "rungs": [
+              {
+                "width": 1280,
+                "height": 960,
+                "url": "/assets/wm-265811/1280.jpg",
+                "bytes": 570608
+              }
+            ],
+            "loop": null,
+            "credit": {
+              "author": "Mariano Cecowski",
+              "license": {
+                "name": "Public domain",
+                "url": null
+              },
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:SantaCruz-CuevaManos-P2210651b.jpg"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-08T00:00:00Z",
+              "note": "Import from Wikimedia Commons; photograph released to the public domain by the photographer"
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "wikimedia-commons"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": 0.5,
+        "back": "mirror",
+        "yaw": null,
+        "fallbackWidthM": 2.2
+      },
+      "tags": [
+        "prehistoric",
+        "rock art",
+        "argentina",
+        "patagonia",
+        "hand stencil"
+      ],
+      "pageviews": null,
+      "importance": 0.95,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-08T00:00:00Z",
+      "updatedAt": "2026-10-08T22:06:22.675Z"
+    },
+    {
+      "id": "wm-153807790",
+      "kind": "image",
+      "title": "Pastoral figures, Tanzoumaitak, Tassili n'Ajjer",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "Unknown painters of the Saharan Pastoral period",
+          "slug": null,
+          "wikidataQid": null,
+          "wikipediaUrl": null,
+          "birthYear": null,
+          "deathYear": null,
+          "role": "painter"
+        }
+      ],
+      "date": {
+        "year": -5000,
+        "yearStart": -6000,
+        "yearEnd": -2000,
+        "label": "c. 5000 BCE",
+        "precision": "circa"
+      },
+      "madeIn": {
+        "name": "Tanzoumaitak, near Djanet",
+        "region": "Tassili n'Ajjer",
+        "country": "Algeria",
+        "point": {
+          "lat": 24.555,
+          "lon": 9.4853
+        },
+        "wikidataQid": "Q190048"
+      },
+      "location": {
+        "name": "Tanzoumaitak, near Djanet",
+        "region": "Tassili n'Ajjer",
+        "country": "Algeria",
+        "point": {
+          "lat": 24.555,
+          "lon": 9.4853
+        },
+        "wikidataQid": "Q190048",
+        "institution": "Tassili n'Ajjer National Park",
+        "inventoryNumber": null
+      },
+      "culture": "Saharan Pastoral",
+      "movement": null,
+      "periodSlug": "neolithic",
+      "medium": "ochre on sandstone",
+      "materials": [
+        "ochre"
+      ],
+      "genre": [
+        "rock art",
+        "cave painting"
+      ],
+      "subjects": [
+        "herders",
+        "cattle",
+        "figures"
+      ],
+      "physical": {
+        "widthCm": null,
+        "heightCm": null,
+        "depthCm": null,
+        "weightKg": null
+      },
+      "description": "Running and dancing figures in ochre on a sandstone shelter at Tanzoumaitak, on the Tassili n'Ajjer plateau in the Algerian Sahara. When they were painted the Sahara was green: the plateau's 15,000 paintings and engravings show cattle herds, giraffes, hippos and swimmers where there is now only rock and sand.",
+      "facts": [
+        "Henri Lhote's expeditions in the 1950s, guided by the Tuareg Jebrine ag Mohamed, copied thousands of the paintings and made the site famous.",
+        "The Round Head period, the plateau's oldest painted style, may go back 10,000 years; the Pastoral period that follows is the richest.",
+        "Tassili n'Ajjer was listed as a World Heritage Site in 1982."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Tassili_n%27Ajjer",
+      "wikidataQid": "Q190048",
+      "externalIds": {
+        "commons-curid": "153807790",
+        "commons-file": "The Tanzoumaitak cave painting in Tassili n'ajjer.jpg"
+      },
+      "copyrighted": false,
+      "asset": {
+        "kind": "image",
+        "currentVersionId": "wm-153807790-v1",
+        "versions": [
+          {
+            "id": "wm-153807790-v1",
+            "original": {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/7/75/The_Tanzoumaitak_cave_painting_in_Tassili_n%27ajjer.jpg",
+              "width": 5163,
+              "height": 2904,
+              "bytes": 12134851,
+              "mime": "image/jpeg"
+            },
+            "rungs": [
+              {
+                "width": 1280,
+                "height": 720,
+                "url": "/assets/wm-153807790/1280.jpg",
+                "bytes": 339896
+              },
+              {
+                "width": 3840,
+                "height": 2160,
+                "url": "/assets/wm-153807790/3840.jpg",
+                "bytes": 2808500
+              }
+            ],
+            "loop": null,
+            "credit": {
+              "author": "Issam Barhoumi",
+              "license": {
+                "name": "CC BY-SA 4.0",
+                "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+              },
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:The_Tanzoumaitak_cave_painting_in_Tassili_n'ajjer.jpg"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-08T00:00:00Z",
+              "note": "Import from Wikimedia Commons; photograph of the shelter wall"
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "wikimedia-commons"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": 0.5,
+        "back": "mirror",
+        "yaw": null,
+        "fallbackWidthM": 3
+      },
+      "tags": [
+        "prehistoric",
+        "rock art",
+        "sahara",
+        "algeria",
+        "tassili"
+      ],
+      "pageviews": null,
+      "importance": 0.8,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-08T00:00:00Z",
+      "updatedAt": "2026-10-08T22:06:23.929Z"
+    },
+    {
+      "id": "wm-146391319",
+      "kind": "image",
+      "title": "Cattle, Laas Geel",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "Unknown Neolithic painters of the Horn of Africa",
+          "slug": null,
+          "wikidataQid": null,
+          "wikipediaUrl": null,
+          "birthYear": null,
+          "deathYear": null,
+          "role": "painter"
+        }
+      ],
+      "date": {
+        "year": -3000,
+        "yearStart": -3500,
+        "yearEnd": -2500,
+        "label": "c. 3500–2500 BCE",
+        "precision": "circa"
+      },
+      "madeIn": {
+        "name": "Laas Geel, near Hargeisa",
+        "region": "Maroodi Jeex",
+        "country": "Somaliland",
+        "point": {
+          "lat": 9.6833,
+          "lon": 44.1667
+        },
+        "wikidataQid": "Q1799347"
+      },
+      "location": {
+        "name": "Laas Geel, near Hargeisa",
+        "region": "Maroodi Jeex",
+        "country": "Somaliland",
+        "point": {
+          "lat": 9.6833,
+          "lon": 44.1667
+        },
+        "wikidataQid": "Q1799347",
+        "institution": "Laas Geel rock shelters",
+        "inventoryNumber": null
+      },
+      "culture": "Horn of Africa Neolithic",
+      "movement": null,
+      "periodSlug": "neolithic",
+      "medium": "ochre, white and black pigment on granite",
+      "materials": [
+        "ochre"
+      ],
+      "genre": [
+        "rock art",
+        "cave painting"
+      ],
+      "subjects": [
+        "cattle",
+        "cows",
+        "herders"
+      ],
+      "physical": {
+        "widthCm": null,
+        "heightCm": null,
+        "depthCm": null,
+        "weightKg": null
+      },
+      "description": "Long-horned cows with decorated necks and ceremonial collars, painted in red, white and black on the ceiling of a granite shelter at Laas Geel, outside Hargeisa. The cows are shown with their udders and without legs below the knee, as if seen from the front, and small human figures stand beneath them with their arms raised. The site is among the best preserved rock art in Africa.",
+      "facts": [
+        "Local herders had always known the shelters; a French team recorded them for archaeology in 2002.",
+        "There are about twenty painted shelters on the granite outcrop.",
+        "Laas Geel means 'the camels' waterhole' in Somali."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Laas_Geel",
+      "wikidataQid": "Q1799347",
+      "externalIds": {
+        "commons-curid": "146391319",
+        "commons-file": "Laas Geel, 2024.jpg"
+      },
+      "copyrighted": false,
+      "asset": {
+        "kind": "image",
+        "currentVersionId": "wm-146391319-v1",
+        "versions": [
+          {
+            "id": "wm-146391319-v1",
+            "original": {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Laas_Geel%2C_2024.jpg",
+              "width": 7952,
+              "height": 5304,
+              "bytes": 35160064,
+              "mime": "image/jpeg"
+            },
+            "rungs": [
+              {
+                "width": 1280,
+                "height": 854,
+                "url": "/assets/wm-146391319/1280.jpg",
+                "bytes": 404715
+              },
+              {
+                "width": 3840,
+                "height": 2561,
+                "url": "/assets/wm-146391319/3840.jpg",
+                "bytes": 3050477
+              }
+            ],
+            "loop": null,
+            "credit": {
+              "author": "Mheidegger",
+              "license": {
+                "name": "CC BY 4.0",
+                "url": "https://creativecommons.org/licenses/by/4.0/"
+              },
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Laas_Geel,_2024.jpg"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-08T00:00:00Z",
+              "note": "Import from Wikimedia Commons; photograph of the shelter ceiling"
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "wikimedia-commons"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": 0.5,
+        "back": "mirror",
+        "yaw": null,
+        "fallbackWidthM": 2.5
+      },
+      "tags": [
+        "prehistoric",
+        "rock art",
+        "somaliland",
+        "laas geel",
+        "cattle"
+      ],
+      "pageviews": null,
+      "importance": 0.85,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-08T00:00:00Z",
+      "updatedAt": "2026-10-08T22:06:25.710Z"
+    },
+    {
+      "id": "wm-7203375",
+      "kind": "image",
+      "title": "The Great Gallery, Horseshoe Canyon",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "Unknown painters of the Barrier Canyon style",
+          "slug": null,
+          "wikidataQid": null,
+          "wikipediaUrl": null,
+          "birthYear": null,
+          "deathYear": null,
+          "role": "painter"
+        }
+      ],
+      "date": {
+        "year": 500,
+        "yearStart": 1,
+        "yearEnd": 1100,
+        "label": "c. 1–1100 CE",
+        "precision": "circa"
+      },
+      "madeIn": {
+        "name": "Horseshoe Canyon, Canyonlands",
+        "region": "Utah",
+        "country": "United States",
+        "point": {
+          "lat": 38.4714,
+          "lon": -110.2
+        },
+        "wikidataQid": "Q4500201"
+      },
+      "location": {
+        "name": "Horseshoe Canyon, Canyonlands",
+        "region": "Utah",
+        "country": "United States",
+        "point": {
+          "lat": 38.4714,
+          "lon": -110.2
+        },
+        "wikidataQid": "Q4500201",
+        "institution": "Canyonlands National Park",
+        "inventoryNumber": null
+      },
+      "culture": "Barrier Canyon style",
+      "movement": null,
+      "periodSlug": "archaic",
+      "medium": "mineral pigment on sandstone",
+      "materials": [
+        "ochre"
+      ],
+      "genre": [
+        "rock art",
+        "cave painting"
+      ],
+      "subjects": [
+        "anthropomorphs",
+        "spirit figures"
+      ],
+      "physical": {
+        "widthCm": null,
+        "heightCm": null,
+        "depthCm": null,
+        "weightKg": null
+      },
+      "description": "A line of tall, armless, hollow-eyed figures painted in dark red along sixty metres of a sandstone alcove in Horseshoe Canyon, Utah. The Great Gallery is the finest panel of the Barrier Canyon style, named after this canyon; its largest figure, the Holy Ghost, stands over two metres tall and was painted by spraying pigment, with smaller animals and figures around it.",
+      "facts": [
+        "Geologists dated the panel in 2014 by the age of the rockfall it was painted on and the sediment that later buried its base: between about 1 and 1100 CE.",
+        "The full panel is about 61 metres long and 4.6 metres high.",
+        "Horseshoe Canyon was renamed from Barrier Canyon, but the style kept the old name."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Horseshoe_Canyon_(Utah)",
+      "wikidataQid": "Q4500201",
+      "externalIds": {
+        "commons-curid": "7203375",
+        "commons-file": "GreatGalleryPanel.jpg"
+      },
+      "copyrighted": false,
+      "asset": {
+        "kind": "image",
+        "currentVersionId": "wm-7203375-v1",
+        "versions": [
+          {
+            "id": "wm-7203375-v1",
+            "original": {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/8/8b/GreatGalleryPanel.jpg",
+              "width": 2969,
+              "height": 1000,
+              "bytes": 1697825,
+              "mime": "image/jpeg"
+            },
+            "rungs": [
+              {
+                "width": 1280,
+                "height": 431,
+                "url": "/assets/wm-7203375/1280.jpg",
+                "bytes": 231643
+              },
+              {
+                "width": 2048,
+                "height": 690,
+                "url": "/assets/wm-7203375/2048.jpg",
+                "bytes": 1697825
+              }
+            ],
+            "loop": null,
+            "credit": {
+              "author": "Surfsupusa",
+              "license": {
+                "name": "CC BY 3.0",
+                "url": "https://creativecommons.org/licenses/by/3.0/"
+              },
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:GreatGalleryPanel.jpg"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-08T00:00:00Z",
+              "note": "Import from Wikimedia Commons; photograph of a section of the panel"
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "wikimedia-commons"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": 0.5,
+        "back": "mirror",
+        "yaw": null,
+        "fallbackWidthM": 10
+      },
+      "tags": [
+        "prehistoric",
+        "rock art",
+        "utah",
+        "barrier canyon style",
+        "pictograph"
+      ],
+      "pageviews": null,
+      "importance": 0.8,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-08T00:00:00Z",
+      "updatedAt": "2026-10-08T22:06:26.566Z"
+    },
+    {
+      "id": "wm-845223",
+      "kind": "image",
+      "title": "X-ray turtle, Kakadu",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "Unknown Bininj painters",
+          "slug": null,
+          "wikidataQid": null,
+          "wikipediaUrl": null,
+          "birthYear": null,
+          "deathYear": null,
+          "role": "painter"
+        }
+      ],
+      "date": {
+        "year": 500,
+        "yearStart": -1500,
+        "yearEnd": 1900,
+        "label": "c. 500 CE",
+        "precision": "circa"
+      },
+      "madeIn": {
+        "name": "Kakadu",
+        "region": "Northern Territory",
+        "country": "Australia",
+        "point": {
+          "lat": -12.67,
+          "lon": 132.85
+        },
+        "wikidataQid": "Q189657"
+      },
+      "location": {
+        "name": "Kakadu",
+        "region": "Northern Territory",
+        "country": "Australia",
+        "point": {
+          "lat": -12.67,
+          "lon": 132.85
+        },
+        "wikidataQid": "Q189657",
+        "institution": "Kakadu National Park",
+        "inventoryNumber": null
+      },
+      "culture": "Aboriginal Australian, Arnhem Land",
+      "movement": null,
+      "periodSlug": "aboriginal-rock-art",
+      "medium": "ochre on sandstone",
+      "materials": [
+        "ochre",
+        "white clay"
+      ],
+      "genre": [
+        "rock art",
+        "cave painting"
+      ],
+      "subjects": [
+        "turtle",
+        "internal organs"
+      ],
+      "physical": {
+        "widthCm": null,
+        "heightCm": null,
+        "depthCm": null,
+        "weightKg": null
+      },
+      "description": "A long-necked turtle painted in the X-ray style of western Arnhem Land, with its backbone and organs drawn inside the outline. The X-ray convention appears in Kakadu's galleries over the last two or three thousand years, at the end of a painting tradition that goes back more than 20,000 years, and shows the food animals of the wetlands: barramundi, catfish, goannas, wallabies and turtles.",
+      "facts": [
+        "Kakadu's rock art tradition is one of the longest continuous ones in the world, and the Bininj and Mungguy custodians still know the stories behind many paintings.",
+        "X-ray paintings show what you learn by butchering the animal: which parts are eaten and how.",
+        "Kakadu was listed as a World Heritage Site in 1981 for both its nature and its culture."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Kakadu_National_Park",
+      "wikidataQid": "Q189657",
+      "externalIds": {
+        "commons-curid": "845223",
+        "commons-file": "Rock-painting-turtle.jpg"
+      },
+      "copyrighted": false,
+      "asset": {
+        "kind": "image",
+        "currentVersionId": "wm-845223-v1",
+        "versions": [
+          {
+            "id": "wm-845223-v1",
+            "original": {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/7/74/Rock-painting-turtle.jpg",
+              "width": 3038,
+              "height": 2012,
+              "bytes": 877420,
+              "mime": "image/jpeg"
+            },
+            "rungs": [
+              {
+                "width": 1280,
+                "height": 848,
+                "url": "/assets/wm-845223/1280.jpg",
+                "bytes": 390735
+              },
+              {
+                "width": 2048,
+                "height": 1356,
+                "url": "/assets/wm-845223/2048.jpg",
+                "bytes": 877420
+              }
+            ],
+            "loop": null,
+            "credit": {
+              "author": "PanBK",
+              "license": {
+                "name": "Public domain",
+                "url": null
+              },
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Rock-painting-turtle.jpg"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-08T00:00:00Z",
+              "note": "Import from Wikimedia Commons; photograph tagged PD-Art there, also released under GFDL by the photographer"
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "wikimedia-commons"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": 0.5,
+        "back": "mirror",
+        "yaw": null,
+        "fallbackWidthM": 1
+      },
+      "tags": [
+        "prehistoric",
+        "rock art",
+        "australia",
+        "kakadu",
+        "x-ray style"
+      ],
+      "pageviews": null,
+      "importance": 0.8,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-08T00:00:00Z",
+      "updatedAt": "2026-10-08T22:06:27.412Z"
+    },
+    {
+      "id": "wm-2653186",
+      "kind": "image",
+      "title": "Eland, uKhahlamba-Drakensberg",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "Unknown San painters",
+          "slug": null,
+          "wikidataQid": null,
+          "wikipediaUrl": null,
+          "birthYear": null,
+          "deathYear": null,
+          "role": "painter"
+        }
+      ],
+      "date": {
+        "year": 1000,
+        "yearStart": -1000,
+        "yearEnd": 1850,
+        "label": "c. 1000 CE (undated)",
+        "precision": "circa"
+      },
+      "madeIn": {
+        "name": "uKhahlamba-Drakensberg",
+        "region": "KwaZulu-Natal",
+        "country": "South Africa",
+        "point": {
+          "lat": -29,
+          "lon": 29.4
+        },
+        "wikidataQid": "Q6744547"
+      },
+      "location": {
+        "name": "uKhahlamba-Drakensberg",
+        "region": "KwaZulu-Natal",
+        "country": "South Africa",
+        "point": {
+          "lat": -29,
+          "lon": 29.4
+        },
+        "wikidataQid": "Q6744547",
+        "institution": "Maloti-Drakensberg Park",
+        "inventoryNumber": null
+      },
+      "culture": "San",
+      "movement": null,
+      "periodSlug": "san-rock-art",
+      "medium": "ochre, blood and egg binder on sandstone",
+      "materials": [
+        "ochre",
+        "haematite"
+      ],
+      "genre": [
+        "rock art",
+        "cave painting"
+      ],
+      "subjects": [
+        "eland",
+        "antelope"
+      ],
+      "physical": {
+        "widthCm": null,
+        "heightCm": null,
+        "depthCm": null,
+        "weightKg": null
+      },
+      "description": "An eland in shaded red and white on a sandstone shelter in the Drakensberg, painted by the San with a fine brush and a polychrome technique that modelled the animal's bulk. The eland is the animal that appears most often in San painting; it was the creature of greatest spiritual power, and the trance dance of the healers drew on its potency.",
+      "facts": [
+        "The Drakensberg holds some 35,000 to 40,000 painted images in over 600 shelters.",
+        "Most of the paintings are less than 2,000 years old and some show horses and guns from the 1800s.",
+        "The park was listed as a World Heritage Site in 2000."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Maloti-Drakensberg_Park",
+      "wikidataQid": "Q6744547",
+      "externalIds": {
+        "commons-curid": "2653186",
+        "commons-file": "San Painting, Ukalamba Drakensberge 1.JPG"
+      },
+      "copyrighted": false,
+      "asset": {
+        "kind": "image",
+        "currentVersionId": "wm-2653186-v1",
+        "versions": [
+          {
+            "id": "wm-2653186-v1",
+            "original": {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/9/9b/San_Painting%2C_Ukalamba_Drakensberge_1.JPG",
+              "width": 2986,
+              "height": 1494,
+              "bytes": 2166865,
+              "mime": "image/jpeg"
+            },
+            "rungs": [
+              {
+                "width": 1280,
+                "height": 640,
+                "url": "/assets/wm-2653186/1280.jpg",
+                "bytes": 264413
+              },
+              {
+                "width": 2048,
+                "height": 1025,
+                "url": "/assets/wm-2653186/2048.jpg",
+                "bytes": 2166865
+              }
+            ],
+            "loop": null,
+            "credit": {
+              "author": "Lukas Kaffer",
+              "license": {
+                "name": "CC BY-SA 3.0",
+                "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+              },
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:San_Painting,_Ukalamba_Drakensberge_1.JPG"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-08T00:00:00Z",
+              "note": "Import from Wikimedia Commons; photograph of the shelter wall"
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "wikimedia-commons"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": 0.5,
+        "back": "mirror",
+        "yaw": null,
+        "fallbackWidthM": 1.2
+      },
+      "tags": [
+        "prehistoric",
+        "rock art",
+        "south africa",
+        "san",
+        "drakensberg",
+        "eland"
+      ],
+      "pageviews": null,
+      "importance": 0.8,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-08T00:00:00Z",
+      "updatedAt": "2026-10-08T22:06:28.678Z"
+    },
     {
       "id": "wm-50410532",
       "kind": "image",
@@ -165,7 +2074,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-07T00:00:00Z",
-      "updatedAt": "2026-10-08T14:50:14.248Z"
+      "updatedAt": "2026-10-08T22:06:29.118Z"
     },
     {
       "id": "si-nasm_A19700102000",
@@ -355,7 +2264,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-07T00:00:00Z",
-      "updatedAt": "2026-10-08T14:50:15.577Z"
+      "updatedAt": "2026-10-08T22:06:30.400Z"
     },
     {
       "id": "sf-895fd0fbc7cc42aab8f3300a85420b91",
@@ -551,7 +2460,7 @@
       },
       "source": "admin",
       "createdAt": "2026-10-07T00:00:00Z",
-      "updatedAt": "2026-10-08T14:50:19.678Z"
+      "updatedAt": "2026-10-08T22:06:34.315Z"
     },
     {
       "id": "yt-dQw4w9WgXcQ",
@@ -635,7 +2544,7 @@
       ],
       "physical": {
         "widthCm": 243.5,
-        "heightCm": 137.0,
+        "heightCm": 137,
         "depthCm": null,
         "weightKg": null
       },
@@ -741,7 +2650,7 @@
       },
       "source": "admin",
       "createdAt": "2026-10-08T00:00:00Z",
-      "updatedAt": "2026-10-08T14:50:19.973Z"
+      "updatedAt": "2026-10-08T22:06:34.725Z"
     }
   ]
 }

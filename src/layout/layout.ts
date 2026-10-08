@@ -9,6 +9,12 @@
  * cell. Empty stretches of time or space simply do not exist in the world.
  * Within a cell, works are packed in a small grid, most important first.
  *
+ * Empty cells do not exist either: each time row holds only the geography
+ * cells that have works, side by side from west to east and centred on the
+ * spine (x = 0). So the next era is always one cell ahead, even when a
+ * sparse collection would otherwise leave a lone work far off to one side.
+ * At full density every row has every column and this is the plain grid.
+ *
  * Only this module knows about time and geography. The renderer only sees
  * positions, yaws and footprints.
  */
@@ -42,6 +48,7 @@ export interface Placement {
   position: Vector3;
   /** Rotation about Y. 0 faces +Z, i.e. toward a visitor arriving from the past. */
   yaw: number;
+  /** Global ranks on each axis. Rows are compacted, so geoRank is an order, not a column. */
   cell: { timeRank: number; geoRank: number };
 }
 
@@ -95,6 +102,17 @@ export function computeLayout(artworks: Artwork[], cfg: LayoutConfig = DEFAULT_L
     (cells.get(key) ?? cells.set(key, []).get(key)!).push(a);
   });
 
+  // Per time row, the geography ranks present, in order; a row is laid out
+  // by these columns, so empty cells between works collapse.
+  const rowCols = new Map<number, Map<number, number>>();
+  for (const key of cells.keys()) {
+    const [timeRank, geoRank] = key.split(":").map(Number) as [number, number];
+    (rowCols.get(timeRank) ?? rowCols.set(timeRank, new Map()).get(timeRank)!).set(geoRank, 0);
+  }
+  for (const cols of rowCols.values()) {
+    [...cols.keys()].sort((p, q) => p - q).forEach((g, i) => cols.set(g, i));
+  }
+
   const placements = new Map<string, Placement>();
   const timeCounts = new Map<number, number>();
   const geoCounts = new Map<number, number>();
@@ -104,7 +122,8 @@ export function computeLayout(artworks: Artwork[], cfg: LayoutConfig = DEFAULT_L
     timeCounts.set(timeRank, (timeCounts.get(timeRank) ?? 0) + members.length);
     geoCounts.set(geoRank, (geoCounts.get(geoRank) ?? 0) + members.length);
 
-    const cx = geoRank * cfg.cellPitchX;
+    const row = rowCols.get(timeRank)!;
+    const cx = (row.get(geoRank)! - (row.size - 1) / 2) * cfg.cellPitchX;
     const cz = -timeRank * cfg.cellPitchZ;
 
     // Pack members in a square-ish grid, most important at the centre first.
@@ -135,10 +154,13 @@ export function computeLayout(artworks: Artwork[], cfg: LayoutConfig = DEFAULT_L
     coord: -rank * cfg.cellPitchZ,
     count: timeCounts.get(rank) ?? 0,
   }));
+  // Geography ticks give the order and counts; rows are compacted, so the
+  // coord is where the column would sit in a full row.
+  const geoMid = (gRank.size - 1) / 2;
   const geoAxis: AxisTick[] = [...gRank].map(([bin, rank]) => ({
     rank,
     value: Number.isFinite(bin) ? bin * cfg.geoBinDegrees : Number.NaN,
-    coord: rank * cfg.cellPitchX,
+    coord: (rank - geoMid) * cfg.cellPitchX,
     count: geoCounts.get(rank) ?? 0,
   }));
 
