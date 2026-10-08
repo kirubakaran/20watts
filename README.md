@@ -103,7 +103,8 @@ See `.env.example`.
   `data/originals/<id>/`. ffmpeg cuts the still at `loop.start` into the
   usual JPEG ladder and encodes a silent 640 px H.264 loop of
   `loop.seconds`. The exhibit shows the still from afar and swaps in the
-  loop within 6 m. Needs ffmpeg on the PATH.
+  loop within 14 m, so it is already moving as you arrive from the previous
+  cell. Needs ffmpeg on the PATH.
 - **Models from a file** (provenance `sketchfab` or `user-upload`): the
   source glb or glTF is read from `data/originals/<id>/`, which you populate
   by hand since those sources need a login. The ladder is built from that one

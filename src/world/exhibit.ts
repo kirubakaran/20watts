@@ -30,8 +30,8 @@ const FONT_BOLD = "/fonts/inter-600.woff";
 /** Screen pixels a 1 m object at 1 m should get before we ask for a sharper rung. */
 const PX_PER_RADIAN = 1600;
 /** A moving image starts playing inside this distance and stops again beyond the larger one. */
-const MOTION_NEAR = 6;
-const MOTION_FAR = 8;
+const MOTION_NEAR = 14;
+const MOTION_FAR = 18;
 
 let shadowTexture: CanvasTexture | null = null;
 function getShadowTexture(): CanvasTexture {
