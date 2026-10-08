@@ -1,0 +1,170 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-07T00:00:00Z",
+  "artworks": [
+    {
+      "id": "wm-50410532",
+      "kind": "image",
+      "title": "The Last Supper",
+      "titleOriginal": "Il Cenacolo",
+      "altTitles": [
+        "L'Ultima Cena",
+        "The Last Supper (Leonardo)"
+      ],
+      "creators": [
+        {
+          "name": "Leonardo da Vinci",
+          "slug": "leonardo-da-vinci",
+          "wikidataQid": "Q762",
+          "wikipediaUrl": "https://en.wikipedia.org/wiki/Leonardo_da_Vinci",
+          "birthYear": 1452,
+          "deathYear": 1519,
+          "role": "painter"
+        }
+      ],
+      "date": {
+        "year": 1495,
+        "yearStart": 1495,
+        "yearEnd": 1498,
+        "label": "c. 1495–1498",
+        "precision": "circa"
+      },
+      "madeIn": {
+        "name": "Milan",
+        "region": "Lombardy",
+        "country": "Italy",
+        "point": {
+          "lat": 45.4659,
+          "lon": 9.1706
+        },
+        "wikidataQid": "Q490"
+      },
+      "location": {
+        "name": "Milan",
+        "region": "Lombardy",
+        "country": "Italy",
+        "point": {
+          "lat": 45.4659,
+          "lon": 9.1706
+        },
+        "wikidataQid": "Q490",
+        "institution": "Refectory of the Convent of Santa Maria delle Grazie",
+        "inventoryNumber": null
+      },
+      "culture": "Italian",
+      "movement": "High Renaissance",
+      "periodSlug": "italian-renaissance",
+      "medium": "tempera on gesso, pitch and mastic",
+      "materials": [
+        "tempera",
+        "gesso",
+        "pitch",
+        "mastic"
+      ],
+      "genre": [
+        "religious art",
+        "mural"
+      ],
+      "subjects": [
+        "Jesus",
+        "Twelve Apostles",
+        "Last Supper"
+      ],
+      "physical": {
+        "widthCm": 880,
+        "heightCm": 460,
+        "depthCm": null,
+        "weightKg": null
+      },
+      "description": "Painted on the north wall of the refectory of Santa Maria delle Grazie in Milan, the mural shows the moment Jesus tells the apostles that one of them will betray him. Leonardo abandoned true fresco for an experimental tempera-on-dry-wall technique, which let him work slowly but began to deteriorate within decades.",
+      "facts": [
+        "The apostles are arranged in four groups of three, reacting in waves to Jesus's announcement.",
+        "The perspective lines converge on Jesus's right temple.",
+        "A door was cut through the bottom of the mural in 1652, removing Jesus's feet.",
+        "The refectory survived an Allied bomb in 1943 that destroyed the roof and one wall; the mural had been sandbagged."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/The_Last_Supper_(Leonardo)",
+      "wikidataQid": "Q128910",
+      "externalIds": {
+        "commons-curid": "50410532",
+        "commons-file": "The_Last_Supper_-_Leonardo_Da_Vinci_-_High_Resolution_32x16.jpg"
+      },
+      "copyrighted": false,
+      "asset": {
+        "kind": "image",
+        "currentVersionId": "wm-50410532-v1",
+        "versions": [
+          {
+            "id": "wm-50410532-v1",
+            "original": {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/4/48/The_Last_Supper_-_Leonardo_Da_Vinci_-_High_Resolution_32x16.jpg",
+              "width": 9600,
+              "height": 4800,
+              "bytes": 42764118,
+              "mime": "image/jpeg"
+            },
+            "rungs": [
+              {
+                "width": 1280,
+                "height": 640,
+                "url": "/assets/wm-50410532/1280.jpg",
+                "bytes": 267288
+              },
+              {
+                "width": 3840,
+                "height": 1920,
+                "url": "/assets/wm-50410532/3840.jpg",
+                "bytes": 2836791
+              }
+            ],
+            "credit": {
+              "author": "Leonardo da Vinci",
+              "license": {
+                "name": "Public domain",
+                "url": null
+              },
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:The_Last_Supper_-_Leonardo_Da_Vinci_-_High_Resolution_32x16.jpg"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-07T00:00:00Z",
+              "note": "Initial import from Wikimedia Commons"
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "wikimedia-commons"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": 0.6,
+        "back": "mirror",
+        "yaw": null,
+        "fallbackWidthM": 1.2
+      },
+      "tags": [
+        "mural",
+        "renaissance",
+        "leonardo"
+      ],
+      "pageviews": null,
+      "importance": 1,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-07T00:00:00Z",
+      "updatedAt": "2026-10-07T23:41:21.832Z"
+    }
+  ]
+}

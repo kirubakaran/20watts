@@ -1,0 +1,123 @@
+/**
+ * The visitor. One rig (a Group) carries the camera; moving and turning the
+ * rig moves the visitor on desktop and in VR alike.
+ *
+ *  Desktop: click to capture the mouse, WASD to walk, Shift to run.
+ *  VR:      left thumbstick walks relative to where you look,
+ *           right thumbstick snap-turns 30° per flick.
+ */
+import { Group, PerspectiveCamera, Quaternion, Vector3, WebGLRenderer } from "three";
+
+const WALK = 2.5;
+const RUN = 6;
+const EYE_HEIGHT = 1.65;
+const SNAP_ANGLE = Math.PI / 6;
+const DEADZONE = 0.2;
+
+export class Player {
+  readonly rig = new Group();
+  private keys = new Set<string>();
+  private pitch = 0;
+  private snapLatched = false;
+  private readonly tmpQ = new Quaternion();
+  private readonly tmpV = new Vector3();
+  private readonly headPos = new Vector3();
+
+  constructor(
+    private readonly renderer: WebGLRenderer,
+    readonly camera: PerspectiveCamera,
+    domElement: HTMLElement,
+  ) {
+    this.rig.name = "player";
+    this.rig.add(camera);
+    camera.position.set(0, EYE_HEIGHT, 0);
+
+    window.addEventListener("keydown", (e) => this.keys.add(e.code));
+    window.addEventListener("keyup", (e) => this.keys.delete(e.code));
+    window.addEventListener("blur", () => this.keys.clear());
+    domElement.addEventListener("click", () => {
+      if (!renderer.xr.isPresenting && document.pointerLockElement !== domElement) domElement.requestPointerLock();
+    });
+    document.addEventListener("mousemove", (e) => {
+      if (document.pointerLockElement !== domElement) return;
+      this.rig.rotation.y -= e.movementX * 0.0022;
+      this.pitch = Math.max(-Math.PI / 2.2, Math.min(Math.PI / 2.2, this.pitch - e.movementY * 0.0022));
+      this.camera.rotation.x = this.pitch;
+    });
+  }
+
+  /** Put the visitor at ground position (x, z) facing `yaw` (0 = looking toward -Z, the future). */
+  spawn(x: number, z: number, yaw = 0) {
+    this.rig.position.set(x, 0, z);
+    this.rig.rotation.y = yaw;
+  }
+
+  /** World position of the eyes. */
+  viewerPosition(out: Vector3): Vector3 {
+    return this.camera.getWorldPosition(out);
+  }
+
+  update(dt: number) {
+    if (this.renderer.xr.isPresenting) this.updateXR(dt);
+    else this.updateDesktop(dt);
+  }
+
+  private updateDesktop(dt: number) {
+    const k = this.keys;
+    const fwd = (k.has("KeyW") || k.has("ArrowUp") ? 1 : 0) - (k.has("KeyS") || k.has("ArrowDown") ? 1 : 0);
+    const strafe = (k.has("KeyD") || k.has("ArrowRight") ? 1 : 0) - (k.has("KeyA") || k.has("ArrowLeft") ? 1 : 0);
+    if (!fwd && !strafe) return;
+    const speed = k.has("ShiftLeft") || k.has("ShiftRight") ? RUN : WALK;
+    this.moveRelativeToYaw(this.rig.rotation.y, strafe, fwd, speed * dt);
+  }
+
+  private updateXR(dt: number) {
+    const session = this.renderer.xr.getSession();
+    if (!session) return;
+    // Head yaw in world space: thumbstick-forward means where you are looking.
+    this.camera.getWorldQuaternion(this.tmpQ);
+    const look = this.tmpV.set(0, 0, -1).applyQuaternion(this.tmpQ);
+    const headYaw = Math.atan2(-look.x, -look.z);
+
+    for (const src of session.inputSources) {
+      const axes = src.gamepad?.axes;
+      if (!axes || axes.length < 4) continue;
+      const x = axes[2] ?? 0;
+      const y = axes[3] ?? 0;
+      if (src.handedness === "left") {
+        const mx = Math.abs(x) > DEADZONE ? x : 0;
+        const my = Math.abs(y) > DEADZONE ? -y : 0;
+        if (mx || my) this.moveRelativeToYaw(headYaw, mx, my, WALK * dt);
+      } else if (src.handedness === "right") {
+        if (Math.abs(x) > 0.6) {
+          if (!this.snapLatched) {
+            this.snapTurn(x > 0 ? -SNAP_ANGLE : SNAP_ANGLE);
+            this.snapLatched = true;
+          }
+        } else if (Math.abs(x) < 0.3) {
+          this.snapLatched = false;
+        }
+      }
+    }
+  }
+
+  private moveRelativeToYaw(yaw: number, strafe: number, fwd: number, dist: number) {
+    const len = Math.hypot(strafe, fwd) || 1;
+    const sx = strafe / len, sf = fwd / len;
+    // forward is -Z in rig space; rotate by yaw into world
+    const dx = (sx * Math.cos(yaw) - sf * Math.sin(yaw)) * dist;
+    const dz = (-sx * Math.sin(yaw) - sf * Math.cos(yaw)) * dist;
+    this.rig.position.x += dx;
+    this.rig.position.z += dz;
+  }
+
+  /** Rotate the rig about the head, not the rig origin, so the visitor turns in place. */
+  private snapTurn(angle: number) {
+    this.camera.getWorldPosition(this.headPos);
+    this.rig.rotation.y += angle;
+    this.rig.updateMatrixWorld(true);
+    const after = this.camera.getWorldPosition(this.tmpV);
+    this.rig.position.x += this.headPos.x - after.x;
+    this.rig.position.z += this.headPos.z - after.z;
+  }
+}

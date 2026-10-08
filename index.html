@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>VR Museum</title>
+    <style>
+      html, body { margin: 0; height: 100%; overflow: hidden; background: #e9e6df; }
+      canvas { display: block; }
+      #hud {
+        position: fixed; left: 16px; bottom: 16px; z-index: 5;
+        font: 13px/1.5 system-ui, sans-serif; color: #3a3832;
+        background: rgba(255,255,255,0.7); padding: 10px 12px; border-radius: 6px;
+        pointer-events: none; max-width: 320px;
+      }
+      #hud b { font-weight: 600; }
+    </style>
+  </head>
+  <body>
+    <div id="hud">
+      <b>Click</b> to look around · <b>WASD</b> walk · <b>Shift</b> run · <b>Esc</b> release mouse<br />
+      In VR: left stick walks, right stick snap-turns.
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
