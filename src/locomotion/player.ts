@@ -4,7 +4,8 @@
  *
  *  Desktop: click to capture the mouse, WASD to walk, Shift to run,
  *           [ and ] hop an era back or forward, , and . hop west or east,
- *           Home and End jump to the entrance and the latest era.
+ *           Home and End (or Shift with [ and ]) jump to the entrance and
+ *           the latest era.
  *  VR:      left thumbstick walks relative to where you look,
  *           right thumbstick snap-turns 30° per flick,
  *           A / B hop an era forward or back, X / Y hop east or west.
@@ -47,7 +48,10 @@ export class Player {
 
     window.addEventListener("keydown", (e) => {
       this.keys.add(e.code);
-      const a = KEY_ACTIONS[e.code];
+      // Shift with the era keys jumps to either end: { and } on a US layout.
+      const a = e.shiftKey && e.code === "BracketLeft" ? "start"
+        : e.shiftKey && e.code === "BracketRight" ? "end"
+        : KEY_ACTIONS[e.code];
       if (a && !e.repeat) this.onAction?.(a);
     });
     window.addEventListener("keyup", (e) => this.keys.delete(e.code));
