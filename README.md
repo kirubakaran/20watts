@@ -40,7 +40,8 @@ walks, right stick snap-turns.
 Walking the whole museum takes a while, so there are hops: `[` and `]`
 jump an era back or forward, `,` and `.` sideways along a row (to a work
 of the same month, or to a side quest), and in VR the A / B buttons hop
-eras and X / Y hop sideways; `Home` and `End`, or
+eras and X / Y hop sideways; on a phone, drag to look, a stick in the
+corner walks, and buttons do the hops; `Home` and `End`, or
 `Shift` with `[` and `]`, jump to the entrance and the latest era. A hop lands you on the
 spine in front of the nearest cell of the next row, facing the future, as
 if you had walked there. `?at=<work id>`, `?at=<year>` or `?at=newest`
@@ -88,6 +89,7 @@ src/world/exhibit.ts     one work in the world: image or glTF, placards, shadow
 src/assets/textures.ts   image ladder; sharper rungs load as you approach
 src/assets/models.ts     glb ladder, same idea for 3D scans
 src/locomotion/player.ts desktop and VR movement
+src/locomotion/touch.ts  phone controls: drag to look, a stick, hop buttons
 src/locomotion/resume.ts remembers your place in the browser and restores it
 src/locomotion/navigate.ts hops between eras and cells, and jumps to a work
 src/world/sign.ts        the entrance gateway

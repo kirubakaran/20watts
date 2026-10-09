@@ -2,11 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
     <title>20watts</title>
     <style>
       html, body { margin: 0; height: 100%; overflow: hidden; background: #e9e6df; }
-      canvas { display: block; }
+      canvas { display: block; touch-action: none; }
       #hud {
         position: fixed; left: 16px; bottom: 16px; z-index: 5;
         font: 13px/1.6 system-ui, sans-serif; color: #3a3832;
@@ -18,10 +18,42 @@
         border-bottom: 1px solid rgba(58,56,50,0.12);
       }
       #hud .title b { font-weight: 600; letter-spacing: 0.01em; }
+      #hud .touchhint { display: none; }
+      body.touch #hud .touchhint { display: inline; }
       #hud .rows { display: grid; grid-template-columns: max-content 1fr; column-gap: 12px; row-gap: 2px; padding: 4px 12px 9px; }
       #hud .rows + .rows { border-top: 1px solid rgba(58,56,50,0.12); margin-top: 2px; padding-top: 7px; }
       #hud .lead { color: #8a857c; }
       #hud .nw { white-space: nowrap; }
+      /* Touch: a one-line card at the top, the keyboard rows hidden, a stick and hop buttons at the bottom. */
+      #touch { display: none; }
+      body.touch #hud { left: 12px; right: 12px; top: max(12px, env(safe-area-inset-top)); bottom: auto; max-width: none; font-size: 12px; }
+      body.touch #hud .rows { display: none; }
+      body.touch #hud .title { margin: 0; border: 0; padding: 6px 10px; }
+      body.touch #touch { display: block; }
+      /* three's VR button sits at the bottom centre; keep it above the hop buttons. */
+      body.touch #VRButton { bottom: calc(max(24px, env(safe-area-inset-bottom)) + 120px) !important; }
+      #stick {
+        position: fixed; left: max(20px, env(safe-area-inset-left)); bottom: max(24px, env(safe-area-inset-bottom)); z-index: 5;
+        width: 112px; height: 112px; border-radius: 50%; touch-action: none;
+        background: rgba(255,255,255,0.35); border: 1px solid rgba(58,56,50,0.3);
+      }
+      #stick .knob {
+        position: absolute; left: 32px; top: 32px; width: 48px; height: 48px; border-radius: 50%;
+        background: rgba(255,255,255,0.9); border: 1px solid rgba(58,56,50,0.35); box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+        pointer-events: none;
+      }
+      #hops {
+        position: fixed; right: max(16px, env(safe-area-inset-right)); bottom: max(24px, env(safe-area-inset-bottom)); z-index: 5;
+        display: grid; grid-template-columns: repeat(4, 48px); gap: 8px; touch-action: none;
+      }
+      #hops button {
+        height: 48px; border-radius: 10px; font: 14px/1 system-ui, sans-serif; color: #2a2824;
+        background: rgba(255,255,255,0.8); border: 1px solid rgba(58,56,50,0.3); box-shadow: 0 1px 0 rgba(58,56,50,0.25);
+        padding: 0; -webkit-tap-highlight-color: transparent; user-select: none; -webkit-user-select: none;
+      }
+      #hops button:active { background: rgba(58,56,50,0.15); }
+      #hops button small { display: block; font-size: 9px; color: #8a857c; margin-top: 3px; }
+      #hops .wide { grid-column: span 2; }
       #hud kbd {
         display: inline-block; font: 11.5px/1 ui-monospace, Menlo, monospace;
         padding: 3px 5px 2px; border-radius: 4px; vertical-align: 1px;
@@ -32,7 +64,7 @@
   </head>
   <body>
     <div id="hud">
-      <div class="title"><b>20watts</b> · Behold the works of 20-watt brains.</div>
+      <div class="title"><b>20watts</b> · Behold the works of 20-watt brains.<span class="touchhint"> Drag to look, stick to walk, buttons to hop.</span></div>
       <div class="rows">
         <span class="lead">In VR</span><span>sticks move · <span class="nw"><kbd>A</kbd> <kbd>B</kbd> eras</span> · <span class="nw"><kbd>X</kbd> <kbd>Y</kbd> sideways</span></span>
       </div>
@@ -40,6 +72,17 @@
         <span class="lead">Look</span><span>click, then move the mouse · <span class="nw"><kbd>Esc</kbd> releases it</span></span>
         <span class="lead">Walk</span><span><kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd> · <span class="nw">hold <kbd>Shift</kbd> to run</span></span>
         <span class="lead">Hop</span><span><span class="nw"><kbd>[</kbd> <kbd>]</kbd> era back / forward</span> · <span class="nw"><kbd>,</kbd> <kbd>.</kbd> sideways</span></span>
+      </div>
+    </div>
+    <div id="touch">
+      <div id="stick"><div class="knob"></div></div>
+      <div id="hops">
+        <button data-action="start">⇤<small>start</small></button>
+        <button data-action="eraPrev">◀<small>era</small></button>
+        <button data-action="eraNext">▶<small>era</small></button>
+        <button data-action="end">⇥<small>end</small></button>
+        <button class="wide" data-action="west">◁<small>side</small></button>
+        <button class="wide" data-action="east">▷<small>side</small></button>
       </div>
     </div>
     <script type="module" src="/src/main.ts"></script>

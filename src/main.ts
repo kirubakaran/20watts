@@ -6,17 +6,20 @@ import { computeLayout, DEFAULT_LAYOUT, WORLD_LAYOUT } from "./layout/layout";
 import { buildWorld } from "./world/floor";
 import { DEFAULT_STREAM, Streamer } from "./world/stream";
 import { buildAxisCues } from "./world/axes";
-import { Player } from "./locomotion/player";
+import { Player, type Action } from "./locomotion/player";
 import { clearPlace, restorePlace, trackPlace } from "./locomotion/resume";
 import { Navigator } from "./locomotion/navigate";
 import { buildEntrance } from "./world/sign";
+import { hasTouch, setupTouch } from "./locomotion/touch";
 import { baseHeightOf, footprintOf, onDisplay } from "./data/types";
 
 // JSON import types are inferred per record; the schema is the source of truth.
 const collection = collectionJson as unknown as Collection;
 
 const renderer = new WebGLRenderer({ antialias: true, powerPreference: "high-performance" });
-renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+const touch = hasTouch();
+// A phone's 3x screen is more pixels than its GPU wants to fill.
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, touch ? 1.5 : 2));
 renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.shadowMap.enabled = true;
 renderer.shadowMap.type = PCFShadowMap;
@@ -26,10 +29,18 @@ renderer.toneMappingExposure = 1.0;
 renderer.xr.enabled = true;
 renderer.xr.setReferenceSpaceType("local-floor");
 document.body.appendChild(renderer.domElement);
-document.body.appendChild(VRButton.createButton(renderer));
+// The button says "VR not supported" wherever there is no WebXR at all; on a phone that is just clutter.
+if ("xr" in navigator) document.body.appendChild(VRButton.createButton(renderer));
 
 const scene = new Scene();
 const camera = new PerspectiveCamera(70, window.innerWidth / window.innerHeight, 0.05, 1200);
+/** A vertical FOV of 70° is a slit on a portrait phone; widen it so a work and its placard fit. */
+function fitCamera() {
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.fov = camera.aspect < 1 ? 90 : 70;
+  camera.updateProjectionMatrix();
+}
+fitCamera();
 const player = new Player(renderer, camera, renderer.domElement);
 scene.add(player.rig);
 
@@ -68,14 +79,16 @@ if (entrance) {
 }
 const goToEntrance = () => entrance && player.teleport(entrance.x, entrance.z + ENTRANCE_SETBACK + 4.5, 0);
 
-player.setActionHandler((a) => {
+const act = (a: Action) => {
   if (a === "eraNext") nav.hopEra(player, 1);
   else if (a === "eraPrev") nav.hopEra(player, -1);
   else if (a === "east") nav.hopGeo(player, 1);
   else if (a === "west") nav.hopGeo(player, -1);
   else if (a === "start") goToEntrance();
   else nav.goLast(player);
-});
+};
+player.setActionHandler(act);
+if (touch) setupTouch(player, renderer.domElement, act);
 
 // Where to start, in order of precedence:
 //   ?spawn=x,z,yawDegrees   anywhere, for debugging
@@ -122,8 +135,7 @@ renderer.xr.addEventListener("sessionstart", () => hud && (hud.hidden = true));
 renderer.xr.addEventListener("sessionend", () => hud && (hud.hidden = false));
 
 window.addEventListener("resize", () => {
-  camera.aspect = window.innerWidth / window.innerHeight;
-  camera.updateProjectionMatrix();
+  fitCamera();
   renderer.setSize(window.innerWidth, window.innerHeight);
 });
 

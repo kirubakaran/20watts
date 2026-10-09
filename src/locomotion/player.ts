@@ -9,6 +9,8 @@
  *  VR:      left thumbstick walks relative to where you look,
  *           right thumbstick snap-turns 30° per flick,
  *           A / B hop an era forward or back, X / Y hop sideways.
+ *  Touch:   drag to look, an on-screen stick to walk, buttons for the
+ *           hops (see touch.ts).
  *
  * Hops are reported as actions; something that knows the layout decides
  * where they land (see navigate.ts).
@@ -32,6 +34,7 @@ export class Player {
   private pitch = 0;
   private snapLatched = false;
   private readonly pressed = new Set<string>();
+  private touchWalk = { strafe: 0, fwd: 0 };
   private onAction: ((a: Action) => void) | null = null;
   private readonly tmpQ = new Quaternion();
   private readonly tmpV = new Vector3();
@@ -56,15 +59,28 @@ export class Player {
     });
     window.addEventListener("keyup", (e) => this.keys.delete(e.code));
     window.addEventListener("blur", () => this.keys.clear());
-    domElement.addEventListener("click", () => {
+    domElement.addEventListener("click", (e) => {
+      // A tap is not a click to capture the mouse with; touch has its own controls.
+      if ((e as PointerEvent).pointerType === "touch") return;
       if (!renderer.xr.isPresenting && document.pointerLockElement !== domElement) domElement.requestPointerLock();
     });
     document.addEventListener("mousemove", (e) => {
       if (document.pointerLockElement !== domElement) return;
-      this.rig.rotation.y -= e.movementX * 0.0022;
-      this.pitch = Math.max(-Math.PI / 2.2, Math.min(Math.PI / 2.2, this.pitch - e.movementY * 0.0022));
-      this.camera.rotation.x = this.pitch;
+      this.look(e.movementX * 0.0022, e.movementY * 0.0022);
     });
+  }
+
+  /** Turn by `dyaw` to the right and `dpitch` down, radians. */
+  look(dyaw: number, dpitch: number) {
+    this.rig.rotation.y -= dyaw;
+    this.pitch = Math.max(-Math.PI / 2.2, Math.min(Math.PI / 2.2, this.pitch - dpitch));
+    this.camera.rotation.x = this.pitch;
+  }
+
+  /** The on-screen stick: strafe right and forward, each -1..1. */
+  setTouchWalk(strafe: number, fwd: number) {
+    this.touchWalk.strafe = strafe;
+    this.touchWalk.fwd = fwd;
   }
 
   /** Put the visitor at ground position (x, z) facing `yaw` (0 = looking toward -Z, the future). */
@@ -121,9 +137,17 @@ export class Player {
     const k = this.keys;
     const fwd = (k.has("KeyW") || k.has("ArrowUp") ? 1 : 0) - (k.has("KeyS") || k.has("ArrowDown") ? 1 : 0);
     const strafe = (k.has("KeyD") || k.has("ArrowRight") ? 1 : 0) - (k.has("KeyA") || k.has("ArrowLeft") ? 1 : 0);
-    if (!fwd && !strafe) return;
-    const speed = k.has("ShiftLeft") || k.has("ShiftRight") ? RUN : WALK;
-    this.moveRelativeToYaw(this.rig.rotation.y, strafe, fwd, speed * dt);
+    if (fwd || strafe) {
+      const speed = k.has("ShiftLeft") || k.has("ShiftRight") ? RUN : WALK;
+      this.moveRelativeToYaw(this.rig.rotation.y, strafe, fwd, speed * dt);
+    }
+    // The stick: walking pace at the ring, a jog when pushed to the rim.
+    const t = this.touchWalk;
+    const push = Math.hypot(t.strafe, t.fwd);
+    if (push > 0.1) {
+      const speed = WALK * (0.4 + push * (push > 0.95 ? 2 : 1));
+      this.moveRelativeToYaw(this.rig.rotation.y, t.strafe, t.fwd, speed * dt);
+    }
   }
 
   private updateXR(dt: number) {
