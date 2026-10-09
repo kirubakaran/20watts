@@ -40,8 +40,10 @@ A / B buttons hop eras and X / Y hop west / east. A hop lands you on the
 spine in front of the nearest cell of the next row, facing the future, as
 if you had walked there. `?at=<work id>`, `?at=<year>` or `?at=newest`
 opens the museum in front of that work, which is handy for checking a new
-addition. An entrance sign beside the oldest work gives the name, what it
-means and how to read the floor.
+addition. A stone gateway across the spine, before the oldest work, carries
+one line cut into its lintel ("Behold the works of 20-watt brains") and a
+plaque on how to read the floor; a new visitor arrives outside it, looking
+through.
 
 You resume where you left off: the browser remembers your place, relative
 to the nearest work so it survives new works shifting the rows, and a
@@ -68,7 +70,7 @@ src/assets/models.ts     glb ladder, same idea for 3D scans
 src/locomotion/player.ts desktop and VR movement
 src/locomotion/resume.ts remembers your place in the browser and restores it
 src/locomotion/navigate.ts hops between eras and cells, and jumps to a work
-src/world/sign.ts        the entrance sign
+src/world/sign.ts        the entrance gateway
 scripts/fetch-assets.ts  pulls images and models from their sources into public/assets
 scripts/dev/screenshot.mjs one bounded headless-Chrome capture, for checking renders
 scripts/dev/preview.html four fixed views of one model rung, for checking orientation and scale

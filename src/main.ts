@@ -9,7 +9,7 @@ import { buildAxisCues } from "./world/axes";
 import { Player } from "./locomotion/player";
 import { clearPlace, restorePlace, trackPlace } from "./locomotion/resume";
 import { Navigator } from "./locomotion/navigate";
-import { buildWelcomeSign } from "./world/sign";
+import { buildEntrance } from "./world/sign";
 import { footprintOf } from "./data/types";
 
 // JSON import types are inferred per record; the schema is the source of truth.
@@ -58,13 +58,23 @@ player.setActionHandler((a) => {
   else nav.hopGeo(player, -1);
 });
 
+// The gateway stands across the spine a few metres before the viewing spot
+// of the oldest work; a new visitor arrives outside it, looking through.
+const ENTRANCE_SETBACK = 2.5;
+const first = exhibits[0];
+const entrance = first ? nav.standingPoint(first.artwork.id) : null;
+if (entrance) {
+  const gate = buildEntrance();
+  gate.position.set(entrance.x, 0, entrance.z + ENTRANCE_SETBACK);
+  scene.add(gate);
+}
+
 // Where to start, in order of precedence:
 //   ?spawn=x,z,yawDegrees   anywhere, for debugging
 //   ?spawn=start            the entrance, forgetting the saved place
 //   ?at=<id> | <year> | newest   in front of that work
 //   the saved place from last time, else the entrance.
 const landmarks = exhibits.map((e) => ({ id: e.artwork.id, x: e.group.position.x, z: e.group.position.z }));
-const first = exhibits[0];
 const params = new URLSearchParams(location.search);
 const spawnParam = params.get("spawn");
 const atParam = params.get("at");
@@ -74,20 +84,10 @@ if (spawnParam && spawnParam !== "start") {
   player.spawn(x, z, (yawDeg * Math.PI) / 180);
 } else if (atParam && nav.goTo(player, resolveAt(atParam))) {
   // placed in front of the requested work
-} else if (!restorePlace(player, landmarks) && first) {
-  nav.goTo(player, first.artwork.id);
+} else if (!restorePlace(player, landmarks) && entrance) {
+  player.spawn(entrance.x, entrance.z + ENTRANCE_SETBACK + 4.5, 0);
 }
 const savePlace = trackPlace(player, landmarks);
-
-// The entrance sign stands ahead and to the left of where a new visitor
-// arrives, turned toward them, like the panel at a gallery door.
-const entrance = first ? nav.standingPoint(first.artwork.id) : null;
-if (entrance) {
-  const sign = buildWelcomeSign();
-  sign.position.set(entrance.x - 2.0, 0.9, entrance.z - 3.6);
-  sign.rotation.y = 0.4;
-  scene.add(sign);
-}
 
 /** "newest" is the most recently added work; a number is the nearest year; anything else is an id. */
 function resolveAt(at: string): string {
