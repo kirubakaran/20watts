@@ -26,7 +26,8 @@
  *    that one file: textures are resized per tier and the mesh is simplified
  *    for the lower tiers, then everything gets the same metres, origin and
  *    Draco treatment as below. `original.unitScale` converts unitless or
- *    non-metre files to metres.
+ *    non-metre files to metres, and `original.rotation` (XYZ Euler degrees)
+ *    uprights a scan that is tilted or faces the wrong way; both are baked.
  *
  *  Models, provenance "smithsonian-3d":
  *    `original.url` is a Voyager document.json from 3d-api.si.edu. Each of
@@ -107,7 +108,10 @@ async function thumbInfo(title: string, width: number): Promise<{ url: string; w
   // Commons snaps to a fixed set of pre-rendered widths; the URL carries the real one.
   const real = /\/(\d+)px-/.exec(info.thumburl);
   const realWidth = real?.[1] ? Number(real[1]) : info.thumbwidth;
-  const url = info.thumburl.split("?")[0]!;
+  let url = info.thumburl.split("?")[0]!;
+  // A png (or tiff, svg) source renders png thumbnails, many times the size of
+  // a jpeg; appending .jpg asks Commons for a jpeg rendering instead.
+  if (!/\.jpe?g$/i.test(url)) url += ".jpg";
   return { url, width: realWidth, height: Math.round((info.thumbheight / info.thumbwidth) * realWidth) };
 }
 
@@ -253,7 +257,19 @@ interface TierOptions {
   textureSize: number;
 }
 
-async function mergeParts(partFiles: string[], unitScale: number, dest: string, tier?: TierOptions) {
+/** XYZ Euler degrees to a glTF quaternion [x, y, z, w]. */
+function eulerToQuat([xDeg, yDeg, zDeg]: [number, number, number]): [number, number, number, number] {
+  const [x, y, z] = [(xDeg * Math.PI) / 360, (yDeg * Math.PI) / 360, (zDeg * Math.PI) / 360];
+  const [cx, sx, cy, sy, cz, sz] = [Math.cos(x), Math.sin(x), Math.cos(y), Math.sin(y), Math.cos(z), Math.sin(z)];
+  return [
+    sx * cy * cz + cx * sy * sz,
+    cx * sy * cz - sx * cy * sz,
+    cx * cy * sz + sx * sy * cz,
+    cx * cy * cz - sx * sy * sz,
+  ];
+}
+
+async function mergeParts(partFiles: string[], unitScale: number, dest: string, tier?: TierOptions, rotation?: [number, number, number]) {
   const nio = await io();
   const out = new Document();
   for (const file of partFiles) mergeDocuments(out, await nio.read(file));
@@ -270,7 +286,8 @@ async function mergeParts(partFiles: string[], unitScale: number, dest: string, 
   const scene = out.createScene("Scene").addChild(holder);
   root.setDefaultScene(scene);
 
-  // Measure in source units, then bake scale and origin into the holder node.
+  // Orient first, measure in source units, then bake scale and origin into the holder node.
+  if (rotation) holder.setRotation(eulerToQuat(rotation));
   const b = getBounds(scene);
   const cx = (b.min[0] + b.max[0]) / 2;
   const cz = (b.min[2] + b.max[2]) / 2;
@@ -368,7 +385,7 @@ async function buildLocalModel(artId: string, version: ModelVersion): Promise<bo
   let bounds = version.bounds;
   for (const quality of QUALITIES) {
     const file = `${quality}.glb`;
-    const r = await mergeParts([path.join(dir, src)], unitScale, path.join(OUT_DIR, artId, file), LOCAL_TIERS[quality]);
+    const r = await mergeParts([path.join(dir, src)], unitScale, path.join(OUT_DIR, artId, file), LOCAL_TIERS[quality], version.original.rotation);
     rungs.push({ quality, url: `/assets/${artId}/${file}`, bytes: r.bytes, triangles: r.triangles, textureSize: r.textureSize, draco: true });
     bounds = r.bounds;
     console.log(`${artId}: ${quality} ${(r.bytes / 1024).toFixed(0)} KB, ${r.triangles} tris, ${r.textureSize ?? "no"} px textures`);

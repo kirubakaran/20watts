@@ -7,6 +7,7 @@ import { buildWorld } from "./world/floor";
 import { Exhibit } from "./world/exhibit";
 import { buildAxisCues } from "./world/axes";
 import { Player } from "./locomotion/player";
+import { clearPlace, restorePlace, trackPlace } from "./locomotion/resume";
 
 // JSON import types are inferred per record; the schema is the source of truth.
 const collection = collectionJson as unknown as Collection;
@@ -42,18 +43,22 @@ const exhibits = visible.map((a) => new Exhibit(a, layout.placements.get(a.id)!,
 for (const e of exhibits) scene.add(e.group);
 scene.add(buildAxisCues(layout));
 
-// Spawn in front of the first work, far enough back to take it in.
-// Debug override: ?spawn=x,z,yawDegrees
+// Where to start: ?spawn=x,z,yawDegrees overrides everything, ?spawn=start
+// forgets the saved place; otherwise resume where the visitor left off, and
+// failing that stand in front of the first work, far enough back to take it in.
+const landmarks = exhibits.map((e) => ({ id: e.artwork.id, x: e.group.position.x, z: e.group.position.z }));
 const first = exhibits[0];
 const spawnParam = new URLSearchParams(location.search).get("spawn");
-if (spawnParam) {
+if (spawnParam === "start") clearPlace();
+if (spawnParam && spawnParam !== "start") {
   const [x = 0, z = 0, yawDeg = 0] = spawnParam.split(",").map(Number);
   player.spawn(x, z, (yawDeg * Math.PI) / 180);
-} else if (first) {
+} else if (!restorePlace(player, landmarks) && first) {
   const p = first.group.position;
   const w = Math.max(4, first.artwork.physical.widthCm ? first.artwork.physical.widthCm / 100 : 2);
   player.spawn(p.x, p.z + w * 1.2, 0);
 }
+const savePlace = trackPlace(player, landmarks);
 
 const hud = document.getElementById("hud");
 renderer.xr.addEventListener("sessionstart", () => hud && (hud.hidden = true));
@@ -71,6 +76,7 @@ renderer.setAnimationLoop((time) => {
   timer.update(time);
   const dt = Math.min(timer.getDelta(), 0.1);
   player.update(dt);
+  savePlace(dt);
   player.viewerPosition(eye);
   world.follow(eye);
   for (const e of exhibits) e.update(eye);

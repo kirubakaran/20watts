@@ -166,6 +166,11 @@ export interface ModelVersion {
      * rungs, so the rungs are always metres. Omit or 1 for a file in metres.
      */
     unitScale?: number;
+    /**
+     * Rotation to apply to the source, as XYZ Euler angles in degrees, for a
+     * scan that is not upright or does not face +Z. Baked into the rungs.
+     */
+    rotation?: [number, number, number];
   };
   /**
    * Ascending by quality. Each rung is one .glb, Y-up, in metres, with the

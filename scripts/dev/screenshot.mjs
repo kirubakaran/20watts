@@ -18,6 +18,8 @@
  *   SIZE=960x600  window size
  *   SOFTWARE_GL=1 use SwiftShader (slow, CPU-bound); default tries the GPU first
  *   CHROME=...    path to the Chrome binary
+ *   PROFILE=dir   keep this Chrome profile between runs (localStorage etc.);
+ *                 default is a fresh temporary one, deleted afterwards
  */
 import { spawn } from "node:child_process";
 import { mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
@@ -34,7 +36,10 @@ const LIMIT = Number(process.env.LIMIT ?? 45) * 1000;
 const [W, H] = (process.env.SIZE ?? "960x600").split("x").map(Number);
 const CHROME = process.env.CHROME ?? "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome";
 
-const profile = await mkdtemp(path.join(tmpdir(), "musee-shot-"));
+const keepProfile = !!process.env.PROFILE;
+const profile = process.env.PROFILE || (await mkdtemp(path.join(tmpdir(), "musee-shot-")));
+// A kept profile still holds the previous run's port file; never connect to that.
+if (keepProfile) await rm(path.join(profile, "DevToolsActivePort"), { force: true }).catch(() => {});
 const args = [
   "--headless=new",
   `--user-data-dir=${profile}`,
@@ -62,7 +67,7 @@ async function shutdown(code, why) {
   if (why) console.error(why);
   try { process.kill(-chrome.pid, "SIGKILL"); } catch {}
   try { chrome.kill("SIGKILL"); } catch {}
-  await rm(profile, { recursive: true, force: true }).catch(() => {});
+  if (!keepProfile) await rm(profile, { recursive: true, force: true }).catch(() => {});
   process.exit(code);
 }
 process.on("SIGINT", () => shutdown(130, "interrupted"));

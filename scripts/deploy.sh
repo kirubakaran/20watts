@@ -14,7 +14,7 @@
 #   site/current -> releases/...      swapped atomically; serve this
 #
 # The web server maps / to site/current and /assets/ to data/derived
-# (see deploy/Caddyfile). Vite's own bundle lives under /app/, so the two
+# (see deploy/musee.nginx.conf). Vite's own bundle lives under /app/, so the two
 # never collide. Set DEPLOY_HOST to the ssh alias (default "musee"), whose
 # ssh config entry supplies user, host and key; it must land in the home
 # directory that holds data/ and site/.

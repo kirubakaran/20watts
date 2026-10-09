@@ -1,0 +1,46 @@
+<!doctype html>
+<!-- Four fixed views of one model rung, for checking orientation and scale
+     without walking the museum: front, left, top, back on a 10 cm floor grid.
+     Open under the dev server: /scripts/dev/preview.html?model=/assets/<id>/high.glb -->
+<meta charset="utf-8" />
+<title>model preview</title>
+<style>html,body{margin:0;background:#ddd;height:100%}canvas{display:block}</style>
+<canvas id="c"></canvas>
+<script type="module">
+  import * as THREE from "three";
+  import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
+  import { DRACOLoader } from "three/examples/jsm/loaders/DRACOLoader.js";
+  const url = new URLSearchParams(location.search).get("model");
+  const canvas = document.getElementById("c");
+  const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
+  renderer.setSize(innerWidth, innerHeight);
+  const scene = new THREE.Scene();
+  scene.add(new THREE.HemisphereLight(0xffffff, 0x777766, 2.2));
+  const sun = new THREE.DirectionalLight(0xffffff, 1.5); sun.position.set(2, 4, 3); scene.add(sun);
+  const draco = new DRACOLoader().setDecoderPath("/draco/");
+  const gltf = await new GLTFLoader().setDRACOLoader(draco).loadAsync(url);
+  scene.add(gltf.scene);
+  gltf.scene.updateMatrixWorld(true);
+  const box = new THREE.Box3().setFromObject(gltf.scene, true);
+  const size = box.getSize(new THREE.Vector3()), c = box.getCenter(new THREE.Vector3());
+  const r = size.length();
+  scene.add(new THREE.GridHelper(Math.ceil(r * 2), Math.ceil(r * 2) * 10, 0x888888, 0xbbbbbb));
+  scene.add(new THREE.AxesHelper(r)); // red +X, green +Y, blue +Z
+  const views = [
+    { name: "front +Z", pos: [0, 0.4, 1] }, { name: "left -X", pos: [-1, 0.4, 0] },
+    { name: "top", pos: [0, 1, 0.001] }, { name: "back -Z", pos: [0, 0.4, -1] },
+  ];
+  const W = innerWidth / 2, H = innerHeight / 2;
+  renderer.setScissorTest(true);
+  views.forEach((v, i) => {
+    const cam = new THREE.PerspectiveCamera(35, W / H, 0.01, 100);
+    cam.position.set(c.x + v.pos[0] * r * 1.8, c.y + v.pos[1] * r * 1.8, c.z + v.pos[2] * r * 1.8);
+    cam.lookAt(c);
+    const x = (i % 2) * W, y = (1 - Math.floor(i / 2)) * H;
+    renderer.setViewport(x, y, W, H); renderer.setScissor(x, y, W, H);
+    renderer.render(scene, cam);
+  });
+  document.title = `${url} ${size.x.toFixed(3)} x ${size.y.toFixed(3)} x ${size.z.toFixed(3)} m, base y=${box.min.y.toFixed(3)}`;
+  const d = document.createElement("div"); d.textContent = document.title;
+  d.style.cssText = "position:fixed;left:8px;top:8px;font:14px monospace;background:#fff8;padding:4px"; document.body.append(d);
+</script>

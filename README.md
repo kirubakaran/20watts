@@ -4,7 +4,7 @@ A museum you walk through in VR or on a flat screen, in the browser. One open
 plane, no walls: forward is later in time, right is further east. Works float
 at their true size, and you can walk behind one and see it mirrored.
 
-v1 holds thirty-two works and one placeholder. They run from an Acheulean
+v1 holds thirty-five works and one placeholder. They run from an Acheulean
 hand axe (a CC0 photogrammetry scan, 300,000 years old) and the Lion-man of
 Hohlenstein-Stadel through twelve cave and rock paintings from five
 continents, the Venus of Willendorf, a Clovis point (another scan), a
@@ -13,7 +13,8 @@ Rosetta Stone, the Alexander Mosaic at its real 5.8 m, the Chi Rho page of
 the Book of Kells, Fan Kuan's *Travelers Among Mountains and Streams*, a
 Benin plaque, Leonardo's *Last Supper* at 8.8 × 4.6 m, the 1903 Wright
 Flyer and the Apollo 11 command module *Columbia* as Smithsonian 3D scans, a
-1924 Ford Model T, bombe drums, the first transistor, a Cray-1, and the
+1924 Ford Model T, bombe drums, the first transistor, the Apple I, a
+Cray-1, a Commodore 64 (a photogrammetry scan), an Apple IIc, and the
 rickroll, a frozen frame of Rick Astley at the size of a living-room
 television that starts to move when you walk up to it. The first iPhone is
 in the catalogue as a CC BY artist's model that must be downloaded from
@@ -32,8 +33,11 @@ run. On a Quest, open `https://<your LAN IP>:5173` in the headset browser,
 accept the self-signed certificate once, and press **Enter VR**. Left stick
 walks, right stick snap-turns.
 
-`?spawn=x,z,yawDegrees` places you anywhere for debugging, e.g.
-`?spawn=0,-11,180` looks at the back of the first work.
+You resume where you left off: the browser remembers your place, relative
+to the nearest work so it survives new works shifting the rows, and a
+reload or a new deploy puts you back there. `?spawn=start` forgets it and
+starts at the oldest work. `?spawn=x,z,yawDegrees` places you anywhere for
+debugging, e.g. `?spawn=0,-11,180` looks at the back of the first work.
 
 To check a render without a headset, `node scripts/dev/screenshot.mjs
 <url> out.png` starts a headless Chrome, takes one capture and kills it.
@@ -52,8 +56,10 @@ src/world/exhibit.ts     one work in the world: image or glTF, placards, shadow
 src/assets/textures.ts   image ladder; sharper rungs load as you approach
 src/assets/models.ts     glb ladder, same idea for 3D scans
 src/locomotion/player.ts desktop and VR movement
+src/locomotion/resume.ts remembers your place in the browser and restores it
 scripts/fetch-assets.ts  pulls images and models from their sources into public/assets
 scripts/dev/screenshot.mjs one bounded headless-Chrome capture, for checking renders
+scripts/dev/preview.html four fixed views of one model rung, for checking orientation and scale
 public/draco/            Draco mesh decoder, copied from three's examples
 public/env/              overcast HDRI used for environment lighting, never drawn
 ```
@@ -125,7 +131,10 @@ See `.env.example`.
   re-encoded as WebP, the mesh is simplified for the lower tiers, and the
   result gets the same metres, origin and Draco treatment as a Smithsonian
   scan. Photogrammetry exports are often unitless; `original.unitScale`
-  (metres per file unit) is baked into the rungs.
+  (metres per file unit) is baked into the rungs, as is `original.rotation`
+  (XYZ Euler degrees) for a scan that is not upright or faces the wrong way.
+  Check the result with `/scripts/dev/preview.html?model=/assets/<id>/high.glb`
+  on the dev server, which shows front, left, top and back views on a grid.
 - **Models** from Smithsonian 3D: the `original.url` is a Voyager
   `document.json`. Each of its quality tiers is a set of Draco glb parts in
   centimetres; the pipeline merges the parts, converts to metres with the
@@ -182,9 +191,8 @@ deleted from), `data/derived/` (the served rungs, mirrored from
 a symlink swapped in one rename. The last five releases stay for rollback.
 The web server maps `/` to `site/current` and `/assets/` to `data/derived`;
 Vite's bundle lives under `/app/` so the two never collide.
-`deploy/musee.nginx.conf` is that mapping for a server that already runs
-nginx (install it, then `certbot --nginx` for TLS); `deploy/Caddyfile` is
-the same for Caddy, which handles TLS itself. Set `DEPLOY_HOST` to use
+`deploy/musee.nginx.conf` is that mapping for nginx (install it, then
+`certbot --nginx` for TLS, which WebXR requires). Set `DEPLOY_HOST` to use
 another ssh alias.
 
 ## License
@@ -210,7 +218,11 @@ scroll. The Clovis point and the Saint-Acheul hand axe are CC0 photogrammetry
 scans by the Research Laboratories of Archaeology, University of North
 Carolina at Chapel Hill, mirrored on Zenodo. The Wright Flyer scan is CC0
 from the Smithsonian. The bombe drums and the transistor on display at Bell
-Labs are replicas, and the placards say so. The iPhone is "iPhone 1st
+Labs are replicas, and the placards say so. The Commodore 64 is a
+photogrammetry scan by Digital Heritage Australia with ACMI, CC BY 4.0,
+mirrored on Zenodo. The Apple I photograph of the Smithsonian's board is
+CC0 by Blakespot; the Apple IIc photograph is CC BY 3.0 by Bilby.
+The iPhone is "iPhone 1st
 generation" by [skjoldbroder](https://sketchfab.com/skjoldbroder) on
 Sketchfab, CC BY 4.0.
 The Last Supper image is public domain, via Wikimedia Commons. The Columbia
