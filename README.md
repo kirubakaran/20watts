@@ -5,7 +5,7 @@
 plane, no walls: forward is later in time, right is further east. Works float
 at their true size, and you can walk behind one and see it mirrored.
 
-v1 holds thirty-eight works. They run from an Acheulean
+v1 holds thirty-nine works. They run from an Acheulean
 hand axe (a CC0 photogrammetry scan, 300,000 years old) and the Lion-man of
 Hohlenstein-Stadel through eleven cave and rock paintings from five
 continents and the Altamira ceiling, a scan of the Deutsches Museum's
@@ -15,6 +15,7 @@ Rosetta Stone, the Alexander Mosaic at its real 5.8 m, the Chi Rho page of
 the Book of Kells, Fan Kuan's *Travelers Among Mountains and Streams*, a
 Benin plaque, Leonardo's *Last Supper* at 8.8 × 4.6 m, the 1903 Wright
 Flyer and the Apollo 11 command module *Columbia* as Smithsonian 3D scans, a
+Lunar Roving Vehicle (the Deutsches Museum's reconstruction of its replica), a
 1924 Ford Model T, bombe drums, the first transistor, the Apple I, a
 Cray-1, an Apple II, a Commodore 64 (a photogrammetry scan), an Apple IIc,
 a Macintosh Plus (the Deutsches Museum's own, scanned), and the rickroll, a frozen frame of Rick Astley at the size of a living-room
@@ -271,7 +272,8 @@ Sketchfab, CC BY 4.0, and the Apple II set-up is "Apple II Computer" by
 [dark_igorek](https://sketchfab.com/dark_igorek) on Sketchfab, CC BY 4.0.
 The Macintosh Plus is a photogrammetry scan of inventory number 2000-468 by
 [Deutsches Museum | Digital](https://sketchfab.com/deutsches-museum),
-CC BY-SA 4.0.
+CC BY-SA 4.0, and the Lunar Roving Vehicle is their 3D reconstruction of
+replica 2019-407 from scans and the original drawings, CC BY-SA 4.0.
 The Last Supper image is public domain, via Wikimedia Commons. The Columbia
 scan is CC0 from the Smithsonian Institution's Digitization Program Office.
 The Model T is based on "1924 Ford Model T 3d model with interior" by
