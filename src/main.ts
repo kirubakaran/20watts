@@ -9,7 +9,7 @@ import { buildAxisCues } from "./world/axes";
 import { Player, type Action } from "./locomotion/player";
 import { clearPlace, restorePlace, trackPlace } from "./locomotion/resume";
 import { Navigator } from "./locomotion/navigate";
-import { buildEntrance } from "./world/sign";
+import { buildEntrance, GATE_HALF_WIDTH } from "./world/sign";
 import { hasTouch, setupTouch } from "./locomotion/touch";
 import { baseHeightOf, footprintOf, onDisplay } from "./data/types";
 
@@ -77,7 +77,15 @@ if (entrance) {
   gate.position.set(entrance.x, 0, entrance.z + ENTRANCE_SETBACK);
   scene.add(gate);
 }
-const goToEntrance = () => entrance && player.teleport(entrance.x, entrance.z + ENTRANCE_SETBACK + 4.5, 0);
+/**
+ * Far enough outside the gateway to see the whole of it: 4.5 m on a wide
+ * screen, more on a portrait phone whose horizontal view is narrow.
+ */
+function entranceDistance(): number {
+  const halfH = Math.atan(Math.tan((camera.fov * Math.PI) / 360) * camera.aspect);
+  return Math.max(4.5, (GATE_HALF_WIDTH + 0.4) / Math.tan(halfH));
+}
+const goToEntrance = () => entrance && player.teleport(entrance.x, entrance.z + ENTRANCE_SETBACK + entranceDistance(), 0);
 
 const act = (a: Action) => {
   if (a === "eraNext") nav.hopEra(player, 1);

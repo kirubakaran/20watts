@@ -18,6 +18,8 @@ const HALF_SPAN = 3.2;
 const PIER = { w: 0.7, d: 0.7, h: 3.1 };
 const LINTEL = { h: 1.0, d: 0.8 };
 const CAP = { h: 0.14, overhang: 0.25 };
+/** Half the gateway's full width, cap included: what a visitor outside must fit in view. */
+export const GATE_HALF_WIDTH = HALF_SPAN + PIER.w / 2 + CAP.overhang;
 const STONE = 0xd9d3c6;
 const PX_PER_M = 400;
 
