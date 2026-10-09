@@ -5,7 +5,7 @@
 plane, no walls: forward is later in time, right is further east. Works float
 at their true size, and you can walk behind one and see it mirrored.
 
-v1 holds thirty-six works. They run from an Acheulean
+v1 holds thirty-eight works. They run from an Acheulean
 hand axe (a CC0 photogrammetry scan, 300,000 years old) and the Lion-man of
 Hohlenstein-Stadel through twelve cave and rock paintings from five
 continents, the Venus of Willendorf, a Clovis point (another scan), a
@@ -15,8 +15,8 @@ the Book of Kells, Fan Kuan's *Travelers Among Mountains and Streams*, a
 Benin plaque, Leonardo's *Last Supper* at 8.8 × 4.6 m, the 1903 Wright
 Flyer and the Apollo 11 command module *Columbia* as Smithsonian 3D scans, a
 1924 Ford Model T, bombe drums, the first transistor, the Apple I, a
-Cray-1, a Commodore 64 (a photogrammetry scan), an Apple IIc, and the
-rickroll, a frozen frame of Rick Astley at the size of a living-room
+Cray-1, an Apple II, a Commodore 64 (a photogrammetry scan), an Apple IIc,
+a Macintosh Plus (the Deutsches Museum's own, scanned), and the rickroll, a frozen frame of Rick Astley at the size of a living-room
 television that starts to move when you walk up to it. The first iPhone is
 a CC BY artist's model from Sketchfab, standing at its true 11 cm.
 
@@ -248,7 +248,11 @@ mirrored on Zenodo. The Apple I photograph of the Smithsonian's board is
 CC0 by Blakespot; the Apple IIc photograph is CC BY 3.0 by Bilby.
 The iPhone is "iPhone 1st
 generation" by [skjoldbroder](https://sketchfab.com/skjoldbroder) on
-Sketchfab, CC BY 4.0.
+Sketchfab, CC BY 4.0, and the Apple II set-up is "Apple II Computer" by
+[dark_igorek](https://sketchfab.com/dark_igorek) on Sketchfab, CC BY 4.0.
+The Macintosh Plus is a photogrammetry scan of inventory number 2000-468 by
+[Deutsches Museum | Digital](https://sketchfab.com/deutsches-museum),
+CC BY-SA 4.0.
 The Last Supper image is public domain, via Wikimedia Commons. The Columbia
 scan is CC0 from the Smithsonian Institution's Digitization Program Office.
 The Model T is based on "1924 Ford Model T 3d model with interior" by
