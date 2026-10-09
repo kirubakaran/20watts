@@ -2,6 +2,9 @@
  * An exhibit is one artwork standing in the world: a free-floating image
  * (seen mirrored from behind) or a 3D model on the floor, plus a placard on
  * each side and a soft contact shadow so it reads as grounded in VR.
+ *
+ * Exhibits are built and torn down by the streamer as the visitor moves;
+ * placards, the dearest part, only exist within reading distance.
  */
 import {
   CanvasTexture,
@@ -142,8 +145,14 @@ export class Exhibit {
   private motion: Motion | null = null;
   private modelRoot: Group | null = null;
   private readonly centre = new Vector3();
+  /** Centre of the work in world space, fixed once built. */
+  readonly worldCentre = new Vector3();
   private readonly displayWidth: number;
   private lastRequestedPx = 0;
+  /** Highest quality this exhibit may ask for; lowered by shrink(), lifted by uncap(). */
+  private qualityCap = Infinity;
+  private placards: Group[] = [];
+  private readonly footprint;
 
   constructor(
     readonly artwork: Artwork,
@@ -155,28 +164,50 @@ export class Exhibit {
     this.group.rotation.y = placement.yaw;
 
     const fp = footprintOf(artwork);
+    this.footprint = fp;
     this.displayWidth = fp.width;
     this.group.add(contactShadow(fp.width, fp.depth));
 
     if (artwork.kind === "image") this.buildImage();
     else this.buildModel();
+    this.worldCentre.copy(this.group.position).add(this.centre);
+  }
 
-    // Placards: one in front, one behind, each single-sided so you only ever
-    // read the one facing you, on your left either way. A work hung high enough
-    // gets its placard underneath; a work that reaches the floor gets it beside.
+  /** Whether the placards exist. They are built within reading distance only. */
+  get hasPlacards(): boolean {
+    return this.placards.length > 0;
+  }
+
+  /**
+   * Placards: one in front, one behind, each single-sided so you only ever
+   * read the one facing you, on your left either way. A work hung at
+   * display height gets its placard underneath; one on the floor, or hung
+   * overhead, gets it beside at eye height.
+   */
+  setPlacards(on: boolean) {
+    if (on === this.hasPlacards) return;
+    if (!on) {
+      for (const p of this.placards) {
+        this.group.remove(p);
+        p.traverse((o) => o instanceof Text && o.dispose());
+      }
+      this.placards = [];
+      return;
+    }
+    const fp = this.footprint;
     const PLACARD_W = 0.9;
-    const base = baseHeightOf(artwork);
-    const below = base >= 1.1;
+    const base = baseHeightOf(this.artwork);
+    const below = base >= 1.1 && base <= 2.0;
     const top = below ? base - 0.08 : 1.45;
     const dx = below ? fp.width / 2 : fp.width / 2 + 0.15 + PLACARD_W;
     const dz = below ? fp.depth / 2 + 0.3 : 0.02;
-    const front = makePlacard(artwork, PLACARD_W);
+    const front = makePlacard(this.artwork, PLACARD_W);
     front.position.set(-dx, top, dz);
-    this.group.add(front);
-    const back = makePlacard(artwork, PLACARD_W);
+    const back = makePlacard(this.artwork, PLACARD_W);
     back.position.set(dx, top, -dz);
     back.rotation.y = Math.PI;
-    this.group.add(back);
+    this.placards = [front, back];
+    for (const p of this.placards) this.group.add(p);
   }
 
   private buildImage() {
@@ -244,13 +275,35 @@ export class Exhibit {
     this.ladder = ladder;
   }
 
+  /** Estimated GPU bytes this exhibit holds. */
+  get residentBytes(): number {
+    return this.ladder?.residentBytes ?? 0;
+  }
+
+  /** Fall back to the smallest rung and stay there until uncap(). */
+  shrink(): boolean {
+    if (!this.ladder) return false;
+    this.qualityCap = this.ladder.lowestQuality;
+    this.lastRequestedPx = 0;
+    return this.ladder.shrink();
+  }
+
+  /** Allow sharper rungs again. */
+  uncap() {
+    this.qualityCap = Infinity;
+    this.lastRequestedPx = 0;
+  }
+
+  get capped(): boolean {
+    return this.qualityCap !== Infinity;
+  }
+
   /** Called every frame with the viewer's world position; upgrades the texture rung as they approach. */
   update(viewerWorldPos: Vector3) {
     if (!this.ladder && !this.motion) return;
-    const worldCentre = this.centre.clone().applyMatrix4(this.group.matrixWorld);
-    const d = Math.max(viewerWorldPos.distanceTo(worldCentre), 0.5);
+    const d = Math.max(viewerWorldPos.distanceTo(this.worldCentre), 0.5);
     if (this.ladder) {
-      const desiredPx = (this.displayWidth / d) * PX_PER_RADIAN;
+      const desiredPx = Math.min((this.displayWidth / d) * PX_PER_RADIAN, this.qualityCap);
       // Hysteresis: only ask again when the need has grown by a quarter.
       if (desiredPx > this.lastRequestedPx * 1.25) {
         this.lastRequestedPx = desiredPx;
@@ -271,9 +324,25 @@ export class Exhibit {
     }
   }
 
+  /** Free everything: GPU resources, the video, the text, and leave the scene. */
   dispose() {
+    this.setPlacards(false);
     this.motion?.dispose();
     this.ladder?.dispose();
-    this.imageMaterial?.dispose();
+    this.ladder = null;
+    this.motion = null;
+    // The ladder freed the model's own meshes; the rest is ours.
+    if (this.modelRoot) this.group.remove(this.modelRoot);
+    this.group.traverse((o) => {
+      if (o instanceof Mesh) {
+        o.geometry.dispose();
+        const mats = Array.isArray(o.material) ? o.material : [o.material];
+        for (const m of mats) m.dispose();
+      }
+    });
+    this.modelRoot = null;
+    this.imageMaterial = null;
+    this.group.removeFromParent();
+    this.group.clear();
   }
 }

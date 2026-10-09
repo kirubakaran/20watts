@@ -2,8 +2,9 @@
  * Model ladder loader, the glb counterpart of the image ladder. Each model
  * has rungs of increasing quality; the renderer asks for the rung whose
  * textures match how big the work is on screen, and this module loads it
- * once and hands over the scene to swap in. Higher rungs are never dropped
- * in v1; eviction comes with the streaming world.
+ * once and hands over the scene to swap in. One rung is held at a time;
+ * the streamer can ask it to fall back to the smallest when memory is
+ * wanted elsewhere.
  */
 import { Group, Material, Mesh, type Object3D, SRGBColorSpace, Texture } from "three";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
@@ -94,6 +95,31 @@ export class ModelLadder {
 
   get current(): Group | null {
     return this.best;
+  }
+
+  /** Estimated GPU bytes of the rung held, from its catalogue entry. */
+  get residentBytes(): number {
+    const r = this.rungs[this.bestRank];
+    if (!r) return 0;
+    const tex = r.textureSize ?? 0;
+    // Assume three textures per material set (colour, normal, roughness) and ~36 bytes a triangle.
+    return tex * tex * 4 * 1.34 * 3 + (r.triangles ?? 0) * 36;
+  }
+
+  /** Fall back to the smallest rung. Returns false if already there. */
+  shrink(): boolean {
+    if (this.bestRank <= 0) return false;
+    if (this.best) disposeObject(this.best);
+    this.best = null;
+    this.bestRank = -1;
+    this.pending.clear();
+    this.requestLowest();
+    return true;
+  }
+
+  /** Texture size of the smallest rung: the quality a shrunk ladder is held at. */
+  get lowestQuality(): number {
+    return this.rungs[0]?.textureSize ?? 0;
   }
 
   requestLowest() {

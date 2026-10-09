@@ -15,6 +15,8 @@ export interface Stop {
   x: number;
   z: number;
   footprint: Footprint;
+  /** Hung above head height: stand beneath it rather than in front. */
+  overhead?: boolean;
 }
 
 interface Row {
@@ -51,6 +53,7 @@ export class Navigator {
   standingPoint(id: string): { x: number; z: number } | null {
     const s = this.stops.get(id);
     if (!s) return null;
+    if (s.overhead) return { x: s.x, z: s.z };
     return { x: s.x, z: s.z + standoff(s.footprint.width, s.footprint.depth) };
   }
 

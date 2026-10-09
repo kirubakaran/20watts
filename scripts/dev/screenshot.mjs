@@ -20,6 +20,7 @@
  *   CHROME=...    path to the Chrome binary
  *   PROFILE=dir   keep this Chrome profile between runs (localStorage etc.);
  *                 default is a fresh temporary one, deleted afterwards
+ *   CONSOLE=1     print the page's console messages while waiting
  */
 import { spawn } from "node:child_process";
 import { mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
@@ -99,6 +100,10 @@ async function main() {
   ws.onmessage = (ev) => {
     const m = JSON.parse(ev.data);
     if (m.id && pending.has(m.id)) { pending.get(m.id)(m); pending.delete(m.id); }
+    if (process.env.CONSOLE && m.method === "Runtime.consoleAPICalled") {
+      const text = m.params.args.map((a) => a.value ?? a.description ?? "").join(" ");
+      console.log(`[${m.params.type}] ${text}`);
+    }
   };
   const call = (method, params = {}, sessionId) =>
     new Promise((res) => { const id = ++seq; pending.set(id, res); ws.send(JSON.stringify({ id, method, params, sessionId })); });
@@ -106,6 +111,7 @@ async function main() {
   const { result: { targetId } } = await call("Target.createTarget", { url: "about:blank" });
   const { result: { sessionId } } = await call("Target.attachToTarget", { targetId, flatten: true });
   await call("Page.enable", {}, sessionId);
+  if (process.env.CONSOLE) await call("Runtime.enable", {}, sessionId);
   await call("Page.navigate", { url }, sessionId);
   await sleep(WAIT);
   const { result } = await call("Page.captureScreenshot", { format: "png" }, sessionId);

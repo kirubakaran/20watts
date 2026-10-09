@@ -1,8 +1,8 @@
 /**
  * Thumbnail ladder loader. Each image has rungs of increasing width; the
  * renderer asks for the rung that matches how big the work is on screen,
- * and this module loads it once and swaps it in. Higher rungs are never
- * dropped in v1; eviction comes with the streaming world.
+ * and this module loads it once and swaps it in. The streamer can ask it
+ * to shrink back to its smallest rung when memory is wanted elsewhere.
  */
 import { SRGBColorSpace, Texture, TextureLoader, LinearMipmapLinearFilter, LinearFilter } from "three";
 import type { ImageRung } from "../data/types";
@@ -57,6 +57,37 @@ export class ImageLadder {
 
   get current(): Texture | null {
     return this.best;
+  }
+
+  /** Estimated GPU bytes of the rungs held: RGBA plus a third for mipmaps. */
+  get residentBytes(): number {
+    let bytes = 0;
+    for (const t of this.loaded.values()) {
+      const img = t.image as { width?: number; height?: number } | undefined;
+      bytes += (img?.width ?? 0) * (img?.height ?? 0) * 4 * 1.34;
+    }
+    return bytes;
+  }
+
+  /** Drop every rung but the smallest held. Returns false if there was nothing to drop. */
+  shrink(): boolean {
+    if (this.loaded.size <= 1) return false;
+    const widths = [...this.loaded.keys()].sort((p, q) => p - q);
+    const keep = widths[0]!;
+    for (const w of widths.slice(1)) {
+      this.loaded.get(w)!.dispose();
+      this.loaded.delete(w);
+      this.pending.delete(w);
+    }
+    this.best = this.loaded.get(keep)!;
+    this.bestWidth = keep;
+    for (const fn of this.listeners) fn(this.best);
+    return true;
+  }
+
+  /** Width of the smallest rung: the quality a shrunk ladder is held at. */
+  get lowestQuality(): number {
+    return this.rungs[0]?.width ?? 0;
   }
 
   /** The smallest rung, for an immediate first paint. */

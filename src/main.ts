@@ -4,13 +4,13 @@ import type { Collection } from "./data/types";
 import collectionJson from "./data/collection.json";
 import { computeLayout } from "./layout/layout";
 import { buildWorld } from "./world/floor";
-import { Exhibit } from "./world/exhibit";
+import { DEFAULT_STREAM, Streamer } from "./world/stream";
 import { buildAxisCues } from "./world/axes";
 import { Player } from "./locomotion/player";
 import { clearPlace, restorePlace, trackPlace } from "./locomotion/resume";
 import { Navigator } from "./locomotion/navigate";
 import { buildEntrance } from "./world/sign";
-import { footprintOf } from "./data/types";
+import { baseHeightOf, footprintOf } from "./data/types";
 
 // JSON import types are inferred per record; the schema is the source of truth.
 const collection = collectionJson as unknown as Collection;
@@ -42,20 +42,23 @@ const gpu = {
 
 const visible = collection.artworks.filter((a) => a.moderation.status === "approved");
 const layout = computeLayout(visible);
-const exhibits = visible.map((a) => new Exhibit(a, layout.placements.get(a.id)!, gpu));
-for (const e of exhibits) scene.add(e.group);
+// Works exist as stubs until the visitor is near; the streamer builds and tears down exhibits.
+const params = new URLSearchParams(location.search);
+const budgetMB = Number(params.get("budgetMB"));
+const streamer = new Streamer(scene, visible, layout, gpu, budgetMB > 0 ? { ...DEFAULT_STREAM, budgetBytes: budgetMB * 1048576 } : DEFAULT_STREAM);
 scene.add(buildAxisCues(layout));
 
 // Hops between eras and cells, and jumps to a work.
-const nav = new Navigator(
-  layout,
-  exhibits.map((e) => ({ id: e.artwork.id, x: e.group.position.x, z: e.group.position.z, footprint: footprintOf(e.artwork) })),
-);
+const stops = visible.map((a) => {
+  const p = layout.placements.get(a.id)!.position;
+  return { id: a.id, x: p.x, z: p.z, footprint: footprintOf(a), overhead: baseHeightOf(a) > 2 };
+});
+const nav = new Navigator(layout, stops);
 // The gateway stands across the spine a few metres before the viewing spot
 // of the oldest work; a new visitor arrives outside it, looking through.
 const ENTRANCE_SETBACK = 2.5;
-const first = exhibits[0];
-const entrance = first ? nav.standingPoint(first.artwork.id) : null;
+const first = visible[0];
+const entrance = first ? nav.standingPoint(first.id) : null;
 if (entrance) {
   const gate = buildEntrance();
   gate.position.set(entrance.x, 0, entrance.z + ENTRANCE_SETBACK);
@@ -77,8 +80,7 @@ player.setActionHandler((a) => {
 //   ?spawn=start            the entrance, forgetting the saved place
 //   ?at=<id> | <year> | newest   in front of that work
 //   the saved place from last time, else the entrance.
-const landmarks = exhibits.map((e) => ({ id: e.artwork.id, x: e.group.position.x, z: e.group.position.z }));
-const params = new URLSearchParams(location.search);
+const landmarks = stops;
 const spawnParam = params.get("spawn");
 const atParam = params.get("at");
 if (spawnParam === "start") clearPlace();
@@ -104,6 +106,13 @@ function resolveAt(at: string): string {
   return at;
 }
 
+// ?debug logs what the streamer holds, for checking the budget on a device.
+if (params.has("debug")) {
+  setInterval(() => {
+    console.log(`streamer: ${streamer.liveCount} exhibits, ${(streamer.residentBytes / 1048576).toFixed(0)} MB estimated: ${streamer.report(eye)}`);
+  }, 2000);
+}
+
 const hud = document.getElementById("hud");
 renderer.xr.addEventListener("sessionstart", () => hud && (hud.hidden = true));
 renderer.xr.addEventListener("sessionend", () => hud && (hud.hidden = false));
@@ -123,6 +132,6 @@ renderer.setAnimationLoop((time) => {
   savePlace(dt);
   player.viewerPosition(eye);
   world.follow(eye);
-  for (const e of exhibits) e.update(eye);
+  streamer.update(eye, dt);
   renderer.render(scene, camera);
 });

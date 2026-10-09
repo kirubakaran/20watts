@@ -173,7 +173,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-08T00:00:00Z",
-      "updatedAt": "2026-10-09T18:54:29.718Z"
+      "updatedAt": "2026-10-09T19:12:29.125Z"
     },
     {
       "id": "wm-29686577",
@@ -321,7 +321,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-08T00:00:00Z",
-      "updatedAt": "2026-10-09T18:54:30.157Z"
+      "updatedAt": "2026-10-09T19:12:29.518Z"
     },
     {
       "id": "wm-31360759",
@@ -481,7 +481,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-08T00:00:00Z",
-      "updatedAt": "2026-10-09T18:54:30.403Z"
+      "updatedAt": "2026-10-09T19:12:29.760Z"
     },
     {
       "id": "wm-47569433",
@@ -644,7 +644,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-08T00:00:00Z",
-      "updatedAt": "2026-10-09T18:54:30.676Z"
+      "updatedAt": "2026-10-09T19:12:30.039Z"
     },
     {
       "id": "wm-1587877",
@@ -791,7 +791,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-08T00:00:00Z",
-      "updatedAt": "2026-10-09T18:54:30.904Z"
+      "updatedAt": "2026-10-09T19:12:30.278Z"
     },
     {
       "id": "wm-6909701",
@@ -948,7 +948,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-08T00:00:00Z",
-      "updatedAt": "2026-10-09T18:54:31.097Z"
+      "updatedAt": "2026-10-09T19:12:30.404Z"
     },
     {
       "id": "wm-3513129",
@@ -1103,6 +1103,188 @@
       "pageviews": null,
       "importance": 0.95,
       "moderation": {
+        "status": "rejected",
+        "reviewedBy": null,
+        "reviewedAt": "2026-10-09T00:00:00Z",
+        "reason": "Superseded by the Deutsches Museum's scan of its replica ceiling (sf-af6cbb6cfcc14cfeb1387ac50dc824ae)",
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-08T00:00:00Z",
+      "updatedAt": "2026-10-09T19:12:30.683Z"
+    },
+    {
+      "id": "sf-af6cbb6cfcc14cfeb1387ac50dc824ae",
+      "kind": "model",
+      "title": "Polychrome ceiling of Altamira (replica)",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [],
+      "date": {
+        "year": -12500,
+        "month": null,
+        "day": null,
+        "yearStart": -14000,
+        "yearEnd": -11000,
+        "label": "c. 12,500 BCE (replica, Deutsches Museum)",
+        "precision": "circa"
+      },
+      "madeIn": {
+        "name": "Santillana del Mar",
+        "region": "Cantabria",
+        "country": "Spain",
+        "point": {
+          "lat": 43.3825,
+          "lon": -4.1203
+        },
+        "wikidataQid": "Q133575"
+      },
+      "location": {
+        "name": "Munich",
+        "region": null,
+        "country": "Germany",
+        "point": null,
+        "wikidataQid": null,
+        "institution": "Deutsches Museum (replica; the original is in the Cave of Altamira)",
+        "inventoryNumber": "75270"
+      },
+      "culture": "Magdalenian",
+      "movement": null,
+      "periodSlug": "paleolithic",
+      "medium": "Replica of a painted limestone cave ceiling: ochre and charcoal on rock, reproduced in relief",
+      "materials": [
+        "ochre",
+        "charcoal",
+        "limestone"
+      ],
+      "genre": [
+        "cave painting"
+      ],
+      "subjects": [
+        "bison",
+        "horse",
+        "deer",
+        "cave painting",
+        "Palaeolithic art"
+      ],
+      "physical": {
+        "widthCm": null,
+        "heightCm": null,
+        "depthCm": null,
+        "weightKg": null
+      },
+      "description": "The great ceiling of Altamira, where a herd of bison is painted in red ochre and outlined in black over the natural bulges of the rock, so that each animal stands out as if in relief. Found in 1879 by Marcelino Sanz de Sautuola and his young daughter María, it was the first Palaeolithic cave art recognised as such. The cave is closed to protect the paintings; this is a scan of the full-size replica in the Deutsches Museum in Munich, hung overhead as the original is, so look up.",
+      "facts": [
+        "The painters used the bulges of the ceiling for the bodies of the bison, so the animals stand out in relief in raking light.",
+        "Sautuola's claim that the paintings were prehistoric was dismissed as a forgery; he died in 1888, fourteen years before the experts conceded he was right.",
+        "The ceiling is about 18 by 9 metres; the Deutsches Museum's replica was made in 1962 and is itself now a historic object."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Cave_of_Altamira",
+      "wikidataQid": "Q133575",
+      "externalIds": {
+        "sketchfab": "af6cbb6cfcc14cfeb1387ac50dc824ae"
+      },
+      "copyrighted": false,
+      "asset": {
+        "kind": "model",
+        "currentVersionId": "sf-af6cbb6cfcc14cfeb1387ac50dc824ae-v1",
+        "versions": [
+          {
+            "id": "sf-af6cbb6cfcc14cfeb1387ac50dc824ae-v1",
+            "original": {
+              "url": "https://sketchfab.com/3d-models/deckenmalerei-der-altamira-hohle-nachbildung-af6cbb6cfcc14cfeb1387ac50dc824ae",
+              "format": "glb",
+              "bytes": null,
+              "triangles": 1209141,
+              "rotation": [
+                0,
+                0,
+                180
+              ]
+            },
+            "rungs": [
+              {
+                "quality": "thumb",
+                "url": "/assets/sf-af6cbb6cfcc14cfeb1387ac50dc824ae/thumb.glb",
+                "bytes": 878456,
+                "triangles": 91476,
+                "textureSize": 512,
+                "draco": true
+              },
+              {
+                "quality": "low",
+                "url": "/assets/sf-af6cbb6cfcc14cfeb1387ac50dc824ae/low.glb",
+                "bytes": 2888524,
+                "triangles": 423192,
+                "textureSize": 1024,
+                "draco": true
+              },
+              {
+                "quality": "medium",
+                "url": "/assets/sf-af6cbb6cfcc14cfeb1387ac50dc824ae/medium.glb",
+                "bytes": 6455736,
+                "triangles": 725473,
+                "textureSize": 2048,
+                "draco": true
+              },
+              {
+                "quality": "high",
+                "url": "/assets/sf-af6cbb6cfcc14cfeb1387ac50dc824ae/high.glb",
+                "bytes": 17854044,
+                "triangles": 1209141,
+                "textureSize": 4096,
+                "draco": true
+              }
+            ],
+            "scale": 1,
+            "bounds": {
+              "width": 4.672,
+              "height": 1.463,
+              "depth": 9.624
+            },
+            "credit": {
+              "author": "Deutsches Museum | Digital (Sketchfab user deutsches-museum)",
+              "license": {
+                "name": "CC BY-SA 4.0",
+                "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+              },
+              "sourcePage": "https://sketchfab.com/3d-models/deckenmalerei-der-altamira-hohle-nachbildung-af6cbb6cfcc14cfeb1387ac50dc824ae"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-08T00:00:00Z",
+              "note": "Photogrammetry scan by the Deutsches Museum of its own full-size replica of the Altamira polychrome ceiling (inventory number 75270, shown in the museum's Altamira cave on the Museumsinsel, https://www.deutsches-museum.de/museumsinsel/ausstellung/altamira). 1.2 million faces, 12 meshes, two 8192 px colour textures, 127 MB glTF unpacked; downloaded by the user from Sketchfab on 2026-10-09. The scan is a slab; it is hung overhead in the museum as a ceiling, with the painted face down. Date and place as for the photograph record wm-3513129 (Magdalenian, c. 12,500 BCE, Santillana del Mar), which this replaces."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "sketchfab",
+            "representation": "scan"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": 2.4,
+        "back": "none",
+        "yaw": null,
+        "fallbackWidthM": 1.2
+      },
+      "tags": [
+        "altamira",
+        "palaeolithic",
+        "cave painting",
+        "bison",
+        "replica",
+        "scan"
+      ],
+      "pageviews": null,
+      "importance": 0.95,
+      "moderation": {
         "status": "approved",
         "reviewedBy": null,
         "reviewedAt": null,
@@ -1110,8 +1292,8 @@
         "flags": []
       },
       "source": "wikipedia-import",
-      "createdAt": "2026-10-08T00:00:00Z",
-      "updatedAt": "2026-10-09T18:54:31.362Z"
+      "createdAt": "2026-10-09T00:00:00Z",
+      "updatedAt": "2026-10-09T19:12:45.205Z"
     },
     {
       "id": "zen-21490444",
@@ -1284,7 +1466,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-08T00:00:00Z",
-      "updatedAt": "2026-10-09T18:54:32.016Z"
+      "updatedAt": "2026-10-09T19:12:45.835Z"
     },
     {
       "id": "wm-80059616",
@@ -1444,7 +1626,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-08T00:00:00Z",
-      "updatedAt": "2026-10-09T18:54:32.432Z"
+      "updatedAt": "2026-10-09T19:12:46.292Z"
     },
     {
       "id": "wm-33749461",
@@ -1606,7 +1788,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-08T00:00:00Z",
-      "updatedAt": "2026-10-09T18:54:32.790Z"
+      "updatedAt": "2026-10-09T19:12:46.673Z"
     },
     {
       "id": "wm-265811",
@@ -1764,7 +1946,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-08T00:00:00Z",
-      "updatedAt": "2026-10-09T18:54:32.908Z"
+      "updatedAt": "2026-10-09T19:12:46.815Z"
     },
     {
       "id": "wm-153807790",
@@ -1926,7 +2108,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-08T00:00:00Z",
-      "updatedAt": "2026-10-09T18:54:33.310Z"
+      "updatedAt": "2026-10-09T19:12:47.181Z"
     },
     {
       "id": "wm-146391319",
@@ -2088,7 +2270,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-08T00:00:00Z",
-      "updatedAt": "2026-10-09T18:54:33.712Z"
+      "updatedAt": "2026-10-09T19:12:47.567Z"
     },
     {
       "id": "wm-57854047",
@@ -2238,7 +2420,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-08T00:00:00Z",
-      "updatedAt": "2026-10-09T18:54:34.020Z"
+      "updatedAt": "2026-10-09T19:12:47.862Z"
     },
     {
       "id": "wm-164288965",
@@ -2389,7 +2571,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-08T00:00:00Z",
-      "updatedAt": "2026-10-09T18:54:34.478Z"
+      "updatedAt": "2026-10-09T19:12:48.243Z"
     },
     {
       "id": "wm-57852675",
@@ -2550,7 +2732,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-08T00:00:00Z",
-      "updatedAt": "2026-10-09T18:54:34.761Z"
+      "updatedAt": "2026-10-09T19:12:48.500Z"
     },
     {
       "id": "wm-3153928",
@@ -2699,7 +2881,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-08T00:00:00Z",
-      "updatedAt": "2026-10-09T18:54:35.052Z"
+      "updatedAt": "2026-10-09T19:12:48.726Z"
     },
     {
       "id": "wm-23752160",
@@ -2850,7 +3032,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-08T00:00:00Z",
-      "updatedAt": "2026-10-09T18:54:35.425Z"
+      "updatedAt": "2026-10-09T19:12:49.174Z"
     },
     {
       "id": "wm-7203375",
@@ -3011,7 +3193,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-08T00:00:00Z",
-      "updatedAt": "2026-10-09T18:54:35.660Z"
+      "updatedAt": "2026-10-09T19:12:49.436Z"
     },
     {
       "id": "wm-845223",
@@ -3173,7 +3355,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-08T00:00:00Z",
-      "updatedAt": "2026-10-09T18:54:35.933Z"
+      "updatedAt": "2026-10-09T19:12:49.678Z"
     },
     {
       "id": "wm-44550",
@@ -3318,7 +3500,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-08T00:00:00Z",
-      "updatedAt": "2026-10-09T18:54:36.065Z"
+      "updatedAt": "2026-10-09T19:12:49.805Z"
     },
     {
       "id": "wm-2653186",
@@ -3481,7 +3663,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-08T00:00:00Z",
-      "updatedAt": "2026-10-09T18:54:36.335Z"
+      "updatedAt": "2026-10-09T19:12:50.083Z"
     },
     {
       "id": "wm-140519854",
@@ -3642,7 +3824,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-08T00:00:00Z",
-      "updatedAt": "2026-10-09T18:54:36.684Z"
+      "updatedAt": "2026-10-09T19:12:50.486Z"
     },
     {
       "id": "wm-50410532",
@@ -3809,7 +3991,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-07T00:00:00Z",
-      "updatedAt": "2026-10-09T18:54:37.115Z"
+      "updatedAt": "2026-10-09T19:12:50.866Z"
     },
     {
       "id": "wm-55983942",
@@ -3969,7 +4151,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-08T00:00:00Z",
-      "updatedAt": "2026-10-09T18:54:37.383Z"
+      "updatedAt": "2026-10-09T19:12:51.112Z"
     },
     {
       "id": "si-nasm_A19610048000",
@@ -4153,7 +4335,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-08T00:00:00Z",
-      "updatedAt": "2026-10-09T18:54:38.830Z"
+      "updatedAt": "2026-10-09T19:12:52.535Z"
     },
     {
       "id": "sf-895fd0fbc7cc42aab8f3300a85420b91",
@@ -4351,7 +4533,7 @@
       },
       "source": "admin",
       "createdAt": "2026-10-07T00:00:00Z",
-      "updatedAt": "2026-10-09T18:54:42.875Z"
+      "updatedAt": "2026-10-09T19:12:56.541Z"
     },
     {
       "id": "wm-14902369",
@@ -4513,7 +4695,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-08T00:00:00Z",
-      "updatedAt": "2026-10-09T18:54:43.278Z"
+      "updatedAt": "2026-10-09T19:12:56.896Z"
     },
     {
       "id": "wm-24825633",
@@ -4667,7 +4849,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-08T00:00:00Z",
-      "updatedAt": "2026-10-09T18:54:43.401Z"
+      "updatedAt": "2026-10-09T19:12:57.030Z"
     },
     {
       "id": "si-nasm_A19700102000",
@@ -4859,7 +5041,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-07T00:00:00Z",
-      "updatedAt": "2026-10-09T18:54:44.661Z"
+      "updatedAt": "2026-10-09T19:12:58.258Z"
     },
     {
       "id": "wm-14619982",
@@ -5020,7 +5202,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-08T00:00:00Z",
-      "updatedAt": "2026-10-09T18:54:45.130Z"
+      "updatedAt": "2026-10-09T19:12:58.707Z"
     },
     {
       "id": "wm-159435417",
@@ -5182,7 +5364,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-09T18:54:45.518Z"
+      "updatedAt": "2026-10-09T19:12:59.124Z"
     },
     {
       "id": "sf-b5d316548d634f16a72dd503db0aa01b",
@@ -5374,7 +5556,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-09T18:54:54.180Z"
+      "updatedAt": "2026-10-09T19:13:07.833Z"
     },
     {
       "id": "zen-10232172",
@@ -5565,7 +5747,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-09T18:54:54.635Z"
+      "updatedAt": "2026-10-09T19:13:08.310Z"
     },
     {
       "id": "wm-11118452",
@@ -5724,7 +5906,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-09T18:54:54.968Z"
+      "updatedAt": "2026-10-09T19:13:08.569Z"
     },
     {
       "id": "sf-64319e3fd7dd44acb7d6d72cd8c395db",
@@ -5909,7 +6091,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-09T18:54:57.365Z"
+      "updatedAt": "2026-10-09T19:13:10.998Z"
     },
     {
       "id": "yt-dQw4w9WgXcQ",
@@ -6101,7 +6283,7 @@
       },
       "source": "admin",
       "createdAt": "2026-10-08T00:00:00Z",
-      "updatedAt": "2026-10-09T18:54:57.647Z"
+      "updatedAt": "2026-10-09T19:13:11.283Z"
     },
     {
       "id": "sf-485c51878bc7449e81379a863ec862f5",
@@ -6286,7 +6468,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-09T18:54:59.246Z"
+      "updatedAt": "2026-10-09T19:13:12.888Z"
     }
   ]
 }

@@ -7,8 +7,9 @@ at their true size, and you can walk behind one and see it mirrored.
 
 v1 holds thirty-eight works. They run from an Acheulean
 hand axe (a CC0 photogrammetry scan, 300,000 years old) and the Lion-man of
-Hohlenstein-Stadel through twelve cave and rock paintings from five
-continents, the Venus of Willendorf, a Clovis point (another scan), a
+Hohlenstein-Stadel through eleven cave and rock paintings from five
+continents and the Altamira ceiling, a scan of the Deutsches Museum's
+full-size replica hung overhead, the Venus of Willendorf, a Clovis point (another scan), a
 proto-cuneiform tablet, the Nebra sky disc, an Exekias amphora, the
 Rosetta Stone, the Alexander Mosaic at its real 5.8 m, the Chi Rho page of
 the Book of Kells, Fan Kuan's *Travelers Among Mountains and Streams*, a
@@ -55,6 +56,21 @@ To check a render without a headset, `node scripts/dev/screenshot.mjs
 <url> out.png` starts a headless Chrome, takes one capture and kills it.
 It is bounded on purpose: the museum renders continuously, and a stray
 headless Chrome on software GL will peg several cores until it is killed.
+
+## Streaming
+
+Every work is known from the start only as a stub, its place and size from
+the layout. `src/world/stream.ts` builds an exhibit (meshes, ladders, contact
+shadow) when the visitor comes within 90 m, gives it placards within 35 m,
+since text is the dearest part, and tears it down beyond 130 m. Rows run
+along time, so this is infinite scroll through the eras, and the sweep
+looks only at rows within reach. A memory budget, 384 MB estimated GPU
+bytes on a headset or phone and 1.5 GB on a desktop, makes the farthest
+exhibits fall back to their smallest rung when it is exceeded; the ladders
+in `src/assets/` know how to shrink. Hops and `?at=` work from the stubs,
+so a jump builds its surroundings on the next sweep. `?debug` logs the
+count of live exhibits and the bytes held every two seconds, and
+`?budgetMB=` overrides the budget for testing.
 
 ## Layout
 
@@ -230,8 +246,11 @@ The cave painting photographs come from Wikimedia Commons under the licence
 on each placard: public domain (Mariano Cecowski, HTO, PanBK), CC BY
 (Matthias Kabel, Surfsupusa, Mheidegger) and CC BY-SA (Cahyo Ramadhani,
 Claude Valette, Mateus S. Figueiredo, Bernard Gagnon, Issam Barhoumi, Lukas
-Kaffer). The Chauvet, Lascaux and Altamira photographs show full-size
-facsimiles, since those caves are closed; the placards say so.
+Kaffer). The Chauvet and Lascaux photographs show full-size facsimiles,
+since those caves are closed, and the Altamira ceiling is a photogrammetry
+scan of the Deutsches Museum's 1962 replica (inventory number 75270) by
+[Deutsches Museum | Digital](https://sketchfab.com/deutsches-museum),
+CC BY-SA 4.0; the placards say so.
 The object photographs are from Wikimedia Commons and the Met's Open Access
 programme: CC0 (The Metropolitan Museum of Art for the proto-cuneiform
 tablet, the Exekias amphora and the Benin plaque; Shonagon for the Nebra
