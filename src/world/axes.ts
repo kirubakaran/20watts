@@ -52,7 +52,7 @@ function stencil(text: string, size: number, anchorY: "top" | "bottom"): Text {
 export function buildAxisCues(layout: Layout, cfg: LayoutConfig = DEFAULT_LAYOUT): Group {
   const g = new Group();
   g.name = "axis-cues";
-  const half = cfg.cellPitchZ / 2;
+  const edgeOf = new Map(layout.timeAxis.map((t) => [t.rank, t.edge ?? t.coord + cfg.cellPitchZ / 2]));
 
   // Era: on the near boundary of a row, centred on the spine, hanging into
   // the row. Rows are months, but a month is almost never what matters, so
@@ -63,7 +63,7 @@ export function buildAxisCues(layout: Layout, cfg: LayoutConfig = DEFAULT_LAYOUT
     if (label === last) continue;
     last = label;
     const t = stencil(label, 0.7, "top");
-    t.position.set(0, t.position.y, tick.coord + half - 0.5);
+    t.position.set(0, t.position.y, (tick.edge ?? tick.coord + cfg.cellPitchZ / 2) - 0.5);
     g.add(t);
   }
 
@@ -74,7 +74,7 @@ export function buildAxisCues(layout: Layout, cfg: LayoutConfig = DEFAULT_LAYOUT
     const label = cell.branch ? cell.branch.label : longitudeLabel(lonByRank.get(cell.geoRank) ?? Number.NaN);
     if (!label) continue;
     const t = stencil(label, 0.3, "bottom");
-    t.position.set(cell.x, t.position.y, cell.z + half - 0.5);
+    t.position.set(cell.x, t.position.y, edgeOf.get(cell.timeRank)! - 0.5);
     g.add(t);
   }
   return g;

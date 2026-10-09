@@ -241,12 +241,23 @@ export interface DisplayHints {
    * rise to display-case height, big things stand on the floor.
    */
   baseHeight: number | null;
-  /** Images only: what you see from behind. */
+  /**
+   * What you see from behind. An image: its mirror image, a dark backing,
+   * or nothing. A model: "mirror" draws both sides of every surface, which
+   * makes a scanned interior read as a solid building from outside.
+   */
   back: "mirror" | "backing" | "none";
   /** Facing override in radians; null lets the layout decide. */
   yaw: number | null;
   /** Width in metres to use when physical size is unknown. */
   fallbackWidthM: number;
+  /**
+   * A work you walk into (a building): metres in front of its centre where
+   * it is entered. The standing point, the hops and the placards go there,
+   * at the door, instead of standing back to take in the whole. Absent for
+   * anything looked at from outside.
+   */
+  threshold?: number;
 }
 
 export interface Artwork {

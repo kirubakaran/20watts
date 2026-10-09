@@ -17,6 +17,8 @@ export interface Stop {
   footprint: Footprint;
   /** Hung above head height: stand beneath it rather than in front. */
   overhead?: boolean;
+  /** Entered at a door this far in front of the centre: stand there. */
+  threshold?: number;
 }
 
 interface Row {
@@ -44,7 +46,7 @@ export class Navigator {
       .map(([, cells]) => {
         cells.sort((p, q) => p.x - q.x);
         const z = cells[0]!.z;
-        return { z, frontZ: z + Math.max(...cells.map((c) => standoff(c.width, c.depth))), cells };
+        return { z, frontZ: z + Math.max(...cells.map((c) => c.threshold ?? standoff(c.width, c.depth))), cells };
       });
     for (const s of stops) this.stops.set(s.id, s);
   }
@@ -54,7 +56,7 @@ export class Navigator {
     const s = this.stops.get(id);
     if (!s) return null;
     if (s.overhead) return { x: s.x, z: s.z };
-    return { x: s.x, z: s.z + standoff(s.footprint.width, s.footprint.depth) };
+    return { x: s.x, z: s.z + (s.threshold ?? standoff(s.footprint.width, s.footprint.depth)) };
   }
 
   /** Stand in front of one work. Returns false if it is not on display. */

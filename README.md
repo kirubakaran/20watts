@@ -6,13 +6,15 @@ plane, no walls: forward is later in time, and a side quest stands off to
 the right of the work it belongs with. Works float at their true size, and
 you can walk behind one and see it mirrored.
 
-v1 holds fifty-two works. They run from an Acheulean
+v1 holds fifty-three works. They run from an Acheulean
 hand axe (a CC0 photogrammetry scan, 300,000 years old) and the Lion-man of
 Hohlenstein-Stadel through eleven cave and rock paintings from five
 continents and the Altamira ceiling, a scan of the Deutsches Museum's
 full-size replica hung overhead, the Venus of Willendorf, a Clovis point (another scan), a
 proto-cuneiform tablet, the Nebra sky disc, an Exekias amphora, the
-Rosetta Stone, the Alexander Mosaic at its real 5.8 m, the Chi Rho page of
+Rosetta Stone, the Alexander Mosaic at its real 5.8 m, the Pantheon in Rome
+(a photogrammetry scan of the interior, 43 m across, that you walk into
+through its door and stand under the oculus), the Chi Rho page of
 the Book of Kells, Fan Kuan's *Travelers Among Mountains and Streams*, a
 Benin plaque, Leonardo's *Last Supper* at 8.8 × 4.6 m, Lilienthal's 1894
 glider (a scan of the Deutsches Museum's replica, hung in the air), the 1903 Wright
@@ -143,8 +145,15 @@ allow and never closer than 6 m, and anything else in the row moves over.
 The sideways hop walks it. A branch keeps its own date for the placard.
 
 Rows are only as wide as they need to be: cells are spaced by the row's
-widest cell plus a gap, between 6 m and the full 16 m pitch. `computeLayout`
-returns the time ticks and the list of occupied cells.
+widest cell plus a gap, between 6 m and the full 16 m pitch. Along time,
+rows are at least 16 m apart, and further when a row is deep, so that 8 m
+of clear floor stays between one row's back and the next one's front; the
+Pantheon takes 43 m of the lane and its neighbours step back. A work you
+walk into carries `display.threshold`, the distance from its centre to its
+door: the standing point, the hops, `?at=` and the placards go there
+instead of standing back to take in the whole. `computeLayout` returns the
+time ticks, each with the boundary where its label goes, and the list of
+occupied cells.
 
 Those feed the cues stencilled on the floor (`src/world/axes.ts`): the
 year is printed on the boundary line you cross when you step into a new
@@ -222,7 +231,12 @@ showing the same work (a photograph beside a scan, an earlier example of
 the same part) goes in `alternates`, with its own credit and provenance;
 the pipeline builds its rungs under `public/assets/<id>/alt1/`, and the
 renderer does not use it yet. `npm run fetch-assets -- <id>` builds one
-work's assets instead of the whole collection.
+work's assets instead of the whole collection. For a building, set
+`display.threshold` to the distance from the centre to the door, and
+`display.back: "mirror"` if the scan is of the interior only, so both sides
+of every surface are drawn and it reads as solid from outside;
+`scripts/dev/bounds.ts` prints a file's size and `scripts/dev/preview.html`
+shows which way it faces before you set `original.rotation`.
 
 An equation is an image record with provenance `typeset` and the TeX in
 `original.tex`; the pipeline sets it with MathJax on a sheet the shape of
@@ -315,7 +329,9 @@ replica 2019-407 from scans and the original drawings, CC BY-SA 4.0. The
 Lilienthal glider is their scan of the museum's 1958 replica, inventory
 number 1976-817, CC BY-SA 4.0. The equation sheets are typeset by this
 project with MathJax and are CC0.
-The Last Supper image is public domain, via Wikimedia Commons. The Columbia
+The Pantheon interior is "The Pantheon Interior" by
+[artfletch](https://sketchfab.com/artfletch) on Sketchfab, CC BY 4.0, a
+photogrammetry scan with a reconstructed floor. The Last Supper image is public domain, via Wikimedia Commons. The Columbia
 scan is CC0 from the Smithsonian Institution's Digitization Program Office.
 The Model T is based on "1924 Ford Model T 3d model with interior" by
 [shubhankar.arch.3d](https://sketchfab.com/shubhankar.arch.3d) on Sketchfab,

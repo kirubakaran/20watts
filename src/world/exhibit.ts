@@ -182,7 +182,7 @@ export class Exhibit {
    * Placards: one in front, one behind, each single-sided so you only ever
    * read the one facing you, on your left either way. A work hung at
    * display height gets its placard underneath; one on the floor, or hung
-   * overhead, gets it beside at eye height.
+   * overhead, gets it beside at eye height; a building gets it at the door.
    */
   setPlacards(on: boolean) {
     if (on === this.hasPlacards) return;
@@ -197,10 +197,12 @@ export class Exhibit {
     const fp = this.footprint;
     const PLACARD_W = 0.9;
     const base = baseHeightOf(this.artwork);
-    const below = base >= 1.1 && base <= 2.0;
+    const threshold = this.artwork.display.threshold;
+    const below = threshold == null && base >= 1.1 && base <= 2.0;
     const top = below ? base - 0.08 : 1.45;
-    const dx = below ? fp.width / 2 : fp.width / 2 + 0.15 + PLACARD_W;
-    const dz = below ? fp.depth / 2 + 0.3 : 0.02;
+    // At a door: a couple of metres to the left of it, a step outside.
+    const dx = threshold != null ? 2.5 : below ? fp.width / 2 : fp.width / 2 + 0.15 + PLACARD_W;
+    const dz = threshold != null ? threshold - 1 : below ? fp.depth / 2 + 0.3 : 0.02;
     const front = makePlacard(this.artwork, PLACARD_W);
     front.position.set(-dx, top, dz);
     const back = makePlacard(this.artwork, PLACARD_W);
@@ -266,7 +268,10 @@ export class Exhibit {
       root.position.y = baseHeightOf(a);
       root.name = "model";
       root.traverse((o) => {
-        if (o instanceof Mesh) o.castShadow = true;
+        if (!(o instanceof Mesh)) return;
+        o.castShadow = true;
+        // A scanned interior has its faces pointing inward; drawing both sides makes it solid from outside.
+        if (a.display.back === "mirror") for (const m of Array.isArray(o.material) ? o.material : [o.material]) m.side = DoubleSide;
       });
       this.modelRoot = root;
       this.group.add(root);

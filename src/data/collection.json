@@ -3191,6 +3191,203 @@
       "updatedAt": "2026-10-09T19:22:46.920Z"
     },
     {
+      "id": "sf-5f35ab370082403e8c7829388f4e0c30",
+      "kind": "model",
+      "title": "The Pantheon, Rome (interior)",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "Unknown architect, for the emperor Hadrian",
+          "slug": null,
+          "wikidataQid": null,
+          "wikipediaUrl": null,
+          "birthYear": null,
+          "deathYear": null,
+          "role": "architect"
+        }
+      ],
+      "date": {
+        "year": 126,
+        "month": null,
+        "day": null,
+        "yearStart": 113,
+        "yearEnd": 126,
+        "label": "c. 113–126 CE (under Hadrian)",
+        "precision": "circa"
+      },
+      "madeIn": {
+        "name": "Rome",
+        "region": "Lazio",
+        "country": "Italy",
+        "point": {
+          "lat": 41.8986,
+          "lon": 12.4769
+        },
+        "wikidataQid": "Q220"
+      },
+      "location": {
+        "name": "Rome",
+        "region": null,
+        "country": "Italy",
+        "point": null,
+        "wikidataQid": null,
+        "institution": "Basilica of St Mary and the Martyrs (the Pantheon)",
+        "inventoryNumber": null
+      },
+      "culture": "Roman",
+      "movement": null,
+      "periodSlug": "ancient-rome",
+      "medium": "Rotunda of brick-faced Roman concrete under an unreinforced concrete dome, with a granite-columned portico",
+      "materials": [
+        "Roman concrete",
+        "brick",
+        "marble",
+        "granite",
+        "bronze"
+      ],
+      "genre": [
+        "building"
+      ],
+      "subjects": [
+        "architecture",
+        "dome",
+        "temple",
+        "church",
+        "Hadrian",
+        "Roman engineering"
+      ],
+      "physical": {
+        "widthCm": 4330,
+        "heightCm": 4330,
+        "depthCm": 4330,
+        "weightKg": null
+      },
+      "description": "Walk in. The Pantheon's rotunda is a perfect sphere's worth of space, 43.3 m across and 43.3 m high, under the largest unreinforced concrete dome ever built, open to the sky through a 9 m oculus that is its only window. Hadrian had it built around 113 to 126 CE on the site of Agrippa's temple of 27 BCE, whose name still runs across the portico, and it has stood in continuous use since, as a temple to all the gods and, from 609, as a church. Its builders lightened the concrete with pumice toward the top, thinned the dome from 6.4 m at the base to 1.2 m at the oculus, and sank the coffers to save weight. Nobody surpassed the span for thirteen hundred years. This is a photogrammetry scan of the interior; the floor is the scanner's reconstruction.",
+      "facts": [
+        "The dome is still, after nineteen centuries, the world's largest made of unreinforced concrete; Brunelleschi studied it before building Florence's.",
+        "The oculus is open to the weather. Rain falls on the floor, which slopes to drains, and the circle of sunlight walks across the coffers through the day.",
+        "Raphael is buried here, at his own request, with the epitaph 'Here lies Raphael, by whom Nature feared to be outdone while he lived, and when he died, feared she too would die.'"
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Pantheon,_Rome",
+      "wikidataQid": "Q99309",
+      "externalIds": {
+        "sketchfab": "5f35ab370082403e8c7829388f4e0c30"
+      },
+      "copyrighted": false,
+      "asset": {
+        "kind": "model",
+        "currentVersionId": "sf-5f35ab370082403e8c7829388f4e0c30-v1",
+        "versions": [
+          {
+            "id": "sf-5f35ab370082403e8c7829388f4e0c30-v1",
+            "original": {
+              "url": "https://sketchfab.com/3d-models/the-pantheon-interior-5f35ab370082403e8c7829388f4e0c30",
+              "format": "glb",
+              "bytes": null,
+              "triangles": 999756,
+              "unitScale": 1.448,
+              "rotation": [
+                0,
+                -90,
+                0
+              ]
+            },
+            "rungs": [
+              {
+                "quality": "thumb",
+                "url": "/assets/sf-5f35ab370082403e8c7829388f4e0c30/thumb.glb",
+                "bytes": 558016,
+                "triangles": 54411,
+                "textureSize": 512,
+                "draco": true
+              },
+              {
+                "quality": "low",
+                "url": "/assets/sf-5f35ab370082403e8c7829388f4e0c30/low.glb",
+                "bytes": 2088464,
+                "triangles": 349719,
+                "textureSize": 1024,
+                "draco": true
+              },
+              {
+                "quality": "medium",
+                "url": "/assets/sf-5f35ab370082403e8c7829388f4e0c30/medium.glb",
+                "bytes": 3661884,
+                "triangles": 599749,
+                "textureSize": 2048,
+                "draco": true
+              },
+              {
+                "quality": "high",
+                "url": "/assets/sf-5f35ab370082403e8c7829388f4e0c30/high.glb",
+                "bytes": 6861400,
+                "triangles": 999756,
+                "textureSize": 4096,
+                "draco": true
+              }
+            ],
+            "scale": 1,
+            "bounds": {
+              "width": 41.656,
+              "height": 35.926,
+              "depth": 43.31
+            },
+            "credit": {
+              "author": "artfletch (Sketchfab)",
+              "license": {
+                "name": "CC BY 4.0",
+                "url": "https://creativecommons.org/licenses/by/4.0/"
+              },
+              "sourcePage": "https://sketchfab.com/3d-models/the-pantheon-interior-5f35ab370082403e8c7829388f4e0c30"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-09T00:00:00Z",
+              "note": "Photogrammetry of the interior of the Pantheon by Sketchfab user artfletch, CC BY 4.0: 1,068 photographs taken in February 2026 with a Sony a7R V, processed in RealityScan; the floor could not be photographed and was recreated by the author. One million faces, 19 meshes, three 8192 px colour textures, 85 MB glTF unpacked. The export is unitless at 29.9 units across the rotunda, so unitScale 1.448 brings the interior to its real 43.3 m diameter; the height then comes to 36 m against the real 43.3 m, so the scanned dome is somewhat flatter than the building. The entrance passage protrudes toward +X in the file, so the record rotates it -90 degrees about Y to face the visitor arriving from the past. The scan is of interior surfaces only; display.back 'mirror' draws both sides so it reads as a solid building from outside, and threshold 25 puts the standing point and placards 3 m outside the door. Downloaded by the user on 2026-10-09. Dates and dimensions from the English Wikipedia article 'Pantheon, Rome'."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "sketchfab",
+            "representation": "scan"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": 0,
+        "back": "mirror",
+        "yaw": null,
+        "fallbackWidthM": 1.2,
+        "threshold": 25
+      },
+      "tags": [
+        "architecture",
+        "Rome",
+        "dome",
+        "concrete",
+        "scan",
+        "walk in"
+      ],
+      "pageviews": null,
+      "importance": 1,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-09T00:00:00Z",
+      "updatedAt": "2026-10-09T23:16:28.361Z"
+    },
+    {
       "id": "wm-7203375",
       "kind": "image",
       "title": "The Great Gallery, Horseshoe Canyon",

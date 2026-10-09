@@ -19,6 +19,10 @@
  * each step as close as the two works' widths allow, never closer than the
  * minimum pitch.
  *
+ * Rows are spaced along time by what stands in them: at least `cellPitchZ`
+ * apart, and further when a row is deep (a building) so that `rowGapZ` of
+ * clear floor stays between a row's back and the next row's front.
+ *
  * The world view (`geoBinDegrees` set) adds the second axis: works of the
  * same month are split by degrees of longitude into cells, side by side
  * from west to east and centred on the spine. Empty cells do not exist: a
@@ -38,8 +42,10 @@ export interface LayoutConfig {
   timeBinMonths: number;
   /** Degrees of longitude per geography cell, or null for one lane with no geography. */
   geoBinDegrees: number | null;
-  /** Distance between adjacent time rows, metres. */
+  /** Smallest distance between adjacent time rows, metres. */
   cellPitchZ: number;
+  /** Clear floor kept between the extents of adjacent rows, metres. */
+  rowGapZ: number;
   /** Largest distance between adjacent cells in a row, metres. */
   cellPitchX: number;
   /** Smallest distance between adjacent cells in a row, metres. */
@@ -56,6 +62,7 @@ export const DEFAULT_LAYOUT: LayoutConfig = {
   timeBinMonths: 1,
   geoBinDegrees: null,
   cellPitchZ: 16,
+  rowGapZ: 8,
   cellPitchX: 16,
   minPitchX: 6,
   cellGap: 2,
@@ -85,6 +92,8 @@ export interface AxisTick {
   month?: number | null;
   /** World coordinate of the cell centre on that axis. */
   coord: number;
+  /** Time axis only: z of the boundary a visitor crosses into this row, where the label goes. */
+  edge?: number;
   count: number;
 }
 
@@ -101,6 +110,8 @@ export interface LayoutCell {
   count: number;
   /** A branch step: the anchor's id and the label for the floor. */
   branch?: { of: string; label: string };
+  /** A work entered at a door: how far in front of the centre to stand, instead of standing back. */
+  threshold?: number;
 }
 
 export interface Layout {
@@ -222,6 +233,38 @@ export function computeLayout(artworks: Artwork[], cfg: LayoutConfig = DEFAULT_L
     rowPitch.set(timeRank, Math.min(cfg.cellPitchX, Math.max(cfg.minPitchX, widest + cfg.cellGap)));
   }
 
+  // Rows along time: each row's depth is its deepest cell or branch step,
+  // and rows are spaced so a gap of clear floor stays between them.
+  const rowDepth = new Map<number, number>();
+  for (const [key] of cells) {
+    const timeRank = Number(key.split(":")[0]);
+    rowDepth.set(timeRank, Math.max(rowDepth.get(timeRank) ?? 0, packed.get(key)!.depth));
+  }
+  for (const anchorId of children.keys()) {
+    const anchor = main.find((a) => a.id === anchorId);
+    if (!anchor) continue;
+    const timeRank = tRank.get(timeBin(anchor, cfg))!;
+    for (const b of branchChain(anchorId, children)) rowDepth.set(timeRank, Math.max(rowDepth.get(timeRank) ?? 0, footprintOf(b).depth));
+  }
+  const rowZ = new Map<number, number>();
+  const rowEdge = new Map<number, number>();
+  {
+    let z = 0;
+    let prevDepth = 0;
+    for (const timeRank of [...rowDepth.keys()].sort((p, q) => p - q)) {
+      const depth = rowDepth.get(timeRank)!;
+      if (timeRank === 0) {
+        rowEdge.set(timeRank, cfg.cellPitchZ / 2);
+      } else {
+        const prevZ = z;
+        z -= Math.max(cfg.cellPitchZ, prevDepth / 2 + cfg.rowGapZ + depth / 2);
+        rowEdge.set(timeRank, (prevZ - prevDepth / 2 + z + depth / 2) / 2);
+      }
+      rowZ.set(timeRank, z);
+      prevDepth = depth;
+    }
+  }
+
   const placements = new Map<string, Placement>();
   const timeCounts = new Map<number, number>();
   const geoCounts = new Map<number, number>();
@@ -239,9 +282,12 @@ export function computeLayout(artworks: Artwork[], cfg: LayoutConfig = DEFAULT_L
 
     const row = rowCols.get(timeRank)!;
     const cx = (row.get(geoRank)! - (row.size - 1) / 2) * rowPitch.get(timeRank)!;
-    const cz = -timeRank * cfg.cellPitchZ;
+    const cz = rowZ.get(timeRank)!;
     const { cols, rows, pitchX, pitchZ, width, depth } = packed.get(key)!;
-    cellList.push({ timeRank, geoRank, x: cx, z: cz, width, depth, count: members.length });
+    const cell: LayoutCell = { timeRank, geoRank, x: cx, z: cz, width, depth, count: members.length };
+    const thresholds = members.map((a) => a.display.threshold).filter((t): t is number => t != null);
+    if (thresholds.length) cell.threshold = Math.max(...thresholds);
+    cellList.push(cell);
 
     members.forEach((a, i) => {
       const col = i % cols;
@@ -298,7 +344,7 @@ export function computeLayout(artworks: Artwork[], cfg: LayoutConfig = DEFAULT_L
 
   const timeAxis: AxisTick[] = [...tRank].map(([bin, rank]) => {
     const { year, month } = binStart(bin, cfg);
-    return { rank, value: year, month, coord: -rank * cfg.cellPitchZ, count: timeCounts.get(rank) ?? 0 };
+    return { rank, value: year, month, coord: rowZ.get(rank)!, edge: rowEdge.get(rank)!, count: timeCounts.get(rank) ?? 0 };
   });
   // Geography ticks give the order and counts; rows are compacted, so the
   // coord is where the column would sit in a full row.

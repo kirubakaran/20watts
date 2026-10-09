@@ -150,6 +150,28 @@ describe("synthetic collections", () => {
     expect(x("anchor")).toBe(without.placements.get("anchor")!.position.x);
   });
 
+  it("spaces rows by depth so a building does not reach into its neighbours", () => {
+    const model = shown.find((a) => a.kind === "model" && !a.branch)!;
+    const building = structuredClone(model);
+    building.id = "building";
+    building.date = { ...building.date, year: 1850, month: null, day: null };
+    delete building.branch;
+    const v = building.asset.versions[0] as { bounds: { width: number; height: number; depth: number } };
+    v.bounds = { width: 40, height: 30, depth: 60 };
+    building.display = { ...building.display, threshold: 33 };
+    const works = [variant(base, "before", 1840, null, 2), building, variant(base, "after", 1860, null, 2)];
+    const l = computeLayout(works);
+    const z = (id: string) => l.placements.get(id)!.position.z;
+    expect(z("before") - z("building")).toBeGreaterThanOrEqual(0.25 + 8 + 30);
+    expect(z("building") - z("after")).toBeGreaterThanOrEqual(30 + 8 + 0.25);
+    expect(overlaps(l, works)).toEqual([]);
+    expect(l.cells.find((c) => c.z === z("building"))!.threshold).toBe(33);
+    // The era labels sit between the rows' extents.
+    const edges = l.timeAxis.map((t) => t.edge!);
+    expect(edges[1]).toBeLessThan(z("before"));
+    expect(edges[1]).toBeGreaterThan(z("building") + 30);
+  });
+
   it("leaves a branch whose anchor is not shown off the floor", () => {
     const works = [...shown, variant(base, "orphan", 1990, 6, 1, { branch: { of: "nope", step: 1, label: "x" } })];
     expect(onDisplay(works).map((a) => a.id)).not.toContain("orphan");
@@ -179,6 +201,14 @@ describe("hops", () => {
     let m = 0;
     while (nav.hopEra(fake, -1)) m++;
     expect(m).toBe(rows - 1);
+  });
+
+  it("stands at the door of a work with a threshold", () => {
+    const model = shown.find((a) => a.kind === "model" && !a.branch)!;
+    const l = computeLayout(shown);
+    const p = l.placements.get(model.id)!.position;
+    const n = new Navigator(l, [{ id: model.id, x: p.x, z: p.z, footprint: footprintOf(model), threshold: 21 }]);
+    expect(n.standingPoint(model.id)).toEqual({ x: p.x, z: p.z + 21 });
   });
 
   it("goes sideways from the Apple IIc to the chip, to the die, and no further", () => {

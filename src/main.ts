@@ -64,7 +64,7 @@ scene.add(buildAxisCues(layout, layoutCfg));
 // Hops between eras and cells, and jumps to a work.
 const stops = visible.map((a) => {
   const p = layout.placements.get(a.id)!.position;
-  return { id: a.id, x: p.x, z: p.z, footprint: footprintOf(a), overhead: baseHeightOf(a) > 2 };
+  return { id: a.id, x: p.x, z: p.z, footprint: footprintOf(a), overhead: baseHeightOf(a) > 2, threshold: a.display.threshold };
 });
 const nav = new Navigator(layout, stops);
 // The gateway stands across the spine a few metres before the viewing spot

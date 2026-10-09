@@ -131,7 +131,8 @@ export class Streamer {
       for (const s of row.stubs) {
         const d = this.distance(s, eye);
         if (!s.exhibit && d <= loadRadius) this.load(s);
-        s.exhibit?.setPlacards(d <= placardRadius);
+        // A building's placards stand at its door, which is `threshold` from its centre.
+        s.exhibit?.setPlacards(d <= placardRadius + (s.artwork.display.threshold ?? 0));
       }
     }
     this.enforceBudget(eye);

@@ -2,9 +2,10 @@
  * The ground, the sky and the light. There are no walls: the museum is one
  * open plane under a skylit gallery sky.
  *
- *  Floor:  polished concrete drawn procedurally, one tile per layout cell
- *          (16 m), with hairline joints every 4 m and a firmer line on the
- *          cell boundary so the grid of rows shows quietly.
+ *  Floor:  polished concrete drawn procedurally, in 16 m tiles with
+ *          hairline joints every 4 m and a firmer line on the tile edge,
+ *          so a quiet grid gives the eye a scale. Rows are at least 16 m
+ *          apart, so the grid often, not always, falls on a row boundary.
  *  Sky:    a gradient dome, warm pale horizon to a cooler zenith, with the
  *          fog matched to the horizon so distance fades cleanly.
  *  Light:  an overcast HDRI as the environment map (never drawn) so PBR
