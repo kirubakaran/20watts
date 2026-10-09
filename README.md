@@ -5,7 +5,7 @@
 plane, no walls: forward is later in time, right is further east. Works float
 at their true size, and you can walk behind one and see it mirrored.
 
-v1 holds thirty-five works and one placeholder. They run from an Acheulean
+v1 holds thirty-six works. They run from an Acheulean
 hand axe (a CC0 photogrammetry scan, 300,000 years old) and the Lion-man of
 Hohlenstein-Stadel through twelve cave and rock paintings from five
 continents, the Venus of Willendorf, a Clovis point (another scan), a
@@ -18,8 +18,7 @@ Flyer and the Apollo 11 command module *Columbia* as Smithsonian 3D scans, a
 Cray-1, a Commodore 64 (a photogrammetry scan), an Apple IIc, and the
 rickroll, a frozen frame of Rick Astley at the size of a living-room
 television that starts to move when you walk up to it. The first iPhone is
-in the catalogue as a CC BY artist's model that must be downloaded from
-Sketchfab by hand (see below) and is hidden until then.
+a CC BY artist's model from Sketchfab, standing at its true 11 cm.
 
 ## Run it
 
@@ -175,11 +174,11 @@ and run the pipeline. Mark an artist-made model `representation:
 "reconstruction"`; the placard then says so and credits the author, which
 CC BY requires.
 
-The iPhone record is in the catalogue with `moderation.status: "pending"`.
-To show it, log in to Sketchfab, download the glTF zip of model
-`485c51878bc7449e81379a863ec862f5`, unpack it into
-`data/originals/sf-485c51878bc7449e81379a863ec862f5/`, run
-`npm run fetch-assets`, and set the status to `approved`.
+A work whose source cannot be fetched by script, such as a Sketchfab model,
+is added with `moderation.status: "pending"` and skipped by the pipeline
+until its files are in `data/originals/<artwork id>/`; then run
+`npm run fetch-assets` and set the status to `approved`. The iPhone came in
+this way: the glTF zip from Sketchfab, unpacked into its folder.
 
 A work still in copyright gets `copyrighted: true` and a `Fair use` licence
 on its asset version. The placard then prints "In copyright · shown under
