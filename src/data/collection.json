@@ -5117,8 +5117,8 @@
         "flags": []
       },
       "source": "wikipedia-import",
-      "createdAt": "2026-10-08T00:00:00Z",
-      "updatedAt": "2026-10-09T04:14:48.081Z"
+      "createdAt": "2026-10-09T00:00:00Z",
+      "updatedAt": "2026-10-09T00:00:00Z"
     },
     {
       "id": "zen-10232172",
@@ -5286,7 +5286,7 @@
       },
       "display": {
         "scale": 1,
-        "baseHeight": 0.85,
+        "baseHeight": 1.1,
         "back": "none",
         "yaw": null,
         "fallbackWidthM": 1.2
@@ -5306,8 +5306,8 @@
         "flags": []
       },
       "source": "wikipedia-import",
-      "createdAt": "2026-10-08T00:00:00Z",
-      "updatedAt": "2026-10-09T04:14:48.600Z"
+      "createdAt": "2026-10-09T00:00:00Z",
+      "updatedAt": "2026-10-09T00:00:00Z"
     },
     {
       "id": "wm-11118452",
@@ -5463,8 +5463,8 @@
         "flags": []
       },
       "source": "wikipedia-import",
-      "createdAt": "2026-10-08T00:00:00Z",
-      "updatedAt": "2026-10-09T04:14:48.888Z"
+      "createdAt": "2026-10-09T00:00:00Z",
+      "updatedAt": "2026-10-09T00:00:00Z"
     },
     {
       "id": "yt-dQw4w9WgXcQ",

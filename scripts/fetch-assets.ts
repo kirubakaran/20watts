@@ -62,7 +62,7 @@ const COLLECTION = path.join(ROOT, "src/data/collection.json");
 const OUT_DIR = path.join(ROOT, "public/assets");
 const ORIGINALS_DIR = path.join(ROOT, "data/originals");
 const TARGET_WIDTHS = [1024, 2048, 4096];
-const USER_AGENT = "musee/0.1 (https://github.com/kiru/musee)";
+const USER_AGENT = "20watts/0.1 (https://20watts.org)";
 
 async function fetchOk(url: string): Promise<Response> {
   const res = await fetch(url, { headers: { "User-Agent": USER_AGENT } });

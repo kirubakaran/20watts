@@ -1,6 +1,7 @@
-# VR Museum
+# 20watts
 
-A museum you walk through in VR or on a flat screen, in the browser. One open
+[20watts.org](https://20watts.org): everything here was made by a
+20-watt brain. A museum you walk through in VR or on a flat screen, in the browser. One open
 plane, no walls: forward is later in time, right is further east. Works float
 at their true size, and you can walk behind one and see it mirrored.
 
@@ -33,6 +34,15 @@ run. On a Quest, open `https://<your LAN IP>:5173` in the headset browser,
 accept the self-signed certificate once, and press **Enter VR**. Left stick
 walks, right stick snap-turns.
 
+Walking the whole museum takes a while, so there are hops: `[` and `]`
+jump an era back or forward, `,` and `.` a cell west or east, and in VR the
+A / B buttons hop eras and X / Y hop west / east. A hop lands you on the
+spine in front of the nearest cell of the next row, facing the future, as
+if you had walked there. `?at=<work id>`, `?at=<year>` or `?at=newest`
+opens the museum in front of that work, which is handy for checking a new
+addition. An entrance sign beside the oldest work gives the name, what it
+means and how to read the floor.
+
 You resume where you left off: the browser remembers your place, relative
 to the nearest work so it survives new works shifting the rows, and a
 reload or a new deploy puts you back there. `?spawn=start` forgets it and
@@ -57,6 +67,8 @@ src/assets/textures.ts   image ladder; sharper rungs load as you approach
 src/assets/models.ts     glb ladder, same idea for 3D scans
 src/locomotion/player.ts desktop and VR movement
 src/locomotion/resume.ts remembers your place in the browser and restores it
+src/locomotion/navigate.ts hops between eras and cells, and jumps to a work
+src/world/sign.ts        the entrance sign
 scripts/fetch-assets.ts  pulls images and models from their sources into public/assets
 scripts/dev/screenshot.mjs one bounded headless-Chrome capture, for checking renders
 scripts/dev/preview.html four fixed views of one model rung, for checking orientation and scale
@@ -84,8 +96,11 @@ time row holds only the geography cells that have works in it, side by
 side from west to east and centred on the spine, so the next era is always
 one cell ahead rather than off to one side. In a sparse collection this
 means a column is not a fixed longitude; once every row has every column
-it is the plain grid. Within a cell, works are packed in a grid, most
-important first. `computeLayout` returns the tick list for each axis and
+it is the plain grid. Rows are only as wide as they need to be: cells are
+spaced by the row's widest cell plus a gap, between 6 m and the full 16 m
+pitch, so two desktop computers stand a few metres apart and both are in
+view from the spine, while the Wright Flyer's row keeps the full pitch.
+Within a cell, works are packed in a grid, most important first. `computeLayout` returns the tick list for each axis and
 the list of occupied cells.
 
 Those feed the axis cues stencilled on the floor (`src/world/axes.ts`):
@@ -176,9 +191,9 @@ The site is static, so a server needs nothing but a web server with HTTPS
 
 ```bash
 # ~/.ssh/config on your machine
-Host musee
+Host 20watts
     HostName <server>
-    User musee
+    User twentywatts
 
 npm run deploy            # build, sync data, publish a release
 npm run deploy -- --site  # publish only the site
@@ -191,7 +206,7 @@ deleted from), `data/derived/` (the served rungs, mirrored from
 a symlink swapped in one rename. The last five releases stay for rollback.
 The web server maps `/` to `site/current` and `/assets/` to `data/derived`;
 Vite's bundle lives under `/app/` so the two never collide.
-`deploy/musee.nginx.conf` is that mapping for nginx (install it, then
+`deploy/20watts.nginx.conf` is that mapping for nginx (install it, then
 `certbot --nginx` for TLS, which WebXR requires). Set `DEPLOY_HOST` to use
 another ssh alias.
 

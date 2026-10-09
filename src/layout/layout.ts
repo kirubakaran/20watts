@@ -15,6 +15,12 @@
  * sparse collection would otherwise leave a lone work far off to one side.
  * At full density every row has every column and this is the plain grid.
  *
+ * Rows are as tight as their contents allow: cells in a row are spaced by
+ * the row's widest cell plus a gap, between a minimum (so neighbours are
+ * still distinct cells) and the full pitch (which only a row with something
+ * the size of an aeroplane needs). Two desktop computers end up a few
+ * metres apart, both in view from the spine.
+ *
  * Only this module knows about time and geography. The renderer only sees
  * positions, yaws and footprints.
  */
@@ -29,8 +35,14 @@ export interface LayoutConfig {
   geoBinDegrees: number;
   /** Distance between adjacent time cells, metres. */
   cellPitchZ: number;
-  /** Distance between adjacent geography cells, metres. */
+  /** Largest distance between adjacent geography cells, metres. */
   cellPitchX: number;
+  /** Smallest distance between adjacent geography cells, metres. */
+  minPitchX: number;
+  /** Clear space between the widest cells of a row, metres. */
+  cellGap: number;
+  /** Clear space either side of a cell, metres: room for the placards beside a low work. */
+  cellPadding: number;
   /** Clear space between works inside a cell, metres. */
   itemGap: number;
 }
@@ -40,6 +52,9 @@ export const DEFAULT_LAYOUT: LayoutConfig = {
   geoBinDegrees: 5,
   cellPitchZ: 16,
   cellPitchX: 16,
+  minPitchX: 6,
+  cellGap: 2,
+  cellPadding: 1.2,
   itemGap: 2,
 };
 
@@ -68,6 +83,9 @@ export interface LayoutCell {
   /** Cell centre. */
   x: number;
   z: number;
+  /** Extent of the packed works and their padding, metres. */
+  width: number;
+  depth: number;
   count: number;
 }
 
@@ -124,6 +142,32 @@ export function computeLayout(artworks: Artwork[], cfg: LayoutConfig = DEFAULT_L
     [...cols.keys()].sort((p, q) => p - q).forEach((g, i) => cols.set(g, i));
   }
 
+  // Pack each cell's members in a square-ish grid, most important first, and
+  // measure the result; the row pitch depends on the widest cell in the row.
+  interface Packed { cols: number; rows: number; pitchX: number; pitchZ: number; width: number; depth: number }
+  const packed = new Map<string, Packed>();
+  for (const [key, members] of cells) {
+    members.sort((p, q) => importanceOf(q) - importanceOf(p));
+    const fps = members.map(footprintOf);
+    const maxW = Math.max(...fps.map((f) => f.width));
+    const maxD = Math.max(...fps.map((f) => f.depth));
+    const pitchX = maxW + cfg.itemGap;
+    const pitchZ = maxD + cfg.itemGap;
+    const cols = Math.ceil(Math.sqrt(members.length));
+    const rows = Math.ceil(members.length / cols);
+    packed.set(key, {
+      cols, rows, pitchX, pitchZ,
+      width: (cols - 1) * pitchX + maxW + 2 * cfg.cellPadding,
+      depth: (rows - 1) * pitchZ + maxD,
+    });
+  }
+  const rowPitch = new Map<number, number>();
+  for (const [timeRank, cols] of rowCols) {
+    let widest = 0;
+    for (const g of cols.keys()) widest = Math.max(widest, packed.get(`${timeRank}:${g}`)!.width);
+    rowPitch.set(timeRank, Math.min(cfg.cellPitchX, Math.max(cfg.minPitchX, widest + cfg.cellGap)));
+  }
+
   const placements = new Map<string, Placement>();
   const timeCounts = new Map<number, number>();
   const geoCounts = new Map<number, number>();
@@ -135,17 +179,10 @@ export function computeLayout(artworks: Artwork[], cfg: LayoutConfig = DEFAULT_L
     geoCounts.set(geoRank, (geoCounts.get(geoRank) ?? 0) + members.length);
 
     const row = rowCols.get(timeRank)!;
-    const cx = (row.get(geoRank)! - (row.size - 1) / 2) * cfg.cellPitchX;
+    const cx = (row.get(geoRank)! - (row.size - 1) / 2) * rowPitch.get(timeRank)!;
     const cz = -timeRank * cfg.cellPitchZ;
-    cellList.push({ timeRank, geoRank, x: cx, z: cz, count: members.length });
-
-    // Pack members in a square-ish grid, most important at the centre first.
-    members.sort((p, q) => importanceOf(q) - importanceOf(p));
-    const fps = members.map(footprintOf);
-    const pitchX = Math.max(...fps.map((f) => f.width)) + cfg.itemGap;
-    const pitchZ = Math.max(...fps.map((f) => f.depth)) + cfg.itemGap;
-    const cols = Math.ceil(Math.sqrt(members.length));
-    const rows = Math.ceil(members.length / cols);
+    const { cols, rows, pitchX, pitchZ, width, depth } = packed.get(key)!;
+    cellList.push({ timeRank, geoRank, x: cx, z: cz, width, depth, count: members.length });
 
     members.forEach((a, i) => {
       const col = i % cols;

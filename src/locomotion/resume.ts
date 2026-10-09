@@ -10,7 +10,7 @@
  */
 import type { Player } from "./player";
 
-const KEY = "musee.place.v1";
+const KEY = "20watts.place.v1";
 const SAVE_EVERY_S = 1;
 const MOVED_M = 0.25;
 

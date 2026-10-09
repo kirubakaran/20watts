@@ -2,9 +2,14 @@
  * The visitor. One rig (a Group) carries the camera; moving and turning the
  * rig moves the visitor on desktop and in VR alike.
  *
- *  Desktop: click to capture the mouse, WASD to walk, Shift to run.
+ *  Desktop: click to capture the mouse, WASD to walk, Shift to run,
+ *           [ and ] hop an era back or forward, , and . hop west or east.
  *  VR:      left thumbstick walks relative to where you look,
- *           right thumbstick snap-turns 30° per flick.
+ *           right thumbstick snap-turns 30° per flick,
+ *           A / B hop an era forward or back, X / Y hop east or west.
+ *
+ * Hops are reported as actions; something that knows the layout decides
+ * where they land (see navigate.ts).
  */
 import { Group, PerspectiveCamera, Quaternion, Vector3, WebGLRenderer } from "three";
 
@@ -14,11 +19,18 @@ const EYE_HEIGHT = 1.65;
 const SNAP_ANGLE = Math.PI / 6;
 const DEADZONE = 0.2;
 
+export type Action = "eraNext" | "eraPrev" | "east" | "west";
+const KEY_ACTIONS: Record<string, Action> = { BracketRight: "eraNext", BracketLeft: "eraPrev", Period: "east", Comma: "west" };
+/** Quest Touch button indices: 4 is A or X, 5 is B or Y. */
+const XR_ACTIONS: Record<string, Action> = { "right:4": "eraNext", "right:5": "eraPrev", "left:4": "west", "left:5": "east" };
+
 export class Player {
   readonly rig = new Group();
   private keys = new Set<string>();
   private pitch = 0;
   private snapLatched = false;
+  private readonly pressed = new Set<string>();
+  private onAction: ((a: Action) => void) | null = null;
   private readonly tmpQ = new Quaternion();
   private readonly tmpV = new Vector3();
   private readonly headPos = new Vector3();
@@ -32,7 +44,11 @@ export class Player {
     this.rig.add(camera);
     camera.position.set(0, EYE_HEIGHT, 0);
 
-    window.addEventListener("keydown", (e) => this.keys.add(e.code));
+    window.addEventListener("keydown", (e) => {
+      this.keys.add(e.code);
+      const a = KEY_ACTIONS[e.code];
+      if (a && !e.repeat) this.onAction?.(a);
+    });
     window.addEventListener("keyup", (e) => this.keys.delete(e.code));
     window.addEventListener("blur", () => this.keys.clear());
     domElement.addEventListener("click", () => {
@@ -50,6 +66,40 @@ export class Player {
   spawn(x: number, z: number, yaw = 0) {
     this.rig.position.set(x, 0, z);
     this.rig.rotation.y = yaw;
+  }
+
+  /**
+   * Move the visitor so their head stands over (x, z) facing `yaw`. In VR
+   * the head is offset from the rig by wherever they are in the play space,
+   * and turned by wherever they are looking, so both are compensated.
+   */
+  teleport(x: number, z: number, yaw = 0) {
+    if (this.renderer.xr.isPresenting) {
+      this.rig.rotation.y += yaw - this.headYaw();
+    } else {
+      this.rig.rotation.y = yaw;
+    }
+    this.rig.updateMatrixWorld(true);
+    const head = this.camera.getWorldPosition(this.tmpV);
+    this.rig.position.x += x - head.x;
+    this.rig.position.z += z - head.z;
+  }
+
+  /** Where the visitor stands on the floor, world x and z. */
+  floorPosition(): { x: number; z: number } {
+    const head = this.camera.getWorldPosition(this.tmpV);
+    return { x: head.x, z: head.z };
+  }
+
+  /** Hear about hops; one listener. */
+  setActionHandler(fn: (a: Action) => void) {
+    this.onAction = fn;
+  }
+
+  private headYaw(): number {
+    this.camera.getWorldQuaternion(this.tmpQ);
+    const look = this.tmpV.set(0, 0, -1).applyQuaternion(this.tmpQ);
+    return Math.atan2(-look.x, -look.z);
   }
 
   /** World position of the eyes. */
@@ -80,6 +130,7 @@ export class Player {
     const headYaw = Math.atan2(-look.x, -look.z);
 
     for (const src of session.inputSources) {
+      this.pollButtons(src);
       const axes = src.gamepad?.axes;
       if (!axes || axes.length < 4) continue;
       const x = axes[2] ?? 0;
@@ -97,6 +148,23 @@ export class Player {
         } else if (Math.abs(x) < 0.3) {
           this.snapLatched = false;
         }
+      }
+    }
+  }
+
+  /** Fire an action on the press edge of the A/B/X/Y buttons. */
+  private pollButtons(src: XRInputSource) {
+    const buttons = src.gamepad?.buttons;
+    if (!buttons) return;
+    for (const idx of [4, 5]) {
+      const key = `${src.handedness}:${idx}`;
+      const down = buttons[idx]?.pressed ?? false;
+      if (down && !this.pressed.has(key)) {
+        this.pressed.add(key);
+        const a = XR_ACTIONS[key];
+        if (a) this.onAction?.(a);
+      } else if (!down) {
+        this.pressed.delete(key);
       }
     }
   }

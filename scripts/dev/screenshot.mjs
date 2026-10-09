@@ -37,7 +37,7 @@ const [W, H] = (process.env.SIZE ?? "960x600").split("x").map(Number);
 const CHROME = process.env.CHROME ?? "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome";
 
 const keepProfile = !!process.env.PROFILE;
-const profile = process.env.PROFILE || (await mkdtemp(path.join(tmpdir(), "musee-shot-")));
+const profile = process.env.PROFILE || (await mkdtemp(path.join(tmpdir(), "20watts-shot-")));
 // A kept profile still holds the previous run's port file; never connect to that.
 if (keepProfile) await rm(path.join(profile, "DevToolsActivePort"), { force: true }).catch(() => {});
 const args = [
