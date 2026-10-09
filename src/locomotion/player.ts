@@ -3,7 +3,8 @@
  * rig moves the visitor on desktop and in VR alike.
  *
  *  Desktop: click to capture the mouse, WASD to walk, Shift to run,
- *           [ and ] hop an era back or forward, , and . hop west or east.
+ *           [ and ] hop an era back or forward, , and . hop west or east,
+ *           Home and End jump to the entrance and the latest era.
  *  VR:      left thumbstick walks relative to where you look,
  *           right thumbstick snap-turns 30° per flick,
  *           A / B hop an era forward or back, X / Y hop east or west.
@@ -19,8 +20,8 @@ const EYE_HEIGHT = 1.65;
 const SNAP_ANGLE = Math.PI / 6;
 const DEADZONE = 0.2;
 
-export type Action = "eraNext" | "eraPrev" | "east" | "west";
-const KEY_ACTIONS: Record<string, Action> = { BracketRight: "eraNext", BracketLeft: "eraPrev", Period: "east", Comma: "west" };
+export type Action = "eraNext" | "eraPrev" | "east" | "west" | "start" | "end";
+const KEY_ACTIONS: Record<string, Action> = { BracketRight: "eraNext", BracketLeft: "eraPrev", Period: "east", Comma: "west", Home: "start", End: "end" };
 /** Quest Touch button indices: 4 is A or X, 5 is B or Y. */
 const XR_ACTIONS: Record<string, Action> = { "right:4": "eraNext", "right:5": "eraPrev", "left:4": "west", "left:5": "east" };
 

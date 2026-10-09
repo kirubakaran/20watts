@@ -51,13 +51,6 @@ const nav = new Navigator(
   layout,
   exhibits.map((e) => ({ id: e.artwork.id, x: e.group.position.x, z: e.group.position.z, footprint: footprintOf(e.artwork) })),
 );
-player.setActionHandler((a) => {
-  if (a === "eraNext") nav.hopEra(player, 1);
-  else if (a === "eraPrev") nav.hopEra(player, -1);
-  else if (a === "east") nav.hopGeo(player, 1);
-  else nav.hopGeo(player, -1);
-});
-
 // The gateway stands across the spine a few metres before the viewing spot
 // of the oldest work; a new visitor arrives outside it, looking through.
 const ENTRANCE_SETBACK = 2.5;
@@ -68,6 +61,16 @@ if (entrance) {
   gate.position.set(entrance.x, 0, entrance.z + ENTRANCE_SETBACK);
   scene.add(gate);
 }
+const goToEntrance = () => entrance && player.teleport(entrance.x, entrance.z + ENTRANCE_SETBACK + 4.5, 0);
+
+player.setActionHandler((a) => {
+  if (a === "eraNext") nav.hopEra(player, 1);
+  else if (a === "eraPrev") nav.hopEra(player, -1);
+  else if (a === "east") nav.hopGeo(player, 1);
+  else if (a === "west") nav.hopGeo(player, -1);
+  else if (a === "start") goToEntrance();
+  else nav.goLast(player);
+});
 
 // Where to start, in order of precedence:
 //   ?spawn=x,z,yawDegrees   anywhere, for debugging
@@ -85,7 +88,7 @@ if (spawnParam && spawnParam !== "start") {
 } else if (atParam && nav.goTo(player, resolveAt(atParam))) {
   // placed in front of the requested work
 } else if (!restorePlace(player, landmarks) && entrance) {
-  player.spawn(entrance.x, entrance.z + ENTRANCE_SETBACK + 4.5, 0);
+  goToEntrance();
 }
 const savePlace = trackPlace(player, landmarks);
 

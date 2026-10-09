@@ -35,7 +35,8 @@ walks, right stick snap-turns.
 
 Walking the whole museum takes a while, so there are hops: `[` and `]`
 jump an era back or forward, `,` and `.` a cell west or east, and in VR the
-A / B buttons hop eras and X / Y hop west / east. A hop lands you on the
+A / B buttons hop eras and X / Y hop west / east; `Home` and `End` jump
+to the entrance and the latest era. A hop lands you on the
 spine in front of the nearest cell of the next row, facing the future, as
 if you had walked there. `?at=<work id>`, `?at=<year>` or `?at=newest`
 opens the museum in front of that work, which is handy for checking a new

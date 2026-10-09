@@ -74,6 +74,15 @@ export class Navigator {
     return true;
   }
 
+  /** The latest era: in front of the cell nearest the spine in the last row. */
+  goLast(player: Player): boolean {
+    const row = this.rows[this.rows.length - 1];
+    if (!row) return false;
+    const cell = nearestBy(row.cells, (c) => Math.abs(c.x));
+    player.teleport(cell.x, row.frontZ, 0);
+    return true;
+  }
+
   /** Next cell east (dir 1, +X) or west (dir -1) in the row you are at. */
   hopGeo(player: Player, dir: 1 | -1): boolean {
     const { x, z } = player.floorPosition();
