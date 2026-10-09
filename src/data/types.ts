@@ -10,7 +10,7 @@
  *    Imports from Wikimedia use "wm-<commons page curid>", Smithsonian 3D
  *    imports use "si-<EDAN record id>", Sketchfab imports use "sf-<model uid>",
  *    Zenodo mirrors use "zen-<record id>", Met images use "met-<object id>",
- *    user additions use "usr-<uuid>".
+ *    typeset equations use "eq-<slug>", user additions use "usr-<uuid>".
  */
 
 export type ArtworkId = string;
@@ -126,6 +126,11 @@ export interface ImageVersion {
     height: number;
     bytes: number | null;
     mime: string;
+    /**
+     * Provenance "typeset" only: the equation, as TeX. The pipeline sets it
+     * on a sheet and renders the ladder; the TeX is the work's true source.
+     */
+    tex?: string;
   };
   /** Ascending by width. Populated by the asset pipeline, served from our host. */
   rungs: ImageRung[];
@@ -135,9 +140,10 @@ export interface ImageVersion {
   contributed: Contribution;
   moderation: Moderation;
   /**
-   * "wikimedia-commons" | "video-still" | "screenshot" | "user-upload" | "iiif" ...
+   * "wikimedia-commons" | "video-still" | "screenshot" | "user-upload" | "typeset" | "iiif" ...
    * "video-still" means the original is a video in data/originals and both
-   * the still and the loop are cut from it.
+   * the still and the loop are cut from it. "typeset" means the original is
+   * `tex`, rendered by the pipeline.
    */
   provenance: string;
 }

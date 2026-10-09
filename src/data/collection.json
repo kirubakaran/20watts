@@ -2735,6 +2735,162 @@
       "updatedAt": "2026-10-09T19:22:46.259Z"
     },
     {
+      "id": "eq-pythagorean-theorem",
+      "kind": "image",
+      "title": "The Pythagorean theorem",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "Euclid",
+          "slug": null,
+          "wikidataQid": "Q8747",
+          "wikipediaUrl": null,
+          "birthYear": null,
+          "deathYear": null,
+          "role": "author of the Elements; the theorem is older"
+        }
+      ],
+      "date": {
+        "year": -300,
+        "month": null,
+        "day": null,
+        "yearStart": -1800,
+        "yearEnd": -300,
+        "label": "c. 300 BCE (Euclid, Elements I.47)",
+        "precision": "circa"
+      },
+      "madeIn": {
+        "name": "Alexandria",
+        "region": null,
+        "country": "Egypt",
+        "point": {
+          "lat": 31.2001,
+          "lon": 29.9187
+        },
+        "wikidataQid": "Q87"
+      },
+      "location": {
+        "name": null,
+        "region": null,
+        "country": null,
+        "point": null,
+        "wikidataQid": null,
+        "institution": null,
+        "inventoryNumber": null
+      },
+      "culture": null,
+      "movement": null,
+      "periodSlug": null,
+      "medium": "Equation, typeset",
+      "materials": [],
+      "genre": [
+        "equation"
+      ],
+      "subjects": [
+        "equation"
+      ],
+      "physical": {
+        "widthCm": 100,
+        "heightCm": 60,
+        "depthCm": null,
+        "weightKg": null
+      },
+      "description": "In a right triangle the square on the hypotenuse equals the squares on the other two sides. The relation was known to Babylonian scribes more than a thousand years before Pythagoras, and the proof that closes Book I of Euclid's Elements, written in Alexandria around 300 BCE, is the form in which the world learned it: Euclid's textbook stayed in use for over two thousand years. It is the first equation most people ever meet, and the one that turns geometry into arithmetic.",
+      "facts": [
+        "The Babylonian tablet Plimpton 322, from about 1800 BCE, lists whole-number triples such as 3, 4, 5 that satisfy the relation.",
+        "Pythagoras, who lived around 570 to 495 BCE, left no writings; the theorem was attached to his name by later Greek tradition.",
+        "Hundreds of proofs are known, including one published in 1876 by James Garfield, five years before he became president of the United States."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Pythagorean_theorem",
+      "wikidataQid": "Q11518",
+      "externalIds": {},
+      "copyrighted": false,
+      "asset": {
+        "kind": "image",
+        "currentVersionId": "eq-pythagorean-theorem-v1",
+        "versions": [
+          {
+            "id": "eq-pythagorean-theorem-v1",
+            "original": {
+              "url": "data/originals/eq-pythagorean-theorem/equation.svg",
+              "width": 2560,
+              "height": 1536,
+              "bytes": 3718,
+              "mime": "image/svg+xml",
+              "tex": "a^2 + b^2 = c^2"
+            },
+            "rungs": [
+              {
+                "width": 640,
+                "height": 384,
+                "url": "/assets/eq-pythagorean-theorem/640.jpg",
+                "bytes": 9279
+              },
+              {
+                "width": 1280,
+                "height": 768,
+                "url": "/assets/eq-pythagorean-theorem/1280.jpg",
+                "bytes": 23479
+              },
+              {
+                "width": 2560,
+                "height": 1536,
+                "url": "/assets/eq-pythagorean-theorem/2560.jpg",
+                "bytes": 60299
+              }
+            ],
+            "loop": null,
+            "credit": {
+              "author": "20watts",
+              "license": {
+                "name": "CC0 1.0",
+                "url": null
+              },
+              "sourcePage": null
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-09T00:00:00Z",
+              "note": "Typeset by 20watts from the TeX in the record with MathJax; the rendering is CC0, the equation itself is not subject to copyright."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "typeset"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": null,
+        "back": "mirror",
+        "yaw": null,
+        "fallbackWidthM": 1.2
+      },
+      "tags": [
+        "equation",
+        "science",
+        "mathematics"
+      ],
+      "pageviews": null,
+      "importance": 0.9,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-09T00:00:00Z",
+      "updatedAt": "2026-10-09T22:54:58.362Z"
+    },
+    {
       "id": "wm-3153928",
       "kind": "image",
       "title": "Rosetta Stone",
@@ -4154,6 +4310,971 @@
       "updatedAt": "2026-10-09T19:22:48.894Z"
     },
     {
+      "id": "eq-newton-gravitation",
+      "kind": "image",
+      "title": "Newton's law of universal gravitation",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "Isaac Newton",
+          "slug": null,
+          "wikidataQid": "Q935",
+          "wikipediaUrl": null,
+          "birthYear": 1642,
+          "deathYear": 1727,
+          "role": "author"
+        }
+      ],
+      "date": {
+        "year": 1687,
+        "month": 7,
+        "day": 5,
+        "yearStart": 1687,
+        "yearEnd": 1687,
+        "label": "5 July 1687 (Principia)",
+        "precision": "year"
+      },
+      "madeIn": {
+        "name": "Cambridge",
+        "region": "England",
+        "country": "United Kingdom",
+        "point": {
+          "lat": 52.2053,
+          "lon": 0.1218
+        },
+        "wikidataQid": "Q350"
+      },
+      "location": {
+        "name": null,
+        "region": null,
+        "country": null,
+        "point": null,
+        "wikidataQid": null,
+        "institution": null,
+        "inventoryNumber": null
+      },
+      "culture": null,
+      "movement": null,
+      "periodSlug": null,
+      "medium": "Equation, typeset",
+      "materials": [],
+      "genre": [
+        "equation"
+      ],
+      "subjects": [
+        "equation"
+      ],
+      "physical": {
+        "widthCm": 100,
+        "heightCm": 60,
+        "depthCm": null,
+        "weightKg": null
+      },
+      "description": "Every mass attracts every other with a force proportional to the product of the masses and inversely proportional to the square of the distance between them. Newton set it out in the Principia, published in London on 5 July 1687, and showed that the same rule governs a falling apple, the Moon's orbit, the planets and the tides. It was the first law to hold for the whole universe at once, and it stood unchallenged for 228 years, until Einstein's field equations further along this lane.",
+      "facts": [
+        "Newton wrote the Principia in about eighteen months after Edmond Halley visited him in Cambridge in 1684 to ask what orbit an inverse-square force would produce.",
+        "The constant G was first measured in 1798, by Henry Cavendish, with a torsion balance in a shed; the symbol G came into use only in the 1890s.",
+        "Newton refused to explain what gravity is: 'Hypotheses non fingo', I frame no hypotheses, he wrote in the second edition."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Newton%27s_law_of_universal_gravitation",
+      "wikidataQid": "Q11412",
+      "externalIds": {},
+      "copyrighted": false,
+      "asset": {
+        "kind": "image",
+        "currentVersionId": "eq-newton-gravitation-v1",
+        "versions": [
+          {
+            "id": "eq-newton-gravitation-v1",
+            "original": {
+              "url": "data/originals/eq-newton-gravitation/equation.svg",
+              "width": 2560,
+              "height": 1536,
+              "bytes": 5640,
+              "mime": "image/svg+xml",
+              "tex": "F = G\\,\\frac{m_1 m_2}{r^2}"
+            },
+            "rungs": [
+              {
+                "width": 640,
+                "height": 384,
+                "url": "/assets/eq-newton-gravitation/640.jpg",
+                "bytes": 11753
+              },
+              {
+                "width": 1280,
+                "height": 768,
+                "url": "/assets/eq-newton-gravitation/1280.jpg",
+                "bytes": 29422
+              },
+              {
+                "width": 2560,
+                "height": 1536,
+                "url": "/assets/eq-newton-gravitation/2560.jpg",
+                "bytes": 72302
+              }
+            ],
+            "loop": null,
+            "credit": {
+              "author": "20watts",
+              "license": {
+                "name": "CC0 1.0",
+                "url": null
+              },
+              "sourcePage": null
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-09T00:00:00Z",
+              "note": "Typeset by 20watts from the TeX in the record with MathJax; the rendering is CC0, the equation itself is not subject to copyright."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "typeset"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": null,
+        "back": "mirror",
+        "yaw": null,
+        "fallbackWidthM": 1.2
+      },
+      "tags": [
+        "equation",
+        "science",
+        "mathematics"
+      ],
+      "pageviews": null,
+      "importance": 0.9,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-09T00:00:00Z",
+      "updatedAt": "2026-10-09T22:54:58.410Z"
+    },
+    {
+      "id": "eq-euler-identity",
+      "kind": "image",
+      "title": "Euler's identity",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "Leonhard Euler",
+          "slug": null,
+          "wikidataQid": "Q7604",
+          "wikipediaUrl": null,
+          "birthYear": 1707,
+          "deathYear": 1783,
+          "role": "author"
+        }
+      ],
+      "date": {
+        "year": 1748,
+        "month": null,
+        "day": null,
+        "yearStart": 1748,
+        "yearEnd": 1748,
+        "label": "1748 (Introductio in analysin infinitorum)",
+        "precision": "year"
+      },
+      "madeIn": {
+        "name": "Berlin",
+        "region": null,
+        "country": "Germany",
+        "point": {
+          "lat": 52.52,
+          "lon": 13.405
+        },
+        "wikidataQid": "Q64"
+      },
+      "location": {
+        "name": null,
+        "region": null,
+        "country": null,
+        "point": null,
+        "wikidataQid": null,
+        "institution": null,
+        "inventoryNumber": null
+      },
+      "culture": null,
+      "movement": null,
+      "periodSlug": null,
+      "medium": "Equation, typeset",
+      "materials": [],
+      "genre": [
+        "equation"
+      ],
+      "subjects": [
+        "equation"
+      ],
+      "physical": {
+        "widthCm": 100,
+        "heightCm": 60,
+        "depthCm": null,
+        "weightKg": null
+      },
+      "description": "Five constants from five corners of mathematics, e from growth, i from the square roots of negatives, π from circles, and 1 and 0, bound in one line. It is the special case at x = π of Euler's formula e^{ix} = cos x + i sin x, which Euler published in 1748 in his Introductio in analysin infinitorum, written while he led the mathematics class of the Berlin Academy. Mathematicians have voted it the most beautiful theorem in the subject more than once.",
+      "facts": [
+        "Euler was the most prolific mathematician in history, with some 850 works; he kept writing after going blind in 1771, dictating to assistants.",
+        "Richard Feynman called the underlying formula 'our jewel' and 'the most remarkable formula in mathematics'.",
+        "Euler introduced much of the notation on this sheet: e for the base of natural logarithms, i for the square root of minus one, and the use of π."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Euler%27s_identity",
+      "wikidataQid": null,
+      "externalIds": {},
+      "copyrighted": false,
+      "asset": {
+        "kind": "image",
+        "currentVersionId": "eq-euler-identity-v1",
+        "versions": [
+          {
+            "id": "eq-euler-identity-v1",
+            "original": {
+              "url": "data/originals/eq-euler-identity/equation.svg",
+              "width": 2560,
+              "height": 1536,
+              "bytes": 3742,
+              "mime": "image/svg+xml",
+              "tex": "e^{i\\pi} + 1 = 0"
+            },
+            "rungs": [
+              {
+                "width": 640,
+                "height": 384,
+                "url": "/assets/eq-euler-identity/640.jpg",
+                "bytes": 8361
+              },
+              {
+                "width": 1280,
+                "height": 768,
+                "url": "/assets/eq-euler-identity/1280.jpg",
+                "bytes": 20312
+              },
+              {
+                "width": 2560,
+                "height": 1536,
+                "url": "/assets/eq-euler-identity/2560.jpg",
+                "bytes": 52045
+              }
+            ],
+            "loop": null,
+            "credit": {
+              "author": "20watts",
+              "license": {
+                "name": "CC0 1.0",
+                "url": null
+              },
+              "sourcePage": null
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-09T00:00:00Z",
+              "note": "Typeset by 20watts from the TeX in the record with MathJax; the rendering is CC0, the equation itself is not subject to copyright."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "typeset"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": null,
+        "back": "mirror",
+        "yaw": null,
+        "fallbackWidthM": 1.2
+      },
+      "tags": [
+        "equation",
+        "science",
+        "mathematics"
+      ],
+      "pageviews": null,
+      "importance": 0.85,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-09T00:00:00Z",
+      "updatedAt": "2026-10-09T22:54:58.453Z"
+    },
+    {
+      "id": "eq-bayes-theorem",
+      "kind": "image",
+      "title": "Bayes' theorem",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "Thomas Bayes",
+          "slug": null,
+          "wikidataQid": "Q208452",
+          "wikipediaUrl": null,
+          "birthYear": 1702,
+          "deathYear": 1761,
+          "role": "author"
+        }
+      ],
+      "date": {
+        "year": 1763,
+        "month": 12,
+        "day": 23,
+        "yearStart": 1763,
+        "yearEnd": 1763,
+        "label": "1763 (read to the Royal Society 23 December 1763)",
+        "precision": "year"
+      },
+      "madeIn": {
+        "name": "Tunbridge Wells",
+        "region": "Kent",
+        "country": "United Kingdom",
+        "point": {
+          "lat": 51.132,
+          "lon": 0.263
+        },
+        "wikidataQid": null
+      },
+      "location": {
+        "name": null,
+        "region": null,
+        "country": null,
+        "point": null,
+        "wikidataQid": null,
+        "institution": null,
+        "inventoryNumber": null
+      },
+      "culture": null,
+      "movement": null,
+      "periodSlug": null,
+      "medium": "Equation, typeset",
+      "materials": [],
+      "genre": [
+        "equation"
+      ],
+      "subjects": [
+        "equation"
+      ],
+      "physical": {
+        "widthCm": 100,
+        "heightCm": 60,
+        "depthCm": null,
+        "weightKg": null
+      },
+      "description": "How to update a belief when evidence arrives: the probability of a hypothesis given the data is the probability of the data given the hypothesis, times the prior, divided by the probability of the data. Thomas Bayes, a Presbyterian minister in Tunbridge Wells, worked it out and never published it; his friend Richard Price found the essay among his papers after his death and read it to the Royal Society on 23 December 1763. It is the equation every learning machine, and arguably every 20-watt brain, runs on.",
+      "facts": [
+        "Pierre-Simon Laplace rediscovered the rule independently in 1774 and gave it the general form used today.",
+        "Alan Turing's team at Bletchley Park used Bayesian reasoning to break Enigma; the bombe drums a few rows back are the hardware.",
+        "Bayes' original essay solved one problem: given the outcomes of some trials, what is the chance of success on the next?"
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Bayes%27_theorem",
+      "wikidataQid": "Q182505",
+      "externalIds": {},
+      "copyrighted": false,
+      "asset": {
+        "kind": "image",
+        "currentVersionId": "eq-bayes-theorem-v1",
+        "versions": [
+          {
+            "id": "eq-bayes-theorem-v1",
+            "original": {
+              "url": "data/originals/eq-bayes-theorem/equation.svg",
+              "width": 2560,
+              "height": 1536,
+              "bytes": 5734,
+              "mime": "image/svg+xml",
+              "tex": "P(A \\mid B) = \\frac{P(B \\mid A)\\,P(A)}{P(B)}"
+            },
+            "rungs": [
+              {
+                "width": 640,
+                "height": 384,
+                "url": "/assets/eq-bayes-theorem/640.jpg",
+                "bytes": 11778
+              },
+              {
+                "width": 1280,
+                "height": 768,
+                "url": "/assets/eq-bayes-theorem/1280.jpg",
+                "bytes": 30122
+              },
+              {
+                "width": 2560,
+                "height": 1536,
+                "url": "/assets/eq-bayes-theorem/2560.jpg",
+                "bytes": 78299
+              }
+            ],
+            "loop": null,
+            "credit": {
+              "author": "20watts",
+              "license": {
+                "name": "CC0 1.0",
+                "url": null
+              },
+              "sourcePage": null
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-09T00:00:00Z",
+              "note": "Typeset by 20watts from the TeX in the record with MathJax; the rendering is CC0, the equation itself is not subject to copyright."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "typeset"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": null,
+        "back": "mirror",
+        "yaw": null,
+        "fallbackWidthM": 1.2
+      },
+      "tags": [
+        "equation",
+        "science",
+        "mathematics"
+      ],
+      "pageviews": null,
+      "importance": 0.85,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-09T00:00:00Z",
+      "updatedAt": "2026-10-09T22:54:58.502Z"
+    },
+    {
+      "id": "eq-maxwell-equations",
+      "kind": "image",
+      "title": "Maxwell's equations",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "James Clerk Maxwell",
+          "slug": null,
+          "wikidataQid": "Q9095",
+          "wikipediaUrl": null,
+          "birthYear": 1831,
+          "deathYear": 1879,
+          "role": "author"
+        }
+      ],
+      "date": {
+        "year": 1865,
+        "month": null,
+        "day": null,
+        "yearStart": 1865,
+        "yearEnd": 1865,
+        "label": "1865 (A Dynamical Theory of the Electromagnetic Field)",
+        "precision": "year"
+      },
+      "madeIn": {
+        "name": "King's College London",
+        "region": "England",
+        "country": "United Kingdom",
+        "point": {
+          "lat": 51.5115,
+          "lon": -0.116
+        },
+        "wikidataQid": "Q84"
+      },
+      "location": {
+        "name": null,
+        "region": null,
+        "country": null,
+        "point": null,
+        "wikidataQid": null,
+        "institution": null,
+        "inventoryNumber": null
+      },
+      "culture": null,
+      "movement": null,
+      "periodSlug": null,
+      "medium": "Equation, typeset",
+      "materials": [],
+      "genre": [
+        "equation"
+      ],
+      "subjects": [
+        "equation"
+      ],
+      "physical": {
+        "widthCm": 100,
+        "heightCm": 100,
+        "depthCm": null,
+        "weightKg": null
+      },
+      "description": "Electricity, magnetism and light in four lines: charges make electric fields, there are no magnetic charges, a changing magnetic field makes an electric one, and currents or changing electric fields make magnetic ones. Maxwell read the theory to the Royal Society in December 1864 and published it in 1865; from the equations fell a wave travelling at the speed of light, so light had to be an electromagnetic wave. Radio, the transistor further along, and every screen this museum is seen on, follow from here.",
+      "facts": [
+        "Maxwell's own paper had twenty equations in twenty variables; the four vector equations shown are Oliver Heaviside's recasting of 1884 and 1885.",
+        "Heinrich Hertz produced and detected the predicted waves in 1887, eight years after Maxwell's death, and said they were of no use whatsoever.",
+        "Einstein kept a portrait of Maxwell on his study wall, beside Faraday and Newton, and called the theory 'the most profound and fruitful that physics has experienced since Newton'."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Maxwell%27s_equations",
+      "wikidataQid": "Q51501",
+      "externalIds": {},
+      "copyrighted": false,
+      "asset": {
+        "kind": "image",
+        "currentVersionId": "eq-maxwell-equations-v1",
+        "versions": [
+          {
+            "id": "eq-maxwell-equations-v1",
+            "original": {
+              "url": "data/originals/eq-maxwell-equations/equation.svg",
+              "width": 2560,
+              "height": 2560,
+              "bytes": 11741,
+              "mime": "image/svg+xml",
+              "tex": "\\begin{aligned} \\nabla \\cdot \\mathbf{E} &= \\frac{\\rho}{\\varepsilon_0} \\\\[0.4em] \\nabla \\cdot \\mathbf{B} &= 0 \\\\[0.4em] \\nabla \\times \\mathbf{E} &= -\\frac{\\partial \\mathbf{B}}{\\partial t} \\\\[0.4em] \\nabla \\times \\mathbf{B} &= \\mu_0 \\mathbf{J} + \\mu_0 \\varepsilon_0 \\frac{\\partial \\mathbf{E}}{\\partial t} \\end{aligned}"
+            },
+            "rungs": [
+              {
+                "width": 640,
+                "height": 640,
+                "url": "/assets/eq-maxwell-equations/640.jpg",
+                "bytes": 17827
+              },
+              {
+                "width": 1280,
+                "height": 1280,
+                "url": "/assets/eq-maxwell-equations/1280.jpg",
+                "bytes": 44795
+              },
+              {
+                "width": 2560,
+                "height": 2560,
+                "url": "/assets/eq-maxwell-equations/2560.jpg",
+                "bytes": 118673
+              }
+            ],
+            "loop": null,
+            "credit": {
+              "author": "20watts",
+              "license": {
+                "name": "CC0 1.0",
+                "url": null
+              },
+              "sourcePage": null
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-09T00:00:00Z",
+              "note": "Typeset by 20watts from the TeX in the record with MathJax; the rendering is CC0, the equation itself is not subject to copyright."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "typeset"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": null,
+        "back": "mirror",
+        "yaw": null,
+        "fallbackWidthM": 1.2
+      },
+      "tags": [
+        "equation",
+        "science",
+        "mathematics"
+      ],
+      "pageviews": null,
+      "importance": 0.95,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-09T00:00:00Z",
+      "updatedAt": "2026-10-09T22:54:58.585Z"
+    },
+    {
+      "id": "eq-boltzmann-entropy",
+      "kind": "image",
+      "title": "Boltzmann's entropy formula",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "Ludwig Boltzmann",
+          "slug": null,
+          "wikidataQid": "Q84296",
+          "wikipediaUrl": null,
+          "birthYear": 1844,
+          "deathYear": 1906,
+          "role": "author"
+        }
+      ],
+      "date": {
+        "year": 1877,
+        "month": null,
+        "day": null,
+        "yearStart": 1877,
+        "yearEnd": 1877,
+        "label": "1877",
+        "precision": "year"
+      },
+      "madeIn": {
+        "name": "Graz",
+        "region": "Styria",
+        "country": "Austria",
+        "point": {
+          "lat": 47.0707,
+          "lon": 15.4395
+        },
+        "wikidataQid": "Q13298"
+      },
+      "location": {
+        "name": null,
+        "region": null,
+        "country": null,
+        "point": null,
+        "wikidataQid": null,
+        "institution": null,
+        "inventoryNumber": null
+      },
+      "culture": null,
+      "movement": null,
+      "periodSlug": null,
+      "medium": "Equation, typeset",
+      "materials": [],
+      "genre": [
+        "equation"
+      ],
+      "subjects": [
+        "equation"
+      ],
+      "physical": {
+        "widthCm": 100,
+        "heightCm": 60,
+        "depthCm": null,
+        "weightKg": null
+      },
+      "description": "Entropy is the logarithm of the number of ways, W, that the atoms of a system can be arranged without changing what it looks like from outside. With this, Boltzmann, then a professor in Graz, explained in 1877 why heat flows one way and why the second law of thermodynamics is a law of probability: there are simply far more disordered arrangements than ordered ones. It is the bridge between the world of atoms, which most physicists of his day did not believe in, and the world of steam engines.",
+      "facts": [
+        "The formula in this form, with the constant k, was first written down by Max Planck in 1900; Planck named k Boltzmann's constant.",
+        "It is carved on Boltzmann's gravestone in Vienna's Zentralfriedhof.",
+        "Boltzmann fought the sceptics of atoms for decades; Einstein's 1905 paper on Brownian motion, and Perrin's experiments, settled the matter soon after his death."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Boltzmann%27s_entropy_formula",
+      "wikidataQid": null,
+      "externalIds": {},
+      "copyrighted": false,
+      "asset": {
+        "kind": "image",
+        "currentVersionId": "eq-boltzmann-entropy-v1",
+        "versions": [
+          {
+            "id": "eq-boltzmann-entropy-v1",
+            "original": {
+              "url": "data/originals/eq-boltzmann-entropy/equation.svg",
+              "width": 2560,
+              "height": 1536,
+              "bytes": 5538,
+              "mime": "image/svg+xml",
+              "tex": "S = k \\log W"
+            },
+            "rungs": [
+              {
+                "width": 640,
+                "height": 384,
+                "url": "/assets/eq-boltzmann-entropy/640.jpg",
+                "bytes": 11880
+              },
+              {
+                "width": 1280,
+                "height": 768,
+                "url": "/assets/eq-boltzmann-entropy/1280.jpg",
+                "bytes": 28727
+              },
+              {
+                "width": 2560,
+                "height": 1536,
+                "url": "/assets/eq-boltzmann-entropy/2560.jpg",
+                "bytes": 70589
+              }
+            ],
+            "loop": null,
+            "credit": {
+              "author": "20watts",
+              "license": {
+                "name": "CC0 1.0",
+                "url": null
+              },
+              "sourcePage": null
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-09T00:00:00Z",
+              "note": "Typeset by 20watts from the TeX in the record with MathJax; the rendering is CC0, the equation itself is not subject to copyright."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "typeset"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": null,
+        "back": "mirror",
+        "yaw": null,
+        "fallbackWidthM": 1.2
+      },
+      "tags": [
+        "equation",
+        "science",
+        "mathematics"
+      ],
+      "pageviews": null,
+      "importance": 0.8,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-09T00:00:00Z",
+      "updatedAt": "2026-10-09T22:54:58.632Z"
+    },
+    {
+      "id": "sf-f70edeefea0a49e1ae6b7f5be21b626d",
+      "kind": "model",
+      "title": "Lilienthal Normalsegelapparat (Deutsches Museum replica)",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "Otto Lilienthal",
+          "slug": null,
+          "wikidataQid": "Q57162",
+          "wikipediaUrl": null,
+          "birthYear": 1848,
+          "deathYear": 1896,
+          "role": "designer and pilot"
+        }
+      ],
+      "date": {
+        "year": 1894,
+        "month": null,
+        "day": null,
+        "yearStart": 1894,
+        "yearEnd": 1896,
+        "label": "1894 (replica built 1958)",
+        "precision": "circa"
+      },
+      "madeIn": {
+        "name": "Berlin-Lichterfelde (Maschinenfabrik Otto Lilienthal)",
+        "region": "Berlin",
+        "country": "Germany",
+        "point": {
+          "lat": 52.4333,
+          "lon": 13.3167
+        },
+        "wikidataQid": "Q64"
+      },
+      "location": {
+        "name": "Oberschleißheim",
+        "region": null,
+        "country": "Germany",
+        "point": null,
+        "wikidataQid": null,
+        "institution": "Deutsches Museum, Flugwerft Schleißheim",
+        "inventoryNumber": "1976-817"
+      },
+      "culture": "German",
+      "movement": null,
+      "periodSlug": "modern",
+      "medium": "Hang glider: willow and bamboo frame covered with waxed cotton, folding wings",
+      "materials": [
+        "willow",
+        "bamboo",
+        "cotton",
+        "steel wire"
+      ],
+      "genre": [
+        "aircraft"
+      ],
+      "subjects": [
+        "aviation",
+        "glider",
+        "flight",
+        "Otto Lilienthal"
+      ],
+      "physical": {
+        "widthCm": 670,
+        "heightCm": null,
+        "depthCm": 530,
+        "weightKg": 20
+      },
+      "description": "The first aircraft ever produced in series and sold: Otto Lilienthal's 'normal soaring apparatus' of 1894, a hang glider of willow, bamboo and waxed cotton weighing 20 kg, which he flew from an artificial hill he built in Berlin-Lichterfelde and from the Gollenberg near Stölln. Lilienthal made some two thousand glides in his machines, the first repeated, controlled flights by a human being, and sold at least nine of this model for 500 marks each. He died on 10 August 1896, the day after a crash in one. This is a scan of the Deutsches Museum's replica, built by the museum in 1958 after the original from Lilienthal's estate had decayed.",
+      "facts": [
+        "The Wright brothers began with Lilienthal's tables of lift; the 1903 Flyer in the next row is where his line of work led.",
+        "Buyers of the production glider included Nikolai Zhukovsky in Moscow and the publisher William Randolph Hearst; originals survive in London, Washington and Moscow.",
+        "The pilot hung by the forearms in the frame and steered by swinging the body; the wings fold for transport, and a bow at the front cushioned crashes."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Lilienthal_Normalsegelapparat",
+      "wikidataQid": null,
+      "externalIds": {
+        "sketchfab": "f70edeefea0a49e1ae6b7f5be21b626d"
+      },
+      "copyrighted": false,
+      "asset": {
+        "kind": "model",
+        "currentVersionId": "sf-f70edeefea0a49e1ae6b7f5be21b626d-v1",
+        "versions": [
+          {
+            "id": "sf-f70edeefea0a49e1ae6b7f5be21b626d-v1",
+            "original": {
+              "url": "https://sketchfab.com/3d-models/normal-segelapparat-von-otto-lilienthal-f70edeefea0a49e1ae6b7f5be21b626d",
+              "format": "glb",
+              "bytes": null,
+              "triangles": 282349
+            },
+            "rungs": [
+              {
+                "quality": "thumb",
+                "url": "/assets/sf-f70edeefea0a49e1ae6b7f5be21b626d/thumb.glb",
+                "bytes": 11512508,
+                "triangles": 281635,
+                "textureSize": 512,
+                "draco": true
+              },
+              {
+                "quality": "low",
+                "url": "/assets/sf-f70edeefea0a49e1ae6b7f5be21b626d/low.glb",
+                "bytes": 11959880,
+                "triangles": 281652,
+                "textureSize": 1024,
+                "draco": true
+              },
+              {
+                "quality": "medium",
+                "url": "/assets/sf-f70edeefea0a49e1ae6b7f5be21b626d/medium.glb",
+                "bytes": 13558144,
+                "triangles": 281677,
+                "textureSize": 2048,
+                "draco": true
+              },
+              {
+                "quality": "high",
+                "url": "/assets/sf-f70edeefea0a49e1ae6b7f5be21b626d/high.glb",
+                "bytes": 13584096,
+                "triangles": 282349,
+                "textureSize": 2048,
+                "draco": true
+              }
+            ],
+            "scale": 1,
+            "bounds": {
+              "width": 6.893,
+              "height": 3.067,
+              "depth": 4.801
+            },
+            "credit": {
+              "author": "Deutsches Museum | Digital (Sketchfab user deutsches-museum)",
+              "license": {
+                "name": "CC BY-SA 4.0",
+                "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+              },
+              "sourcePage": "https://sketchfab.com/3d-models/normal-segelapparat-von-otto-lilienthal-f70edeefea0a49e1ae6b7f5be21b626d"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-09T00:00:00Z",
+              "note": "Photogrammetry scan published by Deutsches Museum | Digital on 2021-03-01, CC BY-SA, of the museum's Normal-Segelapparat, inventory number 1976-817 (the Sketchfab description gives only the number and a link to digital.deutsches-museum.de/item/1976-817/, which was down for maintenance when checked). The Deutsches Museum's Flugwerft Schleissheim page says the glider on display is a replica built by the museum in 1958, after the original acquired from Lilienthal's estate in 1904 had decayed; the inventory year 1976 fits the replica, not the 1904 original, so the record calls it a replica. 282k faces, 15 meshes, nine 2048 px textures plus one 512 px, 57 MB unpacked; already in metres and Y-up, 6.89 m span by 4.80 m long by 3.07 m tall as scanned. Downloaded by the user on 2026-10-09. Dimensions and dates from the Deutsches Museum page and the English and German Wikipedia articles on the Normalsegelapparat."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "sketchfab",
+            "representation": "scan"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": 1.6,
+        "back": "none",
+        "yaw": null,
+        "fallbackWidthM": 1.2
+      },
+      "tags": [
+        "aviation",
+        "glider",
+        "replica",
+        "scan"
+      ],
+      "pageviews": null,
+      "importance": 0.9,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-09T00:00:00Z",
+      "updatedAt": "2026-10-09T22:57:47.811Z"
+    },
+    {
       "id": "si-nasm_A19610048000",
       "kind": "model",
       "title": "1903 Wright Flyer",
@@ -4336,6 +5457,318 @@
       "source": "wikipedia-import",
       "createdAt": "2026-10-08T00:00:00Z",
       "updatedAt": "2026-10-09T19:22:50.300Z"
+    },
+    {
+      "id": "eq-mass-energy",
+      "kind": "image",
+      "title": "Mass–energy equivalence",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "Albert Einstein",
+          "slug": null,
+          "wikidataQid": "Q937",
+          "wikipediaUrl": null,
+          "birthYear": 1879,
+          "deathYear": 1955,
+          "role": "author"
+        }
+      ],
+      "date": {
+        "year": 1905,
+        "month": 9,
+        "day": 27,
+        "yearStart": 1905,
+        "yearEnd": 1905,
+        "label": "27 September 1905 (received by Annalen der Physik)",
+        "precision": "year"
+      },
+      "madeIn": {
+        "name": "Bern",
+        "region": null,
+        "country": "Switzerland",
+        "point": {
+          "lat": 46.948,
+          "lon": 7.4474
+        },
+        "wikidataQid": "Q70"
+      },
+      "location": {
+        "name": null,
+        "region": null,
+        "country": null,
+        "point": null,
+        "wikidataQid": null,
+        "institution": null,
+        "inventoryNumber": null
+      },
+      "culture": null,
+      "movement": null,
+      "periodSlug": null,
+      "medium": "Equation, typeset",
+      "materials": [],
+      "genre": [
+        "equation"
+      ],
+      "subjects": [
+        "equation"
+      ],
+      "physical": {
+        "widthCm": 100,
+        "heightCm": 60,
+        "depthCm": null,
+        "weightKg": null
+      },
+      "description": "Mass and energy are the same thing in different units, and the exchange rate is the speed of light squared. Einstein, a 26-year-old examiner at the Swiss patent office in Bern, derived it in a three-page afterthought to his special relativity paper, received by Annalen der Physik on 27 September 1905. The rate is so large that the mass lost by the Sun each second lights the Earth, and a gram of matter, fully converted, would power a city for a day.",
+      "facts": [
+        "Einstein's paper is titled 'Does the inertia of a body depend on its energy content?' and writes the relation as L/V², with L for energy and V for the speed of light; the form E = mc² came later.",
+        "1905 was Einstein's annus mirabilis: four papers, on the photoelectric effect, Brownian motion, special relativity and this.",
+        "The first direct test came in 1932, when Cockcroft and Walton split lithium nuclei and found the energy released matched the mass lost."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Mass%E2%80%93energy_equivalence",
+      "wikidataQid": "Q35875",
+      "externalIds": {},
+      "copyrighted": false,
+      "asset": {
+        "kind": "image",
+        "currentVersionId": "eq-mass-energy-v1",
+        "versions": [
+          {
+            "id": "eq-mass-energy-v1",
+            "original": {
+              "url": "data/originals/eq-mass-energy/equation.svg",
+              "width": 2560,
+              "height": 1536,
+              "bytes": 3688,
+              "mime": "image/svg+xml",
+              "tex": "E = mc^2"
+            },
+            "rungs": [
+              {
+                "width": 640,
+                "height": 384,
+                "url": "/assets/eq-mass-energy/640.jpg",
+                "bytes": 10922
+              },
+              {
+                "width": 1280,
+                "height": 768,
+                "url": "/assets/eq-mass-energy/1280.jpg",
+                "bytes": 26218
+              },
+              {
+                "width": 2560,
+                "height": 1536,
+                "url": "/assets/eq-mass-energy/2560.jpg",
+                "bytes": 64466
+              }
+            ],
+            "loop": null,
+            "credit": {
+              "author": "20watts",
+              "license": {
+                "name": "CC0 1.0",
+                "url": null
+              },
+              "sourcePage": null
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-09T00:00:00Z",
+              "note": "Typeset by 20watts from the TeX in the record with MathJax; the rendering is CC0, the equation itself is not subject to copyright."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "typeset"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": null,
+        "back": "mirror",
+        "yaw": null,
+        "fallbackWidthM": 1.2
+      },
+      "tags": [
+        "equation",
+        "science",
+        "mathematics"
+      ],
+      "pageviews": null,
+      "importance": 0.95,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-09T00:00:00Z",
+      "updatedAt": "2026-10-09T22:54:58.678Z"
+    },
+    {
+      "id": "eq-einstein-field-equations",
+      "kind": "image",
+      "title": "Einstein's field equations",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "Albert Einstein",
+          "slug": null,
+          "wikidataQid": "Q937",
+          "wikipediaUrl": null,
+          "birthYear": 1879,
+          "deathYear": 1955,
+          "role": "author"
+        }
+      ],
+      "date": {
+        "year": 1915,
+        "month": 11,
+        "day": 25,
+        "yearStart": 1915,
+        "yearEnd": 1915,
+        "label": "25 November 1915",
+        "precision": "year"
+      },
+      "madeIn": {
+        "name": "Berlin",
+        "region": null,
+        "country": "Germany",
+        "point": {
+          "lat": 52.52,
+          "lon": 13.405
+        },
+        "wikidataQid": "Q64"
+      },
+      "location": {
+        "name": null,
+        "region": null,
+        "country": null,
+        "point": null,
+        "wikidataQid": null,
+        "institution": null,
+        "inventoryNumber": null
+      },
+      "culture": null,
+      "movement": null,
+      "periodSlug": null,
+      "medium": "Equation, typeset",
+      "materials": [],
+      "genre": [
+        "equation"
+      ],
+      "subjects": [
+        "equation"
+      ],
+      "physical": {
+        "widthCm": 100,
+        "heightCm": 60,
+        "depthCm": null,
+        "weightKg": null
+      },
+      "description": "Matter tells spacetime how to curve, and curved spacetime tells matter how to move. The left side is the geometry of spacetime, the right its content of matter and energy; the line stands for ten coupled equations. Einstein presented them to the Prussian Academy of Sciences in Berlin on 25 November 1915, after eight years of work and a final month of racing David Hilbert. They replaced Newton's law a few rows back, and they describe black holes, the expanding universe and the gravitational waves first heard a century later.",
+      "facts": [
+        "Karl Schwarzschild found the first exact solution, the one that describes a black hole, within weeks, while serving in the German army on the Russian front; he died in 1916.",
+        "The 1919 solar eclipse expeditions led by Arthur Eddington measured the bending of starlight the equations predict and made Einstein famous overnight.",
+        "In 1917 Einstein added a cosmological constant to keep the universe static; it was dropped when Hubble found the expansion, and brought back in 1998 for dark energy."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Einstein_field_equations",
+      "wikidataQid": "Q273711",
+      "externalIds": {},
+      "copyrighted": false,
+      "asset": {
+        "kind": "image",
+        "currentVersionId": "eq-einstein-field-equations-v1",
+        "versions": [
+          {
+            "id": "eq-einstein-field-equations-v1",
+            "original": {
+              "url": "data/originals/eq-einstein-field-equations/equation.svg",
+              "width": 2560,
+              "height": 1536,
+              "bytes": 6745,
+              "mime": "image/svg+xml",
+              "tex": "G_{\\mu\\nu} = \\frac{8\\pi G}{c^4}\\, T_{\\mu\\nu}"
+            },
+            "rungs": [
+              {
+                "width": 640,
+                "height": 384,
+                "url": "/assets/eq-einstein-field-equations/640.jpg",
+                "bytes": 11759
+              },
+              {
+                "width": 1280,
+                "height": 768,
+                "url": "/assets/eq-einstein-field-equations/1280.jpg",
+                "bytes": 30011
+              },
+              {
+                "width": 2560,
+                "height": 1536,
+                "url": "/assets/eq-einstein-field-equations/2560.jpg",
+                "bytes": 76120
+              }
+            ],
+            "loop": null,
+            "credit": {
+              "author": "20watts",
+              "license": {
+                "name": "CC0 1.0",
+                "url": null
+              },
+              "sourcePage": null
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-09T00:00:00Z",
+              "note": "Typeset by 20watts from the TeX in the record with MathJax; the rendering is CC0, the equation itself is not subject to copyright."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "typeset"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": null,
+        "back": "mirror",
+        "yaw": null,
+        "fallbackWidthM": 1.2
+      },
+      "tags": [
+        "equation",
+        "science",
+        "mathematics"
+      ],
+      "pageviews": null,
+      "importance": 0.9,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-09T00:00:00Z",
+      "updatedAt": "2026-10-09T22:54:58.726Z"
     },
     {
       "id": "sf-895fd0fbc7cc42aab8f3300a85420b91",
@@ -4534,6 +5967,162 @@
       "source": "admin",
       "createdAt": "2026-10-07T00:00:00Z",
       "updatedAt": "2026-10-09T19:22:54.259Z"
+    },
+    {
+      "id": "eq-schrodinger-equation",
+      "kind": "image",
+      "title": "The Schrödinger equation",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "Erwin Schrödinger",
+          "slug": null,
+          "wikidataQid": "Q9130",
+          "wikipediaUrl": null,
+          "birthYear": 1887,
+          "deathYear": 1961,
+          "role": "author"
+        }
+      ],
+      "date": {
+        "year": 1926,
+        "month": 6,
+        "day": 21,
+        "yearStart": 1926,
+        "yearEnd": 1926,
+        "label": "1926 (Quantisierung als Eigenwertproblem)",
+        "precision": "year"
+      },
+      "madeIn": {
+        "name": "Zürich",
+        "region": null,
+        "country": "Switzerland",
+        "point": {
+          "lat": 47.3769,
+          "lon": 8.5417
+        },
+        "wikidataQid": "Q72"
+      },
+      "location": {
+        "name": null,
+        "region": null,
+        "country": null,
+        "point": null,
+        "wikidataQid": null,
+        "institution": null,
+        "inventoryNumber": null
+      },
+      "culture": null,
+      "movement": null,
+      "periodSlug": null,
+      "medium": "Equation, typeset",
+      "materials": [],
+      "genre": [
+        "equation"
+      ],
+      "subjects": [
+        "equation"
+      ],
+      "physical": {
+        "widthCm": 100,
+        "heightCm": 60,
+        "depthCm": null,
+        "weightKg": null
+      },
+      "description": "How the wave function Ψ of a quantum system changes in time: the Hamiltonian, the system's energy, drives it, with Planck's constant setting the scale. Schrödinger, a professor at the University of Zürich, published wave mechanics in four papers in 1926; the time-dependent form shown here is in the fourth, received on 21 June. It is the equation of chemistry: the periodic table, the shapes of molecules and the behaviour of the electrons in the chips further along this lane all come out of it.",
+      "facts": [
+        "Schrödinger conceived the equation over Christmas 1925 at a villa in Arosa; the first paper reached the Annalen der Physik on 27 January 1926.",
+        "Max Born showed the same year that |Ψ|² is a probability, the reading Schrödinger himself never liked.",
+        "Schrödinger shared the 1933 Nobel Prize in Physics with Paul Dirac; his cat, the thought experiment, came in 1935."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Schr%C3%B6dinger_equation",
+      "wikidataQid": "Q165498",
+      "externalIds": {},
+      "copyrighted": false,
+      "asset": {
+        "kind": "image",
+        "currentVersionId": "eq-schrodinger-equation-v1",
+        "versions": [
+          {
+            "id": "eq-schrodinger-equation-v1",
+            "original": {
+              "url": "data/originals/eq-schrodinger-equation/equation.svg",
+              "width": 2560,
+              "height": 1536,
+              "bytes": 6447,
+              "mime": "image/svg+xml",
+              "tex": "i\\hbar\\,\\frac{\\partial}{\\partial t}\\Psi = \\hat{H}\\Psi"
+            },
+            "rungs": [
+              {
+                "width": 640,
+                "height": 384,
+                "url": "/assets/eq-schrodinger-equation/640.jpg",
+                "bytes": 13460
+              },
+              {
+                "width": 1280,
+                "height": 768,
+                "url": "/assets/eq-schrodinger-equation/1280.jpg",
+                "bytes": 32442
+              },
+              {
+                "width": 2560,
+                "height": 1536,
+                "url": "/assets/eq-schrodinger-equation/2560.jpg",
+                "bytes": 77306
+              }
+            ],
+            "loop": null,
+            "credit": {
+              "author": "20watts",
+              "license": {
+                "name": "CC0 1.0",
+                "url": null
+              },
+              "sourcePage": null
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-09T00:00:00Z",
+              "note": "Typeset by 20watts from the TeX in the record with MathJax; the rendering is CC0, the equation itself is not subject to copyright."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "typeset"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": null,
+        "back": "mirror",
+        "yaw": null,
+        "fallbackWidthM": 1.2
+      },
+      "tags": [
+        "equation",
+        "science",
+        "mathematics"
+      ],
+      "pageviews": null,
+      "importance": 0.9,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-09T00:00:00Z",
+      "updatedAt": "2026-10-09T22:54:58.774Z"
     },
     {
       "id": "wm-14902369",
@@ -4850,6 +6439,162 @@
       "source": "wikipedia-import",
       "createdAt": "2026-10-08T00:00:00Z",
       "updatedAt": "2026-10-09T19:22:54.670Z"
+    },
+    {
+      "id": "eq-shannon-entropy",
+      "kind": "image",
+      "title": "Shannon entropy",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "Claude Shannon",
+          "slug": null,
+          "wikidataQid": "Q92760",
+          "wikipediaUrl": null,
+          "birthYear": 1916,
+          "deathYear": 2001,
+          "role": "author"
+        }
+      ],
+      "date": {
+        "year": 1948,
+        "month": 7,
+        "day": null,
+        "yearStart": 1948,
+        "yearEnd": 1948,
+        "label": "July 1948 (A Mathematical Theory of Communication)",
+        "precision": "year"
+      },
+      "madeIn": {
+        "name": "Bell Telephone Laboratories, Murray Hill, New Jersey",
+        "region": "New Jersey",
+        "country": "United States",
+        "point": {
+          "lat": 40.6833,
+          "lon": -74.4003
+        },
+        "wikidataQid": null
+      },
+      "location": {
+        "name": null,
+        "region": null,
+        "country": null,
+        "point": null,
+        "wikidataQid": null,
+        "institution": null,
+        "inventoryNumber": null
+      },
+      "culture": null,
+      "movement": null,
+      "periodSlug": null,
+      "medium": "Equation, typeset",
+      "materials": [],
+      "genre": [
+        "equation"
+      ],
+      "subjects": [
+        "equation"
+      ],
+      "physical": {
+        "widthCm": 100,
+        "heightCm": 60,
+        "depthCm": null,
+        "weightKg": null
+      },
+      "description": "How much information a message carries, measured in bits: the average surprise of its symbols. Shannon published it in July 1948 in 'A Mathematical Theory of Communication', the paper that founded information theory, written at Bell Labs in Murray Hill, the building where the transistor a few rows back had been made the winter before. The formula sets the limit for compressing any data and, with his channel theorem, for sending it through noise; every file, call and stream since has lived inside those limits.",
+      "facts": [
+        "The word 'bit' first appeared in print in this paper; Shannon credits John Tukey with coining it.",
+        "Shannon said John von Neumann advised him to call the quantity entropy, since 'no one knows what entropy really is, so in a debate you will always have the advantage'.",
+        "The paper also proved that error-free communication is possible over a noisy channel up to a definite capacity, which took forty years of coding theory to reach in practice."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Entropy_(information_theory)",
+      "wikidataQid": null,
+      "externalIds": {},
+      "copyrighted": false,
+      "asset": {
+        "kind": "image",
+        "currentVersionId": "eq-shannon-entropy-v1",
+        "versions": [
+          {
+            "id": "eq-shannon-entropy-v1",
+            "original": {
+              "url": "data/originals/eq-shannon-entropy/equation.svg",
+              "width": 2560,
+              "height": 1536,
+              "bytes": 7485,
+              "mime": "image/svg+xml",
+              "tex": "H = -\\sum_{i} p_i \\log_2 p_i"
+            },
+            "rungs": [
+              {
+                "width": 640,
+                "height": 384,
+                "url": "/assets/eq-shannon-entropy/640.jpg",
+                "bytes": 10777
+              },
+              {
+                "width": 1280,
+                "height": 768,
+                "url": "/assets/eq-shannon-entropy/1280.jpg",
+                "bytes": 27281
+              },
+              {
+                "width": 2560,
+                "height": 1536,
+                "url": "/assets/eq-shannon-entropy/2560.jpg",
+                "bytes": 69875
+              }
+            ],
+            "loop": null,
+            "credit": {
+              "author": "20watts",
+              "license": {
+                "name": "CC0 1.0",
+                "url": null
+              },
+              "sourcePage": null
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-09T00:00:00Z",
+              "note": "Typeset by 20watts from the TeX in the record with MathJax; the rendering is CC0, the equation itself is not subject to copyright."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "typeset"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": null,
+        "back": "mirror",
+        "yaw": null,
+        "fallbackWidthM": 1.2
+      },
+      "tags": [
+        "equation",
+        "science",
+        "mathematics"
+      ],
+      "pageviews": null,
+      "importance": 0.85,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-09T00:00:00Z",
+      "updatedAt": "2026-10-09T22:54:58.821Z"
     },
     {
       "id": "si-nasm_A19700102000",

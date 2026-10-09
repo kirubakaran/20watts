@@ -14,6 +14,11 @@
  *    still at `loop.start` into a ladder of JPEG widths and encodes the
  *    silent loop as a small H.264 mp4. Needs ffmpeg on the PATH.
  *
+ *  Equations, provenance "typeset":
+ *    `original.tex` is set with MathJax, centred on a sheet whose shape is
+ *    the record's physical size, and rendered into a ladder of JPEG widths.
+ *    The SVG is kept in data/originals/<artwork id>/equation.svg.
+ *
  *  Images from a file, provenance "screenshot" or "user-upload":
  *    the source png or jpg is read from data/originals/<artwork id>/ and
  *    resized into a ladder of JPEG widths.
@@ -141,6 +146,78 @@ async function fetchCommonsImage(artId: string, version: { original: { url: stri
 
 const IMAGE_WIDTHS = [640, 1280, 2560, 5120];
 
+// ---------------------------------------------------------------- equations
+
+import { mathjax } from "mathjax-full/js/mathjax.js";
+import { TeX } from "mathjax-full/js/input/tex.js";
+import { SVG } from "mathjax-full/js/output/svg.js";
+import { liteAdaptor } from "mathjax-full/js/adaptors/liteAdaptor.js";
+import { RegisterHTMLHandler } from "mathjax-full/js/handlers/html.js";
+import { AllPackages } from "mathjax-full/js/input/tex/AllPackages.js";
+
+const SHEET = "#f3eee3";
+const INK = "#2a2824";
+
+/** TeX to a standalone SVG string with a pixel size, `exPx` pixels per ex. */
+function texToSvg(tex: string, exPx: number): { svg: string; width: number; height: number } {
+  const adaptor = liteAdaptor();
+  RegisterHTMLHandler(adaptor);
+  const html = mathjax.document("", { InputJax: new TeX({ packages: AllPackages }), OutputJax: new SVG({ fontCache: "local" }) });
+  const node = html.convert(tex, { display: true });
+  let svg = adaptor.innerHTML(node);
+  const w = Number(/width="([\d.]+)ex"/.exec(svg)?.[1]);
+  const h = Number(/height="([\d.]+)ex"/.exec(svg)?.[1]);
+  if (!w || !h) throw new Error(`MathJax gave no size for ${tex}`);
+  const width = Math.round(w * exPx);
+  const height = Math.round(h * exPx);
+  svg = svg.replace(/width="[\d.]+ex"/, `width="${width}"`).replace(/height="[\d.]+ex"/, `height="${height}"`);
+  svg = svg.replace(/currentColor/g, INK);
+  return { svg, width, height };
+}
+
+/**
+ * The equation on a sheet: the sheet's shape is the record's physical size
+ * (so the image hangs at exactly that size), the equation fills at most
+ * 78% of its width and 55% of its height, centred.
+ */
+async function buildTypeset(artId: string, version: ImageVersion, physical: { widthCm: number | null; heightCm: number | null }) {
+  const tex = version.original.tex;
+  if (!tex) throw new Error(`${artId}: provenance typeset needs original.tex`);
+  const aspect = physical.widthCm && physical.heightCm ? physical.heightCm / physical.widthCm : 0.62;
+  const W = 2560;
+  const H = Math.round(W * aspect);
+  // Render once, large, then fit.
+  const probe = texToSvg(tex, 40);
+  const scale = Math.min((W * 0.78) / probe.width, (H * 0.55) / probe.height);
+  const { svg, width, height } = texToSvg(tex, 40 * scale);
+  const origDir = path.join(ORIGINALS_DIR, artId);
+  await mkdir(origDir, { recursive: true });
+  await writeFile(path.join(origDir, "equation.svg"), svg);
+  version.original.url = `data/originals/${artId}/equation.svg`;
+  version.original.width = W;
+  version.original.height = H;
+  version.original.mime = "image/svg+xml";
+  version.original.bytes = Buffer.byteLength(svg);
+
+  const glyphs = await sharp(Buffer.from(svg), { density: 72 }).png().toBuffer();
+  const sheet = sharp({ create: { width: W, height: H, channels: 3, background: SHEET } })
+    .composite([{ input: glyphs, left: Math.round((W - width) / 2), top: Math.round((H - height) / 2) }])
+    .jpeg({ quality: 92 });
+  const full = await sheet.toBuffer();
+  const dir = path.join(OUT_DIR, artId);
+  await mkdir(dir, { recursive: true });
+  const rungs: ImageRung[] = [];
+  for (const w of IMAGE_WIDTHS) {
+    if (w > W) break;
+    const file = `${w}.jpg`;
+    const buf = w === W ? full : await sharp(full).resize({ width: w }).jpeg({ quality: 90 }).toBuffer();
+    await writeFile(path.join(dir, file), buf);
+    rungs.push({ width: w, height: Math.round((H * w) / W), url: `/assets/${artId}/${file}`, bytes: buf.length });
+    console.log(`${artId}: ${w}px (${(buf.length / 1024).toFixed(0)} KB)`);
+  }
+  version.rungs = rungs;
+}
+
 async function buildLocalImage(artId: string, version: ImageVersion) {
   const dir = path.join(ORIGINALS_DIR, artId);
   const files = (await readdir(dir).catch(() => [] as string[])).filter((f) => /\.(png|jpe?g|webp)$/i.test(f));
@@ -261,6 +338,13 @@ async function io(): Promise<NodeIO> {
 interface TierOptions {
   /** Fraction of triangles to keep, 1 = all. */
   ratio: number;
+  /**
+   * Largest deviation the simplifier may introduce, as a fraction of the
+   * mesh's extent. A thumb seen from 90 m can stray a few centimetres; a
+   * mesh of thin struts (a glider) will not simplify at all under a tight
+   * bound, so the lower tiers get a looser one.
+   */
+  error?: number;
   /** Longest texture edge after resizing, in pixels. */
   textureSize: number;
 }
@@ -306,7 +390,7 @@ async function mergeParts(partFiles: string[], unitScale: number, dest: string, 
     await MeshoptSimplifier.ready;
     await out.transform(
       weld(),
-      ...(tier.ratio < 1 ? [simplify({ simplifier: MeshoptSimplifier, ratio: tier.ratio, error: 0.001 })] : []),
+      ...(tier.ratio < 1 ? [simplify({ simplifier: MeshoptSimplifier, ratio: tier.ratio, error: tier.error ?? 0.001 })] : []),
       textureCompress({ encoder: sharp, targetFormat: "webp", quality: 85, resize: [tier.textureSize, tier.textureSize] }),
     );
   }
@@ -368,9 +452,9 @@ async function fetchSmithsonianModel(artId: string, version: ModelVersion) {
 
 /** Tiers built from one source file, mirroring the Smithsonian ladder. */
 const LOCAL_TIERS: Record<Quality, TierOptions> = {
-  thumb: { ratio: 0.05, textureSize: 512 },
-  low: { ratio: 0.35, textureSize: 1024 },
-  medium: { ratio: 0.6, textureSize: 2048 },
+  thumb: { ratio: 0.05, textureSize: 512, error: 0.01 },
+  low: { ratio: 0.35, textureSize: 1024, error: 0.004 },
+  medium: { ratio: 0.6, textureSize: 2048, error: 0.002 },
   high: { ratio: 1, textureSize: 4096 },
 };
 
@@ -411,11 +495,12 @@ function round(n: number): number {
 // ---------------------------------------------------------------- main
 
 /** Build the rungs of one asset. `dir` is the path under public/assets: the id, or id/altN for an alternate. */
-async function buildAsset(dir: string, asset: Artwork["asset"]): Promise<boolean> {
+async function buildAsset(dir: string, asset: Artwork["asset"], art: Artwork): Promise<boolean> {
   let touched = false;
   if (asset.kind === "image") {
     for (const version of asset.versions) {
       if (version.provenance === "wikimedia-commons") await fetchCommonsImage(dir, version);
+      else if (version.provenance === "typeset") await buildTypeset(dir, version, art.physical);
       else if (version.provenance === "video-still") await buildVideoStill(dir, version);
       else if (version.provenance === "screenshot" || version.provenance === "user-upload") await buildLocalImage(dir, version);
       else continue;
@@ -439,9 +524,9 @@ async function main() {
   const only = new Set(process.argv.slice(2));
   for (const art of collection.artworks) {
     if (only.size > 0 && !only.has(art.id)) continue;
-    let touched = await buildAsset(art.id, art.asset);
+    let touched = await buildAsset(art.id, art.asset, art);
     for (const [i, alt] of (art.alternates ?? []).entries()) {
-      if (await buildAsset(`${art.id}/alt${i + 1}`, alt)) touched = true;
+      if (await buildAsset(`${art.id}/alt${i + 1}`, alt, art)) touched = true;
     }
     if (touched) art.updatedAt = new Date().toISOString();
   }

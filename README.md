@@ -6,7 +6,7 @@ plane, no walls: forward is later in time, and a side quest stands off to
 the right of the work it belongs with. Works float at their true size, and
 you can walk behind one and see it mirrored.
 
-v1 holds forty-one works. They run from an Acheulean
+v1 holds fifty-two works. They run from an Acheulean
 hand axe (a CC0 photogrammetry scan, 300,000 years old) and the Lion-man of
 Hohlenstein-Stadel through eleven cave and rock paintings from five
 continents and the Altamira ceiling, a scan of the Deutsches Museum's
@@ -14,7 +14,8 @@ full-size replica hung overhead, the Venus of Willendorf, a Clovis point (anothe
 proto-cuneiform tablet, the Nebra sky disc, an Exekias amphora, the
 Rosetta Stone, the Alexander Mosaic at its real 5.8 m, the Chi Rho page of
 the Book of Kells, Fan Kuan's *Travelers Among Mountains and Streams*, a
-Benin plaque, Leonardo's *Last Supper* at 8.8 × 4.6 m, the 1903 Wright
+Benin plaque, Leonardo's *Last Supper* at 8.8 × 4.6 m, Lilienthal's 1894
+glider (a scan of the Deutsches Museum's replica, hung in the air), the 1903 Wright
 Flyer and the Apollo 11 command module *Columbia* as Smithsonian 3D scans, a
 Lunar Roving Vehicle (the Deutsches Museum's reconstruction of its replica), a
 1924 Ford Model T, bombe drums, the first transistor, the Apple I, a
@@ -22,7 +23,12 @@ Cray-1, an Apple II, a Commodore 64 (a photogrammetry scan), an Apple IIc
 with the MOS 6502 and its die beside it as the first side quest,
 a Macintosh Plus (the Deutsches Museum's own, scanned), and the rickroll, a frozen frame of Rick Astley at the size of a living-room
 television that starts to move when you walk up to it. The first iPhone is
-a CC BY artist's model from Sketchfab, standing at its true 11 cm.
+a CC BY artist's model from Sketchfab, standing at its true 11 cm. Ten
+equations hang among them as typeset sheets, from the Pythagorean theorem
+in Euclid's Elements to Shannon entropy, each in the year and place it
+was written down: Newton's gravitation, Euler's identity, Bayes' theorem,
+Maxwell's equations, Boltzmann's entropy, E = mc², Einstein's field
+equations and the Schrödinger equation.
 
 ## Run it
 
@@ -97,6 +103,7 @@ scripts/fetch-assets.ts  pulls images and models from their sources into public/
 test/layout.test.ts      layout, branches and hops, run with npm test
 scripts/dev/screenshot.mjs one bounded headless-Chrome capture, for checking renders
 scripts/dev/preview.html four fixed views of one model rung, for checking orientation and scale
+scripts/dev/bounds.ts    bounds, root transforms and texture sizes of a glTF, before it goes in
 public/draco/            Draco mesh decoder, copied from three's examples
 public/env/              overcast HDRI used for environment lighting, never drawn
 ```
@@ -215,7 +222,14 @@ showing the same work (a photograph beside a scan, an earlier example of
 the same part) goes in `alternates`, with its own credit and provenance;
 the pipeline builds its rungs under `public/assets/<id>/alt1/`, and the
 renderer does not use it yet. `npm run fetch-assets -- <id>` builds one
-work's assets instead of the whole collection. Leave `display.baseHeight` null unless a
+work's assets instead of the whole collection.
+
+An equation is an image record with provenance `typeset` and the TeX in
+`original.tex`; the pipeline sets it with MathJax on a sheet the shape of
+the record's physical size (100 × 60 cm for one line) and renders the
+ladder, keeping the SVG in `data/originals/<id>/`. Date it to when and
+where it was written down, and say in the description whose notation the
+sheet uses when that came later, as it did for Maxwell's. Leave `display.baseHeight` null unless a
 work needs a particular height: a small upright object is then centred at
 1.4 m, just below the eyes, a small flat one a little lower so its top is
 seen, and anything over 1.2 m tall stands on the floor.
@@ -297,7 +311,10 @@ Sketchfab, CC BY 4.0, and the Apple II set-up is "Apple II Computer" by
 The Macintosh Plus is a photogrammetry scan of inventory number 2000-468 by
 [Deutsches Museum | Digital](https://sketchfab.com/deutsches-museum),
 CC BY-SA 4.0, and the Lunar Roving Vehicle is their 3D reconstruction of
-replica 2019-407 from scans and the original drawings, CC BY-SA 4.0.
+replica 2019-407 from scans and the original drawings, CC BY-SA 4.0. The
+Lilienthal glider is their scan of the museum's 1958 replica, inventory
+number 1976-817, CC BY-SA 4.0. The equation sheets are typeset by this
+project with MathJax and are CC0.
 The Last Supper image is public domain, via Wikimedia Commons. The Columbia
 scan is CC0 from the Smithsonian Institution's Digitization Program Office.
 The Model T is based on "1924 Ford Model T 3d model with interior" by
