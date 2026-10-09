@@ -30,6 +30,7 @@ const XR_ACTIONS: Record<string, Action> = { "right:4": "eraNext", "right:5": "e
 
 export class Player {
   readonly rig = new Group();
+  readonly eyeHeight = EYE_HEIGHT;
   private keys = new Set<string>();
   private pitch = 0;
   private snapLatched = false;

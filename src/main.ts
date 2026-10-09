@@ -9,7 +9,7 @@ import { buildAxisCues } from "./world/axes";
 import { Player, type Action } from "./locomotion/player";
 import { clearPlace, restorePlace, trackPlace } from "./locomotion/resume";
 import { Navigator } from "./locomotion/navigate";
-import { buildEntrance, GATE_HALF_WIDTH } from "./world/sign";
+import { buildEntrance, GATE_HALF_WIDTH, GATE_HEIGHT } from "./world/sign";
 import { hasTouch, setupTouch } from "./locomotion/touch";
 import { baseHeightOf, footprintOf, onDisplay } from "./data/types";
 
@@ -78,12 +78,16 @@ if (entrance) {
   scene.add(gate);
 }
 /**
- * Far enough outside the gateway to see the whole of it: 4.5 m on a wide
- * screen, more on a portrait phone whose horizontal view is narrow.
+ * Far enough outside the gateway to see the whole of it, with sky above
+ * the cap: a portrait phone's narrow view needs the width to fit, a
+ * landscape phone's short view needs the height to.
  */
 function entranceDistance(): number {
-  const halfH = Math.atan(Math.tan((camera.fov * Math.PI) / 360) * camera.aspect);
-  return Math.max(4.5, (GATE_HALF_WIDTH + 0.4) / Math.tan(halfH));
+  const halfV = (camera.fov * Math.PI) / 360;
+  const halfH = Math.atan(Math.tan(halfV) * camera.aspect);
+  const forWidth = (GATE_HALF_WIDTH + 0.4) / Math.tan(halfH);
+  const forHeight = (GATE_HEIGHT + 1.2 - player.eyeHeight) / Math.tan(halfV);
+  return Math.max(4.5, forWidth, forHeight);
 }
 const goToEntrance = () => entrance && player.teleport(entrance.x, entrance.z + ENTRANCE_SETBACK + entranceDistance(), 0);
 

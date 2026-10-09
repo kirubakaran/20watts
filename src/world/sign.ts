@@ -20,6 +20,8 @@ const LINTEL = { h: 1.0, d: 0.8 };
 const CAP = { h: 0.14, overhang: 0.25 };
 /** Half the gateway's full width, cap included: what a visitor outside must fit in view. */
 export const GATE_HALF_WIDTH = HALF_SPAN + PIER.w / 2 + CAP.overhang;
+/** Top of the cap above the floor. */
+export const GATE_HEIGHT = PIER.h + LINTEL.h + CAP.h;
 const STONE = 0xd9d3c6;
 const PX_PER_M = 400;
 

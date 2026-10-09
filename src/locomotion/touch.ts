@@ -16,6 +16,8 @@ export function hasTouch(): boolean {
 
 export function setupTouch(player: Player, canvas: HTMLElement, onAction: (a: Action) => void) {
   document.body.classList.add("touch");
+  // The hint has done its job once the visitor has touched anything.
+  window.addEventListener("pointerdown", () => document.body.classList.add("used"), { once: true });
 
   // Look: one finger dragging on the canvas. Only the first finger steers.
   let lookId: number | null = null;

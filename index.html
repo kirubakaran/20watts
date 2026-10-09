@@ -26,12 +26,18 @@
       #hud .nw { white-space: nowrap; }
       /* Touch: a one-line card at the top, the keyboard rows hidden, a stick and hop buttons at the bottom. */
       #touch { display: none; }
-      body.touch #hud { left: 12px; right: 12px; top: max(12px, env(safe-area-inset-top)); bottom: auto; max-width: none; font-size: 12px; }
+      body.touch #hud {
+        left: max(12px, env(safe-area-inset-left)); right: auto; top: max(10px, env(safe-area-inset-top)); bottom: auto;
+        max-width: calc(100vw - 24px - env(safe-area-inset-left) - env(safe-area-inset-right)); font-size: 12px;
+      }
+      body.touch.used #hud .touchhint { display: none; }
       body.touch #hud .rows { display: none; }
       body.touch #hud .title { margin: 0; border: 0; padding: 6px 10px; }
       body.touch #touch { display: block; }
-      /* three's VR button sits at the bottom centre; keep it above the hop buttons. */
-      body.touch #VRButton { bottom: calc(max(24px, env(safe-area-inset-bottom)) + 120px) !important; }
+      /* three's VR button sits at the bottom centre; in portrait the hop buttons are there, so lift it. */
+      @media (orientation: portrait) {
+        body.touch #VRButton { bottom: calc(max(24px, env(safe-area-inset-bottom)) + 120px) !important; }
+      }
       #stick {
         position: fixed; left: max(20px, env(safe-area-inset-left)); bottom: max(24px, env(safe-area-inset-bottom)); z-index: 5;
         width: 112px; height: 112px; border-radius: 50%; touch-action: none;
@@ -64,7 +70,7 @@
   </head>
   <body>
     <div id="hud">
-      <div class="title"><b>20watts</b> · Behold the works of 20-watt brains.<span class="touchhint"> Drag to look, stick to walk, buttons to hop.</span></div>
+      <div class="title"><b>20watts</b> · Behold the works of 20-watt brains.<span class="touchhint"> Drag to look · stick walks · buttons hop</span></div>
       <div class="rows">
         <span class="lead">In VR</span><span>sticks move · <span class="nw"><kbd>A</kbd> <kbd>B</kbd> eras</span> · <span class="nw"><kbd>X</kbd> <kbd>Y</kbd> sideways</span></span>
       </div>
