@@ -160,6 +160,33 @@ on its asset version. The placard then prints "In copyright · shown under
 fair use" instead of a licence, and the asset should be small: a single
 reduced frame or a few silent seconds, never the whole thing.
 
+## Deploy
+
+The site is static, so a server needs nothing but a web server with HTTPS
+(WebXR refuses plain HTTP). `scripts/deploy.sh` does the rest over ssh:
+
+```bash
+# ~/.ssh/config on your machine
+Host musee
+    HostName <server>
+    User musee
+
+npm run deploy            # build, sync data, publish a release
+npm run deploy -- --site  # publish only the site
+DRY_RUN=1 npm run deploy  # print the remote commands instead of running them
+```
+
+Under the deploy user's home it keeps `data/originals/` (added to, never
+deleted from), `data/derived/` (the served rungs, mirrored from
+`public/assets`) and `site/releases/<stamp>-<commit>/`, with `site/current`
+a symlink swapped in one rename. The last five releases stay for rollback.
+The web server maps `/` to `site/current` and `/assets/` to `data/derived`;
+Vite's bundle lives under `/app/` so the two never collide.
+`deploy/musee.nginx.conf` is that mapping for a server that already runs
+nginx (install it, then `certbot --nginx` for TLS); `deploy/Caddyfile` is
+the same for Caddy, which handles TLS itself. Set `DEPLOY_HOST` to use
+another ssh alias.
+
 ## License
 
 Code is AGPL-3.0-only. Collection text is CC BY-SA 4.0. Images and models

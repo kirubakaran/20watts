@@ -7,4 +7,7 @@ import basicSsl from "@vitejs/plugin-basic-ssl";
 export default defineConfig({
   plugins: [basicSsl()],
   server: { host: true, port: 5173 },
+  // The bundle goes under /app/ so it never collides with the collection
+  // rungs under /assets/, which the server maps to its data directory.
+  build: { assetsDir: "app", chunkSizeWarningLimit: 1000 },
 });
