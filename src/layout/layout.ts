@@ -2,29 +2,32 @@
  * Layout: maps artworks onto the ground plane.
  *
  *   forward/back (world -Z / +Z)  = time, future is forward (-Z)
- *   left/right   (world -X / +X)  = geography, west is left, east is right
+ *   left/right   (world -X / +X)  = off the lane: branches, and in the world
+ *                                   view, geography (west left, east right)
  *
- * Both axes are ORDERED, not to scale. Works are binned (by date, to the
- * month when it is known; by degrees of longitude), distinct non-empty bins
- * are ranked, and each rank becomes one cell. Empty stretches of time or
- * space simply do not exist in the world. Two works a year apart stand one
- * behind the other; two from the same year stand side by side.
- * Within a cell, works are packed in a small grid, most important first.
+ * The time axis is ORDERED, not to scale. Works are binned by date, to the
+ * month when it is known; distinct non-empty bins are ranked, and each rank
+ * becomes one row. Empty stretches of time simply do not exist in the
+ * world. Two works a year apart stand one behind the other; two from the
+ * same month stand side by side, earlier (by day, then a hand-set order,
+ * then importance) to the west.
  *
- * Empty cells do not exist either: each time row holds only the geography
- * cells that have works, side by side from west to east and centred on the
- * spine (x = 0). So the next era is always one cell ahead, even when a
- * sparse collection would otherwise leave a lone work far off to one side.
- * At full density every row has every column and this is the plain grid.
+ * The main lane runs along the spine (x = 0). A work with a `branch` does
+ * not take a row of its own: it stands beside its anchor, to the east, as
+ * a side quest, and a chain of them (the chip inside the computer, the die
+ * inside the chip) runs further east in order. Branches are packed tight,
+ * each step as close as the two works' widths allow, never closer than the
+ * minimum pitch.
  *
- * Rows are as tight as their contents allow: cells in a row are spaced by
+ * The world view (`geoBinDegrees` set) adds the second axis: works of the
+ * same month are split by degrees of longitude into cells, side by side
+ * from west to east and centred on the spine. Empty cells do not exist: a
+ * row holds only the cells that have works. Cells in a row are spaced by
  * the row's widest cell plus a gap, between a minimum (so neighbours are
- * still distinct cells) and the full pitch (which only a row with something
- * the size of an aeroplane needs). Two desktop computers end up a few
- * metres apart, both in view from the spine.
+ * still distinct cells) and the full pitch.
  *
- * Only this module knows about time and geography. The renderer only sees
- * positions, yaws and footprints.
+ * Only this module knows about time, geography and branches. The renderer
+ * only sees positions, yaws and footprints.
  */
 import { Vector3 } from "three";
 import type { Artwork } from "../data/types";
@@ -33,13 +36,13 @@ import { footprintOf } from "../data/types";
 export interface LayoutConfig {
   /** Months per time bin: 1 orders by month where known, 12 by year, 120 by decade. */
   timeBinMonths: number;
-  /** Degrees of longitude per geography bin. */
-  geoBinDegrees: number;
-  /** Distance between adjacent time cells, metres. */
+  /** Degrees of longitude per geography cell, or null for one lane with no geography. */
+  geoBinDegrees: number | null;
+  /** Distance between adjacent time rows, metres. */
   cellPitchZ: number;
-  /** Largest distance between adjacent geography cells, metres. */
+  /** Largest distance between adjacent cells in a row, metres. */
   cellPitchX: number;
-  /** Smallest distance between adjacent geography cells, metres. */
+  /** Smallest distance between adjacent cells in a row, metres. */
   minPitchX: number;
   /** Clear space between the widest cells of a row, metres. */
   cellGap: number;
@@ -51,7 +54,7 @@ export interface LayoutConfig {
 
 export const DEFAULT_LAYOUT: LayoutConfig = {
   timeBinMonths: 1,
-  geoBinDegrees: 5,
+  geoBinDegrees: null,
   cellPitchZ: 16,
   cellPitchX: 16,
   minPitchX: 6,
@@ -60,6 +63,9 @@ export const DEFAULT_LAYOUT: LayoutConfig = {
   itemGap: 2,
 };
 
+/** The same collection with geography as the second axis. */
+export const WORLD_LAYOUT: LayoutConfig = { ...DEFAULT_LAYOUT, geoBinDegrees: 5 };
+
 export interface Placement {
   id: string;
   position: Vector3;
@@ -67,6 +73,8 @@ export interface Placement {
   yaw: number;
   /** Global ranks on each axis. Rows are compacted, so geoRank is an order, not a column. */
   cell: { timeRank: number; geoRank: number };
+  /** Set on a branch work: the id of the work it stands beside. */
+  branchOf?: string;
 }
 
 export interface AxisTick {
@@ -80,7 +88,7 @@ export interface AxisTick {
   count: number;
 }
 
-/** One occupied cell: a time row crossed with a geography column, in world coordinates. */
+/** One occupied cell in world coordinates: a time row crossed with a column, or a branch step. */
 export interface LayoutCell {
   timeRank: number;
   geoRank: number;
@@ -91,11 +99,14 @@ export interface LayoutCell {
   width: number;
   depth: number;
   count: number;
+  /** A branch step: the anchor's id and the label for the floor. */
+  branch?: { of: string; label: string };
 }
 
 export interface Layout {
   placements: Map<string, Placement>;
   timeAxis: AxisTick[];
+  /** Empty when the layout has no geography axis. */
   geoAxis: AxisTick[];
   cells: LayoutCell[];
 }
@@ -115,6 +126,7 @@ function binStart(bin: number, cfg: LayoutConfig): { year: number; month: number
 }
 
 function geoBin(a: Artwork, cfg: LayoutConfig): number {
+  if (cfg.geoBinDegrees == null) return 0;
   const lon = a.madeIn.point?.lon ?? a.location.point?.lon;
   if (lon == null) return UNKNOWN_GEO_BIN;
   return Math.floor(lon / cfg.geoBinDegrees);
@@ -129,15 +141,45 @@ function importanceOf(a: Artwork): number {
   return a.importance ?? (a.pageviews ? Math.log10(a.pageviews) / 7 : 0);
 }
 
+/** Earlier first: by day (unknown first), then hand-set order, then importance. */
+function byDateOrder(p: Artwork, q: Artwork): number {
+  return (
+    (p.date.day ?? 0) - (q.date.day ?? 0) ||
+    (p.order ?? Infinity) - (q.order ?? Infinity) ||
+    importanceOf(q) - importanceOf(p)
+  );
+}
+
+/**
+ * The branch works hanging off `anchor`, nearest first: its own steps in
+ * order, each followed by the steps hanging off it.
+ */
+function branchChain(anchor: string, children: Map<string, Artwork[]>): Artwork[] {
+  const out: Artwork[] = [];
+  for (const b of children.get(anchor) ?? []) out.push(b, ...branchChain(b.id, children));
+  return out;
+}
+
 export function computeLayout(artworks: Artwork[], cfg: LayoutConfig = DEFAULT_LAYOUT): Layout {
-  const tBins = artworks.map((a) => timeBin(a, cfg));
-  const gBins = artworks.map((a) => geoBin(a, cfg));
+  // Branches stand beside their anchors; only the rest takes part in binning.
+  // A branch whose anchor is not here stands on the lane in its own time.
+  const ids = new Set(artworks.map((a) => a.id));
+  const children = new Map<string, Artwork[]>();
+  const main: Artwork[] = [];
+  for (const a of artworks) {
+    if (a.branch && ids.has(a.branch.of)) (children.get(a.branch.of) ?? children.set(a.branch.of, []).get(a.branch.of)!).push(a);
+    else main.push(a);
+  }
+  for (const list of children.values()) list.sort((p, q) => p.branch!.step - q.branch!.step);
+
+  const tBins = main.map((a) => timeBin(a, cfg));
+  const gBins = main.map((a) => geoBin(a, cfg));
   const tRank = rankBins(tBins);
   const gRank = rankBins(gBins);
 
   // Group into cells.
   const cells = new Map<string, Artwork[]>();
-  artworks.forEach((a, i) => {
+  main.forEach((a, i) => {
     const key = `${tRank.get(tBins[i]!)}:${gRank.get(gBins[i]!)}`;
     (cells.get(key) ?? cells.set(key, []).get(key)!).push(a);
   });
@@ -153,18 +195,19 @@ export function computeLayout(artworks: Artwork[], cfg: LayoutConfig = DEFAULT_L
     [...cols.keys()].sort((p, q) => p - q).forEach((g, i) => cols.set(g, i));
   }
 
-  // Pack each cell's members in a square-ish grid, most important first, and
-  // measure the result; the row pitch depends on the widest cell in the row.
+  // Pack each cell's members and measure the result; the row pitch depends
+  // on the widest cell in the row. On the lane a cell is one row deep, so
+  // earlier is always to the west; the world view packs a square-ish grid.
   interface Packed { cols: number; rows: number; pitchX: number; pitchZ: number; width: number; depth: number }
   const packed = new Map<string, Packed>();
   for (const [key, members] of cells) {
-    members.sort((p, q) => importanceOf(q) - importanceOf(p));
+    members.sort(byDateOrder);
     const fps = members.map(footprintOf);
     const maxW = Math.max(...fps.map((f) => f.width));
     const maxD = Math.max(...fps.map((f) => f.depth));
     const pitchX = maxW + cfg.itemGap;
     const pitchZ = maxD + cfg.itemGap;
-    const cols = Math.ceil(Math.sqrt(members.length));
+    const cols = cfg.geoBinDegrees == null ? members.length : Math.ceil(Math.sqrt(members.length));
     const rows = Math.ceil(members.length / cols);
     packed.set(key, {
       cols, rows, pitchX, pitchZ,
@@ -183,6 +226,11 @@ export function computeLayout(artworks: Artwork[], cfg: LayoutConfig = DEFAULT_L
   const timeCounts = new Map<number, number>();
   const geoCounts = new Map<number, number>();
   const cellList: LayoutCell[] = [];
+  const place = (a: Artwork, x: number, z: number, cell: { timeRank: number; geoRank: number }, branchOf?: string) => {
+    const p: Placement = { id: a.id, position: new Vector3(x, 0, z), yaw: a.display.yaw ?? 0, cell };
+    if (branchOf) p.branchOf = branchOf;
+    placements.set(a.id, p);
+  };
 
   for (const [key, members] of cells) {
     const [timeRank, geoRank] = key.split(":").map(Number) as [number, number];
@@ -200,13 +248,52 @@ export function computeLayout(artworks: Artwork[], cfg: LayoutConfig = DEFAULT_L
       const row = Math.floor(i / cols);
       const x = cx + (col - (cols - 1) / 2) * pitchX;
       const z = cz + (row - (rows - 1) / 2) * pitchZ;
-      placements.set(a.id, {
-        id: a.id,
-        position: new Vector3(x, 0, z),
-        yaw: a.display.yaw ?? 0,
-        cell: { timeRank, geoRank },
-      });
+      place(a, x, z, { timeRank, geoRank });
     });
+  }
+
+  // Branches: east of the anchor's cell, one cell per step, packed tight.
+  // Anything in the row east of the anchor moves over to make room, so the
+  // anchor itself stays where the lane put it. Anchors west to east, so
+  // the moves accumulate correctly.
+  const anchors = main
+    .filter((a) => children.has(a.id))
+    .map((a) => ({ a, p: placements.get(a.id)! }))
+    .sort((p, q) => p.p.position.x - q.p.position.x);
+  for (const { a, p } of anchors) {
+    const cell = cellList.find((c) => c.timeRank === p.cell.timeRank && c.geoRank === p.cell.geoRank && !c.branch)!;
+    const chain = branchChain(a.id, children);
+    let prevX = cell.x;
+    let prevW = cell.width;
+    const added: LayoutCell[] = [];
+    for (const b of chain) {
+      const fp = footprintOf(b);
+      const w = fp.width + 2 * cfg.cellPadding;
+      const x = prevX + Math.max(cfg.minPitchX, (prevW + w) / 2 + cfg.cellGap);
+      const c: LayoutCell = {
+        timeRank: cell.timeRank, geoRank: cell.geoRank, x, z: cell.z, width: w, depth: fp.depth, count: 1,
+        branch: { of: b.branch!.of, label: b.branch!.label },
+      };
+      added.push(c);
+      place(b, x, cell.z, p.cell, b.branch!.of);
+      prevX = x;
+      prevW = w;
+    }
+    timeCounts.set(cell.timeRank, (timeCounts.get(cell.timeRank) ?? 0) + chain.length);
+    // Make room: whatever stood east of the anchor's cell in this row moves
+    // over by the chain's reach, or further if the last step is wider than
+    // the row's cells.
+    const shift = Math.max(prevX - cell.x, prevX + prevW / 2 - (cell.x + cell.width / 2));
+    const inChain = new Set(chain.map((b) => b.id));
+    for (const c of cellList) {
+      if (c.timeRank === cell.timeRank && c.x > cell.x + 1e-6) c.x += shift;
+    }
+    for (const q of placements.values()) {
+      if (q.cell.timeRank === cell.timeRank && !inChain.has(q.id) && q.position.x > cell.x + cell.width / 2 - 1e-6) {
+        q.position.x += shift;
+      }
+    }
+    cellList.push(...added);
   }
 
   const timeAxis: AxisTick[] = [...tRank].map(([bin, rank]) => {
@@ -216,12 +303,15 @@ export function computeLayout(artworks: Artwork[], cfg: LayoutConfig = DEFAULT_L
   // Geography ticks give the order and counts; rows are compacted, so the
   // coord is where the column would sit in a full row.
   const geoMid = (gRank.size - 1) / 2;
-  const geoAxis: AxisTick[] = [...gRank].map(([bin, rank]) => ({
-    rank,
-    value: Number.isFinite(bin) ? bin * cfg.geoBinDegrees : Number.NaN,
-    coord: (rank - geoMid) * cfg.cellPitchX,
-    count: geoCounts.get(rank) ?? 0,
-  }));
+  const geoAxis: AxisTick[] =
+    cfg.geoBinDegrees == null
+      ? []
+      : [...gRank].map(([bin, rank]) => ({
+          rank,
+          value: Number.isFinite(bin) ? bin * cfg.geoBinDegrees! : Number.NaN,
+          coord: (rank - geoMid) * cfg.cellPitchX,
+          count: geoCounts.get(rank) ?? 0,
+        }));
 
   return { placements, timeAxis, geoAxis, cells: cellList };
 }

@@ -8,7 +8,8 @@
     "preview": "vite preview --host",
     "typecheck": "tsc --noEmit",
     "fetch-assets": "NODE_EXTRA_CA_CERTS=scripts/certs/sectigo-ov-r36.pem tsx scripts/fetch-assets.ts",
-    "deploy": "scripts/deploy.sh"
+    "deploy": "scripts/deploy.sh",
+    "test": "vitest run"
   },
   "keywords": [],
   "author": "",
@@ -31,6 +32,7 @@
     "sharp": "^0.35.5",
     "tsx": "^4.23.15",
     "typescript": "^7.0.2",
-    "vite": "^8.3.3"
+    "vite": "^8.3.3",
+    "vitest": "^3.2.4"
   }
 }

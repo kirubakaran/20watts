@@ -1,8 +1,10 @@
 /**
- * Axis cues stencilled on the floor. Both axes are ordered, not to scale,
- * so the only honest cue is a label: the era printed on the boundary line
- * you cross when you step into a row, and the longitude printed at the
- * front edge of each occupied cell. Nothing is drawn where nothing stands.
+ * Axis cues stencilled on the floor. The time axis is ordered, not to
+ * scale, so the only honest cue is a label: the era printed on the
+ * boundary line you cross when you step into a new year. A branch step
+ * carries its label at its front edge, so a side quest reads as one. In the
+ * world view, the longitude is printed at the front edge of each cell.
+ * Nothing is drawn where nothing stands.
  */
 import { Group } from "three";
 import { Text } from "troika-three-text";
@@ -12,16 +14,13 @@ import { DEFAULT_LAYOUT } from "../layout/layout";
 const FONT = "/fonts/inter-600.woff";
 const INK = 0x5e584e;
 
-const MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-
-/** "35,000 BCE", "c. 200 BCE", "1495", "June 2007", "1490s" for decade bins, "1.5 million years ago". */
-export function eraLabel(year: number, month: number | null, binMonths: number): string {
+/** "35,000 BCE", "c. 200 BCE", "1495", "1490s" for decade bins, "1.5 million years ago". */
+export function eraLabel(year: number, binMonths: number): string {
   if (year <= -1_000_000) return `${(-year / 1_000_000).toFixed(1).replace(/\.0$/, "")} million years ago`;
   if (year <= -100_000) return `${(-year).toLocaleString("en-US")} years ago`;
   if (year < 0) return `${year <= -10_000 ? "" : "c. "}${(-year).toLocaleString("en-US")} BCE`;
   if (year === 0) return "1 CE";
   if (binMonths >= 120) return `${year}s`;
-  if (month && binMonths < 12) return `${MONTHS[month - 1]} ${year}`;
   return `${year}`;
 }
 
@@ -55,17 +54,24 @@ export function buildAxisCues(layout: Layout, cfg: LayoutConfig = DEFAULT_LAYOUT
   g.name = "axis-cues";
   const half = cfg.cellPitchZ / 2;
 
-  // Era: on the near boundary of each row, centred on the spine, hanging into the row.
+  // Era: on the near boundary of a row, centred on the spine, hanging into
+  // the row. Rows are months, but a month is almost never what matters, so
+  // the label is the year, written once, on the first row of that year.
+  let last = "";
   for (const tick of layout.timeAxis) {
-    const t = stencil(eraLabel(tick.value, tick.month ?? null, cfg.timeBinMonths), 0.7, "top");
+    const label = eraLabel(tick.value, cfg.timeBinMonths);
+    if (label === last) continue;
+    last = label;
+    const t = stencil(label, 0.7, "top");
     t.position.set(0, t.position.y, tick.coord + half - 0.5);
     g.add(t);
   }
 
-  // Longitude: at the front edge of each occupied cell, small, beside the era label.
+  // Branch steps: the label at the front edge, small.
+  // World view: the longitude at the front edge of each cell.
   const lonByRank = new Map(layout.geoAxis.map((t) => [t.rank, t.value]));
   for (const cell of layout.cells) {
-    const label = longitudeLabel(lonByRank.get(cell.geoRank) ?? Number.NaN);
+    const label = cell.branch ? cell.branch.label : longitudeLabel(lonByRank.get(cell.geoRank) ?? Number.NaN);
     if (!label) continue;
     const t = stencil(label, 0.3, "bottom");
     t.position.set(cell.x, t.position.y, cell.z + half - 0.5);

@@ -1,6 +1,6 @@
 /**
- * Jumping around the museum: one era forward or back, one cell east or
- * west, or straight to a work. Every jump lands you on the spine of a row,
+ * Jumping around the museum: one era forward or back, one cell sideways
+ * (along a row: a work of the same month, or a branch), or straight to a work. Every jump lands you on the spine of a row,
  * in front of a cell, facing the future, the way you would arrive on foot.
  *
  * A row has one standing line for all its cells, set by its deepest and

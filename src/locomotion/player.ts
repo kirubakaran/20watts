@@ -3,12 +3,12 @@
  * rig moves the visitor on desktop and in VR alike.
  *
  *  Desktop: click to capture the mouse, WASD to walk, Shift to run,
- *           [ and ] hop an era back or forward, , and . hop west or east,
+ *           [ and ] hop an era back or forward, , and . hop sideways,
  *           Home and End (or Shift with [ and ]) jump to the entrance and
  *           the latest era.
  *  VR:      left thumbstick walks relative to where you look,
  *           right thumbstick snap-turns 30° per flick,
- *           A / B hop an era forward or back, X / Y hop east or west.
+ *           A / B hop an era forward or back, X / Y hop sideways.
  *
  * Hops are reported as actions; something that knows the layout decides
  * where they land (see navigate.ts).

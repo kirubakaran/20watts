@@ -40,7 +40,7 @@
  * is the archive of record: originals are written once, never modified,
  * and are the thing to back up. The rungs are rebuilt from them.
  *
- * Usage: npm run fetch-assets
+ * Usage: npm run fetch-assets [-- <artwork id> ...]
  */
 import { readFile, writeFile, mkdir, stat } from "node:fs/promises";
 import path from "node:path";
@@ -55,7 +55,7 @@ import { execFile } from "node:child_process";
 import { promisify } from "node:util";
 
 const run = promisify(execFile);
-import type { Collection, ImageRung, ImageVersion, ModelRung, ModelVersion } from "../src/data/types";
+import type { Artwork, Collection, ImageRung, ImageVersion, ModelRung, ModelVersion } from "../src/data/types";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
 const COLLECTION = path.join(ROOT, "src/data/collection.json");
@@ -115,7 +115,7 @@ async function thumbInfo(title: string, width: number): Promise<{ url: string; w
   return { url, width: realWidth, height: Math.round((info.thumbheight / info.thumbwidth) * realWidth) };
 }
 
-async function fetchCommonsImage(artId: string, version: { original: { url: string; width: number }; rungs: ImageRung[] }) {
+async function fetchCommonsImage(artId: string, version: { original: { url: string; width: number; height: number }; rungs: ImageRung[] }) {
   const title = commonsTitleFromUrl(version.original.url);
   const dir = path.join(OUT_DIR, artId);
   const rungs = new Map<number, ImageRung>();
@@ -127,6 +127,14 @@ async function fetchCommonsImage(artId: string, version: { original: { url: stri
     const bytes = await download(t.url, path.join(dir, file));
     rungs.set(t.width, { width: t.width, height: t.height, url: `/assets/${artId}/${file}`, bytes });
     console.log(`${artId}: ${t.width}px (${(bytes / 1024).toFixed(0)} KB)`);
+  }
+  // A small original (under the first target width) is served as it is.
+  if (rungs.size === 0) {
+    const { width, height } = version.original;
+    const file = `${width}.jpg`;
+    const bytes = await download(version.original.url.split("?")[0]!, path.join(dir, file));
+    rungs.set(width, { width, height, url: `/assets/${artId}/${file}`, bytes });
+    console.log(`${artId}: ${width}px, the original (${(bytes / 1024).toFixed(0)} KB)`);
   }
   version.rungs = [...rungs.values()].sort((a, b) => a.width - b.width);
 }
@@ -402,26 +410,38 @@ function round(n: number): number {
 
 // ---------------------------------------------------------------- main
 
+/** Build the rungs of one asset. `dir` is the path under public/assets: the id, or id/altN for an alternate. */
+async function buildAsset(dir: string, asset: Artwork["asset"]): Promise<boolean> {
+  let touched = false;
+  if (asset.kind === "image") {
+    for (const version of asset.versions) {
+      if (version.provenance === "wikimedia-commons") await fetchCommonsImage(dir, version);
+      else if (version.provenance === "video-still") await buildVideoStill(dir, version);
+      else if (version.provenance === "screenshot" || version.provenance === "user-upload") await buildLocalImage(dir, version);
+      else continue;
+      touched = true;
+    }
+  } else {
+    for (const version of asset.versions) {
+      if (version.provenance === "smithsonian-3d") await fetchSmithsonianModel(dir, version);
+      else if (["zenodo", "sketchfab", "user-upload"].includes(version.provenance)) {
+        if (!(await buildLocalModel(dir, version))) continue;
+      } else continue;
+      touched = true;
+    }
+  }
+  return touched;
+}
+
 async function main() {
   const collection = JSON.parse(await readFile(COLLECTION, "utf8")) as Collection;
+  // `npm run fetch-assets -- <id> <id>` builds only those works.
+  const only = new Set(process.argv.slice(2));
   for (const art of collection.artworks) {
-    let touched = false;
-    if (art.asset.kind === "image") {
-      for (const version of art.asset.versions) {
-        if (version.provenance === "wikimedia-commons") await fetchCommonsImage(art.id, version);
-        else if (version.provenance === "video-still") await buildVideoStill(art.id, version);
-        else if (version.provenance === "screenshot" || version.provenance === "user-upload") await buildLocalImage(art.id, version);
-        else continue;
-        touched = true;
-      }
-    } else {
-      for (const version of art.asset.versions) {
-        if (version.provenance === "smithsonian-3d") await fetchSmithsonianModel(art.id, version);
-        else if (["zenodo", "sketchfab", "user-upload"].includes(version.provenance)) {
-          if (!(await buildLocalModel(art.id, version))) continue;
-        } else continue;
-        touched = true;
-      }
+    if (only.size > 0 && !only.has(art.id)) continue;
+    let touched = await buildAsset(art.id, art.asset);
+    for (const [i, alt] of (art.alternates ?? []).entries()) {
+      if (await buildAsset(`${art.id}/alt${i + 1}`, alt)) touched = true;
     }
     if (touched) art.updatedAt = new Date().toISOString();
   }

@@ -4,7 +4,7 @@
  *
  *  Floor:  polished concrete drawn procedurally, one tile per layout cell
  *          (16 m), with hairline joints every 4 m and a firmer line on the
- *          cell boundary so the time and geography grid shows quietly.
+ *          cell boundary so the grid of rows shows quietly.
  *  Sky:    a gradient dome, warm pale horizon to a cooler zenith, with the
  *          fog matched to the horizon so distance fades cleanly.
  *  Light:  an overcast HDRI as the environment map (never drawn) so PBR

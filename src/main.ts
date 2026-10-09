@@ -2,7 +2,7 @@ import { ACESFilmicToneMapping, PCFShadowMap, PerspectiveCamera, Scene, Timer, V
 import { VRButton } from "three/addons/webxr/VRButton.js";
 import type { Collection } from "./data/types";
 import collectionJson from "./data/collection.json";
-import { computeLayout } from "./layout/layout";
+import { computeLayout, DEFAULT_LAYOUT, WORLD_LAYOUT } from "./layout/layout";
 import { buildWorld } from "./world/floor";
 import { DEFAULT_STREAM, Streamer } from "./world/stream";
 import { buildAxisCues } from "./world/axes";
@@ -10,7 +10,7 @@ import { Player } from "./locomotion/player";
 import { clearPlace, restorePlace, trackPlace } from "./locomotion/resume";
 import { Navigator } from "./locomotion/navigate";
 import { buildEntrance } from "./world/sign";
-import { baseHeightOf, footprintOf } from "./data/types";
+import { baseHeightOf, footprintOf, onDisplay } from "./data/types";
 
 // JSON import types are inferred per record; the schema is the source of truth.
 const collection = collectionJson as unknown as Collection;
@@ -40,13 +40,15 @@ const gpu = {
   maxAnisotropy: renderer.capabilities.getMaxAnisotropy(),
 };
 
-const visible = collection.artworks.filter((a) => a.moderation.status === "approved");
-const layout = computeLayout(visible);
-// Works exist as stubs until the visitor is near; the streamer builds and tears down exhibits.
 const params = new URLSearchParams(location.search);
+const visible = onDisplay(collection.artworks);
+// One lane in time order, or with ?view=world the same works spread by longitude.
+const layoutCfg = params.get("view") === "world" ? WORLD_LAYOUT : DEFAULT_LAYOUT;
+const layout = computeLayout(visible, layoutCfg);
+// Works exist as stubs until the visitor is near; the streamer builds and tears down exhibits.
 const budgetMB = Number(params.get("budgetMB"));
 const streamer = new Streamer(scene, visible, layout, gpu, budgetMB > 0 ? { ...DEFAULT_STREAM, budgetBytes: budgetMB * 1048576 } : DEFAULT_STREAM);
-scene.add(buildAxisCues(layout));
+scene.add(buildAxisCues(layout, layoutCfg));
 
 // Hops between eras and cells, and jumps to a work.
 const stops = visible.map((a) => {
@@ -57,7 +59,7 @@ const nav = new Navigator(layout, stops);
 // The gateway stands across the spine a few metres before the viewing spot
 // of the oldest work; a new visitor arrives outside it, looking through.
 const ENTRANCE_SETBACK = 2.5;
-const first = visible[0];
+const first = visible.find((a) => !a.branch);
 const entrance = first ? nav.standingPoint(first.id) : null;
 if (entrance) {
   const gate = buildEntrance();
@@ -101,7 +103,9 @@ function resolveAt(at: string): string {
   }
   const year = Number(at);
   if (Number.isFinite(year) && at.trim() !== "") {
-    return visible.reduce((best, a) => (Math.abs(a.date.year - year) < Math.abs(best.date.year - year) ? a : best)).id;
+    // On the lane: a branch work stands in its anchor's year, not its own.
+    const lane = visible.filter((a) => !a.branch);
+    return lane.reduce((best, a) => (Math.abs(a.date.year - year) < Math.abs(best.date.year - year) ? a : best)).id;
   }
   return at;
 }

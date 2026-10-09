@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-08T00:00:00Z",
+  "generatedAt": "2026-10-09T00:00:00Z",
   "artworks": [
     {
       "id": "zen-21530762",
@@ -5245,6 +5245,377 @@
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
       "updatedAt": "2026-10-09T19:22:59.854Z"
+    },
+    {
+      "id": "wm-53469085",
+      "kind": "image",
+      "title": "MOS 6502, the die",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "Chuck Peddle and the MOS Technology design team",
+          "slug": null,
+          "wikidataQid": "Q1089191",
+          "wikipediaUrl": null,
+          "birthYear": null,
+          "deathYear": null,
+          "role": "designers"
+        }
+      ],
+      "date": {
+        "year": 1975,
+        "month": 9,
+        "day": null,
+        "yearStart": 1975,
+        "yearEnd": 1975,
+        "label": "September 1975",
+        "precision": "year"
+      },
+      "madeIn": {
+        "name": "MOS Technology, Norristown",
+        "region": "Pennsylvania",
+        "country": "United States",
+        "point": {
+          "lat": 40.1215,
+          "lon": -75.3399
+        },
+        "wikidataQid": "Q1010236"
+      },
+      "location": {
+        "name": null,
+        "region": null,
+        "country": null,
+        "point": null,
+        "wikidataQid": null,
+        "institution": null,
+        "inventoryNumber": null
+      },
+      "culture": "American",
+      "movement": null,
+      "periodSlug": "modern",
+      "medium": "Silicon die, NMOS, photographed through a microscope",
+      "materials": [
+        "silicon",
+        "aluminium"
+      ],
+      "genre": [
+        "electronic component"
+      ],
+      "subjects": [
+        "microprocessor",
+        "integrated circuit",
+        "die shot",
+        "very-large-scale integration"
+      ],
+      "physical": {
+        "widthCm": null,
+        "heightCm": null,
+        "depthCm": null,
+        "weightKg": null
+      },
+      "description": "The silicon inside the 6502, with the package cut away. Every line was drawn by hand: the layout team, led by Bill Mensch and Rod Orgill, laid out the chip on paper and film with rubylith, and the first run of masks worked well enough to ship. The regular blocks are the decode ROM and registers; the irregular region is the random logic that sequences each instruction. In 2010 the Visual6502 project photographed a die like this one layer by layer and rebuilt the whole processor as a simulation of its transistors, which runs in a browser today.",
+      "facts": [
+        "Roughly 3,500 transistors on about 4 mm by 4 mm of silicon, in an 8-micrometre NMOS process; a modern phone chip has about five million times as many.",
+        "The layout was drawn by hand; the hand-drawn masks of the first revision had a bug in the ROR instruction, so early datasheets left it out.",
+        "The Visual6502 project (2010) imaged a 6502 die and turned it into a transistor-level simulation anyone can run."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/MOS_Technology_6502",
+      "wikidataQid": "Q255528",
+      "externalIds": {
+        "commons-curid": "53469085",
+        "commons-file": "MOS 6502 die.jpg"
+      },
+      "copyrighted": false,
+      "asset": {
+        "kind": "image",
+        "currentVersionId": "wm-53469085-v1",
+        "versions": [
+          {
+            "id": "wm-53469085-v1",
+            "original": {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/8/8b/MOS_6502_die.jpg",
+              "width": 2696,
+              "height": 2998,
+              "bytes": 9710860,
+              "mime": "image/jpeg"
+            },
+            "rungs": [
+              {
+                "width": 1280,
+                "height": 1424,
+                "url": "/assets/wm-53469085/1280.jpg",
+                "bytes": 967911
+              }
+            ],
+            "loop": null,
+            "credit": {
+              "author": "Pauli Rautakorpi",
+              "license": {
+                "name": "CC BY 3.0",
+                "url": "https://creativecommons.org/licenses/by/3.0/"
+              },
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:MOS_6502_die.jpg"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-09T00:00:00Z",
+              "note": "Die photograph of a MOS Technology 6502, revision A, taken 2016-11-17 by Commons user Pauli Rautakorpi (own work), CC BY 3.0 per the Commons API extmetadata; 2696 x 2998 px, 9.7 MB. The package was opened and the silicon photographed through a microscope. Shown enlarged: the die is a few millimetres across and hangs at about a metre. Served at 1280 px only: the 2048 px rendering of this noise-like image is 9.5 MB."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "wikimedia-commons"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": 0.5,
+        "back": "mirror",
+        "yaw": null,
+        "fallbackWidthM": 1.1
+      },
+      "tags": [
+        "computing",
+        "microprocessor",
+        "die shot"
+      ],
+      "pageviews": null,
+      "importance": 0.8,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-09T00:00:00Z",
+      "updatedAt": "2026-10-09T22:03:16.058Z",
+      "branch": {
+        "of": "wm-153446594",
+        "step": 1,
+        "label": "inside the chip"
+      }
+    },
+    {
+      "id": "wm-153446594",
+      "kind": "image",
+      "title": "MOS Technology 6502",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "Chuck Peddle and the MOS Technology design team",
+          "slug": null,
+          "wikidataQid": "Q1089191",
+          "wikipediaUrl": null,
+          "birthYear": null,
+          "deathYear": null,
+          "role": "designers"
+        }
+      ],
+      "date": {
+        "year": 1975,
+        "month": 9,
+        "day": null,
+        "yearStart": 1975,
+        "yearEnd": 1975,
+        "label": "September 1975",
+        "precision": "year"
+      },
+      "madeIn": {
+        "name": "MOS Technology, Norristown",
+        "region": "Pennsylvania",
+        "country": "United States",
+        "point": {
+          "lat": 40.1215,
+          "lon": -75.3399
+        },
+        "wikidataQid": "Q1010236"
+      },
+      "location": {
+        "name": null,
+        "region": null,
+        "country": null,
+        "point": null,
+        "wikidataQid": null,
+        "institution": null,
+        "inventoryNumber": null
+      },
+      "culture": "American",
+      "movement": null,
+      "periodSlug": "modern",
+      "medium": "8-bit NMOS microprocessor in a 40-pin dual in-line package",
+      "materials": [
+        "silicon",
+        "plastic",
+        "tin-plated pins"
+      ],
+      "genre": [
+        "electronic component"
+      ],
+      "subjects": [
+        "microprocessor",
+        "integrated circuit",
+        "home computing",
+        "Apple II series",
+        "Commodore",
+        "Atari",
+        "Nintendo"
+      ],
+      "physical": {
+        "widthCm": null,
+        "heightCm": null,
+        "depthCm": null,
+        "weightKg": null
+      },
+      "description": "The 6502 is the 8-bit microprocessor that made the personal computer affordable. Chuck Peddle and a small team at MOS Technology, several of them fresh from Motorola's 6800, designed it to sell for $25 when the 6800 and Intel's 8080 cost around $179, and introduced it at the Wescon show in San Francisco in September 1975. It ran the Apple I and Apple II, the Commodore PET and VIC-20, the BBC Micro and, as variants, the Commodore 64, the Atari 2600 and the Nintendo Entertainment System. The Apple IIc beside it runs the 65C02, a low-power CMOS version of this chip.",
+      "facts": [
+        "Launched at $25 in September 1975; MOS sold them from a jar at the Wescon show, and the price forced Motorola and Intel to cut theirs.",
+        "About 3,500 transistors on a die a few millimetres across, drawn by hand; the design clocked at 1 MHz.",
+        "Steve Wozniak chose it for the Apple I because it was the only processor he could afford."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/MOS_Technology_6502",
+      "wikidataQid": "Q255528",
+      "externalIds": {
+        "commons-curid": "153446594",
+        "commons-file": "Ic-photo-MOS--MPS6502B--(6502-CPU).jpg"
+      },
+      "copyrighted": false,
+      "asset": {
+        "kind": "image",
+        "currentVersionId": "wm-153446594-v1",
+        "versions": [
+          {
+            "id": "wm-153446594-v1",
+            "original": {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/6/65/Ic-photo-MOS--MPS6502B--%286502-CPU%29.jpg",
+              "width": 2182,
+              "height": 812,
+              "bytes": 400534,
+              "mime": "image/jpeg"
+            },
+            "rungs": [
+              {
+                "width": 1280,
+                "height": 476,
+                "url": "/assets/wm-153446594/1280.jpg",
+                "bytes": 69928
+              },
+              {
+                "width": 2048,
+                "height": 762,
+                "url": "/assets/wm-153446594/2048.jpg",
+                "bytes": 400534
+              }
+            ],
+            "loop": null,
+            "credit": {
+              "author": "ZyMOS",
+              "license": {
+                "name": "CC BY-SA 4.0",
+                "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+              },
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Ic-photo-MOS--MPS6502B--(6502-CPU).jpg"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-09T00:00:00Z",
+              "note": "Top-down studio photograph of a MOS MPS6502B in a 40-pin plastic DIP, date code 3980 (week 39 of 1980), by Commons user ZyMOS (own work), CC BY-SA 4.0 per the Commons API extmetadata. Chosen for sharpness and a clean top-down view; the exhibited part is a 1980 plastic-package example of the 1975 design. The chip is shown enlarged: the photograph of a 5 cm part hangs at about a metre wide. An earlier example, a white-ceramic MCS6502 from week 45 of 1975, is recorded as an alternate representation."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "wikimedia-commons"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": 0.5,
+        "back": "mirror",
+        "yaw": null,
+        "fallbackWidthM": 1.1
+      },
+      "tags": [
+        "computing",
+        "microprocessor"
+      ],
+      "pageviews": null,
+      "importance": 0.85,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-09T00:00:00Z",
+      "updatedAt": "2026-10-09T22:03:17.743Z",
+      "branch": {
+        "of": "wm-11118452",
+        "step": 1,
+        "label": "the chip inside"
+      },
+      "alternates": [
+        {
+          "kind": "image",
+          "currentVersionId": "wm-153446594-alt1-v1",
+          "versions": [
+            {
+              "id": "wm-153446594-alt1-v1",
+              "original": {
+                "url": "https://upload.wikimedia.org/wikipedia/commons/3/34/MOS_MCS6502_1a.jpg",
+                "width": 640,
+                "height": 401,
+                "bytes": 215679,
+                "mime": "image/jpeg"
+              },
+              "rungs": [
+                {
+                  "width": 640,
+                  "height": 401,
+                  "url": "/assets/wm-153446594/alt1/640.jpg",
+                  "bytes": 215679
+                }
+              ],
+              "loop": null,
+              "credit": {
+                "author": "Christian Bassow",
+                "license": {
+                  "name": "CC BY-SA 4.0",
+                  "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+                },
+                "sourcePage": "https://commons.wikimedia.org/wiki/File:MOS_MCS6502_1a.jpg"
+              },
+              "contributed": {
+                "by": null,
+                "at": "2026-10-09T00:00:00Z",
+                "note": "A MOS Technology MCS6502 in a white ceramic 40-pin package with a gold lid, date code 4575 (week 45 of 1975), only a few months after the 6502 was introduced; by Commons user Christian Bassow, CC BY-SA 4.0. The most historic example found on Commons, but only 640 px wide, so it is the alternate rather than the shown image."
+              },
+              "moderation": {
+                "status": "approved",
+                "reviewedBy": null,
+                "reviewedAt": null,
+                "reason": null,
+                "flags": []
+              },
+              "provenance": "wikimedia-commons"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "wm-14619982",

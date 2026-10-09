@@ -2,10 +2,11 @@
 
 [20watts.org](https://20watts.org): everything here was made by a
 20-watt brain. A museum you walk through in VR or on a flat screen, in the browser. One open
-plane, no walls: forward is later in time, right is further east. Works float
-at their true size, and you can walk behind one and see it mirrored.
+plane, no walls: forward is later in time, and a side quest stands off to
+the right of the work it belongs with. Works float at their true size, and
+you can walk behind one and see it mirrored.
 
-v1 holds thirty-nine works. They run from an Acheulean
+v1 holds forty-one works. They run from an Acheulean
 hand axe (a CC0 photogrammetry scan, 300,000 years old) and the Lion-man of
 Hohlenstein-Stadel through eleven cave and rock paintings from five
 continents and the Altamira ceiling, a scan of the Deutsches Museum's
@@ -17,7 +18,8 @@ Benin plaque, Leonardo's *Last Supper* at 8.8 × 4.6 m, the 1903 Wright
 Flyer and the Apollo 11 command module *Columbia* as Smithsonian 3D scans, a
 Lunar Roving Vehicle (the Deutsches Museum's reconstruction of its replica), a
 1924 Ford Model T, bombe drums, the first transistor, the Apple I, a
-Cray-1, an Apple II, a Commodore 64 (a photogrammetry scan), an Apple IIc,
+Cray-1, an Apple II, a Commodore 64 (a photogrammetry scan), an Apple IIc
+with the MOS 6502 and its die beside it as the first side quest,
 a Macintosh Plus (the Deutsches Museum's own, scanned), and the rickroll, a frozen frame of Rick Astley at the size of a living-room
 television that starts to move when you walk up to it. The first iPhone is
 a CC BY artist's model from Sketchfab, standing at its true 11 cm.
@@ -29,15 +31,16 @@ npm install
 npm run dev
 ```
 
-The dev server is HTTPS (WebXR requires it). On a desktop browser open
+`npm test` runs the layout and navigation tests. The dev server is HTTPS (WebXR requires it). On a desktop browser open
 `https://localhost:5173`, click to capture the mouse, WASD to walk, Shift to
 run. On a Quest, open `https://<your LAN IP>:5173` in the headset browser,
 accept the self-signed certificate once, and press **Enter VR**. Left stick
 walks, right stick snap-turns.
 
 Walking the whole museum takes a while, so there are hops: `[` and `]`
-jump an era back or forward, `,` and `.` a cell west or east, and in VR the
-A / B buttons hop eras and X / Y hop west / east; `Home` and `End`, or
+jump an era back or forward, `,` and `.` sideways along a row (to a work
+of the same month, or to a side quest), and in VR the A / B buttons hop
+eras and X / Y hop sideways; `Home` and `End`, or
 `Shift` with `[` and `]`, jump to the entrance and the latest era. A hop lands you on the
 spine in front of the nearest cell of the next row, facing the future, as
 if you had walked there. `?at=<work id>`, `?at=<year>` or `?at=newest`
@@ -78,9 +81,9 @@ count of live exhibits and the bytes held every two seconds, and
 ```
 src/data/types.ts        the Artwork record: every attribute we will ever need
 src/data/collection.json the collection
-src/layout/layout.ts     (time, geography) -> cell -> world position + facing
+src/layout/layout.ts     time -> row, branches beside their anchors -> world position + facing
 src/world/floor.ts       ground, sky dome, environment light, shadows
-src/world/axes.ts        era and longitude labels stencilled on the floor
+src/world/axes.ts        year and side-quest labels stencilled on the floor
 src/world/exhibit.ts     one work in the world: image or glTF, placards, shadow
 src/assets/textures.ts   image ladder; sharper rungs load as you approach
 src/assets/models.ts     glb ladder, same idea for 3D scans
@@ -89,6 +92,7 @@ src/locomotion/resume.ts remembers your place in the browser and restores it
 src/locomotion/navigate.ts hops between eras and cells, and jumps to a work
 src/world/sign.ts        the entrance gateway
 scripts/fetch-assets.ts  pulls images and models from their sources into public/assets
+test/layout.test.ts      layout, branches and hops, run with npm test
 scripts/dev/screenshot.mjs one bounded headless-Chrome capture, for checking renders
 scripts/dev/preview.html four fixed views of one model rung, for checking orientation and scale
 public/draco/            Draco mesh decoder, copied from three's examples
@@ -99,7 +103,7 @@ public/env/              overcast HDRI used for environment lighting, never draw
 
 The floor is polished concrete drawn procedurally: one tile per layout
 cell with hairline joints every 4 m and a firmer line on the 16 m cell
-boundary, so the time and geography grid shows without labels. The sky is
+boundary, so the grid of rows shows without labels. The sky is
 a gradient dome, warm at the horizon and cooler overhead, with the fog
 matched to the horizon. Lighting is a CC0 overcast HDRI from Poly Haven
 used only as the environment map, plus a soft directional light that casts
@@ -108,28 +112,36 @@ mapping so their colours stay as scanned.
 
 ### Axes
 
-Both axes are ordered, not to scale. Works are binned by date, to the
-month when the record has one, and by 5° of longitude; only non-empty bins
-become cells, so empty centuries and oceans do not exist in the world. Two
-works a year apart stand one behind the other on the spine; two from the
-same year stand side by side by longitude (`timeBinMonths` in the layout
-config widens the bins to years or decades). Empty cells do not exist either: each
-time row holds only the geography cells that have works in it, side by
-side from west to east and centred on the spine, so the next era is always
-one cell ahead rather than off to one side. In a sparse collection this
-means a column is not a fixed longitude; once every row has every column
-it is the plain grid. Rows are only as wide as they need to be: cells are
-spaced by the row's widest cell plus a gap, between 6 m and the full 16 m
-pitch, so two desktop computers stand a few metres apart and both are in
-view from the spine, while the Wright Flyer's row keeps the full pitch.
-Within a cell, works are packed in a grid, most important first. `computeLayout` returns the tick list for each axis and
-the list of occupied cells.
+The time axis is ordered, not to scale. Works are binned by date, to the
+month when the record has one; only non-empty bins become rows, so empty
+centuries do not exist in the world. Two works a year apart stand one
+behind the other on the spine; two from the same month stand side by side,
+the earlier to the west (by `date.day`, then a hand-set `order`, then
+`importance`). `timeBinMonths` in the layout config widens the bins to
+years or decades. Geography is not an axis: every work stands on the one
+lane, whatever its longitude, and the record keeps `madeIn` for the world
+view, `?view=world`, which spreads each month's works by 5° of longitude
+into cells, west to east and centred on the spine, with the longitude
+printed on the floor.
 
-Those feed the axis cues stencilled on the floor (`src/world/axes.ts`):
-the era is printed on the boundary line you cross when you step into a
-row ("35,000 BCE", "c. 200 BCE", "1490s") and the longitude at the front
-edge of each occupied cell ("115°E"). Since neither axis is to scale, a
-label is the only honest cue, and nothing is drawn where nothing stands.
+A work with a `branch` is a side quest: it does not take a row of its own
+but stands to the right of the work it belongs with, in that work's row,
+with its label stencilled on the floor in front of it ("the chip inside").
+Steps count outward, and a step can have steps of its own, so the Apple
+IIc has the 6502 beside it and the 6502 has its die beside that. The chain
+hangs off the east edge of the anchor's cell, as close as the works' widths
+allow and never closer than 6 m, and anything else in the row moves over.
+The sideways hop walks it. A branch keeps its own date for the placard.
+
+Rows are only as wide as they need to be: cells are spaced by the row's
+widest cell plus a gap, between 6 m and the full 16 m pitch. `computeLayout`
+returns the time ticks and the list of occupied cells.
+
+Those feed the cues stencilled on the floor (`src/world/axes.ts`): the
+year is printed on the boundary line you cross when you step into a new
+year ("35,000 BCE", "c. 200 BCE", "1976"), once, however many months of it
+have a row, since the month is almost never what matters. Nothing is drawn
+where nothing stands.
 
 ### Assets
 
@@ -194,7 +206,14 @@ unpack it into `data/originals/<artwork id>/`, set provenance `sketchfab`,
 and run the pipeline. Mark an artist-made model `representation:
 "reconstruction"`; the placard then says so and credits the author, which
 CC BY requires. Give `date.month` (and `day`) when the record has one; it
-sets the order within a year. Leave `display.baseHeight` null unless a
+sets the order within a year, and `order` breaks a tie by hand. To stand a
+work beside another instead of in its own time, give it a `branch`: the
+anchor's id, a `step` (1 nearest) and the floor label. A second way of
+showing the same work (a photograph beside a scan, an earlier example of
+the same part) goes in `alternates`, with its own credit and provenance;
+the pipeline builds its rungs under `public/assets/<id>/alt1/`, and the
+renderer does not use it yet. `npm run fetch-assets -- <id>` builds one
+work's assets instead of the whole collection. Leave `display.baseHeight` null unless a
 work needs a particular height: a small upright object is then centred at
 1.4 m, just below the eyes, a small flat one a little lower so its top is
 seen, and anything over 1.2 m tall stands on the floor.
@@ -265,7 +284,10 @@ from the Smithsonian. The bombe drums and the transistor on display at Bell
 Labs are replicas, and the placards say so. The Commodore 64 is a
 photogrammetry scan by Digital Heritage Australia with ACMI, CC BY 4.0,
 mirrored on Zenodo. The Apple I photograph of the Smithsonian's board is
-CC0 by Blakespot; the Apple IIc photograph is CC BY 3.0 by Bilby.
+CC0 by Blakespot; the Apple IIc photograph is CC BY 3.0 by Bilby. The MOS
+6502 photograph is CC BY-SA 4.0 by ZyMOS, its 1975 ceramic alternate CC
+BY-SA 4.0 by Christian Bassow, and the 6502 die photograph CC BY 3.0 by
+Pauli Rautakorpi.
 The iPhone is "iPhone 1st
 generation" by [skjoldbroder](https://sketchfab.com/skjoldbroder) on
 Sketchfab, CC BY 4.0, and the Apple II set-up is "Apple II Computer" by

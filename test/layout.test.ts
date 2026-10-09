@@ -1,0 +1,196 @@
+import { describe, expect, it } from "vitest";
+import { readFileSync } from "node:fs";
+import { computeLayout, DEFAULT_LAYOUT, WORLD_LAYOUT, type Layout } from "../src/layout/layout";
+import { footprintOf, onDisplay, type Artwork, type Collection } from "../src/data/types";
+import { Navigator } from "../src/locomotion/navigate";
+
+const collection = JSON.parse(readFileSync(new URL("../src/data/collection.json", import.meta.url), "utf8")) as Collection;
+const shown = onDisplay(collection.artworks);
+
+/** A copy of a work with a new id, date and size, for synthetic collections. */
+function variant(base: Artwork, id: string, year: number, month: number | null, widthM: number, extra: Partial<Artwork> = {}): Artwork {
+  const a: Artwork = structuredClone(base);
+  a.id = id;
+  a.date = { ...a.date, year, month, day: null };
+  a.physical = { widthCm: widthM * 100, heightCm: widthM * 60, depthCm: null, weightKg: null };
+  delete a.branch;
+  delete a.order;
+  return Object.assign(a, extra);
+}
+
+function footprintRects(layout: Layout, works: Artwork[]) {
+  return works.map((a) => {
+    const p = layout.placements.get(a.id)!;
+    const f = footprintOf(a);
+    return { id: a.id, x0: p.position.x - f.width / 2, x1: p.position.x + f.width / 2, z0: p.position.z - f.depth / 2, z1: p.position.z + f.depth / 2 };
+  });
+}
+
+function overlaps(layout: Layout, works: Artwork[]): string[] {
+  const r = footprintRects(layout, works);
+  const out: string[] = [];
+  for (let i = 0; i < r.length; i++)
+    for (let j = i + 1; j < r.length; j++) {
+      const a = r[i]!, b = r[j]!;
+      if (a.x0 < b.x1 && b.x0 < a.x1 && a.z0 < b.z1 && b.z0 < a.z1) out.push(`${a.id} / ${b.id}`);
+    }
+  return out;
+}
+
+describe("the collection on the lane", () => {
+  const layout = computeLayout(shown);
+
+  it("places every shown work, and nothing else", () => {
+    expect([...layout.placements.keys()].sort()).toEqual(shown.map((a) => a.id).sort());
+    const hidden = collection.artworks.filter((a) => a.moderation.status !== "approved");
+    expect(hidden.length).toBeGreaterThan(0);
+    for (const a of hidden) expect(layout.placements.has(a.id)).toBe(false);
+  });
+
+  it("is deterministic", () => {
+    const again = computeLayout(shown);
+    for (const [id, p] of layout.placements) expect(again.placements.get(id)!.position.toArray()).toEqual(p.position.toArray());
+  });
+
+  it("has no overlapping footprints", () => {
+    expect(overlaps(layout, shown)).toEqual([]);
+  });
+
+  it("keeps every main-lane work on the spine unless it shares a month", () => {
+    const main = shown.filter((a) => !a.branch);
+    for (const a of main) {
+      const p = layout.placements.get(a.id)!;
+      const sameMonth = main.filter((b) => b.date.year === a.date.year && (b.date.month ?? 0) === (a.date.month ?? 0));
+      if (sameMonth.length === 1) expect(p.position.x, a.id).toBe(0);
+    }
+  });
+
+  it("runs forward in time, row by row, with no geography axis", () => {
+    const main = shown.filter((a) => !a.branch);
+    let lastZ = Infinity;
+    let lastKey = -Infinity;
+    for (const a of main) {
+      const p = layout.placements.get(a.id)!;
+      const key = a.date.year * 13 + (a.date.month ?? 0);
+      expect(key).toBeGreaterThanOrEqual(lastKey);
+      if (key > lastKey) expect(p.position.z).toBeLessThan(lastZ);
+      lastZ = p.position.z;
+      lastKey = key;
+    }
+    expect(layout.geoAxis).toEqual([]);
+  });
+
+  it("stands the 6502 beside the Apple IIc, and its die beside the 6502, in the IIc's row", () => {
+    const iic = layout.placements.get("wm-11118452")!;
+    const chip = layout.placements.get("wm-153446594")!;
+    const die = layout.placements.get("wm-53469085")!;
+    expect(chip.position.z).toBe(iic.position.z);
+    expect(die.position.z).toBe(iic.position.z);
+    expect(chip.position.x).toBeGreaterThan(iic.position.x);
+    expect(die.position.x).toBeGreaterThan(chip.position.x);
+    expect(chip.branchOf).toBe("wm-11118452");
+    expect(die.branchOf).toBe("wm-153446594");
+    const labels = layout.cells.filter((c) => c.branch).map((c) => c.branch!.label);
+    expect(labels).toEqual(["the chip inside", "inside the chip"]);
+  });
+});
+
+describe("synthetic collections", () => {
+  const base = shown.find((a) => a.kind === "image" && !a.branch)!;
+
+  it("orders works of one month by day, then hand-set order, then importance, west to east", () => {
+    const works = [
+      variant(base, "c", 1990, 6, 1, { importance: 0.9 }),
+      variant(base, "b", 1990, 6, 1, { importance: 0.5, order: 2 }),
+      variant(base, "a", 1990, 6, 1, { importance: 0.1, order: 1 }),
+      variant(base, "d", 1990, 6, 1, { importance: 0.5 }),
+    ];
+    works[3]!.date.day = 20;
+    const l = computeLayout(works);
+    const xs = ["a", "b", "c", "d"].map((id) => l.placements.get(id)!.position.x);
+    expect(xs).toEqual([...xs].sort((p, q) => p - q));
+    expect(new Set(works.map((w) => l.placements.get(w.id)!.position.z)).size).toBe(1);
+  });
+
+  it("packs tiny and huge works without overlap, on the lane and in the world view", () => {
+    const works = [
+      variant(base, "tiny", 1900, null, 0.1),
+      variant(base, "huge", 1900, null, 30),
+      variant(base, "mid", 1900, 3, 2),
+      variant(base, "next", 1901, null, 1),
+      variant(base, "far", 2000, 1, 12),
+    ];
+    works[1]!.madeIn.point = { lat: 0, lon: 100 };
+    for (const cfg of [DEFAULT_LAYOUT, WORLD_LAYOUT]) {
+      const l = computeLayout(works, cfg);
+      expect(overlaps(l, works)).toEqual([]);
+    }
+  });
+
+  it("hangs a chain off the east edge of the anchor's cell, and moves the rest of the row over", () => {
+    const works = [
+      variant(base, "anchor", 1990, 6, 1, { order: 1 }),
+      variant(base, "neighbour", 1990, 6, 1, { order: 2 }),
+      variant(base, "step1", 1950, null, 8, { branch: { of: "anchor", step: 1, label: "one" } }),
+      variant(base, "step2", 1950, null, 1, { branch: { of: "step1", step: 1, label: "two" } }),
+      variant(base, "elsewhere", 1990, 6, 1, { order: 3 }),
+    ];
+    // In the world view the third work is a cell of its own, east of the anchor's.
+    works[4]!.madeIn.point = { lat: 0, lon: 100 };
+    const l = computeLayout(works, WORLD_LAYOUT);
+    expect(overlaps(l, works)).toEqual([]);
+    const x = (id: string) => l.placements.get(id)!.position.x;
+    // A chain hangs off the cell, which holds every work of that month: anchor, then its neighbour, then the steps.
+    expect(x("neighbour")).toBeGreaterThan(x("anchor"));
+    expect(x("step1")).toBeGreaterThan(x("neighbour"));
+    expect(x("step2")).toBeGreaterThan(x("step1"));
+    expect(x("elsewhere")).toBeGreaterThan(x("step2"));
+    // The anchor itself stands where it would without its branches.
+    const without = computeLayout(works.filter((w) => !w.branch), WORLD_LAYOUT);
+    expect(x("anchor")).toBe(without.placements.get("anchor")!.position.x);
+  });
+
+  it("leaves a branch whose anchor is not shown off the floor", () => {
+    const works = [...shown, variant(base, "orphan", 1990, 6, 1, { branch: { of: "nope", step: 1, label: "x" } })];
+    expect(onDisplay(works).map((a) => a.id)).not.toContain("orphan");
+  });
+});
+
+describe("hops", () => {
+  const layout = computeLayout(shown);
+  const stops = shown.map((a) => {
+    const p = layout.placements.get(a.id)!.position;
+    return { id: a.id, x: p.x, z: p.z, footprint: footprintOf(a) };
+  });
+  const nav = new Navigator(layout, stops);
+  const player = {
+    x: 0, z: 0,
+    floorPosition() { return { x: this.x, z: this.z }; },
+    teleport(x: number, z: number) { this.x = x; this.z = z; },
+  };
+  const fake = player as unknown as Parameters<Navigator["goTo"]>[0];
+
+  it("walks every row forward then back", () => {
+    const rows = new Set(layout.cells.map((c) => c.timeRank)).size;
+    nav.goTo(fake, shown[0]!.id);
+    let n = 0;
+    while (nav.hopEra(fake, 1)) n++;
+    expect(n).toBe(rows - 1);
+    let m = 0;
+    while (nav.hopEra(fake, -1)) m++;
+    expect(m).toBe(rows - 1);
+  });
+
+  it("goes sideways from the Apple IIc to the chip, to the die, and no further", () => {
+    nav.goTo(fake, "wm-11118452");
+    const x0 = player.x;
+    expect(nav.hopGeo(fake, 1)).toBe(true);
+    expect(player.x).toBeGreaterThan(x0);
+    expect(nav.hopGeo(fake, 1)).toBe(true);
+    expect(nav.hopGeo(fake, 1)).toBe(false);
+    expect(nav.hopGeo(fake, -1)).toBe(true);
+    expect(nav.hopGeo(fake, -1)).toBe(true);
+    expect(player.x).toBe(x0);
+    expect(nav.hopGeo(fake, -1)).toBe(false);
+  });
+});

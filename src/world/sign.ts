@@ -142,7 +142,7 @@ export function buildEntrance(): Group {
 
   // How to read the floor, on the left pier at eye height.
   const plaque = plaqueText(
-    "Forward is later in time.\nEast is to your right.\nEvery work stands at its true size.\nThe eras are written on the floor.",
+    "Forward is later in time.\nSide quests stand off to the right.\nEvery work stands at its true size.\nThe years are written on the floor.",
     PIER.w - 0.12,
   );
   plaque.position.set(-HALF_SPAN, 1.5, PIER.d / 2 + 0.003);

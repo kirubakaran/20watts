@@ -211,6 +211,21 @@ export interface ModelAsset {
   versions: ModelVersion[];
 }
 
+/**
+ * A side quest: this work stands beside another, off the main lane, because
+ * the two belong together in a way time does not show: the chip inside a
+ * computer, the manual that came in its box, the die inside the chip.
+ * Steps count outward from the anchor, 1 nearest; a step's own date is kept
+ * for the placard but does not place it. A branch of a branch is allowed
+ * (the anchor may itself be a branch work); the chain stands in one row.
+ */
+export interface Branch {
+  of: ArtworkId;
+  step: number;
+  /** Stencilled on the floor in front of it, e.g. "the chip inside". */
+  label: string;
+}
+
 export interface DisplayHints {
   /** Multiplier on physical size. 1 = true scale. */
   scale: number;
@@ -236,7 +251,7 @@ export interface Artwork {
   altTitles: string[];
   creators: Creator[];
   date: DateInfo;
-  /** Where it was made. Drives the geography axis. */
+  /** Where it was made. Kept for the world view (`?view=world`), which spreads a row by longitude. */
   madeIn: Place;
   /** Where it is today. */
   location: CurrentLocation;
@@ -265,8 +280,24 @@ export interface Artwork {
   tags: string[];
   /** Wikipedia pageviews over the trailing year; a popularity signal. */
   pageviews: number | null;
-  /** Editorial importance 0..1; used for far-distance culling and cell ordering. */
+  /** Editorial importance 0..1; the last resort for ordering works that share a date. */
   importance: number | null;
+  /**
+   * Hand-set order among works of the same month on the main lane; lower
+   * stands earlier (further west). Absent: by day, then importance.
+   */
+  order?: number;
+  /** Where it stands when not on the main lane. Absent: on the lane, in time order. */
+  branch?: Branch;
+  /**
+   * Other ways of showing the same work: a photograph beside a scan, the
+   * earlier part beside the later one. `asset` is what is shown; these are
+   * recorded with full credit and provenance so a device that cannot show
+   * the first, or a later editor, can fall back or switch without a new
+   * record. The pipeline builds their rungs; the renderer does not read
+   * them yet.
+   */
+  alternates?: (ImageAsset | ModelAsset)[];
   moderation: Moderation;
   source: "wikipedia-import" | "user" | "admin";
   createdAt: string;
@@ -284,6 +315,26 @@ export interface Footprint {
   width: number;
   depth: number;
   height: number;
+}
+
+/** Every asset of a work, shown one first. */
+export function assetsOf(a: Artwork): (ImageAsset | ModelAsset)[] {
+  return [a.asset, ...(a.alternates ?? [])];
+}
+
+/**
+ * The works on display: approved, and not a branch of something absent.
+ * The order is the collection's, which is by date.
+ */
+export function onDisplay(artworks: Artwork[]): Artwork[] {
+  let shown = artworks.filter((a) => a.moderation.status === "approved");
+  // A branch whose anchor is not shown is not shown; repeat for chains.
+  for (;;) {
+    const ids = new Set(shown.map((a) => a.id));
+    const next = shown.filter((a) => !a.branch || ids.has(a.branch.of));
+    if (next.length === shown.length) return next;
+    shown = next;
+  }
 }
 
 export function currentImageVersion(a: Artwork): ImageVersion | null {
