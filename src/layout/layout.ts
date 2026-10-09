@@ -4,9 +4,11 @@
  *   forward/back (world -Z / +Z)  = time, future is forward (-Z)
  *   left/right   (world -X / +X)  = geography, west is left, east is right
  *
- * Both axes are ORDERED, not to scale. Works are binned (decades, degrees of
- * longitude), distinct non-empty bins are ranked, and each rank becomes one
- * cell. Empty stretches of time or space simply do not exist in the world.
+ * Both axes are ORDERED, not to scale. Works are binned (by date, to the
+ * month when it is known; by degrees of longitude), distinct non-empty bins
+ * are ranked, and each rank becomes one cell. Empty stretches of time or
+ * space simply do not exist in the world. Two works a year apart stand one
+ * behind the other; two from the same year stand side by side.
  * Within a cell, works are packed in a small grid, most important first.
  *
  * Empty cells do not exist either: each time row holds only the geography
@@ -29,8 +31,8 @@ import type { Artwork } from "../data/types";
 import { footprintOf } from "../data/types";
 
 export interface LayoutConfig {
-  /** Years per time bin. */
-  timeBinYears: number;
+  /** Months per time bin: 1 orders by month where known, 12 by year, 120 by decade. */
+  timeBinMonths: number;
   /** Degrees of longitude per geography bin. */
   geoBinDegrees: number;
   /** Distance between adjacent time cells, metres. */
@@ -48,7 +50,7 @@ export interface LayoutConfig {
 }
 
 export const DEFAULT_LAYOUT: LayoutConfig = {
-  timeBinYears: 10,
+  timeBinMonths: 1,
   geoBinDegrees: 5,
   cellPitchZ: 16,
   cellPitchX: 16,
@@ -71,6 +73,8 @@ export interface AxisTick {
   rank: number;
   /** Bin start value (year, or degrees of longitude). */
   value: number;
+  /** Time axis only: month (1–12) the bin starts in, or null when it starts on an unknown month. */
+  month?: number | null;
   /** World coordinate of the cell centre on that axis. */
   coord: number;
   count: number;
@@ -99,8 +103,15 @@ export interface Layout {
 /** Works with no known longitude go in a bin past the eastern edge. */
 const UNKNOWN_GEO_BIN = Number.POSITIVE_INFINITY;
 
+/** Months since year 0; an unknown month sorts before January of its year. */
 function timeBin(a: Artwork, cfg: LayoutConfig): number {
-  return Math.floor(a.date.year / cfg.timeBinYears);
+  return Math.floor((a.date.year * 13 + (a.date.month ?? 0)) / cfg.timeBinMonths);
+}
+function binStart(bin: number, cfg: LayoutConfig): { year: number; month: number | null } {
+  const m = bin * cfg.timeBinMonths;
+  const year = Math.floor(m / 13);
+  const month = m - year * 13;
+  return { year, month: month === 0 ? null : month };
 }
 
 function geoBin(a: Artwork, cfg: LayoutConfig): number {
@@ -198,12 +209,10 @@ export function computeLayout(artworks: Artwork[], cfg: LayoutConfig = DEFAULT_L
     });
   }
 
-  const timeAxis: AxisTick[] = [...tRank].map(([bin, rank]) => ({
-    rank,
-    value: bin * cfg.timeBinYears,
-    coord: -rank * cfg.cellPitchZ,
-    count: timeCounts.get(rank) ?? 0,
-  }));
+  const timeAxis: AxisTick[] = [...tRank].map(([bin, rank]) => {
+    const { year, month } = binStart(bin, cfg);
+    return { rank, value: year, month, coord: -rank * cfg.cellPitchZ, count: timeCounts.get(rank) ?? 0 };
+  });
   // Geography ticks give the order and counts; rows are compacted, so the
   // coord is where the column would sit in a full row.
   const geoMid = (gRank.size - 1) / 2;

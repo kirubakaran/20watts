@@ -18,7 +18,7 @@ import {
 } from "three";
 import { Text } from "troika-three-text";
 import type { Artwork } from "../data/types";
-import { currentImageVersion, currentModelVersion, imageDisplaySize, footprintOf } from "../data/types";
+import { baseHeightOf, currentImageVersion, currentModelVersion, imageDisplaySize, footprintOf } from "../data/types";
 import { ImageLadder } from "../assets/textures";
 import { ModelLadder } from "../assets/models";
 import { Motion } from "../assets/motion";
@@ -165,7 +165,7 @@ export class Exhibit {
     // read the one facing you, on your left either way. A work hung high enough
     // gets its placard underneath; a work that reaches the floor gets it beside.
     const PLACARD_W = 0.9;
-    const base = artwork.display.baseHeight;
+    const base = baseHeightOf(artwork);
     const below = base >= 1.1;
     const top = below ? base - 0.08 : 1.45;
     const dx = below ? fp.width / 2 : fp.width / 2 + 0.15 + PLACARD_W;
@@ -183,7 +183,7 @@ export class Exhibit {
     const a = this.artwork;
     const v = currentImageVersion(a);
     const { width, height } = imageDisplaySize(a);
-    const y = a.display.baseHeight + height / 2;
+    const y = baseHeightOf(a) + height / 2;
     this.centre.set(0, y, 0);
 
     this.imageMaterial = new MeshBasicMaterial({
@@ -224,7 +224,7 @@ export class Exhibit {
     const v = currentModelVersion(a);
     if (!v) return;
     const fp = footprintOf(a);
-    this.centre.set(0, a.display.baseHeight + fp.height / 2, 0);
+    this.centre.set(0, baseHeightOf(a) + fp.height / 2, 0);
     if (v.rungs.length === 0) return;
     // Rungs are in metres with the base at y = 0 and the footprint centred,
     // so the only transforms left are the record's own scale and height.
@@ -232,7 +232,7 @@ export class Exhibit {
     ladder.onUpgrade((root: Group) => {
       if (this.modelRoot) this.group.remove(this.modelRoot);
       root.scale.setScalar(v.scale * a.display.scale);
-      root.position.y = a.display.baseHeight;
+      root.position.y = baseHeightOf(a);
       root.name = "model";
       root.traverse((o) => {
         if (o instanceof Mesh) o.castShadow = true;

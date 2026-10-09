@@ -11,6 +11,8 @@
       "creators": [],
       "date": {
         "year": -300000,
+        "month": null,
+        "day": null,
         "yearStart": -1500000,
         "yearEnd": -300000,
         "label": "Lower Palaeolithic, Acheulean (before 300,000 years ago)",
@@ -150,7 +152,7 @@
       },
       "display": {
         "scale": 1,
-        "baseHeight": 1,
+        "baseHeight": null,
         "back": "none",
         "yaw": null,
         "fallbackWidthM": 1.2
@@ -182,6 +184,8 @@
       "creators": [],
       "date": {
         "year": -38000,
+        "month": null,
+        "day": null,
         "yearStart": -39000,
         "yearEnd": -33000,
         "label": "c. 40,000 years ago (Aurignacian)",
@@ -338,6 +342,8 @@
       ],
       "date": {
         "year": -35000,
+        "month": null,
+        "day": null,
         "yearStart": -38000,
         "yearEnd": -20000,
         "label": "c. 35,000 BCE",
@@ -496,6 +502,8 @@
       ],
       "date": {
         "year": -34000,
+        "month": null,
+        "day": null,
         "yearStart": -35000,
         "yearEnd": -31000,
         "label": "c. 34,000 BCE",
@@ -647,6 +655,8 @@
       "creators": [],
       "date": {
         "year": -28000,
+        "month": null,
+        "day": null,
         "yearStart": -31000,
         "yearEnd": -18000,
         "label": "c. 30,000 years ago (Gravettian)",
@@ -802,6 +812,8 @@
       ],
       "date": {
         "year": -15000,
+        "month": null,
+        "day": null,
         "yearStart": -16000,
         "yearEnd": -14000,
         "label": "c. 15,000 BCE",
@@ -957,6 +969,8 @@
       ],
       "date": {
         "year": -12500,
+        "month": null,
+        "day": null,
         "yearStart": -14000,
         "yearEnd": -11000,
         "label": "c. 12,500 BCE",
@@ -1108,6 +1122,8 @@
       "creators": [],
       "date": {
         "year": -11000,
+        "month": null,
+        "day": null,
         "yearStart": -11400,
         "yearEnd": -10700,
         "label": "c. 11,400–10,700 BCE (Early Paleoindian, Clovis)",
@@ -1247,7 +1263,7 @@
       },
       "display": {
         "scale": 1,
-        "baseHeight": 1,
+        "baseHeight": null,
         "back": "none",
         "yaw": null,
         "fallbackWidthM": 1.2
@@ -1289,6 +1305,8 @@
       ],
       "date": {
         "year": -8000,
+        "month": null,
+        "day": null,
         "yearStart": -10000,
         "yearEnd": -4000,
         "label": "c. 8000 BCE",
@@ -1447,6 +1465,8 @@
       ],
       "date": {
         "year": -8000,
+        "month": null,
+        "day": null,
         "yearStart": -10000,
         "yearEnd": -1000,
         "label": "c. 8000 BCE",
@@ -1607,6 +1627,8 @@
       ],
       "date": {
         "year": -7300,
+        "month": null,
+        "day": null,
         "yearStart": -11000,
         "yearEnd": -1000,
         "label": "c. 7300 BCE",
@@ -1763,6 +1785,8 @@
       ],
       "date": {
         "year": -5000,
+        "month": null,
+        "day": null,
         "yearStart": -6000,
         "yearEnd": -2000,
         "label": "c. 5000 BCE",
@@ -1923,6 +1947,8 @@
       ],
       "date": {
         "year": -3000,
+        "month": null,
+        "day": null,
         "yearStart": -3500,
         "yearEnd": -2500,
         "label": "c. 3500–2500 BCE",
@@ -2073,6 +2099,8 @@
       "creators": [],
       "date": {
         "year": -3000,
+        "month": null,
+        "day": null,
         "yearStart": -3100,
         "yearEnd": -2900,
         "label": "ca. 3100–2900 BCE (Jemdet Nasr period)",
@@ -2221,6 +2249,8 @@
       "creators": [],
       "date": {
         "year": -1600,
+        "month": null,
+        "day": null,
         "yearStart": -1800,
         "yearEnd": -1600,
         "label": "c. 1800–1600 BCE (Early Bronze Age)",
@@ -2380,6 +2410,8 @@
       ],
       "date": {
         "year": -540,
+        "month": null,
+        "day": null,
         "yearStart": -540,
         "yearEnd": -540,
         "label": "ca. 540 BC",
@@ -2529,6 +2561,8 @@
       "creators": [],
       "date": {
         "year": -196,
+        "month": null,
+        "day": null,
         "yearStart": -196,
         "yearEnd": -196,
         "label": "196 BCE (Ptolemaic period)",
@@ -2676,6 +2710,8 @@
       "creators": [],
       "date": {
         "year": -110,
+        "month": null,
+        "day": null,
         "yearStart": -120,
         "yearEnd": -100,
         "label": "c. 120–100 BC",
@@ -2835,6 +2871,8 @@
       ],
       "date": {
         "year": 500,
+        "month": null,
+        "day": null,
         "yearStart": 1,
         "yearEnd": 1100,
         "label": "c. 1–1100 CE",
@@ -2994,6 +3032,8 @@
       ],
       "date": {
         "year": 500,
+        "month": null,
+        "day": null,
         "yearStart": -1500,
         "yearEnd": 1900,
         "label": "c. 500 CE",
@@ -3144,6 +3184,8 @@
       "creators": [],
       "date": {
         "year": 800,
+        "month": null,
+        "day": null,
         "yearStart": 800,
         "yearEnd": 800,
         "label": "c. 800",
@@ -3297,6 +3339,8 @@
       ],
       "date": {
         "year": 1000,
+        "month": null,
+        "day": null,
         "yearStart": -1000,
         "yearEnd": 1850,
         "label": "c. 1000 CE (undated)",
@@ -3458,6 +3502,8 @@
       ],
       "date": {
         "year": 1000,
+        "month": null,
+        "day": null,
         "yearStart": 1000,
         "yearEnd": 1020,
         "label": "c. 1000 (Northern Song)",
@@ -3620,6 +3666,8 @@
       ],
       "date": {
         "year": 1495,
+        "month": null,
+        "day": null,
         "yearStart": 1495,
         "yearEnd": 1498,
         "label": "c. 1495–1498",
@@ -3782,6 +3830,8 @@
       ],
       "date": {
         "year": 1555,
+        "month": null,
+        "day": null,
         "yearStart": 1540,
         "yearEnd": 1570,
         "label": "ca. 1540–70",
@@ -3940,6 +3990,8 @@
       ],
       "date": {
         "year": 1903,
+        "month": 12,
+        "day": 17,
         "yearStart": 1903,
         "yearEnd": 1903,
         "label": "1903",
@@ -4134,6 +4186,8 @@
       ],
       "date": {
         "year": 1924,
+        "month": null,
+        "day": null,
         "yearStart": 1908,
         "yearEnd": 1927,
         "label": "1924 (produced 1908–1927)",
@@ -4276,7 +4330,7 @@
       },
       "display": {
         "scale": 1,
-        "baseHeight": 0,
+        "baseHeight": null,
         "back": "none",
         "yaw": null,
         "fallbackWidthM": 1.2
@@ -4318,6 +4372,8 @@
       ],
       "date": {
         "year": 1940,
+        "month": null,
+        "day": null,
         "yearStart": 1940,
         "yearEnd": 1945,
         "label": "1940 (original design; drums shown are a 1995–2008 rebuild)",
@@ -4478,6 +4534,8 @@
       ],
       "date": {
         "year": 1947,
+        "month": 12,
+        "day": null,
         "yearStart": 1947,
         "yearEnd": 1947,
         "label": "December 1947",
@@ -4633,6 +4691,8 @@
       ],
       "date": {
         "year": 1969,
+        "month": 7,
+        "day": null,
         "yearStart": 1968,
         "yearEnd": 1969,
         "label": "1969",
@@ -4820,6 +4880,8 @@
       ],
       "date": {
         "year": 1976,
+        "month": 3,
+        "day": null,
         "yearStart": 1975,
         "yearEnd": 1976,
         "label": "1976 (announced 1975)",
@@ -4979,6 +5041,8 @@
       ],
       "date": {
         "year": 1976,
+        "month": 7,
+        "day": null,
         "yearStart": 1976,
         "yearEnd": 1977,
         "label": "1976",
@@ -5139,6 +5203,8 @@
       ],
       "date": {
         "year": 1982,
+        "month": 8,
+        "day": null,
         "yearStart": 1982,
         "yearEnd": 1994,
         "label": "1982 (produced until 1994)",
@@ -5286,7 +5352,7 @@
       },
       "display": {
         "scale": 1,
-        "baseHeight": 1.1,
+        "baseHeight": null,
         "back": "none",
         "yaw": null,
         "fallbackWidthM": 1.2
@@ -5328,6 +5394,8 @@
       ],
       "date": {
         "year": 1984,
+        "month": 4,
+        "day": null,
         "yearStart": 1984,
         "yearEnd": 1988,
         "label": "1984",
@@ -5506,6 +5574,8 @@
       ],
       "date": {
         "year": 2007,
+        "month": 5,
+        "day": null,
         "yearStart": 1987,
         "yearEnd": 2007,
         "label": "video 1987 · meme since 2007",
@@ -5675,6 +5745,8 @@
       ],
       "date": {
         "year": 2007,
+        "month": 6,
+        "day": 29,
         "yearStart": 2007,
         "yearEnd": 2008,
         "label": "2007",
@@ -5816,7 +5888,7 @@
       },
       "display": {
         "scale": 1,
-        "baseHeight": 1.15,
+        "baseHeight": null,
         "back": "none",
         "yaw": null,
         "fallbackWidthM": 1.2

@@ -12,13 +12,17 @@ import { DEFAULT_LAYOUT } from "../layout/layout";
 const FONT = "/fonts/inter-600.woff";
 const INK = 0x5e584e;
 
-/** "35,000 BCE", "c. 200 BCE", "1490s", "1.5 million years ago". */
-export function eraLabel(binStart: number, binYears: number): string {
-  if (binStart <= -1_000_000) return `${(-binStart / 1_000_000).toFixed(1).replace(/\.0$/, "")} million years ago`;
-  if (binStart <= -100_000) return `${(-binStart).toLocaleString("en-US")} years ago`;
-  if (binStart < 0) return `${binStart <= -10_000 ? "" : "c. "}${(-binStart).toLocaleString("en-US")} BCE`;
-  if (binStart === 0) return `1–${binYears - 1} CE`;
-  return `${binStart}s`;
+const MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+/** "35,000 BCE", "c. 200 BCE", "1495", "June 2007", "1490s" for decade bins, "1.5 million years ago". */
+export function eraLabel(year: number, month: number | null, binMonths: number): string {
+  if (year <= -1_000_000) return `${(-year / 1_000_000).toFixed(1).replace(/\.0$/, "")} million years ago`;
+  if (year <= -100_000) return `${(-year).toLocaleString("en-US")} years ago`;
+  if (year < 0) return `${year <= -10_000 ? "" : "c. "}${(-year).toLocaleString("en-US")} BCE`;
+  if (year === 0) return "1 CE";
+  if (binMonths >= 120) return `${year}s`;
+  if (month && binMonths < 12) return `${MONTHS[month - 1]} ${year}`;
+  return `${year}`;
 }
 
 /** "120°W", "0°", "5°E". */
@@ -53,7 +57,7 @@ export function buildAxisCues(layout: Layout, cfg: LayoutConfig = DEFAULT_LAYOUT
 
   // Era: on the near boundary of each row, centred on the spine, hanging into the row.
   for (const tick of layout.timeAxis) {
-    const t = stencil(eraLabel(tick.value, cfg.timeBinYears), 0.7, "top");
+    const t = stencil(eraLabel(tick.value, tick.month ?? null, cfg.timeBinMonths), 0.7, "top");
     t.position.set(0, t.position.y, tick.coord + half - 0.5);
     g.add(t);
   }

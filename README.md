@@ -90,9 +90,12 @@ mapping so their colours stay as scanned.
 
 ### Axes
 
-Both axes are ordered, not to scale. Works are binned by decade and by
-5° of longitude; only non-empty bins become cells, so empty centuries and
-oceans do not exist in the world. Empty cells do not exist either: each
+Both axes are ordered, not to scale. Works are binned by date, to the
+month when the record has one, and by 5° of longitude; only non-empty bins
+become cells, so empty centuries and oceans do not exist in the world. Two
+works a year apart stand one behind the other on the spine; two from the
+same year stand side by side by longitude (`timeBinMonths` in the layout
+config widens the bins to years or decades). Empty cells do not exist either: each
 time row holds only the geography cells that have works in it, side by
 side from west to east and centred on the spine, so the next era is always
 one cell ahead rather than off to one side. In a sparse collection this
@@ -172,7 +175,11 @@ objects go in. For a Sketchfab model, download the glTF zip from its page,
 unpack it into `data/originals/<artwork id>/`, set provenance `sketchfab`,
 and run the pipeline. Mark an artist-made model `representation:
 "reconstruction"`; the placard then says so and credits the author, which
-CC BY requires.
+CC BY requires. Give `date.month` (and `day`) when the record has one; it
+sets the order within a year. Leave `display.baseHeight` null unless a
+work needs a particular height: a small upright object is then centred at
+1.4 m, just below the eyes, a small flat one a little lower so its top is
+seen, and anything over 1.2 m tall stands on the floor.
 
 A work whose source cannot be fetched by script, such as a Sketchfab model,
 is added with `moderation.status: "pending"` and skipped by the pipeline

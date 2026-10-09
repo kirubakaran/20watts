@@ -31,6 +31,9 @@ export interface Creator {
 export interface DateInfo {
   /** The single year used for ordering on the time axis. Always present. */
   year: number;
+  /** Month (1–12) and day of that year when known; they refine the order. */
+  month: number | null;
+  day: number | null;
   yearStart: number | null;
   yearEnd: number | null;
   /** Human label, e.g. "c. 1495–1498". */
@@ -211,8 +214,12 @@ export interface ModelAsset {
 export interface DisplayHints {
   /** Multiplier on physical size. 1 = true scale. */
   scale: number;
-  /** Height of the bottom edge (image) or base (model) above the floor, metres. */
-  baseHeight: number;
+  /**
+   * Height of the bottom edge (image) or base (model) above the floor,
+   * metres. null lets the museum decide, see baseHeightOf(): small things
+   * rise to display-case height, big things stand on the floor.
+   */
+  baseHeight: number | null;
   /** Images only: what you see from behind. */
   back: "mirror" | "backing" | "none";
   /** Facing override in radians; null lets the layout decide. */
@@ -298,6 +305,29 @@ export function imageDisplaySize(a: Artwork): { width: number; height: number } 
   const aspect = v ? v.original.height / v.original.width : 1;
   const w = a.display.fallbackWidthM * s;
   return { width: w, height: w * aspect };
+}
+
+/**
+ * Where the bottom of a work sits above the floor. An explicit baseHeight
+ * wins. Otherwise a model is raised so that it reads at a comfortable height:
+ * something small and upright (a phone, a point) is centred at 1.4 m, just
+ * below the eyes; something small and flat (a keyboard) a little lower, at
+ * 1.15 m, so its top face is seen; the lift tapers off with size and a work
+ * over 1.2 m tall stands on the floor. An image hangs with its centre at
+ * 1.5 m, or from the floor when it is too tall for that.
+ */
+export function baseHeightOf(a: Artwork): number {
+  if (a.display.baseHeight != null) return a.display.baseHeight;
+  const fp = footprintOf(a);
+  if (a.kind === "image") return Math.max(0, 1.5 - fp.height / 2);
+  const h = fp.height;
+  if (h >= 1.2) return 0;
+  const aspect = h / Math.max(fp.width, fp.depth, 1e-6);
+  const t = Math.min(1, Math.max(0, (aspect - 0.25) / 0.35)); // 0 flat .. 1 upright
+  const centre = 1.15 + 0.25 * t;
+  const lift = centre - h / 2;
+  // Taper to the floor between 0.6 m and 1.2 m tall.
+  return h <= 0.6 ? lift : lift * ((1.2 - h) / 0.6);
 }
 
 export function footprintOf(a: Artwork): Footprint {
