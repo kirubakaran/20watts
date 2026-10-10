@@ -2,9 +2,10 @@
  * Axis cues stencilled on the floor. The time axis is ordered, not to
  * scale, so the only honest cue is a label: the era printed on the
  * boundary line you cross when you step into a new year. A branch step
- * carries its label at its front edge, so a side quest reads as one. In the
- * world view, the longitude is printed at the front edge of each cell.
- * Nothing is drawn where nothing stands.
+ * carries its label at its front edge, so a side quest reads as one. A
+ * landmark off to one side gets a pointer on the lane: its name and how
+ * far. In the world view, the longitude is printed at the front edge of
+ * each cell. Nothing is drawn where nothing stands.
  */
 import { Group } from "three";
 import { Text } from "troika-three-text";
@@ -71,6 +72,14 @@ export function buildAxisCues(layout: Layout, cfg: LayoutConfig = DEFAULT_LAYOUT
   // World view: the longitude at the front edge of each cell.
   const lonByRank = new Map(layout.geoAxis.map((t) => [t.rank, t.value]));
   for (const cell of layout.cells) {
+    if (cell.landmark) {
+      const east = cell.landmark.side === "east";
+      const t = stencil(east ? `${cell.landmark.label}  ${cell.landmark.distance} m  →` : `←  ${cell.landmark.distance} m  ${cell.landmark.label}`, 0.4, "bottom");
+      t.position.set(east ? 5 : -5, t.position.y, edgeOf.get(cell.timeRank)! - 0.5);
+      t.anchorX = east ? "left" : "right";
+      g.add(t);
+      continue;
+    }
     const label = cell.branch ? cell.branch.label : longitudeLabel(lonByRank.get(cell.geoRank) ?? Number.NaN);
     if (!label) continue;
     const t = stencil(label, 0.3, "bottom");

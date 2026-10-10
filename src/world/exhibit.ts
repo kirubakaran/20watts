@@ -7,6 +7,8 @@
  * placards, the dearest part, only exist within reading distance.
  */
 import {
+  BackSide,
+  Box3,
   CanvasTexture,
   CircleGeometry,
   DoubleSide,
@@ -21,7 +23,8 @@ import {
 } from "three";
 import { Text } from "troika-three-text";
 import type { Artwork } from "../data/types";
-import { baseHeightOf, currentAudioVersion, currentImageVersion, currentModelVersion, imageDisplaySize, footprintOf } from "../data/types";
+import { baseHeightOf, currentAudioVersion, currentImageVersion, currentModelVersion, currentSimVersion, imageDisplaySize, footprintOf } from "../data/types";
+import { PROGRAMS, type Sim } from "../sims";
 import { Sound } from "../assets/sound";
 import { ImageLadder } from "../assets/textures";
 import { ModelLadder } from "../assets/models";
@@ -69,6 +72,12 @@ function contactShadow(width: number, depth: number): Mesh {
   return m;
 }
 
+let backing: MeshStandardMaterial | null = null;
+/** Lime plaster, drawn on the back faces only, shared by every backed model. */
+function backingMaterial(): MeshStandardMaterial {
+  return (backing ??= new MeshStandardMaterial({ color: 0xd9c9a8, roughness: 0.95, side: BackSide }));
+}
+
 function soundLine(a: Artwork): string {
   const v = currentAudioVersion(a);
   if (!v) return "";
@@ -77,6 +86,8 @@ function soundLine(a: Artwork): string {
 }
 
 function creditLine(a: Artwork): string {
+  const sim = currentSimVersion(a);
+  if (sim) return `Computed live as you watch · ${sim.credit.license.name} · ${sim.credit.author ?? "20watts"}`;
   const v = currentImageVersion(a) ?? currentModelVersion(a);
   if (!v) return "";
   const lic = v.credit.license.name;
@@ -156,7 +167,12 @@ export class Exhibit {
   private imageMaterial: MeshBasicMaterial | null = null;
   private motion: Motion | null = null;
   private sound: Sound | null = null;
+  private sim: Sim | null = null;
   private modelRoot: Group | null = null;
+  /** In a visitor's hand: a sharper rung that arrives meanwhile waits until it is put down. */
+  private held = false;
+  private pendingRoot: Group | null = null;
+  private readonly box = new Box3();
   private readonly centre = new Vector3();
   /** Centre of the work in world space, fixed once built. */
   readonly worldCentre = new Vector3();
@@ -182,6 +198,7 @@ export class Exhibit {
     this.group.add(contactShadow(fp.width, fp.depth));
 
     if (artwork.kind === "image") this.buildImage();
+    else if (artwork.kind === "sim") this.buildSim();
     else this.buildModel();
     this.worldCentre.copy(this.group.position).add(this.centre);
     const audio = currentAudioVersion(artwork);
@@ -285,16 +302,15 @@ export class Exhibit {
     // so the only transforms left are the record's own scale and height.
     const ladder = new ModelLadder(v.rungs, this.gpu.maxTextureSize, this.gpu.maxAnisotropy);
     ladder.onUpgrade((root: Group) => {
+      if (this.held) {
+        this.pendingRoot = root;
+        return;
+      }
       if (this.modelRoot) this.group.remove(this.modelRoot);
       root.scale.setScalar(v.scale * a.display.scale);
       root.position.y = baseHeightOf(a);
       root.name = "model";
-      root.traverse((o) => {
-        if (!(o instanceof Mesh)) return;
-        o.castShadow = true;
-        // A scanned interior has its faces pointing inward; drawing both sides makes it solid from outside.
-        if (a.display.back === "mirror") for (const m of Array.isArray(o.material) ? o.material : [o.material]) m.side = DoubleSide;
-      });
+      this.prepareRoot(root);
       this.modelRoot = root;
       this.group.add(root);
     });
@@ -302,9 +318,86 @@ export class Exhibit {
     this.ladder = ladder;
   }
 
+  private buildSim() {
+    const a = this.artwork;
+    const v = currentSimVersion(a);
+    const fp = footprintOf(a);
+    this.centre.set(0, baseHeightOf(a) + fp.height / 2, 0);
+    const program = v && PROGRAMS[v.program];
+    if (!v || !program) {
+      console.warn(`${a.id}: no such program ${v?.program}`);
+      return;
+    }
+    this.sim = program(v.params, v.bounds);
+    const root = this.sim.object;
+    root.scale.setScalar(a.display.scale);
+    root.position.y = baseHeightOf(a);
+    root.name = "sim";
+    this.modelRoot = root as Group;
+    this.group.add(root);
+  }
+
+  /**
+   * Shadows, and what the back of a scanned interior looks like from
+   * outside: "mirror" draws both sides of every surface, so the inside
+   * textures show through reversed; "backing" adds a plain plaster skin on
+   * the outside, which reads as a building rather than as broken glass.
+   */
+  private prepareRoot(root: Group) {
+    const back = this.artwork.display.back;
+    // Collect first: adding a skin while walking the tree would walk the skin too, and skin it, without end.
+    const meshes: Mesh[] = [];
+    root.traverse((o) => o instanceof Mesh && meshes.push(o));
+    for (const o of meshes) {
+      o.castShadow = true;
+      if (back === "mirror") for (const m of Array.isArray(o.material) ? o.material : [o.material]) m.side = DoubleSide;
+      if (back === "backing") {
+        // The scan's own back faces would draw over the skin; only its fronts stay.
+        for (const m of Array.isArray(o.material) ? o.material : [o.material]) m.side = FrontSide;
+        const skin = new Mesh(o.geometry, backingMaterial());
+        skin.castShadow = true;
+        skin.name = "backing";
+        o.add(skin);
+      }
+    }
+  }
+
+  /** The model or simulation, for picking up; null for an image. */
+  get body(): Group | null {
+    return this.modelRoot;
+  }
+
+  get isHeld(): boolean {
+    return this.held;
+  }
+
+  /** Taken into a hand, or put back. A rung that arrived meanwhile is applied on return. */
+  hold(on = true) {
+    this.held = on;
+    if (!on && this.pendingRoot && this.ladder instanceof ModelLadder) {
+      const root = this.pendingRoot;
+      this.pendingRoot = null;
+      const v = currentModelVersion(this.artwork)!;
+      if (this.modelRoot) this.group.remove(this.modelRoot);
+      root.scale.setScalar(v.scale * this.artwork.display.scale);
+      root.position.y = baseHeightOf(this.artwork);
+      root.name = "model";
+      this.prepareRoot(root);
+      this.modelRoot = root;
+      this.group.add(root);
+    }
+  }
+
+  /** Metres from a world point to the body's bounding box, 0 inside it. */
+  distanceToBody(p: Vector3): number {
+    if (!this.modelRoot) return Infinity;
+    this.box.setFromObject(this.modelRoot);
+    return this.box.distanceToPoint(p);
+  }
+
   /** Estimated GPU bytes this exhibit holds. */
   get residentBytes(): number {
-    return this.ladder?.residentBytes ?? 0;
+    return (this.ladder?.residentBytes ?? 0) + (this.sim?.residentBytes ?? 0);
   }
 
   /** Fall back to the smallest rung and stay there until uncap(). */
@@ -325,10 +418,11 @@ export class Exhibit {
     return this.qualityCap !== Infinity;
   }
 
-  /** Called every frame with the viewer's world position; upgrades the texture rung as they approach. */
-  update(viewerWorldPos: Vector3) {
-    if (!this.ladder && !this.motion && !this.sound) return;
+  /** Called every frame with the viewer's world position; upgrades the texture rung as they approach, runs a simulation. */
+  update(viewerWorldPos: Vector3, dt = 0) {
+    if (!this.ladder && !this.motion && !this.sound && !this.sim) return;
     const d = Math.max(viewerWorldPos.distanceTo(this.worldCentre), 0.5);
+    this.sim?.update(dt, d);
     if (this.sound) {
       const near = this.artwork.display.hearing ?? HEARING;
       if (d < near && !this.sound.isPlaying) this.sound.play();
@@ -365,10 +459,12 @@ export class Exhibit {
     this.ladder?.dispose();
     this.ladder = null;
     this.motion = null;
+    this.sim?.dispose();
+    this.sim = null;
     // The ladder freed the model's own meshes; the rest is ours.
     if (this.modelRoot) this.group.remove(this.modelRoot);
     this.group.traverse((o) => {
-      if (o instanceof Mesh) {
+      if (o instanceof Mesh && o.name !== "backing") {
         o.geometry.dispose();
         const mats = Array.isArray(o.material) ? o.material : [o.material];
         for (const m of mats) m.dispose();

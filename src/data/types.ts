@@ -15,7 +15,7 @@
 
 export type ArtworkId = string;
 
-export type ArtworkKind = "image" | "model";
+export type ArtworkKind = "image" | "model" | "sim";
 
 export interface Creator {
   name: string;
@@ -112,6 +112,8 @@ export interface MotionLoop {
   /** Seconds into the source video where the loop (and the still) begin. */
   start: number;
   seconds: number;
+  /** The picture's own shape, when the file letterboxes or pillarboxes it; the pipeline crops to this, centred. */
+  aspect?: number;
   url: string;
   width: number;
   height: number;
@@ -259,6 +261,32 @@ export interface ModelAsset {
 }
 
 /**
+ * A work the museum computes rather than downloads: a simulation that runs
+ * while you watch (the Game of Life, the Lorenz attractor), or a shape
+ * built from published figures (the Great Pyramid). The program is code in
+ * src/sims; the record holds its parameters and the space it takes.
+ */
+export interface SimVersion {
+  id: string;
+  /** The program, by its name in src/sims. */
+  program: string;
+  /** Read by the program; each documents its own. */
+  params: Record<string, number | string | boolean>;
+  /** Space it occupies in metres, base at y = 0, footprint centred. */
+  bounds: { width: number; height: number; depth: number };
+  credit: Credit;
+  contributed: Contribution;
+  moderation: Moderation;
+  provenance: "procedural";
+}
+
+export interface SimAsset {
+  kind: "sim";
+  currentVersionId: string;
+  versions: SimVersion[];
+}
+
+/**
  * A side quest: this work stands beside another, off the main lane, because
  * the two belong together in a way time does not show: the chip inside a
  * computer, the manual that came in its box, the die inside the chip.
@@ -273,6 +301,32 @@ export interface Branch {
   label: string;
 }
 
+/**
+ * Stands off the lane, far enough to be seen on the horizon and walked
+ * to: a pyramid. It keeps its row in time but not its place in the row,
+ * standing `distance` metres to that side; it is left out of the row's
+ * depth, and built once at the start rather than streamed, so it shows
+ * from afar.
+ */
+export interface Landmark {
+  side: "east" | "west";
+  distance: number;
+}
+
+/**
+ * The sky changes as the visitor comes near: the night this object was
+ * made under, the sunrise this monument was built to face. Fully in effect
+ * within `radius` metres of the work, gone again a third further out.
+ * North is the way the lane runs, toward the future.
+ */
+export interface SkyHint {
+  radius: number;
+  /** A night of stars over this latitude in this year, from the bright star catalogue; the sidereal time chooses what is up. */
+  stars?: { year: number; latitude: number; siderealHours: number };
+  /** A sun that rises on this bearing, degrees clockwise from north, climbs a little and sinks again, on a loop. */
+  sunrise?: { azimuth: number };
+}
+
 export interface DisplayHints {
   /** Multiplier on physical size. 1 = true scale. */
   scale: number;
@@ -285,7 +339,9 @@ export interface DisplayHints {
   /**
    * What you see from behind. An image: its mirror image, a dark backing,
    * or nothing. A model: "mirror" draws both sides of every surface, which
-   * makes a scanned interior read as a solid building from outside.
+   * makes a scanned interior read as a solid building from outside;
+   * "backing" skins the outside in plain plaster instead, for a scan whose
+   * inside textures would look like broken glass seen reversed.
    */
   back: "mirror" | "backing" | "none";
   /** Facing override in radians; null lets the layout decide. */
@@ -301,6 +357,14 @@ export interface DisplayHints {
    * anything looked at from outside.
    */
   threshold?: number;
+  /**
+   * In VR, whether the visitor may pick the work up and turn it in their
+   * hand; it returns to its place when let go. Absent: a model no bigger
+   * than 1.2 m that is not entered may be; everything else may not.
+   */
+  grab?: boolean;
+  /** How the sky changes as the visitor comes near. */
+  sky?: SkyHint;
 }
 
 export interface Artwork {
@@ -335,7 +399,7 @@ export interface Artwork {
   externalIds: Record<string, string>;
   /** Still in copyright; display under fair use with a label. */
   copyrighted: boolean;
-  asset: ImageAsset | ModelAsset;
+  asset: ImageAsset | ModelAsset | SimAsset;
   /** A recording heard as the visitor approaches. */
   audio?: AudioAsset;
   display: DisplayHints;
@@ -351,6 +415,8 @@ export interface Artwork {
   order?: number;
   /** Where it stands when not on the main lane. Absent: on the lane, in time order. */
   branch?: Branch;
+  /** Stands off to one side of the lane, seen from afar. */
+  landmark?: Landmark;
   /**
    * Other ways of showing the same work: a photograph beside a scan, the
    * earlier part beside the later one. `asset` is what is shown; these are
@@ -380,7 +446,7 @@ export interface Footprint {
 }
 
 /** Every asset of a work, shown one first. */
-export function assetsOf(a: Artwork): (ImageAsset | ModelAsset)[] {
+export function assetsOf(a: Artwork): (ImageAsset | ModelAsset | SimAsset)[] {
   return [a.asset, ...(a.alternates ?? [])];
 }
 
@@ -402,6 +468,19 @@ export function onDisplay(artworks: Artwork[]): Artwork[] {
 export function currentAudioVersion(a: Artwork): AudioVersion | null {
   if (!a.audio) return null;
   return a.audio.versions.find((v) => v.id === a.audio!.currentVersionId) ?? a.audio.versions[0] ?? null;
+}
+
+export function currentSimVersion(a: Artwork): SimVersion | null {
+  if (a.asset.kind !== "sim") return null;
+  return a.asset.versions.find((v) => v.id === a.asset.currentVersionId) ?? a.asset.versions[0] ?? null;
+}
+
+/** Whether the visitor may pick it up in VR: the record's say, else small models only. */
+export function grabbable(a: Artwork): boolean {
+  if (a.display.grab != null) return a.display.grab;
+  if (a.kind !== "model" || a.display.threshold != null || a.landmark) return false;
+  const fp = footprintOf(a);
+  return Math.max(fp.width, fp.height, fp.depth) <= 1.2;
 }
 
 export function currentImageVersion(a: Artwork): ImageVersion | null {
@@ -449,8 +528,8 @@ export function baseHeightOf(a: Artwork): number {
 }
 
 export function footprintOf(a: Artwork): Footprint {
-  if (a.kind === "model") {
-    const v = currentModelVersion(a);
+  if (a.kind === "model" || a.kind === "sim") {
+    const v = a.kind === "model" ? currentModelVersion(a) : currentSimVersion(a);
     const b = v ? v.bounds : { width: 1, height: 1, depth: 1 };
     const s = a.display.scale;
     return { width: b.width * s, depth: b.depth * s, height: b.height * s };

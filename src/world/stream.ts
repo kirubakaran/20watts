@@ -95,6 +95,16 @@ export class Streamer {
     return b;
   }
 
+  /** Live exhibits whose place is within `radius` of a floor point. */
+  exhibitsWithin(x: number, z: number, radius: number): Exhibit[] {
+    const out: Exhibit[] = [];
+    for (const s of this.live) {
+      const p = s.placement.position;
+      if (Math.hypot(p.x - x, p.z - z) <= radius + s.footprint.width) out.push(s.exhibit!);
+    }
+    return out;
+  }
+
   /** The biggest holders, for ?debug. */
   report(eye: Vector3, n = 5): string {
     return [...this.live]
@@ -115,7 +125,7 @@ export class Streamer {
       this.lastZ = eye.z;
       this.sweep(eye);
     }
-    for (const s of this.live) s.exhibit!.update(eye);
+    for (const s of this.live) s.exhibit!.update(eye, dt);
   }
 
   private sweep(eye: Vector3) {

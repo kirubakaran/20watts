@@ -5,14 +5,17 @@ import collectionJson from "./data/collection.json";
 import { computeLayout, DEFAULT_LAYOUT, WORLD_LAYOUT } from "./layout/layout";
 import { buildWorld } from "./world/floor";
 import { DEFAULT_STREAM, Streamer } from "./world/stream";
+import { Exhibit } from "./world/exhibit";
 import { buildAxisCues } from "./world/axes";
 import { Player, type Action } from "./locomotion/player";
 import { clearPlace, restorePlace, trackPlace } from "./locomotion/resume";
 import { Navigator } from "./locomotion/navigate";
+import { Grabber } from "./locomotion/grab";
 import { buildEntrance, GATE_HALF_WIDTH, GATE_HEIGHT } from "./world/sign";
 import { hasTouch, setupTouch } from "./locomotion/touch";
 import { setAudioListener } from "./assets/sound";
 import { baseHeightOf, footprintOf, onDisplay } from "./data/types";
+import { Sky, type SkyState } from "./world/sky";
 
 // JSON import types are inferred per record; the schema is the source of truth.
 const collection = collectionJson as unknown as Collection;
@@ -63,8 +66,14 @@ const visible = onDisplay(collection.artworks);
 const layoutCfg = params.get("view") === "world" ? WORLD_LAYOUT : DEFAULT_LAYOUT;
 const layout = computeLayout(visible, layoutCfg);
 // Works exist as stubs until the visitor is near; the streamer builds and tears down exhibits.
+// Landmarks are meant to be seen from afar, so they are built once, here, and never torn down.
 const budgetMB = Number(params.get("budgetMB"));
-const streamer = new Streamer(scene, visible, layout, gpu, budgetMB > 0 ? { ...DEFAULT_STREAM, budgetBytes: budgetMB * 1048576 } : DEFAULT_STREAM);
+const streamer = new Streamer(scene, visible.filter((a) => !a.landmark), layout, gpu, budgetMB > 0 ? { ...DEFAULT_STREAM, budgetBytes: budgetMB * 1048576 } : DEFAULT_STREAM);
+const landmarks = visible.filter((a) => a.landmark).map((a) => {
+  const e = new Exhibit(a, layout.placements.get(a.id)!, gpu);
+  scene.add(e.group);
+  return e;
+});
 scene.add(buildAxisCues(layout, layoutCfg));
 
 // Hops between eras and cells, and jumps to a work.
@@ -107,13 +116,14 @@ const act = (a: Action) => {
 };
 player.setActionHandler(act);
 if (touch) setupTouch(player, renderer.domElement, act);
+// In VR, small works can be picked up and turned in the hand.
+const grabber = new Grabber(renderer, player, (x, z, r) => streamer.exhibitsWithin(x, z, r));
 
 // Where to start, in order of precedence:
 //   ?spawn=x,z,yawDegrees   anywhere, for debugging
 //   ?spawn=start            the entrance, forgetting the saved place
 //   ?at=<id> | <year> | newest   in front of that work
 //   the saved place from last time, else the entrance.
-const landmarks = stops;
 const spawnParam = params.get("spawn");
 const atParam = params.get("at");
 if (spawnParam === "start") clearPlace();
@@ -122,10 +132,10 @@ if (spawnParam && spawnParam !== "start") {
   player.spawn(x, z, (yawDeg * Math.PI) / 180);
 } else if (atParam && nav.goTo(player, resolveAt(atParam))) {
   // placed in front of the requested work
-} else if (!restorePlace(player, landmarks) && entrance) {
+} else if (!restorePlace(player, stops) && entrance) {
   goToEntrance();
 }
-const savePlace = trackPlace(player, landmarks);
+const savePlace = trackPlace(player, stops);
 
 /** "newest" is the most recently added work; a number is the nearest year; anything else is an id. */
 function resolveAt(at: string): string {
@@ -148,6 +158,52 @@ if (params.has("debug")) {
   }, 2000);
 }
 
+/**
+ * The sky near works that change it. Each frame the nearest such work
+ * sets how far in we are; a sunrise climbs from below the horizon to
+ * eight degrees and back over a minute and a half, a night is still.
+ */
+const skyWorks = visible
+  .filter((a) => a.display.sky)
+  .map((a) => ({ hint: a.display.sky!, centre: layout.placements.get(a.id)!.position }));
+const SUNRISE_PERIOD = 90;
+let skyClock = 30;
+const skyState: SkyState = { night: 0, dawn: 0, sun: null, stars: null, dim: 0 };
+function updateSky(eye: Vector3, dt: number) {
+  skyClock += dt;
+  // Stars and a sunrise are separate channels; each takes its nearest work, nearest relative to its radius.
+  type Near = { hint: (typeof skyWorks)[number]["hint"]; w: number; r: number };
+  let stars: Near | null = null, sunrise: Near | null = null;
+  for (const s of skyWorks) {
+    const d = Math.hypot(s.centre.x - eye.x, s.centre.z - eye.z);
+    const w = Sky.weight(s.hint, d);
+    if (w <= 0) continue;
+    const near = { hint: s.hint, w, r: d / s.hint.radius };
+    if (s.hint.stars && (!stars || near.r < stars.r)) stars = near;
+    if (s.hint.sunrise && (!sunrise || near.r < sunrise.r)) sunrise = near;
+  }
+  skyState.night = 0;
+  skyState.dawn = 0;
+  skyState.sun = null;
+  skyState.stars = null;
+  skyState.dim = 0;
+  if (stars) {
+    skyState.night = stars.w;
+    skyState.stars = stars.hint.stars!;
+    skyState.dim = stars.w;
+  }
+  if (sunrise) {
+    const k = 0.5 - 0.5 * Math.cos((2 * Math.PI * (skyClock % SUNRISE_PERIOD)) / SUNRISE_PERIOD);
+    const altitude = -4 + 12 * k;
+    skyState.sun = { azimuth: sunrise.hint.sunrise!.azimuth, altitude };
+    skyState.dawn = sunrise.w;
+    // Darkest before the sun shows, brightening as it climbs.
+    const up = Math.min(1, Math.max(0, altitude / 8));
+    skyState.night = Math.max(skyState.night, sunrise.w * 0.45 * (1 - up));
+    skyState.dim = Math.max(skyState.dim, sunrise.w * (0.55 - 0.4 * up));
+  }
+}
+
 const hud = document.getElementById("hud");
 renderer.xr.addEventListener("sessionstart", () => hud && (hud.hidden = true));
 renderer.xr.addEventListener("sessionend", () => hud && (hud.hidden = false));
@@ -163,9 +219,16 @@ renderer.setAnimationLoop((time) => {
   timer.update(time);
   const dt = Math.min(timer.getDelta(), 0.1);
   player.update(dt);
+  grabber.update(dt);
   savePlace(dt);
   player.viewerPosition(eye);
   world.follow(eye);
+  updateSky(eye, dt);
+  world.setSky(skyState);
   streamer.update(eye, dt);
+  for (const e of landmarks) {
+    e.update(eye, dt);
+    e.setPlacards(eye.distanceTo(e.worldCentre) < DEFAULT_STREAM.placardRadius + footprintOf(e.artwork).depth / 2);
+  }
   renderer.render(scene, camera);
 });

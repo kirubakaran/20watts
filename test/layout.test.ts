@@ -3,6 +3,7 @@ import { readFileSync } from "node:fs";
 import { computeLayout, DEFAULT_LAYOUT, WORLD_LAYOUT, type Layout } from "../src/layout/layout";
 import { footprintOf, onDisplay, type Artwork, type Collection } from "../src/data/types";
 import { Navigator } from "../src/locomotion/navigate";
+import type { Player } from "../src/locomotion/player";
 
 const collection = JSON.parse(readFileSync(new URL("../src/data/collection.json", import.meta.url), "utf8")) as Collection;
 const shown = onDisplay(collection.artworks);
@@ -57,7 +58,7 @@ describe("the collection on the lane", () => {
   });
 
   it("keeps every main-lane work on the spine unless it shares a month", () => {
-    const main = shown.filter((a) => !a.branch);
+    const main = shown.filter((a) => !a.branch && !a.landmark);
     for (const a of main) {
       const p = layout.placements.get(a.id)!;
       const sameMonth = main.filter((b) => b.date.year === a.date.year && (b.date.month ?? 0) === (a.date.month ?? 0));
@@ -171,6 +172,40 @@ describe("synthetic collections", () => {
     const edges = l.timeAxis.map((t) => t.edge!);
     expect(edges[1]).toBeLessThan(z("before"));
     expect(edges[1]).toBeGreaterThan(z("building") + 30);
+  });
+
+  it("stands a landmark off to the side without deepening its row, with a pointer on the lane", () => {
+    const sim = shown.find((a) => a.kind === "sim" && a.landmark)!;
+    const pyramid = structuredClone(sim);
+    pyramid.id = "pyramid";
+    pyramid.date = { ...pyramid.date, year: 1850, month: null, day: null };
+    pyramid.landmark = { side: "west", distance: 300 };
+    const works = [variant(base, "before", 1840, null, 2), pyramid, variant(base, "after", 1860, null, 2)];
+    const l = computeLayout(works);
+    const z = (id: string) => l.placements.get(id)!.position.z;
+    const p = l.placements.get("pyramid")!.position;
+    expect(p.x).toBe(-300);
+    expect(z("before") - p.z).toBe(DEFAULT_LAYOUT.cellPitchZ);
+    expect(p.z - z("after")).toBe(DEFAULT_LAYOUT.cellPitchZ);
+    const cell = l.cells.find((c) => c.landmark)!;
+    expect(cell.landmark!.label).toBe(pyramid.title);
+    expect(l.timeAxis.map((t) => t.value)).toEqual([1840, 1850, 1860]);
+    // Hops: the era hop stops on the lane at its year; a sideways hop goes out to its foot and back.
+    const stops = works.map((a) => ({ id: a.id, x: l.placements.get(a.id)!.position.x, z: l.placements.get(a.id)!.position.z, footprint: footprintOf(a) }));
+    const n = new Navigator(l, stops);
+    const pos = { x: 0, z: 0 };
+    const walker = { floorPosition: () => pos, teleport: (x: number, zz: number) => { pos.x = x; pos.z = zz; } } as unknown as Player;
+    n.goTo(walker, "before");
+    expect(n.hopEra(walker, 1)).toBe(true);
+    expect(pos.x).toBe(0);
+    expect(pos.z).toBe(p.z + 2.5);
+    expect(n.hopGeo(walker, -1)).toBe(true);
+    expect(pos.x).toBe(-300);
+    expect(pos.z).toBeGreaterThan(p.z + 230 / 2);
+    expect(n.hopGeo(walker, 1)).toBe(true);
+    expect(pos.x).toBe(0);
+    expect(n.hopEra(walker, 1)).toBe(true);
+    expect(pos.z).toBeLessThan(z("after") + 10);
   });
 
   it("leaves a branch whose anchor is not shown off the floor", () => {

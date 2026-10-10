@@ -94,13 +94,20 @@ async function download(url: string, dest: string): Promise<number> {
 
 // ---------------------------------------------------------------- images
 
-function commonsTitleFromUrl(url: string): string {
+/**
+ * The file a Commons URL names, and for a page rendered out of a multipage
+ * file (a djvu or pdf: .../thumb/x/xy/Book.djvu/page3-1920px-Book.djvu.jpg)
+ * which page.
+ */
+function commonsTitleFromUrl(url: string): { title: string; page: number | null } {
+  const page = /\/thumb\/[0-9a-f]\/[0-9a-f]{2}\/([^/?#]+)\/page(\d+)-\d+px-/.exec(url);
+  if (page?.[1]) return { title: "File:" + decodeURIComponent(page[1]), page: Number(page[2]) };
   const m = /\/commons\/[0-9a-f]\/[0-9a-f]{2}\/([^/?#]+)/.exec(url);
   if (!m?.[1]) throw new Error(`Not a Commons original URL: ${url}`);
-  return "File:" + decodeURIComponent(m[1]);
+  return { title: "File:" + decodeURIComponent(m[1]), page: null };
 }
 
-async function thumbInfo(title: string, width: number): Promise<{ url: string; width: number; height: number }> {
+async function thumbInfo(title: string, width: number, page: number | null = null): Promise<{ url: string; width: number; height: number }> {
   const api = new URL("https://commons.wikimedia.org/w/api.php");
   api.search = new URLSearchParams({
     action: "query",
@@ -108,6 +115,7 @@ async function thumbInfo(title: string, width: number): Promise<{ url: string; w
     prop: "imageinfo",
     iiprop: "url",
     iiurlwidth: String(width),
+    ...(page ? { iiurlparam: `page${page}-${width}px` } : {}),
     format: "json",
   }).toString();
   const json = (await (await fetchOk(api.toString())).json()) as {
@@ -127,12 +135,12 @@ async function thumbInfo(title: string, width: number): Promise<{ url: string; w
 }
 
 async function fetchCommonsImage(artId: string, version: { original: { url: string; width: number; height: number }; rungs: ImageRung[] }) {
-  const title = commonsTitleFromUrl(version.original.url);
+  const { title, page } = commonsTitleFromUrl(version.original.url);
   const dir = path.join(OUT_DIR, artId);
   const rungs = new Map<number, ImageRung>();
   for (const w of TARGET_WIDTHS) {
     if (w >= version.original.width) break;
-    const t = await thumbInfo(title, w);
+    const t = await thumbInfo(title, w, page);
     if (rungs.has(t.width)) continue;
     const file = `${t.width}.${/\.png$/i.test(t.url) ? "png" : "jpg"}`;
     const bytes = await download(t.url, path.join(dir, file));
@@ -154,6 +162,12 @@ async function fetchCommonsImage(artId: string, version: { original: { url: stri
 const IMAGE_WIDTHS = [640, 1280, 2560, 5120];
 
 // ---------------------------------------------------------------- recordings
+
+/** Width and height of a video's first video stream. */
+async function probeSize(file: string): Promise<number[]> {
+  const { stdout } = await run("ffprobe", ["-v", "error", "-select_streams", "v:0", "-show_entries", "stream=width,height", "-of", "csv=p=0", file]);
+  return stdout.trim().split("\n")[0]!.split(",").filter((x) => x !== "").map(Number);
+}
 
 async function probeSeconds(file: string): Promise<number | null> {
   try {
@@ -306,9 +320,16 @@ async function buildVideoStill(artId: string, version: ImageVersion) {
   const outDir = path.join(OUT_DIR, artId);
   await mkdir(outDir, { recursive: true });
 
+  // A film letterboxed or pillarboxed inside the file is cropped to its own shape, centred.
+  const crop: string[] = [];
+  if (loop.aspect) {
+    const [sw = 0, sh = 0] = await probeSize(srcPath);
+    const [cw, ch] = sw / sh > loop.aspect ? [Math.round(sh * loop.aspect), sh] : [sw, Math.round(sw / loop.aspect)];
+    crop.push(`crop=${cw}:${ch}`);
+  }
   // The still: one full-size frame, then the usual image ladder from it.
   const framePath = path.join(dir, `frame-${loop.start}.png`);
-  await run("ffmpeg", ["-v", "error", "-y", "-ss", String(loop.start), "-i", srcPath, "-frames:v", "1", framePath]);
+  await run("ffmpeg", ["-v", "error", "-y", "-ss", String(loop.start), "-i", srcPath, "-frames:v", "1", ...(crop.length ? ["-vf", crop[0]!] : []), framePath]);
   const meta = await sharp(framePath).metadata();
   const width = meta.width ?? 0;
   const height = meta.height ?? 0;
@@ -327,12 +348,11 @@ async function buildVideoStill(artId: string, version: ImageVersion) {
   const loopPath = path.join(outDir, loopFile);
   await run("ffmpeg", [
     "-v", "error", "-y", "-ss", String(loop.start), "-t", String(loop.seconds), "-i", srcPath,
-    "-an", "-vf", `scale=${LOOP_WIDTH}:-2,fps=25`,
+    "-an", "-vf", [...crop, `scale=${LOOP_WIDTH}:-2`, "fps=25"].join(","),
     "-c:v", "libx264", "-profile:v", "main", "-pix_fmt", "yuv420p", "-crf", "22", "-g", "25", "-movflags", "+faststart",
     loopPath,
   ]);
-  const { stdout } = await run("ffprobe", ["-v", "error", "-show_entries", "stream=width,height", "-of", "csv=p=0", loopPath]);
-  const [lw = LOOP_WIDTH, lh = Math.round((LOOP_WIDTH * height) / width)] = stdout.trim().split(",").map(Number);
+  const [lw = LOOP_WIDTH, lh = Math.round((LOOP_WIDTH * height) / width)] = await probeSize(loopPath);
   const bytes = (await stat(loopPath)).size;
   version.loop = { ...loop, url: `/assets/${artId}/${loopFile}`, width: lw, height: lh, bytes };
   console.log(`${artId}: loop ${loop.seconds}s ${lw}x${lh} (${(bytes / 1024).toFixed(0)} KB)`);
@@ -562,6 +582,8 @@ async function buildAsset(dir: string, asset: Artwork["asset"], art: Artwork): P
       else continue;
       touched = true;
     }
+  } else if (asset.kind === "sim") {
+    // Nothing to fetch: a program in src/sims runs it.
   } else {
     for (const version of asset.versions) {
       if (version.provenance === "smithsonian-3d") await fetchSmithsonianModel(dir, version);

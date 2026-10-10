@@ -4,8 +4,11 @@
  * in front of a cell, facing the future, the way you would arrive on foot.
  *
  * A row has one standing line for all its cells, set by its deepest and
- * widest cell, so hops along a row are pure sideways moves.
+ * widest cell, so hops along a row are pure sideways moves. A landmark
+ * off to the side is not on that line: a sideways hop toward it lands at
+ * its foot, and the next hop back lands on the lane again.
  */
+const LANDMARK_RETURN = 20;
 import type { Footprint } from "../data/types";
 import type { Layout, LayoutCell } from "../layout/layout";
 import type { Player } from "./player";
@@ -50,7 +53,8 @@ export class Navigator {
       .map(([, cells]) => {
         cells.sort((p, q) => p.x - q.x);
         const z = cells[0]!.z;
-        return { z, frontZ: z + Math.max(...cells.map((c) => c.threshold ?? standoff(c))), cells };
+        const lane = cells.filter((c) => !c.landmark);
+        return { z, frontZ: z + (lane.length ? Math.max(...lane.map((c) => c.threshold ?? standoff(c))) : 2.5), cells };
       });
     for (const s of stops) this.stops.set(s.id, s);
   }
@@ -78,8 +82,8 @@ export class Navigator {
     const ahead = this.rows.filter((r) => (dir > 0 ? r.frontZ < z - 0.5 : r.frontZ > z + 0.5));
     const row = dir > 0 ? ahead[0] : ahead[ahead.length - 1];
     if (!row) return false;
-    const cell = nearestBy(row.cells, (c) => Math.abs(c.x - x));
-    player.teleport(cell.x, row.frontZ, 0);
+    const lane = row.cells.filter((c) => !c.landmark);
+    player.teleport(lane.length ? nearestBy(lane, (c) => Math.abs(c.x - x)).x : 0, row.frontZ, 0);
     return true;
   }
 
@@ -87,19 +91,34 @@ export class Navigator {
   goLast(player: Player): boolean {
     const row = this.rows[this.rows.length - 1];
     if (!row) return false;
-    const cell = nearestBy(row.cells, (c) => Math.abs(c.x));
-    player.teleport(cell.x, row.frontZ, 0);
+    const lane = row.cells.filter((c) => !c.landmark);
+    player.teleport(lane.length ? nearestBy(lane, (c) => Math.abs(c.x)).x : 0, row.frontZ, 0);
     return true;
   }
 
-  /** Next cell east (dir 1, +X) or west (dir -1) in the row you are at. */
+  /** Where a visitor stands to look at a cell: on the row's line, or at a landmark's foot. */
+  private standingAt(row: Row, cell: LayoutCell): { x: number; z: number } {
+    return { x: cell.x, z: cell.landmark ? cell.z + standoff(cell) : row.frontZ };
+  }
+
+  /** Next cell east (dir 1, +X) or west (dir -1) in the row you are at: the row with the nearest standing point. */
   hopGeo(player: Player, dir: 1 | -1): boolean {
     const { x, z } = player.floorPosition();
-    const row = nearestBy(this.rows, (r) => Math.abs(r.frontZ - z));
+    // The nearest row: by its standing line across the lane, or by the foot of one of its landmarks.
+    const row = nearestBy(this.rows, (r) =>
+      Math.min(Math.abs(r.frontZ - z), ...r.cells.filter((c) => c.landmark).map((c) => { const s = this.standingAt(r, c); return Math.hypot(s.x - x, s.z - z); })));
     const cells = row.cells.filter((c) => (dir > 0 ? c.x > x + 0.5 : c.x < x - 0.5));
     const cell = dir > 0 ? cells[0] : cells[cells.length - 1];
-    if (!cell) return false;
-    player.teleport(cell.x, row.frontZ, 0);
+    if (!cell) {
+      // Out at a landmark with nothing further that way: back to the lane.
+      if (Math.abs(x) > LANDMARK_RETURN && row.cells.some((c) => c.landmark)) {
+        player.teleport(0, row.frontZ, 0);
+        return true;
+      }
+      return false;
+    }
+    const s = this.standingAt(row, cell);
+    player.teleport(s.x, s.z, 0);
     return true;
   }
 }

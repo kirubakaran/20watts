@@ -2611,6 +2611,155 @@
       "updatedAt": "2026-10-09T19:22:45.632Z"
     },
     {
+      "id": "sim-great-pyramid-of-giza",
+      "kind": "sim",
+      "title": "Great Pyramid of Giza",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "Khufu (patron)",
+          "slug": null,
+          "wikidataQid": "Q161904",
+          "wikipediaUrl": null,
+          "birthYear": null,
+          "deathYear": null,
+          "role": "patron"
+        }
+      ],
+      "date": {
+        "year": -2560,
+        "month": null,
+        "day": null,
+        "yearStart": -2580,
+        "yearEnd": -2560,
+        "label": "c. 2560 BCE",
+        "precision": "circa"
+      },
+      "madeIn": {
+        "name": "Giza",
+        "region": null,
+        "country": "Egypt",
+        "point": {
+          "lat": 29.979,
+          "lon": 31.134
+        },
+        "wikidataQid": "Q81788"
+      },
+      "location": {
+        "name": "Giza",
+        "region": null,
+        "country": "Egypt",
+        "point": null,
+        "wikidataQid": null,
+        "institution": "In situ, Giza plateau",
+        "inventoryNumber": null
+      },
+      "culture": "Ancient Egyptian (Fourth Dynasty)",
+      "movement": null,
+      "periodSlug": null,
+      "medium": "Limestone masonry, shown as a shape at true size",
+      "materials": [
+        "limestone",
+        "granite"
+      ],
+      "genre": [
+        "architecture"
+      ],
+      "subjects": [
+        "tomb",
+        "pyramid",
+        "Khufu"
+      ],
+      "physical": {
+        "widthCm": 23030,
+        "heightCm": 14660,
+        "depthCm": 23030,
+        "weightKg": null
+      },
+      "description": "The tomb of the pharaoh Khufu, raised on the Giza plateau over about twenty years around 2560 BCE: some 2.3 million blocks of limestone, the largest weighing tens of tonnes, laid in 210 courses to a height of 146.6 metres on a base 230 metres square, level to within a few centimetres and aligned to true north within a twentieth of a degree. It was the tallest structure made by people for nearly four thousand years, until Lincoln Cathedral's spire, and it is the one wonder of the ancient world still standing. No scan of it may be freely used, and a photograph cannot say how big it is, so it stands here as a plain shape at its true size, six hundred metres off the lane. Walk out to it, or look up from its foot.",
+      "facts": [
+        "Its base covers 5.3 hectares; its volume is about 2.6 million cubic metres.",
+        "The top 8 metres and the polished white casing are gone; it stands 138.5 m today.",
+        "The workforce was paid and fed, not enslaved: their bakeries, barracks and tombs lie beside it.",
+        "Its four sides face the cardinal directions to within 0.05 degrees."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza",
+      "wikidataQid": "Q37200",
+      "externalIds": {},
+      "copyrighted": false,
+      "asset": {
+        "kind": "sim",
+        "currentVersionId": "sim-great-pyramid-of-giza-v1",
+        "versions": [
+          {
+            "id": "sim-great-pyramid-of-giza-v1",
+            "program": "pyramid",
+            "params": {
+              "base": 230.3,
+              "height": 146.6,
+              "courses": 210
+            },
+            "bounds": {
+              "width": 230.3,
+              "height": 146.6,
+              "depth": 230.3
+            },
+            "credit": {
+              "author": "20watts",
+              "license": {
+                "name": "CC0 1.0",
+                "url": null
+              },
+              "sourcePage": null
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-09T00:00:00Z",
+              "note": "Built live by src/sims/pyramid.ts from the published dimensions: a square base of 230.3 m and the original height of 146.6 m, with 210 stone courses drawn as lines. No scan of the monument is available under an open licence; this is a plain shape at true size, standing 600 m east of the lane. The program is the museum's own, CC0."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "procedural"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": 0,
+        "back": "none",
+        "yaw": null,
+        "fallbackWidthM": 1.2
+      },
+      "tags": [
+        "Egypt",
+        "architecture",
+        "pyramid",
+        "UNESCO World Heritage"
+      ],
+      "pageviews": null,
+      "importance": 0.95,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-09T00:00:00Z",
+      "updatedAt": "2026-10-09T00:00:00Z",
+      "landmark": {
+        "side": "east",
+        "distance": 600
+      }
+    },
+    {
       "id": "sf-7e7febabef2045a68755cc39c8c7c91f",
       "kind": "model",
       "title": "Stonehenge (reconstruction)",
@@ -2775,9 +2924,15 @@
         "scale": 1,
         "baseHeight": 0,
         "back": "none",
-        "yaw": null,
+        "yaw": 2.2777,
         "fallbackWidthM": 1.2,
-        "threshold": 22
+        "threshold": 22,
+        "sky": {
+          "radius": 23,
+          "sunrise": {
+            "azimuth": 49.5
+          }
+        }
       },
       "tags": [
         "Neolithic",
@@ -3091,7 +3246,15 @@
         "baseHeight": 0.5,
         "back": "mirror",
         "yaw": null,
-        "fallbackWidthM": 0.6
+        "fallbackWidthM": 0.6,
+        "sky": {
+          "radius": 14,
+          "stars": {
+            "year": -1600,
+            "latitude": 51.28,
+            "siderealHours": 5.7
+          }
+        }
       },
       "tags": [
         "bronze age",
@@ -3364,19 +3527,19 @@
                 "width": 640,
                 "height": 544,
                 "url": "/assets/eq-pythagorean-theorem/640.jpg",
-                "bytes": 15771
+                "bytes": 15406
               },
               {
                 "width": 1280,
                 "height": 1088,
                 "url": "/assets/eq-pythagorean-theorem/1280.jpg",
-                "bytes": 39258
+                "bytes": 38499
               },
               {
                 "width": 2560,
                 "height": 2176,
                 "url": "/assets/eq-pythagorean-theorem/2560.jpg",
-                "bytes": 104199
+                "bytes": 102206
               }
             ],
             "loop": null,
@@ -3427,7 +3590,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-10T00:10:24.127Z"
+      "updatedAt": "2026-10-10T16:42:26.015Z"
     },
     {
       "id": "wm-3153928",
@@ -3893,6 +4056,167 @@
       "updatedAt": "2026-10-09T19:22:46.920Z"
     },
     {
+      "id": "wm-1259734",
+      "kind": "image",
+      "title": "Euclid's Elements: the Oxyrhynchus papyrus with the diagram (P.Oxy. I 29)",
+      "titleOriginal": "Στοιχεῖα, Book II, Proposition 5",
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "Euclid",
+          "slug": null,
+          "wikidataQid": "Q8747",
+          "wikipediaUrl": null,
+          "birthYear": null,
+          "deathYear": null,
+          "role": "author"
+        }
+      ],
+      "date": {
+        "year": 100,
+        "month": null,
+        "day": null,
+        "yearStart": 75,
+        "yearEnd": 125,
+        "label": "c. 75-125 CE (Penn Museum: 3rd-4th century CE); text composed c. 300 BCE",
+        "precision": "circa"
+      },
+      "madeIn": {
+        "name": "Oxyrhynchus (el-Bahnasa)",
+        "region": "Minya Governorate",
+        "country": "Egypt",
+        "point": {
+          "lat": 28.5333,
+          "lon": 30.6583
+        },
+        "wikidataQid": "Q622640"
+      },
+      "location": {
+        "name": "Philadelphia",
+        "region": null,
+        "country": "United States",
+        "point": null,
+        "wikidataQid": null,
+        "institution": "Penn Museum (University of Pennsylvania Museum of Archaeology and Anthropology)",
+        "inventoryNumber": "E 2748 (P.Oxy. I 29)"
+      },
+      "culture": "Greek (Roman Egypt)",
+      "movement": null,
+      "periodSlug": null,
+      "medium": "Ink on papyrus",
+      "materials": [
+        "papyrus",
+        "ink"
+      ],
+      "genre": [
+        "manuscript",
+        "papyrus",
+        "mathematics"
+      ],
+      "subjects": [
+        "geometry",
+        "Euclid",
+        "proof",
+        "diagram",
+        "mathematics",
+        "Greek manuscript"
+      ],
+      "physical": {
+        "widthCm": 15.2,
+        "heightCm": 9.26,
+        "depthCm": null,
+        "weightKg": null
+      },
+      "description": "A scrap of papyrus the size of a postcard, dug out of the rubbish mounds of Oxyrhynchus in Egypt by Grenfell and Hunt in 1896-97, carrying the oldest surviving diagram from Euclid's Elements. The nine lines of Greek state Proposition 5 of Book II: if a straight line is cut into equal and unequal parts, the rectangle contained by the unequal parts, together with the square on the line between the points of section, equals the square on the half. The little figure at the lower right is the rectangle and squares that prove it; in modern notation it is the identity ab + ((a+b)/2 - b)² = ((a+b)/2)². Euclid compiled the Elements in Alexandria around 300 BCE, and it was copied for two thousand years as the model of what a proof should be. This page was written some four centuries after his death, perhaps for a student, and about eight centuries before the oldest complete manuscript of the Elements, which was made in 888.",
+      "facts": [
+        "Written on one side only, in sloping capitals with a few spelling slips, probably from a roll or a loose sheet.",
+        "The Elements ran to thirteen books and was printed in more editions than any book but the Bible.",
+        "Grenfell and Hunt's Oxyrhynchus finds amount to about half a million papyrus fragments, most still unpublished.",
+        "The fragment came to Philadelphia in 1901 as thanks for the university's support of the Egypt Exploration Fund."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Papyrus_Oxyrhynchus_29",
+      "wikidataQid": "Q7133461",
+      "externalIds": {
+        "commons-curid": "1259734",
+        "commons-file": "P. Oxy. I 29.jpg"
+      },
+      "copyrighted": false,
+      "asset": {
+        "kind": "image",
+        "currentVersionId": "wm-1259734-v1",
+        "versions": [
+          {
+            "id": "wm-1259734-v1",
+            "original": {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/8/8d/P._Oxy._I_29.jpg",
+              "width": 1694,
+              "height": 1032,
+              "bytes": 277900,
+              "mime": "image/jpeg"
+            },
+            "rungs": [
+              {
+                "width": 1280,
+                "height": 780,
+                "url": "/assets/wm-1259734/1280.jpg",
+                "bytes": 360486
+              }
+            ],
+            "loop": null,
+            "credit": {
+              "author": "Unknown scribe (text by Euclid); image via the Penn Museum / OPenN",
+              "license": {
+                "name": "Public domain",
+                "url": null
+              },
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:P._Oxy._I_29.jpg"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-09T00:00:00Z",
+              "note": "The recto of the fragment, with nine lines of Greek uncial and the rectangle diagram at the lower right; the red '29' at bottom left is the old inventory number. Source given as the Penn Museum's OPenN record https://openn.library.upenn.edu/Data/0016/html/e2748.html (call number P.Penn. Museum inv. E02748, 'Elements 2.5', extent 15.2 x 8.5 cm, papyrus, written on one side only, 9 lines, diagram to the lower right of lines 8-9, provenance Grenfell and Hunt 1896-97, donated 1901). Commons wikitext licence template: {{PD-old-100}} (Permission field 'N/A'); extmetadata: LicenseShortName = 'Public domain', License = 'pd', Copyrighted = 'False', Artist = 'Euclid', Credit = OPenN URL, DateTimeOriginal = '1994-10-07'; categories: Author died more than 100 years ago public domain images, CC-PD-Mark, Papyrus Oxyrhynchus 29, Mathematical proof. Doubt: OPenN states that the Penn Museum licenses its images CC BY-SA, so the Commons PD claim rests on the PD-Art rule (a faithful photograph of a flat public-domain object gains no new copyright in the US); the larger OPenN-derived file File:P.Penn. Museum inv. E02748 Euclid's Elements 2.5.jpg (curid 169166171, 3745 x 2322) is tagged CC BY-SA 4.0 on Commons and was therefore not used. Dating: Grenfell and Hunt put the hand at about 75-125 CE, which Wikipedia and most histories follow (c. 100 CE); the Penn Museum catalogue says 3rd-4th century CE. The physical height below is scaled from the 15.2 cm width by the image's aspect so the flat rendering is not distorted (the catalogue's 8.5 cm is the papyrus alone). HEAD 200, content-length 277900, image/jpeg."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "wikimedia-commons"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": 0.5,
+        "back": "mirror",
+        "yaw": null,
+        "fallbackWidthM": 1.2
+      },
+      "tags": [
+        "mathematics",
+        "geometry",
+        "Euclid",
+        "papyrus",
+        "Egypt",
+        "Greek",
+        "Oxyrhynchus"
+      ],
+      "pageviews": null,
+      "importance": 0.8,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-09T00:00:00Z",
+      "updatedAt": "2026-10-10T16:40:47.049Z"
+    },
+    {
       "id": "sf-5f35ab370082403e8c7829388f4e0c30",
       "kind": "model",
       "title": "The Pantheon, Rome (interior)",
@@ -4090,7 +4414,7 @@
       "updatedAt": "2026-10-09T23:16:28.361Z"
     },
     {
-      "id": "wm-11952242",
+      "id": "wm-110598443",
       "kind": "image",
       "title": "Iron Pillar of Delhi",
       "titleOriginal": null,
@@ -4167,50 +4491,50 @@
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Iron_pillar_of_Delhi",
       "wikidataQid": "Q543419",
       "externalIds": {
-        "commons-curid": "11952242",
-        "commons-file": "Delhi Iron pillar, 2010-09-27.jpg"
+        "commons-curid": "110598443",
+        "commons-file": "The Iron pillar of Delhi 01.jpg"
       },
       "copyrighted": false,
       "asset": {
         "kind": "image",
-        "currentVersionId": "wm-11952242-v1",
+        "currentVersionId": "wm-110598443-v1",
         "versions": [
           {
-            "id": "wm-11952242-v1",
+            "id": "wm-110598443-v1",
             "original": {
-              "url": "https://upload.wikimedia.org/wikipedia/commons/d/da/Delhi_Iron_pillar%2C_2010-09-27.jpg",
-              "width": 2848,
-              "height": 4288,
-              "bytes": 2586223,
+              "url": "https://upload.wikimedia.org/wikipedia/commons/8/8c/The_Iron_pillar_of_Delhi_01.jpg",
+              "width": 5184,
+              "height": 3456,
+              "bytes": 4418215,
               "mime": "image/jpeg"
             },
             "rungs": [
               {
                 "width": 1280,
-                "height": 1928,
-                "url": "/assets/wm-11952242/1280.jpg",
-                "bytes": 706709
+                "height": 854,
+                "url": "/assets/wm-110598443/1280.jpg",
+                "bytes": 347326
               },
               {
-                "width": 2048,
-                "height": 3084,
-                "url": "/assets/wm-11952242/2048.jpg",
-                "bytes": 2586223
+                "width": 3840,
+                "height": 2559,
+                "url": "/assets/wm-110598443/3840.jpg",
+                "bytes": 2345555
               }
             ],
             "loop": null,
             "credit": {
-              "author": "Aiwok",
+              "author": "Hridya08",
               "license": {
-                "name": "CC BY-SA 3.0",
-                "url": "https://creativecommons.org/licenses/by-sa/3.0"
+                "name": "CC BY-SA 4.0",
+                "url": "https://creativecommons.org/licenses/by-sa/4.0"
               },
-              "sourcePage": "https://commons.wikimedia.org/wiki/File:Delhi_Iron_pillar,_2010-09-27.jpg"
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:The_Iron_pillar_of_Delhi_01.jpg"
             },
             "contributed": {
               "by": null,
               "at": "2026-10-09T00:00:00Z",
-              "note": "Portrait photograph of the whole pillar in the Qutb complex, Mehrauli, taken 27 September 2010 with a Nikon D90. Commons API extmetadata: LicenseShortName = 'CC BY-SA 3.0', Artist = 'Aiwok', Credit = 'Own work'; also tagged GFDL. The English Wikipedia lead image (File:Iron Pillar, Delhi, May 2008.jpg, public domain, Mark A. Wilson) was passed over because it is only 1000 x 1347 px, too small for a 7.2 m object at true size. Larger CC BY-SA 4.0 alternatives: File:Iron Pillar of Delhi-Q543419N -Mehrauli -Delhi -DL-161.jpg (82522408, 4000 x 5000, described by its author as a low-angle shot) and File:The Iron pillar of Delhi.jpg (110598442, 2660 x 3011). The pillar is in situ in Delhi; its place of manufacture is uncertain, and madeIn below follows the hypothesis that it was first erected at Udayagiri near Vidisha."
+              "note": "Hridya08's photograph of the pillar framed by the arch of the Quwwat-ul-Islam mosque in evening light, with nobody in the frame; chosen on 2026-10-10 over Aiwok's 2010 photograph (curid 11952242), which had visitors around the railing. Hung at 14 m wide so the pillar in it stands near its true height of about 7 m. Commons API extmetadata: LicenseShortName = 'CC BY-SA 4.0', Artist = 'Hridya08', DateTimeOriginal = '2021-09-28 08:00:32'. Portrait photograph of the whole pillar in the Qutb complex, Mehrauli, taken 27 September 2010 with a Nikon D90. Commons API extmetadata: LicenseShortName = 'CC BY-SA 3.0', Artist = 'Aiwok', Credit = 'Own work'; also tagged GFDL. The English Wikipedia lead image (File:Iron Pillar, Delhi, May 2008.jpg, public domain, Mark A. Wilson) was passed over because it is only 1000 x 1347 px, too small for a 7.2 m object at true size. Larger CC BY-SA 4.0 alternatives: File:Iron Pillar of Delhi-Q543419N -Mehrauli -Delhi -DL-161.jpg (82522408, 4000 x 5000, described by its author as a low-angle shot) and File:The Iron pillar of Delhi.jpg (110598442, 2660 x 3011). The pillar is in situ in Delhi; its place of manufacture is uncertain, and madeIn below follows the hypothesis that it was first erected at Udayagiri near Vidisha."
             },
             "moderation": {
               "status": "approved",
@@ -4228,7 +4552,7 @@
         "baseHeight": 0.5,
         "back": "mirror",
         "yaw": null,
-        "fallbackWidthM": 1.2
+        "fallbackWidthM": 14
       },
       "tags": [
         "India",
@@ -4249,10 +4573,10 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-10T00:16:45.533Z"
+      "updatedAt": "2026-10-10T16:49:00.200Z"
     },
     {
-      "id": "wm-63768039",
+      "id": "wm-63768037",
       "kind": "image",
       "title": "Bodhisattva Padmapani, Cave 1, Ajanta",
       "titleOriginal": null,
@@ -4331,50 +4655,50 @@
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Ajanta_Caves",
       "wikidataQid": "Q184427",
       "externalIds": {
-        "commons-curid": "63768039",
-        "commons-file": "Ajanta Cave 1 Padmapani and attendants.jpg"
+        "commons-curid": "63768037",
+        "commons-file": "Ajanta Cave 1 Padmapani.jpg"
       },
       "copyrighted": false,
       "asset": {
         "kind": "image",
-        "currentVersionId": "wm-63768039-v1",
+        "currentVersionId": "wm-63768037-v1",
         "versions": [
           {
-            "id": "wm-63768039-v1",
+            "id": "wm-63768037-v1",
             "original": {
-              "url": "https://upload.wikimedia.org/wikipedia/commons/0/05/Ajanta_Cave_1_Padmapani_and_attendants.jpg",
+              "url": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Ajanta_Cave_1_Padmapani.jpg",
               "width": 4000,
               "height": 6000,
-              "bytes": 6383769,
+              "bytes": 6533984,
               "mime": "image/jpeg"
             },
             "rungs": [
               {
                 "width": 1280,
                 "height": 1920,
-                "url": "/assets/wm-63768039/1280.jpg",
-                "bytes": 1012673
+                "url": "/assets/wm-63768037/1280.jpg",
+                "bytes": 1033759
               },
               {
                 "width": 3840,
                 "height": 5760,
-                "url": "/assets/wm-63768039/3840.jpg",
-                "bytes": 5975589
+                "url": "/assets/wm-63768037/3840.jpg",
+                "bytes": 6139862
               }
             ],
             "loop": null,
             "credit": {
-              "author": "Anandajoti Bhikkhu (Photo Dharma)",
+              "author": "Photo Dharma from Sadao, Thailand",
               "license": {
                 "name": "CC BY 2.0",
                 "url": "https://creativecommons.org/licenses/by/2.0"
               },
-              "sourcePage": "https://commons.wikimedia.org/wiki/File:Ajanta_Cave_1_Padmapani_and_attendants.jpg"
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Ajanta_Cave_1_Padmapani.jpg"
             },
             "contributed": {
               "by": null,
               "at": "2026-10-09T00:00:00Z",
-              "note": "Photograph of the Padmapani mural on the rear wall of Cave 1, with the attendants, by Anandajoti Bhikkhu of Photo Dharma, Flickr, 2017. Commons API extmetadata: LicenseShortName = 'CC BY 2.0', Artist = 'Photo Dharma from Sadao, Thailand', Credit = 'Rework of' (a reworked version of the photographer's own frame). Chosen over the public-domain reproductions on Commons (e.g. page ids 36247122 and 3411328) because those are small or of unstated photographic origin, and over several CC BY-SA 4.0 visitor shots because this is 4000 x 6000 px and from a photographer who documents Buddhist sites systematically. The real dimensions of the painted panel are not published in any source I could verify (Wikipedia says only 'over-lifesize'), so widthCm and heightCm are left null and will need to be measured or estimated by the curator; the figure is roughly life-size-plus, so a display height around 2 m would not be far wrong. The mural is in situ at Ajanta."
+              "note": "Clean copy of the same Photo Dharma photograph. The earlier choice, curid 63768039 'Ajanta Cave 1 Padmapani and attendants.jpg', is the same frame with two red rectangles drawn on it to mark the attendants for an article; it was replaced on 2026-10-10. Commons API extmetadata: LicenseShortName = 'CC BY 2.0', Artist = 'Photo Dharma from Sadao, Thailand', DateTimeOriginal = '2017-03-08 00:53:30'. Photograph of the Padmapani mural on the rear wall of Cave 1, with the attendants, by Anandajoti Bhikkhu of Photo Dharma, Flickr, 2017. Commons API extmetadata: LicenseShortName = 'CC BY 2.0', Artist = 'Photo Dharma from Sadao, Thailand', Credit = 'Rework of' (a reworked version of the photographer's own frame). Chosen over the public-domain reproductions on Commons (e.g. page ids 36247122 and 3411328) because those are small or of unstated photographic origin, and over several CC BY-SA 4.0 visitor shots because this is 4000 x 6000 px and from a photographer who documents Buddhist sites systematically. The real dimensions of the painted panel are not published in any source I could verify (Wikipedia says only 'over-lifesize'), so widthCm and heightCm are left null and will need to be measured or estimated by the curator; the figure is roughly life-size-plus, so a display height around 2 m would not be far wrong. The mural is in situ at Ajanta."
             },
             "moderation": {
               "status": "approved",
@@ -4414,7 +4738,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-10T00:16:47.479Z"
+      "updatedAt": "2026-10-10T16:49:02.352Z"
     },
     {
       "id": "wm-7203375",
@@ -6093,6 +6417,204 @@
       "updatedAt": "2026-10-10T00:26:53.365Z"
     },
     {
+      "id": "sf-da8c663b974f4902bf79bb9595e76d5e",
+      "kind": "model",
+      "title": "A courtyard of the Nasrid palaces, the Alhambra",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "Nasrid court workshops, for Yusuf I and Muhammad V",
+          "slug": null,
+          "wikidataQid": null,
+          "wikipediaUrl": null,
+          "birthYear": null,
+          "deathYear": null,
+          "role": "builder"
+        }
+      ],
+      "date": {
+        "year": 1370,
+        "month": null,
+        "day": null,
+        "yearStart": 1333,
+        "yearEnd": 1391,
+        "label": "14th century, under Yusuf I and Muhammad V",
+        "precision": "circa"
+      },
+      "madeIn": {
+        "name": "Granada",
+        "region": "Andalusia",
+        "country": "Spain",
+        "point": {
+          "lat": 37.177,
+          "lon": -3.589
+        },
+        "wikidataQid": "Q8810"
+      },
+      "location": {
+        "name": "Granada",
+        "region": null,
+        "country": "Spain",
+        "point": null,
+        "wikidataQid": null,
+        "institution": "Patronato de la Alhambra y Generalife (in situ)",
+        "inventoryNumber": null
+      },
+      "culture": "Nasrid (Moorish Spain)",
+      "movement": null,
+      "periodSlug": null,
+      "medium": "Brick, lime plaster carved in relief, glazed tile and carved wood",
+      "materials": [
+        "brick",
+        "stucco",
+        "tile",
+        "wood",
+        "marble"
+      ],
+      "genre": [
+        "building"
+      ],
+      "subjects": [
+        "architecture",
+        "courtyard",
+        "Islamic art",
+        "Nasrid dynasty",
+        "muqarnas"
+      ],
+      "physical": {
+        "widthCm": null,
+        "heightCm": null,
+        "depthCm": null,
+        "weightKg": null
+      },
+      "description": "Walk in. The Alhambra is the palace city of the Nasrid emirs of Granada, the last Muslim state in Spain, and its palaces of the fourteenth century are the finest thing Islamic Spain left behind: courtyards of water and shade, walls of carved plaster that dissolve into pattern, ceilings of wooden geometry and muqarnas that hang like honeycomb. Nothing in them is heavy; the materials are brick and plaster and tile, cheap stuff, and the whole art is in the surface and the proportion. This is one of the first courtyards on the way in, scanned by a visitor with a camera; stand in it and look at the facade with its carved eave and the gallery of arches above the door. The scan has holes and a rough patch over one corner, as scans do. The rest is as it stands in Granada.",
+      "facts": [
+        "The Nasrids ruled Granada from 1238 until Ferdinand and Isabella took the city on 2 January 1492.",
+        "The plaster was carved wet, in panels, and painted; traces of blue and red survive in the recesses.",
+        "Inscriptions on the walls repeat the Nasrid motto, 'There is no victor but God', hundreds of times.",
+        "Washington Irving lived in the half-ruined palace in 1829 and wrote the book that brought the world to it."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Alhambra",
+      "wikidataQid": "Q3399",
+      "externalIds": {
+        "sketchfab": "da8c663b974f4902bf79bb9595e76d5e"
+      },
+      "copyrighted": false,
+      "asset": {
+        "kind": "model",
+        "currentVersionId": "sf-da8c663b974f4902bf79bb9595e76d5e-v1",
+        "versions": [
+          {
+            "id": "sf-da8c663b974f4902bf79bb9595e76d5e-v1",
+            "original": {
+              "url": "https://sketchfab.com/3d-models/palacio-de-la-alhambra-primer-patio-da8c663b974f4902bf79bb9595e76d5e",
+              "format": "glb",
+              "bytes": 74317496,
+              "triangles": 1000024,
+              "unitScale": 0.9,
+              "rotation": [
+                0,
+                -20,
+                0
+              ]
+            },
+            "rungs": [
+              {
+                "quality": "thumb",
+                "url": "/assets/sf-da8c663b974f4902bf79bb9595e76d5e/thumb.glb",
+                "bytes": 1267716,
+                "triangles": 183986,
+                "textureSize": 512,
+                "draco": true
+              },
+              {
+                "quality": "low",
+                "url": "/assets/sf-da8c663b974f4902bf79bb9595e76d5e/low.glb",
+                "bytes": 2492736,
+                "triangles": 349786,
+                "textureSize": 1024,
+                "draco": true
+              },
+              {
+                "quality": "medium",
+                "url": "/assets/sf-da8c663b974f4902bf79bb9595e76d5e/medium.glb",
+                "bytes": 4222904,
+                "triangles": 599978,
+                "textureSize": 2048,
+                "draco": true
+              },
+              {
+                "quality": "high",
+                "url": "/assets/sf-da8c663b974f4902bf79bb9595e76d5e/high.glb",
+                "bytes": 7321788,
+                "triangles": 1000024,
+                "textureSize": 4096,
+                "draco": true
+              }
+            ],
+            "scale": 1,
+            "bounds": {
+              "width": 22.292,
+              "height": 16.601,
+              "depth": 27.524
+            },
+            "credit": {
+              "author": "EternalEchoesVR (Sketchfab)",
+              "license": {
+                "name": "CC BY 4.0",
+                "url": "https://creativecommons.org/licenses/by/4.0/"
+              },
+              "sourcePage": "https://sketchfab.com/3d-models/palacio-de-la-alhambra-primer-patio-da8c663b974f4902bf79bb9595e76d5e"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-09T00:00:00Z",
+              "note": "Photogrammetry of the first courtyard on the visitor's way through the Nasrid palaces ('Primer Patio'), by Sketchfab user EternalEchoesVR, CC BY 4.0 (license.txt: author EternalEchoesVR, license type CC-BY-4.0). One million triangles, one 8192 px texture, unlit material. Measured 26.8 x 18.4 x 30.5 units; doorways come out 10-20% over Nasrid sizes, so unitScale 0.9. The plan sits about 20 degrees off the axes in the file; rotated back. The decorated two-storey facade with the large arched portal and the gallery of three arches faces into the courtyard from its -Z end; the +Z end is a low six-arch arcade, which is the way in. Flaws of the scan, left as they are: a grey low-polygon blob of badly reconstructed roof over one corner (it is inside the same mesh chunks as real walls, so it cannot be stripped by name), a cut-out silhouette of a visitor at the foot of the far facade, and the black backs of the exterior walls, drawn double-sided. Downloaded by the museum's owner from Sketchfab on 2026-10-10."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "sketchfab",
+            "representation": "scan"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": 0,
+        "back": "backing",
+        "yaw": null,
+        "fallbackWidthM": 1.2,
+        "threshold": 0
+      },
+      "tags": [
+        "architecture",
+        "Islamic art",
+        "Spain",
+        "Granada",
+        "scan",
+        "walk in",
+        "UNESCO World Heritage"
+      ],
+      "pageviews": null,
+      "importance": 0.9,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-09T00:00:00Z",
+      "updatedAt": "2026-10-10T16:52:23.277Z"
+    },
+    {
       "id": "eq-madhava-series",
       "kind": "image",
       "title": "Madhava's series for π",
@@ -6249,6 +6771,226 @@
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
       "updatedAt": "2026-10-10T00:09:46.435Z"
+    },
+    {
+      "id": "wm-38733061",
+      "kind": "image",
+      "title": "Gutenberg Bible, first page of Genesis (Berlin vellum copy)",
+      "titleOriginal": "Biblia latina (42-line Bible)",
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "Johannes Gutenberg",
+          "slug": null,
+          "wikidataQid": "Q8958",
+          "wikipediaUrl": null,
+          "birthYear": 1400,
+          "deathYear": 1468,
+          "role": "printer"
+        }
+      ],
+      "date": {
+        "year": 1455,
+        "month": null,
+        "day": null,
+        "yearStart": 1454,
+        "yearEnd": 1455,
+        "label": "c. 1454-1455",
+        "precision": "circa"
+      },
+      "madeIn": {
+        "name": "Mainz",
+        "region": "Rhineland-Palatinate",
+        "country": "Germany",
+        "point": {
+          "lat": 49.9929,
+          "lon": 8.2473
+        },
+        "wikidataQid": "Q1720"
+      },
+      "location": {
+        "name": "Berlin",
+        "region": null,
+        "country": "Germany",
+        "point": null,
+        "wikidataQid": null,
+        "institution": "Staatsbibliothek zu Berlin",
+        "inventoryNumber": "2° Inc. 1511 (vellum copy)"
+      },
+      "culture": null,
+      "movement": null,
+      "periodSlug": null,
+      "medium": "Letterpress printing in Textura type on vellum, with hand-painted initial, border and rubrication",
+      "materials": [
+        "vellum",
+        "printing ink",
+        "pigments",
+        "gold"
+      ],
+      "genre": [
+        "book",
+        "printing",
+        "incunabulum",
+        "illuminated page"
+      ],
+      "subjects": [
+        "Genesis",
+        "creation",
+        "Bible",
+        "Latin Vulgate",
+        "printing",
+        "movable type",
+        "illumination"
+      ],
+      "physical": {
+        "widthCm": 29,
+        "heightCm": 40.7,
+        "depthCm": null,
+        "weightKg": null
+      },
+      "description": "'In the beginning God created the heaven and the earth': the opening of Genesis in the first substantial book printed in Europe with movable metal type. Johannes Gutenberg, a goldsmith's son from Mainz, worked out how to cast thousands of identical letters in a hand mould, how to mix an oil-based ink that would stick to metal, and how to adapt a wine press to print a sheet. Around 1454 and 1455 his workshop printed about 180 copies of the Latin Bible, some on paper and some, like this one, on calfskin, in two volumes of 1,286 pages with two columns of 42 lines each. Only the black text came off the press; the great initial, the border with its birds and peacock, the red headings and the coloured capitals were painted in afterwards by hand, so that no two copies look alike. The whole enterprise was financed by a loan from Johann Fust, who foreclosed before the Bibles were sold. Forty-nine copies survive; this page is from the illuminated vellum copy in Berlin.",
+      "facts": [
+        "Printed in a Textura typeface of some 290 different sorts, including ligatures and abbreviations, to imitate a scribe's hand.",
+        "A scribe took about three years to copy a Bible; Gutenberg's press produced the whole edition in about two.",
+        "Twenty-one complete copies survive; the Berlin copy is one of about a dozen printed on vellum.",
+        "Aeneas Silvius Piccolomini, the future Pope Pius II, saw sheets at Frankfurt in October 1454 and reported that they could be read without spectacles."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Gutenberg_Bible",
+      "wikidataQid": "Q158075",
+      "externalIds": {
+        "commons-curid": "38733061",
+        "commons-file": "Gutenberg Bible B42 Genesis.JPG"
+      },
+      "copyrighted": false,
+      "asset": {
+        "kind": "image",
+        "currentVersionId": "wm-38733061-v1",
+        "versions": [
+          {
+            "id": "wm-38733061-v1",
+            "original": {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/5/56/Gutenberg_Bible_B42_Genesis.JPG",
+              "width": 6843,
+              "height": 9616,
+              "bytes": 30616368,
+              "mime": "image/jpeg"
+            },
+            "rungs": [
+              {
+                "width": 1280,
+                "height": 1799,
+                "url": "/assets/wm-38733061/1280.jpg",
+                "bytes": 1034788
+              },
+              {
+                "width": 3840,
+                "height": 5396,
+                "url": "/assets/wm-38733061/3840.jpg",
+                "bytes": 6936357
+              }
+            ],
+            "loop": null,
+            "credit": {
+              "author": "Johannes Gutenberg (printer); illuminator unknown; scan by Commons user Jossi2 from a facsimile",
+              "license": {
+                "name": "Public domain",
+                "url": null
+              },
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Gutenberg_Bible_B42_Genesis.JPG"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-09T00:00:00Z",
+              "note": "Folio 5 recto of volume 1 of the illuminated vellum copy in the Staatsbibliothek zu Berlin: the first page of Genesis ('Incipit liber bresith quem nos genesim dicimus. In principio creavit deus celum et terram...'), two columns of 42 lines, with the painted initial I running down the left margin, the running head GENESIS, and the border of flowers, birds and a peacock. 6843 x 9616 px, 30.6 MB, the largest single Gutenberg page on Commons; the uploader describes it as scanned from a facsimile (a printed reproduction of the Berlin leaf), so the colour is that of the facsimile, not a library photograph, and fine detail may show print screen. Commons wikitext licence template: {{PD-old-70-expired}} (extmetadata: LicenseShortName = 'Public domain', License = 'pd', Copyrighted = 'False', Artist = 'Original by Johannes Gutenberg (printer), Scan by Jossi', Credit = 'Facsimile of a page from 42-line Gutenberg Bible', DateTimeOriginal = 'circa 1455'); categories: PD-old-70-expired, CC-PD-Mark, Gutenberg Bible (Berlin copy), Book of Genesis, First Page, Medieval miniatures of peacocks. Alternate below: the Harry Ransom Center's own scan of the first page of its paper copy (Jerome's prefatory epistle), a library photograph of the real leaf, 2009 x 2877 px. Also seen: File:Württembergische Landesbibliothek Stuttgart Gutenberg Genesis.png, curid 82797473, the Stuttgart copy's Genesis page, {{PD-old-70-expired}}, but only 969 x 1421 px; File:Gutenberg Bible WDL4102.jpg (Bavarian State Library, World Digital Library) 1024 x 1369. Physical size: a 42-line Bible leaf is about 40-42 x 29-30 cm (the Bodleian copy's leaves measure 40 x 28.6 cm); the figures below follow the scan's aspect. The Berlin shelfmark given below should be checked against the library's catalogue. HEAD 200, content-length 30616368, image/jpeg."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "wikimedia-commons"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": 0.5,
+        "back": "mirror",
+        "yaw": null,
+        "fallbackWidthM": 1.2
+      },
+      "tags": [
+        "printing",
+        "Gutenberg",
+        "Bible",
+        "Mainz",
+        "Germany",
+        "incunabula",
+        "movable type",
+        "illumination"
+      ],
+      "pageviews": null,
+      "importance": 0.95,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-09T00:00:00Z",
+      "updatedAt": "2026-10-10T16:40:47.717Z",
+      "alternates": [
+        {
+          "kind": "image",
+          "currentVersionId": "wm-38733061-alt1-v1",
+          "versions": [
+            {
+              "id": "wm-38733061-alt1-v1",
+              "original": {
+                "url": "https://upload.wikimedia.org/wikipedia/commons/2/27/Gutenberg_bible_Old_Testament_Epistle_of_St_Jerome.jpg",
+                "width": 2009,
+                "height": 2877,
+                "bytes": 1195134,
+                "mime": "image/jpeg"
+              },
+              "rungs": [
+                {
+                  "width": 1280,
+                  "height": 1833,
+                  "url": "/assets/wm-38733061/alt1/1280.jpg",
+                  "bytes": 967842
+                }
+              ],
+              "loop": null,
+              "credit": {
+                "author": "Johannes Gutenberg (printer); scan by the Harry Ransom Center, University of Texas at Austin",
+                "license": {
+                  "name": "Public domain",
+                  "url": null
+                },
+                "sourcePage": "https://commons.wikimedia.org/wiki/File:Gutenberg_bible_Old_Testament_Epistle_of_St_Jerome.jpg"
+              },
+              "contributed": {
+                "by": null,
+                "at": "2026-10-09T00:00:00Z",
+                "note": "The first page of volume 1 of the Ransom Center's paper copy: Jerome's prefatory letter to Paulinus, with the large painted initial F and foliage border, the library's own digitisation (hrc.contentdm.oclc.org p15878coll100 id 2664). Commons curid 409361; wikitext licence template {{PD-art|PD-old-100}} with a note that the university's copyright claim is rejected because scanning is not a creative act; extmetadata: LicenseShortName = 'Public domain', License = 'pd', Copyrighted = 'False', Artist = 'Johannes Gutenberg', DateTimeOriginal = '1454/55'; categories: PD-Art (PD-old-100), CC-PD-Mark, Jerome's first epistle to Paulinus (Gutenberg Bible preface), University of Texas at Austin. HEAD 200, content-length 1195134, image/jpeg."
+              },
+              "moderation": {
+                "status": "approved",
+                "reviewedBy": null,
+                "reviewedAt": null,
+                "reason": null,
+                "flags": []
+              },
+              "provenance": "wikimedia-commons"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "wm-50410532",
@@ -6733,6 +7475,174 @@
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
       "updatedAt": "2026-10-10T00:09:46.671Z"
+    },
+    {
+      "id": "wm-11812879",
+      "kind": "image",
+      "title": "Newton, Principia Mathematica, title page of the first edition",
+      "titleOriginal": "Philosophiæ Naturalis Principia Mathematica",
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "Isaac Newton",
+          "slug": null,
+          "wikidataQid": "Q935",
+          "wikipediaUrl": null,
+          "birthYear": 1642,
+          "deathYear": 1727,
+          "role": "author"
+        }
+      ],
+      "date": {
+        "year": 1687,
+        "month": 7,
+        "day": 5,
+        "yearStart": null,
+        "yearEnd": null,
+        "label": "published 5 July 1687",
+        "precision": "year"
+      },
+      "madeIn": {
+        "name": "London",
+        "region": "England",
+        "country": "United Kingdom",
+        "point": {
+          "lat": 51.5074,
+          "lon": -0.1278
+        },
+        "wikidataQid": "Q84"
+      },
+      "location": {
+        "name": "Strasbourg",
+        "region": null,
+        "country": "France",
+        "point": null,
+        "wikidataQid": null,
+        "institution": "Université de Strasbourg, Service commun de la documentation",
+        "inventoryNumber": "docnum coll12,10982"
+      },
+      "culture": null,
+      "movement": null,
+      "periodSlug": null,
+      "medium": "Letterpress printing on paper, quarto",
+      "materials": [
+        "paper",
+        "printing ink"
+      ],
+      "genre": [
+        "book",
+        "title page",
+        "physics",
+        "mathematics"
+      ],
+      "subjects": [
+        "gravitation",
+        "laws of motion",
+        "mechanics",
+        "Royal Society",
+        "Samuel Pepys",
+        "Edmond Halley"
+      ],
+      "physical": {
+        "widthCm": 19.5,
+        "heightCm": 23,
+        "depthCm": null,
+        "weightKg": null
+      },
+      "description": "The title page of the book that gave physics its laws. Philosophiæ Naturalis Principia Mathematica, 'Mathematical Principles of Natural Philosophy', sets out Newton's three laws of motion and the law of universal gravitation, and uses them to derive Kepler's planetary orbits, the tides, the shape of the Earth, the precession of the equinoxes and the paths of comets, all from one inverse-square force. The page records how it came to be printed: 'Imprimatur, S. Pepys, Reg. Soc. Præses, Julii 5. 1686', the licence of the Royal Society under its president Samuel Pepys, and 'Jussu Societatis Regiæ ac Typis Josephi Streater', printed by Joseph Streater at the Society's order. In fact the Society had spent its money on a history of fishes, and the astronomer Edmond Halley, who had prodded Newton into writing the book, paid for the printing himself. Newton is named as Lucasian Professor at Trinity College, Cambridge. Only a few hundred copies were printed, in Latin, and they sold for about nine shillings.",
+      "facts": [
+        "Newton wrote the three books in about eighteen months, between 1685 and 1686.",
+        "Halley's prompt was a question in 1684: what orbit does an inverse-square force give? Newton answered 'an ellipse', and had already proved it.",
+        "Second and third editions followed in 1713 and 1726; Newton's own annotated first edition survives at Trinity College.",
+        "The first English translation, by Andrew Motte, appeared in 1729, two years after Newton's death."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Philosophi%C3%A6_Naturalis_Principia_Mathematica",
+      "wikidataQid": "Q205921",
+      "externalIds": {
+        "commons-curid": "11812879",
+        "commons-file": "Newton - Principia (1687), title, p. 5, color.jpg"
+      },
+      "copyrighted": false,
+      "asset": {
+        "kind": "image",
+        "currentVersionId": "wm-11812879-v1",
+        "versions": [
+          {
+            "id": "wm-11812879-v1",
+            "original": {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Newton_-_Principia_%281687%29%2C_title%2C_p._5%2C_color.jpg",
+              "width": 2536,
+              "height": 2988,
+              "bytes": 1025407,
+              "mime": "image/jpeg"
+            },
+            "rungs": [
+              {
+                "width": 1280,
+                "height": 1509,
+                "url": "/assets/wm-11812879/1280.jpg",
+                "bytes": 585350
+              },
+              {
+                "width": 2048,
+                "height": 2413,
+                "url": "/assets/wm-11812879/2048.jpg",
+                "bytes": 1025407
+              }
+            ],
+            "loop": null,
+            "credit": {
+              "author": "Isaac Newton; printed by Joseph Streater, London; scan by the Service commun de la documentation, Université de Strasbourg",
+              "license": {
+                "name": "Public domain",
+                "url": null
+              },
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Newton_-_Principia_(1687),_title,_p._5,_color.jpg"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-09T00:00:00Z",
+              "note": "Colour scan of the title page of the University of Strasbourg's copy of the 1687 first edition (docnum.u-strasbg.fr coll12,10982), cropped close to the page edges, with the library's shelf marks pencilled at the top right and bottom. Commons wikitext licence template: {{PD-old-100}}; extmetadata: LicenseShortName = 'Public domain', License = 'pd', Copyrighted = 'False', Artist = 'Isaac Newton', Credit = 'Service commun de la documentation de l'Université de Strasbourg', DateTimeOriginal = '1687'; categories: Author died more than 100 years ago public domain images, CC-PD-Mark, Philosophiae Naturalis Principia Mathematica (1687 edition), 1687 title pages. Alternative considered: File:Newton's Philosophiae Naturalis Principia Mathematica 1687 (presentation copy to James II).jpg, curid 82835976, 3047 x 4000 px, 3100449 B, {{PD-old-70-1923}}, a brighter Christie's auction photograph of the copy Newton presented to James II, but it shows the gutter and the book's fore-edge rather than a flat page. Physical size is an estimate: the first edition is a quarto with leaves of roughly 24 x 19 cm, and the figures below follow the scan's aspect (0.85, since the scan is trimmed to the page). HEAD 200, content-length 1025407, image/jpeg."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "wikimedia-commons"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": 0.5,
+        "back": "mirror",
+        "yaw": null,
+        "fallbackWidthM": 1.2
+      },
+      "tags": [
+        "physics",
+        "mathematics",
+        "Newton",
+        "gravitation",
+        "book",
+        "England",
+        "Royal Society"
+      ],
+      "pageviews": null,
+      "importance": 0.95,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-09T00:00:00Z",
+      "updatedAt": "2026-10-10T16:40:48.096Z"
     },
     {
       "id": "wm-110713109",
@@ -7834,6 +8744,147 @@
       }
     },
     {
+      "id": "sim-fourier-series",
+      "kind": "sim",
+      "title": "Fourier series",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "Joseph Fourier",
+          "slug": null,
+          "wikidataQid": "Q8772",
+          "wikipediaUrl": null,
+          "birthYear": 1768,
+          "deathYear": 1830,
+          "role": "mathematician"
+        }
+      ],
+      "date": {
+        "year": 1822,
+        "month": null,
+        "day": null,
+        "yearStart": null,
+        "yearEnd": null,
+        "label": "1822",
+        "precision": "year"
+      },
+      "madeIn": {
+        "name": "Paris",
+        "region": null,
+        "country": "France",
+        "point": {
+          "lat": 48.857,
+          "lon": 2.352
+        },
+        "wikidataQid": "Q90"
+      },
+      "location": {
+        "name": "Everywhere it is computed",
+        "region": null,
+        "country": null,
+        "point": null,
+        "wikidataQid": null,
+        "institution": null,
+        "inventoryNumber": null
+      },
+      "culture": null,
+      "movement": null,
+      "periodSlug": null,
+      "medium": "Epicycles, drawn live",
+      "materials": [],
+      "genre": [
+        "mathematics"
+      ],
+      "subjects": [
+        "harmonic analysis",
+        "waves",
+        "heat"
+      ],
+      "physical": {
+        "widthCm": null,
+        "heightCm": null,
+        "depthCm": null,
+        "weightKg": null
+      },
+      "description": "Any repeating shape, Fourier claimed, is a sum of pure sine waves. He needed it to solve how heat spreads through a solid, and his 1822 Théorie analytique de la chaleur made the claim stick, though it took a century of analysis to say exactly when it is true. The panel shows it as circles riding on circles: the first turns once a cycle, the next three times as fast at a third the size, the next five times at a fifth, and so on. The tip of the last circle traces, as it goes, a square wave, the corners sharpening with every circle added. The same idea takes music apart into its overtones, images into frequencies, and is what every signal, from a phone call to a JPEG, passes through.",
+      "facts": [
+        "Seven terms are drawn here; a perfect square wave would need infinitely many.",
+        "Ptolemy used circles on circles to predict planets; Fourier's are the same geometry, pointed at a different question.",
+        "Fourier was also the first, in 1824, to describe what is now called the greenhouse effect.",
+        "The fast Fourier transform of 1965 made the sum cheap enough to compute everywhere."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Fourier_series",
+      "wikidataQid": "Q179467",
+      "externalIds": {},
+      "copyrighted": false,
+      "asset": {
+        "kind": "sim",
+        "currentVersionId": "sim-fourier-series-v1",
+        "versions": [
+          {
+            "id": "sim-fourier-series-v1",
+            "program": "fourier",
+            "params": {
+              "terms": 7,
+              "speed": 0.12
+            },
+            "bounds": {
+              "width": 2.2,
+              "height": 1.3,
+              "depth": 0.05
+            },
+            "credit": {
+              "author": "20watts",
+              "license": {
+                "name": "CC0 1.0",
+                "url": null
+              },
+              "sourcePage": null
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-09T00:00:00Z",
+              "note": "Run live by src/sims/fourier.ts: seven circles turning at odd multiples of one speed, their radii shrinking as 1/n, the tip drawing a square wave. The program is the museum's own, CC0."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "procedural"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": 0.95,
+        "back": "none",
+        "yaw": null,
+        "fallbackWidthM": 1.2
+      },
+      "tags": [
+        "mathematics",
+        "analysis",
+        "waves",
+        "simulation"
+      ],
+      "pageviews": null,
+      "importance": 0.85,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-09T00:00:00Z",
+      "updatedAt": "2026-10-09T00:00:00Z"
+    },
+    {
       "id": "wm-166228094",
       "kind": "image",
       "title": "Nocturne in E-flat major, Op. 9 No. 2",
@@ -8033,6 +9084,168 @@
           }
         ]
       }
+    },
+    {
+      "id": "wm-36638808",
+      "kind": "image",
+      "title": "Darwin's 'I think' tree of life sketch, Notebook B",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "Charles Darwin",
+          "slug": null,
+          "wikidataQid": "Q1035",
+          "wikipediaUrl": null,
+          "birthYear": 1809,
+          "deathYear": 1882,
+          "role": "author"
+        }
+      ],
+      "date": {
+        "year": 1837,
+        "month": 7,
+        "day": null,
+        "yearStart": null,
+        "yearEnd": null,
+        "label": "July 1837",
+        "precision": "year"
+      },
+      "madeIn": {
+        "name": "London (36 Great Marlborough Street)",
+        "region": "England",
+        "country": "United Kingdom",
+        "point": {
+          "lat": 51.5137,
+          "lon": -0.1391
+        },
+        "wikidataQid": "Q84"
+      },
+      "location": {
+        "name": "Cambridge",
+        "region": null,
+        "country": "United Kingdom",
+        "point": null,
+        "wikidataQid": null,
+        "institution": "Cambridge University Library, Darwin Archive",
+        "inventoryNumber": "DAR 121, p. 36"
+      },
+      "culture": null,
+      "movement": null,
+      "periodSlug": null,
+      "medium": "Pen and ink in a leather-bound pocket notebook",
+      "materials": [
+        "paper",
+        "ink"
+      ],
+      "genre": [
+        "manuscript",
+        "notebook",
+        "biology",
+        "diagram"
+      ],
+      "subjects": [
+        "evolution",
+        "common descent",
+        "extinction",
+        "phylogenetic tree",
+        "species",
+        "natural history"
+      ],
+      "physical": {
+        "widthCm": 10,
+        "heightCm": 16.3,
+        "depthCm": null,
+        "weightKg": null
+      },
+      "description": "'I think', and then a spindly branching diagram: a page from the pocket notebook Darwin opened in July 1837, nine months after the Beagle brought him home. He was twenty-eight and writing only for himself. The '1' at the base is a common ancestor; the branches ending in cross-bars are living species, the bare ones have died out. Underneath he reasons it through: if one ancestor is to give rise to as many living forms as exist now, and to groups of similar species, then extinction must be part of the process, and the gaps between living genera, 'A and B', 'C and B', record how long ago their lines parted. It is the first drawing of the tree of life as a genealogy rather than a ladder of perfection, and it came twenty-two years before On the Origin of Species, whose single illustration is a tidied version of this sketch. Darwin kept the notebooks all his life; this one is now in Cambridge University Library.",
+      "facts": [
+        "Notebook B is the first of a series Darwin lettered B to E on the 'transmutation of species', kept from 1837 to 1839.",
+        "Darwin did not read Malthus, whose essay on population gave him the mechanism of natural selection, until September 1838, after this sketch.",
+        "The notebook measures about the size of a hand and travelled in Darwin's pocket; some pages were later cut out and reused.",
+        "The one figure in On the Origin of Species (1859) is a branching diagram descended from this page."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Tree_of_life_(biology)",
+      "wikidataQid": null,
+      "externalIds": {
+        "commons-curid": "36638808",
+        "commons-file": "Darwin Tree 1837.png"
+      },
+      "copyrighted": false,
+      "asset": {
+        "kind": "image",
+        "currentVersionId": "wm-36638808-v1",
+        "versions": [
+          {
+            "id": "wm-36638808-v1",
+            "original": {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/1/10/Darwin_Tree_1837.png",
+              "width": 1390,
+              "height": 2265,
+              "bytes": 4423231,
+              "mime": "image/png"
+            },
+            "rungs": [
+              {
+                "width": 1280,
+                "height": 2086,
+                "url": "/assets/wm-36638808/1280.jpg",
+                "bytes": 499625
+              }
+            ],
+            "loop": null,
+            "credit": {
+              "author": "Charles Darwin; image from Darwin Online (Cambridge University Library, DAR 121)",
+              "license": {
+                "name": "Public domain",
+                "url": null
+              },
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Darwin_Tree_1837.png"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-09T00:00:00Z",
+              "note": "The whole of page 36 of Notebook B, the first 'transmutation' notebook, as photographed for Darwin Online (darwin-online.org.uk, item CUL-DAR121, page sequence 1); the page number '36' is visible top right, 'I think' top left, the branching sketch with '1' at its base and the branches labelled A, B, C, D. Commons wikitext licence template: {{PD-old-70-1923}}; extmetadata: LicenseShortName = 'Public domain', License = 'pd', Copyrighted = 'False', Artist = 'Charles Darwin' (Creator template), Credit = 'Page 36 of Notebook B [Transmutation of Species (1837-1838)], \"commenced... July 1837\"; from Darwin Online', DateTimeOriginal = '1837'; categories: PD-old-70-expired, CC-PD-Mark, Notebooks by Charles Darwin, Phylogenetic trees. Other versions on Commons are small crops from a 1990s web page (File:Darwins first tree.jpg, 695 x 616) or a 3876 x 3936 crop of the same photograph (File:Darwin Tree 1837 cropped.png, curid 128583433, 12 MB) showing only the sketch, not the page. Physical size is an estimate: Darwin's transmutation notebooks are small leather-bound pocket books of roughly 16.5 x 10 cm, and the figures below follow the image's aspect. HEAD 200, content-length 4423231, image/png."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "wikimedia-commons"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": 0.5,
+        "back": "mirror",
+        "yaw": null,
+        "fallbackWidthM": 1.2
+      },
+      "tags": [
+        "biology",
+        "evolution",
+        "Darwin",
+        "notebook",
+        "sketch",
+        "tree of life",
+        "England"
+      ],
+      "pageviews": null,
+      "importance": 0.9,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-09T00:00:00Z",
+      "updatedAt": "2026-10-10T16:40:48.224Z"
     },
     {
       "id": "wm-8853276",
@@ -8389,6 +9602,148 @@
       "updatedAt": "2026-10-10T00:09:47.237Z"
     },
     {
+      "id": "sim-galton-board",
+      "kind": "sim",
+      "title": "The Galton board",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "Francis Galton",
+          "slug": null,
+          "wikidataQid": "Q191026",
+          "wikipediaUrl": null,
+          "birthYear": 1822,
+          "deathYear": 1911,
+          "role": "statistician"
+        }
+      ],
+      "date": {
+        "year": 1873,
+        "month": null,
+        "day": null,
+        "yearStart": null,
+        "yearEnd": null,
+        "label": "1873",
+        "precision": "year"
+      },
+      "madeIn": {
+        "name": "London",
+        "region": "England",
+        "country": "United Kingdom",
+        "point": {
+          "lat": 51.507,
+          "lon": -0.128
+        },
+        "wikidataQid": "Q84"
+      },
+      "location": {
+        "name": "Everywhere it is computed",
+        "region": null,
+        "country": null,
+        "point": null,
+        "wikidataQid": null,
+        "institution": null,
+        "inventoryNumber": null
+      },
+      "culture": null,
+      "movement": null,
+      "periodSlug": null,
+      "medium": "Balls and pegs, simulated live",
+      "materials": [],
+      "genre": [
+        "mathematics",
+        "statistics"
+      ],
+      "subjects": [
+        "probability",
+        "normal distribution",
+        "central limit theorem"
+      ],
+      "physical": {
+        "widthCm": null,
+        "heightCm": null,
+        "depthCm": null,
+        "weightKg": null
+      },
+      "description": "Balls drop through rows of pegs, bouncing left or right at each with even odds, and pile up below. Each ball's fate is pure chance; the pile is not. It settles every time into the same bell-shaped curve, the normal distribution, because the sum of many small independent chances always does: that is the central limit theorem, and Francis Galton built this board in 1873 to make it something you could see. He called it the quincunx, after the pattern of the pegs. It is the shape of measurement error, of heights in a population, of noise in a signal, and the reason so much of statistics assumes a bell. The dashed line over the pile is the curve the arithmetic predicts; the balls are finding it on their own.",
+      "facts": [
+        "Twelve rows of pegs give thirteen bins; the odds of the far bins are one in 4,096.",
+        "Galton showed the board at the Royal Institution in 1874.",
+        "He also used it to argue, wrongly as it turned out, that human traits must revert to the mean of a fixed population.",
+        "The same curve appears when the pegs are replaced by anything random enough: dice, rounding errors, the heights of soldiers."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Galton_board",
+      "wikidataQid": "Q139622",
+      "externalIds": {},
+      "copyrighted": false,
+      "asset": {
+        "kind": "sim",
+        "currentVersionId": "sim-galton-board-v1",
+        "versions": [
+          {
+            "id": "sim-galton-board-v1",
+            "program": "galton",
+            "params": {
+              "rows": 12,
+              "perSecond": 6
+            },
+            "bounds": {
+              "width": 1.2,
+              "height": 1.8,
+              "depth": 0.05
+            },
+            "credit": {
+              "author": "20watts",
+              "license": {
+                "name": "CC0 1.0",
+                "url": null
+              },
+              "sourcePage": null
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-09T00:00:00Z",
+              "note": "Run live by src/sims/galton.ts: each ball takes twelve coin-flip turns through the pegs and lands in a bin; the binomial curve is drawn over the pile and the board empties when a bin fills. The program is the museum's own, CC0."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "procedural"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": 0.3,
+        "back": "none",
+        "yaw": null,
+        "fallbackWidthM": 1.2
+      },
+      "tags": [
+        "statistics",
+        "probability",
+        "normal distribution",
+        "simulation"
+      ],
+      "pageviews": null,
+      "importance": 0.8,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-09T00:00:00Z",
+      "updatedAt": "2026-10-09T00:00:00Z"
+    },
+    {
       "id": "eq-boltzmann-entropy",
       "kind": "image",
       "title": "Boltzmann's entropy formula",
@@ -8544,6 +9899,185 @@
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
       "updatedAt": "2026-10-10T00:09:47.313Z"
+    },
+    {
+      "id": "wm-146612026",
+      "kind": "image",
+      "title": "The Horse in Motion: Sallie Gardner at a Gallop",
+      "titleOriginal": "The Horse in Motion. \"Sallie Gardner,\" owned by Leland Stanford; running at a 1:40 gait over the Palo Alto track, 19th June 1878",
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "Eadweard Muybridge",
+          "slug": null,
+          "wikidataQid": "Q190568",
+          "wikipediaUrl": null,
+          "birthYear": 1830,
+          "deathYear": 1904,
+          "role": "photographer"
+        }
+      ],
+      "date": {
+        "year": 1878,
+        "month": 6,
+        "day": 19,
+        "yearStart": null,
+        "yearEnd": null,
+        "label": "19 June 1878",
+        "precision": "year"
+      },
+      "madeIn": {
+        "name": "Palo Alto Stock Farm (Leland Stanford's farm, now the Stanford campus)",
+        "region": "California",
+        "country": "United States",
+        "point": {
+          "lat": 37.4275,
+          "lon": -122.1697
+        },
+        "wikidataQid": "Q47265"
+      },
+      "location": {
+        "name": "Washington, D.C.",
+        "region": null,
+        "country": "United States",
+        "point": null,
+        "wikidataQid": null,
+        "institution": "Library of Congress, Prints and Photographs Division (cabinet card; this animation was made from its scan)",
+        "inventoryNumber": "LC-DIG-ppmsca-23778 / cph.3a45870"
+      },
+      "culture": null,
+      "movement": null,
+      "periodSlug": null,
+      "medium": "Twelve wet-plate photographs taken by electrically tripped cameras, published as a cabinet card; shown here as a reconstructed silent animation",
+      "materials": [
+        "albumen print",
+        "glass negative"
+      ],
+      "genre": [
+        "film",
+        "photography",
+        "chronophotography"
+      ],
+      "subjects": [
+        "horse",
+        "gallop",
+        "motion study",
+        "photography",
+        "Leland Stanford",
+        "Sallie Gardner"
+      ],
+      "physical": {
+        "widthCm": 240,
+        "heightCm": 160,
+        "depthCm": null,
+        "weightKg": null
+      },
+      "description": "On 19 June 1878, at Leland Stanford's stock farm at Palo Alto, Eadweard Muybridge lined up twelve cameras along a track, each with a shutter tripped by a thread the horse broke as it passed. The mare Sallie Gardner, running at about forty kilometres an hour, took the twelve pictures herself in under half a second. Stanford wanted to settle an old argument: does a galloping horse ever have all four feet off the ground? The plates showed that it does, but with the legs gathered under the body, not stretched out fore and aft as painters had always drawn them. Muybridge sold the sequence as a cabinet card and, from 1880, spun the frames on a glass disc in his zoopraxiscope so that audiences could watch the horse run. That projector is a direct ancestor of cinema, and the stop-motion study of movement he began here filled the eleven volumes of Animal Locomotion in 1887. What is shown here is a modern animation of the eleven usable frames of the 1878 card.",
+      "facts": [
+        "The exposures were about a thousandth of a second, far faster than any studio portrait of the day.",
+        "Stanford paid for the work; the legend that it settled a $25,000 bet is unproven.",
+        "Muybridge's zoopraxiscope projections of 1880 were among the first moving pictures shown to a paying public.",
+        "Muybridge had been acquitted of murdering his wife's lover in 1875, three years before this sequence."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Sallie_Gardner_at_a_Gallop",
+      "wikidataQid": "Q3924909",
+      "externalIds": {
+        "video-still": "146612026"
+      },
+      "copyrighted": false,
+      "asset": {
+        "kind": "image",
+        "currentVersionId": "wm-146612026-v1",
+        "versions": [
+          {
+            "id": "wm-146612026-v1",
+            "original": {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Horse_in_Motion_-_Sallie_Gardner_%28animation%29.webm",
+              "width": 1440,
+              "height": 960,
+              "bytes": 591857,
+              "mime": "video/mp4"
+            },
+            "rungs": [
+              {
+                "width": 640,
+                "height": 427,
+                "url": "/assets/wm-146612026/640.jpg",
+                "bytes": 47408
+              },
+              {
+                "width": 1280,
+                "height": 853,
+                "url": "/assets/wm-146612026/1280.jpg",
+                "bytes": 142957
+              },
+              {
+                "width": 1440,
+                "height": 960,
+                "url": "/assets/wm-146612026/1440.jpg",
+                "bytes": 169137
+              }
+            ],
+            "loop": {
+              "start": 0,
+              "seconds": 1.29,
+              "url": "/assets/wm-146612026/loop-640.mp4",
+              "width": 640,
+              "height": 426,
+              "bytes": 135364
+            },
+            "credit": {
+              "author": "Eadweard Muybridge; animation by Commons user Avelludo (2024) from the Library of Congress scan of the 1878 cabinet card",
+              "license": {
+                "name": "Public domain",
+                "url": null
+              },
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Horse_in_Motion_-_Sallie_Gardner_(animation).webm"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-09T00:00:00Z",
+              "note": "Silent WebM, 1440 x 960 px, 1.292 s, 11 frames: a reconstructed animation of Muybridge's 'Sallie Gardner' sequence of 19 June 1878, made from File:Eadweard Muybridge-Sallie Gardner 1878.jpg (the Library of Congress scan of the Morse's Gallery cabinet card); frames 1-11 are used, frame 12 (a different gait) is left out. Commons wikitext licence template: {{PD-old-100-expired}}; extmetadata: LicenseShortName = 'Public domain', License = 'pd', Copyrighted = 'False', Artist = 'Eadweard Muybridge', Credit = 'Created from File:Eadweard Muybridge-Sallie Gardner 1878.jpg', DateTimeOriginal = '1878-06-19'; {{Retouched picture|Increased contrast, black and white, turned into animation|editor=Avelludo}}; categories: PD-old-100-expired, CC-PD-Mark, Retouched pictures, Sallie Gardner at a Gallop. The animation is a 2024 user reconstruction, not a period film: Muybridge himself projected these frames with his zoopraxiscope from 1880. There is no original moving-image file; a GIF of the same reconstruction exists (File:Horse in Motion - Sallie Gardner (animation).gif, curid 146612027, 967 x 673 px, 1686624 B) and an older 340 x 230 GIF (File:The Horse in Motion-anim.gif, curid 3828100). The clip is only 1.29 s long, so the loop is the whole clip rather than the 8-15 s asked for; the pipeline should loop it seamlessly. The source still (the cabinet card) is File:The Horse in Motion high res.jpg, curid 57260211, if a static fallback is wanted. HEAD 200, content-length 591857, video/webm."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "video-still"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": 0.9,
+        "back": "mirror",
+        "yaw": null,
+        "fallbackWidthM": 1.2
+      },
+      "tags": [
+        "film",
+        "photography",
+        "motion",
+        "horse",
+        "Muybridge",
+        "Stanford",
+        "animation"
+      ],
+      "pageviews": null,
+      "importance": 0.85,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-09T00:00:00Z",
+      "updatedAt": "2026-10-10T16:44:27.912Z"
     },
     {
       "id": "sf-f70edeefea0a49e1ae6b7f5be21b626d",
@@ -8729,6 +10263,189 @@
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
       "updatedAt": "2026-10-09T22:57:47.811Z"
+    },
+    {
+      "id": "wm-143689173",
+      "kind": "image",
+      "title": "Arrival of a Train at La Ciotat Station",
+      "titleOriginal": "L'Arrivée d'un train en gare de La Ciotat",
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "Louis Lumière (with Auguste Lumière)",
+          "slug": null,
+          "wikidataQid": "Q1962284",
+          "wikipediaUrl": null,
+          "birthYear": 1864,
+          "deathYear": 1948,
+          "role": "filmmaker"
+        }
+      ],
+      "date": {
+        "year": 1896,
+        "month": 1,
+        "day": null,
+        "yearStart": null,
+        "yearEnd": null,
+        "label": "first shown 25 January 1896, Lyon; this print is the summer 1897 remake (Lumière catalogue no. 653)",
+        "precision": "year"
+      },
+      "madeIn": {
+        "name": "La Ciotat railway station",
+        "region": "Provence-Alpes-Côte d'Azur",
+        "country": "France",
+        "point": {
+          "lat": 43.1718,
+          "lon": 5.6125
+        },
+        "wikidataQid": "Q231554"
+      },
+      "location": {
+        "name": "Lyon",
+        "region": null,
+        "country": "France",
+        "point": null,
+        "wikidataQid": null,
+        "institution": "Institut Lumière (Lumière negatives and prints)",
+        "inventoryNumber": "Lumière catalogue no. 653"
+      },
+      "culture": null,
+      "movement": null,
+      "periodSlug": null,
+      "medium": "35 mm silent film, about 50 seconds, shot with the Cinématographe Lumière",
+      "materials": [
+        "nitrate film"
+      ],
+      "genre": [
+        "film",
+        "actuality film",
+        "silent film"
+      ],
+      "subjects": [
+        "train",
+        "railway station",
+        "La Ciotat",
+        "passengers",
+        "early cinema"
+      ],
+      "physical": {
+        "widthCm": 240,
+        "heightCm": 180,
+        "depthCm": null,
+        "weightKg": null
+      },
+      "description": "Fifty seconds, one fixed camera, no cut: a steam train pulls into the station at La Ciotat, on the coast east of Marseille where the Lumière family had a summer house, and passengers step down onto the platform. Louis Lumière set the Cinématographe at the platform's edge so that the locomotive grows from a speck to fill the frame and passes within arm's reach, a diagonal that still makes audiences lean back. The story that the first viewers fled screaming is a legend; the film was not even on the programme of the Lumières' first public show in Paris on 28 December 1895, and was first screened in Lyon in January 1896. It was popular enough that the brothers reshot it twice on the same platform; the version seen here, catalogue number 653, was taken in the summer of 1897 with Lumière children among the waiting passengers. The Cinématographe weighed five kilograms, was cranked by hand, and served as camera, printer and projector.",
+      "facts": [
+        "Shown at about 16 frames a second from a reel of 17 metres: the length of one Lumière film.",
+        "Auguste and Louis Lumière ran their father's photographic-plate factory in Lyon; the camera was patented in February 1895.",
+        "By 1897 the Lumière catalogue listed over a thousand 'views' shot by operators across the world.",
+        "The film entered the public domain in France only on 1 January 2025, seventy years after Auguste Lumière's death."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/L%27Arriv%C3%A9e_d%27un_train_en_gare_de_La_Ciotat",
+      "wikidataQid": "Q761952",
+      "externalIds": {
+        "video-still": "143689173"
+      },
+      "copyrighted": false,
+      "asset": {
+        "kind": "image",
+        "currentVersionId": "wm-143689173-v1",
+        "versions": [
+          {
+            "id": "wm-143689173-v1",
+            "original": {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/6/6e/L%27Arriv%C3%A9e_d%27un_train_en_gare_de_La_Ciotat_%281897%29_par_les_fr%C3%A8res_Lumi%C3%A8re.webm",
+              "width": 2880,
+              "height": 2160,
+              "bytes": 101674422,
+              "mime": "video/mp4"
+            },
+            "rungs": [
+              {
+                "width": 640,
+                "height": 480,
+                "url": "/assets/wm-143689173/640.jpg",
+                "bytes": 76326
+              },
+              {
+                "width": 1280,
+                "height": 960,
+                "url": "/assets/wm-143689173/1280.jpg",
+                "bytes": 233395
+              },
+              {
+                "width": 2560,
+                "height": 1920,
+                "url": "/assets/wm-143689173/2560.jpg",
+                "bytes": 638921
+              },
+              {
+                "width": 2880,
+                "height": 2160,
+                "url": "/assets/wm-143689173/2880.jpg",
+                "bytes": 728778
+              }
+            ],
+            "loop": {
+              "start": 2,
+              "seconds": 13,
+              "aspect": 1.3333333333333333,
+              "url": "/assets/wm-143689173/loop-640.mp4",
+              "width": 640,
+              "height": 480,
+              "bytes": 2112023
+            },
+            "credit": {
+              "author": "Auguste and Louis Lumière (Louis Lumière, operator)",
+              "license": {
+                "name": "Public domain",
+                "url": null
+              },
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:L%27Arriv%C3%A9e_d%27un_train_en_gare_de_La_Ciotat_(1897)_par_les_fr%C3%A8res_Lumi%C3%A8re.webm"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-09T00:00:00Z",
+              "note": "Silent WebM, 3840 x 2160 px, 46.9 s, 101.7 MB, the largest copy on Commons. Transferred from YouTube video 1FAj9fJQRZA, whose title (via oEmbed) is '[Actual 4K Scan] The Arrival of a Train at La Ciotat Station - Lumière Brothers - 1896.' by Andy Myers, i.e. a scan of the restored 35 mm element, not an AI upscale; the 4:3 picture sits pillarboxed inside the 16:9 frame (black bars left and right), so the visible picture is about 2880 x 2160; the physical size below is for the whole 16:9 file and the pipeline may prefer to crop the bars (240 x 180 cm). Commons wikitext licence template: {{PD-old-70-expired}}; extmetadata: LicenseShortName = 'Public domain', License = 'pd', Copyrighted = 'False', Artist = 'Lumière Brothers', Credit = 'YouTube: 1FAj9fJQRZA', DateTimeOriginal = '1897'; categories: PD-old-70-expired, CC-PD-Mark, Media uploaded for Public Domain Day 2025, Undeleted in 2025 (Auguste Lumière died in 1954, so the film entered the public domain in France on 1 January 2025; Louis died in 1948), Videos of 1897 from France. Version: per catalogue-lumiere.com (entry 'Arrivée d'un train à La Ciotat', vue no. 653, research by Aubert and Seguin) the Lumières shot the subject three times on the same platform: an uncatalogued take of early 1896 (32 of its frames were printed in La Science française on 13 March 1896, and it is probably the version shown in Lyon on 25 January 1896), and catalogue no. 653, shot in summer 1897 with Lumière family children on the platform, which is the version in every anthology and the one in this file. The 1896 first version is on Commons only as a 540 x 360 YouTube transfer (File:L'Arrivée d'un train en gare de La Ciotat, Complete.webm, curid 157416095, 5590218 B, {{PD-old-70-expired}}). Other copies: File:L'Arrivée d'un train en gare de La Ciotat (1897).webm, curid 157414801, 1364 x 1022, 112.6 MB, from the 'Lumière! Le Cinématographe (1895-1905)' edition; File:L'Arrivee d'un train en gare de la Ciotat, summer 1897.ogv, curid 162945367, 962 x 720. Loop 2-15 s: the locomotive comes in from the far right and sweeps past the camera. HEAD 200, content-length 101674422, video/webm."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "video-still"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": 0.9,
+        "back": "mirror",
+        "yaw": null,
+        "fallbackWidthM": 1.2
+      },
+      "tags": [
+        "film",
+        "cinema",
+        "Lumière",
+        "train",
+        "France",
+        "silent film"
+      ],
+      "pageviews": null,
+      "importance": 0.9,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-09T00:00:00Z",
+      "updatedAt": "2026-10-10T16:44:30.157Z"
     },
     {
       "id": "wm-4647249",
@@ -8925,6 +10642,186 @@
           }
         ]
       }
+    },
+    {
+      "id": "wm-165000150",
+      "kind": "image",
+      "title": "A Trip to the Moon",
+      "titleOriginal": "Le Voyage dans la Lune",
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "Georges Méliès",
+          "slug": null,
+          "wikidataQid": "Q152272",
+          "wikipediaUrl": null,
+          "birthYear": 1861,
+          "deathYear": 1938,
+          "role": "director"
+        }
+      ],
+      "date": {
+        "year": 1902,
+        "month": 9,
+        "day": 1,
+        "yearStart": null,
+        "yearEnd": null,
+        "label": "released 1 September 1902",
+        "precision": "year"
+      },
+      "madeIn": {
+        "name": "Méliès's glass studio, Montreuil",
+        "region": "Île-de-France",
+        "country": "France",
+        "point": {
+          "lat": 48.8638,
+          "lon": 2.4485
+        },
+        "wikidataQid": "Q193370"
+      },
+      "location": {
+        "name": "Paris",
+        "region": null,
+        "country": "France",
+        "point": null,
+        "wikidataQid": null,
+        "institution": "Cinémathèque française and others; the only known hand-coloured print was restored by Lobster Films in 2011",
+        "inventoryNumber": "Star Film catalogue nos. 399-411"
+      },
+      "culture": null,
+      "movement": null,
+      "periodSlug": null,
+      "medium": "35 mm silent film, about 14 minutes at 14 frames a second, 260 metres, with painted sets and in-camera effects",
+      "materials": [
+        "nitrate film"
+      ],
+      "genre": [
+        "film",
+        "science fiction",
+        "silent film"
+      ],
+      "subjects": [
+        "Moon",
+        "space travel",
+        "astronomers",
+        "Selenites",
+        "science fiction",
+        "special effects",
+        "Jules Verne"
+      ],
+      "physical": {
+        "widthCm": 240,
+        "heightCm": 180,
+        "depthCm": null,
+        "weightKg": null
+      },
+      "description": "Six astronomers are fired from a giant cannon in a bullet-shaped shell, land in the eye of the Man in the Moon, fight the Selenites with umbrellas, and fall back to Earth to a hero's welcome. Georges Méliès, a Paris stage magician who had bought a projector in 1896, made it in his glass-walled studio at Montreuil over the summer of 1902, playing the lead astronomer himself and painting the cardboard Moon. At fourteen minutes and thirty tableaux it was the longest and most expensive film he had attempted, and it was his biggest success, sold worldwide and pirated almost at once in the United States by Thomas Edison's agents. The shot of the shell stuck in the Moon's eye has become the emblem of early cinema. Méliès's business collapsed in the 1910s; he burned many of his negatives and ended up selling toys at the Gare Montparnasse before he was rediscovered and honoured in 1929. A hand-coloured print, found in Barcelona in 1993, was restored in 2011.",
+      "facts": [
+        "Loosely based on Jules Verne's From the Earth to the Moon (1865) and H. G. Wells's The First Men in the Moon (1901).",
+        "Méliès used stop-substitution, dissolves and painted perspective; the Moon's approach was done by moving the camera on a trolley toward a painted face.",
+        "Edison's company copied the film and sold it in America without paying Méliès a cent, a loss he complained of all his life.",
+        "The film was added to the UNESCO Memory of the World register in 2002, its centenary year."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/A_Trip_to_the_Moon",
+      "wikidataQid": "Q244971",
+      "externalIds": {
+        "video-still": "165000150"
+      },
+      "copyrighted": false,
+      "asset": {
+        "kind": "image",
+        "currentVersionId": "wm-165000150-v1",
+        "versions": [
+          {
+            "id": "wm-165000150-v1",
+            "original": {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Le_Voyage_dans_la_Lune_%281902%29.webm",
+              "width": 1440,
+              "height": 1080,
+              "bytes": 304389767,
+              "mime": "video/mp4"
+            },
+            "rungs": [
+              {
+                "width": 640,
+                "height": 480,
+                "url": "/assets/wm-165000150/640.jpg",
+                "bytes": 39802
+              },
+              {
+                "width": 1280,
+                "height": 960,
+                "url": "/assets/wm-165000150/1280.jpg",
+                "bytes": 105743
+              },
+              {
+                "width": 1440,
+                "height": 1080,
+                "url": "/assets/wm-165000150/1440.jpg",
+                "bytes": 120812
+              }
+            ],
+            "loop": {
+              "start": 360,
+              "seconds": 14,
+              "url": "/assets/wm-165000150/loop-640.mp4",
+              "width": 640,
+              "height": 480,
+              "bytes": 2723159
+            },
+            "credit": {
+              "author": "Georges Méliès (Star Film)",
+              "license": {
+                "name": "Public domain",
+                "url": null
+              },
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Le_Voyage_dans_la_Lune_(1902).webm"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-09T00:00:00Z",
+              "note": "Black-and-white WebM, 1440 x 1080 px (4:3, no bars), 766 s (12 min 46 s), a Commons Featured Media and Media of the Day (12 August 2025). The original upload is 2.29 GB (2294373601 B); Commons also serves a 1080p VP9 transcode of the same picture at https://upload.wikimedia.org/wikipedia/commons/transcoded/6/6d/Le_Voyage_dans_la_Lune_%281902%29.webm/Le_Voyage_dans_la_Lune_%281902%29.webm.1080p.vp9.webm (1440 x 1080, HEAD 200, 304389767 B), which the pipeline may prefer for a 14-second loop. Commons wikitext licence template: {{PD-old-auto-expired|1938}}; extmetadata: LicenseShortName = 'Public domain', License = 'pd', Copyrighted = 'False', Artist = 'Georges Méliès' (Creator template), Credit = 'A Trip to the Moon', DateTimeOriginal = '1902'; categories: PD-old-80-expired, CC-PD-Mark, Featured media, Videos of films from 1902, Le voyage dans la lune (film). The file page does not say which print or restoration was transferred (source is given only as 'A Trip to the Moon'); other versions listed there: Le Voyage dans la lune (black and white, 1902).webm, Le Voyage dans la Lune (Georges Méliès, 1902).ogv, Le Voyage Dans La Lune.ogv. Loop 360-374 s, checked frame by frame on the 480p transcode: the Moon's face grows larger from 358 s and the shell lands in its eye at about 371 s; the lunar surface scene follows at 376 s. HEAD 200, content-length 2294373601, video/webm."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "video-still"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": 0.9,
+        "back": "mirror",
+        "yaw": null,
+        "fallbackWidthM": 1.2
+      },
+      "tags": [
+        "film",
+        "cinema",
+        "Méliès",
+        "science fiction",
+        "Moon",
+        "France",
+        "silent film",
+        "special effects"
+      ],
+      "pageviews": null,
+      "importance": 0.9,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-09T00:00:00Z",
+      "updatedAt": "2026-10-10T16:44:30.991Z"
     },
     {
       "id": "si-nasm_A19610048000",
@@ -9466,6 +11363,166 @@
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
       "updatedAt": "2026-10-10T00:09:47.546Z"
+    },
+    {
+      "id": "wm-187922109",
+      "kind": "image",
+      "title": "Einstein, 'On the Electrodynamics of Moving Bodies', first page",
+      "titleOriginal": "Zur Elektrodynamik bewegter Körper",
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "Albert Einstein",
+          "slug": null,
+          "wikidataQid": "Q937",
+          "wikipediaUrl": null,
+          "birthYear": 1879,
+          "deathYear": 1955,
+          "role": "author"
+        }
+      ],
+      "date": {
+        "year": 1905,
+        "month": 9,
+        "day": 26,
+        "yearStart": null,
+        "yearEnd": null,
+        "label": "received 30 June 1905, published 26 September 1905",
+        "precision": "year"
+      },
+      "madeIn": {
+        "name": "Bern",
+        "region": "Canton of Bern",
+        "country": "Switzerland",
+        "point": {
+          "lat": 46.948,
+          "lon": 7.4474
+        },
+        "wikidataQid": "Q70"
+      },
+      "location": {
+        "name": null,
+        "region": null,
+        "country": null,
+        "point": null,
+        "wikidataQid": null,
+        "institution": "Printed journal (Annalen der Physik vol. 17, pp. 891-921); this scan is the Internet Archive's serials microfilm copy sim_annalen-der-physik_1905_17_5",
+        "inventoryNumber": null
+      },
+      "culture": null,
+      "movement": null,
+      "periodSlug": null,
+      "medium": "Letterpress printing on paper, journal page",
+      "materials": [
+        "paper",
+        "printing ink"
+      ],
+      "genre": [
+        "scientific paper",
+        "physics"
+      ],
+      "subjects": [
+        "special relativity",
+        "electrodynamics",
+        "speed of light",
+        "simultaneity",
+        "Lorentz transformation",
+        "physics"
+      ],
+      "physical": {
+        "widthCm": 14.5,
+        "heightCm": 23.1,
+        "depthCm": null,
+        "weightKg": null
+      },
+      "description": "The first page of the paper in which a twenty-six-year-old patent clerk in Bern replaced Newton's absolute space and time. Einstein starts from an everyday puzzle: moving a magnet past a coil or the coil past the magnet gives the same current, yet the physics of the day described the two cases differently. From that he takes two assumptions, that the laws of physics are the same for every observer moving at constant speed and that light travels at the same speed for all of them, and works out the consequences in thirty pages: moving clocks run slow, moving rods shrink, events simultaneous for one observer are not for another, and nothing with mass reaches the speed of light. The paper cites no earlier work and thanks only his friend Michele Besso. It reached the Annalen der Physik on 30 June 1905 and appeared on 26 September; a three-page sequel in November added the equation later written as E = mc². The theory became known as special relativity when Einstein generalised it to gravity in 1915.",
+      "facts": [
+        "One of four papers Einstein published in 1905, his 'miracle year', alongside the photoelectric effect, Brownian motion and E = mc².",
+        "Written outside any university: Einstein was a 'technical expert, third class' at the Swiss patent office.",
+        "The word 'relativity' appears only as the 'principle of relativity'; Einstein did not name the theory.",
+        "The equations rediscovered Lorentz's transformations but gave them a wholly new meaning: there is no ether and no absolute rest."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Annus_mirabilis_papers",
+      "wikidataQid": "Q3020388",
+      "externalIds": {
+        "commons-curid": "187922109",
+        "commons-file": "Einstein-Elektrodynamik.djvu"
+      },
+      "copyrighted": false,
+      "asset": {
+        "kind": "image",
+        "currentVersionId": "wm-187922109-v1",
+        "versions": [
+          {
+            "id": "wm-187922109-v1",
+            "original": {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Einstein-Elektrodynamik.djvu/page1-1920px-Einstein-Elektrodynamik.djvu.jpg",
+              "width": 1920,
+              "height": 3058,
+              "bytes": 897387,
+              "mime": "image/jpeg"
+            },
+            "rungs": [
+              {
+                "width": 1024,
+                "height": 1631,
+                "url": "/assets/wm-187922109/1024.jpg",
+                "bytes": 490413
+              }
+            ],
+            "loop": null,
+            "credit": {
+              "author": "Albert Einstein; printed by Johann Ambrosius Barth, Leipzig; scan from the Internet Archive",
+              "license": {
+                "name": "Public domain",
+                "url": null
+              },
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Einstein-Elektrodynamik.djvu"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-09T00:00:00Z",
+              "note": "Page 1 of the 31-page DjVu (Annalen der Physik, ser. 4, vol. 17, pp. 891-921), i.e. printed page 891 with the title '3. Zur Elektrodynamik bewegter Körper; von A. Einstein.' and the opening paragraphs. The DjVu original is 2500 x 3982 px per page (1156667 B, image/vnd.djvu); the URL above is MediaWiki's largest JPEG rendering of page 1 (1920 x 3058 px, 897387 B, HEAD 200 image/jpeg on both upload.wikimedia.org and thumb.wikimedia.org), since the pipeline wants a raster image, not a DjVu. Commons wikitext: {{Book}} with Permission = {{PD-old-auto-1923|deathyear=1955}}, Source = Internet Archive sim_annalen-der-physik_1905_17_5 (page 890), Wikisource = de:Zur Elektrodynamik bewegter Körper; extmetadata: LicenseShortName = 'Public domain', License = 'pd', Copyrighted = 'False', Artist = 'Albert Einstein', Credit = 'Internet Archive'; categories: PD-old-70-expired, CC-PD-Mark, Albert Einstein's works, Special relativity. Einstein died in 1955, so the text has been PD worldwide since 1 January 2026 (and in the US since 1923-era rules for a 1905 publication). Chosen over the E=mc2 paper because the museum already has a mass-energy equation item and this is the paper that founded special relativity; the drawback is the scan, from a serials microfilm: the page has a black border and a sliver of the facing page down the left edge, and is slightly skewed. The E=mc2 paper's first page (File:Einstein-Energieinhalt.djvu, curid 199522607, page 1 = p. 639 of Annalen der Physik vol. 18, {{PD-old-auto-1923|deathyear=1955}}, rendering https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Einstein-Energieinhalt.djvu/page1-1920px-Einstein-Energieinhalt.djvu.jpg, 1920 x 3189, 774285 B, HEAD 200) is a clean white scan from a different Internet Archive copy and would be the better-looking page if the parent prefers it. Physical size is an estimate: Annalen der Physik was a large octavo of roughly 23 x 14.5 cm; the figures below follow the scan's aspect."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "wikimedia-commons"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": 0.5,
+        "back": "mirror",
+        "yaw": null,
+        "fallbackWidthM": 1.2
+      },
+      "tags": [
+        "physics",
+        "relativity",
+        "Einstein",
+        "1905",
+        "paper",
+        "Annalen der Physik",
+        "Switzerland"
+      ],
+      "pageviews": null,
+      "importance": 0.95,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-09T00:00:00Z",
+      "updatedAt": "2026-10-10T16:40:49.287Z"
     },
     {
       "id": "wm-6669356",
@@ -10181,6 +12238,148 @@
       "updatedAt": "2026-10-10T00:09:47.820Z"
     },
     {
+      "id": "sim-turing-machine",
+      "kind": "sim",
+      "title": "A Turing machine",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "Alan Turing",
+          "slug": null,
+          "wikidataQid": "Q7251",
+          "wikipediaUrl": null,
+          "birthYear": 1912,
+          "deathYear": 1954,
+          "role": "mathematician"
+        }
+      ],
+      "date": {
+        "year": 1936,
+        "month": 11,
+        "day": null,
+        "yearStart": null,
+        "yearEnd": null,
+        "label": "November 1936",
+        "precision": "year"
+      },
+      "madeIn": {
+        "name": "Cambridge",
+        "region": "England",
+        "country": "United Kingdom",
+        "point": {
+          "lat": 52.205,
+          "lon": 0.119
+        },
+        "wikidataQid": "Q350"
+      },
+      "location": {
+        "name": "Everywhere it is run",
+        "region": null,
+        "country": null,
+        "point": null,
+        "wikidataQid": null,
+        "institution": null,
+        "inventoryNumber": null
+      },
+      "culture": null,
+      "movement": null,
+      "periodSlug": null,
+      "medium": "A tape, a head and nine rules, run live",
+      "materials": [],
+      "genre": [
+        "computing",
+        "mathematics"
+      ],
+      "subjects": [
+        "computation",
+        "logic",
+        "decidability"
+      ],
+      "physical": {
+        "widthCm": null,
+        "heightCm": null,
+        "depthCm": null,
+        "weightKg": null
+      },
+      "description": "A tape of cells, a head that reads the one beneath it, and a table of rules: in this state, seeing this symbol, write that, move left or right, go to that state. Alan Turing set this out in 1936, in On Computable Numbers, to pin down what it means to compute something at all. He showed that one such machine can imitate any other given its table on the tape, and that there are questions no machine can settle, whatever the table. Every computer since is this, at bottom. The machine running here has nine rules. It walks to the end of the number on the tape, adds one in binary carrying to the left, walks home, and does it again; it will count for as long as the museum is open.",
+      "facts": [
+        "Turing's paper was written to answer Hilbert's Entscheidungsproblem: no, there is no procedure that decides every mathematical statement.",
+        "The universal machine, able to run any other, is the idea of software.",
+        "Alonzo Church reached the same limits the same year by a different road; the two are now one thesis.",
+        "The number on the tape is shown in decimal above it, and the rule that just fired is marked on the table."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Turing_machine",
+      "wikidataQid": "Q163310",
+      "externalIds": {},
+      "copyrighted": false,
+      "asset": {
+        "kind": "sim",
+        "currentVersionId": "sim-turing-machine-v1",
+        "versions": [
+          {
+            "id": "sim-turing-machine-v1",
+            "program": "turing",
+            "params": {
+              "stepsPerSecond": 2.5,
+              "cells": 24
+            },
+            "bounds": {
+              "width": 2.4,
+              "height": 1.2,
+              "depth": 0.05
+            },
+            "credit": {
+              "author": "20watts",
+              "license": {
+                "name": "CC0 1.0",
+                "url": null
+              },
+              "sourcePage": null
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-09T00:00:00Z",
+              "note": "Run live by src/sims/turing.ts: nine rules add one to a binary number on the tape, over and over, with the firing rule marked on the table. The machine is the museum's own, CC0; the idea is Turing's 1936 paper."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "procedural"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": 0.9,
+        "back": "none",
+        "yaw": null,
+        "fallbackWidthM": 1.2
+      },
+      "tags": [
+        "computing",
+        "logic",
+        "mathematics",
+        "simulation"
+      ],
+      "pageviews": null,
+      "importance": 0.9,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-09T00:00:00Z",
+      "updatedAt": "2026-10-09T00:00:00Z"
+    },
+    {
       "id": "wm-14902369",
       "kind": "image",
       "title": "Bombe drums (Bletchley Park rebuild)",
@@ -10654,6 +12853,150 @@
       "updatedAt": "2026-10-10T00:09:47.893Z"
     },
     {
+      "id": "sim-lorenz-attractor",
+      "kind": "sim",
+      "title": "The Lorenz attractor",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "Edward Norton Lorenz",
+          "slug": null,
+          "wikidataQid": "Q174808",
+          "wikipediaUrl": null,
+          "birthYear": 1917,
+          "deathYear": 2008,
+          "role": "meteorologist"
+        }
+      ],
+      "date": {
+        "year": 1963,
+        "month": null,
+        "day": null,
+        "yearStart": null,
+        "yearEnd": null,
+        "label": "1963",
+        "precision": "year"
+      },
+      "madeIn": {
+        "name": "Cambridge",
+        "region": "Massachusetts",
+        "country": "United States",
+        "point": {
+          "lat": 42.36,
+          "lon": -71.092
+        },
+        "wikidataQid": "Q49111"
+      },
+      "location": {
+        "name": "Everywhere it is computed",
+        "region": null,
+        "country": null,
+        "point": null,
+        "wikidataQid": null,
+        "institution": null,
+        "inventoryNumber": null
+      },
+      "culture": null,
+      "movement": null,
+      "periodSlug": null,
+      "medium": "Three differential equations, integrated live",
+      "materials": [],
+      "genre": [
+        "mathematics",
+        "physics"
+      ],
+      "subjects": [
+        "chaos",
+        "convection",
+        "dynamical systems"
+      ],
+      "physical": {
+        "widthCm": null,
+        "heightCm": null,
+        "depthCm": null,
+        "weightKg": null
+      },
+      "description": "Three equations in three variables, boiled down by Edward Lorenz from a model of air rising in a heated layer. Their solutions never settle and never repeat, yet they never leave this shape of two wings, circling one and then, unpredictably, crossing to the other. Lorenz found in 1961 that restarting a weather computation from rounded-off numbers gave a completely different forecast: tiny differences grow exponentially, so a system can be fully determined and still unpredictable. His 1963 paper, Deterministic Nonperiodic Flow, is where chaos begins as a science, and the attractor is its emblem. The dark tube is a long run of the equations; the red point is flying them now, from a slightly different start, and you can watch it choose a wing.",
+      "facts": [
+        "The butterfly effect takes its name from a 1972 talk of Lorenz's: could a butterfly's wings in Brazil set off a tornado in Texas?",
+        "The attractor has fractional dimension, about 2.06.",
+        "Lorenz's 1963 paper was cited fewer than ten times in its first decade.",
+        "Warwick Tucker proved in 2002 that the attractor Lorenz saw on his screen really exists."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Lorenz_system",
+      "wikidataQid": "Q899844",
+      "externalIds": {},
+      "copyrighted": false,
+      "asset": {
+        "kind": "sim",
+        "currentVersionId": "sim-lorenz-attractor-v1",
+        "versions": [
+          {
+            "id": "sim-lorenz-attractor-v1",
+            "program": "lorenz",
+            "params": {
+              "sigma": 10,
+              "rho": 28,
+              "beta": 2.6667,
+              "speed": 1.2
+            },
+            "bounds": {
+              "width": 1.8,
+              "height": 2.1,
+              "depth": 2.4
+            },
+            "credit": {
+              "author": "20watts",
+              "license": {
+                "name": "CC0 1.0",
+                "url": null
+              },
+              "sourcePage": null
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-09T00:00:00Z",
+              "note": "Run live by src/sims/lorenz.ts: a long run of the equations is drawn once as a tube, and a point integrates them with fourth-order Runge-Kutta in real time, trailing its path. The program is the museum's own, CC0."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "procedural"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": 0,
+        "back": "none",
+        "yaw": null,
+        "fallbackWidthM": 1.2
+      },
+      "tags": [
+        "chaos",
+        "dynamical systems",
+        "weather",
+        "simulation"
+      ],
+      "pageviews": null,
+      "importance": 0.85,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-09T00:00:00Z",
+      "updatedAt": "2026-10-09T00:00:00Z"
+    },
+    {
       "id": "si-nasm_A19700102000",
       "kind": "model",
       "title": "Apollo 11 Command Module Columbia",
@@ -10887,6 +13230,316 @@
           }
         ]
       }
+    },
+    {
+      "id": "wm-91010657",
+      "kind": "image",
+      "title": "Apollo 11: the first step on the Moon, live television",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "National Aeronautics and Space Administration (NASA)",
+          "slug": null,
+          "wikidataQid": "Q23548",
+          "wikipediaUrl": null,
+          "birthYear": null,
+          "deathYear": null,
+          "role": "broadcaster"
+        }
+      ],
+      "date": {
+        "year": 1969,
+        "month": 7,
+        "day": 21,
+        "yearStart": null,
+        "yearEnd": null,
+        "label": "21 July 1969, 02:56 UTC (20 July, 10:56 p.m. EDT)",
+        "precision": "year"
+      },
+      "madeIn": {
+        "name": "Tranquility Base, Mare Tranquillitatis, the Moon",
+        "region": null,
+        "country": null,
+        "point": null,
+        "wikidataQid": null
+      },
+      "location": {
+        "name": "Houston",
+        "region": null,
+        "country": "United States",
+        "point": null,
+        "wikidataQid": null,
+        "institution": "NASA Johnson Space Center (restored broadcast tapes); the camera itself was left on the Moon",
+        "inventoryNumber": null
+      },
+      "culture": null,
+      "movement": null,
+      "periodSlug": null,
+      "medium": "Live slow-scan television, 320 lines at 10 frames a second, scan-converted for broadcast; shown as a silent loop from NASA's 2009 restoration",
+      "materials": [],
+      "genre": [
+        "television",
+        "documentary footage",
+        "spaceflight"
+      ],
+      "subjects": [
+        "Moon landing",
+        "Neil Armstrong",
+        "Lunar Module Eagle",
+        "spaceflight",
+        "television",
+        "Apollo program"
+      ],
+      "physical": {
+        "widthCm": 240,
+        "heightCm": 180,
+        "depthCm": null,
+        "weightKg": null
+      },
+      "description": "At 02:56 UTC on 21 July 1969 Neil Armstrong stepped off the footpad of the Lunar Module Eagle onto the Sea of Tranquility, and about 600 million people watched him do it. The pictures came from a small Westinghouse camera mounted upside down on a fold-down equipment bay on the lander's side, which Armstrong released by pulling a lanyard as he climbed down the ladder. It transmitted a slow-scan signal of 320 lines at ten frames a second, received at Goldstone in California and at Honeysuckle Creek and Parkes in Australia, where it was converted for broadcast by pointing an ordinary television camera at a monitor. That double conversion, and the harsh lunar light, give the famous ghostly image. The original slow-scan tapes were later reused and lost; in 2009 NASA gathered the best surviving broadcast recordings and had them cleaned up, and that restoration is what is shown here. Armstrong's words as he stepped down, 'That's one small step for man, one giant leap for mankind', are the most quoted sentence of the twentieth century.",
+      "facts": [
+        "Armstrong said he intended 'one small step for a man'; the 'a' is not audible in the recording.",
+        "The Lunar Module camera had a single 7-pound body, two lenses and no viewfinder; the astronauts aimed it by hand after the first steps.",
+        "Buzz Aldrin followed Armstrong down the ladder nineteen minutes later; Michael Collins, orbiting above, could not see the broadcast at all.",
+        "The moonwalk lasted two hours and thirty-one minutes and the two men never went more than about sixty metres from the lander."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Apollo_11",
+      "wikidataQid": null,
+      "externalIds": {
+        "video-still": "91010657"
+      },
+      "copyrighted": false,
+      "asset": {
+        "kind": "image",
+        "currentVersionId": "wm-91010657-v1",
+        "versions": [
+          {
+            "id": "wm-91010657-v1",
+            "original": {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/8/83/Restored_Apollo_11_Moonwalk_-_Original_NASA_EVA_Mission_Video_-_Walking_on_the_Moon.webm",
+              "width": 960,
+              "height": 720,
+              "bytes": 506637984,
+              "mime": "video/mp4"
+            },
+            "rungs": [
+              {
+                "width": 640,
+                "height": 480,
+                "url": "/assets/wm-91010657/640.jpg",
+                "bytes": 16582
+              },
+              {
+                "width": 960,
+                "height": 720,
+                "url": "/assets/wm-91010657/960.jpg",
+                "bytes": 28831
+              }
+            ],
+            "loop": {
+              "start": 186,
+              "seconds": 14,
+              "aspect": 1.3333333333333333,
+              "url": "/assets/wm-91010657/loop-640.mp4",
+              "width": 640,
+              "height": 480,
+              "bytes": 316808
+            },
+            "credit": {
+              "author": "NASA (Westinghouse lunar television camera; 2009 restoration by NASA Johnson Space Center and Lowry Digital)",
+              "license": {
+                "name": "Public domain",
+                "url": null
+              },
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Restored_Apollo_11_Moonwalk_-_Original_NASA_EVA_Mission_Video_-_Walking_on_the_Moon.webm"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-09T00:00:00Z",
+              "note": "WebM with audio, 1920 x 1080 px, 3 h 02 min (10950 s), 1.0 GB: NASA's own 2009 restoration of the whole EVA broadcast as aired, transferred from the NASA YouTube channel (video S9HdPi9Ikhk, confirmed via oEmbed: 'Restored Apollo 11 Moonwalk - Original NASA EVA Mission Video - Walking on the Moon' by NASA). The 4:3 picture is pillarboxed inside the 16:9 frame; the pipeline may crop the bars (240 x 180 cm). A Commons Featured Media and Media of the Day (30 June 2020). Commons wikitext licence templates: {{NASA}} (= PD-USGov-NASA) with {{YouTubeReview|ChannelName=NASA|ChannelID=UCLA_DiR1FfKNvjuUpBHmylQ|date=2020-06-07}}; extmetadata: LicenseShortName = 'Public domain', License = 'pd', Copyrighted = 'False', Artist = 'NASA', Credit = 'YouTube: S9HdPi9Ikhk', DateTimeOriginal = 'Taken in July 1969'; categories: PD NASA, License reviewed by YouTubeReviewBot, Videos from the NASA YouTube channel, Lunar extra-vehicular activity of Apollo 11. Licence reasoning: a work of NASA, a US federal agency, is in the public domain under 17 U.S.C. 105; the 2009 restoration was commissioned by NASA and released by NASA without a copyright claim. Loop 186-200 s, found by sampling the 480p transcode at 1 fps: the video opens with a title card and Mission Control (0-65 s), the television picture begins at about 68 s, Armstrong is on the ladder from about 85 s and at the footpad from about 150 s, and a figure is clearly off to the left of the ladder base by about 200 s, so the step onto the surface ('That's one small step...') falls at roughly 190-200 s; please check the exact cut when the pipeline runs, as the picture is very low in contrast. A lightweight alternative, if 1 GB is too much to fetch for a 14-second loop: the Commons 1080p transcode of this file (898394897 B) or the one-minute unrestored clip File:Apollo 11 Landing - first steps on the moon.ogv, curid 4150049, 320 x 240 px, 61.5 s, 4568753 B, {{PD-USGov-NASA}}, from the Apollo Lunar Surface Journal, in which the step is at about 50-58 s. Not to be confused with the command module record si-nasm_A19700102000 already in the collection. HEAD 200, content-length 1004160886, video/webm."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "video-still"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": 0.9,
+        "back": "mirror",
+        "yaw": null,
+        "fallbackWidthM": 1.2
+      },
+      "tags": [
+        "Moon",
+        "Apollo",
+        "NASA",
+        "television",
+        "spaceflight",
+        "Armstrong",
+        "1969"
+      ],
+      "pageviews": null,
+      "importance": 0.95,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-09T00:00:00Z",
+      "updatedAt": "2026-10-10T16:44:31.438Z"
+    },
+    {
+      "id": "sim-game-of-life",
+      "kind": "sim",
+      "title": "The Game of Life",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "John Horton Conway",
+          "slug": null,
+          "wikidataQid": "Q268961",
+          "wikipediaUrl": null,
+          "birthYear": 1937,
+          "deathYear": 2020,
+          "role": "mathematician"
+        }
+      ],
+      "date": {
+        "year": 1970,
+        "month": 10,
+        "day": null,
+        "yearStart": null,
+        "yearEnd": null,
+        "label": "October 1970",
+        "precision": "year"
+      },
+      "madeIn": {
+        "name": "Cambridge",
+        "region": "England",
+        "country": "United Kingdom",
+        "point": {
+          "lat": 52.205,
+          "lon": 0.119
+        },
+        "wikidataQid": "Q350"
+      },
+      "location": {
+        "name": "Everywhere it is run",
+        "region": null,
+        "country": null,
+        "point": null,
+        "wikidataQid": null,
+        "institution": null,
+        "inventoryNumber": null
+      },
+      "culture": null,
+      "movement": null,
+      "periodSlug": null,
+      "medium": "Cellular automaton, computed live",
+      "materials": [],
+      "genre": [
+        "mathematics",
+        "computing"
+      ],
+      "subjects": [
+        "cellular automaton",
+        "emergence",
+        "computation"
+      ],
+      "physical": {
+        "widthCm": null,
+        "heightCm": null,
+        "depthCm": null,
+        "weightKg": null
+      },
+      "description": "A grid of cells, each alive or dead. At every tick a living cell with two or three living neighbours stays alive, a dead cell with exactly three is born, and everything else dies or stays empty. That is the whole of it. John Conway worked the rules out by hand with counters on a Go board, looking for the simplest system that was neither dull nor explosive, and Martin Gardner announced it in Scientific American in October 1970. From three rules come gliders that travel, guns that fire them, and patterns that compute: the Game of Life can run any program a computer can. This slab runs it live, seeded with a glider gun at the top left and an R-pentomino that takes 1,103 generations to settle; when the board goes still, it starts over.",
+      "facts": [
+        "The rules fit in one sentence; the behaviour has never been fully catalogued.",
+        "Gosper's glider gun, found in November 1970, was the first pattern shown to grow without limit.",
+        "Life is Turing complete: a computer can be built inside it out of gliders.",
+        "Conway said he came to dislike how the game overshadowed the rest of his mathematics."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life",
+      "wikidataQid": "Q244615",
+      "externalIds": {},
+      "copyrighted": false,
+      "asset": {
+        "kind": "sim",
+        "currentVersionId": "sim-game-of-life-v1",
+        "versions": [
+          {
+            "id": "sim-game-of-life-v1",
+            "program": "life",
+            "params": {
+              "cells": 96,
+              "stepsPerSecond": 6
+            },
+            "bounds": {
+              "width": 3,
+              "height": 0.02,
+              "depth": 3
+            },
+            "credit": {
+              "author": "20watts",
+              "license": {
+                "name": "CC0 1.0",
+                "url": null
+              },
+              "sourcePage": null
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-09T00:00:00Z",
+              "note": "Run live by src/sims/life.ts: a 96 by 96 toroidal board seeded with Gosper's glider gun and an R-pentomino, reseeded when it goes still. The rules are Conway's; the program is the museum's own, CC0."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "procedural"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": 0,
+        "back": "none",
+        "yaw": null,
+        "fallbackWidthM": 1.2
+      },
+      "tags": [
+        "cellular automaton",
+        "mathematics",
+        "computing",
+        "simulation"
+      ],
+      "pageviews": null,
+      "importance": 0.85,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-09T00:00:00Z",
+      "updatedAt": "2026-10-09T00:00:00Z"
     },
     {
       "id": "sf-acb3f8645a69493cb211a62b40d66aab",
@@ -12021,6 +14674,147 @@
       "updatedAt": "2026-10-09T19:23:09.453Z"
     },
     {
+      "id": "sim-mandelbrot-set",
+      "kind": "sim",
+      "title": "The Mandelbrot set",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "Benoit Mandelbrot",
+          "slug": null,
+          "wikidataQid": "Q101740",
+          "wikipediaUrl": null,
+          "birthYear": 1924,
+          "deathYear": 2010,
+          "role": "mathematician"
+        }
+      ],
+      "date": {
+        "year": 1980,
+        "month": 3,
+        "day": 1,
+        "yearStart": null,
+        "yearEnd": null,
+        "label": "1 March 1980",
+        "precision": "year"
+      },
+      "madeIn": {
+        "name": "Yorktown Heights",
+        "region": "New York",
+        "country": "United States",
+        "point": {
+          "lat": 41.21,
+          "lon": -73.8
+        },
+        "wikidataQid": null
+      },
+      "location": {
+        "name": "Everywhere it is computed",
+        "region": null,
+        "country": null,
+        "point": null,
+        "wikidataQid": null,
+        "institution": null,
+        "inventoryNumber": null
+      },
+      "culture": null,
+      "movement": null,
+      "periodSlug": null,
+      "medium": "Fractal, computed live on the graphics processor",
+      "materials": [],
+      "genre": [
+        "mathematics"
+      ],
+      "subjects": [
+        "fractal",
+        "complex dynamics",
+        "iteration"
+      ],
+      "physical": {
+        "widthCm": null,
+        "heightCm": null,
+        "depthCm": null,
+        "weightKg": null
+      },
+      "description": "Take a number c in the complex plane, start z at zero, and repeat z = z² + c. For some c the value stays bounded forever; for others it runs off to infinity. The set of c that stay is the black shape here, and its edge is infinitely detailed: zoom in anywhere on the boundary and new copies of the whole appear among seahorses, spirals and filaments, with no end to it. Benoit Mandelbrot made the first crude pictures at IBM on 1 March 1980, on a printer; Robert Brooks and Peter Matelski had drawn a rough one two years earlier. The panel computes the set afresh every frame on the graphics chip, zooming slowly into the boundary and back out, as far as single-precision arithmetic allows.",
+      "facts": [
+        "Every point of the boundary is a point where the behaviour of z changes from bounded to runaway; the boundary has dimension 2.",
+        "The set is connected, which Mandelbrot doubted from his pictures and Douady and Hubbard proved in 1982.",
+        "Along the real axis it contains the bifurcation cascade of the logistic map.",
+        "The zoom here stops at about eight thousand times; beyond that the GPU's arithmetic runs out of digits."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Mandelbrot_set",
+      "wikidataQid": "Q257",
+      "externalIds": {},
+      "copyrighted": false,
+      "asset": {
+        "kind": "sim",
+        "currentVersionId": "sim-mandelbrot-set-v1",
+        "versions": [
+          {
+            "id": "sim-mandelbrot-set-v1",
+            "program": "mandelbrot",
+            "params": {
+              "period": 120,
+              "zoom": 8000
+            },
+            "bounds": {
+              "width": 2,
+              "height": 2,
+              "depth": 0.05
+            },
+            "credit": {
+              "author": "20watts",
+              "license": {
+                "name": "CC0 1.0",
+                "url": null
+              },
+              "sourcePage": null
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-09T00:00:00Z",
+              "note": "Run live by src/sims/mandelbrot.ts: a fragment shader iterates z squared plus c up to 300 times for every pixel every frame, zooming into the seahorse valley and back out over two minutes. The program is the museum's own, CC0."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "procedural"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": 0.6,
+        "back": "none",
+        "yaw": null,
+        "fallbackWidthM": 1.2
+      },
+      "tags": [
+        "fractal",
+        "mathematics",
+        "complex numbers",
+        "simulation"
+      ],
+      "pageviews": null,
+      "importance": 0.85,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-09T00:00:00Z",
+      "updatedAt": "2026-10-09T00:00:00Z"
+    },
+    {
       "id": "zen-10232172",
       "kind": "model",
       "title": "Commodore 64",
@@ -12369,6 +15163,194 @@
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
       "updatedAt": "2026-10-09T19:23:10.277Z"
+    },
+    {
+      "id": "sf-5f7176a2ae284d6b99fc970c9d265c04",
+      "kind": "model",
+      "title": "Space Shuttle Discovery",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "Rockwell International, for NASA",
+          "slug": null,
+          "wikidataQid": null,
+          "wikipediaUrl": null,
+          "birthYear": null,
+          "deathYear": null,
+          "role": "builder"
+        }
+      ],
+      "date": {
+        "year": 1984,
+        "month": 8,
+        "day": 30,
+        "yearStart": 1979,
+        "yearEnd": 1984,
+        "label": "First flight 30 August 1984",
+        "precision": "circa"
+      },
+      "madeIn": {
+        "name": "Palmdale",
+        "region": "California",
+        "country": "United States",
+        "point": {
+          "lat": 34.58,
+          "lon": -118.12
+        },
+        "wikidataQid": "Q486898"
+      },
+      "location": {
+        "name": "Chantilly, Virginia",
+        "region": null,
+        "country": "United States",
+        "point": null,
+        "wikidataQid": null,
+        "institution": "Smithsonian National Air and Space Museum, Steven F. Udvar-Hazy Center",
+        "inventoryNumber": "A20120325000"
+      },
+      "culture": null,
+      "movement": null,
+      "periodSlug": null,
+      "medium": "Aluminium airframe under 24,000 silica heat-shield tiles and reinforced carbon-carbon leading edges",
+      "materials": [
+        "aluminium",
+        "silica tiles",
+        "reinforced carbon-carbon",
+        "Nomex felt"
+      ],
+      "genre": [
+        "spacecraft",
+        "engineering"
+      ],
+      "subjects": [
+        "spaceflight",
+        "orbiter",
+        "reusable spacecraft",
+        "NASA"
+      ],
+      "physical": {
+        "widthCm": 2380,
+        "heightCm": 1720,
+        "depthCm": 3720,
+        "weightKg": 78000
+      },
+      "description": "The most flown spacecraft there has ever been: thirty-nine missions between 1984 and 2011, a year of her life in orbit all told, 148 million miles. Discovery carried the Hubble Space Telescope up in 1990 and went back twice to service it, flew the first woman to pilot a shuttle, the first Russian cosmonaut on an American vehicle and John Glenn at seventy-seven, and was the ship chosen to return to flight after both the Challenger and Columbia losses. She is the Smithsonian's own scan, at true size, standing on her gear: 37 metres long, a 24 metre wingspan, 78 tonnes empty. Walk under the wing and look up at the tiles; each was fitted by hand and no two are alike.",
+      "facts": [
+        "Thirty-nine flights, more than any other spacecraft; 5,830 orbits of the Earth.",
+        "Her last flight, STS-133 in March 2011, delivered a storage module and a humanoid robot to the International Space Station.",
+        "The black tiles on her underside shed the heat of re-entry, 1,650 °C, and are cool enough to hold a minute later.",
+        "She was flown to Washington on the back of a 747 in April 2012 and has been at the Udvar-Hazy Center since."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Space_Shuttle_Discovery",
+      "wikidataQid": "Q182536",
+      "externalIds": {
+        "sketchfab": "5f7176a2ae284d6b99fc970c9d265c04"
+      },
+      "copyrighted": false,
+      "asset": {
+        "kind": "model",
+        "currentVersionId": "sf-5f7176a2ae284d6b99fc970c9d265c04-v1",
+        "versions": [
+          {
+            "id": "sf-5f7176a2ae284d6b99fc970c9d265c04-v1",
+            "original": {
+              "url": "https://sketchfab.com/3d-models/orbiter-space-shuttle-ov-103-discovery-5f7176a2ae284d6b99fc970c9d265c04",
+              "format": "glb",
+              "bytes": 45793821,
+              "triangles": 150000
+            },
+            "rungs": [
+              {
+                "quality": "thumb",
+                "url": "/assets/sf-5f7176a2ae284d6b99fc970c9d265c04/thumb.glb",
+                "bytes": 1828944,
+                "triangles": 36381,
+                "textureSize": 512,
+                "draco": true
+              },
+              {
+                "quality": "low",
+                "url": "/assets/sf-5f7176a2ae284d6b99fc970c9d265c04/low.glb",
+                "bytes": 2913932,
+                "triangles": 55598,
+                "textureSize": 1024,
+                "draco": true
+              },
+              {
+                "quality": "medium",
+                "url": "/assets/sf-5f7176a2ae284d6b99fc970c9d265c04/medium.glb",
+                "bytes": 5182732,
+                "triangles": 89925,
+                "textureSize": 2048,
+                "draco": true
+              },
+              {
+                "quality": "high",
+                "url": "/assets/sf-5f7176a2ae284d6b99fc970c9d265c04/high.glb",
+                "bytes": 9948292,
+                "triangles": 150000,
+                "textureSize": 4096,
+                "draco": true
+              }
+            ],
+            "scale": 1,
+            "bounds": {
+              "width": 23.81,
+              "height": 17.727,
+              "depth": 35.871
+            },
+            "credit": {
+              "author": "Smithsonian Institution",
+              "license": {
+                "name": "CC0 1.0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "sourcePage": "https://sketchfab.com/3d-models/orbiter-space-shuttle-ov-103-discovery-5f7176a2ae284d6b99fc970c9d265c04"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-09T00:00:00Z",
+              "note": "Smithsonian Institution 3D scan of the orbiter Discovery (OV-103) as displayed at the Udvar-Hazy Center, published on Sketchfab under CC0 1.0 (license.txt in the download: author The Smithsonian Institution, license type CC0-1.0, 'Credit is not mandatory. Commercial use is allowed.'). glTF with 150,000 triangles and three 4096 px textures (base colour, metallic-roughness, normal), already in metres: measured wingspan 23.81 m (real 23.8), height on its gear 17.73 m, length 35.87 m (real 37.2, the scan is a little short at the tips). Nose faces +Z in the file, upright on its landing gear, no surroundings to strip. Downloaded by the museum's owner from Sketchfab on 2026-10-10."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "sketchfab",
+            "representation": "scan"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": 0,
+        "back": "none",
+        "yaw": null,
+        "fallbackWidthM": 1.2
+      },
+      "tags": [
+        "space",
+        "NASA",
+        "spacecraft",
+        "scan",
+        "walk under"
+      ],
+      "pageviews": null,
+      "importance": 0.95,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-09T00:00:00Z",
+      "updatedAt": "2026-10-10T16:44:35.134Z"
     },
     {
       "id": "sf-64319e3fd7dd44acb7d6d72cd8c395db",

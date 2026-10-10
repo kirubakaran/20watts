@@ -6,7 +6,7 @@ plane, no walls: forward is later in time, and a side quest stands off to
 the right of the work it belongs with. Works float at their true size, and
 you can walk behind one and see it mirrored.
 
-v1 holds seventy-three works. They run from an Acheulean
+v1 holds ninety-two works. They run from an Acheulean
 hand axe (a CC0 photogrammetry scan, 300,000 years old) and the Lion-man of
 Hohlenstein-Stadel through eleven cave and rock paintings from five
 continents (with a scanned cast of a Lascaux wall beside the Lascaux
@@ -42,7 +42,24 @@ their manuscripts or first editions and play as you approach, from a
 Brandenburg Concerto to Clair de lune, Joplin's Maple Leaf Rag, Caruso's
 1907 record and the 1860 phonautogram that is the oldest recording of a
 human voice; the Apollo 11 command module carries the landing's
-air-to-ground and the rover the Apollo 16 drive.
+air-to-ground and the rover the Apollo 16 drive. Seven works are not
+downloaded but computed while you watch: the Game of Life on a slab in the
+floor, the Mandelbrot set zooming on the GPU, the Lorenz attractor as a
+tube you walk around with a point flying the equations live, Fourier's
+epicycles drawing a square wave, a Galton board filling in the bell curve,
+a Turing machine counting in binary, and the Great Pyramid of Giza as a
+plain shape at its true 146 m, standing 600 m east of the lane where the
+floor points to it, to be seen on the horizon and walked to. Four early
+films play as you approach: Muybridge's galloping horse, the Lumière
+train, Méliès's trip to the Moon and the Apollo 11 broadcast. Five pages
+hang at their true size: Euclid on a papyrus from Oxyrhynchus, a Gutenberg
+Bible leaf, the Principia's title page, Darwin's "I think" sketch and the
+first page of Einstein's 1905 relativity paper. Space Shuttle Discovery
+stands on her gear as the Smithsonian's CC0 scan, 37 m long, and a
+courtyard of the Alhambra can be walked into. The sky changes near two
+works: at the Nebra disc it is the night of 1600 BCE over the find-spot,
+with the Pleiades low in the west, and at Stonehenge the sun rises on the
+solstice bearing, along the axis of the stones, over and over.
 
 ## Run it
 
@@ -103,20 +120,25 @@ count of live exhibits and the bytes held every two seconds, and
 src/data/types.ts        the Artwork record: every attribute we will ever need
 src/data/collection.json the collection
 src/layout/layout.ts     time -> row, branches beside their anchors -> world position + facing
-src/world/floor.ts       ground, sky dome, environment light, shadows
+src/world/floor.ts       ground, environment light, shadows; the sky and the lights follow sky.ts
+src/world/sky.ts         the sky dome; nights of stars and sunrises near works that ask for them
+src/sims/                programs run live: life, mandelbrot, lorenz, fourier, galton, turing, pyramid
 src/world/axes.ts        year and side-quest labels stencilled on the floor
 src/world/exhibit.ts     one work in the world: image or glTF, placards, shadow
 src/assets/textures.ts   image ladder; sharper rungs load as you approach
 src/assets/models.ts     glb ladder, same idea for 3D scans
 src/assets/sound.ts      a recording heard from where a work stands, by distance
+public/sky/stars.json    the Yale Bright Star Catalogue to magnitude 5.5, public domain
 data/figures/            the drawings on the equation sheets, SVG
 src/locomotion/player.ts desktop and VR movement
 src/locomotion/touch.ts  phone controls: drag to look, a stick, hop buttons
 src/locomotion/resume.ts remembers your place in the browser and restores it
 src/locomotion/navigate.ts hops between eras and cells, and jumps to a work
+src/locomotion/grab.ts   VR: pick a small work up and turn it in your hand
 src/world/sign.ts        the entrance gateway
 scripts/fetch-assets.ts  pulls images and models from their sources into public/assets
-test/layout.test.ts      layout, branches and hops, run with npm test
+test/layout.test.ts      layout, branches, landmarks and hops, run with npm test
+test/sims.test.ts        every sim in the catalogue has a program; who may be picked up
 scripts/dev/screenshot.mjs one bounded headless-Chrome capture, for checking renders
 scripts/dev/preview.html four fixed views of one model rung, for checking orientation and scale
 scripts/dev/bounds.ts    bounds, root transforms and texture sizes of a glTF, before it goes in
@@ -196,11 +218,18 @@ catalogue works from the dev server, the production host, or a bucket.
 See `.env.example`.
 
 - **Images** from Wikimedia Commons: the Commons API is asked for a ladder
-  of thumbnail widths, saved as `<width>.jpg`.
+  of thumbnail widths, saved as `<width>.jpg`. A page of a multipage file
+  (a djvu or pdf) is named by its page rendering URL, and the ladder is
+  rendered from that page.
+- **Simulations** (kind `sim`, provenance `procedural`): nothing is
+  fetched. The version names a program in `src/sims/` and its parameters,
+  and the exhibit runs it in place, with the record's `bounds` as its
+  footprint.
 - **Moving images** (provenance `video-still`): the source video sits in
   `data/originals/<id>/`. ffmpeg cuts the still at `loop.start` into the
   usual JPEG ladder and encodes a silent 640 px H.264 loop of
-  `loop.seconds`. The exhibit shows the still from afar and swaps in the
+  `loop.seconds`; `loop.aspect` crops a film that sits letterboxed or
+  pillarboxed inside its file to its own shape. The exhibit shows the still from afar and swaps in the
   loop within 14 m, so it is already moving as you arrive from the previous
   cell. Needs ffmpeg on the PATH.
 - **Models from a file** (provenance `zenodo`, `sketchfab` or
@@ -259,6 +288,38 @@ the record's physical size (100 × 85 cm) under the drawing named in
 keeping the equation's SVG in `data/originals/<id>/`. Date it to when and
 where it was written down, and say in the description whose notation the
 sheet uses when that came later, as it did for Maxwell's.
+
+A simulation is a record of kind `sim` whose version names a `program`
+from `src/sims/` (`life`, `mandelbrot`, `lorenz`, `fourier`, `galton`,
+`turing`, `pyramid`), its `params`, and `bounds` in metres. Date it to the
+idea, not the code. A program is a small module returning an object with
+its base at y = 0 and an update called every frame with the time step and
+the visitor's distance; canvas programs redraw at most twenty times a
+second and freeze beyond 60 m, so they cost a phone nothing when far.
+
+A thing to be seen from afar rather than stood in front of, such as the
+pyramid, gets a `landmark`: `side` and `distance` in metres. It keeps the
+row of its year but stands that far out to the side, left out of the
+row's depth and of the streaming, built once at the start so it shows on
+the horizon through its own longer haze. The floor at its row carries a
+pointer with its name and distance; a sideways hop from that row goes
+out to its foot, and the next hop back returns to the lane.
+
+The sky can change near a work: `display.sky` with a `radius` and either
+`stars` (`year`, `latitude`, `siderealHours`: the night sky over that
+place in that year, from the bright star catalogue, precessed to the
+date) or `sunrise` (`azimuth`, degrees clockwise from north, which is the
+way the lane runs: a sun that climbs from below the horizon to eight
+degrees and sinks again over a minute and a half). The sky is fully
+changed within the radius and back to the gallery's a fifth further out,
+and the lights dim with it. Keep the radius short of the next row.
+Stonehenge's record also sets `display.yaw` so the axis of the stones
+lies on the solstice bearing.
+
+In VR a small work can be picked up: squeeze the grip or the trigger with
+a hand near it and it follows the hand; let go and it drifts home.
+`display.grab` says whether a work may be; absent, a model no bigger than
+1.2 m that is not entered may be, and nothing else.
 
 A recording goes in `audio` on the record: the original's URL (Commons,
 NASA, anything direct), the excerpt's `start` and `seconds`, the
@@ -355,6 +416,19 @@ replica 2019-407 from scans and the original drawings, CC BY-SA 4.0. The
 Lilienthal glider is their scan of the museum's 1958 replica, inventory
 number 1976-817, CC BY-SA 4.0. The equation sheets are typeset by this
 project with MathJax and are CC0.
+Space Shuttle Discovery is the Smithsonian Institution's scan of OV-103,
+CC0. The Alhambra courtyard is "Palacio de la Alhambra - Primer Patio" by
+[EternalEchoesVR](https://sketchfab.com/EternalEchoesVR) on Sketchfab, CC
+BY 4.0, a photogrammetry scan shown with its flaws. The four films are
+public domain, from Wikimedia Commons: the Muybridge sequence
+reconstructed from the Library of Congress's scan of the 1878 cabinet
+card, the Lumière Society's 1897 negative of the train, the Méliès film
+and NASA's restored Apollo 11 television. The pages are public-domain
+scans via Wikimedia Commons: the Penn Museum's papyrus, the Berlin
+Gutenberg leaf, the University of Strasbourg's Principia, Darwin Online's
+Notebook B and the Annalen der Physik microfilm of Einstein's paper. The
+night skies are drawn from the Yale Bright Star Catalogue, fifth edition,
+public domain; the simulations are this project's own code and CC0.
 The Pantheon interior is "The Pantheon Interior" by
 [artfletch](https://sketchfab.com/artfletch) on Sketchfab, CC BY 4.0, a
 photogrammetry scan with a reconstructed floor. Stonehenge is "Stonehenge
@@ -373,8 +447,8 @@ loops (public domain). The manuscript and title-page images are public
 domain scans from the Berlin State Library, the Bibliothèque nationale de
 France, the Library of Congress and Wikimedia Commons, except the
 Beethoven page (CC BY-SA 4.0 via IMSLP). The Indian works are Commons photographs: Gary Todd (CC0) for the Dancing
-Girl, Ms Sarah Welch (CC BY-SA 4.0) for the Arittapatti inscription, Aiwok
-(CC BY-SA 3.0) for the Iron Pillar, Anandajoti Bhikkhu (CC BY 2.0) for the
+Girl, Ms Sarah Welch (CC BY-SA 4.0) for the Arittapatti inscription, Hridya08
+(CC BY-SA 4.0) for the Iron Pillar, Anandajoti Bhikkhu (CC BY 2.0) for the
 Ajanta Padmapani, the Tamil Virtual Academy's public-domain scan of the
 Tirukkural leaf, Bernard Gagnon (CC BY-SA 3.0) for the Descent of the
 Ganges, and Vengolis (CC BY-SA 4.0) for the Brihadisvara vimana, with Rainer

@@ -114,6 +114,8 @@ export interface LayoutCell {
   branch?: { of: string; label: string };
   /** A work entered at a door: how far in front of the centre to stand, instead of standing back. */
   threshold?: number;
+  /** Off the lane, seen from afar: which side, how far, and the title for the pointer on the lane. */
+  landmark?: { side: "east" | "west"; distance: number; label: string };
 }
 
 export interface Layout {
@@ -190,9 +192,11 @@ export function computeLayout(artworks: Artwork[], cfg: LayoutConfig = DEFAULT_L
   const tRank = rankBins(tBins);
   const gRank = rankBins(gBins);
 
-  // Group into cells.
+  // Group into cells. A landmark keeps its row but stands off to the side,
+  // so it is not packed with the row and does not deepen it.
   const cells = new Map<string, Artwork[]>();
   main.forEach((a, i) => {
+    if (a.landmark) return;
     const key = `${tRank.get(tBins[i]!)}:${gRank.get(gBins[i]!)}`;
     (cells.get(key) ?? cells.set(key, []).get(key)!).push(a);
   });
@@ -249,6 +253,11 @@ export function computeLayout(artworks: Artwork[], cfg: LayoutConfig = DEFAULT_L
     if (!anchor) continue;
     const timeRank = tRank.get(timeBin(anchor, cfg))!;
     for (const b of branchChain(anchorId, children)) rowDepth.set(timeRank, Math.max(rowDepth.get(timeRank) ?? 0, footprintOf(b).depth));
+  }
+  // A row with only a landmark in it is a stretch of clear lane with a pointer.
+  for (const a of main) if (a.landmark) {
+    const timeRank = tRank.get(timeBin(a, cfg))!;
+    if (!rowDepth.has(timeRank)) rowDepth.set(timeRank, 0);
   }
   const rowZ = new Map<number, number>();
   const rowEdge = new Map<number, number>();
@@ -344,6 +353,22 @@ export function computeLayout(artworks: Artwork[], cfg: LayoutConfig = DEFAULT_L
       }
     }
     cellList.push(...added);
+  }
+
+  // Landmarks: in their row, `distance` metres out to one side.
+  for (const a of main) {
+    if (!a.landmark) continue;
+    const timeRank = tRank.get(timeBin(a, cfg))!;
+    const geoRank = gRank.get(geoBin(a, cfg))!;
+    const fp = footprintOf(a);
+    const x = a.landmark.side === "east" ? a.landmark.distance : -a.landmark.distance;
+    const z = rowZ.get(timeRank)!;
+    cellList.push({
+      timeRank, geoRank, x, z, width: fp.width + 2 * cfg.cellPadding, depth: fp.depth, height: fp.height, count: 1,
+      landmark: { side: a.landmark.side, distance: a.landmark.distance, label: a.title },
+    });
+    place(a, x, z, { timeRank, geoRank });
+    timeCounts.set(timeRank, (timeCounts.get(timeRank) ?? 0) + 1);
   }
 
   const timeAxis: AxisTick[] = [...tRank].map(([bin, rank]) => {
