@@ -6,7 +6,7 @@ plane, no walls: forward is later in time, and a side quest stands off to
 the right of the work it belongs with. Works float at their true size, and
 you can walk behind one and see it mirrored.
 
-v1 holds ninety-two works. They run from an Acheulean
+v1 holds ninety-three works. They run from an Acheulean
 hand axe (a CC0 photogrammetry scan, 300,000 years old) and the Lion-man of
 Hohlenstein-Stadel through eleven cave and rock paintings from five
 continents (with a scanned cast of a Lascaux wall beside the Lascaux
@@ -55,8 +55,13 @@ train, Méliès's trip to the Moon and the Apollo 11 broadcast. Five pages
 hang at their true size: Euclid on a papyrus from Oxyrhynchus, a Gutenberg
 Bible leaf, the Principia's title page, Darwin's "I think" sketch and the
 first page of Einstein's 1905 relativity paper. Space Shuttle Discovery
-stands on her gear as the Smithsonian's CC0 scan, 37 m long, and a
-courtyard of the Alhambra can be walked into. The sky changes near two
+stands on her gear as the Smithsonian's CC0 scan, 37 m long; Khufu's
+ship, the 4,500-year-old cedar boat from beside the Great Pyramid, lies
+broadside to the lane as a laser scan drawn from 1.6 million coloured
+points; and a courtyard of the Alhambra waits as a plaster slab on the
+floor whose walls rise as you step onto it, since the scan is worth
+seeing only from inside. The pages hang several times life size, and say
+so on their placards: the idea is the work, not the paper. The sky changes near two
 works: at the Nebra disc it is the night of 1600 BCE over the find-spot,
 with the Pleiades low in the west, and at Stonehenge the sun rises on the
 solstice bearing, along the axis of the stones, over and over.
@@ -142,6 +147,7 @@ test/sims.test.ts        every sim in the catalogue has a program; who may be pi
 scripts/dev/screenshot.mjs one bounded headless-Chrome capture, for checking renders
 scripts/dev/preview.html four fixed views of one model rung, for checking orientation and scale
 scripts/dev/bounds.ts    bounds, root transforms and texture sizes of a glTF, before it goes in
+scripts/dev/modes.ts     whether a glTF is triangles or points
 public/draco/            Draco mesh decoder, copied from three's examples
 public/env/              overcast HDRI used for environment lighting, never drawn
 ```
@@ -245,6 +251,15 @@ See `.env.example`.
   (XYZ Euler degrees) for a scan that is not upright or faces the wrong way.
   Check the result with `/scripts/dev/preview.html?model=/assets/<id>/high.glb`
   on the dev server, which shows front, left, top and back views on a grid.
+- **Point clouds**: a scan published as points rather than a mesh (the
+  pipeline sees `mode: 0` primitives) is thinned instead of simplified, a
+  hundredth of the points for the thumb up to a quarter for the top rung,
+  with colours kept as bytes and normals dropped. The renderer draws them
+  as round dots sized in metres, `pointSize` on the version at the top
+  rung and larger on thinner rungs so the surface stays solid, and climbs
+  the ladder by point count the way it does by texture size. Draco skips
+  point primitives, so these rungs are plain; a 1.6 million point rung is
+  about 25 MB.
 - **Models** from Smithsonian 3D: the `original.url` is a Voyager
   `document.json`. Each of its quality tiers is a set of Draco glb parts in
   centimetres; the pipeline merges the parts, converts to metres with the
@@ -315,6 +330,25 @@ changed within the radius and back to the gallery's a fifth further out,
 and the lights dim with it. Keep the radius short of the next row.
 Stonehenge's record also sets `display.yaw` so the axis of the stones
 lies on the solstice bearing.
+
+A scanned interior whose outside is not worth seeing gets
+`display.reveal`: metres from its centre within which it is drawn at all.
+Beyond that only its floor shows, a plaster slab the size of its
+footprint with "walk in" at the near edge, and the walls rise over half a
+second as the visitor steps onto it. Give it `threshold: 0` so the hops
+land in the middle of it. `display.back: "backing"` on any model skins
+its outside in plain plaster, for a scan whose inside textures would read
+as broken glass seen reversed; `"mirror"` draws both sides as they are,
+which suits a rotunda.
+
+Rows are spaced by depth and by where the visitor stands: the standing
+line of a row (set back by the widest work's standoff, or at a building's
+door) is kept `standingClearance` metres clear of the row before, so a
+hop forward never lands inside the previous building.
+
+Simulations may make sounds on the spot (the Galton board ticks on the
+pegs and clicks as a ball lands) through a `Clicker` in `src/assets/sound.ts`,
+a positional node fed short bursts of noise; nothing is downloaded.
 
 In VR a small work can be picked up: squeeze the grip or the trigger with
 a hand near it and it follows the hand; let go and it drifts home.
@@ -417,7 +451,9 @@ Lilienthal glider is their scan of the museum's 1958 replica, inventory
 number 1976-817, CC BY-SA 4.0. The equation sheets are typeset by this
 project with MathJax and are CC0.
 Space Shuttle Discovery is the Smithsonian Institution's scan of OV-103,
-CC0. The Alhambra courtyard is "Palacio de la Alhambra - Primer Patio" by
+CC0. Khufu's ship is "Khufu solar ship - EGYPT" by
+[Arqueomodel3D](https://sketchfab.com/juanbrualla) on Sketchfab, CC BY
+4.0, a laser-scan point cloud. The Alhambra courtyard is "Palacio de la Alhambra - Primer Patio" by
 [EternalEchoesVR](https://sketchfab.com/EternalEchoesVR) on Sketchfab, CC
 BY 4.0, a photogrammetry scan shown with its flaws. The four films are
 public domain, from Wikimedia Commons: the Muybridge sequence

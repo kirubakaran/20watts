@@ -46,6 +46,8 @@ export interface LayoutConfig {
   cellPitchZ: number;
   /** Clear floor kept between the extents of adjacent rows, metres. */
   rowGapZ: number;
+  /** Clear floor between the back of a row and the standing line of the next, metres. */
+  standingClearance: number;
   /** Largest distance between adjacent cells in a row, metres. */
   cellPitchX: number;
   /** Smallest distance between adjacent cells in a row, metres. */
@@ -63,6 +65,7 @@ export const DEFAULT_LAYOUT: LayoutConfig = {
   geoBinDegrees: null,
   cellPitchZ: 16,
   rowGapZ: 8,
+  standingClearance: 3,
   cellPitchX: 16,
   minPitchX: 6,
   cellGap: 2,
@@ -175,6 +178,17 @@ function branchChain(anchor: string, children: Map<string, Artwork[]>): Artwork[
   return out;
 }
 
+/**
+ * How far back from the centre of something this big a visitor stands to
+ * take it in: far enough for its width, or its height when it is a tall
+ * print or a tower, never closer than arm's length nor farther than ten
+ * metres. The navigator lands hops here, and the layout keeps this much
+ * clear floor in front of every row.
+ */
+export function standoffOf(fp: { width: number; depth: number; height: number }): number {
+  return fp.depth / 2 + Math.min(10, Math.max(2.5, fp.width * 0.6, fp.height * 0.9));
+}
+
 export function computeLayout(artworks: Artwork[], cfg: LayoutConfig = DEFAULT_LAYOUT): Layout {
   // Branches stand beside their anchors; only the rest takes part in binning.
   // A branch whose anchor is not here stands on the lane in its own time.
@@ -242,11 +256,19 @@ export function computeLayout(artworks: Artwork[], cfg: LayoutConfig = DEFAULT_L
   }
 
   // Rows along time: each row's depth is its deepest cell or branch step,
-  // and rows are spaced so a gap of clear floor stays between them.
+  // and rows are spaced so a gap of clear floor stays between them, and so
+  // that where a visitor stands to look at a row (its standing line, set
+  // back by the widest work's standoff, or at a building's door) is clear
+  // of the row before: a hop forward must never land inside a building.
   const rowDepth = new Map<number, number>();
-  for (const [key] of cells) {
+  const rowFront = new Map<number, number>();
+  for (const [key, members] of cells) {
     const timeRank = Number(key.split(":")[0]);
     rowDepth.set(timeRank, Math.max(rowDepth.get(timeRank) ?? 0, packed.get(key)!.depth));
+    for (const a of members) {
+      const front = a.display.threshold ?? standoffOf(footprintOf(a));
+      rowFront.set(timeRank, Math.max(rowFront.get(timeRank) ?? 0, front));
+    }
   }
   for (const anchorId of children.keys()) {
     const anchor = main.find((a) => a.id === anchorId);
@@ -270,7 +292,7 @@ export function computeLayout(artworks: Artwork[], cfg: LayoutConfig = DEFAULT_L
         rowEdge.set(timeRank, cfg.cellPitchZ / 2);
       } else {
         const prevZ = z;
-        z -= Math.max(cfg.cellPitchZ, prevDepth / 2 + cfg.rowGapZ + depth / 2);
+        z -= Math.max(cfg.cellPitchZ, prevDepth / 2 + cfg.rowGapZ + depth / 2, prevDepth / 2 + cfg.standingClearance + (rowFront.get(timeRank) ?? 0));
         rowEdge.set(timeRank, (prevZ - prevDepth / 2 + z + depth / 2) / 2);
       }
       rowZ.set(timeRank, z);

@@ -10,7 +10,7 @@
  */
 const LANDMARK_RETURN = 20;
 import type { Footprint } from "../data/types";
-import type { Layout, LayoutCell } from "../layout/layout";
+import { standoffOf, type Layout, type LayoutCell } from "../layout/layout";
 import type { Player } from "./player";
 
 export interface Stop {
@@ -32,14 +32,7 @@ interface Row {
   cells: LayoutCell[];
 }
 
-/**
- * How far back from the centre of something this big to stand: far enough
- * to take in its width, or its height when it is a tall print or a tower,
- * never closer than arm's length nor farther than ten metres.
- */
-function standoff(fp: { width: number; depth: number; height: number }): number {
-  return fp.depth / 2 + Math.min(10, Math.max(2.5, fp.width * 0.6, fp.height * 0.9));
-}
+const standoff = standoffOf;
 
 export class Navigator {
   private readonly rows: Row[];

@@ -2760,6 +2760,201 @@
       }
     },
     {
+      "id": "sf-5c56a4feeb8e4c67b5a4d903b4a96e5a",
+      "kind": "model",
+      "title": "Khufu's ship",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "Shipwrights of Khufu's court",
+          "slug": null,
+          "wikidataQid": null,
+          "wikipediaUrl": null,
+          "birthYear": null,
+          "deathYear": null,
+          "role": "builder"
+        }
+      ],
+      "date": {
+        "year": -2560,
+        "month": null,
+        "day": null,
+        "yearStart": -2580,
+        "yearEnd": -2560,
+        "label": "c. 2560 BCE",
+        "precision": "circa"
+      },
+      "madeIn": {
+        "name": "Giza",
+        "region": null,
+        "country": "Egypt",
+        "point": {
+          "lat": 29.979,
+          "lon": 31.134
+        },
+        "wikidataQid": "Q81788"
+      },
+      "location": {
+        "name": "Giza",
+        "region": null,
+        "country": "Egypt",
+        "point": null,
+        "wikidataQid": null,
+        "institution": "Grand Egyptian Museum",
+        "inventoryNumber": null
+      },
+      "culture": "Ancient Egyptian (Fourth Dynasty)",
+      "movement": null,
+      "periodSlug": null,
+      "medium": "Lebanese cedar planks sewn together with halfa-grass rope, with acacia and sycamore fittings",
+      "materials": [
+        "cedar",
+        "rope",
+        "acacia",
+        "sycamore"
+      ],
+      "genre": [
+        "ship",
+        "engineering"
+      ],
+      "subjects": [
+        "ship",
+        "boat",
+        "burial",
+        "Khufu",
+        "Nile"
+      ],
+      "physical": {
+        "widthCm": 4360,
+        "heightCm": 780,
+        "depthCm": 590,
+        "weightKg": 45000
+      },
+      "description": "The oldest intact large ship in the world, and one of the oldest surviving things built by people on this scale. It was taken apart into 1,224 pieces and sealed in a limestone pit at the foot of the Great Pyramid around 2560 BCE, found there in 1954, and put back together over fourteen years by the restorer Ahmed Youssef Moustafa. Forty-three metres of cedar from Lebanon, the planks sewn to each other with rope through holes bored along their edges rather than nailed, so the hull tightened as the wood swelled; the join lines and the rope are still there. It had no mast: it was rowed, or towed, and was perhaps the barge that carried the king's body down the Nile, or a boat for his use in the next world. Here it is a laser scan drawn as a cloud of coloured points, lying broadside to the lane with the bow to the west. Walk the length of it.",
+      "facts": [
+        "43.6 m long, 5.9 m in the beam, about 45 tonnes; it draws only 1.5 m of water.",
+        "Found by the archaeologist Kamal el-Mallakh in May 1954 under a row of limestone blocks beside the pyramid's south face.",
+        "A second, similar ship lay in a pit beside it, excavated from 2011.",
+        "It moved to the Grand Egyptian Museum in 2021, carried whole across Giza on a remote-controlled vehicle."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Khufu_ship",
+      "wikidataQid": "Q604153",
+      "externalIds": {
+        "sketchfab": "5c56a4feeb8e4c67b5a4d903b4a96e5a"
+      },
+      "copyrighted": false,
+      "asset": {
+        "kind": "model",
+        "currentVersionId": "sf-5c56a4feeb8e4c67b5a4d903b4a96e5a-v1",
+        "versions": [
+          {
+            "id": "sf-5c56a4feeb8e4c67b5a4d903b4a96e5a-v1",
+            "original": {
+              "url": "https://sketchfab.com/3d-models/khufu-solar-ship-egypt-5c56a4feeb8e4c67b5a4d903b4a96e5a",
+              "format": "glb",
+              "bytes": 255317204,
+              "triangles": 0,
+              "unitScale": 0.676
+            },
+            "rungs": [
+              {
+                "quality": "thumb",
+                "url": "/assets/sf-5c56a4feeb8e4c67b5a4d903b4a96e5a/thumb.glb",
+                "bytes": 1074220,
+                "triangles": 0,
+                "textureSize": null,
+                "draco": false,
+                "points": 63795
+              },
+              {
+                "quality": "low",
+                "url": "/assets/sf-5c56a4feeb8e4c67b5a4d903b4a96e5a/low.glb",
+                "bytes": 4136580,
+                "triangles": 0,
+                "textureSize": null,
+                "draco": false,
+                "points": 255238
+              },
+              {
+                "quality": "medium",
+                "url": "/assets/sf-5c56a4feeb8e4c67b5a4d903b4a96e5a/medium.glb",
+                "bytes": 12812116,
+                "triangles": 0,
+                "textureSize": null,
+                "draco": false,
+                "points": 797449
+              },
+              {
+                "quality": "high",
+                "url": "/assets/sf-5c56a4feeb8e4c67b5a4d903b4a96e5a/high.glb",
+                "bytes": 25571536,
+                "triangles": 0,
+                "textureSize": null,
+                "draco": false,
+                "points": 1594898
+              }
+            ],
+            "scale": 1,
+            "bounds": {
+              "width": 43.599,
+              "height": 8.409,
+              "depth": 7.511
+            },
+            "credit": {
+              "author": "Arqueomodel3D (juanbrualla, Sketchfab)",
+              "license": {
+                "name": "CC BY 4.0",
+                "url": "https://creativecommons.org/licenses/by/4.0/"
+              },
+              "sourcePage": "https://sketchfab.com/3d-models/khufu-solar-ship-egypt-5c56a4feeb8e4c67b5a4d903b4a96e5a"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-09T00:00:00Z",
+              "note": "Laser-scan point cloud of the reassembled ship, published on Sketchfab by Arqueomodel3D (user juanbrualla) under CC BY 4.0 (license.txt: author Arqueomodel3D, license type CC-BY-4.0). 6,379,495 coloured points, no mesh and no textures; the museum's pipeline thins it to a ladder of a quarter, an eighth, a twenty-fifth and a hundredth of the points and draws them as sized dots. The file is 64.5 units long; the ship is 43.6 m, so unitScale 0.676 (the beam comes out 5.4 m against the real 5.9). Bow at -X in the file, so it lies broadside to the lane with the bow to the west; upright, hull bottom at the base. Downloaded by the museum's owner from Sketchfab on 2026-10-10."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "sketchfab",
+            "representation": "scan",
+            "pointSize": 0.035
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": 0,
+        "back": "none",
+        "yaw": null,
+        "fallbackWidthM": 1.2
+      },
+      "tags": [
+        "Egypt",
+        "ship",
+        "boat",
+        "scan",
+        "point cloud"
+      ],
+      "pageviews": null,
+      "importance": 0.9,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-09T00:00:00Z",
+      "updatedAt": "2026-10-10T17:20:10.675Z"
+    },
+    {
       "id": "sf-7e7febabef2045a68755cc39c8c7c91f",
       "kind": "model",
       "title": "Stonehenge (reconstruction)",
@@ -4188,7 +4383,7 @@
         ]
       },
       "display": {
-        "scale": 1,
+        "scale": 5,
         "baseHeight": 0.5,
         "back": "mirror",
         "yaw": null,
@@ -5193,7 +5388,7 @@
         ]
       },
       "display": {
-        "scale": 1,
+        "scale": 3,
         "baseHeight": 0.5,
         "back": "mirror",
         "yaw": null,
@@ -6590,7 +6785,8 @@
         "back": "backing",
         "yaw": null,
         "fallbackWidthM": 1.2,
-        "threshold": 0
+        "threshold": 0,
+        "reveal": 11
       },
       "tags": [
         "architecture",
@@ -6915,7 +7111,7 @@
         ]
       },
       "display": {
-        "scale": 1,
+        "scale": 3,
         "baseHeight": 0.5,
         "back": "mirror",
         "yaw": null,
@@ -7616,7 +7812,7 @@
         ]
       },
       "display": {
-        "scale": 1,
+        "scale": 4,
         "baseHeight": 0.5,
         "back": "mirror",
         "yaw": null,
@@ -9219,7 +9415,7 @@
         ]
       },
       "display": {
-        "scale": 1,
+        "scale": 6,
         "baseHeight": 0.5,
         "back": "mirror",
         "yaw": null,
@@ -11496,7 +11692,7 @@
         ]
       },
       "display": {
-        "scale": 1,
+        "scale": 5,
         "baseHeight": 0.5,
         "back": "mirror",
         "yaw": null,

@@ -9,6 +9,7 @@
  * Params: rows (default 12), perSecond (balls released, default 6).
  */
 import { Group } from "three";
+import { Clicker } from "../assets/sound";
 import { Panel, INK, INK_SOFT, RULE, ACCENT, caption, num, type Program } from "./index";
 
 interface Ball {
@@ -24,6 +25,12 @@ export const galton: Program = (params, bounds) => {
   const panel = new Panel(bounds.width, bounds.height, 420, 30);
   const group = new Group();
   group.add(panel.mesh);
+  // Each ball ticks on the pegs and clicks as it lands; the sound comes from the board.
+  const clicker = new Clicker();
+  if (clicker.node) {
+    clicker.node.position.set(0, bounds.height * 0.4, 0);
+    group.add(clicker.node);
+  }
 
   const w = panel.w, h = panel.h;
   const bins = rows + 1;
@@ -124,8 +131,12 @@ export const galton: Program = (params, bounds) => {
         }
         for (let i = balls.length - 1; i >= 0; i--) {
           const ball = balls[i]!;
+          const before = Math.floor(ball.t);
           ball.t += elapsed * fallSpeed;
+          // A faint tick at every peg passed, quieter when far; the landing is the click.
+          if (Math.floor(ball.t) > before && ball.t < rows && distance < 25) clicker.click(0.08 * (1 - distance / 25), 1.6 + Math.random() * 0.6);
           if (ball.t >= rows + 1) {
+            if (distance < 25) clicker.click(0.35 * (1 - distance / 25), 0.9 + Math.random() * 0.3);
             let bin = 0;
             for (let k = 0; k < rows; k++) bin += ball.path[k]!;
             counts[bin]!++;
@@ -137,7 +148,10 @@ export const galton: Program = (params, bounds) => {
         paint();
       });
     },
-    dispose: () => panel.dispose(),
+    dispose() {
+      panel.dispose();
+      clicker.dispose();
+    },
     residentBytes: panel.residentBytes,
   };
 };

@@ -54,7 +54,7 @@
  */
 import { readFile, writeFile, mkdir, stat } from "node:fs/promises";
 import path from "node:path";
-import { Document, NodeIO, getBounds } from "@gltf-transform/core";
+import { Document, NodeIO, Primitive, getBounds } from "@gltf-transform/core";
 import { ALL_EXTENSIONS } from "@gltf-transform/extensions";
 import { dedup, draco, mergeDocuments, prune, simplify, textureCompress, unpartition, weld } from "@gltf-transform/functions";
 import { MeshoptSimplifier } from "meshoptimizer";
@@ -409,6 +409,8 @@ async function io(): Promise<NodeIO> {
 interface TierOptions {
   /** Fraction of triangles to keep, 1 = all. */
   ratio: number;
+  /** For a point cloud: fraction of points to keep. Clouds are huge, so this is far below `ratio`. */
+  points: number;
   /**
    * Largest deviation the simplifier may introduce, as a fraction of the
    * mesh's extent. A thumb seen from 90 m can stray a few centimetres; a
@@ -462,18 +464,57 @@ async function mergeParts(partFiles: string[], unitScale: number, dest: string, 
   holder.setScale([unitScale, unitScale, unitScale]);
   holder.setTranslation([-cx * unitScale, -b.min[1] * unitScale, -cz * unitScale]);
 
-  if (tier) {
-    await MeshoptSimplifier.ready;
-    await out.transform(
-      weld(),
-      ...(tier.ratio < 1 ? [simplify({ simplifier: MeshoptSimplifier, ratio: tier.ratio, error: tier.error ?? 0.001 })] : []),
-      textureCompress({ encoder: sharp, targetFormat: "webp", quality: 85, resize: [tier.textureSize, tier.textureSize] }),
-    );
+  // A point cloud (a scan published as points, not a mesh) is thinned, not
+  // simplified: every k-th point is kept, with its colour as bytes, and
+  // nothing else; normals mean nothing for unlit dots.
+  const cloud = root.listMeshes().some((m) => m.listPrimitives().some((p) => p.getMode() === Primitive.Mode.POINTS));
+  let points = 0;
+  if (cloud) {
+    const keep = tier ? tier.points : 1;
+    for (const m of root.listMeshes()) {
+      for (const p of m.listPrimitives()) {
+        if (p.getMode() !== Primitive.Mode.POINTS) continue;
+        const pos = p.getAttribute("POSITION")!;
+        const col = p.getAttribute("COLOR_0");
+        const n = pos.getCount();
+        const step = Math.max(1, Math.round(1 / keep));
+        const kept = Math.floor((n + step - 1) / step);
+        const xyz = new Float32Array(kept * 3);
+        const rgb = new Uint8Array(kept * 3);
+        const v: number[] = [0, 0, 0, 0];
+        for (let i = 0, j = 0; i < n; i += step, j++) {
+          pos.getElement(i, v);
+          xyz[j * 3] = v[0]!; xyz[j * 3 + 1] = v[1]!; xyz[j * 3 + 2] = v[2]!;
+          if (col) {
+            col.getElement(i, v);
+            // Colours are stored linear; the renderer takes vertex colours as linear too.
+            rgb[j * 3] = Math.round(Math.min(1, v[0]!) * 255); rgb[j * 3 + 1] = Math.round(Math.min(1, v[1]!) * 255); rgb[j * 3 + 2] = Math.round(Math.min(1, v[2]!) * 255);
+          } else {
+            rgb[j * 3] = rgb[j * 3 + 1] = rgb[j * 3 + 2] = 200;
+          }
+        }
+        for (const sem of p.listSemantics()) p.setAttribute(sem, null);
+        p.setIndices(null);
+        p.setAttribute("POSITION", out.createAccessor().setType("VEC3").setArray(xyz));
+        p.setAttribute("COLOR_0", out.createAccessor().setType("VEC3").setArray(rgb).setNormalized(true));
+        points += kept;
+      }
+    }
+    await out.transform(dedup(), prune(), unpartition(), draco({ method: "sequential" }));
+  } else {
+    if (tier) {
+      await MeshoptSimplifier.ready;
+      await out.transform(
+        weld(),
+        ...(tier.ratio < 1 ? [simplify({ simplifier: MeshoptSimplifier, ratio: tier.ratio, error: tier.error ?? 0.001 })] : []),
+        textureCompress({ encoder: sharp, targetFormat: "webp", quality: 85, resize: [tier.textureSize, tier.textureSize] }),
+      );
+    }
+    await out.transform(dedup(), prune(), unpartition(), draco({ method: "edgebreaker" }));
   }
-  await out.transform(dedup(), prune(), unpartition(), draco({ method: "edgebreaker" }));
 
   let triangles = 0;
-  for (const m of root.listMeshes()) {
+  if (!cloud) for (const m of root.listMeshes()) {
     for (const p of m.listPrimitives()) {
       triangles += Math.round((p.getIndices()?.getCount() ?? p.getAttribute("POSITION")?.getCount() ?? 0) / 3);
     }
@@ -487,6 +528,7 @@ async function mergeParts(partFiles: string[], unitScale: number, dest: string, 
   return {
     bytes: glb.byteLength,
     triangles,
+    points: cloud ? points : null,
     textureSize: textureSize || null,
     bounds: {
       width: (b.max[0] - b.min[0]) * unitScale,
@@ -516,9 +558,9 @@ async function fetchSmithsonianModel(artId: string, version: ModelVersion) {
     for (const [i, p] of parts.entries()) await download(new URL(p.uri, base).toString(), files[i]!);
     const file = `${quality}.glb`;
     const r = await mergeParts(files, unitScale, path.join(OUT_DIR, artId, file));
-    rungs.push({ quality, url: `/assets/${artId}/${file}`, bytes: r.bytes, triangles: r.triangles, textureSize: r.textureSize, draco: true });
+    rungs.push({ quality, url: `/assets/${artId}/${file}`, bytes: r.bytes, triangles: r.triangles, ...(r.points != null ? { points: r.points } : {}), textureSize: r.textureSize, draco: true });
     bounds = r.bounds;
-    console.log(`${artId}: ${quality} ${(r.bytes / 1024).toFixed(0)} KB, ${r.triangles} tris, ${r.textureSize ?? "no"} px textures`);
+    console.log(`${artId}: ${quality} ${(r.bytes / 1024).toFixed(0)} KB, ${r.points != null ? `${r.points} points` : `${r.triangles} tris`}, ${r.textureSize ?? "no"} px textures`);
   }
   version.rungs = rungs;
   version.bounds = { width: round(bounds.width), height: round(bounds.height), depth: round(bounds.depth) };
@@ -528,10 +570,10 @@ async function fetchSmithsonianModel(artId: string, version: ModelVersion) {
 
 /** Tiers built from one source file, mirroring the Smithsonian ladder. */
 const LOCAL_TIERS: Record<Quality, TierOptions> = {
-  thumb: { ratio: 0.05, textureSize: 512, error: 0.01 },
-  low: { ratio: 0.35, textureSize: 1024, error: 0.004 },
-  medium: { ratio: 0.6, textureSize: 2048, error: 0.002 },
-  high: { ratio: 1, textureSize: 4096 },
+  thumb: { ratio: 0.05, points: 0.01, textureSize: 512, error: 0.01 },
+  low: { ratio: 0.35, points: 0.04, textureSize: 1024, error: 0.004 },
+  medium: { ratio: 0.6, points: 0.12, textureSize: 2048, error: 0.002 },
+  high: { ratio: 1, points: 0.25, textureSize: 4096 },
 };
 
 async function buildLocalModel(artId: string, version: ModelVersion): Promise<boolean> {
@@ -554,9 +596,9 @@ async function buildLocalModel(artId: string, version: ModelVersion): Promise<bo
   for (const quality of QUALITIES) {
     const file = `${quality}.glb`;
     const r = await mergeParts([path.join(dir, src)], unitScale, path.join(OUT_DIR, artId, file), LOCAL_TIERS[quality], version.original.rotation, version.original.omit);
-    rungs.push({ quality, url: `/assets/${artId}/${file}`, bytes: r.bytes, triangles: r.triangles, textureSize: r.textureSize, draco: true });
+    rungs.push({ quality, url: `/assets/${artId}/${file}`, bytes: r.bytes, triangles: r.triangles, ...(r.points != null ? { points: r.points } : {}), textureSize: r.textureSize, draco: r.points == null });
     bounds = r.bounds;
-    console.log(`${artId}: ${quality} ${(r.bytes / 1024).toFixed(0)} KB, ${r.triangles} tris, ${r.textureSize ?? "no"} px textures`);
+    console.log(`${artId}: ${quality} ${(r.bytes / 1024).toFixed(0)} KB, ${r.points != null ? `${r.points} points` : `${r.triangles} tris`}, ${r.textureSize ?? "no"} px textures`);
   }
   version.rungs = rungs;
   version.bounds = { width: round(bounds.width), height: round(bounds.height), depth: round(bounds.depth) };

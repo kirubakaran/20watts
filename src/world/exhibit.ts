@@ -9,6 +9,7 @@
 import {
   BackSide,
   Box3,
+  BoxGeometry,
   CanvasTexture,
   CircleGeometry,
   DoubleSide,
@@ -22,6 +23,7 @@ import {
   type Texture,
 } from "three";
 import { Text } from "troika-three-text";
+import type { Material } from "three";
 import type { Artwork } from "../data/types";
 import { baseHeightOf, currentAudioVersion, currentImageVersion, currentModelVersion, currentSimVersion, imageDisplaySize, footprintOf } from "../data/types";
 import { PROGRAMS, type Sim } from "../sims";
@@ -102,7 +104,10 @@ function creditLine(a: Artwork): string {
 function sizeLine(a: Artwork): string {
   const { widthCm, heightCm, depthCm } = a.physical;
   const parts = [heightCm, widthCm, depthCm].filter((n): n is number => n != null).map((n) => `${n} cm`);
-  return parts.length ? parts.join(" × ") : "";
+  if (!parts.length) return "";
+  // A page is shown larger than life, since the idea on it is the work, not the paper.
+  const s = a.display.scale;
+  return parts.join(" × ") + (s !== 1 ? `, shown at ${Number.isInteger(s) ? s : s.toFixed(1)}×` : "");
 }
 
 function makePlacard(a: Artwork, width: number): Group {
@@ -169,6 +174,9 @@ export class Exhibit {
   private sound: Sound | null = null;
   private sim: Sim | null = null;
   private modelRoot: Group | null = null;
+  /** Shown from inside only: how far the walls have risen, 0 hidden to 1 solid. */
+  private revealT = 0;
+  private revealMaterials: Material[] = [];
   /** In a visitor's hand: a sharper rung that arrives meanwhile waits until it is put down. */
   private held = false;
   private pendingRoot: Group | null = null;
@@ -298,9 +306,10 @@ export class Exhibit {
     const fp = footprintOf(a);
     this.centre.set(0, baseHeightOf(a) + fp.height / 2, 0);
     if (v.rungs.length === 0) return;
+    if (a.display.reveal != null) this.buildRevealFloor(fp.width, fp.depth);
     // Rungs are in metres with the base at y = 0 and the footprint centred,
     // so the only transforms left are the record's own scale and height.
-    const ladder = new ModelLadder(v.rungs, this.gpu.maxTextureSize, this.gpu.maxAnisotropy);
+    const ladder = new ModelLadder(v.rungs, v.pointSize ?? 0.03, this.gpu.maxTextureSize, this.gpu.maxAnisotropy);
     ladder.onUpgrade((root: Group) => {
       if (this.held) {
         this.pendingRoot = root;
@@ -338,6 +347,50 @@ export class Exhibit {
   }
 
   /**
+   * The floor of a work shown from inside only: a plaster slab the size
+   * of its footprint, with "walk in" at the near edge, so the visitor
+   * knows to step onto it. The walls rise once they do.
+   */
+  private buildRevealFloor(width: number, depth: number) {
+    const slab = new Mesh(new BoxGeometry(width, 0.04, depth), new MeshStandardMaterial({ color: 0xd9c9a8, roughness: 0.95 }));
+    slab.position.y = baseHeightOf(this.artwork) + 0.02;
+    slab.receiveShadow = true;
+    slab.name = "reveal-floor";
+    this.group.add(slab);
+    const t = new Text();
+    t.text = "walk in";
+    t.font = FONT_BOLD;
+    t.fontSize = 0.4;
+    t.color = 0x5e584e;
+    t.fillOpacity = 0.6;
+    t.anchorX = "center";
+    t.anchorY = "bottom";
+    t.rotation.x = -Math.PI / 2;
+    t.position.set(0, baseHeightOf(this.artwork) + 0.045, depth / 2 - 0.4);
+    t.sync();
+    this.group.add(t);
+  }
+
+  /** Walls shown from inside only: hidden, rising, or solid, by how far in the visitor stands. */
+  private updateReveal(d: number, dt: number) {
+    const reveal = this.artwork.display.reveal;
+    if (reveal == null || !this.modelRoot) return;
+    const want = d < reveal ? 1 : 0;
+    const before = this.revealT;
+    this.revealT = Math.max(0, Math.min(1, this.revealT + (want > this.revealT ? dt : -dt) / 0.6));
+    if (this.revealT === before && (this.revealT === 0 || this.revealT === 1)) {
+      this.modelRoot.visible = this.revealT > 0;
+      return;
+    }
+    this.modelRoot.visible = this.revealT > 0;
+    for (const m of this.revealMaterials) {
+      m.transparent = this.revealT < 1;
+      m.opacity = this.revealT;
+      m.depthWrite = this.revealT >= 0.5;
+    }
+  }
+
+  /**
    * Shadows, and what the back of a scanned interior looks like from
    * outside: "mirror" draws both sides of every surface, so the inside
    * textures show through reversed; "backing" adds a plain plaster skin on
@@ -348,18 +401,23 @@ export class Exhibit {
     // Collect first: adding a skin while walking the tree would walk the skin too, and skin it, without end.
     const meshes: Mesh[] = [];
     root.traverse((o) => o instanceof Mesh && meshes.push(o));
+    this.revealMaterials = [];
     for (const o of meshes) {
+      if (this.artwork.display.reveal != null) this.revealMaterials.push(...(Array.isArray(o.material) ? o.material : [o.material]));
       o.castShadow = true;
       if (back === "mirror") for (const m of Array.isArray(o.material) ? o.material : [o.material]) m.side = DoubleSide;
       if (back === "backing") {
         // The scan's own back faces would draw over the skin; only its fronts stay.
         for (const m of Array.isArray(o.material) ? o.material : [o.material]) m.side = FrontSide;
-        const skin = new Mesh(o.geometry, backingMaterial());
+        const skin = new Mesh(o.geometry, backingMaterial().clone());
         skin.castShadow = true;
         skin.name = "backing";
         o.add(skin);
+        if (this.artwork.display.reveal != null) this.revealMaterials.push(skin.material as Material);
       }
     }
+    // Hidden until the visitor is inside; the first update decides.
+    if (this.artwork.display.reveal != null) root.visible = this.revealT > 0;
   }
 
   /** The model or simulation, for picking up; null for an image. */
@@ -423,6 +481,7 @@ export class Exhibit {
     if (!this.ladder && !this.motion && !this.sound && !this.sim) return;
     const d = Math.max(viewerWorldPos.distanceTo(this.worldCentre), 0.5);
     this.sim?.update(dt, d);
+    this.updateReveal(Math.hypot(viewerWorldPos.x - this.worldCentre.x, viewerWorldPos.z - this.worldCentre.z), dt);
     if (this.sound) {
       const near = this.artwork.display.hearing ?? HEARING;
       if (d < near && !this.sound.isPlaying) this.sound.play();

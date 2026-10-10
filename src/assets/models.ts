@@ -6,7 +6,7 @@
  * the streamer can ask it to fall back to the smallest when memory is
  * wanted elsewhere.
  */
-import { Group, Material, Mesh, type Object3D, SRGBColorSpace, Texture } from "three";
+import { CanvasTexture, Group, Material, Mesh, type Object3D, Points, PointsMaterial, SRGBColorSpace, Texture } from "three";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 import { DRACOLoader } from "three/addons/loaders/DRACOLoader.js";
 import type { ModelRung } from "../data/types";
@@ -21,9 +21,38 @@ function loader(): GLTFLoader {
   return sharedLoader;
 }
 
+let dotTexture: CanvasTexture | null = null;
+/** A round dot, so a point cloud is a cloud of discs rather than squares. */
+function dot(): CanvasTexture {
+  if (dotTexture) return dotTexture;
+  const c = document.createElement("canvas");
+  c.width = c.height = 32;
+  const ctx = c.getContext("2d")!;
+  ctx.fillStyle = "#fff";
+  ctx.beginPath();
+  ctx.arc(16, 16, 15, 0, Math.PI * 2);
+  ctx.fill();
+  return (dotTexture = new CanvasTexture(c));
+}
+
+/**
+ * How sharp a rung is, in the pixels its detail can fill: its largest
+ * texture, or for a point cloud about twice the square root of its points,
+ * so a cloud climbs its ladder at the same distances a textured mesh does.
+ */
+function resolutionOf(r: ModelRung): number {
+  if (r.textureSize) return r.textureSize;
+  return r.points ? Math.round(2 * Math.sqrt(r.points)) : 0;
+}
+
 /** Free everything a loaded glb scene holds on the GPU. */
 export function disposeObject(root: Object3D) {
   root.traverse((o) => {
+    if (o instanceof Points) {
+      o.geometry.dispose();
+      (o.material as Material).dispose();
+      return;
+    }
     if (!(o instanceof Mesh)) return;
     o.geometry.dispose();
     const mats: Material[] = Array.isArray(o.material) ? o.material : [o.material];
@@ -42,6 +71,7 @@ export class ModelLadder {
 
   constructor(
     public readonly rungs: ModelRung[],
+    private readonly pointSize: number,
     private readonly maxTextureSize: number,
     private readonly anisotropy: number,
   ) {}
@@ -56,7 +86,7 @@ export class ModelLadder {
       .map((r, i) => ({ r, i }))
       .filter(({ r }) => (r.textureSize ?? 0) <= this.maxTextureSize);
     if (usable.length === 0) return -1;
-    return (usable.find(({ r }) => (r.textureSize ?? Infinity) >= desiredPx) ?? usable[usable.length - 1]!).i;
+    return (usable.find(({ r }) => resolutionOf(r) >= desiredPx) ?? usable[usable.length - 1]!).i;
   }
 
   /** Ensure a rung of at least `desiredPx` is loaded or loading. Never downgrades. */
@@ -69,7 +99,16 @@ export class ModelLadder {
       .loadAsync(assetUrl(rung.url, rung.bytes))
       .then((gltf) => {
         const root = gltf.scene;
+        // A point cloud's dots are sized in metres: the record's size at the top rung,
+        // larger on a thinner rung so the surface still reads as solid.
+        const top = this.rungs.at(-1)?.points;
+        const size = this.pointSize * (top && rung.points ? Math.sqrt(top / rung.points) : 1);
         root.traverse((o) => {
+          if (o instanceof Points) {
+            (o.material as Material).dispose();
+            o.material = new PointsMaterial({ size, sizeAttenuation: true, vertexColors: true, map: dot(), alphaTest: 0.5, transparent: false });
+            return;
+          }
           if (!(o instanceof Mesh)) return;
           const mats: Material[] = Array.isArray(o.material) ? o.material : [o.material];
           for (const m of mats) {
@@ -102,8 +141,8 @@ export class ModelLadder {
     const r = this.rungs[this.bestRank];
     if (!r) return 0;
     const tex = r.textureSize ?? 0;
-    // Assume three textures per material set (colour, normal, roughness) and ~36 bytes a triangle.
-    return tex * tex * 4 * 1.34 * 3 + (r.triangles ?? 0) * 36;
+    // Assume three textures per material set (colour, normal, roughness), ~36 bytes a triangle, 16 a point.
+    return tex * tex * 4 * 1.34 * 3 + (r.triangles ?? 0) * 36 + (r.points ?? 0) * 16;
   }
 
   /** Fall back to the smallest rung. Returns false if already there. */
@@ -119,12 +158,12 @@ export class ModelLadder {
 
   /** Texture size of the smallest rung: the quality a shrunk ladder is held at. */
   get lowestQuality(): number {
-    return this.rungs[0]?.textureSize ?? 0;
+    return this.rungs[0] ? resolutionOf(this.rungs[0]) : 0;
   }
 
   requestLowest() {
     const r = this.rungs[0];
-    if (r) this.request(r.textureSize ?? 0);
+    if (r) this.request(resolutionOf(r));
   }
 
   dispose() {

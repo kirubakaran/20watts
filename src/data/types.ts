@@ -158,6 +158,8 @@ export interface ModelRung {
   url: string;
   bytes: number | null;
   triangles: number | null;
+  /** A point cloud: how many points this rung keeps. The renderer sizes the dots to fill the gaps. */
+  points?: number;
   /** Largest texture edge in pixels; the renderer picks a rung by this. */
   textureSize: number | null;
   /** Mesh is KHR_draco_mesh_compression encoded; the loader needs the decoder. */
@@ -213,6 +215,8 @@ export interface ModelVersion {
   provenance: string;
   /** A scan of the actual object, or an artist's reconstruction of its type. */
   representation: "scan" | "reconstruction";
+  /** A point cloud: the dot size in metres at the top rung; lower rungs scale it up to stay solid. Default 0.03. */
+  pointSize?: number;
 }
 
 /**
@@ -328,7 +332,11 @@ export interface SkyHint {
 }
 
 export interface DisplayHints {
-  /** Multiplier on physical size. 1 = true scale. */
+  /**
+   * Multiplier on physical size. 1 = true scale, the rule for things. A
+   * page is the exception: the idea on it is the work, not the paper, so
+   * pages are shown several times life size and the placard says so.
+   */
   scale: number;
   /**
    * Height of the bottom edge (image) or base (model) above the floor,
@@ -365,6 +373,13 @@ export interface DisplayHints {
   grab?: boolean;
   /** How the sky changes as the visitor comes near. */
   sky?: SkyHint;
+  /**
+   * A scanned interior that is only shown from inside: until the visitor
+   * is within this many metres of its centre, only its floor is drawn, a
+   * slab on the museum floor with "walk in" on it, and the walls rise as
+   * they step onto it. For a scan whose outside is not worth seeing.
+   */
+  reveal?: number;
 }
 
 export interface Artwork {
