@@ -18,7 +18,7 @@ export class Motion {
   private ensure(): VideoTexture {
     if (this.texture) return this.texture;
     const v = document.createElement("video");
-    v.src = assetUrl(this.loop.url);
+    v.src = assetUrl(this.loop.url, this.loop.bytes);
     v.muted = true;
     v.loop = true;
     v.playsInline = true;

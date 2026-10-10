@@ -38,7 +38,7 @@ export class ImageLadder {
   request(desiredPx: number) {
     const rung = this.pick(desiredPx);
     if (!rung || rung.width <= this.bestWidth || this.pending.has(rung.width)) return;
-    const p = loader.loadAsync(assetUrl(rung.url)).then((t) => {
+    const p = loader.loadAsync(assetUrl(rung.url, rung.bytes)).then((t) => {
       t.colorSpace = SRGBColorSpace;
       t.anisotropy = this.anisotropy;
       t.minFilter = LinearMipmapLinearFilter;

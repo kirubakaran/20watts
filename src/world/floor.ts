@@ -6,6 +6,8 @@
  *          hairline joints every 4 m and a firmer line on the tile edge,
  *          so a quiet grid gives the eye a scale. Rows are at least 16 m
  *          apart, so the grid often, not always, falls on a row boundary.
+ *          The plane is finite but follows the visitor, so the lane can
+ *          grow without anyone walking off its edge.
  *  Sky:    a gradient dome, warm pale horizon to a cooler zenith, with the
  *          fog matched to the horizon so distance fades cleanly.
  *  Light:  an overcast HDRI as the environment map (never drawn) so PBR
@@ -119,14 +121,15 @@ function skyDome(radius: number): Mesh {
 
 export interface World {
   floor: Mesh;
-  /** Call each frame so the shadow-casting light stays centred on the visitor. */
+  /** Call each frame so the floor, the sky and the shadow-casting light stay centred on the visitor. */
   follow(viewer: Vector3): void;
 }
 
 export function buildWorld(scene: Scene, renderer: WebGLRenderer, extent = 2000): World {
   scene.background = HORIZON;
   scene.fog = new Fog(HORIZON, 40, 220);
-  scene.add(skyDome(extent / 2));
+  const sky = skyDome(extent / 2);
+  scene.add(sky);
 
   // Environment lighting from the HDRI, never drawn as the background.
   const pmrem = new PMREMGenerator(renderer);
@@ -171,6 +174,11 @@ export function buildWorld(scene: Scene, renderer: WebGLRenderer, extent = 2000)
     follow(viewer) {
       target.position.set(viewer.x, 0, viewer.z);
       sun.position.copy(target.position).add(offset);
+      // The lane grows with every work added, so the floor and sky are not
+      // sized to it: they keep up with the visitor. The floor shifts a whole
+      // tile at a time, which the repeating texture cannot show.
+      floor.position.set(Math.round(viewer.x / CELL) * CELL, 0, Math.round(viewer.z / CELL) * CELL);
+      sky.position.set(viewer.x, 0, viewer.z);
     },
   };
 }

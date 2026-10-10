@@ -7,6 +7,13 @@
  */
 const BASE = (import.meta.env.VITE_ASSET_BASE ?? "").replace(/\/+$/, "");
 
-export function assetUrl(path: string): string {
-  return BASE + path;
+/**
+ * The URL to fetch a derived file from. Rung paths are stable, so a file
+ * rebuilt in place (a sheet re-typeset with a figure, a model re-exported)
+ * would otherwise be served from a browser's cache for as long as the host
+ * allows. Its size from the catalogue is appended as a version tag: a
+ * different file is a different URL.
+ */
+export function assetUrl(path: string, bytes?: number | null): string {
+  return BASE + path + (bytes ? `?v=${bytes}` : "");
 }

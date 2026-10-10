@@ -66,7 +66,7 @@ export class ModelLadder {
     const rung = this.rungs[i]!;
     if (this.pending.has(rung.url)) return;
     const p = loader()
-      .loadAsync(assetUrl(rung.url))
+      .loadAsync(assetUrl(rung.url, rung.bytes))
       .then((gltf) => {
         const root = gltf.scene;
         root.traverse((o) => {

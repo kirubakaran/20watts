@@ -32,7 +32,7 @@ export class Sound {
     if (!listener || !this.version.encoded) return null;
     if (this.node) return this.node;
     const el = document.createElement("audio");
-    el.src = assetUrl(this.version.encoded.url);
+    el.src = assetUrl(this.version.encoded.url, this.version.encoded.bytes);
     el.loop = true;
     el.preload = "none";
     el.crossOrigin = "anonymous";
