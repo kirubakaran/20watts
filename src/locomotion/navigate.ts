@@ -29,9 +29,13 @@ interface Row {
   cells: LayoutCell[];
 }
 
-/** How far back from the centre of something this wide and deep to stand. */
-function standoff(width: number, depth: number): number {
-  return depth / 2 + Math.min(10, Math.max(2.5, width * 0.6));
+/**
+ * How far back from the centre of something this big to stand: far enough
+ * to take in its width, or its height when it is a tall print or a tower,
+ * never closer than arm's length nor farther than ten metres.
+ */
+function standoff(fp: { width: number; depth: number; height: number }): number {
+  return fp.depth / 2 + Math.min(10, Math.max(2.5, fp.width * 0.6, fp.height * 0.9));
 }
 
 export class Navigator {
@@ -46,7 +50,7 @@ export class Navigator {
       .map(([, cells]) => {
         cells.sort((p, q) => p.x - q.x);
         const z = cells[0]!.z;
-        return { z, frontZ: z + Math.max(...cells.map((c) => c.threshold ?? standoff(c.width, c.depth))), cells };
+        return { z, frontZ: z + Math.max(...cells.map((c) => c.threshold ?? standoff(c))), cells };
       });
     for (const s of stops) this.stops.set(s.id, s);
   }
@@ -56,7 +60,7 @@ export class Navigator {
     const s = this.stops.get(id);
     if (!s) return null;
     if (s.overhead) return { x: s.x, z: s.z };
-    return { x: s.x, z: s.z + (s.threshold ?? standoff(s.footprint.width, s.footprint.depth)) };
+    return { x: s.x, z: s.z + (s.threshold ?? standoff(s.footprint)) };
   }
 
   /** Stand in front of one work. Returns false if it is not on display. */

@@ -5690,7 +5690,7 @@
       "updatedAt": "2026-10-09T19:22:48.269Z"
     },
     {
-      "id": "wm-51782341",
+      "id": "wm-50738349",
       "kind": "image",
       "title": "Brihadisvara Temple, Thanjavur",
       "titleOriginal": null,
@@ -5766,50 +5766,50 @@
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Brihadisvara_Temple,_Thanjavur",
       "wikidataQid": "Q916943",
       "externalIds": {
-        "commons-curid": "51782341",
-        "commons-file": "Vimana of the Brihadisvara Temple, Thanjavur, Tamil Nadu, India (2016).jpg"
+        "commons-curid": "50738349",
+        "commons-file": "Brihadeeswarar Temple 3522.jpg"
       },
       "copyrighted": false,
       "asset": {
         "kind": "image",
-        "currentVersionId": "wm-51782341-v1",
+        "currentVersionId": "wm-50738349-v1",
         "versions": [
           {
-            "id": "wm-51782341-v1",
+            "id": "wm-50738349-v1",
             "original": {
-              "url": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Vimana_of_the_Brihadisvara_Temple%2C_Thanjavur%2C_Tamil_Nadu%2C_India_%282016%29.jpg",
-              "width": 5184,
-              "height": 3456,
-              "bytes": 4629812,
+              "url": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Brihadeeswarar_Temple_3522.jpg",
+              "width": 4000,
+              "height": 6000,
+              "bytes": 18776064,
               "mime": "image/jpeg"
             },
             "rungs": [
               {
                 "width": 1280,
-                "height": 854,
-                "url": "/assets/wm-51782341/1280.jpg",
-                "bytes": 161131
+                "height": 1920,
+                "url": "/assets/wm-50738349/1280.jpg",
+                "bytes": 660704
               },
               {
                 "width": 3840,
-                "height": 2559,
-                "url": "/assets/wm-51782341/3840.jpg",
-                "bytes": 1034292
+                "height": 5760,
+                "url": "/assets/wm-50738349/3840.jpg",
+                "bytes": 4556573
               }
             ],
             "loop": null,
             "credit": {
-              "author": "Nandhinikandhasamy",
+              "author": "Vengolis",
               "license": {
                 "name": "CC BY-SA 4.0",
                 "url": "https://creativecommons.org/licenses/by-sa/4.0"
               },
-              "sourcePage": "https://commons.wikimedia.org/wiki/File:Vimana_of_the_Brihadisvara_Temple,_Thanjavur,_Tamil_Nadu,_India_(2016).jpg"
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Brihadeeswarar_Temple_3522.jpg"
             },
             "contributed": {
               "by": null,
               "at": "2026-10-09T00:00:00Z",
-              "note": "Daytime photograph of the Brihadisvara Temple's vimana (tower over the sanctum) from a distance, taken 24 September 2016 for Wiki Loves Monuments India. Commons API extmetadata: LicenseShortName = 'CC BY-SA 4.0', Artist = 'Nandhinikandhasamy', Credit = 'Own work'; Commons categories 'Vimana of the Brihadisvara Temple' and 'Remote views of the Brihadisvara Temple'. Chosen over the English Wikipedia lead image (File:Brihadisvara Temple during Maha Shivaratri-WUS03611 (edit).jpg, CC BY-SA 4.0, Rainer Halama, a Featured Picture) because that one is a night shot during a festival and the brief prefers an evenly lit straight-on view; and over Bernard Gagnon's CC BY-SA 3.0 quality images, which show the gopurams and sub-shrines rather than the main tower. I could not view the file (metadata only); the same photographer uploaded five near-identical frames (page ids 51782341, 51782343, 51782344, 51784804, 51784805, 51784808) if a different crop is wanted. The temple itself is in situ in Thanjavur."
+              "note": "The vimana seen straight on from the courtyard, in daylight, no one but a few small figures at the plinth: a Commons Quality Image, taken 15 August 2016 (Sony ILCA-77M2, Sigma 18-35 mm). Commons API extmetadata: LicenseShortName = 'CC BY-SA 4.0', Artist = 'Vengolis', Credit = 'Own work'. Replaces the earlier choice (File:Vimana of the Brihadisvara Temple, Thanjavur, Tamil Nadu, India (2016).jpg, curid 51782341), which turned out to be a dark shot through the gateway with a police sign and visitors in the frame."
             },
             "moderation": {
               "status": "approved",
@@ -5827,7 +5827,7 @@
         "baseHeight": 0.5,
         "back": "mirror",
         "yaw": null,
-        "fallbackWidthM": 1.2
+        "fallbackWidthM": 3
       },
       "tags": [
         "India",
@@ -5849,7 +5849,61 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-10T00:16:49.764Z"
+      "updatedAt": "2026-10-10T02:41:18.726Z",
+      "alternates": [
+        {
+          "kind": "image",
+          "currentVersionId": "wm-50738349-alt1-v1",
+          "versions": [
+            {
+              "id": "wm-50738349-alt1-v1",
+              "original": {
+                "url": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Brihadisvara_Temple_during_Maha_Shivaratri-WUS03611_%28edit%29.jpg",
+                "width": 5849,
+                "height": 3655,
+                "bytes": 17730998,
+                "mime": "image/jpeg"
+              },
+              "rungs": [
+                {
+                  "width": 1280,
+                  "height": 800,
+                  "url": "/assets/wm-50738349/alt1/1280.jpg",
+                  "bytes": 221873
+                },
+                {
+                  "width": 3840,
+                  "height": 2400,
+                  "url": "/assets/wm-50738349/alt1/3840.jpg",
+                  "bytes": 1720838
+                }
+              ],
+              "loop": null,
+              "credit": {
+                "author": "Rainer Halama (edit by UnpetitproleX)",
+                "license": {
+                  "name": "CC BY-SA 4.0",
+                  "url": "https://creativecommons.org/licenses/by-sa/4.0"
+                },
+                "sourcePage": "https://commons.wikimedia.org/wiki/File:Brihadisvara_Temple_during_Maha_Shivaratri-WUS03611_(edit).jpg"
+              },
+              "contributed": {
+                "by": null,
+                "at": "2026-10-09T00:00:00Z",
+                "note": "The whole complex at dusk during Maha Shivaratri 2025, the vimana and the Nandi mandapa lit: a Commons Featured Picture (Wiki Loves Monuments 2025 India) and the English Wikipedia lead image. Derivative edit of Rainer Halama's photograph, both CC BY-SA 4.0."
+              },
+              "moderation": {
+                "status": "approved",
+                "reviewedBy": null,
+                "reviewedAt": null,
+                "reason": null,
+                "flags": []
+              },
+              "provenance": "wikimedia-commons"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "sf-6862a3c673d4434a8dc39ced2a5b5720",

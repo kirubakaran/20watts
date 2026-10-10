@@ -377,7 +377,8 @@ Girl, Ms Sarah Welch (CC BY-SA 4.0) for the Arittapatti inscription, Aiwok
 (CC BY-SA 3.0) for the Iron Pillar, Anandajoti Bhikkhu (CC BY 2.0) for the
 Ajanta Padmapani, the Tamil Virtual Academy's public-domain scan of the
 Tirukkural leaf, Bernard Gagnon (CC BY-SA 3.0) for the Descent of the
-Ganges and Nandhinikandhasamy (CC BY-SA 4.0) for the Brihadisvara vimana.
+Ganges, and Vengolis (CC BY-SA 4.0) for the Brihadisvara vimana, with Rainer
+Halama's dusk view (CC BY-SA 4.0, edited by UnpetitproleX) as an alternate.
 The Last Supper image is public domain, via Wikimedia Commons. The Columbia
 scan is CC0 from the Smithsonian Institution's Digitization Program Office.
 The Model T is based on "1924 Ford Model T 3d model with interior" by

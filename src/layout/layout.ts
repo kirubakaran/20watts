@@ -107,6 +107,8 @@ export interface LayoutCell {
   /** Extent of the packed works and their padding, metres. */
   width: number;
   depth: number;
+  /** The tallest work, from the floor. */
+  height: number;
   count: number;
   /** A branch step: the anchor's id and the label for the floor. */
   branch?: { of: string; label: string };
@@ -209,13 +211,14 @@ export function computeLayout(artworks: Artwork[], cfg: LayoutConfig = DEFAULT_L
   // Pack each cell's members and measure the result; the row pitch depends
   // on the widest cell in the row. On the lane a cell is one row deep, so
   // earlier is always to the west; the world view packs a square-ish grid.
-  interface Packed { cols: number; rows: number; pitchX: number; pitchZ: number; width: number; depth: number }
+  interface Packed { cols: number; rows: number; pitchX: number; pitchZ: number; width: number; depth: number; height: number }
   const packed = new Map<string, Packed>();
   for (const [key, members] of cells) {
     members.sort(byDateOrder);
     const fps = members.map(footprintOf);
     const maxW = Math.max(...fps.map((f) => f.width));
     const maxD = Math.max(...fps.map((f) => f.depth));
+    const height = Math.max(...fps.map((f) => f.height));
     const pitchX = maxW + cfg.itemGap;
     const pitchZ = maxD + cfg.itemGap;
     const cols = cfg.geoBinDegrees == null ? members.length : Math.ceil(Math.sqrt(members.length));
@@ -224,6 +227,7 @@ export function computeLayout(artworks: Artwork[], cfg: LayoutConfig = DEFAULT_L
       cols, rows, pitchX, pitchZ,
       width: (cols - 1) * pitchX + maxW + 2 * cfg.cellPadding,
       depth: (rows - 1) * pitchZ + maxD,
+      height,
     });
   }
   const rowPitch = new Map<number, number>();
@@ -283,8 +287,8 @@ export function computeLayout(artworks: Artwork[], cfg: LayoutConfig = DEFAULT_L
     const row = rowCols.get(timeRank)!;
     const cx = (row.get(geoRank)! - (row.size - 1) / 2) * rowPitch.get(timeRank)!;
     const cz = rowZ.get(timeRank)!;
-    const { cols, rows, pitchX, pitchZ, width, depth } = packed.get(key)!;
-    const cell: LayoutCell = { timeRank, geoRank, x: cx, z: cz, width, depth, count: members.length };
+    const { cols, rows, pitchX, pitchZ, width, depth, height } = packed.get(key)!;
+    const cell: LayoutCell = { timeRank, geoRank, x: cx, z: cz, width, depth, height, count: members.length };
     const thresholds = members.map((a) => a.display.threshold).filter((t): t is number => t != null);
     if (thresholds.length) cell.threshold = Math.max(...thresholds);
     cellList.push(cell);
@@ -317,7 +321,7 @@ export function computeLayout(artworks: Artwork[], cfg: LayoutConfig = DEFAULT_L
       const w = fp.width + 2 * cfg.cellPadding;
       const x = prevX + Math.max(cfg.minPitchX, (prevW + w) / 2 + cfg.cellGap);
       const c: LayoutCell = {
-        timeRank: cell.timeRank, geoRank: cell.geoRank, x, z: cell.z, width: w, depth: fp.depth, count: 1,
+        timeRank: cell.timeRank, geoRank: cell.geoRank, x, z: cell.z, width: w, depth: fp.depth, height: fp.height, count: 1,
         branch: { of: b.branch!.of, label: b.branch!.label },
       };
       added.push(c);
