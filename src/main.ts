@@ -1,4 +1,4 @@
-import { ACESFilmicToneMapping, PCFShadowMap, PerspectiveCamera, Scene, Timer, Vector3, WebGLRenderer } from "three";
+import { ACESFilmicToneMapping, AudioListener, PCFShadowMap, PerspectiveCamera, Scene, Timer, Vector3, WebGLRenderer } from "three";
 import { VRButton } from "three/addons/webxr/VRButton.js";
 import type { Collection } from "./data/types";
 import collectionJson from "./data/collection.json";
@@ -11,6 +11,7 @@ import { clearPlace, restorePlace, trackPlace } from "./locomotion/resume";
 import { Navigator } from "./locomotion/navigate";
 import { buildEntrance, GATE_HALF_WIDTH, GATE_HEIGHT } from "./world/sign";
 import { hasTouch, setupTouch } from "./locomotion/touch";
+import { setAudioListener } from "./assets/sound";
 import { baseHeightOf, footprintOf, onDisplay } from "./data/types";
 
 // JSON import types are inferred per record; the schema is the source of truth.
@@ -43,6 +44,11 @@ function fitCamera() {
 fitCamera();
 const player = new Player(renderer, camera, renderer.domElement);
 scene.add(player.rig);
+// Recordings play from where works stand; the listener rides on the camera.
+const listener = new AudioListener();
+camera.add(listener);
+setAudioListener(listener);
+renderer.xr.addEventListener("sessionstart", () => void listener.context.resume());
 
 const world = buildWorld(scene, renderer);
 

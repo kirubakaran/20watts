@@ -66,14 +66,15 @@ describe("the collection on the lane", () => {
   });
 
   it("runs forward in time, row by row, with no geography axis", () => {
-    const main = shown.filter((a) => !a.branch);
+    const keyOf = (a: Artwork) => a.date.year * 13 + (a.date.month ?? 0);
+    const main = shown.filter((a) => !a.branch).sort((p, q) => keyOf(p) - keyOf(q));
     let lastZ = Infinity;
     let lastKey = -Infinity;
     for (const a of main) {
       const p = layout.placements.get(a.id)!;
-      const key = a.date.year * 13 + (a.date.month ?? 0);
-      expect(key).toBeGreaterThanOrEqual(lastKey);
+      const key = keyOf(a);
       if (key > lastKey) expect(p.position.z).toBeLessThan(lastZ);
+      else expect(p.position.z).toBe(lastZ);
       lastZ = p.position.z;
       lastKey = key;
     }
@@ -90,7 +91,7 @@ describe("the collection on the lane", () => {
     expect(die.position.x).toBeGreaterThan(chip.position.x);
     expect(chip.branchOf).toBe("wm-11118452");
     expect(die.branchOf).toBe("wm-153446594");
-    const labels = layout.cells.filter((c) => c.branch).map((c) => c.branch!.label);
+    const labels = layout.cells.filter((c) => c.branch && ["wm-11118452", "wm-153446594"].includes(c.branch.of)).map((c) => c.branch!.label);
     expect(labels).toEqual(["the chip inside", "inside the chip"]);
   });
 });

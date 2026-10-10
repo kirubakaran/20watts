@@ -951,6 +951,194 @@
       "updatedAt": "2026-10-09T19:22:27.942Z"
     },
     {
+      "id": "sf-e8f121d0545247318781ef3981fdfdaa",
+      "kind": "model",
+      "title": "Lascaux, the great deer (facsimile panel)",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "Unknown Magdalenian painter",
+          "slug": null,
+          "wikidataQid": null,
+          "wikipediaUrl": null,
+          "birthYear": null,
+          "deathYear": null,
+          "role": "painter"
+        }
+      ],
+      "date": {
+        "year": -15000,
+        "month": null,
+        "day": null,
+        "yearStart": -17000,
+        "yearEnd": -15000,
+        "label": "c. 17,000 years ago (the painting); facsimile 20th century",
+        "precision": "circa"
+      },
+      "madeIn": {
+        "name": "Lascaux, Montignac",
+        "region": "Dordogne",
+        "country": "France",
+        "point": {
+          "lat": 45.0539,
+          "lon": 1.1704
+        },
+        "wikidataQid": "Q173714"
+      },
+      "location": {
+        "name": "Brno",
+        "region": null,
+        "country": "Czech Republic",
+        "point": null,
+        "wikidataQid": null,
+        "institution": "Anthropos Pavilion, Moravian Museum",
+        "inventoryNumber": null
+      },
+      "culture": "Magdalenian",
+      "movement": null,
+      "periodSlug": "prehistoric",
+      "medium": "Cast of the cave wall with the painting reproduced; original in manganese and ochre on limestone",
+      "materials": [
+        "plaster",
+        "pigment"
+      ],
+      "genre": [
+        "cave painting"
+      ],
+      "subjects": [
+        "deer",
+        "cave painting",
+        "Palaeolithic",
+        "Lascaux"
+      ],
+      "physical": {
+        "widthCm": 205,
+        "heightCm": 206,
+        "depthCm": 10,
+        "weightKg": null
+      },
+      "description": "A piece of the cave wall you can stand in front of: a scan of a facsimile panel of one of Lascaux's great deer, a stag with its antlers thrown back, painted about 17,000 years ago in a few sure strokes of black manganese, with the rock's own bulges used for the body. Lascaux has been closed to visitors since 1963, when the breath of a thousand people a day began to grow algae and mould on the paintings, so the cave is known today through casts and facsimiles like this one, in the Anthropos Pavilion in Brno. The photograph beside it shows the Megaloceros in the cave itself.",
+      "facts": [
+        "Lascaux holds some 600 painted animals and nearly 1,500 engravings, found in 1940 by four teenagers and a dog named Robot.",
+        "The painters worked by lamplight, on scaffolding in the higher galleries, with pigments ground from manganese oxides and iron ochres.",
+        "The casts are made from precise surveys of the wall so that the relief the painters used, a bulge for a shoulder, a crack for a line, is kept."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Lascaux",
+      "wikidataQid": "Q173714",
+      "externalIds": {
+        "sketchfab": "e8f121d0545247318781ef3981fdfdaa"
+      },
+      "copyrighted": false,
+      "asset": {
+        "kind": "model",
+        "currentVersionId": "sf-e8f121d0545247318781ef3981fdfdaa-v1",
+        "versions": [
+          {
+            "id": "sf-e8f121d0545247318781ef3981fdfdaa-v1",
+            "original": {
+              "url": "https://sketchfab.com/3d-models/scene-with-large-deer-from-the-lascaux-cave-e8f121d0545247318781ef3981fdfdaa",
+              "format": "glb",
+              "bytes": null,
+              "triangles": 91069
+            },
+            "rungs": [
+              {
+                "quality": "thumb",
+                "url": "/assets/sf-e8f121d0545247318781ef3981fdfdaa/thumb.glb",
+                "bytes": 130848,
+                "triangles": 4548,
+                "textureSize": 512,
+                "draco": true
+              },
+              {
+                "quality": "low",
+                "url": "/assets/sf-e8f121d0545247318781ef3981fdfdaa/low.glb",
+                "bytes": 568996,
+                "triangles": 31873,
+                "textureSize": 1024,
+                "draco": true
+              },
+              {
+                "quality": "medium",
+                "url": "/assets/sf-e8f121d0545247318781ef3981fdfdaa/medium.glb",
+                "bytes": 1467768,
+                "triangles": 54640,
+                "textureSize": 2048,
+                "draco": true
+              },
+              {
+                "quality": "high",
+                "url": "/assets/sf-e8f121d0545247318781ef3981fdfdaa/high.glb",
+                "bytes": 4032440,
+                "triangles": 91069,
+                "textureSize": 4096,
+                "draco": true
+              }
+            ],
+            "scale": 1,
+            "bounds": {
+              "width": 2.053,
+              "height": 2.056,
+              "depth": 0.101
+            },
+            "credit": {
+              "author": "3dhdscan (Sketchfab)",
+              "license": {
+                "name": "CC BY 4.0",
+                "url": "https://creativecommons.org/licenses/by/4.0/"
+              },
+              "sourcePage": "https://sketchfab.com/3d-models/scene-with-large-deer-from-the-lascaux-cave-e8f121d0545247318781ef3981fdfdaa"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-09T00:00:00Z",
+              "note": "Photogrammetry from 18 images, by Sketchfab user 3dhdscan, CC BY 4.0, of the facsimile panel of the large deer from Lascaux in the Anthropos Pavilion of the Moravian Museum, Brno (the Sketchfab description cites the pavilion's permanent exhibition). 91k faces, 8192 px colour and normal textures, 46 MB glTF. The file is 2.05 m by 2.06 m by 0.10 m in metres after its 0.000587 root scale, upright. Downloaded by the user on 2026-10-09."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "sketchfab",
+            "representation": "scan"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": 0,
+        "back": "none",
+        "yaw": null,
+        "fallbackWidthM": 1.2
+      },
+      "tags": [
+        "Lascaux",
+        "Palaeolithic",
+        "facsimile",
+        "scan"
+      ],
+      "pageviews": null,
+      "importance": 0.8,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-09T00:00:00Z",
+      "updatedAt": "2026-10-10T00:08:42.348Z",
+      "branch": {
+        "of": "wm-6909701",
+        "step": 1,
+        "label": "a wall of the cave, cast"
+      }
+    },
+    {
       "id": "wm-3513129",
       "kind": "image",
       "title": "Polychrome ceiling, Altamira",
@@ -2423,6 +2611,356 @@
       "updatedAt": "2026-10-09T19:22:45.632Z"
     },
     {
+      "id": "sf-7e7febabef2045a68755cc39c8c7c91f",
+      "kind": "model",
+      "title": "Stonehenge (reconstruction)",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "Neolithic builders of Salisbury Plain",
+          "slug": null,
+          "wikidataQid": null,
+          "wikipediaUrl": null,
+          "birthYear": null,
+          "deathYear": null,
+          "role": "builders"
+        }
+      ],
+      "date": {
+        "year": -2500,
+        "month": null,
+        "day": null,
+        "yearStart": -3000,
+        "yearEnd": -2000,
+        "label": "c. 2500 BCE (sarsen circle; the earthwork c. 3000 BCE)",
+        "precision": "circa"
+      },
+      "madeIn": {
+        "name": "Salisbury Plain, Wiltshire",
+        "region": "Wiltshire",
+        "country": "United Kingdom",
+        "point": {
+          "lat": 51.1789,
+          "lon": -1.8262
+        },
+        "wikidataQid": "Q39671"
+      },
+      "location": {
+        "name": "Amesbury",
+        "region": null,
+        "country": "United Kingdom",
+        "point": null,
+        "wikidataQid": null,
+        "institution": "English Heritage",
+        "inventoryNumber": null
+      },
+      "culture": "Neolithic Britain",
+      "movement": null,
+      "periodSlug": "prehistoric",
+      "medium": "Sarsen sandstone trilithons and circle, with bluestones from Wales, set in a circular earthwork",
+      "materials": [
+        "sarsen sandstone",
+        "bluestone (dolerite, rhyolite)"
+      ],
+      "genre": [
+        "monument"
+      ],
+      "subjects": [
+        "Neolithic",
+        "megalith",
+        "astronomy",
+        "solstice",
+        "monument"
+      ],
+      "physical": {
+        "widthCm": 3300,
+        "heightCm": 730,
+        "depthCm": 3300,
+        "weightKg": null
+      },
+      "description": "Walk in among the stones. Around 2500 BCE, people with no metal, no wheel and no writing dragged sarsen blocks of up to 30 tonnes some 25 km across Salisbury Plain, shaped them with stone hammers, and raised them into a ring of thirty uprights capped by a continuous lintel, with five great trilithons in a horseshoe inside, all aligned so that the midsummer sun rises along its axis. The smaller bluestones had come 250 km from the hills of west Wales, centuries earlier. Nobody knows what the builders meant by it: a temple, a calendar, a place of the dead, a place of healing. This is an artist's model of the monument as it stands today, placed so you can walk through the circle; the fallen and missing stones are as they are.",
+      "facts": [
+        "The largest trilithon stood 7.3 m above ground and weighed about 50 tonnes; the lintels are held by mortise-and-tenon joints, carpentry in stone.",
+        "The bluestones were quarried in the Preseli Hills of Pembrokeshire, and the giant Altar Stone, a 2024 study found, came from the far north-east of Scotland.",
+        "The whole monument was built and rebuilt over about 1,500 years, from the first ditch around 3000 BCE to the last rearrangement around 1600 BCE."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Stonehenge",
+      "wikidataQid": "Q39671",
+      "externalIds": {
+        "sketchfab": "7e7febabef2045a68755cc39c8c7c91f"
+      },
+      "copyrighted": false,
+      "asset": {
+        "kind": "model",
+        "currentVersionId": "sf-7e7febabef2045a68755cc39c8c7c91f-v1",
+        "versions": [
+          {
+            "id": "sf-7e7febabef2045a68755cc39c8c7c91f-v1",
+            "original": {
+              "url": "https://sketchfab.com/3d-models/stonehenge-england-vr-7e7febabef2045a68755cc39c8c7c91f",
+              "format": "glb",
+              "bytes": null,
+              "triangles": 280860,
+              "omit": [
+                "Perimeter"
+              ]
+            },
+            "rungs": [
+              {
+                "quality": "thumb",
+                "url": "/assets/sf-7e7febabef2045a68755cc39c8c7c91f/thumb.glb",
+                "bytes": 171864,
+                "triangles": 14023,
+                "textureSize": 512,
+                "draco": true
+              },
+              {
+                "quality": "low",
+                "url": "/assets/sf-7e7febabef2045a68755cc39c8c7c91f/low.glb",
+                "bytes": 687208,
+                "triangles": 98299,
+                "textureSize": 1024,
+                "draco": true
+              },
+              {
+                "quality": "medium",
+                "url": "/assets/sf-7e7febabef2045a68755cc39c8c7c91f/medium.glb",
+                "bytes": 1193920,
+                "triangles": 168514,
+                "textureSize": 2048,
+                "draco": true
+              },
+              {
+                "quality": "high",
+                "url": "/assets/sf-7e7febabef2045a68755cc39c8c7c91f/high.glb",
+                "bytes": 1957172,
+                "triangles": 280860,
+                "textureSize": 4096,
+                "draco": true
+              }
+            ],
+            "scale": 1,
+            "bounds": {
+              "width": 32.962,
+              "height": 5.879,
+              "depth": 33.597
+            },
+            "credit": {
+              "author": "Graphic solutions (Sketchfab user hermes3)",
+              "license": {
+                "name": "CC BY 4.0",
+                "url": "https://creativecommons.org/licenses/by/4.0/"
+              },
+              "sourcePage": "https://sketchfab.com/3d-models/stonehenge-england-vr-7e7febabef2045a68755cc39c8c7c91f"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-09T00:00:00Z",
+              "note": "An artist's model of the monument as it stands today, with the surrounding land, by Sketchfab user hermes3 (Graphic solutions), CC BY 4.0; 352k faces, two 4096 px textures, 35 MB glTF. No open photogrammetry of the stones at walking detail exists: English Heritage does not permit drones over the stones and the open LiDAR landscapes are 1 m terrain. The file is 140 m across in metres with the trilithons about 7.3 m tall, which matches the real heights; the 'Perimeter' mesh, the surrounding land, is omitted so that only the 'Center' mesh, the stones and the ground among them, stands in the museum. Downloaded by the user on 2026-10-09. Dates, dimensions and facts from the English Wikipedia article 'Stonehenge'."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "sketchfab",
+            "representation": "reconstruction"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": 0,
+        "back": "none",
+        "yaw": null,
+        "fallbackWidthM": 1.2,
+        "threshold": 22
+      },
+      "tags": [
+        "Neolithic",
+        "megalith",
+        "Britain",
+        "reconstruction",
+        "walk in"
+      ],
+      "pageviews": null,
+      "importance": 0.95,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-09T00:00:00Z",
+      "updatedAt": "2026-10-10T00:08:45.713Z"
+    },
+    {
+      "id": "wm-78233931",
+      "kind": "image",
+      "title": "Dancing Girl of Mohenjo-daro",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "Unknown Indus bronze-caster",
+          "slug": null,
+          "wikidataQid": null,
+          "wikipediaUrl": null,
+          "birthYear": null,
+          "deathYear": null,
+          "role": "sculptor"
+        }
+      ],
+      "date": {
+        "year": -2500,
+        "month": null,
+        "day": null,
+        "yearStart": -2500,
+        "yearEnd": -1750,
+        "label": "c. 2500–1750 BCE",
+        "precision": "circa"
+      },
+      "madeIn": {
+        "name": "Mohenjo-daro",
+        "region": "Sindh",
+        "country": "Pakistan",
+        "point": {
+          "lat": 27.329,
+          "lon": 68.139
+        },
+        "wikidataQid": "Q5725"
+      },
+      "location": {
+        "name": "New Delhi",
+        "region": null,
+        "country": "India",
+        "point": null,
+        "wikidataQid": null,
+        "institution": "National Museum, New Delhi",
+        "inventoryNumber": null
+      },
+      "culture": "Indus Valley Civilisation (Harappan)",
+      "movement": null,
+      "periodSlug": null,
+      "medium": "Bronze, lost-wax cast",
+      "materials": [
+        "bronze"
+      ],
+      "genre": [
+        "sculpture"
+      ],
+      "subjects": [
+        "woman",
+        "dance",
+        "bangles",
+        "Indus Valley"
+      ],
+      "physical": {
+        "widthCm": null,
+        "heightCm": null,
+        "depthCm": null,
+        "weightKg": null
+      },
+      "description": "A bronze figure of a girl, only 10.5 centimetres tall, found in 1926 in a house in the ruined city of Mohenjo-daro on the Indus, in what is now Pakistan. She stands with her weight on one leg, right hand on her hip, head tilted back, her left arm stacked with bangles from wrist to shoulder; John Marshall, who dug the city, thought she was beating time to music, hence her name. She was cast by the lost-wax process some 4,500 years ago, which makes her one of the earliest bronze figures in the world and the oldest known example of the technique in South Asia, a method Indian metalworkers would still be using for the Chola Natarajas four thousand years later. The Indus civilisation built planned brick cities with drains and baths while most of the world lived in villages, and its script is still unread; this small, confident figure is one of the few faces it left us. At Partition in 1947 the finds from Mohenjo-daro were divided between the two new countries, and she came to Delhi.",
+      "facts": [
+        "Excavated by Ernest Mackay in the 'HR area' of Mohenjo-daro in 1926.",
+        "10.5 cm high and 5 cm wide; she wears 24 or 25 bangles on her left arm and four on her right.",
+        "One of the earliest lost-wax bronze castings known anywhere.",
+        "Mortimer Wheeler called her his favourite statuette: 'There's nothing like her, I think, in the world.'"
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Dancing_Girl_(prehistoric_sculpture)",
+      "wikidataQid": "Q17008494",
+      "externalIds": {
+        "commons-curid": "78233931",
+        "commons-file": "Bronze \"Dancing Girl,\" Mohenjo-daro, c. 2500 BC.jpg"
+      },
+      "copyrighted": false,
+      "asset": {
+        "kind": "image",
+        "currentVersionId": "wm-78233931-v1",
+        "versions": [
+          {
+            "id": "wm-78233931-v1",
+            "original": {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Bronze_%22Dancing_Girl%2C%22_Mohenjo-daro%2C_c._2500_BC.jpg",
+              "width": 3456,
+              "height": 5184,
+              "bytes": 2798660,
+              "mime": "image/jpeg"
+            },
+            "rungs": [
+              {
+                "width": 1280,
+                "height": 1920,
+                "url": "/assets/wm-78233931/1280.jpg",
+                "bytes": 385571
+              },
+              {
+                "width": 2048,
+                "height": 3072,
+                "url": "/assets/wm-78233931/2048.jpg",
+                "bytes": 2798660
+              }
+            ],
+            "loop": null,
+            "credit": {
+              "author": "Gary Todd",
+              "license": {
+                "name": "CC0 1.0",
+                "url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+              },
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Bronze_%22Dancing_Girl,%22_Mohenjo-daro,_c._2500_BC.jpg"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-09T00:00:00Z",
+              "note": "Museum photograph of the original statuette in the Harappan gallery of the National Museum, New Delhi, taken 12 November 2015 by Gary Todd (WorldHistoryPics) and released on Flickr under CC0. Commons API extmetadata: LicenseShortName = 'CC0', Artist = 'Gary Todd', Credit = 'https://www.flickr.com/photos/101561334@N08/22750621309/'. Portrait orientation suits the standing figure. Alternatives with the same licence: File:Dancing girl of Mohenjo-daro.jpg (78234005, CC0, Gary Todd, a crop) and File:Dancing girl. Mohenjodaro.jpg (18440307, CC0, Ismoon). The brief asked for a photo licence check of the National Museum object: the museum's own photography is not free, but these are visitors' own photographs of a 4,500-year-old object, so no copyright in the object itself. No downloadable CC scan of the Dancing Girl exists on Sketchfab (a 'Dancing Boy of Harappa' model found is an unrelated artist's work)."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "wikimedia-commons"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": 0.5,
+        "back": "mirror",
+        "yaw": null,
+        "fallbackWidthM": 1.2
+      },
+      "tags": [
+        "India",
+        "Pakistan",
+        "Indus Valley Civilisation",
+        "bronze",
+        "Harappan",
+        "Bronze Age"
+      ],
+      "pageviews": null,
+      "importance": 0.9,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-09T00:00:00Z",
+      "updatedAt": "2026-10-10T00:16:43.379Z"
+    },
+    {
       "id": "wm-164288965",
       "kind": "image",
       "title": "Nebra sky disc",
@@ -2792,7 +3330,7 @@
       ],
       "physical": {
         "widthCm": 100,
-        "heightCm": 60,
+        "heightCm": 85,
         "depthCm": null,
         "weightKg": null
       },
@@ -2815,29 +3353,30 @@
             "original": {
               "url": "data/originals/eq-pythagorean-theorem/equation.svg",
               "width": 2560,
-              "height": 1536,
+              "height": 2176,
               "bytes": 3718,
               "mime": "image/svg+xml",
-              "tex": "a^2 + b^2 = c^2"
+              "tex": "a^2 + b^2 = c^2",
+              "figure": "data/figures/pythagorean-theorem.svg"
             },
             "rungs": [
               {
                 "width": 640,
-                "height": 384,
+                "height": 544,
                 "url": "/assets/eq-pythagorean-theorem/640.jpg",
-                "bytes": 9279
+                "bytes": 15771
               },
               {
                 "width": 1280,
-                "height": 768,
+                "height": 1088,
                 "url": "/assets/eq-pythagorean-theorem/1280.jpg",
-                "bytes": 23479
+                "bytes": 39258
               },
               {
                 "width": 2560,
-                "height": 1536,
+                "height": 2176,
                 "url": "/assets/eq-pythagorean-theorem/2560.jpg",
-                "bytes": 60299
+                "bytes": 104199
               }
             ],
             "loop": null,
@@ -2852,7 +3391,7 @@
             "contributed": {
               "by": null,
               "at": "2026-10-09T00:00:00Z",
-              "note": "Typeset by 20watts from the TeX in the record with MathJax; the rendering is CC0, the equation itself is not subject to copyright."
+              "note": "Typeset by 20watts from the TeX in the record with MathJax, with a figure drawn for this museum; the rendering is CC0, the equation itself is not subject to copyright."
             },
             "moderation": {
               "status": "approved",
@@ -2888,7 +3427,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-09T22:54:58.362Z"
+      "updatedAt": "2026-10-10T00:10:24.127Z"
     },
     {
       "id": "wm-3153928",
@@ -3038,6 +3577,169 @@
       "source": "wikipedia-import",
       "createdAt": "2026-10-08T00:00:00Z",
       "updatedAt": "2026-10-09T19:22:46.555Z"
+    },
+    {
+      "id": "wm-73484131",
+      "kind": "image",
+      "title": "Tamil-Brahmi inscription at Arittapatti",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "Unknown Tamil stone-cutter",
+          "slug": null,
+          "wikidataQid": null,
+          "wikipediaUrl": null,
+          "birthYear": null,
+          "deathYear": null,
+          "role": "engraver"
+        }
+      ],
+      "date": {
+        "year": -150,
+        "month": null,
+        "day": null,
+        "yearStart": -200,
+        "yearEnd": -100,
+        "label": "c. 2nd century BCE",
+        "precision": "circa"
+      },
+      "madeIn": {
+        "name": "Arittapatti",
+        "region": "Tamil Nadu",
+        "country": "India",
+        "point": {
+          "lat": 10.041,
+          "lon": 78.277
+        },
+        "wikidataQid": "Q23743492"
+      },
+      "location": {
+        "name": "Arittapatti, Madurai district",
+        "region": null,
+        "country": "India",
+        "point": null,
+        "wikidataQid": null,
+        "institution": "Archaeological Survey of India protected site (in situ)",
+        "inventoryNumber": null
+      },
+      "culture": "Tamil (Sangam period)",
+      "movement": null,
+      "periodSlug": null,
+      "medium": "Letters chiselled into a granite rock shelter",
+      "materials": [
+        "granite"
+      ],
+      "genre": [
+        "inscription",
+        "epigraphy"
+      ],
+      "subjects": [
+        "writing",
+        "Tamil-Brahmi script",
+        "Jain monks",
+        "donation"
+      ],
+      "physical": {
+        "widthCm": null,
+        "heightCm": null,
+        "depthCm": null,
+        "weightKg": null
+      },
+      "description": "These letters, chiselled into the brow of a granite rock shelter at Arittapatti near Madurai, are among the earliest writing in the Tamil language. They are in Tamil-Brahmi (தமிழி, Tamili), a southern adaptation of the Brahmi script of Ashoka's edicts, with extra letters invented for the Tamil sounds ழ, ள, ற and ன that northern Brahmi could not write. Inscriptions like this one, found in dozens of caves around Madurai, record gifts of rock shelters and stone beds to Jain monks who lived on the hills during the Sangam age, and they name the donors, merchants, village headmen and the kings of the Pandya country. The script is dated to between the third century BCE and the first century CE, which makes it the oldest evidence of a written literary language in South India and the ancestor of the Tamil alphabet used today. Nearby Mangulam has the oldest group of all, naming the Pandya king Nedunchezhiyan, and the Keezhadi excavations have since found the same script scratched on everyday pottery.",
+      "facts": [
+        "Tamil-Brahmi adds letters for sounds that exist in Tamil but not in the Prakrit of the Ashokan edicts, which is how scholars identified it as Tamil in 1924.",
+        "The inscription was first published by K. V. Raman and Y. Subbarayalu in 1971.",
+        "The same hill has a Jain tirthankara relief with a much later Vatteluttu inscription and a 7th-century rock-cut Shiva temple.",
+        "Iravatham Mahadevan's corpus of 1966-2003 established the readings of nearly a hundred such cave inscriptions in Tamil Nadu."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Tamil-Brahmi",
+      "wikidataQid": "Q3534666",
+      "externalIds": {
+        "commons-curid": "73484131",
+        "commons-file": "2nd century BCE Tamil Brahmi inscription Arittapatti Madurai India.jpg"
+      },
+      "copyrighted": false,
+      "asset": {
+        "kind": "image",
+        "currentVersionId": "wm-73484131-v1",
+        "versions": [
+          {
+            "id": "wm-73484131-v1",
+            "original": {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/9/9a/2nd_century_BCE_Tamil_Brahmi_inscription_Arittapatti_Madurai_India.jpg",
+              "width": 4032,
+              "height": 3024,
+              "bytes": 3120251,
+              "mime": "image/jpeg"
+            },
+            "rungs": [
+              {
+                "width": 1280,
+                "height": 960,
+                "url": "/assets/wm-73484131/1280.jpg",
+                "bytes": 534798
+              },
+              {
+                "width": 3840,
+                "height": 2880,
+                "url": "/assets/wm-73484131/3840.jpg",
+                "bytes": 2234632
+              }
+            ],
+            "loop": null,
+            "credit": {
+              "author": "Ms Sarah Welch",
+              "license": {
+                "name": "CC BY-SA 4.0",
+                "url": "https://creativecommons.org/licenses/by-sa/4.0"
+              },
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:2nd_century_BCE_Tamil_Brahmi_inscription_Arittapatti_Madurai_India.jpg"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-09T00:00:00Z",
+              "note": "Photograph of the actual Tamil-Brahmi inscription cut into the rock at Arittapatti, 25 km north-east of Madurai, taken 1 September 2018. Commons API extmetadata: LicenseShortName = 'CC BY-SA 4.0', Artist = 'Ms Sarah Welch', Credit = 'Own work'; the uploader's description dates it to about the 2nd century BCE and cites K. V. Raman and Y. Subbarayalu (1971), 'A new Tamil-Brahmi Inscription in Arittapatti', Journal of Indian History XLIX, pp. 229-232. Substituted for the Mangulam inscription requested in the brief: the usable Mangulam photographs on Commons (page ids 20865429 and 46194395) are explicitly of a museum model at DakshinaChitra, Chennai, not the rock, and the two on-site Mangulam files by R.K.Lakshmi (51616516, 51616517) are described only as a hill and an ASI notice board. No Keeladi potsherd photograph with a verifiable free licence was found. Dimensions of the inscribed panel are not published, so they are left null. PJeganathan's CC BY-SA 4.0 frames (126060791, 126060794, 126060802) show the same hillside at higher resolution but are described as the temple and surroundings rather than the inscription."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "wikimedia-commons"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": 0.5,
+        "back": "mirror",
+        "yaw": null,
+        "fallbackWidthM": 1.2
+      },
+      "tags": [
+        "India",
+        "Tamil Nadu",
+        "Tamil",
+        "Tamil-Brahmi",
+        "writing",
+        "Jainism",
+        "Sangam period"
+      ],
+      "pageviews": null,
+      "importance": 0.7,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-09T00:00:00Z",
+      "updatedAt": "2026-10-10T00:16:44.531Z"
     },
     {
       "id": "wm-23752160",
@@ -3388,6 +4090,333 @@
       "updatedAt": "2026-10-09T23:16:28.361Z"
     },
     {
+      "id": "wm-11952242",
+      "kind": "image",
+      "title": "Iron Pillar of Delhi",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "Unknown Gupta ironsmiths (patron Chandragupta II)",
+          "slug": null,
+          "wikidataQid": "Q844536",
+          "wikipediaUrl": null,
+          "birthYear": null,
+          "deathYear": null,
+          "role": "smith"
+        }
+      ],
+      "date": {
+        "year": 400,
+        "month": null,
+        "day": null,
+        "yearStart": 375,
+        "yearEnd": 415,
+        "label": "c. 375–415 CE",
+        "precision": "circa"
+      },
+      "madeIn": {
+        "name": "Udayagiri, Vidisha (probable)",
+        "region": "Madhya Pradesh",
+        "country": "India",
+        "point": {
+          "lat": 23.539,
+          "lon": 77.772
+        },
+        "wikidataQid": "Q4250472"
+      },
+      "location": {
+        "name": "Mehrauli, Delhi",
+        "region": null,
+        "country": "India",
+        "point": null,
+        "wikidataQid": null,
+        "institution": "Qutb complex (in situ)",
+        "inventoryNumber": null
+      },
+      "culture": "Indian (Gupta)",
+      "movement": null,
+      "periodSlug": null,
+      "medium": "Forge-welded wrought iron",
+      "materials": [
+        "wrought iron"
+      ],
+      "genre": [
+        "metalwork",
+        "monument"
+      ],
+      "subjects": [
+        "Vishnu",
+        "Chandragupta II",
+        "metallurgy",
+        "corrosion resistance"
+      ],
+      "physical": {
+        "widthCm": null,
+        "heightCm": null,
+        "depthCm": null,
+        "weightKg": null
+      },
+      "description": "A column of solid wrought iron 7.21 metres tall, 41 centimetres across and over six tonnes in weight, standing in the courtyard of the Qutb complex in Delhi. A Sanskrit inscription in Gupta script says it was raised as a standard of Vishnu by a king called Chandra, almost certainly Chandragupta II, who reigned from about 375 to 415 CE; it was probably first set up at Udayagiri in central India and moved to Delhi in the eleventh century, two hundred years before the Qutb Minar was built beside it. No one else in the world could make a single iron object this large for another thousand years: it was built up by forge-welding many lumps of hot iron, hammered together by hand. Most famously, it has stood in the open for sixteen centuries without rusting. The reason is the metal itself: a high phosphorus content, a product of the ancient Indian smelting process, lets a thin protective film of iron hydrogen phosphate form on the surface and seal it. Scientists did not understand this until the 1990s.",
+      "facts": [
+        "7.21 m tall including 1.12 m below ground; 41 cm in diameter at the base; estimated weight over six tonnes.",
+        "The oldest inscription names King Chandra and dedicates the pillar to Vishnu; it covers about 65 by 27 cm of the surface.",
+        "Its rust resistance comes from phosphorus in the iron, which forms a protective crystalline layer (misawite).",
+        "Moved to Delhi by the Tomar king Anangpal II in the 11th century, long before the mosque now around it."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Iron_pillar_of_Delhi",
+      "wikidataQid": "Q543419",
+      "externalIds": {
+        "commons-curid": "11952242",
+        "commons-file": "Delhi Iron pillar, 2010-09-27.jpg"
+      },
+      "copyrighted": false,
+      "asset": {
+        "kind": "image",
+        "currentVersionId": "wm-11952242-v1",
+        "versions": [
+          {
+            "id": "wm-11952242-v1",
+            "original": {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/da/Delhi_Iron_pillar%2C_2010-09-27.jpg",
+              "width": 2848,
+              "height": 4288,
+              "bytes": 2586223,
+              "mime": "image/jpeg"
+            },
+            "rungs": [
+              {
+                "width": 1280,
+                "height": 1928,
+                "url": "/assets/wm-11952242/1280.jpg",
+                "bytes": 706709
+              },
+              {
+                "width": 2048,
+                "height": 3084,
+                "url": "/assets/wm-11952242/2048.jpg",
+                "bytes": 2586223
+              }
+            ],
+            "loop": null,
+            "credit": {
+              "author": "Aiwok",
+              "license": {
+                "name": "CC BY-SA 3.0",
+                "url": "https://creativecommons.org/licenses/by-sa/3.0"
+              },
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Delhi_Iron_pillar,_2010-09-27.jpg"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-09T00:00:00Z",
+              "note": "Portrait photograph of the whole pillar in the Qutb complex, Mehrauli, taken 27 September 2010 with a Nikon D90. Commons API extmetadata: LicenseShortName = 'CC BY-SA 3.0', Artist = 'Aiwok', Credit = 'Own work'; also tagged GFDL. The English Wikipedia lead image (File:Iron Pillar, Delhi, May 2008.jpg, public domain, Mark A. Wilson) was passed over because it is only 1000 x 1347 px, too small for a 7.2 m object at true size. Larger CC BY-SA 4.0 alternatives: File:Iron Pillar of Delhi-Q543419N -Mehrauli -Delhi -DL-161.jpg (82522408, 4000 x 5000, described by its author as a low-angle shot) and File:The Iron pillar of Delhi.jpg (110598442, 2660 x 3011). The pillar is in situ in Delhi; its place of manufacture is uncertain, and madeIn below follows the hypothesis that it was first erected at Udayagiri near Vidisha."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "wikimedia-commons"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": 0.5,
+        "back": "mirror",
+        "yaw": null,
+        "fallbackWidthM": 1.2
+      },
+      "tags": [
+        "India",
+        "Delhi",
+        "Gupta",
+        "iron",
+        "metallurgy",
+        "inscription"
+      ],
+      "pageviews": null,
+      "importance": 0.8,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-09T00:00:00Z",
+      "updatedAt": "2026-10-10T00:16:45.533Z"
+    },
+    {
+      "id": "wm-63768039",
+      "kind": "image",
+      "title": "Bodhisattva Padmapani, Cave 1, Ajanta",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "Unknown Ajanta painters",
+          "slug": null,
+          "wikidataQid": null,
+          "wikipediaUrl": null,
+          "birthYear": null,
+          "deathYear": null,
+          "role": "painter"
+        }
+      ],
+      "date": {
+        "year": 475,
+        "month": null,
+        "day": null,
+        "yearStart": 460,
+        "yearEnd": 480,
+        "label": "c. 460–480 CE",
+        "precision": "circa"
+      },
+      "madeIn": {
+        "name": "Ajanta",
+        "region": "Maharashtra",
+        "country": "India",
+        "point": {
+          "lat": 20.553,
+          "lon": 75.7
+        },
+        "wikidataQid": "Q184427"
+      },
+      "location": {
+        "name": "Ajanta Caves, Cave 1",
+        "region": null,
+        "country": "India",
+        "point": null,
+        "wikidataQid": null,
+        "institution": "Archaeological Survey of India (in situ)",
+        "inventoryNumber": null
+      },
+      "culture": "Indian (Vakataka period)",
+      "movement": null,
+      "periodSlug": null,
+      "medium": "Tempera on mud-and-lime plaster over rock",
+      "materials": [
+        "mineral pigment",
+        "lime plaster"
+      ],
+      "genre": [
+        "painting",
+        "mural"
+      ],
+      "subjects": [
+        "Bodhisattva",
+        "Padmapani",
+        "Avalokiteshvara",
+        "lotus",
+        "Buddhism"
+      ],
+      "physical": {
+        "widthCm": null,
+        "heightCm": null,
+        "depthCm": null,
+        "weightKg": null
+      },
+      "description": "The Bodhisattva Padmapani, 'he who holds the lotus', painted beside the shrine door of Cave 1 at Ajanta in the last decades of the fifth century. He stands over life size, his body swaying in a gentle curve, a blue lotus in his right hand, eyes half closed, surrounded by a crowd of smaller figures: attendants, a dark-skinned guard, musicians and animals. Ajanta is a horseshoe of thirty Buddhist monasteries and prayer halls cut into a cliff above a river gorge in the Deccan. The earliest date from the second century BCE; the great painted caves, including this one, were made in a single burst of patronage under the Vakataka king Harisena around 460 to 480 CE, then abandoned and forgotten in the jungle until a British hunting party found them in 1819. The paintings are tempera on a thin plaster of mud, lime and rice husk, and are the oldest surviving body of Indian painting. Padmapani is the single most reproduced image from them and has shaped how Indian art is pictured ever since.",
+      "facts": [
+        "Cave 1 was probably sponsored by the Vakataka emperor Harisena and was never formally consecrated: there is no lamp-soot on the shrine image.",
+        "Padmapani and his pair Vajrapani flank the entrance to the Buddha shrine on the rear wall; both are over life size.",
+        "The pigments are earth colours plus lapis lazuli blue imported from Afghanistan.",
+        "The caves were lost to the forest for roughly a thousand years before their rediscovery in 1819."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Ajanta_Caves",
+      "wikidataQid": "Q184427",
+      "externalIds": {
+        "commons-curid": "63768039",
+        "commons-file": "Ajanta Cave 1 Padmapani and attendants.jpg"
+      },
+      "copyrighted": false,
+      "asset": {
+        "kind": "image",
+        "currentVersionId": "wm-63768039-v1",
+        "versions": [
+          {
+            "id": "wm-63768039-v1",
+            "original": {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/0/05/Ajanta_Cave_1_Padmapani_and_attendants.jpg",
+              "width": 4000,
+              "height": 6000,
+              "bytes": 6383769,
+              "mime": "image/jpeg"
+            },
+            "rungs": [
+              {
+                "width": 1280,
+                "height": 1920,
+                "url": "/assets/wm-63768039/1280.jpg",
+                "bytes": 1012673
+              },
+              {
+                "width": 3840,
+                "height": 5760,
+                "url": "/assets/wm-63768039/3840.jpg",
+                "bytes": 5975589
+              }
+            ],
+            "loop": null,
+            "credit": {
+              "author": "Anandajoti Bhikkhu (Photo Dharma)",
+              "license": {
+                "name": "CC BY 2.0",
+                "url": "https://creativecommons.org/licenses/by/2.0"
+              },
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Ajanta_Cave_1_Padmapani_and_attendants.jpg"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-09T00:00:00Z",
+              "note": "Photograph of the Padmapani mural on the rear wall of Cave 1, with the attendants, by Anandajoti Bhikkhu of Photo Dharma, Flickr, 2017. Commons API extmetadata: LicenseShortName = 'CC BY 2.0', Artist = 'Photo Dharma from Sadao, Thailand', Credit = 'Rework of' (a reworked version of the photographer's own frame). Chosen over the public-domain reproductions on Commons (e.g. page ids 36247122 and 3411328) because those are small or of unstated photographic origin, and over several CC BY-SA 4.0 visitor shots because this is 4000 x 6000 px and from a photographer who documents Buddhist sites systematically. The real dimensions of the painted panel are not published in any source I could verify (Wikipedia says only 'over-lifesize'), so widthCm and heightCm are left null and will need to be measured or estimated by the curator; the figure is roughly life-size-plus, so a display height around 2 m would not be far wrong. The mural is in situ at Ajanta."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "wikimedia-commons"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": 0.5,
+        "back": "mirror",
+        "yaw": null,
+        "fallbackWidthM": 1.2
+      },
+      "tags": [
+        "India",
+        "Maharashtra",
+        "Ajanta",
+        "Buddhism",
+        "mural",
+        "Vakataka",
+        "UNESCO World Heritage"
+      ],
+      "pageviews": null,
+      "importance": 0.85,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-09T00:00:00Z",
+      "updatedAt": "2026-10-10T00:16:47.479Z"
+    },
+    {
       "id": "wm-7203375",
       "kind": "image",
       "title": "The Great Gallery, Horseshoe Canyon",
@@ -3709,6 +4738,487 @@
       "source": "wikipedia-import",
       "createdAt": "2026-10-08T00:00:00Z",
       "updatedAt": "2026-10-09T19:22:47.454Z"
+    },
+    {
+      "id": "wm-47597960",
+      "kind": "image",
+      "title": "Tirukkural: palm-leaf manuscript with Parimelalhagar's commentary",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "Thiruvalluvar",
+          "slug": null,
+          "wikidataQid": "Q2353373",
+          "wikipediaUrl": null,
+          "birthYear": null,
+          "deathYear": null,
+          "role": "author"
+        }
+      ],
+      "date": {
+        "year": 500,
+        "month": null,
+        "day": null,
+        "yearStart": 450,
+        "yearEnd": 500,
+        "label": "c. 450–500 CE (text); this copy 19th century or earlier",
+        "precision": "circa"
+      },
+      "madeIn": {
+        "name": "Mylapore, Chennai (traditional)",
+        "region": "Tamil Nadu",
+        "country": "India",
+        "point": {
+          "lat": 13.033,
+          "lon": 80.268
+        },
+        "wikidataQid": "Q1646915"
+      },
+      "location": {
+        "name": "Chennai",
+        "region": null,
+        "country": "India",
+        "point": null,
+        "wikidataQid": null,
+        "institution": "Tamil Virtual Academy digital library",
+        "inventoryNumber": "suvadi s210, leaf 3"
+      },
+      "culture": "Tamil",
+      "movement": null,
+      "periodSlug": null,
+      "medium": "Ink-rubbed incised script on dried palm leaf",
+      "materials": [
+        "palm leaf"
+      ],
+      "genre": [
+        "manuscript",
+        "literature"
+      ],
+      "subjects": [
+        "ethics",
+        "virtue",
+        "Tamil poetry",
+        "Tirukkural",
+        "aram"
+      ],
+      "physical": {
+        "widthCm": 40,
+        "heightCm": 6.5,
+        "depthCm": null,
+        "weightKg": null
+      },
+      "description": "A single leaf of a palm-leaf manuscript of the Tirukkural (திருக்குறள்), the most loved book in the Tamil language. The Kural is a collection of 1,330 couplets, each of just seven words, on virtue, wealth and love, written by the poet Valluvar (திருவள்ளுவர்) around the fifth century CE, perhaps earlier. This leaf carries the first two couplets, beginning 'As the letter A is the first of all letters, so the primal God is first in the world', with the commentary of the thirteenth-century scholar Parimelalhagar written between the lines of verse. For over a thousand years the text survived only this way: letters scratched with a stylus into strips of dried palmyra leaf, the grooves rubbed with soot or lamp-black, the leaves strung together and recopied every century or two before they crumbled. The Kural was the first book printed in Tamil, in 1812, from blocks cut to imitate leaves like this one. It is quoted in Tamil homes, courts and parliaments to this day.",
+      "facts": [
+        "1,330 couplets in 133 chapters of ten; every couplet has exactly seven words in the kural metre.",
+        "Nothing certain is known about the author; the honorific Thiruvalluvar means 'the revered Valluvar'.",
+        "Dated by linguists to about 450–500 CE; traditional accounts place it earlier, in the Sangam age.",
+        "Translated into more than forty languages; the first English selection appeared in 1794."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Kural",
+      "wikidataQid": "Q2167085",
+      "externalIds": {
+        "commons-curid": "47597960",
+        "commons-file": "Tirukkural manuscript.jpg"
+      },
+      "copyrighted": false,
+      "asset": {
+        "kind": "image",
+        "currentVersionId": "wm-47597960-v1",
+        "versions": [
+          {
+            "id": "wm-47597960-v1",
+            "original": {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/9/94/Tirukkural_manuscript.jpg",
+              "width": 1505,
+              "height": 245,
+              "bytes": 416347,
+              "mime": "image/jpeg"
+            },
+            "rungs": [
+              {
+                "width": 1280,
+                "height": 209,
+                "url": "/assets/wm-47597960/1280.jpg",
+                "bytes": 120619
+              }
+            ],
+            "loop": null,
+            "credit": {
+              "author": "Unknown scribe; digitised by Tamil Virtual Academy",
+              "license": {
+                "name": "Public domain",
+                "url": null
+              },
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Tirukkural_manuscript.jpg"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-09T00:00:00Z",
+              "note": "One palm leaf (folio 2 recto, described on Commons as containing kurals 1 and 2 with commentary) of a Tirukkural manuscript. Commons API extmetadata: LicenseShortName = 'Public domain', Artist = 'Unknown author', Credit = 'Tamil Virtual Academy (http://www.tamilvu.org/library/suvadi/s210/html/s2100003.htm)', DateTimeOriginal = 'Unknown date, 19th century or earlier'; Commons categories include 'PD-Art (PD-old-100)', 'PD-1996' and 'Palm-leaf manuscripts in Tamil Nadu'. I fetched the cited Tamil Virtual Academy page: it is leaf (ஓலை) number 3 of their digitised Kural manuscript and the transcribed text is kural 1 (அகர முதல எழுத்தெல்லாம்...) and kural 2 with Parimelalhagar's commentary, which matches the image. The licence rests on the PD-Art rule for a faithful scan of a pre-20th-century manuscript; the physical repository of the leaf is not stated by the Academy, so the 'location' below is the digital library. Image is small (1505 x 245 px) but a palm leaf is small too. Physical size is NOT recorded; the dimensions below are an estimate from the leaf's aspect ratio (6.1:1) and typical Tamil palm leaves (about 40 x 6 cm) and should be treated as approximate. Alternative: File:Thiruvaymoli palm manuscript.jpg (CC0, 4098 x 600 px) is a larger, clearly licensed Tamil palm-leaf but of a different text."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "wikimedia-commons"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": 0.5,
+        "back": "mirror",
+        "yaw": null,
+        "fallbackWidthM": 1.2
+      },
+      "tags": [
+        "India",
+        "Tamil Nadu",
+        "Tamil",
+        "literature",
+        "ethics",
+        "palm leaf",
+        "manuscript"
+      ],
+      "pageviews": null,
+      "importance": 0.85,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-09T00:00:00Z",
+      "updatedAt": "2026-10-10T00:16:47.700Z"
+    },
+    {
+      "id": "eq-brahmagupta-zero",
+      "kind": "image",
+      "title": "Brahmagupta's rules for zero",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "Brahmagupta",
+          "slug": null,
+          "wikidataQid": null,
+          "wikipediaUrl": null,
+          "birthYear": 598,
+          "deathYear": 668,
+          "role": "author"
+        }
+      ],
+      "date": {
+        "year": 628,
+        "month": null,
+        "day": null,
+        "yearStart": 628,
+        "yearEnd": 628,
+        "label": "628 CE (Brāhmasphuṭasiddhānta)",
+        "precision": "year"
+      },
+      "madeIn": {
+        "name": "Bhinmal (Bhillamala)",
+        "region": "Rajasthan",
+        "country": "India",
+        "point": {
+          "lat": 25,
+          "lon": 72.26
+        },
+        "wikidataQid": null
+      },
+      "location": {
+        "name": null,
+        "region": null,
+        "country": null,
+        "point": null,
+        "wikidataQid": null,
+        "institution": null,
+        "inventoryNumber": null
+      },
+      "culture": "Indian",
+      "movement": null,
+      "periodSlug": null,
+      "medium": "Equation, typeset",
+      "materials": [],
+      "genre": [
+        "equation"
+      ],
+      "subjects": [
+        "equation",
+        "mathematics"
+      ],
+      "physical": {
+        "widthCm": 100,
+        "heightCm": 85,
+        "depthCm": null,
+        "weightKg": null
+      },
+      "description": "Zero as a number, with rules for doing arithmetic on it. Counting systems had used an empty place for centuries, but in 628 CE Brahmagupta, writing the Brāhmasphuṭasiddhānta in Bhinmal in what is now Rajasthan, was the first to treat śūnya, zero, as a number in its own right: adding it changes nothing, a number less itself is zero, anything times zero is zero. In the same chapter he gave the rules for negative numbers, which he called debts, and for positives, fortunes. Together with the place-value numerals India had already invented, this is the arithmetic the whole world now uses, carried west through Baghdad in the ninth century and into Europe as 'Arabic' numerals.",
+      "facts": [
+        "Brahmagupta's one wrong rule was that zero divided by zero is zero; division by zero stayed a puzzle for a thousand years.",
+        "The Bakhshali manuscript, a birch-bark text from near Peshawar, carries a dot for zero that radiocarbon dating in 2017 placed in the third or fourth century, the oldest known.",
+        "Al-Khwarizmi's ninth-century treatise on the Indian numerals brought the system to the Islamic world; Fibonacci's Liber Abaci of 1202 brought it to Europe."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Brahmagupta",
+      "wikidataQid": null,
+      "externalIds": {},
+      "copyrighted": false,
+      "asset": {
+        "kind": "image",
+        "currentVersionId": "eq-brahmagupta-zero-v1",
+        "versions": [
+          {
+            "id": "eq-brahmagupta-zero-v1",
+            "original": {
+              "url": "data/originals/eq-brahmagupta-zero/equation.svg",
+              "width": 2560,
+              "height": 2176,
+              "bytes": 4233,
+              "mime": "image/svg+xml",
+              "tex": "a + 0 = a, \\qquad a - a = 0, \\qquad a \\cdot 0 = 0",
+              "figure": "data/figures/brahmagupta-zero.svg"
+            },
+            "rungs": [
+              {
+                "width": 640,
+                "height": 544,
+                "url": "/assets/eq-brahmagupta-zero/640.jpg",
+                "bytes": 9881
+              },
+              {
+                "width": 1280,
+                "height": 1088,
+                "url": "/assets/eq-brahmagupta-zero/1280.jpg",
+                "bytes": 24058
+              },
+              {
+                "width": 2560,
+                "height": 2176,
+                "url": "/assets/eq-brahmagupta-zero/2560.jpg",
+                "bytes": 69730
+              }
+            ],
+            "loop": null,
+            "credit": {
+              "author": "20watts",
+              "license": {
+                "name": "CC0 1.0",
+                "url": null
+              },
+              "sourcePage": null
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-09T00:00:00Z",
+              "note": "Typeset by 20watts from the TeX in the record with MathJax, with a figure drawn for this museum; the rendering is CC0, the equation itself is not subject to copyright."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "typeset"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": null,
+        "back": "mirror",
+        "yaw": null,
+        "fallbackWidthM": 1.2
+      },
+      "tags": [
+        "equation",
+        "mathematics",
+        "India"
+      ],
+      "pageviews": null,
+      "importance": 0.9,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-09T00:00:00Z",
+      "updatedAt": "2026-10-10T00:09:46.205Z"
+    },
+    {
+      "id": "wm-7280090",
+      "kind": "image",
+      "title": "Descent of the Ganges (Arjuna's Penance), Mamallapuram",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "Unknown Pallava sculptors (patron Narasimhavarman I)",
+          "slug": null,
+          "wikidataQid": "Q3537058",
+          "wikipediaUrl": null,
+          "birthYear": null,
+          "deathYear": null,
+          "role": "sculptor"
+        }
+      ],
+      "date": {
+        "year": 650,
+        "month": null,
+        "day": null,
+        "yearStart": 630,
+        "yearEnd": 668,
+        "label": "mid-7th century CE",
+        "precision": "circa"
+      },
+      "madeIn": {
+        "name": "Mamallapuram",
+        "region": "Tamil Nadu",
+        "country": "India",
+        "point": {
+          "lat": 12.617,
+          "lon": 80.192
+        },
+        "wikidataQid": "Q208000"
+      },
+      "location": {
+        "name": "Mamallapuram",
+        "region": null,
+        "country": "India",
+        "point": null,
+        "wikidataQid": null,
+        "institution": "Group of Monuments at Mahabalipuram (in situ)",
+        "inventoryNumber": null
+      },
+      "culture": "Tamil (Pallava)",
+      "movement": null,
+      "periodSlug": null,
+      "medium": "Relief carved into two granite boulders",
+      "materials": [
+        "granite"
+      ],
+      "genre": [
+        "sculpture",
+        "relief"
+      ],
+      "subjects": [
+        "Ganges",
+        "Bhagiratha",
+        "Arjuna",
+        "elephants",
+        "nagas",
+        "Hinduism"
+      ],
+      "physical": {
+        "widthCm": 2900,
+        "heightCm": 1300,
+        "depthCm": null,
+        "weightKg": null
+      },
+      "description": "Carved across two granite boulders at Mamallapuram on the Coromandel coast, this is the largest bas-relief in the world: 29 metres wide and 13 metres high, with more than a hundred figures of gods, people and animals. Tamils call it Arjunan Tapasu (அர்ச்சுனன் தபசு), Arjuna's Penance, after the gaunt figure standing on one leg beside the central cleft; the other reading is that he is Bhagiratha, whose austerities brought the river Ganges down from heaven to earth. The cleft between the boulders, which once carried real water from a tank above, stands for the river, and serpent-deities (nagas) rise in it. To its right walks a family of life-size elephants, among the most admired animal sculptures in India. The relief was cut in the mid-seventh century under the Pallava king Narasimhavarman I, called Mamalla, the great wrestler, from whom the town takes its name. It is part of the UNESCO World Heritage Group of Monuments at Mahabalipuram.",
+      "facts": [
+        "At about 29 by 13 metres it is the largest open-air rock relief in the world.",
+        "A cistern above the cleft once released water down the channel so that the Ganges actually flowed between the carved nagas.",
+        "The elephants are carved at life size; a sly cat 'doing penance' among mice beneath them is a famous joke in stone.",
+        "An unfinished copy of the same composition stands a few hundred metres away, abandoned by the Pallava carvers."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Descent_of_the_Ganges_(Mahabalipuram)",
+      "wikidataQid": "Q1753664",
+      "externalIds": {
+        "commons-curid": "7280090",
+        "commons-file": "Descent of the Ganges 01.jpg"
+      },
+      "copyrighted": false,
+      "asset": {
+        "kind": "image",
+        "currentVersionId": "wm-7280090-v1",
+        "versions": [
+          {
+            "id": "wm-7280090-v1",
+            "original": {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/6/69/Descent_of_the_Ganges_01.jpg",
+              "width": 3933,
+              "height": 1703,
+              "bytes": 1443985,
+              "mime": "image/jpeg"
+            },
+            "rungs": [
+              {
+                "width": 1280,
+                "height": 554,
+                "url": "/assets/wm-7280090/1280.jpg",
+                "bytes": 312311
+              },
+              {
+                "width": 3840,
+                "height": 1663,
+                "url": "/assets/wm-7280090/3840.jpg",
+                "bytes": 1480863
+              }
+            ],
+            "loop": null,
+            "credit": {
+              "author": "Bernard Gagnon",
+              "license": {
+                "name": "CC BY-SA 3.0",
+                "url": "https://creativecommons.org/licenses/by-sa/3.0"
+              },
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Descent_of_the_Ganges_01.jpg"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-09T00:00:00Z",
+              "note": "Straight-on panoramic photograph of the entire relief across both boulders, with the central cleft, taken 29 January 2006. Commons API extmetadata: LicenseShortName = 'CC BY-SA 3.0', Artist = 'Bernard Gagnon', Credit = 'Own work'; also tagged GFDL. It is a Commons Valued Image and the lead image of the English Wikipedia article 'Descent of the Ganges (Mahabalipuram)'. Chosen because it shows the whole 29 x 13 m relief edge to edge, which is what the museum needs to show it at true size; Timothy A. Gonsalves (Tagooty) has higher-resolution CC BY-SA 4.0 quality images of individual panels (e.g. page ids 123071969, 123159426, 124252253) that could be used for details. No CC Sketchfab scan of the relief exists; the only Mamallapuram photogrammetry found (HAREX-STUDIO) is CC BY-NC and was rejected. The relief is in situ at Mamallapuram. Shown at the relief's real size, 29 m by 13 m, since the photograph covers it edge to edge."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "wikimedia-commons"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": 0.5,
+        "back": "mirror",
+        "yaw": null,
+        "fallbackWidthM": 1.2
+      },
+      "tags": [
+        "India",
+        "Tamil Nadu",
+        "Tamil",
+        "Pallava",
+        "rock relief",
+        "Hinduism",
+        "UNESCO World Heritage"
+      ],
+      "pageviews": null,
+      "importance": 0.85,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-09T00:00:00Z",
+      "updatedAt": "2026-10-10T00:16:48.760Z"
     },
     {
       "id": "wm-44550",
@@ -4180,6 +5690,513 @@
       "updatedAt": "2026-10-09T19:22:48.269Z"
     },
     {
+      "id": "wm-51782341",
+      "kind": "image",
+      "title": "Brihadisvara Temple, Thanjavur",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "Rajaraja I (patron)",
+          "slug": null,
+          "wikidataQid": "Q2128757",
+          "wikipediaUrl": null,
+          "birthYear": 947,
+          "deathYear": 1014,
+          "role": "patron"
+        }
+      ],
+      "date": {
+        "year": 1010,
+        "month": null,
+        "day": null,
+        "yearStart": 1003,
+        "yearEnd": 1010,
+        "label": "1003–1010 CE",
+        "precision": "circa"
+      },
+      "madeIn": {
+        "name": "Thanjavur",
+        "region": "Tamil Nadu",
+        "country": "India",
+        "point": {
+          "lat": 10.783,
+          "lon": 79.132
+        },
+        "wikidataQid": "Q41496"
+      },
+      "location": {
+        "name": "Thanjavur",
+        "region": null,
+        "country": "India",
+        "point": null,
+        "wikidataQid": null,
+        "institution": "Brihadisvara Temple (in situ)",
+        "inventoryNumber": null
+      },
+      "culture": "Tamil (Chola)",
+      "movement": null,
+      "periodSlug": null,
+      "medium": "Granite masonry",
+      "materials": [
+        "granite"
+      ],
+      "genre": [
+        "architecture"
+      ],
+      "subjects": [
+        "Shiva",
+        "temple",
+        "Dravidian architecture",
+        "Chola empire"
+      ],
+      "physical": {
+        "widthCm": null,
+        "heightCm": null,
+        "depthCm": null,
+        "weightKg": null
+      },
+      "description": "The Brihadisvara Temple, known to Tamils as Thanjai Periya Kovil (தஞ்சைப் பெரிய கோவில், the Big Temple of Thanjavur) and to its builder as Rajarajesvaram, was raised between 1003 and 1010 by the Chola emperor Rajaraja I, in the capital of an empire that then ruled most of South India and Sri Lanka. Its vimana, the pyramidal tower over the sanctum, rises about 66 metres from a square base 30 metres on a side, in sixteen storeys of carved granite: the tallest building in India for centuries, and still one of the tallest temple towers in the world. The sanctum holds a monolithic linga nearly nine metres high. The granite was quarried far away, since there is none near Thanjavur, and tradition says the eighty-tonne capstone was dragged up a ramp several kilometres long. Long inscriptions on the base record the dancers, musicians, accountants and lamp-lighters the temple employed, and the gifts of gold and villages that paid for them. It has been in continuous worship for a thousand years and is a UNESCO World Heritage Site.",
+      "facts": [
+        "Built in about seven years and consecrated in 1010 CE; the thousandth anniversary was celebrated in 2010.",
+        "The vimana is about 66 m tall on a 30 m square base; the sanctum's linga alone is 8.7 m high.",
+        "Chola inscriptions carved around the plinth name the temple's 400 dancers and list its endowments village by village.",
+        "The architect is named in inscriptions as Kunjara Mallan Raja Raja Perunthachan."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Brihadisvara_Temple,_Thanjavur",
+      "wikidataQid": "Q916943",
+      "externalIds": {
+        "commons-curid": "51782341",
+        "commons-file": "Vimana of the Brihadisvara Temple, Thanjavur, Tamil Nadu, India (2016).jpg"
+      },
+      "copyrighted": false,
+      "asset": {
+        "kind": "image",
+        "currentVersionId": "wm-51782341-v1",
+        "versions": [
+          {
+            "id": "wm-51782341-v1",
+            "original": {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Vimana_of_the_Brihadisvara_Temple%2C_Thanjavur%2C_Tamil_Nadu%2C_India_%282016%29.jpg",
+              "width": 5184,
+              "height": 3456,
+              "bytes": 4629812,
+              "mime": "image/jpeg"
+            },
+            "rungs": [
+              {
+                "width": 1280,
+                "height": 854,
+                "url": "/assets/wm-51782341/1280.jpg",
+                "bytes": 161131
+              },
+              {
+                "width": 3840,
+                "height": 2559,
+                "url": "/assets/wm-51782341/3840.jpg",
+                "bytes": 1034292
+              }
+            ],
+            "loop": null,
+            "credit": {
+              "author": "Nandhinikandhasamy",
+              "license": {
+                "name": "CC BY-SA 4.0",
+                "url": "https://creativecommons.org/licenses/by-sa/4.0"
+              },
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Vimana_of_the_Brihadisvara_Temple,_Thanjavur,_Tamil_Nadu,_India_(2016).jpg"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-09T00:00:00Z",
+              "note": "Daytime photograph of the Brihadisvara Temple's vimana (tower over the sanctum) from a distance, taken 24 September 2016 for Wiki Loves Monuments India. Commons API extmetadata: LicenseShortName = 'CC BY-SA 4.0', Artist = 'Nandhinikandhasamy', Credit = 'Own work'; Commons categories 'Vimana of the Brihadisvara Temple' and 'Remote views of the Brihadisvara Temple'. Chosen over the English Wikipedia lead image (File:Brihadisvara Temple during Maha Shivaratri-WUS03611 (edit).jpg, CC BY-SA 4.0, Rainer Halama, a Featured Picture) because that one is a night shot during a festival and the brief prefers an evenly lit straight-on view; and over Bernard Gagnon's CC BY-SA 3.0 quality images, which show the gopurams and sub-shrines rather than the main tower. I could not view the file (metadata only); the same photographer uploaded five near-identical frames (page ids 51782341, 51782343, 51782344, 51784804, 51784805, 51784808) if a different crop is wanted. The temple itself is in situ in Thanjavur."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "wikimedia-commons"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": 0.5,
+        "back": "mirror",
+        "yaw": null,
+        "fallbackWidthM": 1.2
+      },
+      "tags": [
+        "India",
+        "Tamil Nadu",
+        "Tamil",
+        "Chola",
+        "temple",
+        "Hinduism",
+        "UNESCO World Heritage"
+      ],
+      "pageviews": null,
+      "importance": 0.9,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-09T00:00:00Z",
+      "updatedAt": "2026-10-10T00:16:49.764Z"
+    },
+    {
+      "id": "sf-6862a3c673d4434a8dc39ced2a5b5720",
+      "kind": "model",
+      "title": "Nataraja, Shiva as the Lord of Dance",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "Unknown Chola bronze-caster",
+          "slug": null,
+          "wikidataQid": null,
+          "wikipediaUrl": null,
+          "birthYear": null,
+          "deathYear": null,
+          "role": "sculptor"
+        }
+      ],
+      "date": {
+        "year": 1050,
+        "month": null,
+        "day": null,
+        "yearStart": 1000,
+        "yearEnd": 1099,
+        "label": "11th century CE",
+        "precision": "circa"
+      },
+      "madeIn": {
+        "name": "Thanjavur region",
+        "region": "Tamil Nadu",
+        "country": "India",
+        "point": {
+          "lat": 10.787,
+          "lon": 79.138
+        },
+        "wikidataQid": "Q41496"
+      },
+      "location": {
+        "name": "Cleveland",
+        "region": null,
+        "country": "United States",
+        "point": null,
+        "wikidataQid": null,
+        "institution": "The Cleveland Museum of Art",
+        "inventoryNumber": "1930.331"
+      },
+      "culture": "Tamil (Chola)",
+      "movement": null,
+      "periodSlug": null,
+      "medium": "Bronze (copper alloy), lost-wax cast",
+      "materials": [
+        "bronze"
+      ],
+      "genre": [
+        "sculpture"
+      ],
+      "subjects": [
+        "Shiva",
+        "Nataraja",
+        "dance",
+        "Hinduism",
+        "cosmic cycle"
+      ],
+      "physical": {
+        "widthCm": 102,
+        "heightCm": 113,
+        "depthCm": 30,
+        "weightKg": null
+      },
+      "description": "Shiva as Nataraja, the Lord of Dance (Tamil: நடராஜர், Nataraja; also ஆடவல்லான், Adavallan), cast in bronze in Tamil Nadu in the eleventh century, at the height of the Chola empire. The god dances inside a ring of fire. His upper right hand beats a small drum, the sound that begins creation; his upper left holds the flame that will end it. The lower right hand is raised in the gesture that says 'do not fear', and the lower left points to the lifted foot, where release is found. The other foot presses down on Apasmara, the dwarf of ignorance. The whole figure, with its halo and lotus base, stands over a metre tall and was made by the lost-wax method, in which a wax model is coated in clay, melted out and replaced with molten metal, so each bronze is unique. Images like this were carried in procession at temple festivals, dressed and garlanded. The Nataraja is the most famous form of South Indian art, and the one that Tamil people most readily recognise as their own.",
+      "facts": [
+        "Made in Tamil Nadu under the Chola dynasty, whose bronze-casters produced the finest metal sculpture in India between the 9th and 13th centuries.",
+        "Cast by the lost-wax process, so the mould was destroyed and every Chola bronze is a one-off.",
+        "The Cleveland Museum of Art scanned the bronze itself and released the model under CC0; it measures 113 by 102 by 30 cm with its ring of fire.",
+        "A Nataraja of this type stands outside CERN in Geneva, given by India in 2004 as an image of the cosmic dance of matter."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Nataraja",
+      "wikidataQid": "Q23641297",
+      "externalIds": {
+        "sketchfab": "6862a3c673d4434a8dc39ced2a5b5720"
+      },
+      "copyrighted": false,
+      "asset": {
+        "kind": "model",
+        "currentVersionId": "sf-6862a3c673d4434a8dc39ced2a5b5720-v1",
+        "versions": [
+          {
+            "id": "sf-6862a3c673d4434a8dc39ced2a5b5720-v1",
+            "original": {
+              "url": "https://sketchfab.com/3d-models/1930331-nataraja-shiva-as-the-lord-of-dance-6862a3c673d4434a8dc39ced2a5b5720",
+              "format": "glb",
+              "bytes": null,
+              "triangles": 98795
+            },
+            "rungs": [
+              {
+                "quality": "thumb",
+                "url": "/assets/sf-6862a3c673d4434a8dc39ced2a5b5720/thumb.glb",
+                "bytes": 262924,
+                "triangles": 4938,
+                "textureSize": 512,
+                "draco": true
+              },
+              {
+                "quality": "low",
+                "url": "/assets/sf-6862a3c673d4434a8dc39ced2a5b5720/low.glb",
+                "bytes": 880756,
+                "triangles": 34578,
+                "textureSize": 1024,
+                "draco": true
+              },
+              {
+                "quality": "medium",
+                "url": "/assets/sf-6862a3c673d4434a8dc39ced2a5b5720/medium.glb",
+                "bytes": 2322588,
+                "triangles": 59276,
+                "textureSize": 2048,
+                "draco": true
+              },
+              {
+                "quality": "high",
+                "url": "/assets/sf-6862a3c673d4434a8dc39ced2a5b5720/high.glb",
+                "bytes": 6295092,
+                "triangles": 98795,
+                "textureSize": 4096,
+                "draco": true
+              }
+            ],
+            "scale": 1,
+            "bounds": {
+              "width": 1.006,
+              "height": 1.122,
+              "depth": 0.358
+            },
+            "credit": {
+              "author": "Cleveland Museum of Art (model by Dale Utt)",
+              "license": {
+                "name": "CC0 1.0",
+                "url": "http://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "sourcePage": "https://clevelandart.org/art/1930.331"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-09T00:00:00Z",
+              "note": "Photogrammetry scan of the Cleveland Museum of Art's Chola bronze Nataraja, accession 1930.331, published by the museum's own Sketchfab account (user 'clevelandart', display name 'Cleveland Museum of Art'). Sketchfab API /v3/models/6862a3c673d4434a8dc39ced2a5b5720: license.label = 'CC0 Public Domain', license.slug = 'cc0', isDownloadable = true, 98,795 faces / 49,376 vertices. Cleveland open-access API (accession_number=1930.331): share_license_status = 'CC0', creation_date '1000s', culture 'South India, Tamil Nadu, Chola period (900-1200s)', measurements 'Overall: 113 x 102 x 30 cm; Base: 35 x 24 cm'. Chosen over the Met's CC0 photograph of its own Nataraja (Met object 39328, 1987.80.1, 68.3 cm) because this is a real scan of a real Chola bronze and is larger; the Met's Sketchfab account (user 'metmuseum') currently lists 0 models, so no Met CC0 3D Nataraja was found. The Minneapolis Institute of Art also publishes CC0 scans of its c. 1100 Nataraja (uids 5bc151d954f74b238079726bf2205c23 and 227d1524875042ce90176129ba98de6c) as an alternative. The scan includes the prabha (ring of fire) and lotus base. Downloaded by the user on 2026-10-09: 112 MB glTF, one mesh, three 8192 px textures, already in metres and upright, 1.01 x 1.12 x 0.36 m."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "sketchfab",
+            "representation": "scan"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": null,
+        "back": "none",
+        "yaw": null,
+        "fallbackWidthM": 1.2
+      },
+      "tags": [
+        "India",
+        "Tamil Nadu",
+        "Tamil",
+        "Chola",
+        "bronze",
+        "Hinduism",
+        "Shiva"
+      ],
+      "pageviews": null,
+      "importance": 0.95,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-09T00:00:00Z",
+      "updatedAt": "2026-10-10T00:26:53.365Z"
+    },
+    {
+      "id": "eq-madhava-series",
+      "kind": "image",
+      "title": "Madhava's series for π",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "Madhava of Sangamagrama",
+          "slug": null,
+          "wikidataQid": null,
+          "wikipediaUrl": null,
+          "birthYear": 1340,
+          "deathYear": 1425,
+          "role": "author"
+        }
+      ],
+      "date": {
+        "year": 1400,
+        "month": null,
+        "day": null,
+        "yearStart": 1380,
+        "yearEnd": 1420,
+        "label": "c. 1400 (Kerala school)",
+        "precision": "circa"
+      },
+      "madeIn": {
+        "name": "Sangamagrama (Irinjalakuda)",
+        "region": "Kerala",
+        "country": "India",
+        "point": {
+          "lat": 10.34,
+          "lon": 76.21
+        },
+        "wikidataQid": null
+      },
+      "location": {
+        "name": null,
+        "region": null,
+        "country": null,
+        "point": null,
+        "wikidataQid": null,
+        "institution": null,
+        "inventoryNumber": null
+      },
+      "culture": "Indian",
+      "movement": null,
+      "periodSlug": null,
+      "medium": "Equation, typeset",
+      "materials": [],
+      "genre": [
+        "equation"
+      ],
+      "subjects": [
+        "equation",
+        "mathematics"
+      ],
+      "physical": {
+        "widthCm": 100,
+        "heightCm": 85,
+        "depthCm": null,
+        "weightKg": null
+      },
+      "description": "An infinite sum for π, and the first steps of calculus, from Kerala around 1400. Madhava of Sangamagrama found that the odd fractions, added and subtracted in turn, close in on a quarter of π, and he found the same kind of endless series for the sine and cosine; he even worked out correction terms that gave π to eleven decimal places. His own writings are lost, but his school kept them, in Sanskrit and in Malayalam verse, in Nilakantha's Tantrasangraha of 1501 and Jyeshthadeva's Yuktibhāṣā of about 1530. Europe reached the same series through Gregory in 1671 and Leibniz in 1674, nearly three centuries later.",
+      "facts": [
+        "The series converges painfully slowly, a few hundred terms for two decimal places; Madhava's correction terms fixed that, which is why his school had π to eleven places.",
+        "The Yuktibhāṣā, written in Malayalam, gives proofs as well as results, and is counted among the first texts of calculus anywhere.",
+        "The Kerala school ran for two centuries, from Madhava to Achyuta Pisharati around 1600, in a cluster of villages along the Nila river."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Madhava_series",
+      "wikidataQid": null,
+      "externalIds": {},
+      "copyrighted": false,
+      "asset": {
+        "kind": "image",
+        "currentVersionId": "eq-madhava-series-v1",
+        "versions": [
+          {
+            "id": "eq-madhava-series-v1",
+            "original": {
+              "url": "data/originals/eq-madhava-series/equation.svg",
+              "width": 2560,
+              "height": 2176,
+              "bytes": 5957,
+              "mime": "image/svg+xml",
+              "tex": "\\frac{\\pi}{4} = 1 - \\frac{1}{3} + \\frac{1}{5} - \\frac{1}{7} + \\cdots",
+              "figure": "data/figures/madhava-series.svg"
+            },
+            "rungs": [
+              {
+                "width": 640,
+                "height": 544,
+                "url": "/assets/eq-madhava-series/640.jpg",
+                "bytes": 13528
+              },
+              {
+                "width": 1280,
+                "height": 1088,
+                "url": "/assets/eq-madhava-series/1280.jpg",
+                "bytes": 33698
+              },
+              {
+                "width": 2560,
+                "height": 2176,
+                "url": "/assets/eq-madhava-series/2560.jpg",
+                "bytes": 91809
+              }
+            ],
+            "loop": null,
+            "credit": {
+              "author": "20watts",
+              "license": {
+                "name": "CC0 1.0",
+                "url": null
+              },
+              "sourcePage": null
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-09T00:00:00Z",
+              "note": "Typeset by 20watts from the TeX in the record with MathJax, with a figure drawn for this museum; the rendering is CC0, the equation itself is not subject to copyright."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "typeset"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": null,
+        "back": "mirror",
+        "yaw": null,
+        "fallbackWidthM": 1.2
+      },
+      "tags": [
+        "equation",
+        "mathematics",
+        "India"
+      ],
+      "pageviews": null,
+      "importance": 0.85,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-09T00:00:00Z",
+      "updatedAt": "2026-10-10T00:09:46.435Z"
+    },
+    {
       "id": "wm-50410532",
       "kind": "image",
       "title": "The Last Supper",
@@ -4564,7 +6581,7 @@
       ],
       "physical": {
         "widthCm": 100,
-        "heightCm": 60,
+        "heightCm": 85,
         "depthCm": null,
         "weightKg": null
       },
@@ -4587,29 +6604,30 @@
             "original": {
               "url": "data/originals/eq-newton-gravitation/equation.svg",
               "width": 2560,
-              "height": 1536,
+              "height": 2176,
               "bytes": 5640,
               "mime": "image/svg+xml",
-              "tex": "F = G\\,\\frac{m_1 m_2}{r^2}"
+              "tex": "F = G\\,\\frac{m_1 m_2}{r^2}",
+              "figure": "data/figures/newton-gravitation.svg"
             },
             "rungs": [
               {
                 "width": 640,
-                "height": 384,
+                "height": 544,
                 "url": "/assets/eq-newton-gravitation/640.jpg",
-                "bytes": 11753
+                "bytes": 16521
               },
               {
                 "width": 1280,
-                "height": 768,
+                "height": 1088,
                 "url": "/assets/eq-newton-gravitation/1280.jpg",
-                "bytes": 29422
+                "bytes": 41163
               },
               {
                 "width": 2560,
-                "height": 1536,
+                "height": 2176,
                 "url": "/assets/eq-newton-gravitation/2560.jpg",
-                "bytes": 72302
+                "bytes": 104705
               }
             ],
             "loop": null,
@@ -4624,7 +6642,7 @@
             "contributed": {
               "by": null,
               "at": "2026-10-09T00:00:00Z",
-              "note": "Typeset by 20watts from the TeX in the record with MathJax; the rendering is CC0, the equation itself is not subject to copyright."
+              "note": "Typeset by 20watts from the TeX in the record with MathJax, with a figure drawn for this museum; the rendering is CC0, the equation itself is not subject to copyright."
             },
             "moderation": {
               "status": "approved",
@@ -4660,7 +6678,404 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-09T22:54:58.410Z"
+      "updatedAt": "2026-10-10T00:09:46.671Z"
+    },
+    {
+      "id": "wm-110713109",
+      "kind": "image",
+      "title": "Brandenburg Concerto No. 3",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "Johann Sebastian Bach",
+          "slug": null,
+          "wikidataQid": "Q1339",
+          "wikipediaUrl": null,
+          "birthYear": 1685,
+          "deathYear": 1750,
+          "role": "composer"
+        }
+      ],
+      "date": {
+        "year": 1721,
+        "month": 3,
+        "day": 24,
+        "yearStart": 1721,
+        "yearEnd": 1721,
+        "label": "24 March 1721 (dedication of the fair-copy score)",
+        "precision": "year"
+      },
+      "madeIn": {
+        "name": "Köthen",
+        "region": "Anhalt",
+        "country": "Germany",
+        "point": {
+          "lat": 51.75,
+          "lon": 11.97
+        },
+        "wikidataQid": "Q7070"
+      },
+      "location": {
+        "name": "Berlin",
+        "region": null,
+        "country": "Germany",
+        "point": null,
+        "wikidataQid": null,
+        "institution": "Staatsbibliothek zu Berlin (dedication score, Am.B. 78)",
+        "inventoryNumber": "Am.B. 78"
+      },
+      "culture": "German",
+      "movement": null,
+      "periodSlug": null,
+      "medium": "Concerto for three violins, three violas, three cellos and continuo; autograph dedication score, ink on paper",
+      "materials": [
+        "ink",
+        "paper"
+      ],
+      "genre": [
+        "music"
+      ],
+      "subjects": [
+        "music",
+        "baroque",
+        "concerto"
+      ],
+      "physical": {
+        "widthCm": null,
+        "heightCm": null,
+        "depthCm": null,
+        "weightKg": null
+      },
+      "description": "In March 1721 Johann Sebastian Bach, then Kapellmeister to the small court of Anhalt-Köthen, sent a beautifully copied set of six concertos to Christian Ludwig, Margrave of Brandenburg, with a flattering French dedication. The margrave seems never to have had them played; the score sat in his library and was valued at a few groschen when he died. Today the six are the most celebrated orchestral works of the Baroque. The third concerto, in G major, is written for three violins, three violas, three cellos and continuo, and Bach treats the nine string parts as a single shifting texture, passing figures between the groups in rapid conversation. The page shown here is Bach's own title page from the dedication score, now in the Berlin State Library. The visitor hears the first movement, played by the Advent Chamber Orchestra in a live concert recording from December 2006, released under a Creative Commons licence.",
+      "facts": [
+        "The dedication is dated 24 March 1721; the concertos themselves were probably composed over the preceding years at Köthen and Weimar.",
+        "The third concerto has no full slow movement, only two chords linking the two fast movements, which players often expand with a short improvised cadenza.",
+        "The dedication score survived in the Berlin Royal Library and is now Am.B. 78 at the Staatsbibliothek zu Berlin."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Brandenburg_Concertos",
+      "wikidataQid": null,
+      "externalIds": {
+        "commons-curid": "110713109",
+        "commons-file": "Title page of Brandenburg Concertos.png"
+      },
+      "copyrighted": false,
+      "asset": {
+        "kind": "image",
+        "currentVersionId": "wm-110713109-v1",
+        "versions": [
+          {
+            "id": "wm-110713109-v1",
+            "original": {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Title_page_of_Brandenburg_Concertos.png",
+              "width": 1866,
+              "height": 1125,
+              "bytes": 3160956,
+              "mime": "image/png"
+            },
+            "rungs": [
+              {
+                "width": 1280,
+                "height": 771,
+                "url": "/assets/wm-110713109/1280.jpg",
+                "bytes": 168606
+              }
+            ],
+            "loop": null,
+            "credit": {
+              "author": "Johann Sebastian Bach (manuscript, 1721); uploader's reproduction released CC0",
+              "license": {
+                "name": "CC0 1.0",
+                "url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+              },
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Title_page_of_Brandenburg_Concertos.png"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-09T00:00:00Z",
+              "note": "Bach's handwritten French title page of the dedication score 'Six Concerts avec plusieurs instruments', signed 'Jean Sebastien Bach, Maitre de Chapelle de S.A.S. le Prince regnant d'Anhalt-Coethen'; the stamp at right is that of the Gymnasium Joachimsthal, whose library the score passed through. The dedication score is held by the Staatsbibliothek zu Berlin (Am.B. 78). Commons API extmetadata: LicenseShortName 'CC0'; Artist 'J.S. Bach or his writer'; ImageDescription 'Title page of Brandenburg Concertos written in French, composed by Johann Sebastian Bach, was dedicated to the Margraviate of Brandenburg on March 24, 1721.' The underlying 1721 manuscript is itself public domain."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "wikimedia-commons"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": 0.5,
+        "back": "mirror",
+        "yaw": null,
+        "fallbackWidthM": 1.2
+      },
+      "tags": [
+        "music",
+        "baroque",
+        "concerto"
+      ],
+      "pageviews": null,
+      "importance": 0.9,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-09T00:00:00Z",
+      "updatedAt": "2026-10-10T00:13:24.322Z",
+      "audio": {
+        "currentVersionId": "wm-110713109-audio-v1",
+        "versions": [
+          {
+            "id": "wm-110713109-audio-v1",
+            "original": {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Bach_-_Brandenburg_Concerto_No._3_-_1._Allegro.ogg",
+              "bytes": 9900685,
+              "mime": "audio/ogg",
+              "seconds": 319.2
+            },
+            "encoded": {
+              "url": "/assets/wm-110713109/sound.mp3",
+              "bytes": 1920983,
+              "seconds": 120
+            },
+            "start": 0,
+            "seconds": 120,
+            "performers": "The Advent Chamber Orchestra, recorded live at its concert of December 2006.",
+            "credit": {
+              "author": "Advent Chamber Orchestra (Al Goldstein collection, Pandora Music repository, ibiblio.org)",
+              "license": {
+                "name": "CC BY-SA 2.0",
+                "url": "https://creativecommons.org/licenses/by-sa/2.0"
+              },
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Bach_-_Brandenburg_Concerto_No._3_-_1._Allegro.ogg"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-09T00:00:00Z",
+              "note": "Commons API extmetadata: LicenseShortName 'CC BY-SA 2.0'; Artist 'Johann Sebastian Bach' (composer field); Credit 'The Al Goldstein collection in the Pandora Music repository at ibiblio.org.'; ImageDescription 'Brandenburg Concerto No. 3 in G major, BWV 1048, 1st movement ... Selections from the concert of December 2006'; Permission note: released under the EFF Open Audio License, which Commons treats as interchangeable with CC BY-SA 2.0. Attribution and share-alike required. Duration from API metadata: 319.16 s."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "wikimedia-commons"
+          }
+        ]
+      }
+    },
+    {
+      "id": "wm-172577787",
+      "kind": "image",
+      "title": "The Four Seasons: Spring",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "Antonio Vivaldi",
+          "slug": null,
+          "wikidataQid": "Q1340",
+          "wikipediaUrl": null,
+          "birthYear": 1678,
+          "deathYear": 1741,
+          "role": "composer"
+        }
+      ],
+      "date": {
+        "year": 1725,
+        "month": null,
+        "day": null,
+        "yearStart": 1718,
+        "yearEnd": 1725,
+        "label": "1725 (first edition, Amsterdam); composed about 1718-1723",
+        "precision": "circa"
+      },
+      "madeIn": {
+        "name": "Venice",
+        "region": "Veneto",
+        "country": "Italy",
+        "point": {
+          "lat": 45.4408,
+          "lon": 12.3155
+        },
+        "wikidataQid": "Q641"
+      },
+      "location": {
+        "name": "Paris",
+        "region": null,
+        "country": "France",
+        "point": null,
+        "wikidataQid": null,
+        "institution": "Bibliothèque nationale de France (first-edition part-book shown)",
+        "inventoryNumber": "Vm7 1703"
+      },
+      "culture": "Venetian / Italian",
+      "movement": null,
+      "periodSlug": null,
+      "medium": "Violin concerto in E major, RV 269, with strings and continuo; engraved first edition",
+      "materials": [
+        "ink",
+        "paper"
+      ],
+      "genre": [
+        "music"
+      ],
+      "subjects": [
+        "music",
+        "baroque",
+        "concerto",
+        "violin",
+        "programme music"
+      ],
+      "physical": {
+        "widthCm": null,
+        "heightCm": null,
+        "depthCm": null,
+        "weightKg": null
+      },
+      "description": "Antonio Vivaldi, a Venetian priest who taught the violin at the Ospedale della Pietà, an orphanage famous for its girls' orchestra, published twelve concertos in Amsterdam in 1725 under the title 'The Contest of Harmony and Invention'. The first four are the Four Seasons, and each is prefaced by a sonnet, probably by Vivaldi himself, whose lines are printed in the parts at the moments they describe. 'Spring' opens with birdsong traded between three violins, a murmuring brook, a thunderstorm, and then a sleeping goatherd, a barking dog in the violas, and a rustic bagpipe dance. It is among the earliest and most vivid examples of music telling a story, and today the most performed Baroque work of all. The sheet shown is the title page of the 1725 Le Cène edition from the Bibliothèque nationale de France. The visitor hears the first movement, played by John Harrison with the Wichita State University Chamber Players in a live recording from 2000, released under a Creative Commons licence.",
+      "facts": [
+        "The concertos were dedicated to the Bohemian count Wenzel von Morzin, and had probably been circulating in manuscript for several years before publication.",
+        "Each season carries a sonnet, with letters in the score linking lines of verse to passages of music, such as 'the barking dog' for the viola in the Largo.",
+        "Vivaldi's reputation collapsed after his death in 1741 and the Four Seasons were almost unknown until the 1940s, when the first recordings appeared."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/The_Four_Seasons_(Vivaldi)",
+      "wikidataQid": null,
+      "externalIds": {
+        "commons-curid": "172577787",
+        "commons-file": "Il cimento dell'armonia e dell'inventione - concerti a 4 e 5 consacrati - opera ottava - libro primo - da D. Antonio Vivaldi - btv1b52500229z (11 of 42).jpg"
+      },
+      "copyrighted": false,
+      "asset": {
+        "kind": "image",
+        "currentVersionId": "wm-172577787-v1",
+        "versions": [
+          {
+            "id": "wm-172577787-v1",
+            "original": {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Il_cimento_dell%27armonia_e_dell%27inventione_-_concerti_a_4_e_5_consacrati_-_opera_ottava_-_libro_primo_-_da_D._Antonio_Vivaldi_-_btv1b52500229z_%2811_of_42%29.jpg",
+              "width": 3828,
+              "height": 5176,
+              "bytes": 2406728,
+              "mime": "image/jpeg"
+            },
+            "rungs": [
+              {
+                "width": 1280,
+                "height": 1731,
+                "url": "/assets/wm-172577787/1280.jpg",
+                "bytes": 606355
+              },
+              {
+                "width": 2048,
+                "height": 2769,
+                "url": "/assets/wm-172577787/2048.jpg",
+                "bytes": 2406728
+              }
+            ],
+            "loop": null,
+            "credit": {
+              "author": "Michel-Charles Le Cène, Amsterdam (publisher, 1725); scan by the Bibliothèque nationale de France (Gallica)",
+              "license": {
+                "name": "Public domain",
+                "url": null
+              },
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Il_cimento_dell%27armonia_e_dell%27inventione_-_concerti_a_4_e_5_consacrati_-_opera_ottava_-_libro_primo_-_da_D._Antonio_Vivaldi_-_btv1b52500229z_(11_of_42).jpg"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-09T00:00:00Z",
+              "note": "Engraved title page of 'Il cimento dell'armonia e dell'inventione, Concerti a 4 e 5 ... da D. Antonio Vivaldi ... Opera ottava, Libro primo, A Amsterdam, Spesa di Michele Carlo Le Cene, Libraro' (plate no. 520), the 1725 first edition whose first four concertos are the Four Seasons; this is the viola part-book from the BnF (shelfmark Vm7 1703), with an 18th-century ex-libris inscription and the BnF stamp. Pages 1-10 of the 42-page set are the vellum cover, blank leaves and flyleaves; page 11 is the title page (checked by thumbnail). Commons API extmetadata: LicenseShortName 'Public domain'; Artist 'Vivaldi, Antonio (1678-1741). Compositeur'; Credit 'Bibliothèque nationale de France'; ImageDescription 'Présentation musicale : Parties de violon principal, violon 1, violon 2, alto, violoncelle-orgue / Éditeur : Michele Carlo Le Cene, libraro (Amsterdam)'. A cleaner but lower-resolution scan of the Libro secondo title page of the same edition is File:Cimento dell' Armonia e dell' Inventione-v2-title page.jpg (curid 65167658, 1500x1981, Public domain)."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "wikimedia-commons"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": 0.5,
+        "back": "mirror",
+        "yaw": null,
+        "fallbackWidthM": 1.2
+      },
+      "tags": [
+        "music",
+        "baroque",
+        "concerto",
+        "violin"
+      ],
+      "pageviews": null,
+      "importance": 0.85,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-09T00:00:00Z",
+      "updatedAt": "2026-10-10T00:13:26.873Z",
+      "audio": {
+        "currentVersionId": "wm-172577787-audio-v1",
+        "versions": [
+          {
+            "id": "wm-172577787-audio-v1",
+            "original": {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Vivaldi_-_Four_Seasons_1_Spring_mvt_1_Allegro_-_John_Harrison_violin.oga",
+              "bytes": 4299414,
+              "mime": "audio/ogg",
+              "seconds": 215.3
+            },
+            "encoded": {
+              "url": "/assets/wm-172577787/sound.mp3",
+              "bytes": 3445698,
+              "seconds": 215.3
+            },
+            "start": 0,
+            "seconds": null,
+            "performers": "John Harrison, violin, with the Wichita State University Chamber Players conducted by Robert Turizziani; live, unedited performance in Wiedemann Recital Hall, Wichita State University, 6 February 2000.",
+            "credit": {
+              "author": "John Harrison, violin; Wichita State University Chamber Players, Robert Turizziani, conductor",
+              "license": {
+                "name": "CC BY-SA 4.0",
+                "url": "https://creativecommons.org/licenses/by-sa/4.0/deed.en"
+              },
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Vivaldi_-_Four_Seasons_1_Spring_mvt_1_Allegro_-_John_Harrison_violin.oga"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-09T00:00:00Z",
+              "note": "Commons API extmetadata on 2026-10-09: LicenseShortName 'CC BY-SA 4.0' (the file is currently tagged 4.0, not the 3.0 sometimes cited); UsageTerms 'Creative Commons Attribution-Share Alike 4.0'; AttributionRequired true; Artist 'Antonio Vivaldi' (composer field); Credit 'Own work'; ImageDescription 'Concerto No. 1 in E major, Op. 8, RV 269, \"La primavera\" (Spring) - Movement 1: Allegro from The Four Seasons by Antonio Vivaldi. Live, Unedited performance - 3m:35.280s. Wiedemann Recital Hall, Wichita State University. John Harrison - Violin / Robert Turizziani - Conductor / Wichita State University Chamber Players'; DateTimeOriginal 'composed 1723 and published in 1725, performed on 2000-02-06'. Attribute John Harrison and the Wichita State University Chamber Players; share-alike applies. Duration from API metadata: 215.28 s. The Largo and the closing Allegro of Spring are on Commons from the same performance under the same licence (File:Vivaldi - Four Seasons 1 Spring mvt 2 Largo - John Harrison violin.oga, File:... mvt 3 Allegro - John Harrison violin.oga)."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "wikimedia-commons"
+          }
+        ]
+      }
     },
     {
       "id": "eq-euler-identity",
@@ -4720,7 +7135,7 @@
       ],
       "physical": {
         "widthCm": 100,
-        "heightCm": 60,
+        "heightCm": 85,
         "depthCm": null,
         "weightKg": null
       },
@@ -4743,29 +7158,30 @@
             "original": {
               "url": "data/originals/eq-euler-identity/equation.svg",
               "width": 2560,
-              "height": 1536,
+              "height": 2176,
               "bytes": 3742,
               "mime": "image/svg+xml",
-              "tex": "e^{i\\pi} + 1 = 0"
+              "tex": "e^{i\\pi} + 1 = 0",
+              "figure": "data/figures/euler-identity.svg"
             },
             "rungs": [
               {
                 "width": 640,
-                "height": 384,
+                "height": 544,
                 "url": "/assets/eq-euler-identity/640.jpg",
-                "bytes": 8361
+                "bytes": 16504
               },
               {
                 "width": 1280,
-                "height": 768,
+                "height": 1088,
                 "url": "/assets/eq-euler-identity/1280.jpg",
-                "bytes": 20312
+                "bytes": 42390
               },
               {
                 "width": 2560,
-                "height": 1536,
+                "height": 2176,
                 "url": "/assets/eq-euler-identity/2560.jpg",
-                "bytes": 52045
+                "bytes": 107274
               }
             ],
             "loop": null,
@@ -4780,7 +7196,7 @@
             "contributed": {
               "by": null,
               "at": "2026-10-09T00:00:00Z",
-              "note": "Typeset by 20watts from the TeX in the record with MathJax; the rendering is CC0, the equation itself is not subject to copyright."
+              "note": "Typeset by 20watts from the TeX in the record with MathJax, with a figure drawn for this museum; the rendering is CC0, the equation itself is not subject to copyright."
             },
             "moderation": {
               "status": "approved",
@@ -4816,7 +7232,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-09T22:54:58.453Z"
+      "updatedAt": "2026-10-10T00:09:46.909Z"
     },
     {
       "id": "eq-bayes-theorem",
@@ -4876,7 +7292,7 @@
       ],
       "physical": {
         "widthCm": 100,
-        "heightCm": 60,
+        "heightCm": 85,
         "depthCm": null,
         "weightKg": null
       },
@@ -4899,29 +7315,30 @@
             "original": {
               "url": "data/originals/eq-bayes-theorem/equation.svg",
               "width": 2560,
-              "height": 1536,
+              "height": 2176,
               "bytes": 5734,
               "mime": "image/svg+xml",
-              "tex": "P(A \\mid B) = \\frac{P(B \\mid A)\\,P(A)}{P(B)}"
+              "tex": "P(A \\mid B) = \\frac{P(B \\mid A)\\,P(A)}{P(B)}",
+              "figure": "data/figures/bayes-theorem.svg"
             },
             "rungs": [
               {
                 "width": 640,
-                "height": 384,
+                "height": 544,
                 "url": "/assets/eq-bayes-theorem/640.jpg",
-                "bytes": 11778
+                "bytes": 18492
               },
               {
                 "width": 1280,
-                "height": 768,
+                "height": 1088,
                 "url": "/assets/eq-bayes-theorem/1280.jpg",
-                "bytes": 30122
+                "bytes": 47543
               },
               {
                 "width": 2560,
-                "height": 1536,
+                "height": 2176,
                 "url": "/assets/eq-bayes-theorem/2560.jpg",
-                "bytes": 78299
+                "bytes": 119988
               }
             ],
             "loop": null,
@@ -4936,7 +7353,7 @@
             "contributed": {
               "by": null,
               "at": "2026-10-09T00:00:00Z",
-              "note": "Typeset by 20watts from the TeX in the record with MathJax; the rendering is CC0, the equation itself is not subject to copyright."
+              "note": "Typeset by 20watts from the TeX in the record with MathJax, with a figure drawn for this museum; the rendering is CC0, the equation itself is not subject to copyright."
             },
             "moderation": {
               "status": "approved",
@@ -4972,7 +7389,793 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-09T22:54:58.502Z"
+      "updatedAt": "2026-10-10T00:09:47.150Z"
+    },
+    {
+      "id": "wm-178606096",
+      "kind": "image",
+      "title": "Eine kleine Nachtmusik",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "Wolfgang Amadeus Mozart",
+          "slug": null,
+          "wikidataQid": "Q254",
+          "wikipediaUrl": null,
+          "birthYear": 1756,
+          "deathYear": 1791,
+          "role": "composer"
+        }
+      ],
+      "date": {
+        "year": 1787,
+        "month": 8,
+        "day": 10,
+        "yearStart": 1787,
+        "yearEnd": 1787,
+        "label": "10 August 1787 (date Mozart entered it in his own catalogue of works)",
+        "precision": "year"
+      },
+      "madeIn": {
+        "name": "Vienna",
+        "region": null,
+        "country": "Austria",
+        "point": {
+          "lat": 48.2082,
+          "lon": 16.3738
+        },
+        "wikidataQid": "Q1741"
+      },
+      "location": {
+        "name": "Kraków",
+        "region": null,
+        "country": "Poland",
+        "point": null,
+        "wikidataQid": null,
+        "institution": "Biblioteka Jagiellońska (autograph, former Prussian State Library collection)",
+        "inventoryNumber": null
+      },
+      "culture": "Austrian",
+      "movement": null,
+      "periodSlug": null,
+      "medium": "Serenade for strings; autograph score, ink on paper",
+      "materials": [
+        "ink",
+        "paper"
+      ],
+      "genre": [
+        "music"
+      ],
+      "subjects": [
+        "music",
+        "classical",
+        "serenade"
+      ],
+      "physical": {
+        "widthCm": null,
+        "heightCm": null,
+        "depthCm": null,
+        "weightKg": null
+      },
+      "description": "Mozart entered this serenade for strings in his personal catalogue on 10 August 1787 in Vienna, while he was in the middle of composing the opera Don Giovanni. He called it simply 'Eine kleine Nacht Musik', a little night music, meaning a short serenade of the kind played outdoors at evening entertainments. Nobody knows who commissioned it or when it was first played, and the work was not published until 1827, long after his death. Its opening fanfare, rising through a G major chord, has since become one of the most recognised phrases in Western music. The page shown is the first leaf of Mozart's own manuscript, written quickly and almost without corrections. The visitor hears the first movement, Allegro, in a recording by the Advent Chamber Orchestra from its 2005-06 season, released under a Creative Commons licence.",
+      "facts": [
+        "Mozart's catalogue lists five movements; the second, a minuet, is lost, so the serenade is almost always heard in four.",
+        "The manuscript was sold by Mozart's widow Constanze to the publisher Johann Anton André in 1799, and was first printed in 1827.",
+        "The title in Mozart's catalogue is 'Eine kleine Nacht Musik, bestehend in einem Allegro, Menuett und Trio, Romance, Menuett und Trio, und Finale'."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Eine_kleine_Nachtmusik",
+      "wikidataQid": null,
+      "externalIds": {
+        "commons-curid": "178606096",
+        "commons-file": "Mozart - Eine kleine Nachtmusik K.525 autograph.png"
+      },
+      "copyrighted": false,
+      "asset": {
+        "kind": "image",
+        "currentVersionId": "wm-178606096-v1",
+        "versions": [
+          {
+            "id": "wm-178606096-v1",
+            "original": {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/d/de/Mozart_-_Eine_kleine_Nachtmusik_K.525_autograph.png",
+              "width": 1045,
+              "height": 800,
+              "bytes": 527371,
+              "mime": "image/png"
+            },
+            "rungs": [
+              {
+                "width": 1024,
+                "height": 784,
+                "url": "/assets/wm-178606096/1024.png",
+                "bytes": 527371
+              }
+            ],
+            "loop": null,
+            "credit": {
+              "author": "Wolfgang Amadeus Mozart (autograph); scan via IMSLP",
+              "license": {
+                "name": "Public domain",
+                "url": null
+              },
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Mozart_-_Eine_kleine_Nachtmusik_K.525_autograph.png"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-09T00:00:00Z",
+              "note": "First page of Mozart's autograph score of the Serenade in G, K. 525, headed 'Allegro' with the orchestral staves for two violins, viola, cello and bass. Commons API extmetadata: LicenseShortName 'Public domain'; Artist 'Wolfgang Amadeus Mozart'; Credit links the IMSLP scan of the autograph; ImageDescription 'First page from the manuscript of Eine kleine Nachtmusik, K. 525 by Mozart.'; DateTimeOriginal '10 August 1787'. The autograph is part of the former Prussian State Library collection now held at the Biblioteka Jagiellońska, Kraków."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "wikimedia-commons"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": 0.5,
+        "back": "mirror",
+        "yaw": null,
+        "fallbackWidthM": 1.2
+      },
+      "tags": [
+        "music",
+        "classical",
+        "serenade"
+      ],
+      "pageviews": null,
+      "importance": 0.85,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-09T00:00:00Z",
+      "updatedAt": "2026-10-10T00:13:30.595Z",
+      "audio": {
+        "currentVersionId": "wm-178606096-audio-v1",
+        "versions": [
+          {
+            "id": "wm-178606096-audio-v1",
+            "original": {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/2/24/Mozart_-_Eine_kleine_Nachtmusik_-_1._Allegro.ogg",
+              "bytes": 11470392,
+              "mime": "audio/ogg",
+              "seconds": 355.4
+            },
+            "encoded": {
+              "url": "/assets/wm-178606096/sound.mp3",
+              "bytes": 1920983,
+              "seconds": 120
+            },
+            "start": 0,
+            "seconds": 120,
+            "performers": "The Advent Chamber Orchestra, Roxanna Pavel Goldstein, musical director; recorded in the 2005-06 season.",
+            "credit": {
+              "author": "Advent Chamber Orchestra (Al Goldstein collection, Pandora Music repository, ibiblio.org)",
+              "license": {
+                "name": "CC BY-SA 2.0",
+                "url": "https://creativecommons.org/licenses/by-sa/2.0"
+              },
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Mozart_-_Eine_kleine_Nachtmusik_-_1._Allegro.ogg"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-09T00:00:00Z",
+              "note": "Commons API extmetadata: LicenseShortName 'CC BY-SA 2.0'; Artist 'Wolfgang Amadeus Mozart' (composer field); Credit 'The Al Goldstein collection in the Pandora Music repository at ibiblio.org.'; ImageDescription 'Selections from the season 05-06 of the Advent Chamber Orchestra, Roxanna Pavel Goldstein, Musical Director, Elias Goldstein, Managing Director.'; DateTimeOriginal 2005; Permission: EFF Open Audio License, treated as interchangeable with CC BY-SA 2.0. Attribution and share-alike required. Duration from API metadata: 355.41 s (first movement, Allegro)."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "wikimedia-commons"
+          }
+        ]
+      }
+    },
+    {
+      "id": "wm-180634712",
+      "kind": "image",
+      "title": "Symphony No. 5 in C minor",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "Ludwig van Beethoven",
+          "slug": null,
+          "wikidataQid": "Q255",
+          "wikipediaUrl": null,
+          "birthYear": 1770,
+          "deathYear": 1827,
+          "role": "composer"
+        }
+      ],
+      "date": {
+        "year": 1808,
+        "month": 12,
+        "day": 22,
+        "yearStart": 1804,
+        "yearEnd": 1808,
+        "label": "22 December 1808 (premiere, Theater an der Wien); composed 1804-1808",
+        "precision": "circa"
+      },
+      "madeIn": {
+        "name": "Vienna",
+        "region": null,
+        "country": "Austria",
+        "point": {
+          "lat": 48.2082,
+          "lon": 16.3738
+        },
+        "wikidataQid": "Q1741"
+      },
+      "location": {
+        "name": "Berlin",
+        "region": null,
+        "country": "Germany",
+        "point": null,
+        "wikidataQid": null,
+        "institution": "Staatsbibliothek zu Berlin (autograph score)",
+        "inventoryNumber": "Mus.ms.autogr. Beethoven 8"
+      },
+      "culture": "German / Austrian",
+      "movement": null,
+      "periodSlug": null,
+      "medium": "Symphony for orchestra; autograph score, ink on paper",
+      "materials": [
+        "ink",
+        "paper"
+      ],
+      "genre": [
+        "music"
+      ],
+      "subjects": [
+        "music",
+        "classical",
+        "symphony"
+      ],
+      "physical": {
+        "widthCm": null,
+        "heightCm": null,
+        "depthCm": null,
+        "weightKg": null
+      },
+      "description": "Beethoven worked on his Fifth Symphony between 1804 and 1808, in the years when his deafness was becoming impossible to hide. It was first played on 22 December 1808 at the Theater an der Wien in Vienna, in a freezing hall, as part of a four-hour concert of his new music. The opening, three short notes and a long one hammered out by the whole orchestra, is the most famous beginning in music, and the symphony's journey from that C minor storm to a blazing C major finale with trombones and piccolo became the model for a century of symphonies that end in triumph. The page shown is the first leaf of Beethoven's own manuscript, kept at the Berlin State Library. The visitor hears the first movement, Allegro con brio, played by the Fulda Symphonic Orchestra under Simon Schindler in a 2002 recording the orchestra released into the public domain.",
+      "facts": [
+        "The 1808 premiere concert also introduced the Sixth Symphony, the Fourth Piano Concerto and the Choral Fantasy, with Beethoven himself at the piano.",
+        "Beethoven's secretary Anton Schindler claimed the composer said of the opening, 'Thus Fate knocks at the door', a story most scholars doubt.",
+        "The autograph score is one of the treasures of the Staatsbibliothek zu Berlin, which has digitised it page by page."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Symphony_No._5_(Beethoven)",
+      "wikidataQid": null,
+      "externalIds": {
+        "commons-curid": "180634712",
+        "commons-file": "Beethoven 5th Symphony Holograph manuscript.jpg"
+      },
+      "copyrighted": false,
+      "asset": {
+        "kind": "image",
+        "currentVersionId": "wm-180634712-v1",
+        "versions": [
+          {
+            "id": "wm-180634712-v1",
+            "original": {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Beethoven_5th_Symphony_Holograph_manuscript.jpg",
+              "width": 1200,
+              "height": 873,
+              "bytes": 144590,
+              "mime": "image/jpeg"
+            },
+            "rungs": [
+              {
+                "width": 1024,
+                "height": 745,
+                "url": "/assets/wm-180634712/1024.jpg",
+                "bytes": 144590
+              }
+            ],
+            "loop": null,
+            "credit": {
+              "author": "Ludwig van Beethoven (autograph); reproduction via IMSLP, uploaded under CC BY-SA 4.0",
+              "license": {
+                "name": "CC BY-SA 4.0",
+                "url": "https://creativecommons.org/licenses/by-sa/4.0"
+              },
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Beethoven_5th_Symphony_Holograph_manuscript.jpg"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-09T00:00:00Z",
+              "note": "First page of Beethoven's autograph score of the Fifth Symphony, showing the 'Allegro con brio' heading and the famous four-note opening across the full orchestral system. The autograph is held by the Staatsbibliothek zu Berlin (Mus.ms.autogr. Beethoven 8). Commons API extmetadata: LicenseShortName 'CC BY-SA 4.0'; Artist 'Beethoven'; Credit 'IMSLP'; ImageDescription 'Beethoven 5th Symphony Holograph manuscript 1807'. The uploader applied CC BY-SA 4.0 to the reproduction; the 1808 manuscript itself is public domain, so the image is free to use either way (attribute Beethoven / IMSLP / Staatsbibliothek zu Berlin). Resolution is modest (1200 px wide)."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "wikimedia-commons"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": 0.5,
+        "back": "mirror",
+        "yaw": null,
+        "fallbackWidthM": 1.2
+      },
+      "tags": [
+        "music",
+        "classical",
+        "symphony"
+      ],
+      "pageviews": null,
+      "importance": 0.95,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-09T00:00:00Z",
+      "updatedAt": "2026-10-10T00:13:33.327Z",
+      "audio": {
+        "currentVersionId": "wm-180634712-audio-v1",
+        "versions": [
+          {
+            "id": "wm-180634712-audio-v1",
+            "original": {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Ludwig_van_Beethoven_-_Symphonie_5_c-moll_-_1._Allegro_con_brio.ogg",
+              "bytes": 7242148,
+              "mime": "audio/ogg",
+              "seconds": 436
+            },
+            "encoded": {
+              "url": "/assets/wm-180634712/sound.mp3",
+              "bytes": 1920983,
+              "seconds": 120
+            },
+            "start": 0,
+            "seconds": 120,
+            "performers": "The Fulda Symphonic Orchestra conducted by Simon Schindler, recorded in the Grosser Saal of the Orangerie, Fulda, on 10 March 2002.",
+            "credit": {
+              "author": "Fulda Symphonic Orchestra, conducted by Simon Schindler",
+              "license": {
+                "name": "Public domain",
+                "url": null
+              },
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Ludwig_van_Beethoven_-_Symphonie_5_c-moll_-_1._Allegro_con_brio.ogg"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-09T00:00:00Z",
+              "note": "Commons API extmetadata: LicenseShortName 'Public domain'; UsageTerms 'Public domain'; Copyrighted 'False'; Artist 'user:OldakQuill' (uploader); Credit 'http://www-plan.cs.colorado.edu/henkel/fso/index-en.html' (the orchestra's free-download page); ImageDescription 'Performance / Conductor: Simon Schindler / Ensemble: Fulda Symphonic Orchestra / Location: Grosser Saal der Orangerie Fulda'; DateTimeOriginal 2002-03-10. The orchestra released these recordings into the public domain. Duration from API metadata: 436.02 s. Alternative on Commons with the same licence: Musopen's recording, File:Ludwig van Beethoven - symphony no. 5 in c minor, op. 67 - i. allegro con brio.ogg (curid 2993942, Public domain, performers not named)."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "wikimedia-commons"
+          }
+        ]
+      }
+    },
+    {
+      "id": "wm-166228094",
+      "kind": "image",
+      "title": "Nocturne in E-flat major, Op. 9 No. 2",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "Frédéric Chopin",
+          "slug": null,
+          "wikidataQid": "Q1268",
+          "wikipediaUrl": null,
+          "birthYear": 1810,
+          "deathYear": 1849,
+          "role": "composer"
+        }
+      ],
+      "date": {
+        "year": 1833,
+        "month": null,
+        "day": null,
+        "yearStart": 1830,
+        "yearEnd": 1833,
+        "label": "1833 (first edition, Paris; composed 1830-1832)",
+        "precision": "circa"
+      },
+      "madeIn": {
+        "name": "Paris",
+        "region": "Île-de-France",
+        "country": "France",
+        "point": {
+          "lat": 48.8566,
+          "lon": 2.3522
+        },
+        "wikidataQid": "Q90"
+      },
+      "location": {
+        "name": "Paris",
+        "region": null,
+        "country": "France",
+        "point": null,
+        "wikidataQid": null,
+        "institution": "Bibliothèque nationale de France (first-edition copy shown)",
+        "inventoryNumber": "Rés. F. 980"
+      },
+      "culture": "Polish / French",
+      "movement": null,
+      "periodSlug": null,
+      "medium": "Nocturne for solo piano; engraved first edition",
+      "materials": [
+        "ink",
+        "paper"
+      ],
+      "genre": [
+        "music"
+      ],
+      "subjects": [
+        "music",
+        "romantic",
+        "piano",
+        "nocturne"
+      ],
+      "physical": {
+        "widthCm": null,
+        "heightCm": null,
+        "depthCm": null,
+        "weightKg": null
+      },
+      "description": "Chopin wrote the three Nocturnes of Opus 9 between 1830 and 1832, in the years he left Warsaw for Vienna and then settled in Paris, and they were his first nocturnes to be published, in Leipzig and Paris in 1832-33. He dedicated them to Marie Pleyel, the pianist wife of his publisher and piano maker Camille Pleyel. The second, in E-flat major, is the most played piece he ever wrote: a slow waltz-like accompaniment under a singing melody that returns three times, each time more elaborately ornamented, in the manner of an Italian opera aria. It fixed the idea of the nocturne, a short night piece for piano, that John Field had invented. The sheet shown is the title page of the Paris first edition issued by Maurice Schlesinger. The visitor hears the nocturne played by Frank Lévy in a Musopen recording released into the public domain.",
+      "facts": [
+        "The nocturnes were printed by Kistner in Leipzig and Schlesinger in Paris in 1832-33, and by Wessel in London.",
+        "Chopin's pupils recorded many of his own improvised variants of the ornaments, so no two early editions agree on every note.",
+        "The dedicatee, Marie Pleyel (née Moke), was a celebrated virtuoso who had earlier been engaged to Berlioz."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Nocturnes,_Op._9_(Chopin)",
+      "wikidataQid": null,
+      "externalIds": {
+        "commons-curid": "166228094",
+        "commons-file": "Trois nocturnes pour le piano - Opera 9 - par Frédéric Chopin ; dédiés à Madame Camille Pleyel - btv1b525004199 (11 of 26).jpg"
+      },
+      "copyrighted": false,
+      "asset": {
+        "kind": "image",
+        "currentVersionId": "wm-166228094-v1",
+        "versions": [
+          {
+            "id": "wm-166228094-v1",
+            "original": {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/3/39/Trois_nocturnes_pour_le_piano_-_Opera_9_-_par_Fr%C3%A9d%C3%A9ric_Chopin_%3B_d%C3%A9di%C3%A9s_%C3%A0_Madame_Camille_Pleyel_-_btv1b525004199_%2811_of_26%29.jpg",
+              "width": 3983,
+              "height": 5211,
+              "bytes": 1824347,
+              "mime": "image/jpeg"
+            },
+            "rungs": [
+              {
+                "width": 1280,
+                "height": 1675,
+                "url": "/assets/wm-166228094/1280.jpg",
+                "bytes": 449957
+              },
+              {
+                "width": 3840,
+                "height": 5023,
+                "url": "/assets/wm-166228094/3840.jpg",
+                "bytes": 2310090
+              }
+            ],
+            "loop": null,
+            "credit": {
+              "author": "Maurice Schlesinger, Paris (publisher); scan by the Bibliothèque nationale de France (Gallica)",
+              "license": {
+                "name": "Public domain",
+                "url": null
+              },
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Trois_nocturnes_pour_le_piano_-_Opera_9_-_par_Fr%C3%A9d%C3%A9ric_Chopin_;_d%C3%A9di%C3%A9s_%C3%A0_Madame_Camille_Pleyel_-_btv1b525004199_(11_of_26).jpg"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-09T00:00:00Z",
+              "note": "Engraved title page of the French first edition, 'Trois Nocturnes pour le Piano dédiés à Madame Camille Pleyel par Frédéric Chopin, Oeuv. 9', published by Maurice Schlesinger in Paris in 1833, from the BnF copy (shelfmark Rés. F. 980) digitised on Gallica. Pages 1-10 of this 26-page set are binding and blank leaves; page 11 is the title page (checked by thumbnail). Commons API extmetadata: LicenseShortName 'Public domain'; Artist 'Chopin, Frédéric (1810-1849). Compositeur'; Credit 'Bibliothèque nationale de France'; ImageDescription '[3 nocturnes. Piano. CT 108-110] ... Éditeur : Maurice Schlesinger (Paris)'; DateTimeOriginal 1833."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "wikimedia-commons"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": 0.5,
+        "back": "mirror",
+        "yaw": null,
+        "fallbackWidthM": 1.2
+      },
+      "tags": [
+        "music",
+        "romantic",
+        "piano"
+      ],
+      "pageviews": null,
+      "importance": 0.8,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-09T00:00:00Z",
+      "updatedAt": "2026-10-10T00:13:43.878Z",
+      "audio": {
+        "currentVersionId": "wm-166228094-audio-v1",
+        "versions": [
+          {
+            "id": "wm-166228094-audio-v1",
+            "original": {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/8/82/Nocturne_in_E_flat_major%2C_Op._9_no._2.mp3",
+              "bytes": 5175969,
+              "mime": "audio/mpeg",
+              "seconds": 271.5
+            },
+            "encoded": {
+              "url": "/assets/wm-166228094/sound.mp3",
+              "bytes": 4345025,
+              "seconds": 271.5
+            },
+            "start": 0,
+            "seconds": null,
+            "performers": "Frank Lévy, piano; recorded for Musopen's 'Set Chopin Free' project, circa 2014.",
+            "credit": {
+              "author": "Frank Lévy, piano (Musopen)",
+              "license": {
+                "name": "CC0 1.0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Nocturne_in_E_flat_major,_Op._9_no._2.mp3"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-09T00:00:00Z",
+              "note": "Commons API extmetadata: LicenseShortName 'Public Domain'; UsageTerms 'Creative Commons Public Domain Dedication'; LicenseUrl (archived) https://creativecommons.org/licenses/publicdomain/; Credit 'This work comes from the non profit U.S. organization Musopen where it is available at the following link: https://musopen.org/music/108-nocturnes-op-9/'; ImageDescription 'The Nocturne Op. 9 no. 2, in E flat major, performed by Frank Levy'. Same performance also on Commons as a 62 MB FLAC, File:Chopin - Nocturne No. 2 in E-flat major, Op. 9 No. 2 (Frank Levy).flac (curid 155173375, LicenseShortName 'Public domain', Artist 'Frédéric Chopin / Frank Lévy', Credit: Musopen Kickstarter 'Set Chopin Free'). A further CC0 Musopen MP3 of the same nocturne with unnamed performer exists as File:Nocturne Op. 9 no. 2 in E flat major.mp3 (curid 67535725). Duration from API metadata: 271.49 s."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "wikimedia-commons"
+          }
+        ]
+      }
+    },
+    {
+      "id": "wm-8853276",
+      "kind": "image",
+      "title": "'Au clair de la lune' phonautogram",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "Édouard-Léon Scott de Martinville",
+          "slug": null,
+          "wikidataQid": null,
+          "wikipediaUrl": null,
+          "birthYear": 1817,
+          "deathYear": 1879,
+          "role": "inventor"
+        }
+      ],
+      "date": {
+        "year": 1860,
+        "month": 4,
+        "day": 9,
+        "yearStart": 1860,
+        "yearEnd": 1860,
+        "label": "9 April 1860 (date written on the phonautogram sheet)",
+        "precision": "year"
+      },
+      "madeIn": {
+        "name": "Paris",
+        "region": "Île-de-France",
+        "country": "France",
+        "point": {
+          "lat": 48.8566,
+          "lon": 2.3522
+        },
+        "wikidataQid": "Q90"
+      },
+      "location": {
+        "name": "Paris",
+        "region": null,
+        "country": "France",
+        "point": null,
+        "wikidataQid": null,
+        "institution": "Académie des sciences (the 1860 phonautogram sheets, deposited by Scott in 1861)",
+        "inventoryNumber": null
+      },
+      "culture": "French",
+      "movement": null,
+      "periodSlug": null,
+      "medium": "Phonautogram: sound-wave trace scratched by a stylus into lampblack on paper; recovered as audio in 2008",
+      "materials": [
+        "paper",
+        "lampblack"
+      ],
+      "genre": [
+        "music",
+        "technology"
+      ],
+      "subjects": [
+        "sound recording",
+        "invention",
+        "acoustics",
+        "music"
+      ],
+      "physical": {
+        "widthCm": null,
+        "heightCm": null,
+        "depthCm": null,
+        "weightKg": null
+      },
+      "description": "Seventeen years before Edison's phonograph, a Parisian typesetter and amateur scientist, Édouard-Léon Scott de Martinville, built a machine that wrote sound down. His phonautograph gathered sound in a horn, let it shake a membrane, and had a hog's bristle scratch the vibration into lampblack on paper turning on a cylinder. Scott wanted a way to read speech from the squiggle; he never imagined playing it back. On 9 April 1860 he sang a few seconds of the folk song 'Au clair de la lune' into the horn and dated the sheet. In 2008 the First Sounds group had the trace scanned at high resolution and turned back into sound by computer at Lawrence Berkeley National Laboratory, and the thin, wavering voice that emerged is the oldest recording of a human voice that can be recognised. The drawing shown is Scott's own sketch of his machine from his 1859 patent papers. The visitor hears the eleven-second 2008 recovery.",
+      "facts": [
+        "The sheet was deposited with the Académie des sciences in Paris in 1861 and lay unplayed for 147 years.",
+        "The first 2008 playback ran at the wrong speed and was taken for a girl's voice; correcting the cylinder speed revealed a slow male voice, probably Scott's own.",
+        "Scott patented the phonautograph on 25 March 1857; Edison's phonograph, the first machine that could play sound back, followed in 1877."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Phonautograph",
+      "wikidataQid": null,
+      "externalIds": {
+        "commons-curid": "8853276",
+        "commons-file": "Phonautograph - Scott 1859.jpg"
+      },
+      "copyrighted": false,
+      "asset": {
+        "kind": "image",
+        "currentVersionId": "wm-8853276-v1",
+        "versions": [
+          {
+            "id": "wm-8853276-v1",
+            "original": {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/0/09/Phonautograph_-_Scott_1859.jpg",
+              "width": 1200,
+              "height": 1212,
+              "bytes": 205797,
+              "mime": "image/jpeg"
+            },
+            "rungs": [
+              {
+                "width": 1024,
+                "height": 1034,
+                "url": "/assets/wm-8853276/1024.jpg",
+                "bytes": 205797
+              }
+            ],
+            "loop": null,
+            "credit": {
+              "author": "Édouard-Léon Scott de Martinville (drawing, 1859); from the certificate of addition to French patent no. 31470, preserved by INPI; scan via firstsounds.org",
+              "license": {
+                "name": "Public domain",
+                "url": null
+              },
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Phonautograph_-_Scott_1859.jpg"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-09T00:00:00Z",
+              "note": "Scott's own pen drawing of his phonautograph, the barrel-shaped horn, membrane and stylus writing on a soot-blackened paper wrapped round a hand-cranked cylinder, with his annotation 'Planche 1re annexée à ma demande du 29 juillet 1859 d'un certificat d'addition au brevet d'invention ... no 31470'. This is the model of the machine on which the 1860 'Au clair de la lune' sheet was made. Commons API extmetadata: LicenseShortName 'Public domain'; Artist 'Édouard-Léon Scott de Martinville (1817-1879)'; Credit 'Certificate of addition to Scott de Martinville's patent #31470 (dated 29 July 1859 and preserved by INPI, the French patent office). Downloaded from firstsounds.org'; ImageDescription 'A phonautograph drawn by Édouard-Léon Scott de Martinville'; DateTimeOriginal 1859. Licence doubt / substitution: an image of the 9 April 1860 'Au clair de la lune' phonautogram sheet itself was NOT found on Commons (searches for phonautogram 1860, Category:Phonautographs and Category:Édouard-Léon Scott de Martinville checked on 2026-10-09; the sheet is held by the Académie des sciences in Paris and First Sounds publishes scans on firstsounds.org, but not under a licence verified here). The only actual Scott trace on Commons is File:The phonautogram of Notes played on a guitar.png (curid 97906182, CC0, 1440x963, 1853-54 guitar notes, a low-quality video-frame reproduction) and a tiny 83x764 detail of an 1859 trace, File:Phonautogram - Scott 1859.jpg (curid 8853442, Public domain). Swap in a scan of the 1860 sheet if one with a verified licence is obtained."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "wikimedia-commons"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": 0.5,
+        "back": "mirror",
+        "yaw": null,
+        "fallbackWidthM": 1.2
+      },
+      "tags": [
+        "music",
+        "sound recording",
+        "invention",
+        "phonautograph"
+      ],
+      "pageviews": null,
+      "importance": 0.9,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-09T00:00:00Z",
+      "updatedAt": "2026-10-10T00:13:44.564Z",
+      "audio": {
+        "currentVersionId": "wm-8853276-audio-v1",
+        "versions": [
+          {
+            "id": "wm-8853276-audio-v1",
+            "original": {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Au_Clair_de_la_Lune_%281860%29.ogg",
+              "bytes": 102140,
+              "mime": "audio/ogg",
+              "seconds": 11.1
+            },
+            "encoded": {
+              "url": "/assets/wm-8853276/sound.mp3",
+              "bytes": 178511,
+              "seconds": 11.1
+            },
+            "start": 0,
+            "seconds": null,
+            "performers": "An unidentified singer, probably Scott himself, singing the folk song 'Au clair de la lune' in Paris on 9 April 1860; sound recovered from the paper trace by First Sounds in 2008.",
+            "credit": {
+              "author": "Édouard-Léon Scott de Martinville (recording, 9 April 1860); audio recovered by First Sounds (David Giovannoni, Patrick Feaster, Richard Martin, Meagan Hennessey) with Carl Haber and Earl Cornell at Lawrence Berkeley National Laboratory, March 2008",
+              "license": {
+                "name": "Public domain",
+                "url": null
+              },
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Au_Clair_de_la_Lune_(1860).ogg"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-09T00:00:00Z",
+              "note": "Commons API extmetadata: LicenseShortName 'Public domain'; UsageTerms 'Public domain'; Copyrighted 'False'; Artist 'Au Clair de la Lune is an old French folk song that is public domain / Song was sung and recorded on paper with a phonautograph in 1860 by Édouard-Léon Scott de Martinville / It was converted back to sound in 2008 by David Giovannoni's team at First Sounds.'; Credit 'Phonoautogram reconstructed as audio via https://www.firstsounds.org/sounds/ The original file is at: https://www.firstsounds.org/sounds/1860-Scott-Au-Clair-de-la-Lune.mp3'; ImageDescription 'An excerpt from the song \"Au clair de la lune\", originally recorded as a phonautogram on paper. As of May 2009, this is believed to be the oldest recognizable recording of a human voice in existence...'; DateTimeOriginal 'Recording: 9 April 1860 - Restoration: March 2008'. Commons tags the file PD as a pre-1926 sound recording. Licence doubt, minor: the derivative file File:Au Clair de la Lune (1860) new.ogg (curid 7155118, speed/pitch corrected, noise reduced) carries the note that the restored sound 'may fall under First Sounds licensing terms', which First Sounds states as Creative Commons Attribution ('These sounds are licensed under Creative Commons Attribution (by) license and may be redistributed or sampled; all we ask is that you provide First Sounds with a copy of your work'). Either way redistribution is permitted; credit First Sounds to be safe. A later 2009 restoration at corrected speed is File:1860-Scott-Au-Clair-de-la-Lune-05-09.ogg (curid 8859651, Public domain, 206,467 bytes). Duration from API metadata: 11.12 s; serve the whole file, perhaps looped."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "wikimedia-commons"
+          }
+        ]
+      }
     },
     {
       "id": "eq-maxwell-equations",
@@ -5032,7 +8235,7 @@
       ],
       "physical": {
         "widthCm": 100,
-        "heightCm": 100,
+        "heightCm": 115,
         "depthCm": null,
         "weightKg": null
       },
@@ -5055,29 +8258,30 @@
             "original": {
               "url": "data/originals/eq-maxwell-equations/equation.svg",
               "width": 2560,
-              "height": 2560,
-              "bytes": 11741,
+              "height": 2944,
+              "bytes": 11739,
               "mime": "image/svg+xml",
-              "tex": "\\begin{aligned} \\nabla \\cdot \\mathbf{E} &= \\frac{\\rho}{\\varepsilon_0} \\\\[0.4em] \\nabla \\cdot \\mathbf{B} &= 0 \\\\[0.4em] \\nabla \\times \\mathbf{E} &= -\\frac{\\partial \\mathbf{B}}{\\partial t} \\\\[0.4em] \\nabla \\times \\mathbf{B} &= \\mu_0 \\mathbf{J} + \\mu_0 \\varepsilon_0 \\frac{\\partial \\mathbf{E}}{\\partial t} \\end{aligned}"
+              "tex": "\\begin{aligned} \\nabla \\cdot \\mathbf{E} &= \\frac{\\rho}{\\varepsilon_0} \\\\[0.4em] \\nabla \\cdot \\mathbf{B} &= 0 \\\\[0.4em] \\nabla \\times \\mathbf{E} &= -\\frac{\\partial \\mathbf{B}}{\\partial t} \\\\[0.4em] \\nabla \\times \\mathbf{B} &= \\mu_0 \\mathbf{J} + \\mu_0 \\varepsilon_0 \\frac{\\partial \\mathbf{E}}{\\partial t} \\end{aligned}",
+              "figure": "data/figures/maxwell-equations.svg"
             },
             "rungs": [
               {
                 "width": 640,
-                "height": 640,
+                "height": 736,
                 "url": "/assets/eq-maxwell-equations/640.jpg",
-                "bytes": 17827
+                "bytes": 19758
               },
               {
                 "width": 1280,
-                "height": 1280,
+                "height": 1472,
                 "url": "/assets/eq-maxwell-equations/1280.jpg",
-                "bytes": 44795
+                "bytes": 51147
               },
               {
                 "width": 2560,
-                "height": 2560,
+                "height": 2944,
                 "url": "/assets/eq-maxwell-equations/2560.jpg",
-                "bytes": 118673
+                "bytes": 137692
               }
             ],
             "loop": null,
@@ -5092,7 +8296,7 @@
             "contributed": {
               "by": null,
               "at": "2026-10-09T00:00:00Z",
-              "note": "Typeset by 20watts from the TeX in the record with MathJax; the rendering is CC0, the equation itself is not subject to copyright."
+              "note": "Typeset by 20watts from the TeX in the record with MathJax, with a figure drawn for this museum; the rendering is CC0, the equation itself is not subject to copyright."
             },
             "moderation": {
               "status": "approved",
@@ -5128,7 +8332,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-09T22:54:58.585Z"
+      "updatedAt": "2026-10-10T00:09:47.237Z"
     },
     {
       "id": "eq-boltzmann-entropy",
@@ -5188,7 +8392,7 @@
       ],
       "physical": {
         "widthCm": 100,
-        "heightCm": 60,
+        "heightCm": 85,
         "depthCm": null,
         "weightKg": null
       },
@@ -5211,29 +8415,30 @@
             "original": {
               "url": "data/originals/eq-boltzmann-entropy/equation.svg",
               "width": 2560,
-              "height": 1536,
+              "height": 2176,
               "bytes": 5538,
               "mime": "image/svg+xml",
-              "tex": "S = k \\log W"
+              "tex": "S = k \\log W",
+              "figure": "data/figures/boltzmann-entropy.svg"
             },
             "rungs": [
               {
                 "width": 640,
-                "height": 384,
+                "height": 544,
                 "url": "/assets/eq-boltzmann-entropy/640.jpg",
-                "bytes": 11880
+                "bytes": 24773
               },
               {
                 "width": 1280,
-                "height": 768,
+                "height": 1088,
                 "url": "/assets/eq-boltzmann-entropy/1280.jpg",
-                "bytes": 28727
+                "bytes": 62339
               },
               {
                 "width": 2560,
-                "height": 1536,
+                "height": 2176,
                 "url": "/assets/eq-boltzmann-entropy/2560.jpg",
-                "bytes": 70589
+                "bytes": 149583
               }
             ],
             "loop": null,
@@ -5248,7 +8453,7 @@
             "contributed": {
               "by": null,
               "at": "2026-10-09T00:00:00Z",
-              "note": "Typeset by 20watts from the TeX in the record with MathJax; the rendering is CC0, the equation itself is not subject to copyright."
+              "note": "Typeset by 20watts from the TeX in the record with MathJax, with a figure drawn for this museum; the rendering is CC0, the equation itself is not subject to copyright."
             },
             "moderation": {
               "status": "approved",
@@ -5284,7 +8489,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-09T22:54:58.632Z"
+      "updatedAt": "2026-10-10T00:09:47.313Z"
     },
     {
       "id": "sf-f70edeefea0a49e1ae6b7f5be21b626d",
@@ -5472,6 +8677,202 @@
       "updatedAt": "2026-10-09T22:57:47.811Z"
     },
     {
+      "id": "wm-4647249",
+      "kind": "image",
+      "title": "Maple Leaf Rag",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "Scott Joplin",
+          "slug": null,
+          "wikidataQid": "Q208009",
+          "wikipediaUrl": null,
+          "birthYear": 1868,
+          "deathYear": 1917,
+          "role": "composer"
+        }
+      ],
+      "date": {
+        "year": 1899,
+        "month": 9,
+        "day": null,
+        "yearStart": 1899,
+        "yearEnd": 1899,
+        "label": "September 1899 (publication, Sedalia, Missouri)",
+        "precision": "year"
+      },
+      "madeIn": {
+        "name": "Sedalia",
+        "region": "Missouri",
+        "country": "United States",
+        "point": {
+          "lat": 38.7045,
+          "lon": -93.2283
+        },
+        "wikidataQid": null
+      },
+      "location": {
+        "name": "Washington, D.C.",
+        "region": null,
+        "country": "United States",
+        "point": null,
+        "wikidataQid": null,
+        "institution": "Library of Congress (first-edition copy shown)",
+        "inventoryNumber": "M31.J"
+      },
+      "culture": "American",
+      "movement": null,
+      "periodSlug": null,
+      "medium": "Rag for solo piano; printed sheet music",
+      "materials": [
+        "ink",
+        "paper"
+      ],
+      "genre": [
+        "music"
+      ],
+      "subjects": [
+        "music",
+        "ragtime",
+        "piano",
+        "american"
+      ],
+      "physical": {
+        "widthCm": null,
+        "heightCm": null,
+        "depthCm": null,
+        "weightKg": null
+      },
+      "description": "Scott Joplin, the son of a formerly enslaved railway labourer, was playing piano in the Maple Leaf Club in Sedalia, Missouri, when the local music dealer John Stark published his 'Maple Leaf Rag' in September 1899. Joplin's contract gave him a royalty of one cent a copy, unusual for a Black composer at the time, and the piece went on to sell hundreds of thousands of copies, the first instrumental sheet music to do so. Its four sixteen-bar strains, with a syncopated right hand bouncing over a steady marching left hand, became the pattern for classic ragtime and the first distinctly American popular music to spread around the world. The cover shown is the 1899 Sedalia first edition. The visitor hears the United States Marine Band's 1906 recording, among the earliest ever made of the piece, which as a pre-1926 federal recording is in the public domain.",
+      "facts": [
+        "Joplin's royalty contract with Stark, signed on 10 August 1899, is one of the earliest surviving royalty agreements for a Black American composer.",
+        "Joplin himself recorded the rag on piano rolls in 1916, a year before his death, when illness had already affected his playing.",
+        "The rag was published in Sedalia; Stark moved his firm to St. Louis the next year as sales took off."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Maple_Leaf_Rag",
+      "wikidataQid": null,
+      "externalIds": {
+        "commons-curid": "4647249",
+        "commons-file": "Maple Leaf Rag 1st ed.jpg"
+      },
+      "copyrighted": false,
+      "asset": {
+        "kind": "image",
+        "currentVersionId": "wm-4647249-v1",
+        "versions": [
+          {
+            "id": "wm-4647249-v1",
+            "original": {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Maple_Leaf_Rag_1st_ed.jpg",
+              "width": 1024,
+              "height": 1250,
+              "bytes": 373461,
+              "mime": "image/jpeg"
+            },
+            "rungs": [
+              {
+                "width": 1024,
+                "height": 1250,
+                "url": "/assets/wm-4647249/1024.jpg",
+                "bytes": 373461
+              }
+            ],
+            "loop": null,
+            "credit": {
+              "author": "John Stark & Son, Sedalia, Missouri (publisher, 1899); scan from the Library of Congress",
+              "license": {
+                "name": "Public domain",
+                "url": null
+              },
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Maple_Leaf_Rag_1st_ed.jpg"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-09T00:00:00Z",
+              "note": "Cover of the first edition of Scott Joplin's 'Maple Leaf Rag', published by John Stark & Son in Sedalia, Missouri, in 1899, from the Library of Congress copy (call number M31.J). Commons API extmetadata: LicenseShortName 'Public domain'; Artist 'Scott Joplin'; Credit 'Library of Congress Call Number M31.J case'; ImageDescription '\"Maple Leaf Rag\" first edition sheet music. Cover page: part 1 of 4.'; DateTimeOriginal 1899. Published in the United States in 1899, so public domain. A smaller alternative scan of the same cover is File:MapleLeafSedaliaPrinting99.jpg (curid 4100147, 467x600)."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "wikimedia-commons"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": 0.5,
+        "back": "mirror",
+        "yaw": null,
+        "fallbackWidthM": 1.2
+      },
+      "tags": [
+        "music",
+        "ragtime",
+        "piano",
+        "american"
+      ],
+      "pageviews": null,
+      "importance": 0.8,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-09T00:00:00Z",
+      "updatedAt": "2026-10-10T00:13:45.790Z",
+      "audio": {
+        "currentVersionId": "wm-4647249-audio-v1",
+        "versions": [
+          {
+            "id": "wm-4647249-audio-v1",
+            "original": {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/3/3a/1906_-_Scott_Joplin%27s_Maple_Leaf_Rag_%281899%29_played_by_the_United_States_Marine_Band.ogg",
+              "bytes": 1840346,
+              "mime": "audio/ogg",
+              "seconds": 114.8
+            },
+            "encoded": {
+              "url": "/assets/wm-4647249/sound.mp3",
+              "bytes": 1837809,
+              "seconds": 114.8
+            },
+            "start": 0,
+            "seconds": null,
+            "performers": "The United States Marine Band, 'The President's Own', in an acoustic recording made in 1906, one of the earliest recordings of the piece.",
+            "credit": {
+              "author": "United States Marine Band (1906 acoustic recording)",
+              "license": {
+                "name": "Public domain",
+                "url": null
+              },
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:1906_-_Scott_Joplin%27s_Maple_Leaf_Rag_(1899)_played_by_the_United_States_Marine_Band.ogg"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-09T00:00:00Z",
+              "note": "Commons API extmetadata: LicenseShortName 'Public domain'; UsageTerms 'Public domain'; Copyrighted 'False'; Credit 'https://archive.org/details/UnitedStatesMarineBand' plus citations to Berlin, King of Ragtime (1994) and Jasen's discography of 78 rpm Joplin recordings; ImageDescription 'A 1906 recording of American composer Scott Joplin's Maple Leaf Rag (1899) played by the United States Marine Band. This is one of the earliest known recordings of this work ... Converted from MP3 to Ogg Vorbis with a slight trim of the beginning and end by Major Bloodnok.'; Permission text includes 'This work is in the public domain in the United States because it was published ... before January 1, 1931' and the Creative Commons Public Domain Mark 1.0. Doubly public domain: a sound recording published before 1926 and a performance by a US federal military band. Duration from API metadata: 114.84 s. Alternative on Commons: Joplin's own 1916 piano roll (Uni-Record / Aeolian) rendered from a scanned roll to MIDI and then to audio, File:Maple leaf rag - played by Scott Joplin 1916 V2.ogg (curid 16836563, Public domain, 130 s); it is a synthesised rendering of the roll rather than a sound recording, which is why the Marine Band disc is used here."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "wikimedia-commons"
+          }
+        ]
+      }
+    },
+    {
       "id": "si-nasm_A19610048000",
       "kind": "model",
       "title": "1903 Wright Flyer",
@@ -5656,6 +9057,206 @@
       "updatedAt": "2026-10-09T19:22:50.300Z"
     },
     {
+      "id": "wm-200510653",
+      "kind": "image",
+      "title": "Clair de lune",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "Claude Debussy",
+          "slug": null,
+          "wikidataQid": "Q4700",
+          "wikipediaUrl": null,
+          "birthYear": 1862,
+          "deathYear": 1918,
+          "role": "composer"
+        }
+      ],
+      "date": {
+        "year": 1905,
+        "month": null,
+        "day": null,
+        "yearStart": 1890,
+        "yearEnd": 1905,
+        "label": "1905 (publication, Paris; first drafted about 1890)",
+        "precision": "circa"
+      },
+      "madeIn": {
+        "name": "Paris",
+        "region": "Île-de-France",
+        "country": "France",
+        "point": {
+          "lat": 48.8566,
+          "lon": 2.3522
+        },
+        "wikidataQid": "Q90"
+      },
+      "location": {
+        "name": null,
+        "region": null,
+        "country": null,
+        "point": null,
+        "wikidataQid": null,
+        "institution": null,
+        "inventoryNumber": null
+      },
+      "culture": "French",
+      "movement": null,
+      "periodSlug": null,
+      "medium": "Piece for solo piano, third movement of the Suite bergamasque; engraved first edition",
+      "materials": [
+        "ink",
+        "paper"
+      ],
+      "genre": [
+        "music"
+      ],
+      "subjects": [
+        "music",
+        "piano",
+        "impressionism"
+      ],
+      "physical": {
+        "widthCm": null,
+        "heightCm": null,
+        "depthCm": null,
+        "weightKg": null
+      },
+      "description": "Debussy sketched the four pieces of his Suite bergamasque around 1890, when he was twenty-eight and almost unknown, but he put them aside. Fifteen years later, now famous for Pelléas et Mélisande and La mer, he was persuaded by the publisher Fromont to revise and release them, and the suite appeared in Paris in 1905. The third piece, originally called 'Promenade sentimentale', was renamed 'Clair de lune' after a poem by Paul Verlaine in which masked revellers sing 'in the calm moonlight, sad and beautiful'. Its hushed opening in D-flat major, with chords that float rather than progress, became the best-known example of the new harmonic language later called impressionist, and one of the most loved piano pieces ever written. The page shown is the first page of the 1905 Fromont edition. The visitor hears the piece played by the Dutch pianist Laurens Goedhart, who released his 2011 recording under a Creative Commons Attribution licence.",
+      "facts": [
+        "The title comes from Verlaine's poem 'Clair de lune' in Fêtes galantes (1869), which Debussy also set twice as a song.",
+        "The word 'bergamasque' refers to a rustic dance from Bergamo mentioned in the same poem.",
+        "Debussy never recorded the piece; his few piano rolls, made in 1913, are of other works."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Suite_bergamasque",
+      "wikidataQid": null,
+      "externalIds": {
+        "commons-curid": "200510653",
+        "commons-file": "Clair de lune (Debussy) - first edition, 1905.jpg"
+      },
+      "copyrighted": false,
+      "asset": {
+        "kind": "image",
+        "currentVersionId": "wm-200510653-v1",
+        "versions": [
+          {
+            "id": "wm-200510653-v1",
+            "original": {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Clair_de_lune_%28Debussy%29_-_first_edition%2C_1905.jpg",
+              "width": 3256,
+              "height": 3946,
+              "bytes": 1931094,
+              "mime": "image/jpeg"
+            },
+            "rungs": [
+              {
+                "width": 1280,
+                "height": 1551,
+                "url": "/assets/wm-200510653/1280.jpg",
+                "bytes": 434953
+              },
+              {
+                "width": 2048,
+                "height": 2482,
+                "url": "/assets/wm-200510653/2048.jpg",
+                "bytes": 1931094
+              }
+            ],
+            "loop": null,
+            "credit": {
+              "author": "Claude Debussy (composer); E. Fromont, Paris (publisher, 1905)",
+              "license": {
+                "name": "Public domain",
+                "url": null
+              },
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Clair_de_lune_(Debussy)_-_first_edition,_1905.jpg"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-09T00:00:00Z",
+              "note": "First page of 'Clair de lune', third movement of the Suite bergamasque, cropped from a scan of the first edition published by E. Fromont, Paris, 1905. Commons API extmetadata: LicenseShortName 'Public domain'; Artist 'Claude Debussy'; Credit 'This image has been extracted from another file'; ImageDescription 'First page of Clair de lune, the third movement of Claude Debussy's Suite bergamasque, cropped from a scan of the first edition published by E. Fromont in Paris in 1905.'; DateTimeOriginal 1905. Debussy died in 1918, so the work and this 1905 printing are public domain worldwide."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "wikimedia-commons"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": 0.5,
+        "back": "mirror",
+        "yaw": null,
+        "fallbackWidthM": 1.2
+      },
+      "tags": [
+        "music",
+        "impressionism",
+        "piano"
+      ],
+      "pageviews": null,
+      "importance": 0.8,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-09T00:00:00Z",
+      "updatedAt": "2026-10-10T00:13:53.090Z",
+      "audio": {
+        "currentVersionId": "wm-200510653-audio-v1",
+        "versions": [
+          {
+            "id": "wm-200510653-audio-v1",
+            "original": {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/b/be/Clair_de_lune_%28Claude_Debussy%29_Suite_bergamasque.ogg",
+              "bytes": 15740765,
+              "mime": "audio/ogg",
+              "seconds": 304.1
+            },
+            "encoded": {
+              "url": "/assets/wm-200510653/sound.mp3",
+              "bytes": 4866341,
+              "seconds": 304.1
+            },
+            "start": 0,
+            "seconds": null,
+            "performers": "Laurens Goedhart, piano, recorded 20 August 2011.",
+            "credit": {
+              "author": "Laurens Goedhart, piano",
+              "license": {
+                "name": "CC BY 3.0",
+                "url": "https://creativecommons.org/licenses/by/3.0/"
+              },
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Clair_de_lune_(Claude_Debussy)_Suite_bergamasque.ogg"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-09T00:00:00Z",
+              "note": "Licence verified from the file page wikitext, which uses {{Copyright information|recording={{cc-by-3.0}}|musical composition={{PD-old-auto-expired|deathyear=1918}}}} and quotes the SoundCloud permission statement: 'Claude Debussy's Clair de Lune by Laurens Goedhart is licensed under a Creative Commons License' linking to creativecommons.org/licenses/by/3.0/. The Commons API extmetadata reports LicenseShortName 'Public domain' because the template summarises the composition rather than the recording; the recording itself is CC BY 3.0, so credit 'Laurens Goedhart' when serving it. extmetadata: Artist 'Claude Debussy'; Credit 'https://soundcloud.com/laurensgoedhart/claude-debussys-clair-de-lune'; ImageDescription '\"Clair de lune\" in the Suite bergamasque by Claude Debussy performed by Laurens Goedhart (pf) in 2011.'; DateTimeOriginal 2011-08-20. Duration from API metadata: 304.09 s."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "wikimedia-commons"
+          }
+        ]
+      }
+    },
+    {
       "id": "eq-mass-energy",
       "kind": "image",
       "title": "Mass–energy equivalence",
@@ -5713,7 +9314,7 @@
       ],
       "physical": {
         "widthCm": 100,
-        "heightCm": 60,
+        "heightCm": 85,
         "depthCm": null,
         "weightKg": null
       },
@@ -5736,29 +9337,30 @@
             "original": {
               "url": "data/originals/eq-mass-energy/equation.svg",
               "width": 2560,
-              "height": 1536,
+              "height": 2176,
               "bytes": 3688,
               "mime": "image/svg+xml",
-              "tex": "E = mc^2"
+              "tex": "E = mc^2",
+              "figure": "data/figures/mass-energy.svg"
             },
             "rungs": [
               {
                 "width": 640,
-                "height": 384,
+                "height": 544,
                 "url": "/assets/eq-mass-energy/640.jpg",
-                "bytes": 10922
+                "bytes": 20775
               },
               {
                 "width": 1280,
-                "height": 768,
+                "height": 1088,
                 "url": "/assets/eq-mass-energy/1280.jpg",
-                "bytes": 26218
+                "bytes": 51440
               },
               {
                 "width": 2560,
-                "height": 1536,
+                "height": 2176,
                 "url": "/assets/eq-mass-energy/2560.jpg",
-                "bytes": 64466
+                "bytes": 132516
               }
             ],
             "loop": null,
@@ -5773,7 +9375,7 @@
             "contributed": {
               "by": null,
               "at": "2026-10-09T00:00:00Z",
-              "note": "Typeset by 20watts from the TeX in the record with MathJax; the rendering is CC0, the equation itself is not subject to copyright."
+              "note": "Typeset by 20watts from the TeX in the record with MathJax, with a figure drawn for this museum; the rendering is CC0, the equation itself is not subject to copyright."
             },
             "moderation": {
               "status": "approved",
@@ -5809,7 +9411,208 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-09T22:54:58.678Z"
+      "updatedAt": "2026-10-10T00:09:47.546Z"
+    },
+    {
+      "id": "wm-6669356",
+      "kind": "image",
+      "title": "Caruso sings 'Vesti la giubba'",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "Enrico Caruso",
+          "slug": null,
+          "wikidataQid": null,
+          "wikipediaUrl": null,
+          "birthYear": 1873,
+          "deathYear": 1921,
+          "role": "singer"
+        }
+      ],
+      "date": {
+        "year": 1907,
+        "month": 3,
+        "day": 17,
+        "yearStart": 1907,
+        "yearEnd": 1907,
+        "label": "17 March 1907 (recording session, Victor Talking Machine Company)",
+        "precision": "year"
+      },
+      "madeIn": {
+        "name": "Camden",
+        "region": "New Jersey",
+        "country": "United States",
+        "point": {
+          "lat": 39.9259,
+          "lon": -75.1196
+        },
+        "wikidataQid": null
+      },
+      "location": {
+        "name": null,
+        "region": null,
+        "country": null,
+        "point": null,
+        "wikidataQid": null,
+        "institution": null,
+        "inventoryNumber": null
+      },
+      "culture": "Italian / American",
+      "movement": null,
+      "periodSlug": null,
+      "medium": "Acoustic 78 rpm gramophone recording; aria from Leoncavallo's Pagliacci (1892)",
+      "materials": [
+        "shellac"
+      ],
+      "genre": [
+        "music"
+      ],
+      "subjects": [
+        "music",
+        "opera",
+        "sound recording",
+        "phonograph"
+      ],
+      "physical": {
+        "widthCm": null,
+        "heightCm": null,
+        "depthCm": null,
+        "weightKg": null
+      },
+      "description": "The accomplishment here is not the aria but the record. On 17 March 1907 the Neapolitan tenor Enrico Caruso stood before a recording horn in the Victor Talking Machine Company's studio and sang 'Vesti la giubba', the clown Canio's lament from Leoncavallo's Pagliacci, in which he must put on his costume and make the audience laugh while his heart breaks. The disc is generally reckoned the first gramophone record to sell a million copies. Caruso's warm, powerful voice suited the crude acoustic process better than anyone else's, and his Victor Red Seal discs, sold at premium prices, persuaded the public that a phonograph belonged in the home. He became the first star made by recordings, earning more from records than from the stage. The photograph, from the Bain News Service, shows him listening to a Victrola. The visitor hears the 1907 recording itself, now in the public domain.",
+      "facts": [
+        "Caruso made his first records in a Milan hotel room in 1902 for the Gramophone Company; he recorded 'Vesti la giubba' three times, in 1902, 1904 and 1907.",
+        "His Victor contract eventually guaranteed him $100,000 a year, and his records are said to have earned him some two million dollars over his career.",
+        "All United States sound recordings made before 1923 entered the public domain on 1 January 2022 under the Music Modernization Act."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Vesti_la_giubba",
+      "wikidataQid": null,
+      "externalIds": {
+        "commons-curid": "6669356",
+        "commons-file": "Caruso with phonograph2.jpg"
+      },
+      "copyrighted": false,
+      "asset": {
+        "kind": "image",
+        "currentVersionId": "wm-6669356-v1",
+        "versions": [
+          {
+            "id": "wm-6669356-v1",
+            "original": {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Caruso_with_phonograph2.jpg",
+              "width": 3801,
+              "height": 5299,
+              "bytes": 8600546,
+              "mime": "image/jpeg"
+            },
+            "rungs": [
+              {
+                "width": 1280,
+                "height": 1785,
+                "url": "/assets/wm-6669356/1280.jpg",
+                "bytes": 345831
+              },
+              {
+                "width": 2048,
+                "height": 2855,
+                "url": "/assets/wm-6669356/2048.jpg",
+                "bytes": 8600546
+              }
+            ],
+            "loop": null,
+            "credit": {
+              "author": "Unknown photographer for Bain News Service; restored by Michel Vuijlsteke; Library of Congress, Prints and Photographs Division, ggbain.29837",
+              "license": {
+                "name": "Public domain",
+                "url": null
+              },
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Caruso_with_phonograph2.jpg"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-09T00:00:00Z",
+              "note": "Enrico Caruso listening to a Victrola, a glass negative from the Bain News Service collection at the Library of Congress, c. 1910s. Commons API extmetadata: LicenseShortName 'Public domain'; Artist 'Unknown photographer; Bain News Service, publisher. Restored by Michel Vuijlsteke'; Credit 'This image is available from the United States Library of Congress's Prints and Photographs division under the digital ID ggbain.29837'; ImageDescription 'Enrico Caruso with a \"Victrola\" brand phonograph. Glass negative.'; DateTimeOriginal 'no date recorded on caption card. c. 1910s.' The Library of Congress states there are no known restrictions on publication of the Bain collection. An unrestored copy of a similar negative is File:Enrico Caruso with Victrola Bain.jpg (curid 18405216), and a 1912-13 Victor Red Seal label of a Caruso disc is File:RedSealCarusoLucevan.jpg (curid 15209263, Public domain)."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "wikimedia-commons"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": 0.5,
+        "back": "mirror",
+        "yaw": null,
+        "fallbackWidthM": 1.2
+      },
+      "tags": [
+        "music",
+        "opera",
+        "recording",
+        "phonograph"
+      ],
+      "pageviews": null,
+      "importance": 0.8,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-09T00:00:00Z",
+      "updatedAt": "2026-10-10T00:13:57.463Z",
+      "audio": {
+        "currentVersionId": "wm-6669356-audio-v1",
+        "versions": [
+          {
+            "id": "wm-6669356-audio-v1",
+            "original": {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Vesti_La_Giubba.ogg",
+              "bytes": 2116093,
+              "mime": "audio/ogg",
+              "seconds": 194.4
+            },
+            "encoded": {
+              "url": "/assets/wm-6669356/sound.mp3",
+              "bytes": 3111331,
+              "seconds": 194.4
+            },
+            "start": 0,
+            "seconds": null,
+            "performers": "Enrico Caruso, tenor, with the Victor studio orchestra, recorded by the Victor Talking Machine Company on 17 March 1907.",
+            "credit": {
+              "author": "Enrico Caruso, tenor, with orchestra; Victor Talking Machine Company, recorded 17 March 1907",
+              "license": {
+                "name": "Public domain",
+                "url": null
+              },
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Vesti_La_Giubba.ogg"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-09T00:00:00Z",
+              "note": "Commons API extmetadata: LicenseShortName 'Public domain'; UsageTerms 'Public domain'; Copyrighted 'False'; the file page has no Information template, so Artist/Credit are empty in the API; the page wikitext reads: 'Recording of Enrico Caruso (who died in 1921). March 17, 1907 recording of \"Vesti La Giubba\" from \"I Pagliacci\". Source: https://archive.org/download/Caruso_part1/Caruso-IPagliacci-VestiLaGiubbaMarch171907a.mp3 ... Licence: Public domain' with the {{PD-old}} tag, and it is in Category:Audio files from Victor Records and Category:Music in 1907. A sound recording published in the United States in 1907 is public domain under the Music Modernization Act (all pre-1923 recordings entered the public domain on 1 January 2022). Duration from API metadata: 194.43 s."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "wikimedia-commons"
+          }
+        ]
+      }
     },
     {
       "id": "eq-einstein-field-equations",
@@ -5869,7 +9672,7 @@
       ],
       "physical": {
         "widthCm": 100,
-        "heightCm": 60,
+        "heightCm": 85,
         "depthCm": null,
         "weightKg": null
       },
@@ -5892,29 +9695,30 @@
             "original": {
               "url": "data/originals/eq-einstein-field-equations/equation.svg",
               "width": 2560,
-              "height": 1536,
+              "height": 2176,
               "bytes": 6745,
               "mime": "image/svg+xml",
-              "tex": "G_{\\mu\\nu} = \\frac{8\\pi G}{c^4}\\, T_{\\mu\\nu}"
+              "tex": "G_{\\mu\\nu} = \\frac{8\\pi G}{c^4}\\, T_{\\mu\\nu}",
+              "figure": "data/figures/einstein-field-equations.svg"
             },
             "rungs": [
               {
                 "width": 640,
-                "height": 384,
+                "height": 544,
                 "url": "/assets/eq-einstein-field-equations/640.jpg",
-                "bytes": 11759
+                "bytes": 28720
               },
               {
                 "width": 1280,
-                "height": 768,
+                "height": 1088,
                 "url": "/assets/eq-einstein-field-equations/1280.jpg",
-                "bytes": 30011
+                "bytes": 70701
               },
               {
                 "width": 2560,
-                "height": 1536,
+                "height": 2176,
                 "url": "/assets/eq-einstein-field-equations/2560.jpg",
-                "bytes": 76120
+                "bytes": 188496
               }
             ],
             "loop": null,
@@ -5929,7 +9733,7 @@
             "contributed": {
               "by": null,
               "at": "2026-10-09T00:00:00Z",
-              "note": "Typeset by 20watts from the TeX in the record with MathJax; the rendering is CC0, the equation itself is not subject to copyright."
+              "note": "Typeset by 20watts from the TeX in the record with MathJax, with a figure drawn for this museum; the rendering is CC0, the equation itself is not subject to copyright."
             },
             "moderation": {
               "status": "approved",
@@ -5965,7 +9769,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-09T22:54:58.726Z"
+      "updatedAt": "2026-10-10T00:09:47.620Z"
     },
     {
       "id": "sf-895fd0fbc7cc42aab8f3300a85420b91",
@@ -6223,7 +10027,7 @@
       ],
       "physical": {
         "widthCm": 100,
-        "heightCm": 60,
+        "heightCm": 85,
         "depthCm": null,
         "weightKg": null
       },
@@ -6246,29 +10050,30 @@
             "original": {
               "url": "data/originals/eq-schrodinger-equation/equation.svg",
               "width": 2560,
-              "height": 1536,
+              "height": 2176,
               "bytes": 6447,
               "mime": "image/svg+xml",
-              "tex": "i\\hbar\\,\\frac{\\partial}{\\partial t}\\Psi = \\hat{H}\\Psi"
+              "tex": "i\\hbar\\,\\frac{\\partial}{\\partial t}\\Psi = \\hat{H}\\Psi",
+              "figure": "data/figures/schrodinger-equation.svg"
             },
             "rungs": [
               {
                 "width": 640,
-                "height": 384,
+                "height": 544,
                 "url": "/assets/eq-schrodinger-equation/640.jpg",
-                "bytes": 13460
+                "bytes": 17272
               },
               {
                 "width": 1280,
-                "height": 768,
+                "height": 1088,
                 "url": "/assets/eq-schrodinger-equation/1280.jpg",
-                "bytes": 32442
+                "bytes": 44288
               },
               {
                 "width": 2560,
-                "height": 1536,
+                "height": 2176,
                 "url": "/assets/eq-schrodinger-equation/2560.jpg",
-                "bytes": 77306
+                "bytes": 113039
               }
             ],
             "loop": null,
@@ -6283,7 +10088,7 @@
             "contributed": {
               "by": null,
               "at": "2026-10-09T00:00:00Z",
-              "note": "Typeset by 20watts from the TeX in the record with MathJax; the rendering is CC0, the equation itself is not subject to copyright."
+              "note": "Typeset by 20watts from the TeX in the record with MathJax, with a figure drawn for this museum; the rendering is CC0, the equation itself is not subject to copyright."
             },
             "moderation": {
               "status": "approved",
@@ -6319,7 +10124,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-09T22:54:58.774Z"
+      "updatedAt": "2026-10-10T00:09:47.820Z"
     },
     {
       "id": "wm-14902369",
@@ -6695,7 +10500,7 @@
       ],
       "physical": {
         "widthCm": 100,
-        "heightCm": 60,
+        "heightCm": 85,
         "depthCm": null,
         "weightKg": null
       },
@@ -6718,29 +10523,30 @@
             "original": {
               "url": "data/originals/eq-shannon-entropy/equation.svg",
               "width": 2560,
-              "height": 1536,
+              "height": 2176,
               "bytes": 7485,
               "mime": "image/svg+xml",
-              "tex": "H = -\\sum_{i} p_i \\log_2 p_i"
+              "tex": "H = -\\sum_{i} p_i \\log_2 p_i",
+              "figure": "data/figures/shannon-entropy.svg"
             },
             "rungs": [
               {
                 "width": 640,
-                "height": 384,
+                "height": 544,
                 "url": "/assets/eq-shannon-entropy/640.jpg",
-                "bytes": 10777
+                "bytes": 22766
               },
               {
                 "width": 1280,
-                "height": 768,
+                "height": 1088,
                 "url": "/assets/eq-shannon-entropy/1280.jpg",
-                "bytes": 27281
+                "bytes": 56438
               },
               {
                 "width": 2560,
-                "height": 1536,
+                "height": 2176,
                 "url": "/assets/eq-shannon-entropy/2560.jpg",
-                "bytes": 69875
+                "bytes": 141556
               }
             ],
             "loop": null,
@@ -6755,7 +10561,7 @@
             "contributed": {
               "by": null,
               "at": "2026-10-09T00:00:00Z",
-              "note": "Typeset by 20watts from the TeX in the record with MathJax; the rendering is CC0, the equation itself is not subject to copyright."
+              "note": "Typeset by 20watts from the TeX in the record with MathJax, with a figure drawn for this museum; the rendering is CC0, the equation itself is not subject to copyright."
             },
             "moderation": {
               "status": "approved",
@@ -6791,7 +10597,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-09T22:54:58.821Z"
+      "updatedAt": "2026-10-10T00:09:47.893Z"
     },
     {
       "id": "si-nasm_A19700102000",
@@ -6983,7 +10789,50 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-07T00:00:00Z",
-      "updatedAt": "2026-10-09T19:22:55.880Z"
+      "updatedAt": "2026-10-10T00:14:21.220Z",
+      "audio": {
+        "currentVersionId": "si-nasm_A19700102000-audio-v1",
+        "versions": [
+          {
+            "id": "si-nasm_A19700102000-audio-v1",
+            "original": {
+              "url": "https://apollojournals.org/alsj/a11/a11a1023114-4746.mp3",
+              "bytes": 15825187,
+              "mime": "audio/mpeg",
+              "seconds": 989
+            },
+            "encoded": {
+              "url": "/assets/si-nasm_A19700102000/sound.mp3",
+              "bytes": 1601244,
+              "seconds": 100
+            },
+            "start": 850,
+            "seconds": 100,
+            "performers": "Neil Armstrong and Buzz Aldrin aboard the lunar module Eagle; Charlie Duke, capsule communicator in Houston; NASA Public Affairs commentary.",
+            "credit": {
+              "author": "NASA; Apollo 11 Public Affairs loop recording, clip prepared by John Stoll, ACR Senior Technician, NASA Johnson Space Center, for the Apollo Lunar Surface Journal",
+              "license": {
+                "name": "Public domain (NASA)",
+                "url": "https://www.nasa.gov/nasa-brand-center/images-and-media/"
+              },
+              "sourcePage": "https://apollojournals.org/alsj/a11/a11.landing.html"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-09T00:00:00Z",
+              "note": "Apollo 11 landing, 20 July 1969. The clip is the NASA Public Affairs Office loop (air-to-ground plus PAO commentary) from mission time 102:31:14 to 102:47:46, as the file name indicates; it is linked from the Apollo Lunar Surface Journal landing page with the caption 'Audio Clip from the Public Affairs loop starting at about 102:31:14. Clip courtesy John Stoll, ACR Senior Technician at NASA Johnson.' Touchdown ('Contact Light') is at 102:45:40 and 'Houston, Tranquility Base here. The Eagle has landed.' at 102:45:58, i.e. roughly 866 s and 884 s into the clip; start=850 with a 100 s excerpt covers the final descent, the landing and Duke's 'You got a bunch of guys about to turn blue' reply. Duration (992 s) is derived from the time span in the file name and matches the 15,825,187-byte size at 128 kbit/s; verify after download. HTTP HEAD on 2026-10-09 returned 200, content-type audio/mpeg. The ALSJ was hosted at history.nasa.gov/alsj and www.nasa.gov/history/alsj; both now redirect to apollojournals.org, which is operated for the NASA History Office (the nasa.gov page 'The Apollo Lunar Surface Journal and Apollo Flight Journal' links to it). NASA audio is not protected by copyright. The journal's transcript and commentary text is copyright Eric M. Jones, but the audio is NASA's own recording. A 5.3 s NASA ringtone excerpt of the same exchange is also on Commons under Public domain / PD-USGov-NASA: File:Apollo 11 Eagle Has Landed.mp3 (curid 80595007, 26,388 bytes, Credit 'https://www.nasa.gov/connect/sounds/index.html'), usable as a fallback if the long clip is not wanted."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "nasa"
+          }
+        ]
+      }
     },
     {
       "id": "sf-acb3f8645a69493cb211a62b40d66aab",
@@ -7100,24 +10949,24 @@
               {
                 "quality": "thumb",
                 "url": "/assets/sf-acb3f8645a69493cb211a62b40d66aab/thumb.glb",
-                "bytes": 1213664,
-                "triangles": 162931,
+                "bytes": 793176,
+                "triangles": 79475,
                 "textureSize": 512,
                 "draco": true
               },
               {
                 "quality": "low",
                 "url": "/assets/sf-acb3f8645a69493cb211a62b40d66aab/low.glb",
-                "bytes": 1857712,
-                "triangles": 179721,
+                "bytes": 1796536,
+                "triangles": 162394,
                 "textureSize": 1024,
                 "draco": true
               },
               {
                 "quality": "medium",
                 "url": "/assets/sf-acb3f8645a69493cb211a62b40d66aab/medium.glb",
-                "bytes": 4286324,
-                "triangles": 279159,
+                "bytes": 4283752,
+                "triangles": 278460,
                 "textureSize": 2048,
                 "draco": true
               },
@@ -7186,7 +11035,50 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-09T19:22:59.854Z"
+      "updatedAt": "2026-10-10T00:14:28.703Z",
+      "audio": {
+        "currentVersionId": "sf-acb3f8645a69493cb211a62b40d66aab-audio-v1",
+        "versions": [
+          {
+            "id": "sf-acb3f8645a69493cb211a62b40d66aab-audio-v1",
+            "original": {
+              "url": "https://apollojournals.org/alsj/a16/a16a1244820.mp3",
+              "bytes": 1710393,
+              "mime": "audio/mpeg",
+              "seconds": 855.2
+            },
+            "encoded": {
+              "url": "/assets/sf-acb3f8645a69493cb211a62b40d66aab/sound.mp3",
+              "bytes": 1920983,
+              "seconds": 120
+            },
+            "start": 500,
+            "seconds": 120,
+            "performers": "John Young driving the Lunar Roving Vehicle; Charlie Duke filming and commentating; Tony England, capsule communicator in Houston. Apollo 16 EVA-1, 21 April 1972, Descartes highlands.",
+            "credit": {
+              "author": "NASA; Apollo 16 air-to-ground recording, clip prepared by Roland Speth for the Apollo Lunar Surface Journal",
+              "license": {
+                "name": "Public domain (NASA)",
+                "url": "https://www.nasa.gov/nasa-brand-center/images-and-media/"
+              },
+              "sourcePage": "https://apollojournals.org/alsj/a16/a16.trvlm1.html"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-09T00:00:00Z",
+              "note": "The Apollo 16 'Grand Prix': after returning from Station 2, Young drove the rover through pre-planned manoeuvres while Duke filmed with the 16-mm camera. The clip is the ALSJ 'MP3 Audio Clip (14 min 19 sec)' starting at mission time 124:48:20 on the Grand Prix page ('Except where noted, audio clips by Roland Speth'). Duke calls for the stop at 124:52:30 ('Okay, John. We need to stop out here for the Grand Prix'); the drive itself with Duke's commentary, 'Man, you are really bouncing!' ... 'He's got about two wheels on the ground. There's a big rooster tail out of all four wheels. And as he turns, he skids', is at 124:57:10-124:57:20, about 530-540 s into the clip; England ends the run at 124:58:54 ('Call that a complete Grand Prix'), about 634 s in. start=500 with a 120 s excerpt covers the run. Duration 859 s is from the page caption and matches the 1,710,393-byte size at 128 kbit/s. HTTP HEAD on 2026-10-09 returned 200, content-type audio/mpeg. The ALSJ was hosted at history.nasa.gov/alsj and www.nasa.gov/history/alsj; both now redirect to apollojournals.org, operated for the NASA History Office. NASA air-to-ground audio is not protected by copyright; the journal's transcript text is copyright Eric M. Jones but the audio is NASA's. The following clip, a16a1250236.mp3 (994,325 bytes, 8 min 19 s from 125:02:36), covers the drive back to the LM. The museum's rover model (sf-acb3f8645a69493cb211a62b40d66aab) is the Deutsches Museum replica of the LRV, not tied to one mission; the Apollo 16 Grand Prix, the best-known rover drive on record, is attached rather than an Apollo 17 traverse clip, which would be a less self-contained excerpt (Apollo 17 traverse audio exists on the same site, e.g. https://apollojournals.org/alsj/a17/A17A1212628.mp3 from a17.trvsta1.html, if a Cernan drive is preferred)."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "nasa"
+          }
+        ]
+      }
     },
     {
       "id": "wm-53469085",

@@ -131,6 +131,8 @@ export interface ImageVersion {
      * on a sheet and renders the ladder; the TeX is the work's true source.
      */
     tex?: string;
+    /** Provenance "typeset" only: an SVG in the repo (data/figures/...) drawn above the equation. */
+    figure?: string;
   };
   /** Ascending by width. Populated by the asset pipeline, served from our host. */
   rungs: ImageRung[];
@@ -180,6 +182,12 @@ export interface ModelVersion {
      * scan that is not upright or does not face +Z. Baked into the rungs.
      */
     rotation?: [number, number, number];
+    /**
+     * Names (substrings) of nodes to leave out of the rungs: the terrain
+     * around a monument, a mannequin in a scanned display. Baked by the
+     * pipeline; the original keeps them.
+     */
+    omit?: string[];
   };
   /**
    * Ascending by quality. Each rung is one .glb, Y-up, in metres, with the
@@ -203,6 +211,39 @@ export interface ModelVersion {
   provenance: string;
   /** A scan of the actual object, or an artist's reconstruction of its type. */
   representation: "scan" | "reconstruction";
+}
+
+/**
+ * A recording heard from where the work stands: a performance of a piece
+ * of music, or a recording that is itself the work (the first recording
+ * of a voice, the words from the Moon). The pipeline cuts the excerpt
+ * and serves it as mp3.
+ */
+export interface AudioVersion {
+  id: string;
+  original: {
+    url: string;
+    bytes: number | null;
+    mime: string;
+    seconds: number | null;
+  };
+  /** The served excerpt. Populated by the pipeline. */
+  encoded: { url: string; bytes: number | null; seconds: number | null } | null;
+  /** Seconds into the original where the excerpt starts, and its length (null: to the end). */
+  start: number;
+  seconds: number | null;
+  /** Who is heard, in prose: the orchestra and conductor, the singer, the astronaut. */
+  performers: string | null;
+  credit: Credit;
+  contributed: Contribution;
+  moderation: Moderation;
+  /** "wikimedia-commons" | "nasa" | "user-upload" ... Anything with a direct URL is downloaded into data/originals. */
+  provenance: string;
+}
+
+export interface AudioAsset {
+  currentVersionId: string;
+  versions: AudioVersion[];
 }
 
 export interface ImageAsset {
@@ -251,6 +292,8 @@ export interface DisplayHints {
   yaw: number | null;
   /** Width in metres to use when physical size is unknown. */
   fallbackWidthM: number;
+  /** Metres from the work at which its recording starts playing. Default 18. */
+  hearing?: number;
   /**
    * A work you walk into (a building): metres in front of its centre where
    * it is entered. The standing point, the hops and the placards go there,
@@ -293,6 +336,8 @@ export interface Artwork {
   /** Still in copyright; display under fair use with a label. */
   copyrighted: boolean;
   asset: ImageAsset | ModelAsset;
+  /** A recording heard as the visitor approaches. */
+  audio?: AudioAsset;
   display: DisplayHints;
   tags: string[];
   /** Wikipedia pageviews over the trailing year; a popularity signal. */
@@ -352,6 +397,11 @@ export function onDisplay(artworks: Artwork[]): Artwork[] {
     if (next.length === shown.length) return next;
     shown = next;
   }
+}
+
+export function currentAudioVersion(a: Artwork): AudioVersion | null {
+  if (!a.audio) return null;
+  return a.audio.versions.find((v) => v.id === a.audio!.currentVersionId) ?? a.audio.versions[0] ?? null;
 }
 
 export function currentImageVersion(a: Artwork): ImageVersion | null {

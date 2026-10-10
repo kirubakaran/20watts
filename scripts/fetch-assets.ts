@@ -19,6 +19,11 @@
  *    the record's physical size, and rendered into a ladder of JPEG widths.
  *    The SVG is kept in data/originals/<artwork id>/equation.svg.
  *
+ *  Recordings (`audio` on a record), any provenance with a direct URL:
+ *    the original is downloaded into data/originals/<artwork id>/ and
+ *    ffmpeg cuts the excerpt (`start`, `seconds`), fades it in and out,
+ *    and writes it as sound.mp3. Needs ffmpeg and ffprobe on the PATH.
+ *
  *  Images from a file, provenance "screenshot" or "user-upload":
  *    the source png or jpg is read from data/originals/<artwork id>/ and
  *    resized into a ladder of JPEG widths.
@@ -60,7 +65,7 @@ import { execFile } from "node:child_process";
 import { promisify } from "node:util";
 
 const run = promisify(execFile);
-import type { Artwork, Collection, ImageRung, ImageVersion, ModelRung, ModelVersion } from "../src/data/types";
+import type { Artwork, AudioVersion, Collection, ImageRung, ImageVersion, ModelRung, ModelVersion } from "../src/data/types";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
 const COLLECTION = path.join(ROOT, "src/data/collection.json");
@@ -115,8 +120,9 @@ async function thumbInfo(title: string, width: number): Promise<{ url: string; w
   const realWidth = real?.[1] ? Number(real[1]) : info.thumbwidth;
   let url = info.thumburl.split("?")[0]!;
   // A png (or tiff, svg) source renders png thumbnails, many times the size of
-  // a jpeg; appending .jpg asks Commons for a jpeg rendering instead.
-  if (!/\.jpe?g$/i.test(url)) url += ".jpg";
+  // a jpeg; appending .jpg asks Commons for a jpeg rendering instead. When
+  // Commons hands back the original itself (a small file), it is used as is.
+  if (url.includes("/thumb/") && !/\.jpe?g$/i.test(url)) url += ".jpg";
   return { url, width: realWidth, height: Math.round((info.thumbheight / info.thumbwidth) * realWidth) };
 }
 
@@ -128,7 +134,7 @@ async function fetchCommonsImage(artId: string, version: { original: { url: stri
     if (w >= version.original.width) break;
     const t = await thumbInfo(title, w);
     if (rungs.has(t.width)) continue;
-    const file = `${t.width}.jpg`;
+    const file = `${t.width}.${/\.png$/i.test(t.url) ? "png" : "jpg"}`;
     const bytes = await download(t.url, path.join(dir, file));
     rungs.set(t.width, { width: t.width, height: t.height, url: `/assets/${artId}/${file}`, bytes });
     console.log(`${artId}: ${t.width}px (${(bytes / 1024).toFixed(0)} KB)`);
@@ -136,8 +142,9 @@ async function fetchCommonsImage(artId: string, version: { original: { url: stri
   // A small original (under the first target width) is served as it is.
   if (rungs.size === 0) {
     const { width, height } = version.original;
-    const file = `${width}.jpg`;
-    const bytes = await download(version.original.url.split("?")[0]!, path.join(dir, file));
+    const url = version.original.url.split("?")[0]!;
+    const file = `${width}.${/\.png$/i.test(url) ? "png" : "jpg"}`;
+    const bytes = await download(url, path.join(dir, file));
     rungs.set(width, { width, height, url: `/assets/${artId}/${file}`, bytes });
     console.log(`${artId}: ${width}px, the original (${(bytes / 1024).toFixed(0)} KB)`);
   }
@@ -145,6 +152,39 @@ async function fetchCommonsImage(artId: string, version: { original: { url: stri
 }
 
 const IMAGE_WIDTHS = [640, 1280, 2560, 5120];
+
+// ---------------------------------------------------------------- recordings
+
+async function probeSeconds(file: string): Promise<number | null> {
+  try {
+    const { stdout } = await run("ffprobe", ["-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", file]);
+    const n = Number(stdout.trim());
+    return Number.isFinite(n) ? Math.round(n * 10) / 10 : null;
+  } catch {
+    return null;
+  }
+}
+
+async function buildAudio(artId: string, version: AudioVersion) {
+  const origDir = path.join(ORIGINALS_DIR, artId);
+  const name = decodeURIComponent(path.basename(new URL(version.original.url).pathname)).replace(/[^\w.-]+/g, "_");
+  const src = path.join(origDir, name);
+  version.original.bytes = await download(version.original.url, src);
+  version.original.seconds = (await probeSeconds(src)) ?? version.original.seconds;
+  const dir = path.join(OUT_DIR, artId);
+  await mkdir(dir, { recursive: true });
+  const out = path.join(dir, "sound.mp3");
+  const total = version.original.seconds;
+  const length = version.seconds ?? (total != null ? Math.max(0, total - version.start) : null);
+  const fade = length != null ? Math.min(3, length / 4) : 2;
+  const filters = [`afade=t=in:st=0:d=${fade}`, ...(length != null ? [`afade=t=out:st=${Math.max(0, length - fade)}:d=${fade}`] : [])];
+  const args = ["-y", "-v", "error", "-ss", String(version.start), ...(length != null ? ["-t", String(length)] : []), "-i", src,
+    "-vn", "-ac", "2", "-ar", "44100", "-af", filters.join(","), "-b:a", "128k", out];
+  await run("ffmpeg", args);
+  const bytes = (await stat(out)).size;
+  version.encoded = { url: `/assets/${artId}/sound.mp3`, bytes, seconds: await probeSeconds(out) };
+  console.log(`${artId}: sound.mp3 ${version.encoded.seconds ?? "?"} s (${(bytes / 1024).toFixed(0)} KB)`);
+}
 
 // ---------------------------------------------------------------- equations
 
@@ -186,9 +226,12 @@ async function buildTypeset(artId: string, version: ImageVersion, physical: { wi
   const aspect = physical.widthCm && physical.heightCm ? physical.heightCm / physical.widthCm : 0.62;
   const W = 2560;
   const H = Math.round(W * aspect);
+  // With a figure, the figure takes the upper part of the sheet and the equation the lower.
+  const figure = version.original.figure ? await readFile(path.join(ROOT, version.original.figure)) : null;
+  const eqBand = figure ? { top: H * 0.68, height: H * 0.24 } : { top: H * 0.225, height: H * 0.55 };
   // Render once, large, then fit.
   const probe = texToSvg(tex, 40);
-  const scale = Math.min((W * 0.78) / probe.width, (H * 0.55) / probe.height);
+  const scale = Math.min((W * 0.78) / probe.width, eqBand.height / probe.height);
   const { svg, width, height } = texToSvg(tex, 40 * scale);
   const origDir = path.join(ORIGINALS_DIR, artId);
   await mkdir(origDir, { recursive: true });
@@ -200,8 +243,16 @@ async function buildTypeset(artId: string, version: ImageVersion, physical: { wi
   version.original.bytes = Buffer.byteLength(svg);
 
   const glyphs = await sharp(Buffer.from(svg), { density: 72 }).png().toBuffer();
+  const layers = [{ input: glyphs, left: Math.round((W - width) / 2), top: Math.round(eqBand.top + (eqBand.height - height) / 2) }];
+  if (figure) {
+    const figW = Math.round(W * 0.62);
+    const fig = sharp(figure, { density: 300 }).resize({ width: figW });
+    const meta = await fig.toBuffer({ resolveWithObject: true });
+    const figH = Math.min(meta.info.height, Math.round(H * 0.56));
+    layers.unshift({ input: meta.data, left: Math.round((W - figW) / 2), top: Math.round(H * 0.07 + (H * 0.56 - figH) / 2) });
+  }
   const sheet = sharp({ create: { width: W, height: H, channels: 3, background: SHEET } })
-    .composite([{ input: glyphs, left: Math.round((W - width) / 2), top: Math.round((H - height) / 2) }])
+    .composite(layers)
     .jpeg({ quality: 92 });
   const full = await sheet.toBuffer();
   const dir = path.join(OUT_DIR, artId);
@@ -361,10 +412,15 @@ function eulerToQuat([xDeg, yDeg, zDeg]: [number, number, number]): [number, num
   ];
 }
 
-async function mergeParts(partFiles: string[], unitScale: number, dest: string, tier?: TierOptions, rotation?: [number, number, number]) {
+async function mergeParts(partFiles: string[], unitScale: number, dest: string, tier?: TierOptions, rotation?: [number, number, number], omit?: string[]) {
   const nio = await io();
   const out = new Document();
   for (const file of partFiles) mergeDocuments(out, await nio.read(file));
+  if (omit?.length) {
+    for (const node of out.getRoot().listNodes()) {
+      if (omit.some((o) => node.getName().includes(o))) node.setMesh(null);
+    }
+  }
 
   const root = out.getRoot();
   const holder = out.createNode("model");
@@ -477,7 +533,7 @@ async function buildLocalModel(artId: string, version: ModelVersion): Promise<bo
   let bounds = version.bounds;
   for (const quality of QUALITIES) {
     const file = `${quality}.glb`;
-    const r = await mergeParts([path.join(dir, src)], unitScale, path.join(OUT_DIR, artId, file), LOCAL_TIERS[quality], version.original.rotation);
+    const r = await mergeParts([path.join(dir, src)], unitScale, path.join(OUT_DIR, artId, file), LOCAL_TIERS[quality], version.original.rotation, version.original.omit);
     rungs.push({ quality, url: `/assets/${artId}/${file}`, bytes: r.bytes, triangles: r.triangles, textureSize: r.textureSize, draco: true });
     bounds = r.bounds;
     console.log(`${artId}: ${quality} ${(r.bytes / 1024).toFixed(0)} KB, ${r.triangles} tris, ${r.textureSize ?? "no"} px textures`);
@@ -527,6 +583,10 @@ async function main() {
     let touched = await buildAsset(art.id, art.asset, art);
     for (const [i, alt] of (art.alternates ?? []).entries()) {
       if (await buildAsset(`${art.id}/alt${i + 1}`, alt, art)) touched = true;
+    }
+    for (const version of art.audio?.versions ?? []) {
+      await buildAudio(art.id, version);
+      touched = true;
     }
     if (touched) art.updatedAt = new Date().toISOString();
   }

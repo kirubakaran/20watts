@@ -6,11 +6,12 @@ plane, no walls: forward is later in time, and a side quest stands off to
 the right of the work it belongs with. Works float at their true size, and
 you can walk behind one and see it mirrored.
 
-v1 holds fifty-three works. They run from an Acheulean
+v1 holds seventy-three works. They run from an Acheulean
 hand axe (a CC0 photogrammetry scan, 300,000 years old) and the Lion-man of
 Hohlenstein-Stadel through eleven cave and rock paintings from five
-continents and the Altamira ceiling, a scan of the Deutsches Museum's
-full-size replica hung overhead, the Venus of Willendorf, a Clovis point (another scan), a
+continents (with a scanned cast of a Lascaux wall beside the Lascaux
+photograph), the Altamira ceiling, a scan of the Deutsches Museum's
+full-size replica hung overhead, Stonehenge as a model you walk into, the Venus of Willendorf, a Clovis point (another scan), a
 proto-cuneiform tablet, the Nebra sky disc, an Exekias amphora, the
 Rosetta Stone, the Alexander Mosaic at its real 5.8 m, the Pantheon in Rome
 (a photogrammetry scan of the interior, 43 m across, that you walk into
@@ -18,7 +19,12 @@ through its door and stand under the oculus), the Chi Rho page of
 the Book of Kells, Fan Kuan's *Travelers Among Mountains and Streams*, a
 Benin plaque, Leonardo's *Last Supper* at 8.8 × 4.6 m, Lilienthal's 1894
 glider (a scan of the Deutsches Museum's replica, hung in the air), the 1903 Wright
-Flyer and the Apollo 11 command module *Columbia* as Smithsonian 3D scans, a
+Flyer and the Apollo 11 command module *Columbia* as Smithsonian 3D scans,
+and from India the Dancing Girl of Mohenjo-daro, a Tamil-Brahmi rock
+inscription near Madurai, the Iron Pillar of Delhi, a Padmapani from
+Ajanta, a palm-leaf Tirukkural, the Descent of the Ganges relief at
+Mamallapuram hung at its real 29 m, and the Brihadisvara Temple at
+Thanjavur, a
 Lunar Roving Vehicle (the Deutsches Museum's reconstruction of its replica), a
 1924 Ford Model T, bombe drums, the first transistor, the Apple I, a
 Cray-1, an Apple II, a Commodore 64 (a photogrammetry scan), an Apple IIc
@@ -30,7 +36,13 @@ equations hang among them as typeset sheets, from the Pythagorean theorem
 in Euclid's Elements to Shannon entropy, each in the year and place it
 was written down: Newton's gravitation, Euler's identity, Bayes' theorem,
 Maxwell's equations, Boltzmann's entropy, E = mc², Einstein's field
-equations and the Schrödinger equation.
+equations and the Schrödinger equation, plus Brahmagupta's rules for
+zero and Madhava's series for π from India. Nine pieces of music hang as
+their manuscripts or first editions and play as you approach, from a
+Brandenburg Concerto to Clair de lune, Joplin's Maple Leaf Rag, Caruso's
+1907 record and the 1860 phonautogram that is the oldest recording of a
+human voice; the Apollo 11 command module carries the landing's
+air-to-ground and the rover the Apollo 16 drive.
 
 ## Run it
 
@@ -96,6 +108,8 @@ src/world/axes.ts        year and side-quest labels stencilled on the floor
 src/world/exhibit.ts     one work in the world: image or glTF, placards, shadow
 src/assets/textures.ts   image ladder; sharper rungs load as you approach
 src/assets/models.ts     glb ladder, same idea for 3D scans
+src/assets/sound.ts      a recording heard from where a work stands, by distance
+data/figures/            the drawings on the equation sheets, SVG
 src/locomotion/player.ts desktop and VR movement
 src/locomotion/touch.ts  phone controls: drag to look, a stick, hop buttons
 src/locomotion/resume.ts remembers your place in the browser and restores it
@@ -240,10 +254,22 @@ shows which way it faces before you set `original.rotation`.
 
 An equation is an image record with provenance `typeset` and the TeX in
 `original.tex`; the pipeline sets it with MathJax on a sheet the shape of
-the record's physical size (100 × 60 cm for one line) and renders the
-ladder, keeping the SVG in `data/originals/<id>/`. Date it to when and
+the record's physical size (100 × 85 cm) under the drawing named in
+`original.figure`, an SVG in `data/figures/`, and renders the ladder,
+keeping the equation's SVG in `data/originals/<id>/`. Date it to when and
 where it was written down, and say in the description whose notation the
-sheet uses when that came later, as it did for Maxwell's. Leave `display.baseHeight` null unless a
+sheet uses when that came later, as it did for Maxwell's.
+
+A recording goes in `audio` on the record: the original's URL (Commons,
+NASA, anything direct), the excerpt's `start` and `seconds`, the
+performers, and its own credit, since a performance has a copyright of its
+own even when the piece is centuries old. The pipeline downloads the
+original into `data/originals/<id>/`, cuts and fades the excerpt with
+ffmpeg and serves it as `sound.mp3`. It plays from where the work stands,
+through the browser's spatial audio, starting as the visitor comes within
+`display.hearing` metres (18 by default) and stopping a few metres beyond,
+and the placard carries a "Sound:" line. A model's `original.omit` lists
+node names to leave out of the rungs, such as the land around a monument. Leave `display.baseHeight` null unless a
 work needs a particular height: a small upright object is then centred at
 1.4 m, just below the eyes, a small flat one a little lower so its top is
 seen, and anything over 1.2 m tall stands on the floor.
@@ -331,7 +357,28 @@ number 1976-817, CC BY-SA 4.0. The equation sheets are typeset by this
 project with MathJax and are CC0.
 The Pantheon interior is "The Pantheon Interior" by
 [artfletch](https://sketchfab.com/artfletch) on Sketchfab, CC BY 4.0, a
-photogrammetry scan with a reconstructed floor. The Last Supper image is public domain, via Wikimedia Commons. The Columbia
+photogrammetry scan with a reconstructed floor. Stonehenge is "Stonehenge
+England - VR" by [hermes3](https://sketchfab.com/hermes3) on Sketchfab, CC
+BY 4.0, an artist's model shown without its surrounding land; the Lascaux
+panel is "Scene with large deer from the Lascaux Cave" by
+[3dhdscan](https://sketchfab.com/3dhdscan), CC BY 4.0, a scan of the cast
+in the Anthropos Pavilion, Brno. The recordings are credited on each
+placard: the Advent Chamber Orchestra (CC BY-SA 2.0), John Harrison with
+the Wichita State University Chamber Players (CC BY-SA 4.0), the Fulda
+Symphonic Orchestra (public domain), Frank Lévy for Musopen (CC0),
+Laurens Goedhart (CC BY 3.0), the United States Marine Band and Enrico
+Caruso's 1907 Victor record (public domain), the First Sounds recovery of
+Scott de Martinville's phonautogram, and NASA's Apollo air-to-ground
+loops (public domain). The manuscript and title-page images are public
+domain scans from the Berlin State Library, the Bibliothèque nationale de
+France, the Library of Congress and Wikimedia Commons, except the
+Beethoven page (CC BY-SA 4.0 via IMSLP). The Indian works are Commons photographs: Gary Todd (CC0) for the Dancing
+Girl, Ms Sarah Welch (CC BY-SA 4.0) for the Arittapatti inscription, Aiwok
+(CC BY-SA 3.0) for the Iron Pillar, Anandajoti Bhikkhu (CC BY 2.0) for the
+Ajanta Padmapani, the Tamil Virtual Academy's public-domain scan of the
+Tirukkural leaf, Bernard Gagnon (CC BY-SA 3.0) for the Descent of the
+Ganges and Nandhinikandhasamy (CC BY-SA 4.0) for the Brihadisvara vimana.
+The Last Supper image is public domain, via Wikimedia Commons. The Columbia
 scan is CC0 from the Smithsonian Institution's Digitization Program Office.
 The Model T is based on "1924 Ford Model T 3d model with interior" by
 [shubhankar.arch.3d](https://sketchfab.com/shubhankar.arch.3d) on Sketchfab,

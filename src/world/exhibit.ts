@@ -21,7 +21,8 @@ import {
 } from "three";
 import { Text } from "troika-three-text";
 import type { Artwork } from "../data/types";
-import { baseHeightOf, currentImageVersion, currentModelVersion, imageDisplaySize, footprintOf } from "../data/types";
+import { baseHeightOf, currentAudioVersion, currentImageVersion, currentModelVersion, imageDisplaySize, footprintOf } from "../data/types";
+import { Sound } from "../assets/sound";
 import { ImageLadder } from "../assets/textures";
 import { ModelLadder } from "../assets/models";
 import { Motion } from "../assets/motion";
@@ -35,6 +36,9 @@ const PX_PER_RADIAN = 1600;
 /** A moving image starts playing inside this distance and stops again beyond the larger one. */
 const MOTION_NEAR = 14;
 const MOTION_FAR = 18;
+/** A recording starts at the record's hearing distance, or this, and stops a few metres further out. */
+const HEARING = 18;
+const HEARING_MARGIN = 5;
 
 let shadowTexture: CanvasTexture | null = null;
 function getShadowTexture(): CanvasTexture {
@@ -63,6 +67,13 @@ function contactShadow(width: number, depth: number): Mesh {
   m.position.y = 0.01;
   m.renderOrder = -1;
   return m;
+}
+
+function soundLine(a: Artwork): string {
+  const v = currentAudioVersion(a);
+  if (!v) return "";
+  const page = v.credit.sourcePage ? new URL(v.credit.sourcePage).hostname : v.provenance;
+  return `Sound: ${v.performers ?? v.credit.author ?? "unknown"} · ${v.credit.license.name} · ${page}`;
 }
 
 function creditLine(a: Artwork): string {
@@ -118,7 +129,8 @@ function makePlacard(a: Artwork, width: number): Group {
     a.description,
     "",
     creditLine(a),
-  ].join("\n");
+    soundLine(a),
+  ].filter((line, i, all) => line !== "" || all[i - 1] !== "").join("\n");
   body.font = FONT_REGULAR;
   body.fontSize = 0.028;
   body.lineHeight = 1.35;
@@ -143,6 +155,7 @@ export class Exhibit {
   private ladder: ImageLadder | ModelLadder | null = null;
   private imageMaterial: MeshBasicMaterial | null = null;
   private motion: Motion | null = null;
+  private sound: Sound | null = null;
   private modelRoot: Group | null = null;
   private readonly centre = new Vector3();
   /** Centre of the work in world space, fixed once built. */
@@ -171,6 +184,15 @@ export class Exhibit {
     if (artwork.kind === "image") this.buildImage();
     else this.buildModel();
     this.worldCentre.copy(this.group.position).add(this.centre);
+    const audio = currentAudioVersion(artwork);
+    if (audio) {
+      this.sound = new Sound(audio);
+      const node = this.sound.attach();
+      if (node) {
+        node.position.copy(this.centre);
+        this.group.add(node);
+      }
+    }
   }
 
   /** Whether the placards exist. They are built within reading distance only. */
@@ -305,8 +327,13 @@ export class Exhibit {
 
   /** Called every frame with the viewer's world position; upgrades the texture rung as they approach. */
   update(viewerWorldPos: Vector3) {
-    if (!this.ladder && !this.motion) return;
+    if (!this.ladder && !this.motion && !this.sound) return;
     const d = Math.max(viewerWorldPos.distanceTo(this.worldCentre), 0.5);
+    if (this.sound) {
+      const near = this.artwork.display.hearing ?? HEARING;
+      if (d < near && !this.sound.isPlaying) this.sound.play();
+      else if (d > near + HEARING_MARGIN && this.sound.isPlaying) this.sound.pause();
+    }
     if (this.ladder) {
       const desiredPx = Math.min((this.displayWidth / d) * PX_PER_RADIAN, this.qualityCap);
       // Hysteresis: only ask again when the need has grown by a quarter.
@@ -333,6 +360,8 @@ export class Exhibit {
   dispose() {
     this.setPlacards(false);
     this.motion?.dispose();
+    this.sound?.dispose();
+    this.sound = null;
     this.ladder?.dispose();
     this.ladder = null;
     this.motion = null;
