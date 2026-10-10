@@ -1,5 +1,5 @@
 /**
- * Picking things up, in VR. Squeeze the grip (or the trigger) with a hand
+ * Picking things up, in VR. Squeeze the grip with a hand
  * near a work that may be held and it comes into that hand; it follows the
  * hand's every turn until it is let go, then drifts back to its place in
  * under a second, so nothing is ever left lying about. Which works may be
@@ -40,6 +40,7 @@ export class Grabber {
     renderer: WebGLRenderer,
     player: Player,
     private readonly exhibitsNear: (x: number, z: number, radius: number) => Exhibit[],
+    onRead: () => void,
   ) {
     for (const i of [0, 1]) {
       const controller = renderer.xr.getController(i);
@@ -47,10 +48,10 @@ export class Grabber {
       const grab = () => this.grab(controller);
       const release = () => this.release(controller);
       controller.addEventListener("squeezestart", grab);
-      controller.addEventListener("selectstart", grab);
       controller.addEventListener("squeezeend", release);
-      controller.addEventListener("selectend", release);
       controller.addEventListener("disconnected", release);
+      // The trigger reads about the work in focus.
+      controller.addEventListener("selectstart", () => onRead());
     }
   }
 

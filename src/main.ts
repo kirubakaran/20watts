@@ -11,6 +11,7 @@ import { Player, type Action } from "./locomotion/player";
 import { clearPlace, restorePlace, trackPlace } from "./locomotion/resume";
 import { Navigator } from "./locomotion/navigate";
 import { Grabber } from "./locomotion/grab";
+import { Card } from "./world/card";
 import { buildEntrance, GATE_HALF_WIDTH, GATE_HEIGHT } from "./world/sign";
 import { hasTouch, setupTouch } from "./locomotion/touch";
 import { Tour } from "./world/tour";
@@ -112,7 +113,8 @@ const goToEntrance = () => entrance && player.teleport(entrance.x, entrance.z + 
 
 const tour = new Tour(visible, (id) => nav.goTo(player, id), document.getElementById("tour"));
 const act = (a: Action) => {
-  if (a === "tourNext") tour.step(1);
+  if (a === "read") { if (focus) card.toggle(focus.artwork, camera); else card.hide(); }
+  else if (a === "tourNext") tour.step(1);
   else if (a === "tourPrev") tour.step(-1);
   else if (a === "eraNext") nav.hopEra(player, 1);
   else if (a === "eraPrev") nav.hopEra(player, -1);
@@ -123,8 +125,44 @@ const act = (a: Action) => {
 };
 player.setActionHandler(act);
 if (touch) setupTouch(player, renderer.domElement, act);
-// In VR, small works can be picked up and turned in the hand.
-const grabber = new Grabber(renderer, player, (x, z, r) => streamer.exhibitsWithin(x, z, r));
+// In VR, small works can be picked up and turned in the hand; the trigger reads.
+const grabber = new Grabber(renderer, player, (x, z, r) => streamer.exhibitsWithin(x, z, r), () => act("read"));
+
+/**
+ * Focus: the work the visitor is looking at, nearest the centre of their
+ * view within a dozen metres. Its name tag comes forward; "read" opens the
+ * card for it.
+ */
+const card = new Card();
+scene.add(card.group);
+let focus: Exhibit | null = null;
+const lookDir = new Vector3();
+const toWork = new Vector3();
+function updateFocus(eye: Vector3) {
+  camera.getWorldDirection(lookDir);
+  let best: Exhibit | null = null;
+  let bestCost = Infinity;
+  // Sideways matters, up and down hardly: a small page below the gaze is still what you are looking at.
+  const lookYaw = Math.atan2(lookDir.x, lookDir.z);
+  for (const e of [...streamer.exhibitsWithin(eye.x, eye.z, 14), ...landmarks]) {
+    toWork.copy(e.worldCentre).sub(eye);
+    const d = toWork.length();
+    if (d < 0.3 || d > 40) continue;
+    let turn = Math.abs(Math.atan2(toWork.x, toWork.z) - lookYaw);
+    if (turn > Math.PI) turn = 2 * Math.PI - turn;
+    const tilt = Math.abs(Math.atan2(toWork.y, Math.hypot(toWork.x, toWork.z)) - Math.asin(Math.max(-1, Math.min(1, lookDir.y))));
+    // Inside a building: it is what you are looking at.
+    const inside = e.artwork.display.threshold != null && d < (e.artwork.display.threshold ?? 0);
+    if ((turn > 0.5 || tilt > 1.1) && !inside) continue;
+    const cost = inside ? 0 : turn + tilt * 0.25 + d * 0.01;
+    if (cost < bestCost) (bestCost = cost), (best = e);
+  }
+  if (best !== focus) {
+    focus?.setFocus(false);
+    best?.setFocus(true);
+    focus = best;
+  }
+}
 
 // Where to start, in order of precedence:
 //   ?spawn=x,z,yawDegrees   anywhere, for debugging
@@ -146,6 +184,8 @@ if (spawnParam && spawnParam !== "start") {
   goToEntrance();
 }
 const savePlace = trackPlace(player, stops);
+// ?read opens the card for whatever is in front on arrival, for checking renders.
+if (params.has("read")) setTimeout(() => act("read"), 2500);
 
 /** "newest" is the most recently added work; a number is the nearest year; anything else is an id. */
 function resolveAt(at: string): string {
@@ -249,6 +289,8 @@ renderer.setAnimationLoop((time) => {
   streamer.update(eye, dt);
   streamer.setNight(skyState.night);
   setAxesNight(axisCues, skyState.night);
+  updateFocus(eye);
+  card.update(dt, camera);
   for (const e of landmarks) {
     e.update(eye, dt);
     e.setNight(skyState.night);

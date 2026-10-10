@@ -22,11 +22,13 @@ export function setupTouch(player: Player, canvas: HTMLElement, onAction: (a: Ac
   // Look: one finger dragging on the canvas. Only the first finger steers.
   let lookId: number | null = null;
   let lastX = 0, lastY = 0;
+  let downX = 0, downY = 0, downAt = 0;
   canvas.addEventListener("pointerdown", (e) => {
     if (e.pointerType !== "touch" || lookId !== null) return;
     lookId = e.pointerId;
-    lastX = e.clientX;
-    lastY = e.clientY;
+    lastX = downX = e.clientX;
+    lastY = downY = e.clientY;
+    downAt = performance.now();
   });
   canvas.addEventListener("pointermove", (e) => {
     if (e.pointerId !== lookId) return;
@@ -36,7 +38,12 @@ export function setupTouch(player: Player, canvas: HTMLElement, onAction: (a: Ac
     lastX = e.clientX;
     lastY = e.clientY;
   });
-  const lookEnd = (e: PointerEvent) => { if (e.pointerId === lookId) lookId = null; };
+  const lookEnd = (e: PointerEvent) => {
+    if (e.pointerId !== lookId) return;
+    lookId = null;
+    // A tap, not a drag: read about the work in view.
+    if (Math.hypot(e.clientX - downX, e.clientY - downY) < 12 && performance.now() - downAt < 350) onAction("read");
+  };
   canvas.addEventListener("pointerup", lookEnd);
   canvas.addEventListener("pointercancel", lookEnd);
 

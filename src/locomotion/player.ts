@@ -5,7 +5,8 @@
  *  Desktop: click to capture the mouse, WASD to walk, Shift to run,
  *           [ and ] hop an era back or forward, , and . hop sideways,
  *           Home and End (or Shift with [ and ]) jump to the entrance and
- *           the latest era, T (Shift T) the next (previous) stop of the tour.
+ *           the latest era, T (Shift T) the next (previous) stop of the tour,
+ *           E reads about the work you are looking at.
  *  VR:      left thumbstick walks relative to where you look,
  *           right thumbstick snap-turns 30° per flick,
  *           A / B hop an era forward or back, X / Y hop sideways.
@@ -23,8 +24,8 @@ const EYE_HEIGHT = 1.65;
 const SNAP_ANGLE = Math.PI / 6;
 const DEADZONE = 0.2;
 
-export type Action = "eraNext" | "eraPrev" | "east" | "west" | "start" | "end" | "tourNext" | "tourPrev";
-const KEY_ACTIONS: Record<string, Action> = { BracketRight: "eraNext", BracketLeft: "eraPrev", Period: "east", Comma: "west", Home: "start", End: "end", KeyT: "tourNext" };
+export type Action = "eraNext" | "eraPrev" | "east" | "west" | "start" | "end" | "tourNext" | "tourPrev" | "read";
+const KEY_ACTIONS: Record<string, Action> = { BracketRight: "eraNext", BracketLeft: "eraPrev", Period: "east", Comma: "west", Home: "start", End: "end", KeyT: "tourNext", KeyE: "read" };
 /** Quest Touch button indices: 4 is A or X, 5 is B or Y. */
 const XR_ACTIONS: Record<string, Action> = { "right:4": "eraNext", "right:5": "eraPrev", "left:4": "west", "left:5": "east" };
 

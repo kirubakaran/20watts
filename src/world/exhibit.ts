@@ -45,6 +45,7 @@ const FONT_BOLD = "/fonts/inter-600.woff";
 const INK_DAY = new Color(0x2a2824), INK_NIGHT = new Color(0xf3eee3);
 const BODY_DAY = new Color(0x4a4740), BODY_NIGHT = new Color(0xd9d3c6);
 const tmpColour = new Color();
+const tagPos = new Vector3();
 
 /** Screen pixels a 1 m object at 1 m should get before we ask for a sharper rung. */
 const PX_PER_RADIAN = 1600;
@@ -120,60 +121,68 @@ function sizeLine(a: Artwork): string {
   return parts.join(" × ") + (s !== 1 ? `, shown at ${Number.isInteger(s) ? s : s.toFixed(1)}×` : "");
 }
 
-function makePlacard(a: Artwork, width: number): Group {
-  const g = new Group();
+/** The words of a placard, in parts, so the card can set each in its own voice. */
+export function placardLines(a: Artwork): { title: string; meta: string; body: string; credit: string } {
   const creators = a.creators.map((c) => {
     const life =
-      c.birthYear && c.deathYear ? ` (${c.birthYear}–${c.deathYear})`
+      c.birthYear && c.deathYear ? ` (${c.birthYear}\u2013${c.deathYear})`
       : c.birthYear ? ` (b. ${c.birthYear})`
       : c.deathYear ? ` (d. ${c.deathYear})`
       : "";
     return `${c.name}${life}`;
   }).join(", ");
   const place = [a.madeIn.name, a.madeIn.country].filter(Boolean).join(", ");
-
-  const title = new Text();
-  // Single-sided: the placard on the far side of a work is never seen reversed through its back.
-  title.material.side = FrontSide;
-  title.text = a.title + (a.titleOriginal && a.titleOriginal !== a.title ? `  ·  ${a.titleOriginal}` : "");
-  title.font = FONT_BOLD;
-  title.fontSize = 0.05;
-  title.maxWidth = width;
-  title.color = 0x2a2824;
-  title.anchorX = "left";
-  title.anchorY = "top";
-  g.add(title);
-
-  const body = new Text();
-  body.material.side = FrontSide;
-  body.text = [
+  const title = a.title + (a.titleOriginal && a.titleOriginal !== a.title ? `  \u00b7  ${a.titleOriginal}` : "");
+  const meta = [
     creators,
-    [a.date.label, place].filter(Boolean).join("  ·  "),
-    [a.medium, sizeLine(a)].filter(Boolean).join("  ·  "),
+    [a.date.label, place].filter(Boolean).join("  \u00b7  "),
+    [a.medium, sizeLine(a)].filter(Boolean).join("  \u00b7  "),
     a.location.institution ?? "",
-    "",
-    a.description,
-    "",
-    creditLine(a),
-    soundLine(a),
-  ].filter((line, i, all) => line !== "" || all[i - 1] !== "").join("\n");
-  body.font = FONT_REGULAR;
-  body.fontSize = 0.028;
-  body.lineHeight = 1.35;
-  body.maxWidth = width;
-  body.color = 0x4a4740;
-  body.anchorX = "left";
-  body.anchorY = "top";
-  body.position.y = -0.085;
-  g.add(body);
+  ].filter(Boolean).join("\n");
+  const facts = a.facts.length ? a.facts.map((f) => `\u00b7  ${f}`).join("\n") : "";
+  const body = [a.description, facts].filter(Boolean).join("\n\n");
+  const credit = [creditLine(a), soundLine(a)].filter(Boolean).join("\n");
+  return { title, meta, body, credit };
+}
 
-  // The body hangs below the title, however many lines the title wraps to.
-  title.sync(() => {
-    const bounds = title.textRenderInfo?.blockBounds;
-    if (bounds) body.position.y = bounds[1] - 0.03;
-  });
-  body.sync();
-  return g;
+/** "1495" or "2,560 BCE": the year as the floor writes it, for the name tag. */
+function yearTag(a: Artwork): string {
+  const y = a.date.year;
+  if (y <= -100_000) return `${(-y).toLocaleString("en-US")} years ago`;
+  if (y < 0) return `${(-y).toLocaleString("en-US")} BCE`;
+  return `${y}`;
+}
+
+/**
+ * The name tag: the title and the year in small letters floating above
+ * the work, turned to the visitor, always there within reading range so
+ * the lane can be read at a walk. Everything else waits on the card.
+ */
+function makeTag(a: Artwork): Text {
+  const t = new Text();
+  t.text = a.title;
+  t.font = FONT_REGULAR;
+  t.fontSize = 0.045;
+  t.lineHeight = 1.25;
+  t.maxWidth = 2.2;
+  t.textAlign = "center";
+  t.color = 0x2a2824;
+  t.fillOpacity = 0.55;
+  t.anchorX = "center";
+  t.anchorY = "bottom";
+  const year = new Text();
+  year.text = yearTag(a);
+  year.font = FONT_REGULAR;
+  year.fontSize = 0.034;
+  year.color = 0x8a857c;
+  year.fillOpacity = 0.75;
+  year.anchorX = "center";
+  year.anchorY = "top";
+  year.position.y = -0.02;
+  t.add(year);
+  t.sync();
+  year.sync();
+  return t;
 }
 
 export class Exhibit {
@@ -204,6 +213,8 @@ export class Exhibit {
   /** Highest quality this exhibit may ask for; lowered by shrink(), lifted by uncap(). */
   private qualityCap = Infinity;
   private placards: Group[] = [];
+  private tag: Text | null = null;
+  private focused = false;
   private night = 0;
   private readonly footprint;
 
@@ -241,54 +252,56 @@ export class Exhibit {
     return this.placards.length > 0;
   }
 
-  /** How dark the sky is, 0 to 1: the placards' ink goes pale with it. */
+  /** How dark the sky is, 0 to 1: the tag's ink goes pale with it. */
   setNight(night: number) {
     if (night === this.night) return;
     this.night = night;
-    for (const p of this.placards) {
-      p.traverse((o) => {
-        if (!(o instanceof Text)) return;
-        const title = o.font === FONT_BOLD;
-        o.color = tmpColour.copy(title ? INK_DAY : BODY_DAY).lerp(title ? INK_NIGHT : BODY_NIGHT, night).getHex();
-      });
+    if (this.tag) {
+      this.tag.color = tmpColour.copy(INK_DAY).lerp(INK_NIGHT, night).getHex();
+      for (const c of this.tag.children) if (c instanceof Text) c.color = tmpColour.copy(new Color(0x8a857c)).lerp(BODY_NIGHT, night).getHex();
     }
   }
 
+  /** The work the visitor is looking at: its tag comes forward. */
+  setFocus(on: boolean) {
+    if (on === this.focused) return;
+    this.focused = on;
+    if (this.tag) this.tag.fillOpacity = on ? 0.95 : 0.55;
+  }
+
   /**
-   * Placards: one in front, one behind, each single-sided so you only ever
-   * read the one facing you, on your left either way. A work hung at
-   * display height gets its placard underneath; one on the floor, or hung
-   * overhead, gets it beside at eye height; a building gets it at the door.
+   * The name tag, within reading range only: above the work, or beside
+   * the door of a building, turned to the visitor every frame.
    */
   setPlacards(on: boolean) {
     if (on === this.hasPlacards) return;
     if (!on) {
-      for (const p of this.placards) {
-        this.group.remove(p);
-        p.traverse((o) => o instanceof Text && o.dispose());
+      if (this.tag) {
+        this.group.remove(this.tag);
+        this.tag.dispose();
+        this.tag = null;
       }
       this.placards = [];
       return;
     }
     const fp = this.footprint;
-    const PLACARD_W = 0.9;
     const base = baseHeightOf(this.artwork);
     const threshold = this.artwork.display.threshold;
-    const below = threshold == null && base >= 1.1 && base <= 2.0;
-    const top = below ? base - 0.08 : 1.45;
-    // At a door: a couple of metres to the left of it, a step outside.
-    const dx = threshold != null ? 2.5 : below ? fp.width / 2 : fp.width / 2 + 0.15 + PLACARD_W;
-    const dz = threshold != null ? threshold - 1 : below ? fp.depth / 2 + 0.3 : 0.02;
-    const front = makePlacard(this.artwork, PLACARD_W);
-    front.position.set(-dx, top, dz);
-    const back = makePlacard(this.artwork, PLACARD_W);
-    back.position.set(dx, top, -dz);
-    back.rotation.y = Math.PI;
-    this.placards = [front, back];
-    for (const p of this.placards) this.group.add(p);
+    const tag = makeTag(this.artwork);
+    // Above the work; a tall one gets it low in front instead, like a label on the floor; at a door, beside the door.
+    const top = base + fp.height + 0.22;
+    if (threshold != null) tag.position.set(-1.6, 1.6, threshold - 0.5);
+    else if (top > 2.7) tag.position.set(0, 0.35, fp.depth / 2 + 0.6);
+    else tag.position.set(0, Math.max(top, 0.9), fp.depth / 2 + 0.05);
+    this.tag = tag;
+    this.group.add(tag);
+    this.placards = [tag as unknown as Group];
     const n = this.night;
     this.night = -1;
     this.setNight(n);
+    const f = this.focused;
+    this.focused = !f;
+    this.setFocus(f);
   }
 
   private buildImage() {
@@ -636,8 +649,13 @@ export class Exhibit {
 
   /** Called every frame with the viewer's world position; upgrades the texture rung as they approach, runs a simulation. */
   update(viewerWorldPos: Vector3, dt = 0) {
-    if (!this.ladder && !this.motion && !this.sound && !this.sim) return;
+    if (!this.ladder && !this.motion && !this.sound && !this.sim && !this.tag) return;
     const d = Math.max(viewerWorldPos.distanceTo(this.worldCentre), 0.5);
+    if (this.tag) {
+      // Turn the tag to the visitor, upright.
+      this.tag.getWorldPosition(tagPos);
+      this.tag.rotation.y = Math.atan2(viewerWorldPos.x - tagPos.x, viewerWorldPos.z - tagPos.z) - this.group.rotation.y;
+    }
     this.sim?.update(dt, d);
     this.updateReveal(Math.hypot(viewerWorldPos.x - this.worldCentre.x, viewerWorldPos.z - this.worldCentre.z), dt);
     if (this.sound) {
@@ -670,6 +688,7 @@ export class Exhibit {
   /** Free everything: GPU resources, the video, the text, and leave the scene. */
   dispose() {
     this.setPlacards(false);
+    this.focused = false;
     this.motion?.dispose();
     this.sound?.dispose();
     this.sound = null;

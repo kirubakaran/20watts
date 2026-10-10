@@ -153,7 +153,8 @@ src/world/sky.ts         the sky dome; nights of stars and sunrises near works t
 src/sims/                programs run live: life, mandelbrot, lorenz, fourier, galton, turing, pyramid, moon
 public/sky/moon-*.jpg    NASA's LRO colour map of the Moon, for the sky and the globe
 src/world/axes.ts        year and side-quest labels stencilled on the floor
-src/world/exhibit.ts     one work in the world: image or glTF, placards, shadow
+src/world/exhibit.ts     one work in the world: image, glTF or program, its name tag, shadow
+src/world/card.ts        the card: what a placard was, brought to the visitor on a press
 src/assets/textures.ts   image ladder; sharper rungs load as you approach
 src/assets/models.ts     glb ladder, same idea for 3D scans
 src/assets/sound.ts      a recording heard from where a work stands, by distance
@@ -392,6 +393,19 @@ Simulations may make sounds on the spot (the Galton board ticks on the
 pegs and clicks as a ball lands, the Turing machine ticks at every step)
 through a `Clicker` in `src/assets/sound.ts`,
 a positional node fed short bursts of noise; nothing is downloaded.
+
+There are no placards. Each work within reading range carries a small
+name tag, its title and year, floating above it (low in front of it for
+a tall one, beside the door of a building) and turned to the visitor.
+The work nearest the centre of the view is in focus and its tag comes
+forward. `E`, a tap on a phone, or the trigger in VR brings the card: a
+cream sheet at reading distance, a little to the right of the gaze so the
+work stays in view, facing the visitor and following them softly, with
+the title, the date and place, the description, the facts and the
+credit. The same press, or walking four metres, puts it away. Nothing has
+to be lined up with, which is the point: text here is not fixed to a
+wall. The placard text itself is unchanged (`placardLines` in
+`src/world/exhibit.ts`), so the card is the placard, freed.
 
 The guided visit (`src/world/tour.ts`) is a list of stops with one line
 each, for a first visitor. `T` goes to the next stop and says its line at
