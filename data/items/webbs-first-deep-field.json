@@ -16,7 +16,7 @@
   "photograph"
  ],
  "periodSlug": null,
- "flat": false,
+ "flat": true,
  "baseHeight": 0.4,
  "source": {
   "type": "commons",
@@ -75,8 +75,8 @@
    "early universe",
    "deep field"
   ],
-  "widthCm": null,
-  "heightCm": null,
+  "widthCm": 150,
+  "heightCm": 153,
   "depthCm": null,
   "weightKg": null,
   "description": "The deepest picture of the universe anyone had taken, shown by the President of the United States on the evening of 11 July 2022, twelve and a half hours of infrared exposure on a patch of the southern sky the size of a grain of sand held at arm's length. Nearly everything in it is a galaxy. The cluster at the centre, SMACS 0723, is so massive that its gravity bends the space around it into a lens, smearing the galaxies behind into the arcs you can see curving round it, and bringing into view light that set out more than thirteen billion years ago, when the universe was a few hundred million years old. Hubble would have needed weeks for this. Stand close: the smallest red smudges are the oldest things ever photographed.",
@@ -97,5 +97,6 @@
    "siderealHours": 7.4
   }
  },
- "scale": 5
+ "scale": 5,
+ "tour": "Webb's First Deep Field, 2022: a grain of sand's worth of sky, and nearly everything in it is a galaxy. The arcs are light bent round the cluster."
 }

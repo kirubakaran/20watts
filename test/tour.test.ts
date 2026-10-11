@@ -1,10 +1,12 @@
 import { describe, expect, it } from "vitest";
 import { readFileSync } from "node:fs";
 import { onDisplay, type Collection } from "../src/data/types";
-import { TOUR } from "../src/world/tour";
+import { tourOf } from "../src/world/tour";
 
 const collection = JSON.parse(readFileSync(new URL("../src/data/collection.json", import.meta.url), "utf8")) as Collection;
-const shown = new Map(onDisplay(collection.artworks).map((a) => [a.id, a]));
+const visible = onDisplay(collection.artworks);
+const shown = new Map(visible.map((a) => [a.id, a]));
+const TOUR = tourOf(visible);
 
 describe("the guided visit", () => {
   it("names only works on display, each once, in the order of the lane", () => {
@@ -20,7 +22,8 @@ describe("the guided visit", () => {
     for (let i = 1; i < years.length; i++) expect(years[i]!, `${ids[i]} after ${ids[i - 1]}`).toBeGreaterThanOrEqual(years[i - 1]!);
   });
 
-  it("says something about every stop", () => {
+  it("says something about every stop, and has stops", () => {
+    expect(TOUR.length).toBeGreaterThan(20);
     for (const s of TOUR) expect(s.line.length, s.id).toBeGreaterThan(20);
   });
 });

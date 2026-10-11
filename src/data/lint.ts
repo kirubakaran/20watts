@@ -74,6 +74,11 @@ export function lintArtwork(a: Artwork, all: Map<string, Artwork>): Finding[] {
   if (a.display.scale <= 0) err("display.scale", "not positive");
   if (a.kind === "image" && a.display.scale > 1 && a.physical.widthCm == null) warn("display.scale", "scaled, but no size to scale from");
   if (a.importance != null && (a.importance < 0 || a.importance > 1)) err("importance", "outside 0 to 1");
+  // Fair use is a decision a person makes, not a flag a contributor sets.
+  if (a.copyrighted && !a.moderation.reviewedBy) err("copyrighted", "a copyrighted work needs a reviewer named in moderation.reviewedBy, with the reason");
+  if (a.copyrighted && !a.moderation.flags.includes("fair-use")) err("copyrighted", "a copyrighted work must carry the fair-use flag");
+  if (a.tour != null && a.tour.trim().length < 20) err("tour", "a tour line is at least a sentence");
+  if (a.tour && /\b(museum|lane|the row|hop|placard|card)\b/i.test(a.tour)) warn("tour", "a tour line is about the work, not about the museum");
   if (a.audio) {
     const v = a.audio.versions[0]!;
     if (!v.credit.license.name) err("audio.credit.license", "no licence");

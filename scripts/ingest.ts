@@ -121,6 +121,7 @@ function itemOf(a: Artwork): Item {
     item.loop = { start, seconds, ...(aspect != null ? { aspect } : {}) } as Item["loop"];
   }
   if (a.order != null) item.order = a.order;
+  if (a.tour) item.tour = a.tour;
   if (a.branch) item.branch = a.branch;
   if (a.landmark) item.landmark = a.landmark;
   if (a.audio) {

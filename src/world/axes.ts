@@ -19,6 +19,17 @@ const tmp = new Color();
 let lastNight = -1;
 
 /** Under a night sky the stencils go pale, or they would vanish on the dark floor. */
+/** Metres along the lane within which floor labels are drawn; beyond it they are too small to read and only cost draw calls. */
+const LABEL_RANGE = 140;
+let lastCullZ = NaN;
+
+/** Show only the labels near the visitor. Cheap when they have not moved far. */
+export function cullAxisCues(cues: Group, eyeZ: number) {
+  if (Math.abs(eyeZ - lastCullZ) < 8) return;
+  lastCullZ = eyeZ;
+  for (const o of cues.children) o.visible = Math.abs(o.position.z - eyeZ) < LABEL_RANGE;
+}
+
 export function setAxesNight(cues: Group, night: number) {
   if (Math.abs(night - lastNight) < 0.02) return;
   lastNight = night;

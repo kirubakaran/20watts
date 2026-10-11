@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-11T16:02:01.128Z",
+  "generatedAt": "2026-10-11T16:26:25.092Z",
   "artworks": [
     {
       "id": "zen-21530762",
@@ -173,7 +173,8 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-08T00:00:00Z",
-      "updatedAt": "2026-10-11T16:09:06.303Z"
+      "updatedAt": "2026-10-11T16:25:44.973Z",
+      "tour": "A hand axe from Saint-Acheul, 300,000 years old. Someone chose this shape and worked stone to it, and so did a thousand generations after."
     },
     {
       "id": "wm-29686577",
@@ -321,7 +322,8 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-08T00:00:00Z",
-      "updatedAt": "2026-10-09T19:22:26.986Z"
+      "updatedAt": "2026-10-11T16:25:44.973Z",
+      "tour": "The Lion-man, carved from mammoth ivory 40,000 years ago: a creature no one had ever seen. The oldest image of something imagined."
     },
     {
       "id": "wm-31360759",
@@ -1131,7 +1133,8 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-11T16:09:35.152Z",
+      "updatedAt": "2026-10-11T16:25:44.973Z",
+      "tour": "A wall of Lascaux, cast from the cave. The deer's neck is one stroke, made 17,000 years ago by lamplight in the dark.",
       "branch": {
         "of": "wm-6909701",
         "step": 1,
@@ -2952,7 +2955,8 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-11T16:09:53.115Z"
+      "updatedAt": "2026-10-11T16:25:44.973Z",
+      "tour": "Khufu's ship, buried beside the Great Pyramid 4,500 years ago: 43 metres of cedar sewn together with rope, and still whole."
     },
     {
       "id": "sf-7e7febabef2045a68755cc39c8c7c91f",
@@ -3147,7 +3151,8 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-11T16:09:57.025Z"
+      "updatedAt": "2026-10-11T16:25:44.973Z",
+      "tour": "Stonehenge. The stones were set so that at midsummer the sun comes up along their axis. Wait, and it does."
     },
     {
       "id": "wm-78233931",
@@ -3467,7 +3472,8 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-08T00:00:00Z",
-      "updatedAt": "2026-10-09T19:22:46.031Z"
+      "updatedAt": "2026-10-11T16:25:44.973Z",
+      "tour": "The Nebra sky disc, the oldest known picture of the heavens. Above is the sky it was made under; the Pleiades are low in the west, as they are on the disc."
     },
     {
       "id": "sf-d148f771c3f44225b56cb7ce8d3c5ce6",
@@ -3648,7 +3654,8 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-11T16:10:22.556Z"
+      "updatedAt": "2026-10-11T16:25:44.973Z",
+      "tour": "Nefertiti, carved in Thutmose's workshop at Amarna about 1345 BCE and left on a shelf when the city was abandoned. One eye was never finished."
     },
     {
       "id": "sf-abf31556e54849408ced19e58f3dc8f1",
@@ -3829,7 +3836,8 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-11T16:10:39.514Z"
+      "updatedAt": "2026-10-11T16:25:44.973Z",
+      "tour": "An Olmec colossal head: a portrait of a ruler, cut from a forty-tonne boulder and moved sixty kilometres without wheels, three thousand years ago."
     },
     {
       "id": "wm-57852675",
@@ -4171,7 +4179,8 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-11T16:10:40.970Z"
+      "updatedAt": "2026-10-11T16:25:44.973Z",
+      "tour": "Myron's discus thrower, about 450 BCE: the first sculpture anywhere to catch a body in the middle of a movement."
     },
     {
       "id": "eq-pythagorean-theorem",
@@ -4328,7 +4337,8 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-10T16:42:26.015Z"
+      "updatedAt": "2026-10-11T16:25:44.973Z",
+      "tour": "The Pythagorean theorem as Euclid proved it in Alexandria, around 300 BCE. Beside it, a scrap of papyrus with Euclid's own diagram, a few centuries on."
     },
     {
       "id": "wm-3153928",
@@ -5673,18 +5683,18 @@
         "yaw": null,
         "fallbackWidthM": 1.2,
         "threshold": 25,
+        "oculus": {
+          "x": 0,
+          "y": 34,
+          "z": 0,
+          "radius": 4.4
+        },
         "sky": {
           "radius": 40,
           "sun": {
             "azimuth": 0,
             "altitude": 60
           }
-        },
-        "oculus": {
-          "x": 0,
-          "y": 34,
-          "z": 0,
-          "radius": 4.4
         }
       },
       "tags": [
@@ -5706,7 +5716,8 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-11T16:11:14.220Z"
+      "updatedAt": "2026-10-11T16:25:44.973Z",
+      "tour": "The Pantheon, Rome, 126 CE, still the largest dome of unreinforced concrete. At noon on 21 April the sun through the oculus lands on the arch over the door."
     },
     {
       "id": "wm-110598443",
@@ -6026,7 +6037,8 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-10T00:16:47.700Z"
+      "updatedAt": "2026-10-11T16:25:44.973Z",
+      "tour": "The Tirukkural: 1,330 couplets on virtue, wealth and love, written in Tamil around 450 CE by Thiruvalluvar, on a palm leaf with the commentary that made it a classic."
     },
     {
       "id": "wm-63768037",
@@ -7468,7 +7480,8 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-10T02:41:18.726Z",
+      "updatedAt": "2026-10-11T16:25:44.973Z",
+      "tour": "The Big Temple at Thanjavur, 1010 CE: a 66 metre tower of granite on a plain with no granite in it, raised by the Chola emperor Rajaraja.",
       "alternates": [
         {
           "kind": "image",
@@ -7709,7 +7722,8 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-11T16:11:19.188Z"
+      "updatedAt": "2026-10-11T16:25:44.973Z",
+      "tour": "Shiva as Lord of the Dance, cast in bronze by Chola craftsmen a thousand years ago. The ring of fire is the universe; the dwarf underfoot is ignorance."
     },
     {
       "id": "sf-da8c663b974f4902bf79bb9595e76d5e",
@@ -7909,7 +7923,8 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-11T16:11:28.712Z"
+      "updatedAt": "2026-10-11T16:25:44.973Z",
+      "tour": "A courtyard of the Alhambra, Granada: brick, plaster and tile, the cheapest materials, carrying the finest surfaces Islamic Spain ever made."
     },
     {
       "id": "eq-madhava-series",
@@ -8640,7 +8655,8 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-07T00:00:00Z",
-      "updatedAt": "2026-10-09T19:22:48.657Z"
+      "updatedAt": "2026-10-11T16:25:44.973Z",
+      "tour": "Leonardo's Last Supper at its real size, nearly nine metres across: the moment after 'one of you will betray me'."
     },
     {
       "id": "sf-8f4827cf36964a17b90bad11f48298ac",
@@ -9354,7 +9370,8 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-11T16:11:48.606Z"
+      "updatedAt": "2026-10-11T16:25:44.973Z",
+      "tour": "Bernini's Apollo and Daphne: the instant she turns into a laurel, bark climbing her legs, her fingers splitting into leaves. He was twenty-four."
     },
     {
       "id": "sf-adf56b25e96e4675b27e0f59348978b0",
@@ -9860,7 +9877,8 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-10T16:40:48.096Z"
+      "updatedAt": "2026-10-11T16:25:44.973Z",
+      "tour": "Newton's Principia, 1687: three laws of motion and one of gravity, for everything that moves, in one book."
     },
     {
       "id": "wm-110713109",
@@ -11285,7 +11303,8 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-09T00:00:00Z"
+      "updatedAt": "2026-10-11T16:25:44.973Z",
+      "tour": "Fourier's claim of 1822: any repeating shape is a sum of pure waves. Circles riding on circles trace a square wave; every circle added sharpens the corners."
     },
     {
       "id": "wm-166228094",
@@ -12495,7 +12514,8 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-11T01:45:48.481Z"
+      "updatedAt": "2026-10-11T16:25:44.973Z",
+      "tour": "Impression, Sunrise: Le Havre at dawn, 1872. A critic used its title to mock the painters, and they kept the name."
     },
     {
       "id": "sim-galton-board",
@@ -15326,7 +15346,8 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-08T00:00:00Z",
-      "updatedAt": "2026-10-09T19:22:50.300Z"
+      "updatedAt": "2026-10-11T16:25:44.973Z",
+      "tour": "The 1903 Wright Flyer, the machine itself. Twelve seconds in the air at Kitty Hawk, the first powered flight with a person aboard."
     },
     {
       "id": "wm-117053583",
@@ -17603,7 +17624,8 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-10T19:55:48.849Z",
+      "updatedAt": "2026-10-11T16:25:44.973Z",
+      "tour": "A Tamil hymn twelve centuries old, sung in 1910 by Coimbatore Thayi, the first Tamil singer the gramophone made famous. Come close and it plays.",
       "audio": {
         "currentVersionId": "usr-coimbatore-thayi-tevaram-audio-v1",
         "versions": [
@@ -19322,7 +19344,8 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-11T01:46:10.515Z",
+      "updatedAt": "2026-10-11T16:25:44.973Z",
+      "tour": "Monet's water lilies, in the room he made them for. Walk to the middle and turn: the pond goes all the way round, as he asked.",
       "alternates": [
         {
           "kind": "image",
@@ -20578,7 +20601,8 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-09T00:00:00Z"
+      "updatedAt": "2026-10-11T16:25:44.973Z",
+      "tour": "The Lorenz attractor, 1963: three equations whose solutions never repeat and never leave this shape. The red point is flying them now, and no one can say which wing it takes next."
     },
     {
       "id": "nasa-saturn-v",
@@ -20762,7 +20786,8 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-11T16:12:18.270Z",
+      "updatedAt": "2026-10-11T16:25:44.973Z",
+      "tour": "The Saturn V at its full 110 metres, off to the east: it burned thirteen tonnes of fuel a second. Thirteen flights, twenty-four people to the Moon.",
       "landmark": {
         "side": "east",
         "distance": 110
@@ -21170,7 +21195,8 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-10T16:44:31.438Z"
+      "updatedAt": "2026-10-11T16:25:44.973Z",
+      "tour": "The first step on the Moon, 21 July 1969, as six hundred million people saw it on television. It plays as you come close."
     },
     {
       "id": "sim-the-moon-mapped",
@@ -21333,7 +21359,8 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-09T00:00:00Z"
+      "updatedAt": "2026-10-11T16:25:44.973Z",
+      "tour": "The whole Moon, mapped; no one had seen its far side before 1959. The red dot is Tranquility Base. Above is the evening sky of 20 July 1969, the Moon a crescent in the west."
     },
     {
       "id": "sim-game-of-life",
@@ -21475,7 +21502,8 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-09T00:00:00Z"
+      "updatedAt": "2026-10-11T16:25:44.973Z",
+      "tour": "Conway's Game of Life, 1970: three rules on a grid, and out of them gliders, guns, and anything a computer can compute. It is running."
     },
     {
       "id": "sf-acb3f8645a69493cb211a62b40d66aab",
@@ -22750,7 +22778,8 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-09T00:00:00Z"
+      "updatedAt": "2026-10-11T16:25:44.973Z",
+      "tour": "A black hole, as Luminet first drew it in 1979: the far side of the glowing disc lifted into view over the top, because light bends. Walk round it."
     },
     {
       "id": "sim-mandelbrot-set",
@@ -22891,7 +22920,8 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-09T00:00:00Z"
+      "updatedAt": "2026-10-11T16:25:44.973Z",
+      "tour": "The Mandelbrot set, 1980: a simple sum repeated for every point, and an edge with no end. It is computed afresh, and zooming, as you watch."
     },
     {
       "id": "sf-69cba9fe15ff428eaaba57bf61941109",
@@ -23617,7 +23647,8 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-11T16:12:44.580Z"
+      "updatedAt": "2026-10-11T16:25:44.973Z",
+      "tour": "Space Shuttle Discovery, 39 flights, more than any other spacecraft. Under the wing, the tiles: each fitted by hand, no two alike."
     },
     {
       "id": "sf-64319e3fd7dd44acb7d6d72cd8c395db",
@@ -23982,7 +24013,8 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-11T16:12:51.894Z",
+      "updatedAt": "2026-10-11T16:25:44.973Z",
+      "tour": "The International Space Station, true size, off to the west: a football pitch of solar arrays, lived in without a break since 2000. Walk out under it.",
       "landmark": {
         "side": "west",
         "distance": 170
@@ -24141,9 +24173,9 @@
             },
             "moderation": {
               "status": "approved",
-              "reviewedBy": null,
-              "reviewedAt": null,
-              "reason": null,
+              "reviewedBy": "Kirubakaran Athmanathan",
+              "reviewedAt": "2026-10-08T00:00:00Z",
+              "reason": "Fair use: a single still of a widely parodied upload, shown as the exhibit it has become, with commentary; the museum takes it down on request.",
               "flags": [
                 "fair-use"
               ]
@@ -24169,16 +24201,16 @@
       "importance": 0.7,
       "moderation": {
         "status": "approved",
-        "reviewedBy": null,
-        "reviewedAt": null,
-        "reason": null,
+        "reviewedBy": "Kirubakaran Athmanathan",
+        "reviewedAt": "2026-10-08T00:00:00Z",
+        "reason": "Fair use: a single still of a widely parodied upload, shown as the exhibit it has become, with commentary; the museum takes it down on request.",
         "flags": [
           "fair-use"
         ]
       },
       "source": "admin",
       "createdAt": "2026-10-08T00:00:00Z",
-      "updatedAt": "2026-10-09T19:23:12.955Z"
+      "updatedAt": "2026-10-11T16:25:44.973Z"
     },
     {
       "id": "sf-485c51878bc7449e81379a863ec862f5",
@@ -24363,7 +24395,8 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-11T16:12:54.257Z"
+      "updatedAt": "2026-10-11T16:25:44.973Z",
+      "tour": "The first iPhone, 2007, at its true 11 centimetres."
     },
     {
       "id": "sim-gw150914-merger",
@@ -24507,7 +24540,8 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-09T00:00:00Z"
+      "updatedAt": "2026-10-11T16:25:44.973Z",
+      "tour": "Two black holes becoming one, 14 September 2015, slowed a hundred times. Space itself ripples; at the merger you hear what LIGO recorded."
     },
     {
       "id": "sf-394f7cf52d124bbd9db69f24d1ff2f08",
@@ -25004,7 +25038,8 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-09T00:00:00Z"
+      "updatedAt": "2026-10-11T16:25:44.973Z",
+      "tour": "AlphaGo against Lee Sedol, game 2, replayed stone by stone. At move 37 a shoulder hit no professional would play; the machine won."
     },
     {
       "id": "usr-lee-sedol-2016",
@@ -25539,8 +25574,8 @@
         "deep field"
       ],
       "physical": {
-        "widthCm": null,
-        "heightCm": null,
+        "widthCm": 150,
+        "heightCm": 153,
         "depthCm": null,
         "weightKg": null
       },
@@ -25643,7 +25678,8 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-11T02:22:22.663Z"
+      "updatedAt": "2026-10-11T16:26:25.092Z",
+      "tour": "Webb's First Deep Field, 2022: a grain of sand's worth of sky, and nearly everything in it is a galaxy. The arcs are light bent round the cluster."
     }
   ]
 }

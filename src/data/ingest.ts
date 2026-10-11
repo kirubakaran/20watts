@@ -109,7 +109,7 @@ export function recordOf(item: Item, now: string): Artwork {
   const loc = o.location ?? {};
   const cr = o.creator;
   const credit: Credit = { author: s.author ?? null, license: licenseOf(s), sourcePage: s.sourcePage ?? null };
-  const contributed = { by: null, at: now, note: s.notes || `Import from ${s.type}` };
+  const contributed = { by: null, at: now, note: [s.notes || `Import from ${s.type}`, s.changes].filter(Boolean).join("\n\n") };
   const externalIds: Record<string, string> = {};
   if (s.type === "commons") {
     externalIds["commons-curid"] = String(s.curid);
@@ -218,6 +218,7 @@ export function recordOf(item: Item, now: string): Artwork {
     createdAt: now,
     updatedAt: now,
   };
+  if (item.tour) record.tour = item.tour;
   if (item.audio) record.audio = audioAsset(aid, item.audio, now);
   if (item.branch) record.branch = item.branch;
   if (item.landmark) record.landmark = item.landmark;

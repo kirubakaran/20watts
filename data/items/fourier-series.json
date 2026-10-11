@@ -79,5 +79,6 @@
  },
  "slug": "fourier-series",
  "flat": false,
- "periodSlug": null
+ "periodSlug": null,
+ "tour": "Fourier's claim of 1822: any repeating shape is a sum of pure waves. Circles riding on circles trace a square wave; every circle added sharpens the corners."
 }

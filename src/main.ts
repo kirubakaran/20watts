@@ -6,7 +6,7 @@ import { computeLayout, DEFAULT_LAYOUT, WORLD_LAYOUT } from "./layout/layout";
 import { buildWorld } from "./world/floor";
 import { DEFAULT_STREAM, Streamer } from "./world/stream";
 import { Exhibit } from "./world/exhibit";
-import { buildAxisCues, setAxesNight } from "./world/axes";
+import { buildAxisCues, cullAxisCues, setAxesNight } from "./world/axes";
 import { Player, type Action } from "./locomotion/player";
 import { clearPlace, restorePlace, trackPlace } from "./locomotion/resume";
 import { Navigator } from "./locomotion/navigate";
@@ -246,7 +246,7 @@ if (params.has("probe")) {
         objects: [...streamer.exhibitsWithin(eye.x, eye.z, 300), ...landmarks]
           .map((e) => { let n = 0; e.group.traverse((o) => { if ((o as Mesh).isMesh || (o as unknown as { isLine?: boolean }).isLine || (o as unknown as { isPoints?: boolean }).isPoints || (o as unknown as { isSprite?: boolean }).isSprite) n += 1; }); return { id: e.artwork.id, n }; })
           .sort((p, q) => q.n - p.n).slice(0, 4),
-        labels: (() => { let n = 0; axisCues.traverse((o) => { if ((o as Mesh).isMesh) n += 1; }); return n; })(),
+        labels: axisCues.children.filter((o) => o.visible).length,
       };
     },
   };
@@ -344,6 +344,7 @@ renderer.setAnimationLoop((time) => {
   streamer.update(eye, dt);
   streamer.setNight(skyState.night);
   setAxesNight(axisCues, skyState.night);
+  cullAxisCues(axisCues, eye.z);
   updateFocus(eye);
   card.update(dt, camera);
   for (const e of landmarks) {

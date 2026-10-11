@@ -471,6 +471,8 @@ export interface Artwork {
   externalIds: Record<string, string>;
   /** Still in copyright; display under fair use with a label. */
   copyrighted: boolean;
+  /** One line said on arrival when the guided visit stops here; a work without one is not a stop. */
+  tour?: string;
   asset: ImageAsset | ModelAsset | SimAsset;
   /** A recording heard as the visitor approaches. */
   audio?: AudioAsset;

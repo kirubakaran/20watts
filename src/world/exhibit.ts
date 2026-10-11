@@ -6,39 +6,20 @@
  * Exhibits are built and torn down by the streamer as the visitor moves;
  * placards, the dearest part, only exist within reading distance.
  */
-import {
-  AdditiveBlending,
-  BackSide,
-  Color,
-  Box3,
-  CanvasTexture,
-  CylinderGeometry,
-  RepeatWrapping,
-  Quaternion,
-  Raycaster,
-  CircleGeometry,
-  DoubleSide,
-  FrontSide,
-  Group,
-  Mesh,
-  MeshBasicMaterial,
-  MeshStandardMaterial,
-  Plane,
-  PlaneGeometry,
-  SRGBColorSpace,
-  Vector3,
-  type Texture,
-} from "three";
+import { BackSide, Box3, CanvasTexture, CircleGeometry, Color, DoubleSide, FrontSide, Group, Mesh, MeshBasicMaterial, MeshStandardMaterial, PlaneGeometry, Vector3, type Texture } from "three";
 import { Text } from "troika-three-text";
 import type { Material } from "three";
 import { standoffOf } from "../layout/layout";
 import type { Artwork } from "../data/types";
-import { assetsOf, baseHeightOf, currentAudioVersion, currentImageVersion, currentModelVersion, currentSimVersion, imageDisplaySize, footprintOf, type ImageAsset } from "../data/types";
+import { baseHeightOf, currentAudioVersion, currentImageVersion, currentModelVersion, currentSimVersion, imageDisplaySize, footprintOf } from "../data/types";
 import { PROGRAMS, type Sim } from "../sims";
 import { Sound } from "../assets/sound";
 import { ImageLadder } from "../assets/textures";
 import { ModelLadder } from "../assets/models";
 import { Motion } from "../assets/motion";
+import { Reveal } from "./reveal";
+import { Ring } from "./ring";
+import { buildBeam, disposeBeam } from "./beam";
 import type { Placement } from "../layout/layout";
 
 const FONT_REGULAR = "/fonts/inter-400.woff";
@@ -189,8 +170,8 @@ function makeTag(a: Artwork): Text {
 export class Exhibit {
   readonly group = new Group();
   private ladder: ImageLadder | ModelLadder | null = null;
-  /** A ring of pictures: one ladder per panel. */
-  private ringLadders: ImageLadder[] = [];
+  /** A room of pictures, with one ladder per panel. */
+  private ring: Ring | null = null;
   private imageMaterial: MeshBasicMaterial | null = null;
   private motion: Motion | null = null;
   private sound: Sound | null = null;
@@ -201,14 +182,9 @@ export class Exhibit {
   private spinAngle = 0;
   private sim: Sim | null = null;
   private modelRoot: Group | null = null;
-  /** Shown from inside only: how far the walls have risen, 0 cut at the ankle to 1 whole. */
-  private revealT = 0;
-  private revealMaterials: Material[] = [];
-  /** Keeps everything below its height; raised to let the walls up. */
-  private readonly revealPlane = new Plane(new Vector3(0, -1, 0), 0);
-  private plan: { canvas: HTMLCanvasElement; w: number; d: number } | null = null;
+  /** Shown from inside only: the plan slab and the clipping that raises the walls. */
+  private reveal: Reveal | null = null;
   private beam: Group | null = null;
-  private planTexture: CanvasTexture | null = null;
   /** In a visitor's hand: a sharper rung that arrives meanwhile waits until it is put down. */
   private held = false;
   private pendingRoot: Group | null = null;
@@ -370,51 +346,12 @@ export class Exhibit {
     if (v?.loop) this.motion = new Motion(v.loop);
   }
 
-  /**
-   * A room of pictures: each panel curved to the inside of a ring, hung in
-   * order around it from the back, so the visitor at the centre turns to
-   * see them as the painter meant.
-   */
+  /** A room of pictures: see ring.ts. The visitor stands at its centre. */
   private buildRing() {
     const a = this.artwork;
-    const ring = a.display.ring!;
-    const assets = assetsOf(a).filter((x): x is ImageAsset => x.kind === "image");
-    const base = baseHeightOf(a);
     const fp = footprintOf(a);
-    this.centre.set(0, base + fp.height / 2, 0);
-    // Total arc the panels and gaps take; they are centred on the far side (-Z), away from the way in.
-    const widths = ring.panels.map((p) => (p.widthCm / 100) * a.display.scale);
-    const total = widths.reduce((s, w) => s + w, 0) + ring.gap * (widths.length - 1);
-    let angle = Math.PI + total / (2 * ring.radius); // start at the left end, going clockwise seen from above
-    assets.forEach((asset, i) => {
-      const v = asset.versions.find((x) => x.id === asset.currentVersionId) ?? asset.versions[0];
-      const size = ring.panels[i];
-      if (!v || !size) return;
-      const w = widths[i]!, h = (size.heightCm / 100) * a.display.scale;
-      const arc = w / ring.radius;
-      // An open cylinder segment seen from inside; thetaStart is measured from +Z toward +X in three.
-      const geom = new CylinderGeometry(ring.radius, ring.radius, h, Math.max(8, Math.round(arc * 24)), 1, true, angle - arc, arc);
-      const mat = new MeshBasicMaterial({ color: 0xd8d4cc, side: BackSide, toneMapped: false });
-      const mesh = new Mesh(geom, mat);
-      mesh.position.y = base + h / 2;
-      mesh.name = `panel-${i}`;
-      this.group.add(mesh);
-      angle -= arc + ring.gap / ring.radius;
-      if (v.rungs.length) {
-        const ladder = new ImageLadder(v.rungs, this.gpu.maxTextureSize, this.gpu.maxAnisotropy);
-        ladder.onUpgrade((t: Texture) => {
-          // Seen from inside, the cylinder's u runs the wrong way; flip it so the picture reads left to right.
-          t.wrapS = RepeatWrapping;
-          t.repeat.x = -1;
-          t.offset.x = 1;
-          mat.map = t;
-          mat.color.set(0xffffff);
-          mat.needsUpdate = true;
-        });
-        ladder.requestLowest();
-        this.ringLadders.push(ladder);
-      }
-    });
+    this.centre.set(0, baseHeightOf(a) + fp.height / 2, 0);
+    this.ring = new Ring(a, this.group, this.gpu);
   }
 
   private buildModel() {
@@ -424,7 +361,7 @@ export class Exhibit {
     const fp = footprintOf(a);
     this.centre.set(0, baseHeightOf(a) + fp.height / 2, 0);
     if (v.rungs.length === 0) return;
-    if (a.display.reveal != null) this.buildRevealFloor(fp.width, fp.depth);
+    if (a.display.reveal != null) this.reveal = new Reveal(a, this.group, fp);
     // Rungs are in metres with the base at y = 0 and the footprint centred,
     // so the only transforms left are the record's own scale and height.
     const ladder = new ModelLadder(v.rungs, v.pointSize ?? 0.03, this.gpu.maxTextureSize, this.gpu.maxAnisotropy);
@@ -466,103 +403,6 @@ export class Exhibit {
   }
 
   /**
-   * The floor of a work shown from inside only: a plaster slab the size
-   * of its footprint, with "walk in" at the near edge, so the visitor
-   * knows to step onto it. The walls rise once they do.
-   */
-  private buildRevealFloor(width: number, depth: number) {
-    const w = width + 2, d = depth + 2;
-    const canvas = document.createElement("canvas");
-    canvas.width = 1024;
-    canvas.height = Math.round((1024 * d) / w);
-    this.plan = { canvas, w, d };
-    this.drawPlan(null);
-    const tex = new CanvasTexture(canvas);
-    tex.colorSpace = SRGBColorSpace;
-    tex.anisotropy = 8;
-    this.planTexture = tex;
-    // Lit like the floor around it, so it reads as paving with a drawing on it, not a light box.
-    const slab = new Mesh(new PlaneGeometry(w, d), new MeshStandardMaterial({ map: tex, roughness: 0.92, metalness: 0 }));
-    slab.rotation.x = -Math.PI / 2;
-    slab.position.y = baseHeightOf(this.artwork) + 0.012;
-    slab.receiveShadow = true;
-    slab.name = "reveal-floor";
-    this.group.add(slab);
-  }
-
-  /**
-   * The plan on the slab: the scan's vertices between knee and head
-   * height, dropped onto the floor as ink dots on the museum's cream
-   * sheet, so the walls draw their own floor plan; with the invitation at
-   * the near edge. Redrawn from each sharper rung as it arrives.
-   */
-  private drawPlan(root: Group | null) {
-    if (!this.plan) return;
-    const { canvas, w, d } = this.plan;
-    const ctx = canvas.getContext("2d")!;
-    const W = canvas.width, H = canvas.height;
-    // The museum's own sheet, a shade toward stone so it sits under the lights like the floor.
-    ctx.fillStyle = "#d9d0bd";
-    ctx.fillRect(0, 0, W, H);
-    // A metre grid, faint.
-    ctx.strokeStyle = "rgba(42,40,36,0.12)";
-    ctx.lineWidth = 1;
-    ctx.beginPath();
-    for (let x = 0; x <= w; x += 1) { const px = (x / w) * W; ctx.moveTo(px, 0); ctx.lineTo(px, H); }
-    for (let z = 0; z <= d; z += 1) { const pz = (z / d) * H; ctx.moveTo(0, pz); ctx.lineTo(W, pz); }
-    ctx.stroke();
-    if (root) {
-      root.updateMatrixWorld(true);
-      const base = this.group.position.y + baseHeightOf(this.artwork);
-      const lo = base + 0.5, hi = base + 2.6;
-      const v = new Vector3();
-      ctx.fillStyle = "rgba(42,40,36,0.34)";
-      root.traverse((o) => {
-        if (!(o instanceof Mesh) || o.name === "backing") return;
-        const pos = o.geometry.attributes.position;
-        if (!pos) return;
-        const step = Math.max(1, Math.floor(pos.count / 400000));
-        for (let i = 0; i < pos.count; i += step) {
-          v.fromBufferAttribute(pos, i).applyMatrix4(o.matrixWorld);
-          if (v.y < lo || v.y > hi) continue;
-          // Into the slab's own frame: x east, z toward the visitor (down the canvas).
-          const lx = v.x - this.group.position.x, lz = v.z - this.group.position.z;
-          const px = ((lx + w / 2) / w) * W, pz = ((lz + d / 2) / d) * H;
-          ctx.fillRect(px - 1, pz - 1, 2, 2);
-        }
-      });
-    }
-    ctx.fillStyle = "rgba(42,40,36,0.85)";
-    ctx.textAlign = "center";
-    ctx.textBaseline = "bottom";
-    ctx.font = `600 ${Math.round(W * 0.045)}px system-ui, sans-serif`;
-    ctx.fillText(this.artwork.display.invitation ?? "Step in", W / 2, H - H * 0.02);
-    ctx.font = `${Math.round(W * 0.022)}px system-ui, sans-serif`;
-    ctx.textBaseline = "top";
-    ctx.fillStyle = "rgba(42,40,36,0.55)";
-    ctx.fillText(this.artwork.title, W / 2, H * 0.02);
-    if (this.planTexture) this.planTexture.needsUpdate = true;
-  }
-
-  /** The height everything of a revealed work is cut at: the floor from the lane, the sky from inside. */
-  private applyRevealCut() {
-    const fp = this.footprint;
-    const k = 1 - (1 - this.revealT) * (1 - this.revealT);
-    const cut = (fp.height + 1) * k;
-    this.revealPlane.constant = this.group.position.y + baseHeightOf(this.artwork) + cut;
-  }
-
-  /** Walls shown from inside only: cut at the ankle, rising, or whole, by how far in the visitor stands. */
-  private updateReveal(d: number, dt: number) {
-    const reveal = this.artwork.display.reveal;
-    if (reveal == null || !this.modelRoot) return;
-    const want = d < reveal ? 1 : 0;
-    const before = this.revealT;
-    this.revealT = Math.max(0, Math.min(1, this.revealT + (want > this.revealT ? dt : -dt) / 1.4));
-    if (this.revealT !== before) this.applyRevealCut();
-  }
-
-  /**
    * Shadows, and what the back of a scanned interior looks like from
    * outside: "mirror" draws both sides of every surface, so the inside
    * textures show through reversed; "backing" adds a plain plaster skin on
@@ -573,14 +413,9 @@ export class Exhibit {
     // Collect first: adding a skin while walking the tree would walk the skin too, and skin it, without end.
     const meshes: Mesh[] = [];
     root.traverse((o) => o instanceof Mesh && meshes.push(o));
-    this.revealMaterials = [];
+    const clipped: Material[] = [];
     for (const o of meshes) {
-      if (this.artwork.display.reveal != null) {
-        for (const m of Array.isArray(o.material) ? o.material : [o.material]) {
-          m.clippingPlanes = [this.revealPlane];
-          this.revealMaterials.push(m);
-        }
-      }
+      if (this.reveal) clipped.push(...(Array.isArray(o.material) ? o.material : [o.material]));
       o.castShadow = true;
       if (back === "mirror") for (const m of Array.isArray(o.material) ? o.material : [o.material]) m.side = DoubleSide;
       if (back === "backing") {
@@ -590,13 +425,10 @@ export class Exhibit {
         skin.castShadow = true;
         skin.name = "backing";
         o.add(skin);
-        if (this.artwork.display.reveal != null) {
-          (skin.material as Material).clippingPlanes = [this.revealPlane];
-          this.revealMaterials.push(skin.material as Material);
-        }
+        if (this.reveal) clipped.push(skin.material as Material);
       }
     }
-    if (this.artwork.display.reveal != null) this.applyRevealCut();
+    this.reveal?.clip(clipped);
   }
 
   /** After a root is in the scene: the blueprint and the sunbeam need world positions. */
@@ -604,63 +436,12 @@ export class Exhibit {
     const d = this.artwork.display;
     if (d.reveal == null && !(d.oculus && d.sky?.sun)) return;
     this.group.updateMatrixWorld(true);
-    if (d.reveal != null) this.drawPlan(root);
-    if (d.oculus && d.sky?.sun) this.buildBeam(root);
-  }
-
-  /**
-   * The sun through an opening: a ray from the oculus along the sun's
-   * line finds where it lands on the model, and a soft shaft of light is
-   * drawn to that point with a bright disc on the wall. The scan's own
-   * lighting is baked into its photographs, so this is the only way the
-   * sun can mark it.
-   */
-  private buildBeam(root: Group) {
-    const o = this.artwork.display.oculus!;
-    const sun = this.artwork.display.sky!.sun!;
-    const DEG = Math.PI / 180;
-    const az = sun.azimuth * DEG, alt = sun.altitude * DEG;
-    const toSun = new Vector3(Math.sin(az) * Math.cos(alt), Math.sin(alt), -Math.cos(az) * Math.cos(alt));
-    const dir = toSun.clone().negate();
-    const origin = new Vector3(o.x, baseHeightOf(this.artwork) + o.y, o.z).applyMatrix4(this.group.matrixWorld);
-    const hit = new Raycaster(origin, dir, 0.5, 200).intersectObject(root, true).find((h) => (h.object as Mesh).name !== "backing");
-    if (!hit) return;
-    if (this.beam) {
-      this.group.remove(this.beam);
-      this.beam.traverse((m) => m instanceof Mesh && (m.geometry.dispose(), (m.material as Material).dispose()));
+    this.reveal?.drawPlan(root);
+    if (d.oculus && d.sky?.sun) {
+      if (this.beam) disposeBeam(this.beam);
+      this.beam = buildBeam(this.artwork, this.group, root);
+      if (this.beam) this.group.add(this.beam);
     }
-    // Everything in the exhibit's own frame, so it moves with it.
-    const inv = this.group.matrixWorld.clone().invert();
-    const start = origin.clone().applyMatrix4(inv);
-    const end = hit.point.clone().applyMatrix4(inv);
-    const localDir = end.clone().sub(start).normalize();
-    const beam = new Group();
-    beam.name = "sunbeam";
-    const length = start.distanceTo(end);
-    const quat = new Quaternion().setFromUnitVectors(new Vector3(0, 1, 0), localDir);
-    const mid = start.clone().addScaledVector(localDir, length / 2);
-    // Nested shells, faint, so the shaft has a soft core and no hard edge.
-    for (const [k, opacity] of [[1, 0.07], [0.8, 0.08], [0.6, 0.1], [0.4, 0.12]] as const) {
-      const shell = new Mesh(
-        new CylinderGeometry(o.radius * k, o.radius * k, length, 32, 1, true),
-        new MeshBasicMaterial({ color: 0xfff0cf, transparent: true, opacity, blending: AdditiveBlending, depthWrite: false, side: DoubleSide, toneMapped: false }),
-      );
-      shell.quaternion.copy(quat);
-      shell.position.copy(mid);
-      beam.add(shell);
-    }
-    // The disc where it lands, laid on the surface and lifted a hair off it.
-    const normal = hit.face ? hit.face.normal.clone().transformDirection(hit.object.matrixWorld).transformDirection(inv) : localDir.clone().negate();
-    if (normal.dot(localDir) > 0) normal.negate();
-    const disc = new Mesh(
-      new CircleGeometry(o.radius * 1.08, 48),
-      new MeshBasicMaterial({ color: 0xfff3d6, transparent: true, opacity: 0.7, blending: AdditiveBlending, depthWrite: false, side: DoubleSide, toneMapped: false }),
-    );
-    disc.quaternion.setFromUnitVectors(new Vector3(0, 0, 1), normal);
-    disc.position.copy(end).addScaledVector(normal, 0.08);
-    beam.add(disc);
-    this.beam = beam;
-    this.group.add(beam);
   }
 
   /** The model or simulation, for picking up; null for an image. */
@@ -699,7 +480,7 @@ export class Exhibit {
 
   /** Estimated GPU bytes this exhibit holds. */
   get residentBytes(): number {
-    return (this.ladder?.residentBytes ?? 0) + (this.sim?.residentBytes ?? 0) + this.ringLadders.reduce((s, l) => s + l.residentBytes, 0);
+    return (this.ladder?.residentBytes ?? 0) + (this.sim?.residentBytes ?? 0) + (this.ring?.residentBytes ?? 0);
   }
 
   /** Fall back to the smallest rung and stay there until uncap(). */
@@ -722,7 +503,7 @@ export class Exhibit {
 
   /** Called every frame with the viewer's world position; upgrades the texture rung as they approach, runs a simulation. */
   update(viewerWorldPos: Vector3, dt = 0) {
-    if (!this.ladder && !this.motion && !this.sound && !this.sim && !this.tag && !this.ringLadders.length) return;
+    if (!this.ladder && !this.motion && !this.sound && !this.sim && !this.tag && !this.ring) return;
     const d = Math.max(viewerWorldPos.distanceTo(this.worldCentre), 0.5);
     if (this.tag) {
       // Turn the tag to the visitor, upright.
@@ -735,7 +516,7 @@ export class Exhibit {
       this.spinAngle = (this.spinAngle + (dt * 2 * Math.PI) / this.artwork.display.spin) % (2 * Math.PI);
       this.modelRoot.rotation.y = this.spinAngle;
     }
-    this.updateReveal(Math.hypot(viewerWorldPos.x - this.worldCentre.x, viewerWorldPos.z - this.worldCentre.z), dt);
+    this.reveal?.update(Math.hypot(viewerWorldPos.x - this.worldCentre.x, viewerWorldPos.z - this.worldCentre.z), dt);
     if (this.sound) {
       // Cross-fade toward what is wanted: a second to come up, a second to go.
       const target = this.soundWanted ? 1 : 0;
@@ -745,19 +526,18 @@ export class Exhibit {
       if (target === 0 && this.soundLevel <= 0.005 && this.sound.isPlaying) this.sound.pause();
       this.sound.setVolume(this.soundLevel);
     }
-    if (this.ringLadders.length) {
-      // Each panel is a few metres away from the centre of the room; ask by the room's radius.
-      const ring = this.artwork.display.ring!;
-      const desiredPx = Math.min((Math.max(...ring.panels.map((p) => p.widthCm / 100)) / Math.max(1, ring.radius)) * PX_PER_RADIAN, this.qualityCap);
-      if (desiredPx > this.lastRequestedPx * 1.25) {
-        this.lastRequestedPx = desiredPx;
-        for (const l of this.ringLadders) l.request(desiredPx);
-      }
-    }
+    this.ring?.request(this.artwork, PX_PER_RADIAN, this.qualityCap);
     if (this.ladder) {
       const desiredPx = Math.min((this.displayWidth / d) * PX_PER_RADIAN, this.qualityCap);
       // Hysteresis: only ask again when the need has grown by a quarter.
       if (desiredPx > this.lastRequestedPx * 1.25) {
+        this.lastRequestedPx = desiredPx;
+        this.ladder.request(desiredPx);
+      } else if (d > 25 && !this.held && !this.capped && desiredPx * 4 < this.lastRequestedPx) {
+        // Walked well away from something seen close: let the sharp rung go and hold what this
+        // distance needs, so a building looked at from inside does not keep its full textures
+        // from a hundred metres off.
+        this.ladder.shrink();
         this.lastRequestedPx = desiredPx;
         this.ladder.request(desiredPx);
       }
@@ -785,14 +565,14 @@ export class Exhibit {
     this.sound = null;
     this.ladder?.dispose();
     this.ladder = null;
-    for (const l of this.ringLadders) l.dispose();
-    this.ringLadders = [];
+    this.ring?.dispose();
+    this.ring = null;
     this.motion = null;
     this.sim?.dispose();
     this.sim = null;
-    this.planTexture?.dispose();
-    this.planTexture = null;
-    this.plan = null;
+    this.reveal?.dispose();
+    this.reveal = null;
+    if (this.beam) disposeBeam(this.beam);
     this.beam = null;
     // The ladder freed the model's own meshes; the rest is ours.
     if (this.modelRoot) this.group.remove(this.modelRoot);

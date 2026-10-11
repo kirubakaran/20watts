@@ -134,8 +134,25 @@ async function thumbInfo(title: string, width: number, page: number | null = nul
   return { url, width: realWidth, height: Math.round((info.thumbheight / info.thumbwidth) * realWidth) };
 }
 
-async function fetchCommonsImage(artId: string, version: { original: { url: string; width: number; height: number }; rungs: ImageRung[] }) {
+/** The original's pixel size and byte count, from the Commons API, for a record that did not say. */
+async function originalInfo(title: string): Promise<{ width: number; height: number; bytes: number }> {
+  const api = new URL("https://commons.wikimedia.org/w/api.php");
+  api.search = new URLSearchParams({ action: "query", titles: title, prop: "imageinfo", iiprop: "size", format: "json" }).toString();
+  const json = (await (await fetchOk(api.toString())).json()) as { query: { pages: Record<string, { imageinfo?: { width: number; height: number; size: number }[] }> } };
+  const info = Object.values(json.query.pages)[0]?.imageinfo?.[0];
+  if (!info) throw new Error(`No imageinfo for ${title}`);
+  return { width: info.width, height: info.height, bytes: info.size };
+}
+
+async function fetchCommonsImage(artId: string, version: { original: { url: string; width: number; height: number; bytes: number | null }; rungs: ImageRung[] }) {
   const { title, page } = commonsTitleFromUrl(version.original.url);
+  if (!version.original.width || !version.original.height) {
+    // An item need not say how big the file is; the pipeline asks.
+    const info = await originalInfo(title);
+    version.original.width = info.width;
+    version.original.height = info.height;
+    version.original.bytes ??= info.bytes;
+  }
   const dir = path.join(OUT_DIR, artId);
   const rungs = new Map<number, ImageRung>();
   for (const w of TARGET_WIDTHS) {

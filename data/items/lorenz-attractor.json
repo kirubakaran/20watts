@@ -82,5 +82,6 @@
  },
  "slug": "lorenz-attractor",
  "flat": false,
- "periodSlug": null
+ "periodSlug": null,
+ "tour": "The Lorenz attractor, 1963: three equations whose solutions never repeat and never leave this shape. The red point is flying them now, and no one can say which wing it takes next."
 }

@@ -138,5 +138,14 @@
  "loop": {
   "start": 44,
   "seconds": 3
+ },
+ "moderation": {
+  "status": "approved",
+  "reviewedBy": "Kirubakaran Athmanathan",
+  "reviewedAt": "2026-10-08T00:00:00Z",
+  "reason": "Fair use: a single still of a widely parodied upload, shown as the exhibit it has become, with commentary; the museum takes it down on request.",
+  "flags": [
+   "fair-use"
+  ]
  }
 }

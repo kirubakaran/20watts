@@ -42,7 +42,8 @@ const MAX_CALLS = Number(process.env.MAX_CALLS ?? 1200);
 const fmt = (n, d = 0) => (n == null ? "-" : Number(n).toFixed(d));
 const samples = [];
 let startedAt = Date.now();
-const { page, shutdown, onLimit } = await openChrome({ limitMs: LIMIT, flags: ["--js-flags=--expose-gc"] });
+// Uncapped frame rate, so frame times measure the museum and not the display's refresh.
+const { page, shutdown, onLimit } = await openChrome({ limitMs: LIMIT, flags: ["--js-flags=--expose-gc", "--disable-frame-rate-limit", "--disable-gpu-vsync"] });
 onLimit(() => samples.length && writeFile(out, JSON.stringify({ url, when: new Date().toISOString(), partial: "gave up", samples }, null, 2)));
 
 async function sample(leg, row) {

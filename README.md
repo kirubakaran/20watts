@@ -145,8 +145,10 @@ for the streamer to settle at each, and samples the JS heap, the streamer's
 estimate of GPU bytes against its budget, live exhibits, textures and
 geometries, draw calls, triangles and frame times. It prints one line a
 row and a summary, writes `walk.json`, and exits non-zero if the budget was
-exceeded or the heap grew by more than a third; `REVERSE=1` walks back too,
-which is where a leak shows. It takes a few minutes, so run it after a
+exceeded, draw calls passed 1,200 or the heap grew by more than a third;
+`REVERSE=1` walks back too, which is where a leak shows, and `VERBOSE=1`
+names the exhibits drawing the most objects at each row. Chrome runs with
+its frame rate uncapped for it, so the frame times are the museum's own. It takes a few minutes, so run it after a
 session of additions rather than after every change.
 
 ## Streaming
@@ -176,6 +178,9 @@ src/sims/                programs run live: life, mandelbrot, lorenz, fourier, g
 public/sky/moon-*.jpg    NASA's LRO colour map of the Moon, for the sky and the globe
 src/world/axes.ts        year and side-quest labels stencilled on the floor
 src/world/exhibit.ts     one work in the world: image, glTF or program, its name tag, shadow
+src/world/reveal.ts      a walk-in interior's plan slab and the clipping that raises its walls
+src/world/ring.ts        a room of pictures curved round the visitor
+src/world/beam.ts        the sun through an oculus, as a drawn shaft of light
 src/world/card.ts        the card: what a placard was, brought to the visitor on a press
 src/assets/textures.ts   image ladder; sharper rungs load as you approach
 src/assets/models.ts     glb ladder, same idea for 3D scans
@@ -347,12 +352,20 @@ would, for CI. Then `npm run fetch-assets -- <id>` builds the rungs, and
 titles that are names rather than sentences, descriptions that carry what
 the title does not, licences, bounds the pipeline has measured, branches
 that point at something, simulations that say they are computed live.
-`npm run lint` prints the findings. The item format and these two modules
-are also what a contribution will be and go through once there is a
-backend. `npm run where <id or title>` says where a work stands and how to
+`npm run lint` prints the findings; a copyrighted work fails it unless a
+named reviewer has recorded the fair-use decision in `moderation`. An
+item's `tour` line makes the work a stop on the guided visit, in lane
+order, and the lint reads it for length and for talk about the museum
+rather than the work; `source.changes` says what the museum did to the
+file, apart from `source.notes` on where it came from; pixel sizes and
+byte counts may be left out, the pipeline measures them. The item format
+and these two modules are also what a contribution will be and go through
+once there is a backend. `npm run where <id or title>` says where a work stands and how to
 get there; `npm run gallery` photographs every tour stop (or `ALL=1` every
 work, or `MODELS=1` every model from four sides) into a folder with an
-index page, for looking a session's changes over in one scroll.
+index page, keeps the previous run beside it and says which stops changed
+by more than a few per cent of their pixels, with the old picture under
+the new, so a regression is a scroll away.
 
 Records follow `src/data/types.ts`. For a Smithsonian scan, find the object on
 [3d.si.edu](https://3d.si.edu), take the Voyager document id from its page,
@@ -468,8 +481,8 @@ to be lined up with, which is the point: text here is not fixed to a
 wall. The placard text itself is unchanged (`placardLines` in
 `src/world/exhibit.ts`), so the card is the placard, freed.
 
-The guided visit (`src/world/tour.ts`) is a list of stops with one line
-each, for a first visitor. `T` goes to the next stop and says its line at
+The guided visit (`src/world/tour.ts`) is the works whose records carry a
+`tour` line, in lane order, one line each, for a first visitor. `T` goes to the next stop and says its line at
 the top of the screen, `Shift T` goes back, a phone has tour buttons, and
 `?tour` starts at the first stop. Where you are in it is remembered in
 the browser. Stops are works by id, in time order, and a work that is

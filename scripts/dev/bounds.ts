@@ -2,6 +2,9 @@
  * Prints the bounds, root node transforms and texture sizes of a glTF or
  * glb, for deciding a new model's unitScale and rotation before it goes in
  * the collection. Usage: npx tsx scripts/dev/bounds.ts <file.gltf|glb>
+ * Prints min and max corners, size, each root node's scale and rotation,
+ * and the mesh and texture counts; reads draco-compressed files. Pair with
+ * scripts/dev/meshlist.mts for what the materials are.
  */
 import { NodeIO, getBounds } from "@gltf-transform/core";
 import { ALL_EXTENSIONS } from "@gltf-transform/extensions";

@@ -29,6 +29,7 @@ export interface ItemSource {
   fileTitle?: string | null;
   url?: string;
   sourcePage?: string | null;
+  /** Pixel size and byte count of the original. Optional: the pipeline measures them (Commons files are asked for) and keeps what it finds. */
   width?: number | null;
   height?: number | null;
   bytes?: number | null;
@@ -37,8 +38,10 @@ export interface ItemSource {
   licenseName?: string | null;
   licenseUrl?: string | null;
   author?: string | null;
-  /** Provenance in prose: what the file is, how it was checked, what was changed. Kept with the record. */
+  /** Provenance in prose: what the file is, where it is from, how its licence was checked. Kept with the record. */
   notes?: string | null;
+  /** What the museum did to the file to show it (cropped, rescaled, materials restored, a figure drawn); kept with the notes, as its own paragraph. */
+  changes?: string | null;
   /** Typeset equations. */
   tex?: string;
   figure?: string;
@@ -136,6 +139,8 @@ export interface Item {
   object: ItemObject;
   /** 0 to 1: how much the tour and the sound arbiter should favour it. */
   importance?: number;
+  /** The guided visit stops here and says this: one line about the work itself. */
+  tour?: string | null;
   genre?: string[];
   tags?: string[];
   periodSlug?: string | null;

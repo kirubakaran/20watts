@@ -1,3 +1,12 @@
+/**
+ * What a model is made of: every material with its triangle and primitive
+ * count, alpha mode, base colour, metalness, roughness and extensions, then
+ * the mesh and node totals. For seeing why a model draws slowly (a
+ * thousand primitives), why it looks wrong (a black sunshield with
+ * metalness 0), or what an `original.materials` fix should match.
+ * Usage: npx tsx scripts/dev/meshlist.mts <file.gltf|glb>
+ * Reads draco-compressed files; pair with scripts/dev/bounds.ts for size and axes.
+ */
 import { NodeIO } from "@gltf-transform/core";
 import { ALL_EXTENSIONS } from "@gltf-transform/extensions";
 import draco3d from "draco3dgltf";
