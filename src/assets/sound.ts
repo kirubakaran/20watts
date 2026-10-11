@@ -119,6 +119,11 @@ export class Sound {
     return this.playing;
   }
 
+  /** Loudness 0..1, on top of the distance falloff; used to cross-fade between recordings. */
+  setVolume(v: number) {
+    this.node?.setVolume(v);
+  }
+
   dispose() {
     this.pause();
     this.node?.disconnect();

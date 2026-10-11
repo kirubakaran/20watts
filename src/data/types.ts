@@ -397,6 +397,15 @@ export interface DisplayHints {
   /** Written on the slab of a work with `reveal`, e.g. "Step into the Alhambra". Default "Step in". */
   invitation?: string;
   /**
+   * A room of pictures: the asset and its alternates, in that order, are
+   * hung on the inside of a ring of this radius with this gap between
+   * them, each curved to it, and the visitor stands in the middle (give
+   * `threshold: 0`). For Monet's water lilies in the Orangerie, painted
+   * for the walls of an oval room. `panels` gives each picture's real
+   * size in order, since alternates carry none.
+   */
+  ring?: { radius: number; gap: number; panels: { widthCm: number; heightCm: number }[] };
+  /**
    * An opening the standing sun (`sky.sun`) shines through: its centre in
    * the work's own metres (base at 0, footprint centred) and its radius.
    * A shaft of light is drawn from it to wherever the sun's line meets
@@ -566,6 +575,11 @@ export function baseHeightOf(a: Artwork): number {
 }
 
 export function footprintOf(a: Artwork): Footprint {
+  if (a.kind === "image" && a.display.ring) {
+    const r = a.display.ring;
+    const height = Math.max(...r.panels.map((p) => p.heightCm / 100)) * a.display.scale;
+    return { width: 2 * r.radius + 0.2, depth: 2 * r.radius + 0.2, height };
+  }
   if (a.kind === "model" || a.kind === "sim") {
     const v = a.kind === "model" ? currentModelVersion(a) : currentSimVersion(a);
     const b = v ? v.bounds : { width: 1, height: 1, depth: 1 };

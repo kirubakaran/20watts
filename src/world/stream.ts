@@ -95,6 +95,32 @@ export class Streamer {
     return b;
   }
 
+  /**
+   * One recording at a time: of the live exhibits with sound within their
+   * hearing distance, the nearest plays and the rest fade out, and it keeps
+   * playing until another is clearly nearer, so a walk down a row of
+   * records is a walk from voice to voice, not a blend.
+   */
+  private current: Stub | null = null;
+  chooseSound(eye: Vector3) {
+    let best: Stub | null = null;
+    let bestD = Infinity;
+    let currentD = Infinity;
+    for (const s of this.live) {
+      const e = s.exhibit!;
+      if (!e.hasSound) continue;
+      const d = e.worldCentre.distanceTo(eye);
+      if (s === this.current) currentD = d;
+      // Nearest wins; within two metres of each other, the more important work does.
+      if (d < e.hearing && (d < bestD - 2 || (d < bestD + 2 && !best) || (Math.abs(d - bestD) <= 2 && best && (s.artwork.importance ?? 0) > (best.artwork.importance ?? 0)))) (bestD = d), (best = s);
+    }
+    // Hysteresis: stay with the one playing unless another is three metres nearer, or it is out of hearing.
+    const keep = this.current && this.live.has(this.current) && currentD < this.current.exhibit!.hearing + 4 && bestD > currentD - 3;
+    const chosen = keep ? this.current : best;
+    if (chosen !== this.current) this.current = chosen;
+    for (const s of this.live) s.exhibit!.setSoundWanted(s === chosen);
+  }
+
   /** Tell every live exhibit how dark the sky is, so placards stay legible. */
   setNight(night: number) {
     for (const s of this.live) s.exhibit!.setNight(night);
@@ -130,6 +156,7 @@ export class Streamer {
       this.lastZ = eye.z;
       this.sweep(eye);
     }
+    this.chooseSound(eye);
     for (const s of this.live) s.exhibit!.update(eye, dt);
   }
 

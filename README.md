@@ -6,7 +6,7 @@ plane, no walls: forward is later in time, and a side quest stands off to
 the right of the work it belongs with. Works float at their true size, and
 you can walk behind one and see it mirrored.
 
-v1 holds a hundred and nineteen works. They run from an Acheulean
+v1 holds a hundred and thirty works. They run from an Acheulean
 hand axe (a CC0 photogrammetry scan, 300,000 years old) and the Lion-man of
 Hohlenstein-Stadel through eleven cave and rock paintings from five
 continents (with a scanned cast of a Lascaux wall beside the Lascaux
@@ -70,7 +70,13 @@ colossal head, Myron's Discobolus, the Winged Victory of Samothrace, the
 Laocoön, the Augustus of Prima Porta, a moai, a Benin Queen Mother's
 head, Michelangelo's David (from the full-size bronze cast in Sioux
 Falls) and three Berninis, Apollo and Daphne, the Rape of Proserpina and
-the Medusa. Space Shuttle Discovery
+the Medusa. The Impressionists are here as museum scans:
+Impression, Sunrise, the Water-Lily Pond, Woman with a Parasol, the Bal
+du moulin de la Galette, Degas's Ballet Class, Caillebotte's rainy Paris
+street, Morisot's Cradle, Pissarro's Boulevard Montmartre at night,
+Manet's Déjeuner sur l'herbe and Cassatt's Child's Bath, and Monet's
+water lilies as the first room of the Orangerie: the four panels curved
+around a ring you stand inside, in the museum's own order. Space Shuttle Discovery
 stands on her gear as the Smithsonian's CC0 scan, 37 m long; Khufu's
 ship, the 4,500-year-old cedar boat from beside the Great Pyramid, lies
 broadside to the lane as a laser scan drawn from 1.6 million coloured
@@ -371,6 +377,14 @@ and the lights dim with it. Keep the radius short of the next row.
 Stonehenge's record also sets `display.yaw` so the axis of the stones
 lies on the solstice bearing.
 
+A room of pictures is one image record with the other pictures as
+`alternates` and `display.ring`: a `radius`, a `gap`, and the real size
+of each `panel` in order. The pictures are curved to the inside of the
+ring, hung from the left end round to the right with the opening toward
+the lane, each with its own ladder, and the visitor stands at the centre
+(`threshold: 0`). Monet's Orangerie room is hung this way at 7.6 m
+radius, the circle nearest its oval.
+
 A scanned interior whose outside is not worth seeing gets
 `display.reveal`: metres from its centre within which its walls stand.
 From further away it is cut off at the floor by a clipping plane, and
@@ -523,7 +537,13 @@ BY 4.0, a photogrammetry scan shown with its flaws. The four films are
 public domain, from Wikimedia Commons: the Muybridge sequence
 reconstructed from the Library of Congress's scan of the 1878 cabinet
 card, the Lumière Society's 1897 negative of the train, the Méliès film
-and NASA's restored Apollo 11 television. The sculptures are Sketchfab scans
+and NASA's restored Apollo 11 television. The Impressionist paintings are
+public-domain scans via Wikimedia Commons: Google Art Project scans at
+the Musée d'Orsay, the Art Institute of Chicago and the Musée de
+l'Orangerie, the National Gallery London's scans of the Water-Lily Pond
+and the Boulevard Montmartre at night, the National Gallery of Art's CC0
+scan of Woman with a Parasol, and a Commons valued image of Impression,
+Sunrise. The sculptures are Sketchfab scans
 under CC BY 4.0 unless noted: Apollo and Daphne by apmcrory, the Rape of
 Proserpina by Grooveholmes, the Medusa by ZeuxisVR,
 the Augustus of Prima Porta by Arqueomodel3D, the Winged Victory from the

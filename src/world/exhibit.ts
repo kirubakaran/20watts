@@ -13,6 +13,7 @@ import {
   Box3,
   CanvasTexture,
   CylinderGeometry,
+  RepeatWrapping,
   Quaternion,
   Raycaster,
   CircleGeometry,
@@ -31,7 +32,7 @@ import {
 import { Text } from "troika-three-text";
 import type { Material } from "three";
 import type { Artwork } from "../data/types";
-import { baseHeightOf, currentAudioVersion, currentImageVersion, currentModelVersion, currentSimVersion, imageDisplaySize, footprintOf } from "../data/types";
+import { assetsOf, baseHeightOf, currentAudioVersion, currentImageVersion, currentModelVersion, currentSimVersion, imageDisplaySize, footprintOf, type ImageAsset } from "../data/types";
 import { PROGRAMS, type Sim } from "../sims";
 import { Sound } from "../assets/sound";
 import { ImageLadder } from "../assets/textures";
@@ -52,9 +53,8 @@ const PX_PER_RADIAN = 1600;
 /** A moving image starts playing inside this distance and stops again beyond the larger one. */
 const MOTION_NEAR = 14;
 const MOTION_FAR = 18;
-/** A recording starts at the record's hearing distance, or this, and stops a few metres further out. */
+/** A recording may be heard within the record's hearing distance, or this; which one plays is decided outside (main.ts). */
 const HEARING = 18;
-const HEARING_MARGIN = 5;
 
 let shadowTexture: CanvasTexture | null = null;
 function getShadowTexture(): CanvasTexture {
@@ -188,9 +188,14 @@ function makeTag(a: Artwork): Text {
 export class Exhibit {
   readonly group = new Group();
   private ladder: ImageLadder | ModelLadder | null = null;
+  /** A ring of pictures: one ladder per panel. */
+  private ringLadders: ImageLadder[] = [];
   private imageMaterial: MeshBasicMaterial | null = null;
   private motion: Motion | null = null;
   private sound: Sound | null = null;
+  /** Whether the museum wants this recording heard now (one at a time), and how loud it is on its way there. */
+  private soundWanted = false;
+  private soundLevel = 0;
   private sim: Sim | null = null;
   private modelRoot: Group | null = null;
   /** Shown from inside only: how far the walls have risen, 0 cut at the ankle to 1 whole. */
@@ -232,7 +237,8 @@ export class Exhibit {
     this.displayWidth = fp.width;
     this.group.add(contactShadow(fp.width, fp.depth));
 
-    if (artwork.kind === "image") this.buildImage();
+    if (artwork.kind === "image" && artwork.display.ring) this.buildRing();
+    else if (artwork.kind === "image") this.buildImage();
     else if (artwork.kind === "sim") this.buildSim();
     else this.buildModel();
     this.worldCentre.copy(this.group.position).add(this.centre);
@@ -245,6 +251,20 @@ export class Exhibit {
         this.group.add(node);
       }
     }
+  }
+
+  /** Metres from the work within which its recording may be heard. */
+  get hearing(): number {
+    return this.artwork.display.hearing ?? HEARING;
+  }
+
+  get hasSound(): boolean {
+    return this.sound != null;
+  }
+
+  /** The museum's say on whether this recording plays now; the fade is handled here. */
+  setSoundWanted(on: boolean) {
+    this.soundWanted = on;
   }
 
   /** Whether the placards exist. They are built within reading distance only. */
@@ -342,6 +362,53 @@ export class Exhibit {
       this.ladder.requestLowest();
     }
     if (v?.loop) this.motion = new Motion(v.loop);
+  }
+
+  /**
+   * A room of pictures: each panel curved to the inside of a ring, hung in
+   * order around it from the back, so the visitor at the centre turns to
+   * see them as the painter meant.
+   */
+  private buildRing() {
+    const a = this.artwork;
+    const ring = a.display.ring!;
+    const assets = assetsOf(a).filter((x): x is ImageAsset => x.kind === "image");
+    const base = baseHeightOf(a);
+    const fp = footprintOf(a);
+    this.centre.set(0, base + fp.height / 2, 0);
+    // Total arc the panels and gaps take; they are centred on the far side (-Z), away from the way in.
+    const widths = ring.panels.map((p) => (p.widthCm / 100) * a.display.scale);
+    const total = widths.reduce((s, w) => s + w, 0) + ring.gap * (widths.length - 1);
+    let angle = Math.PI + total / (2 * ring.radius); // start at the left end, going clockwise seen from above
+    assets.forEach((asset, i) => {
+      const v = asset.versions.find((x) => x.id === asset.currentVersionId) ?? asset.versions[0];
+      const size = ring.panels[i];
+      if (!v || !size) return;
+      const w = widths[i]!, h = (size.heightCm / 100) * a.display.scale;
+      const arc = w / ring.radius;
+      // An open cylinder segment seen from inside; thetaStart is measured from +Z toward +X in three.
+      const geom = new CylinderGeometry(ring.radius, ring.radius, h, Math.max(8, Math.round(arc * 24)), 1, true, angle - arc, arc);
+      const mat = new MeshBasicMaterial({ color: 0xd8d4cc, side: BackSide, toneMapped: false });
+      const mesh = new Mesh(geom, mat);
+      mesh.position.y = base + h / 2;
+      mesh.name = `panel-${i}`;
+      this.group.add(mesh);
+      angle -= arc + ring.gap / ring.radius;
+      if (v.rungs.length) {
+        const ladder = new ImageLadder(v.rungs, this.gpu.maxTextureSize, this.gpu.maxAnisotropy);
+        ladder.onUpgrade((t: Texture) => {
+          // Seen from inside, the cylinder's u runs the wrong way; flip it so the picture reads left to right.
+          t.wrapS = RepeatWrapping;
+          t.repeat.x = -1;
+          t.offset.x = 1;
+          mat.map = t;
+          mat.color.set(0xffffff);
+          mat.needsUpdate = true;
+        });
+        ladder.requestLowest();
+        this.ringLadders.push(ladder);
+      }
+    });
   }
 
   private buildModel() {
@@ -626,7 +693,7 @@ export class Exhibit {
 
   /** Estimated GPU bytes this exhibit holds. */
   get residentBytes(): number {
-    return (this.ladder?.residentBytes ?? 0) + (this.sim?.residentBytes ?? 0);
+    return (this.ladder?.residentBytes ?? 0) + (this.sim?.residentBytes ?? 0) + this.ringLadders.reduce((s, l) => s + l.residentBytes, 0);
   }
 
   /** Fall back to the smallest rung and stay there until uncap(). */
@@ -649,7 +716,7 @@ export class Exhibit {
 
   /** Called every frame with the viewer's world position; upgrades the texture rung as they approach, runs a simulation. */
   update(viewerWorldPos: Vector3, dt = 0) {
-    if (!this.ladder && !this.motion && !this.sound && !this.sim && !this.tag) return;
+    if (!this.ladder && !this.motion && !this.sound && !this.sim && !this.tag && !this.ringLadders.length) return;
     const d = Math.max(viewerWorldPos.distanceTo(this.worldCentre), 0.5);
     if (this.tag) {
       // Turn the tag to the visitor, upright.
@@ -659,9 +726,22 @@ export class Exhibit {
     this.sim?.update(dt, d);
     this.updateReveal(Math.hypot(viewerWorldPos.x - this.worldCentre.x, viewerWorldPos.z - this.worldCentre.z), dt);
     if (this.sound) {
-      const near = this.artwork.display.hearing ?? HEARING;
-      if (d < near && !this.sound.isPlaying) this.sound.play();
-      else if (d > near + HEARING_MARGIN && this.sound.isPlaying) this.sound.pause();
+      // Cross-fade toward what is wanted: a second to come up, a second to go.
+      const target = this.soundWanted ? 1 : 0;
+      this.soundLevel += Math.max(-dt, Math.min(dt, (target - this.soundLevel) * 1.4 + (target > this.soundLevel ? 0.02 : -0.02)));
+      this.soundLevel = Math.max(0, Math.min(1, this.soundLevel));
+      if (target > 0 && !this.sound.isPlaying) this.sound.play();
+      if (target === 0 && this.soundLevel <= 0.005 && this.sound.isPlaying) this.sound.pause();
+      this.sound.setVolume(this.soundLevel);
+    }
+    if (this.ringLadders.length) {
+      // Each panel is a few metres away from the centre of the room; ask by the room's radius.
+      const ring = this.artwork.display.ring!;
+      const desiredPx = Math.min((Math.max(...ring.panels.map((p) => p.widthCm / 100)) / Math.max(1, ring.radius)) * PX_PER_RADIAN, this.qualityCap);
+      if (desiredPx > this.lastRequestedPx * 1.25) {
+        this.lastRequestedPx = desiredPx;
+        for (const l of this.ringLadders) l.request(desiredPx);
+      }
     }
     if (this.ladder) {
       const desiredPx = Math.min((this.displayWidth / d) * PX_PER_RADIAN, this.qualityCap);
@@ -694,6 +774,8 @@ export class Exhibit {
     this.sound = null;
     this.ladder?.dispose();
     this.ladder = null;
+    for (const l of this.ringLadders) l.dispose();
+    this.ringLadders = [];
     this.motion = null;
     this.sim?.dispose();
     this.sim = null;
