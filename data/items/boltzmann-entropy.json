@@ -1,0 +1,87 @@
+{
+ "slug": "boltzmann-entropy",
+ "title": "Boltzmann's entropy formula",
+ "titleOriginal": null,
+ "kind": "image",
+ "importance": 0.8,
+ "genre": [
+  "equation"
+ ],
+ "tags": [
+  "equation",
+  "science",
+  "mathematics"
+ ],
+ "periodSlug": null,
+ "flat": true,
+ "baseHeight": null,
+ "source": {
+  "type": "typeset",
+  "curid": null,
+  "fileTitle": null,
+  "url": "data/originals/eq-boltzmann-entropy/equation.svg",
+  "sourcePage": null,
+  "width": 2560,
+  "height": 2176,
+  "bytes": 5538,
+  "mime": "image/svg+xml",
+  "licenseName": "CC0 1.0",
+  "licenseUrl": null,
+  "author": "20watts",
+  "notes": "Typeset by 20watts from the TeX in the record with MathJax, with a figure drawn for this museum; the rendering is CC0, the equation itself is not subject to copyright.",
+  "tex": "S = k \\log W",
+  "figure": "data/figures/boltzmann-entropy.svg"
+ },
+ "object": {
+  "year": 1877,
+  "month": null,
+  "day": null,
+  "yearStart": 1877,
+  "yearEnd": 1877,
+  "dateLabel": "1877",
+  "madeIn": {
+   "name": "Graz",
+   "region": "Styria",
+   "country": "Austria",
+   "lat": 47.0707,
+   "lon": 15.4395,
+   "wikidataQid": "Q13298"
+  },
+  "location": {
+   "name": null,
+   "region": null,
+   "country": null,
+   "lat": null,
+   "lon": null,
+   "wikidataQid": null,
+   "institution": null,
+   "inventoryNumber": null
+  },
+  "creator": {
+   "name": "Ludwig Boltzmann",
+   "role": "author",
+   "birthYear": 1844,
+   "deathYear": 1906,
+   "wikidataQid": "Q84296"
+  },
+  "culture": null,
+  "movement": null,
+  "medium": "Equation, typeset",
+  "materials": [],
+  "subjects": [
+   "equation"
+  ],
+  "widthCm": 100,
+  "heightCm": 85,
+  "depthCm": null,
+  "weightKg": null,
+  "description": "Entropy is the logarithm of the number of ways, W, that the atoms of a system can be arranged without changing what it looks like from outside. With this, Boltzmann, then a professor in Graz, explained in 1877 why heat flows one way and why the second law of thermodynamics is a law of probability: there are simply far more disordered arrangements than ordered ones. It is the bridge between the world of atoms, which most physicists of his day did not believe in, and the world of steam engines.",
+  "facts": [
+   "The formula in this form, with the constant k, was first written down by Max Planck in 1900; Planck named k Boltzmann's constant.",
+   "It is carved on Boltzmann's gravestone in Vienna's Zentralfriedhof.",
+   "Boltzmann fought the sceptics of atoms for decades; Einstein's 1905 paper on Brownian motion, and Perrin's experiments, settled the matter soon after his death."
+  ],
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Boltzmann%27s_entropy_formula",
+  "wikidataQid": null
+ }
+}

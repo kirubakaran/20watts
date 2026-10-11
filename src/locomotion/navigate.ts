@@ -22,6 +22,10 @@ export interface Stop {
   overhead?: boolean;
   /** Entered at a door this far in front of the centre: stand there. */
   threshold?: number;
+  /** Off the lane: stand well back from it, to take the whole in. */
+  landmark?: boolean;
+  /** Metres it hangs above the ground; counted as height when standing back from a landmark. */
+  lift?: number;
 }
 
 interface Row {
@@ -41,13 +45,18 @@ export class Navigator {
   constructor(layout: Layout, stops: Stop[]) {
     const byRank = new Map<number, LayoutCell[]>();
     for (const c of layout.cells) (byRank.get(c.timeRank) ?? byRank.set(c.timeRank, []).get(c.timeRank)!).push(c);
+    const edgeOf = new Map(layout.timeAxis.map((t) => [t.rank, t.edge]));
     this.rows = [...byRank.entries()]
       .sort(([p], [q]) => p - q)
       .map(([, cells]) => {
         cells.sort((p, q) => p.x - q.x);
         const z = cells[0]!.z;
         const lane = cells.filter((c) => !c.landmark);
-        return { z, frontZ: z + (lane.length ? Math.max(...lane.map((c) => c.threshold ?? standoff(c))) : 2.5), cells };
+                if (lane.length) return { z, frontZ: z + Math.max(...lane.map((c) => c.threshold ?? standoff(c))), cells };
+        // A row with nothing on the lane, only a landmark off to the side: stop short of the
+        // row's boundary, where its pointer is stencilled on the floor, so the pointer is in view.
+        const edge = edgeOf.get(cells[0]!.timeRank);
+        return { z, frontZ: edge != null ? edge + 4.5 : z + 2.5, cells };
       });
     for (const s of stops) this.stops.set(s.id, s);
   }
@@ -56,6 +65,7 @@ export class Navigator {
   standingPoint(id: string): { x: number; z: number } | null {
     const s = this.stops.get(id);
     if (!s) return null;
+    if (s.landmark) return { x: s.x, z: s.z + s.footprint.depth / 2 + Math.max(10, (s.footprint.height + (s.lift ?? 0)) * 0.8) };
     if (s.overhead) return { x: s.x, z: s.z };
     return { x: s.x, z: s.z + (s.threshold ?? standoff(s.footprint)) };
   }

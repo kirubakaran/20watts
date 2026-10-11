@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-09T00:00:00Z",
+  "generatedAt": "2026-10-11T16:02:01.128Z",
   "artworks": [
     {
       "id": "zen-21530762",
       "kind": "model",
-      "title": "Acheulean hand axe, Saint-Acheul",
+      "title": "Acheulean hand axe",
       "titleOriginal": null,
       "altTitles": [],
       "creators": [],
@@ -89,15 +89,15 @@
               {
                 "quality": "thumb",
                 "url": "/assets/zen-21530762/thumb.glb",
-                "bytes": 59312,
-                "triangles": 5666,
+                "bytes": 48284,
+                "triangles": 3000,
                 "textureSize": 512,
                 "draco": true
               },
               {
                 "quality": "low",
                 "url": "/assets/zen-21530762/low.glb",
-                "bytes": 174536,
+                "bytes": 174344,
                 "triangles": 20998,
                 "textureSize": 1024,
                 "draco": true
@@ -105,7 +105,7 @@
               {
                 "quality": "medium",
                 "url": "/assets/zen-21530762/medium.glb",
-                "bytes": 223204,
+                "bytes": 223012,
                 "triangles": 36000,
                 "textureSize": 1024,
                 "draco": true
@@ -113,7 +113,7 @@
               {
                 "quality": "high",
                 "url": "/assets/zen-21530762/high.glb",
-                "bytes": 288824,
+                "bytes": 288632,
                 "triangles": 60000,
                 "textureSize": 1024,
                 "draco": true
@@ -173,12 +173,12 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-08T00:00:00Z",
-      "updatedAt": "2026-10-09T19:22:26.619Z"
+      "updatedAt": "2026-10-11T16:09:06.303Z"
     },
     {
       "id": "wm-29686577",
       "kind": "image",
-      "title": "Löwenmensch (Lion-man) of Hohlenstein-Stadel",
+      "title": "The Lion-man",
       "titleOriginal": null,
       "altTitles": [],
       "creators": [],
@@ -486,7 +486,7 @@
     {
       "id": "wm-47569433",
       "kind": "image",
-      "title": "Panel of the Lions, Chauvet Cave",
+      "title": "Panel of the Lions, Chauvet",
       "titleOriginal": null,
       "altTitles": [],
       "creators": [
@@ -953,7 +953,7 @@
     {
       "id": "sf-e8f121d0545247318781ef3981fdfdaa",
       "kind": "model",
-      "title": "Lascaux, the great deer (facsimile panel)",
+      "title": "The great deer, Lascaux",
       "titleOriginal": null,
       "altTitles": [],
       "creators": [
@@ -1046,7 +1046,7 @@
               {
                 "quality": "thumb",
                 "url": "/assets/sf-e8f121d0545247318781ef3981fdfdaa/thumb.glb",
-                "bytes": 130848,
+                "bytes": 130484,
                 "triangles": 4548,
                 "textureSize": 512,
                 "draco": true
@@ -1054,7 +1054,7 @@
               {
                 "quality": "low",
                 "url": "/assets/sf-e8f121d0545247318781ef3981fdfdaa/low.glb",
-                "bytes": 568996,
+                "bytes": 568636,
                 "triangles": 31873,
                 "textureSize": 1024,
                 "draco": true
@@ -1062,7 +1062,7 @@
               {
                 "quality": "medium",
                 "url": "/assets/sf-e8f121d0545247318781ef3981fdfdaa/medium.glb",
-                "bytes": 1467768,
+                "bytes": 1467404,
                 "triangles": 54640,
                 "textureSize": 2048,
                 "draco": true
@@ -1070,7 +1070,7 @@
               {
                 "quality": "high",
                 "url": "/assets/sf-e8f121d0545247318781ef3981fdfdaa/high.glb",
-                "bytes": 4032440,
+                "bytes": 4032076,
                 "triangles": 91069,
                 "textureSize": 4096,
                 "draco": true
@@ -1131,7 +1131,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-10T00:08:42.348Z",
+      "updatedAt": "2026-10-11T16:09:35.152Z",
       "branch": {
         "of": "wm-6909701",
         "step": 1,
@@ -1141,7 +1141,7 @@
     {
       "id": "wm-3513129",
       "kind": "image",
-      "title": "Polychrome ceiling, Altamira",
+      "title": "The bison of Altamira",
       "titleOriginal": null,
       "altTitles": [],
       "creators": [
@@ -1264,10 +1264,10 @@
               "note": "Import from Wikimedia Commons; photograph of the Deutsches Museum reproduction"
             },
             "moderation": {
-              "status": "approved",
+              "status": "rejected",
               "reviewedBy": null,
-              "reviewedAt": null,
-              "reason": null,
+              "reviewedAt": "2026-10-09T00:00:00Z",
+              "reason": "Superseded by the Deutsches Museum's scan of its replica ceiling (sf-af6cbb6cfcc14cfeb1387ac50dc824ae)",
               "flags": []
             },
             "provenance": "wikimedia-commons"
@@ -1299,12 +1299,12 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-08T00:00:00Z",
-      "updatedAt": "2026-10-09T19:22:28.209Z"
+      "updatedAt": "2026-10-11T16:02:01.128Z"
     },
     {
       "id": "sf-af6cbb6cfcc14cfeb1387ac50dc824ae",
       "kind": "model",
-      "title": "Polychrome ceiling of Altamira (replica)",
+      "title": "The ceiling of Altamira",
       "titleOriginal": null,
       "altTitles": [],
       "creators": [],
@@ -1394,31 +1394,31 @@
               {
                 "quality": "thumb",
                 "url": "/assets/sf-af6cbb6cfcc14cfeb1387ac50dc824ae/thumb.glb",
-                "bytes": 878456,
-                "triangles": 91476,
+                "bytes": 599956,
+                "triangles": 60437,
                 "textureSize": 512,
                 "draco": true
               },
               {
                 "quality": "low",
                 "url": "/assets/sf-af6cbb6cfcc14cfeb1387ac50dc824ae/low.glb",
-                "bytes": 2888524,
-                "triangles": 423192,
+                "bytes": 2527408,
+                "triangles": 423197,
                 "textureSize": 1024,
                 "draco": true
               },
               {
                 "quality": "medium",
                 "url": "/assets/sf-af6cbb6cfcc14cfeb1387ac50dc824ae/medium.glb",
-                "bytes": 6455736,
-                "triangles": 725473,
+                "bytes": 6060632,
+                "triangles": 725482,
                 "textureSize": 2048,
                 "draco": true
               },
               {
                 "quality": "high",
                 "url": "/assets/sf-af6cbb6cfcc14cfeb1387ac50dc824ae/high.glb",
-                "bytes": 17854044,
+                "bytes": 17368712,
                 "triangles": 1209141,
                 "textureSize": 4096,
                 "draco": true
@@ -1481,12 +1481,12 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-09T19:22:43.026Z"
+      "updatedAt": "2026-10-11T16:09:50.718Z"
     },
     {
       "id": "zen-21490444",
       "kind": "model",
-      "title": "Clovis point (Clovis lanceolate spear point)",
+      "title": "Clovis point",
       "titleOriginal": null,
       "altTitles": [],
       "creators": [],
@@ -1541,7 +1541,7 @@
         "depthCm": 0.67,
         "weightKg": null
       },
-      "description": "Clovis points are the fluted, lance-shaped spear tips of the Clovis culture, the earliest widespread tool tradition in the Americas. A shallow channel, or flute, struck from the base on each face let the point be seated in a split wooden or bone shaft. This example, knapped from metavolcanic stone, was found in the Piedmont of North Carolina and donated to the University of North Carolina, whose archaeology laboratory made the scan.",
+      "description": "Clovis points are the fluted, lance-shaped spear tips of the Clovis culture, the earliest widespread tool tradition in the Americas. A shallow channel, or flute, struck from the base on each face let the point be seated in a split wooden or bone shaft. This example, knapped from metavolcanic stone, was found in the Piedmont of North Carolina and donated to the University of North Carolina, whose archaeology laboratory made the scan. Archaeologists call the type the Clovis lanceolate point.",
       "facts": [
         "Clovis points are named after Clovis, New Mexico, where the first examples were found in 1929 by Ridgely Whiteman.",
         "All known Clovis points date to roughly 13,400–12,700 years ago, often in association with mammoth and other Ice Age animal remains.",
@@ -1570,7 +1570,7 @@
               {
                 "quality": "thumb",
                 "url": "/assets/zen-21490444/thumb.glb",
-                "bytes": 52104,
+                "bytes": 51944,
                 "triangles": 4358,
                 "textureSize": 512,
                 "draco": true
@@ -1578,7 +1578,7 @@
               {
                 "quality": "low",
                 "url": "/assets/zen-21490444/low.glb",
-                "bytes": 214584,
+                "bytes": 214404,
                 "triangles": 30514,
                 "textureSize": 1024,
                 "draco": true
@@ -1586,7 +1586,7 @@
               {
                 "quality": "medium",
                 "url": "/assets/zen-21490444/medium.glb",
-                "bytes": 281144,
+                "bytes": 280964,
                 "triangles": 52312,
                 "textureSize": 1024,
                 "draco": true
@@ -1594,7 +1594,7 @@
               {
                 "quality": "high",
                 "url": "/assets/zen-21490444/high.glb",
-                "bytes": 374072,
+                "bytes": 373892,
                 "triangles": 87188,
                 "textureSize": 1024,
                 "draco": true
@@ -1654,12 +1654,12 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-08T00:00:00Z",
-      "updatedAt": "2026-10-09T19:22:43.645Z"
+      "updatedAt": "2026-10-11T16:04:54.605Z"
     },
     {
       "id": "wm-80059616",
       "kind": "image",
-      "title": "Nordeste tradition figures, Serra da Capivara",
+      "title": "Painted figures, Serra da Capivara",
       "titleOriginal": null,
       "altTitles": [],
       "creators": [
@@ -2139,7 +2139,7 @@
     {
       "id": "wm-153807790",
       "kind": "image",
-      "title": "Pastoral figures, Tanzoumaitak, Tassili n'Ajjer",
+      "title": "Pastoral figures, Tassili n'Ajjer",
       "titleOriginal": null,
       "altTitles": [],
       "creators": [
@@ -2463,7 +2463,7 @@
     {
       "id": "wm-57854047",
       "kind": "image",
-      "title": "Proto-cuneiform tablet: account of barley distribution",
+      "title": "Proto-cuneiform tablet",
       "titleOriginal": null,
       "altTitles": [],
       "creators": [],
@@ -2677,7 +2677,7 @@
         "depthCm": 23030,
         "weightKg": null
       },
-      "description": "The tomb of the pharaoh Khufu, raised on the Giza plateau over about twenty years around 2560 BCE: some 2.3 million blocks of limestone, the largest weighing tens of tonnes, laid in 210 courses to a height of 146.6 metres on a base 230 metres square, level to within a few centimetres and aligned to true north within a twentieth of a degree. It was the tallest structure made by people for nearly four thousand years, until Lincoln Cathedral's spire, and it is the one wonder of the ancient world still standing. No scan of it may be freely used, and a photograph cannot say how big it is, so it stands here as a plain shape at its true size, six hundred metres off the lane. Walk out to it, or look up from its foot.",
+      "description": "The tomb of the pharaoh Khufu, raised on the Giza plateau over about twenty years around 2560 BCE: some 2.3 million blocks of limestone, the largest weighing tens of tonnes, laid in 210 courses to a height of 146.6 metres on a base 230 metres square, level to within a few centimetres and aligned to true north within a twentieth of a degree. It was the tallest structure made by people for nearly four thousand years, until Lincoln Cathedral's spire, and it is the one wonder of the ancient world still standing.\n\nNo scan of it may be freely used, and a photograph cannot say how big it is, so it stands here as a plain shape at its true size, six hundred metres off the lane. Walk out to it, or look up from its foot.",
       "facts": [
         "Its base covers 5.3 hectares; its volume is about 2.6 million cubic metres.",
         "The top 8 metres and the polished white casing are gone; it stands 138.5 m today.",
@@ -2863,36 +2863,36 @@
                 "url": "/assets/sf-5c56a4feeb8e4c67b5a4d903b4a96e5a/thumb.glb",
                 "bytes": 1074220,
                 "triangles": 0,
+                "points": 63858,
                 "textureSize": null,
-                "draco": false,
-                "points": 63795
+                "draco": false
               },
               {
                 "quality": "low",
                 "url": "/assets/sf-5c56a4feeb8e4c67b5a4d903b4a96e5a/low.glb",
                 "bytes": 4136580,
                 "triangles": 0,
+                "points": 255238,
                 "textureSize": null,
-                "draco": false,
-                "points": 255238
+                "draco": false
               },
               {
                 "quality": "medium",
                 "url": "/assets/sf-5c56a4feeb8e4c67b5a4d903b4a96e5a/medium.glb",
                 "bytes": 12812116,
                 "triangles": 0,
+                "points": 797449,
                 "textureSize": null,
-                "draco": false,
-                "points": 797449
+                "draco": false
               },
               {
                 "quality": "high",
                 "url": "/assets/sf-5c56a4feeb8e4c67b5a4d903b4a96e5a/high.glb",
                 "bytes": 25571536,
                 "triangles": 0,
+                "points": 1594898,
                 "textureSize": null,
-                "draco": false,
-                "points": 1594898
+                "draco": false
               }
             ],
             "scale": 1,
@@ -2952,12 +2952,12 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-10T17:20:10.675Z"
+      "updatedAt": "2026-10-11T16:09:53.115Z"
     },
     {
       "id": "sf-7e7febabef2045a68755cc39c8c7c91f",
       "kind": "model",
-      "title": "Stonehenge (reconstruction)",
+      "title": "Stonehenge",
       "titleOriginal": null,
       "altTitles": [],
       "creators": [
@@ -3023,7 +3023,7 @@
         "depthCm": 3300,
         "weightKg": null
       },
-      "description": "Walk in among the stones. Around 2500 BCE, people with no metal, no wheel and no writing dragged sarsen blocks of up to 30 tonnes some 25 km across Salisbury Plain, shaped them with stone hammers, and raised them into a ring of thirty uprights capped by a continuous lintel, with five great trilithons in a horseshoe inside, all aligned so that the midsummer sun rises along its axis. The smaller bluestones had come 250 km from the hills of west Wales, centuries earlier. Nobody knows what the builders meant by it: a temple, a calendar, a place of the dead, a place of healing. This is an artist's model of the monument as it stands today, placed so you can walk through the circle; the fallen and missing stones are as they are.",
+      "description": "Walk in among the stones. Around 2500 BCE, people with no metal, no wheel and no writing dragged sarsen blocks of up to 30 tonnes some 25 km across Salisbury Plain, shaped them with stone hammers, and raised them into a ring of thirty uprights capped by a continuous lintel, with five great trilithons in a horseshoe inside, all aligned so that the midsummer sun rises along its axis. The smaller bluestones had come 250 km from the hills of west Wales, centuries earlier. Nobody knows what the builders meant by it: a temple, a calendar, a place of the dead, a place of healing. This is an artist's model of the monument as it stands today, placed so you can walk through the circle; the fallen and missing stones are as they are. What stands here is a reconstruction, not a scan of the stones.",
       "facts": [
         "The largest trilithon stood 7.3 m above ground and weighed about 50 tonnes; the lintels are held by mortise-and-tenon joints, carpentry in stone.",
         "The bluestones were quarried in the Preseli Hills of Pembrokeshire, and the giant Altar Stone, a 2024 study found, came from the far north-east of Scotland.",
@@ -3054,31 +3054,31 @@
               {
                 "quality": "thumb",
                 "url": "/assets/sf-7e7febabef2045a68755cc39c8c7c91f/thumb.glb",
-                "bytes": 171864,
-                "triangles": 14023,
+                "bytes": 140044,
+                "triangles": 14043,
                 "textureSize": 512,
                 "draco": true
               },
               {
                 "quality": "low",
                 "url": "/assets/sf-7e7febabef2045a68755cc39c8c7c91f/low.glb",
-                "bytes": 687208,
-                "triangles": 98299,
+                "bytes": 576576,
+                "triangles": 98301,
                 "textureSize": 1024,
                 "draco": true
               },
               {
                 "quality": "medium",
                 "url": "/assets/sf-7e7febabef2045a68755cc39c8c7c91f/medium.glb",
-                "bytes": 1193920,
-                "triangles": 168514,
+                "bytes": 1076240,
+                "triangles": 168515,
                 "textureSize": 2048,
                 "draco": true
               },
               {
                 "quality": "high",
                 "url": "/assets/sf-7e7febabef2045a68755cc39c8c7c91f/high.glb",
-                "bytes": 1957172,
+                "bytes": 1831464,
                 "triangles": 280860,
                 "textureSize": 4096,
                 "draco": true
@@ -3147,7 +3147,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-10T00:08:45.713Z"
+      "updatedAt": "2026-10-11T16:09:57.025Z"
     },
     {
       "id": "wm-78233931",
@@ -3565,31 +3565,31 @@
               {
                 "quality": "thumb",
                 "url": "/assets/sf-d148f771c3f44225b56cb7ce8d3c5ce6/thumb.glb",
-                "bytes": 1343664,
-                "triangles": 234137,
+                "bytes": 689432,
+                "triangles": 228166,
                 "textureSize": 512,
                 "draco": true
               },
               {
                 "quality": "low",
                 "url": "/assets/sf-d148f771c3f44225b56cb7ce8d3c5ce6/low.glb",
-                "bytes": 7299792,
-                "triangles": 1597109,
+                "bytes": 4106856,
+                "triangles": 1597198,
                 "textureSize": 1024,
                 "draco": true
               },
               {
                 "quality": "medium",
                 "url": "/assets/sf-d148f771c3f44225b56cb7ce8d3c5ce6/medium.glb",
-                "bytes": 10155000,
-                "triangles": 2738002,
+                "bytes": 6520912,
+                "triangles": 2738056,
                 "textureSize": 2048,
                 "draco": true
               },
               {
                 "quality": "high",
                 "url": "/assets/sf-d148f771c3f44225b56cb7ce8d3c5ce6/high.glb",
-                "bytes": 13574516,
+                "bytes": 9506956,
                 "triangles": 4563428,
                 "textureSize": 4096,
                 "draco": true
@@ -3648,7 +3648,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-10T20:07:38.423Z"
+      "updatedAt": "2026-10-11T16:10:22.556Z"
     },
     {
       "id": "sf-abf31556e54849408ced19e58f3dc8f1",
@@ -3746,31 +3746,31 @@
               {
                 "quality": "thumb",
                 "url": "/assets/sf-abf31556e54849408ced19e58f3dc8f1/thumb.glb",
-                "bytes": 669908,
-                "triangles": 159762,
+                "bytes": 458096,
+                "triangles": 158942,
                 "textureSize": 512,
                 "draco": true
               },
               {
                 "quality": "low",
                 "url": "/assets/sf-abf31556e54849408ced19e58f3dc8f1/low.glb",
-                "bytes": 4251196,
-                "triangles": 1112268,
+                "bytes": 2453860,
+                "triangles": 1112679,
                 "textureSize": 1024,
                 "draco": true
               },
               {
                 "quality": "medium",
                 "url": "/assets/sf-abf31556e54849408ced19e58f3dc8f1/medium.glb",
-                "bytes": 6128136,
-                "triangles": 1907279,
+                "bytes": 4049120,
+                "triangles": 1907455,
                 "textureSize": 2048,
                 "draco": true
               },
               {
                 "quality": "high",
                 "url": "/assets/sf-abf31556e54849408ced19e58f3dc8f1/high.glb",
-                "bytes": 8976760,
+                "bytes": 6541456,
                 "triangles": 3179105,
                 "textureSize": 4096,
                 "draco": true
@@ -3829,12 +3829,12 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-10T20:07:52.684Z"
+      "updatedAt": "2026-10-11T16:10:39.514Z"
     },
     {
       "id": "wm-57852675",
       "kind": "image",
-      "title": "Neck-amphora with a wedding procession, by Exekias",
+      "title": "Wedding amphora, by Exekias",
       "titleOriginal": null,
       "altTitles": [],
       "creators": [
@@ -3902,7 +3902,7 @@
         "depthCm": null,
         "weightKg": null
       },
-      "description": "Lidded neck-amphora attributed to Exekias, the leading Athenian black-figure potter-painter of the mid sixth century BC. On the body a couple ride in a four-horse chariot in a procession, accompanied by a kithara player and a foot soldier, beneath a band of palmettes and lotus on the neck. Exekias' work is marked by precise incision and dignified, static compositions; the lid with its bud-shaped knob survives with the vase.",
+      "description": "Lidded neck-amphora attributed to Exekias, the leading Athenian black-figure potter-painter of the mid sixth century BC. On the body a couple ride in a four-horse chariot in a procession, accompanied by a kithara player and a foot soldier, beneath a band of palmettes and lotus on the neck. Exekias' work is marked by precise incision and dignified, static compositions; the lid with its bud-shaped knob survives with the vase. It is a neck-amphora, and the scene is a wedding procession.",
       "facts": [
         "Exekias was active in Athens between roughly 545 and 530 BC and worked as both potter and painter.",
         "The vase stands 47 cm high and 24.8 cm in diameter and is in the Metropolitan Museum of Art (Rogers Fund, 1917).",
@@ -3995,7 +3995,7 @@
     {
       "id": "sf-50f50abf45414ad8a658325df7a5fcb3",
       "kind": "model",
-      "title": "Discobolus, the discus thrower",
+      "title": "Discobolus",
       "titleOriginal": null,
       "altTitles": [],
       "creators": [
@@ -4088,31 +4088,31 @@
               {
                 "quality": "thumb",
                 "url": "/assets/sf-50f50abf45414ad8a658325df7a5fcb3/thumb.glb",
-                "bytes": 67476,
-                "triangles": 11520,
+                "bytes": 60420,
+                "triangles": 16054,
                 "textureSize": null,
                 "draco": true
               },
               {
                 "quality": "low",
                 "url": "/assets/sf-50f50abf45414ad8a658325df7a5fcb3/low.glb",
-                "bytes": 361812,
-                "triangles": 70584,
+                "bytes": 238900,
+                "triangles": 70594,
                 "textureSize": null,
                 "draco": true
               },
               {
                 "quality": "medium",
                 "url": "/assets/sf-50f50abf45414ad8a658325df7a5fcb3/medium.glb",
-                "bytes": 487668,
-                "triangles": 121017,
+                "bytes": 362696,
+                "triangles": 121018,
                 "textureSize": null,
                 "draco": true
               },
               {
                 "quality": "high",
                 "url": "/assets/sf-50f50abf45414ad8a658325df7a5fcb3/high.glb",
-                "bytes": 656820,
+                "bytes": 533684,
                 "triangles": 201698,
                 "textureSize": null,
                 "draco": true
@@ -4171,7 +4171,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-10T20:07:53.526Z"
+      "updatedAt": "2026-10-11T16:10:40.970Z"
     },
     {
       "id": "eq-pythagorean-theorem",
@@ -4575,7 +4575,7 @@
               {
                 "quality": "thumb",
                 "url": "/assets/sf-4edd6459f2834e7ab0b395e71cee2513/thumb.glb",
-                "bytes": 528516,
+                "bytes": 529972,
                 "triangles": 16441,
                 "textureSize": 512,
                 "draco": true
@@ -4583,7 +4583,7 @@
               {
                 "quality": "low",
                 "url": "/assets/sf-4edd6459f2834e7ab0b395e71cee2513/low.glb",
-                "bytes": 1628048,
+                "bytes": 1629504,
                 "triangles": 99085,
                 "textureSize": 1024,
                 "draco": true
@@ -4591,7 +4591,7 @@
               {
                 "quality": "medium",
                 "url": "/assets/sf-4edd6459f2834e7ab0b395e71cee2513/medium.glb",
-                "bytes": 3698680,
+                "bytes": 3700136,
                 "triangles": 169872,
                 "textureSize": 2048,
                 "draco": true
@@ -4599,7 +4599,7 @@
               {
                 "quality": "high",
                 "url": "/assets/sf-4edd6459f2834e7ab0b395e71cee2513/high.glb",
-                "bytes": 5865660,
+                "bytes": 5867116,
                 "triangles": 283137,
                 "textureSize": 4096,
                 "draco": true
@@ -4658,7 +4658,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-10T20:07:58.969Z"
+      "updatedAt": "2026-10-11T16:10:46.804Z"
     },
     {
       "id": "wm-73484131",
@@ -4826,7 +4826,7 @@
     {
       "id": "wm-23752160",
       "kind": "image",
-      "title": "Alexander Mosaic (Battle of Issus)",
+      "title": "Alexander Mosaic",
       "titleOriginal": null,
       "altTitles": [],
       "creators": [],
@@ -4884,7 +4884,7 @@
         "depthCm": null,
         "weightKg": null
       },
-      "description": "Roman floor mosaic from the House of the Faun at Pompeii, usually dated to about 120–100 BC and thought to copy a lost Hellenistic painting, perhaps by Philoxenus of Eretria. It shows Alexander the Great, bare-headed at the left, charging the Persian king Darius III, who turns in his chariot as his army breaks. Excavated in 1831 and moved to Naples in 1843, it is among the most detailed battle scenes to survive from antiquity.",
+      "description": "Roman floor mosaic from the House of the Faun at Pompeii, usually dated to about 120–100 BC and thought to copy a lost Hellenistic painting, perhaps by Philoxenus of Eretria. It shows Alexander the Great, bare-headed at the left, charging the Persian king Darius III, who turns in his chariot as his army breaks. Excavated in 1831 and moved to Naples in 1843, it is among the most detailed battle scenes to survive from antiquity. It shows the Battle of Issus, or possibly Gaugamela.",
       "facts": [
         "Discovered in 1831 in the House of the Faun, Pompeii, and transferred to Naples in September 1843.",
         "Made of roughly one to one and a half million tesserae about 2 mm wide, laid in curving opus vermiculatum.",
@@ -5070,31 +5070,31 @@
               {
                 "quality": "thumb",
                 "url": "/assets/sf-4e253a98bfc842cabfe7610c38daa7ab/thumb.glb",
-                "bytes": 488004,
-                "triangles": 23633,
+                "bytes": 542240,
+                "triangles": 36809,
                 "textureSize": 512,
                 "draco": true
               },
               {
                 "quality": "low",
                 "url": "/assets/sf-4e253a98bfc842cabfe7610c38daa7ab/low.glb",
-                "bytes": 2096820,
-                "triangles": 139833,
+                "bytes": 1682808,
+                "triangles": 139987,
                 "textureSize": 1024,
                 "draco": true
               },
               {
                 "quality": "medium",
                 "url": "/assets/sf-4e253a98bfc842cabfe7610c38daa7ab/medium.glb",
-                "bytes": 3735064,
-                "triangles": 239969,
+                "bytes": 3177436,
+                "triangles": 239978,
                 "textureSize": 2048,
                 "draco": true
               },
               {
                 "quality": "high",
                 "url": "/assets/sf-4e253a98bfc842cabfe7610c38daa7ab/high.glb",
-                "bytes": 7115420,
+                "bytes": 6470204,
                 "triangles": 399964,
                 "textureSize": 4096,
                 "draco": true
@@ -5153,7 +5153,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-10T20:08:06.124Z"
+      "updatedAt": "2026-10-11T16:10:54.862Z"
     },
     {
       "id": "sf-42b5fd63307b48cfb073370be3ff259b",
@@ -5251,31 +5251,31 @@
               {
                 "quality": "thumb",
                 "url": "/assets/sf-42b5fd63307b48cfb073370be3ff259b/thumb.glb",
-                "bytes": 1026392,
-                "triangles": 74855,
+                "bytes": 845848,
+                "triangles": 75000,
                 "textureSize": 512,
                 "draco": true
               },
               {
                 "quality": "low",
                 "url": "/assets/sf-42b5fd63307b48cfb073370be3ff259b/low.glb",
-                "bytes": 4225096,
-                "triangles": 524986,
+                "bytes": 3867440,
+                "triangles": 525000,
                 "textureSize": 1024,
                 "draco": true
               },
               {
                 "quality": "medium",
                 "url": "/assets/sf-42b5fd63307b48cfb073370be3ff259b/medium.glb",
-                "bytes": 6458400,
-                "triangles": 899990,
+                "bytes": 6093140,
+                "triangles": 900000,
                 "textureSize": 2048,
                 "draco": true
               },
               {
                 "quality": "high",
                 "url": "/assets/sf-42b5fd63307b48cfb073370be3ff259b/high.glb",
-                "bytes": 9890628,
+                "bytes": 9507196,
                 "triangles": 1500000,
                 "textureSize": 4096,
                 "draco": true
@@ -5334,12 +5334,12 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-10T20:08:15.136Z"
+      "updatedAt": "2026-10-11T16:11:06.261Z"
     },
     {
       "id": "wm-1259734",
       "kind": "image",
-      "title": "Euclid's Elements: the Oxyrhynchus papyrus with the diagram (P.Oxy. I 29)",
+      "title": "Euclid's Elements",
       "titleOriginal": "Στοιχεῖα, Book II, Proposition 5",
       "altTitles": [],
       "creators": [
@@ -5500,7 +5500,7 @@
     {
       "id": "sf-5f35ab370082403e8c7829388f4e0c30",
       "kind": "model",
-      "title": "The Pantheon, Rome (interior)",
+      "title": "The Pantheon",
       "titleOriginal": null,
       "altTitles": [],
       "creators": [
@@ -5605,31 +5605,31 @@
               {
                 "quality": "thumb",
                 "url": "/assets/sf-5f35ab370082403e8c7829388f4e0c30/thumb.glb",
-                "bytes": 558016,
-                "triangles": 54411,
+                "bytes": 529664,
+                "triangles": 54674,
                 "textureSize": 512,
                 "draco": true
               },
               {
                 "quality": "low",
                 "url": "/assets/sf-5f35ab370082403e8c7829388f4e0c30/low.glb",
-                "bytes": 2088464,
-                "triangles": 349719,
+                "bytes": 1947624,
+                "triangles": 349870,
                 "textureSize": 1024,
                 "draco": true
               },
               {
                 "quality": "medium",
                 "url": "/assets/sf-5f35ab370082403e8c7829388f4e0c30/medium.glb",
-                "bytes": 3661884,
-                "triangles": 599749,
+                "bytes": 3484840,
+                "triangles": 599835,
                 "textureSize": 2048,
                 "draco": true
               },
               {
                 "quality": "high",
                 "url": "/assets/sf-5f35ab370082403e8c7829388f4e0c30/high.glb",
-                "bytes": 6861400,
+                "bytes": 6661496,
                 "triangles": 999756,
                 "textureSize": 4096,
                 "draco": true
@@ -5706,7 +5706,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-09T23:16:28.361Z"
+      "updatedAt": "2026-10-11T16:11:14.220Z"
     },
     {
       "id": "wm-110598443",
@@ -5873,7 +5873,7 @@
     {
       "id": "wm-47597960",
       "kind": "image",
-      "title": "Tirukkural: palm-leaf manuscript with Parimelalhagar's commentary",
+      "title": "Tirukkural",
       "titleOriginal": null,
       "altTitles": [],
       "creators": [
@@ -6031,7 +6031,7 @@
     {
       "id": "wm-63768037",
       "kind": "image",
-      "title": "Bodhisattva Padmapani, Cave 1, Ajanta",
+      "title": "Bodhisattva Padmapani, Ajanta",
       "titleOriginal": null,
       "altTitles": [],
       "creators": [
@@ -6677,7 +6677,7 @@
     {
       "id": "wm-7280090",
       "kind": "image",
-      "title": "Descent of the Ganges (Arjuna's Penance), Mamallapuram",
+      "title": "Descent of the Ganges, Mamallapuram",
       "titleOriginal": null,
       "altTitles": [],
       "creators": [
@@ -6842,7 +6842,7 @@
     {
       "id": "wm-44550",
       "kind": "image",
-      "title": "Book of Kells, Chi Rho page (folio 34r)",
+      "title": "Book of Kells, Chi Rho page",
       "titleOriginal": "Codex Cenannensis",
       "altTitles": [],
       "creators": [],
@@ -6900,7 +6900,7 @@
         "depthCm": null,
         "weightKg": null
       },
-      "description": "The Chi Rho page opens the account of Christ's birth in Matthew's Gospel: the Greek letters Chi, Rho and Iota, the abbreviation of 'Christ', fill the page with spirals, interlace, animals and tiny human figures. The Book of Kells, a Latin Gospel book made in a Columban monastery around 800, is the most elaborately decorated of the Insular manuscripts. It has been at Trinity College Dublin since the seventeenth century.",
+      "description": "The Chi Rho page opens the account of Christ's birth in Matthew's Gospel: the Greek letters Chi, Rho and Iota, the abbreviation of 'Christ', fill the page with spirals, interlace, animals and tiny human figures. The Book of Kells, a Latin Gospel book made in a Columban monastery around 800, is the most elaborately decorated of the Insular manuscripts. It has been at Trinity College Dublin since the seventeenth century. The page is folio 34r.",
       "facts": [
         "The manuscript has 340 folios of calf vellum, each page about 33 by 25 cm, bound since 1953 in four volumes.",
         "It contains ten full-page illustrations and was made in a Columban monastery in Ireland or Scotland around 800.",
@@ -7527,7 +7527,7 @@
     {
       "id": "sf-6862a3c673d4434a8dc39ced2a5b5720",
       "kind": "model",
-      "title": "Nataraja, Shiva as the Lord of Dance",
+      "title": "Nataraja",
       "titleOriginal": null,
       "altTitles": [],
       "creators": [
@@ -7621,7 +7621,7 @@
               {
                 "quality": "thumb",
                 "url": "/assets/sf-6862a3c673d4434a8dc39ced2a5b5720/thumb.glb",
-                "bytes": 262924,
+                "bytes": 262708,
                 "triangles": 4938,
                 "textureSize": 512,
                 "draco": true
@@ -7629,7 +7629,7 @@
               {
                 "quality": "low",
                 "url": "/assets/sf-6862a3c673d4434a8dc39ced2a5b5720/low.glb",
-                "bytes": 880756,
+                "bytes": 880540,
                 "triangles": 34578,
                 "textureSize": 1024,
                 "draco": true
@@ -7637,7 +7637,7 @@
               {
                 "quality": "medium",
                 "url": "/assets/sf-6862a3c673d4434a8dc39ced2a5b5720/medium.glb",
-                "bytes": 2322588,
+                "bytes": 2322372,
                 "triangles": 59276,
                 "textureSize": 2048,
                 "draco": true
@@ -7645,7 +7645,7 @@
               {
                 "quality": "high",
                 "url": "/assets/sf-6862a3c673d4434a8dc39ced2a5b5720/high.glb",
-                "bytes": 6295092,
+                "bytes": 6294876,
                 "triangles": 98795,
                 "textureSize": 4096,
                 "draco": true
@@ -7709,12 +7709,12 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-10T00:26:53.365Z"
+      "updatedAt": "2026-10-11T16:11:19.188Z"
     },
     {
       "id": "sf-da8c663b974f4902bf79bb9595e76d5e",
       "kind": "model",
-      "title": "A courtyard of the Nasrid palaces, the Alhambra",
+      "title": "A courtyard of the Alhambra",
       "titleOriginal": null,
       "altTitles": [],
       "creators": [
@@ -7818,31 +7818,31 @@
               {
                 "quality": "thumb",
                 "url": "/assets/sf-da8c663b974f4902bf79bb9595e76d5e/thumb.glb",
-                "bytes": 1267716,
-                "triangles": 183986,
+                "bytes": 1136128,
+                "triangles": 193360,
                 "textureSize": 512,
                 "draco": true
               },
               {
                 "quality": "low",
                 "url": "/assets/sf-da8c663b974f4902bf79bb9595e76d5e/low.glb",
-                "bytes": 2492736,
-                "triangles": 349786,
+                "bytes": 1977740,
+                "triangles": 349987,
                 "textureSize": 1024,
                 "draco": true
               },
               {
                 "quality": "medium",
                 "url": "/assets/sf-da8c663b974f4902bf79bb9595e76d5e/medium.glb",
-                "bytes": 4222904,
-                "triangles": 599978,
+                "bytes": 3508608,
+                "triangles": 600005,
                 "textureSize": 2048,
                 "draco": true
               },
               {
                 "quality": "high",
                 "url": "/assets/sf-da8c663b974f4902bf79bb9595e76d5e/high.glb",
-                "bytes": 7321788,
+                "bytes": 6484512,
                 "triangles": 1000024,
                 "textureSize": 4096,
                 "draco": true
@@ -7909,7 +7909,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-10T16:52:23.277Z"
+      "updatedAt": "2026-10-11T16:11:28.712Z"
     },
     {
       "id": "eq-madhava-series",
@@ -8170,31 +8170,31 @@
               {
                 "quality": "thumb",
                 "url": "/assets/sf-7099390468214c2dbcf283454e7b5c8a/thumb.glb",
-                "bytes": 77856,
-                "triangles": 8481,
+                "bytes": 62960,
+                "triangles": 8565,
                 "textureSize": 512,
                 "draco": true
               },
               {
                 "quality": "low",
                 "url": "/assets/sf-7099390468214c2dbcf283454e7b5c8a/low.glb",
-                "bytes": 323192,
-                "triangles": 59966,
+                "bytes": 286640,
+                "triangles": 59967,
                 "textureSize": 1024,
                 "draco": true
               },
               {
                 "quality": "medium",
                 "url": "/assets/sf-7099390468214c2dbcf283454e7b5c8a/medium.glb",
-                "bytes": 607020,
-                "triangles": 102798,
+                "bytes": 567896,
+                "triangles": 102803,
                 "textureSize": 2048,
                 "draco": true
               },
               {
                 "quality": "high",
                 "url": "/assets/sf-7099390468214c2dbcf283454e7b5c8a/high.glb",
-                "bytes": 1152952,
+                "bytes": 1107828,
                 "triangles": 171339,
                 "textureSize": 4096,
                 "draco": true
@@ -8253,12 +8253,12 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-10T20:08:17.037Z"
+      "updatedAt": "2026-10-11T16:11:31.209Z"
     },
     {
       "id": "wm-38733061",
       "kind": "image",
-      "title": "Gutenberg Bible, first page of Genesis (Berlin vellum copy)",
+      "title": "Gutenberg Bible",
       "titleOriginal": "Biblia latina (42-line Bible)",
       "altTitles": [],
       "creators": [
@@ -8645,7 +8645,7 @@
     {
       "id": "sf-8f4827cf36964a17b90bad11f48298ac",
       "kind": "model",
-      "title": "David, after Michelangelo (the Sioux Falls bronze)",
+      "title": "David, after Michelangelo",
       "titleOriginal": null,
       "altTitles": [],
       "creators": [
@@ -8738,31 +8738,31 @@
               {
                 "quality": "thumb",
                 "url": "/assets/sf-8f4827cf36964a17b90bad11f48298ac/thumb.glb",
-                "bytes": 100496,
-                "triangles": 18194,
+                "bytes": 64112,
+                "triangles": 18300,
                 "textureSize": null,
                 "draco": true
               },
               {
                 "quality": "low",
                 "url": "/assets/sf-8f4827cf36964a17b90bad11f48298ac/low.glb",
-                "bytes": 533384,
-                "triangles": 128099,
+                "bytes": 364172,
+                "triangles": 128104,
                 "textureSize": null,
                 "draco": true
               },
               {
                 "quality": "medium",
                 "url": "/assets/sf-8f4827cf36964a17b90bad11f48298ac/medium.glb",
-                "bytes": 739608,
-                "triangles": 219603,
+                "bytes": 571520,
+                "triangles": 219606,
                 "textureSize": null,
                 "draco": true
               },
               {
                 "quality": "high",
                 "url": "/assets/sf-8f4827cf36964a17b90bad11f48298ac/high.glb",
-                "bytes": 1018788,
+                "bytes": 851420,
                 "triangles": 366012,
                 "textureSize": null,
                 "draco": true
@@ -8822,7 +8822,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-10T20:08:18.580Z"
+      "updatedAt": "2026-10-11T16:11:33.565Z"
     },
     {
       "id": "wm-55983942",
@@ -9085,31 +9085,31 @@
               {
                 "quality": "thumb",
                 "url": "/assets/sf-465b5cb888d54a88aadf5d0c1b35a517/thumb.glb",
-                "bytes": 652008,
-                "triangles": 105497,
+                "bytes": 571900,
+                "triangles": 107664,
                 "textureSize": 512,
                 "draco": true
               },
               {
                 "quality": "low",
                 "url": "/assets/sf-465b5cb888d54a88aadf5d0c1b35a517/low.glb",
-                "bytes": 1783420,
-                "triangles": 349808,
+                "bytes": 1380308,
+                "triangles": 349948,
                 "textureSize": 1024,
                 "draco": true
               },
               {
                 "quality": "medium",
                 "url": "/assets/sf-465b5cb888d54a88aadf5d0c1b35a517/medium.glb",
-                "bytes": 2841052,
-                "triangles": 599950,
+                "bytes": 2332284,
+                "triangles": 599958,
                 "textureSize": 2048,
                 "draco": true
               },
               {
                 "quality": "high",
                 "url": "/assets/sf-465b5cb888d54a88aadf5d0c1b35a517/high.glb",
-                "bytes": 4597748,
+                "bytes": 3986628,
                 "triangles": 999942,
                 "textureSize": 4096,
                 "draco": true
@@ -9168,7 +9168,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-10T20:08:25.321Z"
+      "updatedAt": "2026-10-11T16:11:41.874Z"
     },
     {
       "id": "sf-57333014332a49f4b3346bc73ef7fc16",
@@ -9271,31 +9271,31 @@
               {
                 "quality": "thumb",
                 "url": "/assets/sf-57333014332a49f4b3346bc73ef7fc16/thumb.glb",
-                "bytes": 445652,
-                "triangles": 76750,
+                "bytes": 295576,
+                "triangles": 68995,
                 "textureSize": null,
                 "draco": true
               },
               {
                 "quality": "low",
                 "url": "/assets/sf-57333014332a49f4b3346bc73ef7fc16/low.glb",
-                "bytes": 2532884,
-                "triangles": 482714,
+                "bytes": 1443564,
+                "triangles": 483072,
                 "textureSize": null,
                 "draco": true
               },
               {
                 "quality": "medium",
                 "url": "/assets/sf-57333014332a49f4b3346bc73ef7fc16/medium.glb",
-                "bytes": 3635504,
-                "triangles": 828073,
+                "bytes": 2289332,
+                "triangles": 828126,
                 "textureSize": null,
                 "draco": true
               },
               {
                 "quality": "high",
                 "url": "/assets/sf-57333014332a49f4b3346bc73ef7fc16/high.glb",
-                "bytes": 4894568,
+                "bytes": 3408280,
                 "triangles": 1380210,
                 "textureSize": null,
                 "draco": true
@@ -9354,7 +9354,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-10T20:08:30.680Z"
+      "updatedAt": "2026-10-11T16:11:48.606Z"
     },
     {
       "id": "sf-adf56b25e96e4675b27e0f59348978b0",
@@ -9452,7 +9452,7 @@
               {
                 "quality": "thumb",
                 "url": "/assets/sf-adf56b25e96e4675b27e0f59348978b0/thumb.glb",
-                "bytes": 130720,
+                "bytes": 130800,
                 "triangles": 8830,
                 "textureSize": 512,
                 "draco": true
@@ -9460,7 +9460,7 @@
               {
                 "quality": "low",
                 "url": "/assets/sf-adf56b25e96e4675b27e0f59348978b0/low.glb",
-                "bytes": 429560,
+                "bytes": 429640,
                 "triangles": 61818,
                 "textureSize": 1024,
                 "draco": true
@@ -9468,7 +9468,7 @@
               {
                 "quality": "medium",
                 "url": "/assets/sf-adf56b25e96e4675b27e0f59348978b0/medium.glb",
-                "bytes": 953024,
+                "bytes": 953104,
                 "triangles": 105975,
                 "textureSize": 2048,
                 "draco": true
@@ -9476,7 +9476,7 @@
               {
                 "quality": "high",
                 "url": "/assets/sf-adf56b25e96e4675b27e0f59348978b0/high.glb",
-                "bytes": 2789288,
+                "bytes": 2789368,
                 "triangles": 176628,
                 "textureSize": 4096,
                 "draco": true
@@ -9535,7 +9535,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-10T20:08:32.965Z"
+      "updatedAt": "2026-10-11T16:11:51.393Z"
     },
     {
       "id": "eq-newton-gravitation",
@@ -9697,7 +9697,7 @@
     {
       "id": "wm-11812879",
       "kind": "image",
-      "title": "Newton, Principia Mathematica, title page of the first edition",
+      "title": "Principia Mathematica",
       "titleOriginal": "Philosophiæ Naturalis Principia Mathematica",
       "altTitles": [],
       "creators": [
@@ -10059,7 +10059,7 @@
     {
       "id": "wm-172577787",
       "kind": "image",
-      "title": "The Four Seasons: Spring",
+      "title": "The Four Seasons, Spring",
       "titleOriginal": null,
       "altTitles": [],
       "creators": [
@@ -10214,7 +10214,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-10T00:13:26.873Z",
+      "updatedAt": "2026-10-11T15:58:18.650Z",
       "audio": {
         "currentVersionId": "wm-172577787-audio-v1",
         "versions": [
@@ -10770,7 +10770,7 @@
     {
       "id": "sf-af911c4416ef4798a1803a0aa588534a",
       "kind": "model",
-      "title": "Head of a Queen Mother (Iyoba), Benin",
+      "title": "Head of a Queen Mother, Benin",
       "titleOriginal": null,
       "altTitles": [],
       "creators": [
@@ -10867,31 +10867,31 @@
               {
                 "quality": "thumb",
                 "url": "/assets/sf-af911c4416ef4798a1803a0aa588534a/thumb.glb",
-                "bytes": 733164,
-                "triangles": 128650,
+                "bytes": 488228,
+                "triangles": 116156,
                 "textureSize": 512,
                 "draco": true
               },
               {
                 "quality": "low",
                 "url": "/assets/sf-af911c4416ef4798a1803a0aa588534a/low.glb",
-                "bytes": 3280004,
-                "triangles": 699876,
+                "bytes": 1964284,
+                "triangles": 699998,
                 "textureSize": 1024,
                 "draco": true
               },
               {
                 "quality": "medium",
                 "url": "/assets/sf-af911c4416ef4798a1803a0aa588534a/medium.glb",
-                "bytes": 4794860,
-                "triangles": 1199971,
+                "bytes": 3199756,
+                "triangles": 1200000,
                 "textureSize": 2048,
                 "draco": true
               },
               {
                 "quality": "high",
                 "url": "/assets/sf-af911c4416ef4798a1803a0aa588534a/high.glb",
-                "bytes": 7198740,
+                "bytes": 5294384,
                 "triangles": 2000010,
                 "textureSize": 4096,
                 "draco": true
@@ -10950,12 +10950,12 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-10T20:08:43.071Z"
+      "updatedAt": "2026-10-11T16:12:04.425Z"
     },
     {
       "id": "wm-180634712",
       "kind": "image",
-      "title": "Symphony No. 5 in C minor",
+      "title": "Symphony No. 5",
       "titleOriginal": null,
       "altTitles": [],
       "creators": [
@@ -11210,7 +11210,7 @@
         "depthCm": null,
         "weightKg": null
       },
-      "description": "Any repeating shape, Fourier claimed, is a sum of pure sine waves. He needed it to solve how heat spreads through a solid, and his 1822 Théorie analytique de la chaleur made the claim stick, though it took a century of analysis to say exactly when it is true. The panel shows it as circles riding on circles: the first turns once a cycle, the next three times as fast at a third the size, the next five times at a fifth, and so on. The tip of the last circle traces, as it goes, a square wave, the corners sharpening with every circle added. The same idea takes music apart into its overtones, images into frequencies, and is what every signal, from a phone call to a JPEG, passes through.",
+      "description": "Any repeating shape, Fourier claimed, is a sum of pure sine waves. He needed it to solve how heat spreads through a solid, and his 1822 Théorie analytique de la chaleur made the claim stick, though it took a century of analysis to say exactly when it is true. The panel shows it as circles riding on circles: the first turns once a cycle, the next three times as fast at a third the size, the next five times at a fifth, and so on. The same idea takes music apart into its overtones, images into frequencies, and is what every signal, from a phone call to a JPEG, passes through.\n\nThe circles here are turning as you watch, not replaying: the tip of the last one traces, as it goes, a square wave, the corners sharpening with every circle added.",
       "facts": [
         "Seven terms are drawn here; a perfect square wave would need infinitely many.",
         "Ptolemy used circles on circles to predict planets; Fourier's are the same geometry, pointed at a different question.",
@@ -11290,7 +11290,7 @@
     {
       "id": "wm-166228094",
       "kind": "image",
-      "title": "Nocturne in E-flat major, Op. 9 No. 2",
+      "title": "Nocturne, Op. 9 No. 2",
       "titleOriginal": null,
       "altTitles": [],
       "creators": [
@@ -11491,7 +11491,7 @@
     {
       "id": "wm-36638808",
       "kind": "image",
-      "title": "Darwin's 'I think' tree of life sketch, Notebook B",
+      "title": "Darwin's 'I think' sketch",
       "titleOriginal": null,
       "altTitles": [],
       "creators": [
@@ -11561,7 +11561,7 @@
         "depthCm": null,
         "weightKg": null
       },
-      "description": "'I think', and then a spindly branching diagram: a page from the pocket notebook Darwin opened in July 1837, nine months after the Beagle brought him home. He was twenty-eight and writing only for himself. The '1' at the base is a common ancestor; the branches ending in cross-bars are living species, the bare ones have died out. Underneath he reasons it through: if one ancestor is to give rise to as many living forms as exist now, and to groups of similar species, then extinction must be part of the process, and the gaps between living genera, 'A and B', 'C and B', record how long ago their lines parted. It is the first drawing of the tree of life as a genealogy rather than a ladder of perfection, and it came twenty-two years before On the Origin of Species, whose single illustration is a tidied version of this sketch. Darwin kept the notebooks all his life; this one is now in Cambridge University Library.",
+      "description": "'I think', and then a spindly branching diagram: a page from the pocket notebook Darwin opened in July 1837, nine months after the Beagle brought him home. He was twenty-eight and writing only for himself. The '1' at the base is a common ancestor; the branches ending in cross-bars are living species, the bare ones have died out. Underneath he reasons it through: if one ancestor is to give rise to as many living forms as exist now, and to groups of similar species, then extinction must be part of the process, and the gaps between living genera, 'A and B', 'C and B', record how long ago their lines parted. It is the first drawing of the tree of life as a genealogy rather than a ladder of perfection, and it came twenty-two years before On the Origin of Species, whose single illustration is a tidied version of this sketch. Darwin kept the notebooks all his life; this one is now in Cambridge University Library. It is in Notebook B, the tree of life.",
       "facts": [
         "Notebook B is the first of a series Darwin lettered B to E on the 'transmutation of species', kept from 1837 to 1839.",
         "Darwin did not read Malthus, whose essay on population gave him the mechanism of natural selection, until September 1838, after this sketch.",
@@ -12562,7 +12562,7 @@
         "depthCm": null,
         "weightKg": null
       },
-      "description": "Balls drop through rows of pegs, bouncing left or right at each with even odds, and pile up below. Each ball's fate is pure chance; the pile is not. It settles every time into the same bell-shaped curve, the normal distribution, because the sum of many small independent chances always does: that is the central limit theorem, and Francis Galton built this board in 1873 to make it something you could see. He called it the quincunx, after the pattern of the pegs. It is the shape of measurement error, of heights in a population, of noise in a signal, and the reason so much of statistics assumes a bell. The dashed line over the pile is the curve the arithmetic predicts; the balls are finding it on their own.",
+      "description": "Balls drop through rows of pegs, bouncing left or right at each with even odds, and pile up below. Each ball's fate is pure chance; the pile is not. It settles every time into the same bell-shaped curve, the normal distribution, because the sum of many small independent chances always does: that is the central limit theorem, and Francis Galton built this board in 1873 to make it something you could see. He called it the quincunx, after the pattern of the pegs. It is the shape of measurement error, of heights in a population, of noise in a signal, and the reason so much of statistics assumes a bell.\n\nThe balls are falling now, each one a fresh throw of the dice and not a film of one. The dashed line over the pile is the curve the arithmetic predicts; they are finding it on their own.",
       "facts": [
         "Twelve rows of pegs give thirteen bins; the odds of the far bins are one in 4,096.",
         "Galton showed the board at the Royal Institution in 1874.",
@@ -12861,7 +12861,7 @@
     {
       "id": "wm-81309412",
       "kind": "image",
-      "title": "Woman with a Parasol: Madame Monet and Her Son",
+      "title": "Woman with a Parasol",
       "titleOriginal": "La Promenade. La Femme à l'ombrelle",
       "altTitles": [],
       "creators": [
@@ -12929,7 +12929,7 @@
         "depthCm": null,
         "weightKg": null
       },
-      "description": "Seen from below against a windy sky, a woman in a white dress turns on the crest of a meadow, a green parasol tilted over her shoulder and her veil blowing across her face. Her shadow falls on the grass towards us; a small boy in a straw hat stands further off, half hidden by the slope. The woman is Camille, Monet's wife, and the boy their son Jean, aged seven. Monet painted the canvas outdoors in a single session near their house at Argenteuil in the summer of 1875, which is why the brushwork is so fast: the clouds, the flowers and the folds of the dress are all made of the same quick strokes, and the underside of the parasol takes the green of the grass. It was shown at the second Impressionist exhibition in 1876. Camille died in 1879; Monet repainted the pose twice in 1886 with a model, faces turned away, and those two canvases are in the Musée d'Orsay.",
+      "description": "Seen from below against a windy sky, a woman in a white dress turns on the crest of a meadow, a green parasol tilted over her shoulder and her veil blowing across her face. Her shadow falls on the grass towards us; a small boy in a straw hat stands further off, half hidden by the slope. The woman is Camille, Monet's wife, and the boy their son Jean, aged seven. Monet painted the canvas outdoors in a single session near their house at Argenteuil in the summer of 1875, which is why the brushwork is so fast: the clouds, the flowers and the folds of the dress are all made of the same quick strokes, and the underside of the parasol takes the green of the grass. It was shown at the second Impressionist exhibition in 1876. Camille died in 1879; Monet repainted the pose twice in 1886 with a model, faces turned away, and those two canvases are in the Musée d'Orsay. The woman is Camille Monet, the child their son Jean.",
       "facts": [
         "Shown at the second Impressionist exhibition in April 1876 under the title La Promenade.",
         "Camille Doncieux, Monet's model since 1865 and wife from 1870, died in 1879 at the age of 32.",
@@ -13622,7 +13622,7 @@
     {
       "id": "wm-146612026",
       "kind": "image",
-      "title": "The Horse in Motion: Sallie Gardner at a Gallop",
+      "title": "The Horse in Motion",
       "titleOriginal": "The Horse in Motion. \"Sallie Gardner,\" owned by Leland Stanford; running at a 1:40 gait over the Palo Alto track, 19th June 1878",
       "altTitles": [],
       "creators": [
@@ -14019,7 +14019,7 @@
     {
       "id": "sf-f70edeefea0a49e1ae6b7f5be21b626d",
       "kind": "model",
-      "title": "Lilienthal Normalsegelapparat (Deutsches Museum replica)",
+      "title": "Lilienthal Normalsegelapparat",
       "titleOriginal": null,
       "altTitles": [],
       "creators": [
@@ -14114,31 +14114,31 @@
               {
                 "quality": "thumb",
                 "url": "/assets/sf-f70edeefea0a49e1ae6b7f5be21b626d/thumb.glb",
-                "bytes": 11512508,
-                "triangles": 281635,
+                "bytes": 11358344,
+                "triangles": 282343,
                 "textureSize": 512,
                 "draco": true
               },
               {
                 "quality": "low",
                 "url": "/assets/sf-f70edeefea0a49e1ae6b7f5be21b626d/low.glb",
-                "bytes": 11959880,
-                "triangles": 281652,
+                "bytes": 11804908,
+                "triangles": 282343,
                 "textureSize": 1024,
                 "draco": true
               },
               {
                 "quality": "medium",
                 "url": "/assets/sf-f70edeefea0a49e1ae6b7f5be21b626d/medium.glb",
-                "bytes": 13558144,
-                "triangles": 281677,
+                "bytes": 13402172,
+                "triangles": 282347,
                 "textureSize": 2048,
                 "draco": true
               },
               {
                 "quality": "high",
                 "url": "/assets/sf-f70edeefea0a49e1ae6b7f5be21b626d/high.glb",
-                "bytes": 13584096,
+                "bytes": 13402204,
                 "triangles": 282349,
                 "textureSize": 2048,
                 "draco": true
@@ -14199,12 +14199,12 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-09T22:57:47.811Z"
+      "updatedAt": "2026-10-11T16:12:11.237Z"
     },
     {
       "id": "wm-143689173",
       "kind": "image",
-      "title": "Arrival of a Train at La Ciotat Station",
+      "title": "Arrival of a Train at La Ciotat",
       "titleOriginal": "L'Arrivée d'un train en gare de La Ciotat",
       "altTitles": [],
       "creators": [
@@ -15147,7 +15147,7 @@
     {
       "id": "si-nasm_A19610048000",
       "kind": "model",
-      "title": "1903 Wright Flyer",
+      "title": "Wright Flyer",
       "titleOriginal": null,
       "altTitles": [],
       "creators": [
@@ -15331,7 +15331,7 @@
     {
       "id": "wm-117053583",
       "kind": "image",
-      "title": "Gauhar Jaan sings a thumri, 'Aan baan jiya mein lago'",
+      "title": "Gauhar Jaan sings a thumri",
       "titleOriginal": null,
       "altTitles": [],
       "creators": [
@@ -15395,7 +15395,7 @@
         "depthCm": null,
         "weightKg": null
       },
-      "description": "On 8 November 1902, in a Calcutta hotel room, Gauhar Jaan sang into Fred Gaisberg's horn and ended with the words 'My name is Gauhar Jaan': the first recording made in India by an Indian artist. Two years later the Gramophone Company came back and recorded her again; this thumri in raga Gara is from that 1904 session. She was the subcontinent's first gramophone star, cut some six hundred sides in a dozen languages, charged three thousand rupees a session and toured in a carriage with a retinue. Before her, a performance in Calcutta ended when the singer stopped. After her, it could be heard in Madras, in London, and a hundred and twenty years later here.",
+      "description": "On 8 November 1902, in a Calcutta hotel room, Gauhar Jaan sang into Fred Gaisberg's horn and ended with the words 'My name is Gauhar Jaan': the first recording made in India by an Indian artist. Two years later the Gramophone Company came back and recorded her again; this thumri in raga Gara is from that 1904 session. She was the subcontinent's first gramophone star, cut some six hundred sides in a dozen languages, charged three thousand rupees a session and toured in a carriage with a retinue. Before her, a performance in Calcutta ended when the singer stopped. After her, it could be heard in Madras, in London, and a hundred and twenty years later here. The piece is 'Aan baan jiya mein lago'.",
       "facts": [
         "The 1902 sessions used wax masters shipped to Hanover for pressing; the first Indian discs went on sale in 1903.",
         "She recorded in Hindustani, Bengali, Persian, Arabic, English and more, usually ending with her spoken name so the Hanover engineers could label the record.",
@@ -15928,7 +15928,7 @@
     {
       "id": "usr-sun-juxian-zhongchen",
       "kind": "image",
-      "title": "Sun Juxian sings Peking opera, 'Zhongchen bu pa si'",
+      "title": "Sun Juxian sings Peking opera",
       "titleOriginal": null,
       "altTitles": [],
       "creators": [
@@ -16279,7 +16279,7 @@
     {
       "id": "wm-187922109",
       "kind": "image",
-      "title": "Einstein, 'On the Electrodynamics of Moving Bodies', first page",
+      "title": "On the Electrodynamics of Moving Bodies",
       "titleOriginal": "Zur Elektrodynamik bewegter Körper",
       "altTitles": [],
       "creators": [
@@ -16439,7 +16439,7 @@
     {
       "id": "wm-71567439",
       "kind": "image",
-      "title": "Toyotake Roshō sings gidayū: 'Tsubosaka-dera'",
+      "title": "Toyotake Roshō sings gidayū",
       "titleOriginal": null,
       "altTitles": [],
       "creators": [
@@ -16838,7 +16838,7 @@
     {
       "id": "usr-abdel-hay-hilmi-agibtu",
       "kind": "image",
-      "title": "'Abd al-Hayy Hilmi sings a qasida, with Sami al-Shawwa",
+      "title": "'Abd al-Hayy Hilmi sings a qasida",
       "titleOriginal": null,
       "altTitles": [],
       "creators": [
@@ -17242,7 +17242,7 @@
     {
       "id": "usr-manyalawi-sahi-al-jufun",
       "kind": "image",
-      "title": "Shaykh Yusuf al-Manyalawi sings 'Sahi al-jufun'",
+      "title": "Yusuf al-Manyalawi sings 'Sahi al-jufun'",
       "titleOriginal": null,
       "altTitles": [],
       "creators": [
@@ -17848,7 +17848,7 @@
     {
       "id": "usr-ottoman-cifte-telli-gazel",
       "kind": "image",
-      "title": "A gazel with ney, Constantinople: Hafız Tevfik Efendi and Safinaz Hanım",
+      "title": "A gazel with ney, Constantinople",
       "titleOriginal": null,
       "altTitles": [],
       "creators": [
@@ -17913,7 +17913,7 @@
         "depthCm": null,
         "weightKg": null
       },
-      "description": "Ottoman music in the last years of the empire. The gazel is the Turkish art of improvising a classical poem over a drone, the singer finding the maqam as he goes; here two voices trade it, a hafız, a man who has the Quran by heart and sings as part of that training, and a woman, Safinaz Hanım, one of the first Ottoman women to make records, over the breathy reed flute of the Mevlevi dervishes, the ney. Odeon's Constantinople catalogue of the years before the First World War is the founding corpus of recorded Turkish music, cut in the city while it was still the Ottoman capital. The disc's own label stands in for a portrait.",
+      "description": "Ottoman music in the last years of the empire. The gazel is the Turkish art of improvising a classical poem over a drone, the singer finding the maqam as he goes; here two voices trade it, a hafız, a man who has the Quran by heart and sings as part of that training, and a woman, Safinaz Hanım, one of the first Ottoman women to make records, over the breathy reed flute of the Mevlevi dervishes, the ney. Odeon's Constantinople catalogue of the years before the First World War is the founding corpus of recorded Turkish music, cut in the city while it was still the Ottoman capital. The disc's own label stands in for a portrait. The singers are Hafız Tevfik Efendi and Safinaz Hanım.",
       "facts": [
         "The ney is the instrument of Rumi's Masnavi, which opens with its lament at being cut from the reed bed.",
         "Odeon's Istanbul recordings were made by the International Talking Machine Company of Berlin until 1911.",
@@ -18050,7 +18050,7 @@
     {
       "id": "wm-15756540",
       "kind": "image",
-      "title": "La Niña de los Peines sings tarantas, with Ramón Montoya",
+      "title": "La Niña de los Peines sings tarantas",
       "titleOriginal": null,
       "altTitles": [],
       "creators": [
@@ -18247,6 +18247,149 @@
       }
     },
     {
+      "id": "sim-bohr-atom",
+      "kind": "sim",
+      "title": "Bohr's atom",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "Niels Bohr",
+          "slug": null,
+          "wikidataQid": "Q7085",
+          "wikipediaUrl": null,
+          "birthYear": 1885,
+          "deathYear": 1962,
+          "role": "physicist"
+        }
+      ],
+      "date": {
+        "year": 1913,
+        "month": 7,
+        "day": null,
+        "yearStart": null,
+        "yearEnd": null,
+        "label": "July 1913",
+        "precision": "year"
+      },
+      "madeIn": {
+        "name": "Copenhagen",
+        "region": null,
+        "country": "Denmark",
+        "point": {
+          "lat": 55.6761,
+          "lon": 12.5683
+        },
+        "wikidataQid": "Q1748"
+      },
+      "location": {
+        "name": "Everywhere it is computed",
+        "region": null,
+        "country": null,
+        "point": null,
+        "wikidataQid": null,
+        "institution": null,
+        "inventoryNumber": null
+      },
+      "culture": null,
+      "movement": null,
+      "periodSlug": null,
+      "medium": "A hydrogen atom, computed live",
+      "materials": [],
+      "genre": [
+        "physics"
+      ],
+      "subjects": [
+        "atom",
+        "quantum theory",
+        "spectral lines",
+        "hydrogen"
+      ],
+      "physical": {
+        "widthCm": null,
+        "heightCm": null,
+        "depthCm": null,
+        "weightKg": null
+      },
+      "description": "An electron is allowed only certain orbits, and when it jumps from one to another it gives off or takes in a flash of light whose colour is fixed by the jump: that was Bohr's idea in 1913, and it explained in one stroke the lines hydrogen had been known to make for fifty years, the red, blue-green and violet of the Balmer series, to four decimal places. It was wrong in its details, there are no orbits, and right in everything that mattered, and it is where quantum theory begins to be about atoms.\n\nThe atom here is running, not drawn: the electron runs round its shells and every few seconds a photon comes in and lifts it, or it falls and a photon leaves, in hydrogen's own colours; the fall to the lowest shell is ultraviolet, shown faint and violet.",
+      "facts": [
+        "Balmer found the formula for hydrogen's visible lines in 1885 from four measured wavelengths; he was a schoolteacher in Basel.",
+        "The red line, 656 nanometres, is why hydrogen nebulae glow red in photographs.",
+        "Bohr was twenty-seven and had been in Rutherford's laboratory in Manchester the year before.",
+        "Sommerfeld, then Heisenberg and Schrödinger, replaced the orbits within thirteen years; the energy levels stayed."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Bohr_model",
+      "wikidataQid": "Q172948",
+      "externalIds": {},
+      "copyrighted": false,
+      "asset": {
+        "kind": "sim",
+        "currentVersionId": "sim-bohr-atom-v1",
+        "versions": [
+          {
+            "id": "sim-bohr-atom-v1",
+            "program": "atom",
+            "params": {
+              "shells": 4,
+              "diameter": 2.6
+            },
+            "bounds": {
+              "width": 2.8,
+              "height": 2.8,
+              "depth": 0.3
+            },
+            "credit": {
+              "author": "20watts",
+              "license": {
+                "name": "CC0 1.0",
+                "url": null
+              },
+              "sourcePage": null
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-09T00:00:00Z",
+              "note": "Run live by src/sims/atom.ts: a nucleus, one electron on four allowed shells, and photons in and out coloured by the Rydberg formula for each jump. The shells are spaced to fit, not as n squared. The program is the museum's own, CC0."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "procedural"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": 0.2,
+        "back": "none",
+        "yaw": null,
+        "fallbackWidthM": 1.2
+      },
+      "tags": [
+        "physics",
+        "atom",
+        "quantum",
+        "spectrum",
+        "simulation"
+      ],
+      "pageviews": null,
+      "importance": 0.9,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-09T00:00:00Z",
+      "updatedAt": "2026-10-09T00:00:00Z"
+    },
+    {
       "id": "eq-einstein-field-equations",
       "kind": "image",
       "title": "Einstein's field equations",
@@ -18406,7 +18549,7 @@
     {
       "id": "wm-256663",
       "kind": "image",
-      "title": "'Fado da Severa', sung by Manuel Carvalho",
+      "title": "Manuel Carvalho sings 'Fado da Severa'",
       "titleOriginal": null,
       "altTitles": [],
       "creators": [
@@ -18602,7 +18745,7 @@
     {
       "id": "wm-36145030",
       "kind": "image",
-      "title": "'Nkosi Sikelel' iAfrika', sung by Sol Plaatje",
+      "title": "Sol Plaatje sings 'Nkosi Sikelel' iAfrika'",
       "titleOriginal": null,
       "altTitles": [],
       "creators": [
@@ -18890,7 +19033,7 @@
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Ford_Model_T",
       "wikidataQid": "Q182323",
       "externalIds": {
-        "sketchfab-uid": "895fd0fbc7cc42aab8f3300a85420b91"
+        "sketchfab": "895fd0fbc7cc42aab8f3300a85420b91"
       },
       "copyrighted": false,
       "asset": {
@@ -18909,31 +19052,31 @@
               {
                 "quality": "thumb",
                 "url": "/assets/sf-895fd0fbc7cc42aab8f3300a85420b91/thumb.glb",
-                "bytes": 500568,
-                "triangles": 59177,
+                "bytes": 359704,
+                "triangles": 35223,
                 "textureSize": 512,
                 "draco": true
               },
               {
                 "quality": "low",
                 "url": "/assets/sf-895fd0fbc7cc42aab8f3300a85420b91/low.glb",
-                "bytes": 1061356,
-                "triangles": 161312,
+                "bytes": 970252,
+                "triangles": 150823,
                 "textureSize": 1024,
                 "draco": true
               },
               {
                 "quality": "medium",
                 "url": "/assets/sf-895fd0fbc7cc42aab8f3300a85420b91/medium.glb",
-                "bytes": 1746120,
-                "triangles": 260233,
+                "bytes": 1682976,
+                "triangles": 258546,
                 "textureSize": 2048,
                 "draco": true
               },
               {
                 "quality": "high",
                 "url": "/assets/sf-895fd0fbc7cc42aab8f3300a85420b91/high.glb",
-                "bytes": 2201224,
+                "bytes": 2132136,
                 "triangles": 430905,
                 "textureSize": 4096,
                 "draco": true
@@ -18993,12 +19136,12 @@
       },
       "source": "admin",
       "createdAt": "2026-10-07T00:00:00Z",
-      "updatedAt": "2026-10-09T19:22:54.259Z"
+      "updatedAt": "2026-10-11T16:12:16.303Z"
     },
     {
       "id": "wm-22628920",
       "kind": "image",
-      "title": "Les Nymphéas: the first room of the Orangerie",
+      "title": "Les Nymphéas",
       "titleOriginal": null,
       "altTitles": [],
       "creators": [
@@ -19561,7 +19704,7 @@
         "depthCm": null,
         "weightKg": null
       },
-      "description": "A tape of cells, a head that reads the one beneath it, and a table of rules: in this state, seeing this symbol, write that, move left or right, go to that state. Alan Turing set this out in 1936, in On Computable Numbers, to pin down what it means to compute something at all. He showed that one such machine can imitate any other given its table on the tape, and that there are questions no machine can settle, whatever the table. Every computer since is this, at bottom. The machine running here has nine rules. It walks to the end of the number on the tape, adds one in binary carrying to the left, walks home, and does it again; it will count for as long as the museum is open.",
+      "description": "A tape of cells, a head that reads the one beneath it, and a table of rules: in this state, seeing this symbol, write that, move left or right, go to that state. Alan Turing set this out in 1936, in On Computable Numbers, to pin down what it means to compute something at all. He showed that one such machine can imitate any other given its table on the tape, and that there are questions no machine can settle, whatever the table. Every computer since is this, at bottom.\n\nThe machine here is running as you watch, with nine rules. It walks to the end of the number on the tape, adds one in binary carrying to the left, walks home, and does it again; it will count for as long as the museum is open.",
       "facts": [
         "Turing's paper was written to answer Hilbert's Entscheidungsproblem: no, there is no procedure that decides every mathematical statement.",
         "The universal machine, able to run any other, is the idea of software.",
@@ -19641,7 +19784,7 @@
     {
       "id": "wm-14902369",
       "kind": "image",
-      "title": "Bombe drums (Bletchley Park rebuild)",
+      "title": "Bombe drums",
       "titleOriginal": null,
       "altTitles": [],
       "creators": [
@@ -19709,7 +19852,7 @@
         "depthCm": null,
         "weightKg": null
       },
-      "description": "The bombe was the electromechanical machine with which Bletchley Park found the daily settings of German Enigma cipher machines. Designed by Alan Turing, refined by Gordon Welchman and engineered by Harold Keen at the British Tabulating Machine Company, each bombe carried 108 spinning drums, every drum wired to mimic one Enigma rotor. The drums shown here belong to the working reconstruction completed at Bletchley Park in 2008; the wartime machines were all broken up after the war.",
+      "description": "The bombe was the electromechanical machine with which Bletchley Park found the daily settings of German Enigma cipher machines. Designed by Alan Turing, refined by Gordon Welchman and engineered by Harold Keen at the British Tabulating Machine Company, each bombe carried 108 spinning drums, every drum wired to mimic one Enigma rotor. The drums shown here belong to the working reconstruction completed at Bletchley Park in 2008; the wartime machines were all broken up after the war. These are from the rebuilt bombe at Bletchley Park.",
       "facts": [
         "The first bombe, named 'Victory', was installed in Hut 1 at Bletchley Park on 18 March 1940.",
         "Each bombe was about 7 ft wide, 6 ft 6 in tall and 2 ft deep, weighed about a ton, and had 108 positions for drums arranged in 36 triplets.",
@@ -19801,9 +19944,191 @@
       "updatedAt": "2026-10-09T19:22:54.559Z"
     },
     {
+      "id": "sf-d09fc8ebe9c141a18704b478544191b8",
+      "kind": "model",
+      "title": "V-2",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "Wernher von Braun and the Peenemünde Army Research Centre",
+          "slug": null,
+          "wikidataQid": "Q57284",
+          "wikipediaUrl": null,
+          "birthYear": null,
+          "deathYear": null,
+          "role": "designers"
+        }
+      ],
+      "date": {
+        "year": 1942,
+        "month": 10,
+        "day": 3,
+        "yearStart": null,
+        "yearEnd": null,
+        "label": "first flight to the edge of space, 3 October 1942",
+        "precision": "year"
+      },
+      "madeIn": {
+        "name": "Peenemünde",
+        "region": "Mecklenburg-Vorpommern",
+        "country": "Germany",
+        "point": {
+          "lat": 54.137,
+          "lon": 13.775
+        },
+        "wikidataQid": "Q156734"
+      },
+      "location": {
+        "name": "Everywhere it is computed",
+        "region": null,
+        "country": null,
+        "point": null,
+        "wikidataQid": null,
+        "institution": null,
+        "inventoryNumber": null
+      },
+      "culture": null,
+      "movement": null,
+      "periodSlug": null,
+      "medium": "An artist's 3D model, at true size",
+      "materials": [],
+      "genre": [
+        "engineering",
+        "weapon"
+      ],
+      "subjects": [
+        "rocket",
+        "ballistic missile",
+        "spaceflight",
+        "Second World War"
+      ],
+      "physical": {
+        "widthCm": 360,
+        "heightCm": 1400,
+        "depthCm": 360,
+        "weightKg": null
+      },
+      "description": "The first thing people made that reached space, and a weapon of terror. On 3 October 1942 an A4 rose from Peenemünde on the Baltic to 84 kilometres, the edge of space, on an engine burning alcohol and liquid oxygen with 25 tonnes of thrust, steered by gyroscopes and graphite vanes in its exhaust: every large rocket since is its descendant. Renamed the V-2, Vergeltungswaffe, it was fired at London and Antwerp from September 1944, three thousand of them, killing some nine thousand people; it was built underground at Mittelwerk by concentration-camp prisoners, of whom more died making it than died from it. Its designers went to America and Russia in 1945 and built the rockets that went to the Moon. It stands here at its full fourteen metres.",
+      "facts": [
+        "Fourteen metres tall, 12.5 tonnes fuelled, a tonne of explosive, Mach 4 on arrival: there was no warning and no defence.",
+        "About 12,000 forced labourers died building V-2s at Mittelwerk; about 9,000 people were killed by them.",
+        "Von Braun, its chief designer and an SS officer, led the Saturn V team twenty years later.",
+        "Captured V-2s launched the first photographs of Earth from space, from New Mexico in 1946."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/V-2_rocket",
+      "wikidataQid": "Q57284",
+      "externalIds": {
+        "sketchfab": "d09fc8ebe9c141a18704b478544191b8"
+      },
+      "copyrighted": false,
+      "asset": {
+        "kind": "model",
+        "currentVersionId": "sf-d09fc8ebe9c141a18704b478544191b8-v1",
+        "versions": [
+          {
+            "id": "sf-d09fc8ebe9c141a18704b478544191b8-v1",
+            "original": {
+              "url": "https://sketchfab.com/3d-models/d09fc8ebe9c141a18704b478544191b8",
+              "format": "glb",
+              "bytes": 1065071,
+              "triangles": 52874,
+              "unitScale": 1
+            },
+            "rungs": [
+              {
+                "quality": "thumb",
+                "url": "/assets/sf-d09fc8ebe9c141a18704b478544191b8/thumb.glb",
+                "bytes": 136420,
+                "triangles": 52304,
+                "textureSize": null,
+                "draco": true
+              },
+              {
+                "quality": "low",
+                "url": "/assets/sf-d09fc8ebe9c141a18704b478544191b8/low.glb",
+                "bytes": 136448,
+                "triangles": 52321,
+                "textureSize": null,
+                "draco": true
+              },
+              {
+                "quality": "medium",
+                "url": "/assets/sf-d09fc8ebe9c141a18704b478544191b8/medium.glb",
+                "bytes": 136596,
+                "triangles": 52358,
+                "textureSize": null,
+                "draco": true
+              },
+              {
+                "quality": "high",
+                "url": "/assets/sf-d09fc8ebe9c141a18704b478544191b8/high.glb",
+                "bytes": 138856,
+                "triangles": 52874,
+                "textureSize": null,
+                "draco": true
+              }
+            ],
+            "scale": 1,
+            "bounds": {
+              "width": 2.495,
+              "height": 13.706,
+              "depth": 2.495
+            },
+            "credit": {
+              "author": "person",
+              "license": {
+                "name": "CC BY 4.0",
+                "url": "http://creativecommons.org/licenses/by/4.0/"
+              },
+              "sourcePage": "https://sketchfab.com/3d-models/d09fc8ebe9c141a18704b478544191b8"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-09T00:00:00Z",
+              "note": "An artist's model of the A4/V-2 (28,000 triangles, no textures, materials only), 13.7 units tall for the real 14 m, so the file is in metres; unitScale 0.05 makes it a model at one twentieth, 69 cm, small enough to pick up. License.txt in the download: CC-BY-4.0, author person (https://sketchfab.com/person_person_person), 'Author must be credited. Commercial use is allowed.' Downloaded by the museum's owner from Sketchfab on 2026-10-11."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "sketchfab",
+            "representation": "reconstruction"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": 0,
+        "back": "none",
+        "yaw": null,
+        "fallbackWidthM": 1.2
+      },
+      "tags": [
+        "rocket",
+        "space",
+        "Second World War"
+      ],
+      "pageviews": null,
+      "importance": 0.8,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-09T00:00:00Z",
+      "updatedAt": "2026-10-11T16:12:17.208Z"
+    },
+    {
       "id": "wm-24825633",
       "kind": "image",
-      "title": "The first point-contact transistor (Bell Labs display)",
+      "title": "The first transistor",
       "titleOriginal": null,
       "altTitles": [],
       "creators": [
@@ -20176,7 +20501,7 @@
         "depthCm": null,
         "weightKg": null
       },
-      "description": "Three equations in three variables, boiled down by Edward Lorenz from a model of air rising in a heated layer. Their solutions never settle and never repeat, yet they never leave this shape of two wings, circling one and then, unpredictably, crossing to the other. Lorenz found in 1961 that restarting a weather computation from rounded-off numbers gave a completely different forecast: tiny differences grow exponentially, so a system can be fully determined and still unpredictable. His 1963 paper, Deterministic Nonperiodic Flow, is where chaos begins as a science, and the attractor is its emblem. The dark tube is a long run of the equations; the red point is flying them now, from a slightly different start, and you can watch it choose a wing.",
+      "description": "Three equations in three variables, boiled down by Edward Lorenz from a model of air rising in a heated layer. Their solutions never settle and never repeat, yet they never leave this shape of two wings, circling one and then, unpredictably, crossing to the other. Lorenz found in 1961 that restarting a weather computation from rounded-off numbers gave a completely different forecast: tiny differences grow exponentially, so a system can be fully determined and still unpredictable. His 1963 paper, Deterministic Nonperiodic Flow, is where chaos begins as a science, and the attractor is its emblem.\n\nThe dark tube is a long run of the equations. The red point is flying them now, as you watch and not from a recording, from a slightly different start, and you can watch it choose a wing.",
       "facts": [
         "The butterfly effect takes its name from a 1972 talk of Lorenz's: could a butterfly's wings in Brazil set off a tornado in Texas?",
         "The attractor has fractional dimension, about 2.06.",
@@ -20256,9 +20581,197 @@
       "updatedAt": "2026-10-09T00:00:00Z"
     },
     {
+      "id": "nasa-saturn-v",
+      "kind": "model",
+      "title": "Saturn V",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "NASA Marshall Space Flight Center, under Wernher von Braun",
+          "slug": null,
+          "wikidataQid": "Q188676",
+          "wikipediaUrl": null,
+          "birthYear": null,
+          "deathYear": null,
+          "role": "designers"
+        }
+      ],
+      "date": {
+        "year": 1967,
+        "month": 11,
+        "day": 9,
+        "yearStart": null,
+        "yearEnd": null,
+        "label": "first flight 9 November 1967",
+        "precision": "year"
+      },
+      "madeIn": {
+        "name": "Huntsville",
+        "region": "Alabama",
+        "country": "United States",
+        "point": {
+          "lat": 34.7304,
+          "lon": -86.5861
+        },
+        "wikidataQid": "Q79860"
+      },
+      "location": {
+        "name": "Everywhere it is computed",
+        "region": null,
+        "country": null,
+        "point": null,
+        "wikidataQid": null,
+        "institution": null,
+        "inventoryNumber": null
+      },
+      "culture": null,
+      "movement": null,
+      "periodSlug": null,
+      "medium": "NASA's 3D model, at true size",
+      "materials": [],
+      "genre": [
+        "spacecraft",
+        "engineering"
+      ],
+      "subjects": [
+        "rocket",
+        "Apollo programme",
+        "Moon landing",
+        "Wernher von Braun"
+      ],
+      "physical": {
+        "widthCm": 1010,
+        "heightCm": 11060,
+        "depthCm": 1010,
+        "weightKg": null
+      },
+      "description": "The rocket that took people to the Moon: the real one stood 110 metres, a thirty-six storey building, and weighed 2,900 tonnes fuelled, almost all of it kerosene, hydrogen and liquid oxygen. The five F-1 engines of the first stage burned thirteen tonnes of propellant a second and lifted it, at first, slower than a person walks. It flew thirteen times from 1967 to 1973 without losing a crew, took twenty-four people to the Moon and twelve to its surface, and launched Skylab. Nothing as powerful flew again until 2022. It stands here at its full height, off to the east; walk out to its foot and look up.",
+      "facts": [
+        "Three stages: the first burned for two and a half minutes to 68 kilometres; the third fired twice, once to orbit and once, over the Pacific, toward the Moon.",
+        "Von Braun's team at Huntsville designed it; Boeing, North American and Douglas built the stages; 400,000 people worked on Apollo at its peak.",
+        "Fully fuelled it weighed 2,970 tonnes; the lunar module that landed weighed 15.",
+        "Three remain, on their sides, at Houston, Huntsville and the Kennedy Space Center."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Saturn_V",
+      "wikidataQid": "Q188676",
+      "externalIds": {
+        "nasa": "saturn-v"
+      },
+      "copyrighted": false,
+      "asset": {
+        "kind": "model",
+        "currentVersionId": "nasa-saturn-v-v1",
+        "versions": [
+          {
+            "id": "nasa-saturn-v-v1",
+            "original": {
+              "url": "https://science.nasa.gov/3d-resources/saturn-v/",
+              "format": "glb",
+              "bytes": 927212,
+              "triangles": 34814,
+              "unitScale": 8.5158
+            },
+            "rungs": [
+              {
+                "quality": "thumb",
+                "url": "/assets/nasa-saturn-v/thumb.glb",
+                "bytes": 109432,
+                "triangles": 10358,
+                "textureSize": 512,
+                "draco": true
+              },
+              {
+                "quality": "low",
+                "url": "/assets/nasa-saturn-v/low.glb",
+                "bytes": 150148,
+                "triangles": 20253,
+                "textureSize": 1000,
+                "draco": true
+              },
+              {
+                "quality": "medium",
+                "url": "/assets/nasa-saturn-v/medium.glb",
+                "bytes": 159628,
+                "triangles": 23351,
+                "textureSize": 1000,
+                "draco": true
+              },
+              {
+                "quality": "high",
+                "url": "/assets/nasa-saturn-v/high.glb",
+                "bytes": 186652,
+                "triangles": 34814,
+                "textureSize": 1000,
+                "draco": true
+              }
+            ],
+            "scale": 1,
+            "bounds": {
+              "width": 17.153,
+              "height": 110.593,
+              "depth": 17.153
+            },
+            "credit": {
+              "author": "NASA / Michael D. Carbajal",
+              "license": {
+                "name": "Public domain (NASA)",
+                "url": "https://www.nasa.gov/nasa-brand-center/images-and-media/"
+              },
+              "sourcePage": "https://science.nasa.gov/3d-resources/saturn-v/"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-09T00:00:00Z",
+              "note": "NASA's own 3D model of the Saturn V from the NASA 3D Resources library (science.nasa.gov/3d-resources/saturn-v, glb, 22 meshes, eight 1000 px textures; NASA media are not copyrighted). The file is 12.99 units tall; unitScale 0.42581 makes it the real 110.6 m at one twentieth, 5.53 m, a scale model as the museums show it. Downloaded 2026-10-10."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "nasa",
+            "representation": "reconstruction"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": 0,
+        "back": "none",
+        "yaw": null,
+        "fallbackWidthM": 1.2
+      },
+      "tags": [
+        "space",
+        "NASA",
+        "rocket",
+        "Apollo",
+        "landmark"
+      ],
+      "pageviews": null,
+      "importance": 0.9,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-09T00:00:00Z",
+      "updatedAt": "2026-10-11T16:12:18.270Z",
+      "landmark": {
+        "side": "east",
+        "distance": 110
+      }
+    },
+    {
       "id": "si-nasm_A19700102000",
       "kind": "model",
-      "title": "Apollo 11 Command Module Columbia",
+      "title": "Command Module Columbia",
       "titleOriginal": null,
       "altTitles": [
         "Columbia",
@@ -20340,6 +20853,7 @@
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Command_module_Columbia",
       "wikidataQid": "Q85753536",
       "externalIds": {
+        "smithsonian-3d": "nasm_A19700102000",
         "si-edan": "edanmdm:nasm_A19700102000",
         "si-3d-exterior": "d8c6457e-4ebc-11ea-b77f-2e728ce88125",
         "si-3d-interior": "d8c63e8a-4ebc-11ea-b77f-2e728ce88125"
@@ -20445,7 +20959,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-07T00:00:00Z",
-      "updatedAt": "2026-10-10T00:14:21.220Z",
+      "updatedAt": "2026-10-11T16:02:01.128Z",
       "audio": {
         "currentVersionId": "si-nasm_A19700102000-audio-v1",
         "versions": [
@@ -20493,7 +21007,7 @@
     {
       "id": "wm-91010657",
       "kind": "image",
-      "title": "Apollo 11: the first step on the Moon, live television",
+      "title": "The first step on the Moon",
       "titleOriginal": null,
       "altTitles": [],
       "creators": [
@@ -20724,7 +21238,7 @@
         "depthCm": null,
         "weightKg": null
       },
-      "description": "The Moon, as people finally saw all of it. For all of history one face was known and the other was not, until a Soviet probe photographed the far side in 1959 and the Lunar Reconnaissance Orbiter, circling since 2009, mapped the whole globe in colour at a resolution of a hundred metres. This is that map on a globe you can turn, and, in VR, hold. The red dot is Tranquility Base, where Eagle landed on the evening of 20 July 1969, the day this work is placed on. Look up: the night sky here is Houston's that evening, with the Moon a waxing crescent in the west, drawn larger than life so it can be looked at. Two people were standing on it.",
+      "description": "The Moon, as people finally saw all of it. For all of history one face was known and the other was not, until a Soviet probe photographed the far side in 1959 and the Lunar Reconnaissance Orbiter, circling since 2009, mapped the whole globe in colour at a resolution of a hundred metres. This is that map on a globe you can turn, and, in VR, hold.\n\nThe globe turns as you watch. The red dot is Tranquility Base, where Eagle landed on the evening of 20 July 1969, the day this work is placed on. Look up: the night sky here is Houston's that evening, with the Moon a waxing crescent in the west, drawn larger than life so it can be looked at. Two people were standing on it.",
       "facts": [
         "The map is the Lunar Reconnaissance Orbiter Camera's wide-angle colour mosaic, with the poles filled in from its narrow-angle images.",
         "The far side has almost none of the dark plains that make the face we know; it is nearly all bright highland.",
@@ -20886,7 +21400,7 @@
         "depthCm": null,
         "weightKg": null
       },
-      "description": "A grid of cells, each alive or dead. At every tick a living cell with two or three living neighbours stays alive, a dead cell with exactly three is born, and everything else dies or stays empty. That is the whole of it. John Conway worked the rules out by hand with counters on a Go board, looking for the simplest system that was neither dull nor explosive, and Martin Gardner announced it in Scientific American in October 1970. From three rules come gliders that travel, guns that fire them, and patterns that compute: the Game of Life can run any program a computer can. This slab runs it live, seeded with a glider gun at the top left and an R-pentomino that takes 1,103 generations to settle; when the board goes still, it starts over.",
+      "description": "A grid of cells, each alive or dead. At every tick a living cell with two or three living neighbours stays alive, a dead cell with exactly three is born, and everything else dies or stays empty. That is the whole of it. John Conway worked the rules out by hand with counters on a Go board, looking for the simplest system that was neither dull nor explosive, and Martin Gardner announced it in Scientific American in October 1970. From three rules come gliders that travel, guns that fire them, and patterns that compute: the Game of Life can run any program a computer can.\n\nThe slab is running it now, generation by generation as you watch, seeded with a glider gun at the top left and an R-pentomino that takes 1,103 generations to settle; when the board goes still, it starts over.",
       "facts": [
         "The rules fit in one sentence; the behaviour has never been fully catalogued.",
         "Gosper's glider gun, found in November 1970, was the first pattern shown to grow without limit.",
@@ -21078,31 +21592,31 @@
               {
                 "quality": "thumb",
                 "url": "/assets/sf-acb3f8645a69493cb211a62b40d66aab/thumb.glb",
-                "bytes": 793176,
-                "triangles": 79475,
+                "bytes": 845360,
+                "triangles": 94701,
                 "textureSize": 512,
                 "draco": true
               },
               {
                 "quality": "low",
                 "url": "/assets/sf-acb3f8645a69493cb211a62b40d66aab/low.glb",
-                "bytes": 1796536,
-                "triangles": 162394,
+                "bytes": 1725280,
+                "triangles": 162380,
                 "textureSize": 1024,
                 "draco": true
               },
               {
                 "quality": "medium",
                 "url": "/assets/sf-acb3f8645a69493cb211a62b40d66aab/medium.glb",
-                "bytes": 4283752,
-                "triangles": 278460,
+                "bytes": 4175240,
+                "triangles": 278461,
                 "textureSize": 2048,
                 "draco": true
               },
               {
                 "quality": "high",
                 "url": "/assets/sf-acb3f8645a69493cb211a62b40d66aab/high.glb",
-                "bytes": 4891184,
+                "bytes": 4773668,
                 "triangles": 464116,
                 "textureSize": 2048,
                 "draco": true
@@ -21164,7 +21678,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-10T00:14:28.703Z",
+      "updatedAt": "2026-10-11T16:12:23.765Z",
       "audio": {
         "currentVersionId": "sf-acb3f8645a69493cb211a62b40d66aab-audio-v1",
         "versions": [
@@ -21369,7 +21883,7 @@
     {
       "id": "wm-153446594",
       "kind": "image",
-      "title": "MOS Technology 6502",
+      "title": "MOS 6502",
       "titleOriginal": null,
       "altTitles": [],
       "creators": [
@@ -21583,7 +22097,7 @@
     {
       "id": "wm-14619982",
       "kind": "image",
-      "title": "Cray-1 supercomputer",
+      "title": "Cray-1",
       "titleOriginal": null,
       "altTitles": [],
       "creators": [
@@ -21744,7 +22258,7 @@
     {
       "id": "wm-159435417",
       "kind": "image",
-      "title": "Apple Computer 1 (Apple I)",
+      "title": "Apple I",
       "titleOriginal": null,
       "altTitles": [],
       "creators": [
@@ -22002,38 +22516,38 @@
               "url": "https://sketchfab.com/3d-models/apple-ii-computer-b5d316548d634f16a72dd503db0aa01b",
               "format": "glb",
               "bytes": null,
-              "triangles": 70263
+              "triangles": 76865
             },
             "rungs": [
               {
                 "quality": "thumb",
                 "url": "/assets/sf-b5d316548d634f16a72dd503db0aa01b/thumb.glb",
-                "bytes": 818548,
-                "triangles": 23539,
+                "bytes": 540908,
+                "triangles": 7391,
                 "textureSize": 512,
                 "draco": true
               },
               {
                 "quality": "low",
                 "url": "/assets/sf-b5d316548d634f16a72dd503db0aa01b/low.glb",
-                "bytes": 1313776,
-                "triangles": 28089,
+                "bytes": 1306444,
+                "triangles": 26998,
                 "textureSize": 1024,
                 "draco": true
               },
               {
                 "quality": "medium",
                 "url": "/assets/sf-b5d316548d634f16a72dd503db0aa01b/medium.glb",
-                "bytes": 2825224,
-                "triangles": 42916,
+                "bytes": 2900528,
+                "triangles": 46175,
                 "textureSize": 2048,
                 "draco": true
               },
               {
                 "quality": "high",
                 "url": "/assets/sf-b5d316548d634f16a72dd503db0aa01b/high.glb",
-                "bytes": 9472456,
-                "triangles": 70263,
+                "bytes": 9598456,
+                "triangles": 76865,
                 "textureSize": 4096,
                 "draco": true
               }
@@ -22093,7 +22607,150 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-09T19:23:09.453Z"
+      "updatedAt": "2026-10-11T16:12:33.050Z"
+    },
+    {
+      "id": "sim-black-hole-accretion-disc",
+      "kind": "sim",
+      "title": "A black hole",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "Jean-Pierre Luminet",
+          "slug": null,
+          "wikidataQid": "Q3163898",
+          "wikipediaUrl": null,
+          "birthYear": 1951,
+          "deathYear": null,
+          "role": "astrophysicist"
+        }
+      ],
+      "date": {
+        "year": 1979,
+        "month": null,
+        "day": null,
+        "yearStart": null,
+        "yearEnd": null,
+        "label": "1979",
+        "precision": "year"
+      },
+      "madeIn": {
+        "name": "Meudon",
+        "region": "Île-de-France",
+        "country": "France",
+        "point": {
+          "lat": 48.8054,
+          "lon": 2.2316
+        },
+        "wikidataQid": null
+      },
+      "location": {
+        "name": "Everywhere it is computed",
+        "region": null,
+        "country": null,
+        "point": null,
+        "wikidataQid": null,
+        "institution": null,
+        "inventoryNumber": null
+      },
+      "culture": null,
+      "movement": null,
+      "periodSlug": null,
+      "medium": "Light traced through curved spacetime, computed live on the graphics processor",
+      "materials": [],
+      "genre": [
+        "physics"
+      ],
+      "subjects": [
+        "black hole",
+        "accretion disc",
+        "gravitational lensing",
+        "general relativity"
+      ],
+      "physical": {
+        "widthCm": null,
+        "heightCm": null,
+        "depthCm": null,
+        "weightKg": null
+      },
+      "description": "What a black hole looks like, worked out before anyone had seen one. In 1979 Jean-Pierre Luminet, at the Paris Observatory at Meudon, traced rays of light backward from an observer's eye through the bent space around a black hole, on an IBM 7040 with punched cards, and plotted the result by hand with India ink, dot by dot. The picture surprised everyone: the far side of the glowing disc of gas around the hole is lifted into view above and below it, because light from behind bends over the top, and a thin ring of light rims the black shadow. Forty years later the Event Horizon Telescope's image of M87 showed the same ring.\n\nWhat hangs here is not an image but the calculation itself, run afresh for every point of the window every frame as you move, so you can walk round it. The side of the disc coming toward you is brighter, as his was.",
+      "facts": [
+        "Luminet's 1979 picture is the first scientific image of a black hole; it was computed, not observed.",
+        "Light from the far side of the disc reaches you over the top of the hole: that is why the ring seems to stand up behind it.",
+        "The film Interstellar's black hole of 2014 was made the same way, with Kip Thorne checking the equations.",
+        "The real thing, M87's black hole, was imaged in 2019 and hangs nearby."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Black_hole#Accretion_of_matter",
+      "wikidataQid": null,
+      "externalIds": {},
+      "copyrighted": false,
+      "asset": {
+        "kind": "sim",
+        "currentVersionId": "sim-black-hole-accretion-disc-v1",
+        "versions": [
+          {
+            "id": "sim-black-hole-accretion-disc-v1",
+            "program": "blackhole",
+            "params": {
+              "radius": 0.22,
+              "steps": 110,
+              "discOuter": 8
+            },
+            "bounds": {
+              "width": 4.6,
+              "height": 3,
+              "depth": 0.1
+            },
+            "credit": {
+              "author": "20watts",
+              "license": {
+                "name": "CC0 1.0",
+                "url": null
+              },
+              "sourcePage": null
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-09T00:00:00Z",
+              "note": "Run live by src/sims/blackhole.ts: for every pixel of a square held up facing the visitor, a ray is traced back from the eye and bent through Schwarzschild spacetime around a mass at the square's centre, crossing a thin glowing disc; the method is Luminet's of 1979, done on the graphics chip. The stars behind are made up. The program is the museum's own, CC0."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "procedural"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": 0.3,
+        "back": "none",
+        "yaw": null,
+        "fallbackWidthM": 1.2
+      },
+      "tags": [
+        "physics",
+        "black hole",
+        "relativity",
+        "simulation"
+      ],
+      "pageviews": null,
+      "importance": 0.9,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-09T00:00:00Z",
+      "updatedAt": "2026-10-09T00:00:00Z"
     },
     {
       "id": "sim-mandelbrot-set",
@@ -22159,7 +22816,7 @@
         "depthCm": null,
         "weightKg": null
       },
-      "description": "Take a number c in the complex plane, start z at zero, and repeat z = z² + c. For some c the value stays bounded forever; for others it runs off to infinity. The set of c that stay is the black shape here, and its edge is infinitely detailed: zoom in anywhere on the boundary and new copies of the whole appear among seahorses, spirals and filaments, with no end to it. Benoit Mandelbrot made the first crude pictures at IBM on 1 March 1980, on a printer; Robert Brooks and Peter Matelski had drawn a rough one two years earlier. The panel computes the set afresh every frame on the graphics chip, zooming slowly into the boundary and back out, as far as single-precision arithmetic allows.",
+      "description": "Take a number c in the complex plane, start z at zero, and repeat z = z² + c. For some c the value stays bounded forever; for others it runs off to infinity. The set of c that stay is the black shape here, and its edge is infinitely detailed: zoom in anywhere on the boundary and new copies of the whole appear among seahorses, spirals and filaments, with no end to it. Benoit Mandelbrot made the first crude pictures at IBM on 1 March 1980, on a printer; Robert Brooks and Peter Matelski had drawn a rough one two years earlier.\n\nNothing here is a picture. The panel computes the set afresh every frame on the graphics chip as you watch, zooming slowly into the boundary and back out, as far as single-precision arithmetic allows.",
       "facts": [
         "Every point of the boundary is a point where the behaviour of z changes from bounded to runaway; the boundary has dimension 2.",
         "The set is connected, which Mandelbrot doubted from his pictures and Douady and Hubbard proved in 1982.",
@@ -22235,6 +22892,194 @@
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
       "updatedAt": "2026-10-09T00:00:00Z"
+    },
+    {
+      "id": "sf-69cba9fe15ff428eaaba57bf61941109",
+      "kind": "model",
+      "title": "Space Shuttle",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "NASA and Rockwell International",
+          "slug": null,
+          "wikidataQid": "Q48806",
+          "wikipediaUrl": null,
+          "birthYear": null,
+          "deathYear": null,
+          "role": "builders"
+        }
+      ],
+      "date": {
+        "year": 1981,
+        "month": 4,
+        "day": 12,
+        "yearStart": null,
+        "yearEnd": null,
+        "label": "first launch 12 April 1981",
+        "precision": "year"
+      },
+      "madeIn": {
+        "name": "Kennedy Space Center",
+        "region": "Florida",
+        "country": "United States",
+        "point": {
+          "lat": 28.573,
+          "lon": -80.649
+        },
+        "wikidataQid": "Q48894"
+      },
+      "location": {
+        "name": "Everywhere it is computed",
+        "region": null,
+        "country": null,
+        "point": null,
+        "wikidataQid": null,
+        "institution": null,
+        "inventoryNumber": null
+      },
+      "culture": null,
+      "movement": null,
+      "periodSlug": null,
+      "medium": "An artist's 3D model, at true size",
+      "materials": [],
+      "genre": [
+        "spacecraft",
+        "engineering"
+      ],
+      "subjects": [
+        "Space Shuttle",
+        "rocket",
+        "reusable spacecraft",
+        "NASA"
+      ],
+      "physical": {
+        "widthCm": 2460,
+        "heightCm": 5610,
+        "depthCm": 2700,
+        "weightKg": null
+      },
+      "description": "The whole stack as it stood on the pad: the orbiter riding a tank of liquid hydrogen and oxygen the size of a grain silo, with two solid boosters strapped alongside that burned for two minutes and came down by parachute to be used again. Two million kilograms at lift-off, seven million pounds of thrust, and the first spacecraft to fly to orbit and land on a runway, 135 times from 1981 to 2011. It built the space station, carried Hubble up and fixed it five times, and lost two crews, Challenger in 1986 and Columbia in 2003. It stands here at its full 56 metres, off to the east; the orbiter Discovery, the real one, stands on the lane a little further on.",
+      "facts": [
+        "The external tank was the only part thrown away each flight; it was painted white twice, then left orange to save 270 kg.",
+        "The main engines burned hydrogen at 3,300 degrees inside chambers cooled by the same hydrogen flowing through their walls.",
+        "Five orbiters flew: Columbia, Challenger, Discovery, Atlantis and Endeavour; Enterprise flew only glide tests.",
+        "The programme cost about 200 billion dollars; a launch cost around 450 million."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Space_Shuttle",
+      "wikidataQid": "Q48806",
+      "externalIds": {
+        "sketchfab": "69cba9fe15ff428eaaba57bf61941109"
+      },
+      "copyrighted": false,
+      "asset": {
+        "kind": "model",
+        "currentVersionId": "sf-69cba9fe15ff428eaaba57bf61941109-v1",
+        "versions": [
+          {
+            "id": "sf-69cba9fe15ff428eaaba57bf61941109-v1",
+            "original": {
+              "url": "https://sketchfab.com/3d-models/69cba9fe15ff428eaaba57bf61941109",
+              "format": "glb",
+              "bytes": 43355278,
+              "triangles": 484096,
+              "unitScale": 1
+            },
+            "rungs": [
+              {
+                "quality": "thumb",
+                "url": "/assets/sf-69cba9fe15ff428eaaba57bf61941109/thumb.glb",
+                "bytes": 498448,
+                "triangles": 76078,
+                "textureSize": 512,
+                "draco": true
+              },
+              {
+                "quality": "low",
+                "url": "/assets/sf-69cba9fe15ff428eaaba57bf61941109/low.glb",
+                "bytes": 952100,
+                "triangles": 169436,
+                "textureSize": 1024,
+                "draco": true
+              },
+              {
+                "quality": "medium",
+                "url": "/assets/sf-69cba9fe15ff428eaaba57bf61941109/medium.glb",
+                "bytes": 1718632,
+                "triangles": 290443,
+                "textureSize": 2048,
+                "draco": true
+              },
+              {
+                "quality": "high",
+                "url": "/assets/sf-69cba9fe15ff428eaaba57bf61941109/high.glb",
+                "bytes": 3324728,
+                "triangles": 484096,
+                "textureSize": 4096,
+                "draco": true
+              }
+            ],
+            "scale": 1,
+            "bounds": {
+              "width": 24.64,
+              "height": 54.994,
+              "depth": 27.043
+            },
+            "credit": {
+              "author": "Michél",
+              "license": {
+                "name": "CC BY 4.0",
+                "url": "http://creativecommons.org/licenses/by/4.0/"
+              },
+              "sourcePage": "https://sketchfab.com/3d-models/69cba9fe15ff428eaaba57bf61941109"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-09T00:00:00Z",
+              "note": "An artist's model of the full stack, orbiter, external tank and two solid boosters (484,000 triangles, three 8192 px textures), 55.0 units tall for the real 56.1 m, so the file is in metres; unitScale 0.05 makes it a model at one twentieth, 2.75 m. The orbiter Discovery itself stands at true size three rows on. License.txt in the download: CC-BY-4.0, author Michél (https://sketchfab.com/Michel.Laborda.Gonzalez), 'Author must be credited. Commercial use is allowed.' Downloaded by the museum's owner from Sketchfab on 2026-10-11."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "sketchfab",
+            "representation": "reconstruction"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": 0,
+        "back": "none",
+        "yaw": 3.1416,
+        "fallbackWidthM": 1.2
+      },
+      "tags": [
+        "space",
+        "NASA",
+        "spacecraft",
+        "rocket",
+        "landmark"
+      ],
+      "pageviews": null,
+      "importance": 0.8,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-09T00:00:00Z",
+      "updatedAt": "2026-10-11T16:12:39.272Z",
+      "landmark": {
+        "side": "east",
+        "distance": 80
+      }
     },
     {
       "id": "zen-10232172",
@@ -22341,15 +23186,15 @@
               {
                 "quality": "thumb",
                 "url": "/assets/zen-10232172/thumb.glb",
-                "bytes": 91188,
-                "triangles": 12054,
+                "bytes": 50620,
+                "triangles": 2774,
                 "textureSize": 512,
                 "draco": true
               },
               {
                 "quality": "low",
                 "url": "/assets/zen-10232172/low.glb",
-                "bytes": 158304,
+                "bytes": 158040,
                 "triangles": 16811,
                 "textureSize": 1024,
                 "draco": true
@@ -22357,7 +23202,7 @@
               {
                 "quality": "medium",
                 "url": "/assets/zen-10232172/medium.glb",
-                "bytes": 200592,
+                "bytes": 200328,
                 "triangles": 28823,
                 "textureSize": 1024,
                 "draco": true
@@ -22365,7 +23210,7 @@
               {
                 "quality": "high",
                 "url": "/assets/zen-10232172/high.glb",
-                "bytes": 259896,
+                "bytes": 259628,
                 "triangles": 48042,
                 "textureSize": 1024,
                 "draco": true
@@ -22425,7 +23270,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-09T19:23:09.910Z"
+      "updatedAt": "2026-10-11T16:12:40.215Z"
     },
     {
       "id": "wm-11118452",
@@ -22686,31 +23531,31 @@
               {
                 "quality": "thumb",
                 "url": "/assets/sf-5f7176a2ae284d6b99fc970c9d265c04/thumb.glb",
-                "bytes": 1828944,
-                "triangles": 36381,
+                "bytes": 1989472,
+                "triangles": 41359,
                 "textureSize": 512,
                 "draco": true
               },
               {
                 "quality": "low",
                 "url": "/assets/sf-5f7176a2ae284d6b99fc970c9d265c04/low.glb",
-                "bytes": 2913932,
-                "triangles": 55598,
+                "bytes": 2861152,
+                "triangles": 52453,
                 "textureSize": 1024,
                 "draco": true
               },
               {
                 "quality": "medium",
                 "url": "/assets/sf-5f7176a2ae284d6b99fc970c9d265c04/medium.glb",
-                "bytes": 5182732,
-                "triangles": 89925,
+                "bytes": 5169736,
+                "triangles": 89960,
                 "textureSize": 2048,
                 "draco": true
               },
               {
                 "quality": "high",
                 "url": "/assets/sf-5f7176a2ae284d6b99fc970c9d265c04/high.glb",
-                "bytes": 9948292,
+                "bytes": 9890180,
                 "triangles": 150000,
                 "textureSize": 4096,
                 "draco": true
@@ -22772,7 +23617,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-10T16:44:35.134Z"
+      "updatedAt": "2026-10-11T16:12:44.580Z"
     },
     {
       "id": "sf-64319e3fd7dd44acb7d6d72cd8c395db",
@@ -22872,31 +23717,31 @@
               {
                 "quality": "thumb",
                 "url": "/assets/sf-64319e3fd7dd44acb7d6d72cd8c395db/thumb.glb",
-                "bytes": 582408,
-                "triangles": 27090,
+                "bytes": 189412,
+                "triangles": 9125,
                 "textureSize": 512,
                 "draco": true
               },
               {
                 "quality": "low",
                 "url": "/assets/sf-64319e3fd7dd44acb7d6d72cd8c395db/low.glb",
-                "bytes": 1089880,
-                "triangles": 63894,
+                "bytes": 973028,
+                "triangles": 63896,
                 "textureSize": 1024,
                 "draco": true
               },
               {
                 "quality": "medium",
                 "url": "/assets/sf-64319e3fd7dd44acb7d6d72cd8c395db/medium.glb",
-                "bytes": 1739372,
-                "triangles": 109536,
+                "bytes": 1621564,
+                "triangles": 109537,
                 "textureSize": 2048,
                 "draco": true
               },
               {
                 "quality": "high",
                 "url": "/assets/sf-64319e3fd7dd44acb7d6d72cd8c395db/high.glb",
-                "bytes": 3040896,
+                "bytes": 2926880,
                 "triangles": 182563,
                 "textureSize": 4096,
                 "draco": true
@@ -22957,7 +23802,191 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-09T19:23:12.673Z"
+      "updatedAt": "2026-10-11T16:12:47.681Z"
+    },
+    {
+      "id": "nasa-iss",
+      "kind": "model",
+      "title": "International Space Station",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "NASA, Roscosmos, ESA, JAXA and the Canadian Space Agency",
+          "slug": null,
+          "wikidataQid": "Q25271",
+          "wikipediaUrl": null,
+          "birthYear": null,
+          "deathYear": null,
+          "role": "builders"
+        }
+      ],
+      "date": {
+        "year": 2000,
+        "month": 11,
+        "day": 2,
+        "yearStart": null,
+        "yearEnd": null,
+        "label": "crewed without a break since 2 November 2000",
+        "precision": "year"
+      },
+      "madeIn": {
+        "name": "Low Earth orbit",
+        "region": null,
+        "country": null,
+        "point": null,
+        "wikidataQid": null
+      },
+      "location": {
+        "name": "Low Earth orbit, 400 km up",
+        "region": null,
+        "country": null,
+        "point": null,
+        "wikidataQid": null,
+        "institution": null,
+        "inventoryNumber": null
+      },
+      "culture": null,
+      "movement": null,
+      "periodSlug": null,
+      "medium": "NASA's 3D model, at true size",
+      "materials": [],
+      "genre": [
+        "spacecraft",
+        "engineering"
+      ],
+      "subjects": [
+        "spaceflight",
+        "orbit",
+        "international cooperation",
+        "engineering"
+      ],
+      "physical": {
+        "widthCm": 10900,
+        "heightCm": 2000,
+        "depthCm": 7300,
+        "weightKg": 420000
+      },
+      "description": "The largest thing people have built off the Earth: a football pitch of solar arrays and a truss the length of one, with pressurised modules strung along it that fifteen nations sent up piece by piece over thirteen years, beginning with a Russian module in November 1998 and an American one a fortnight later. It has been lived in without a break since 2 November 2000; some 280 people from 23 countries have been aboard, and it circles the Earth sixteen times a day at 28,000 kilometres an hour, 400 kilometres up, bright enough to be the third-brightest thing in the night sky when it passes over. It was built by two countries that had spent fifty years aiming missiles at each other. It hangs here to the west of the lane, at true size, as high as it is wide; walk out under it.",
+      "facts": [
+        "Mass 420 tonnes; pressurised volume about that of a six-bedroom house.",
+        "The crew see sixteen sunrises a day. Experiments aboard have covered fire in weightlessness, protein crystals, and what a year in orbit does to a human body.",
+        "Forty-two assembly flights: thirty-seven by the Space Shuttle, five by Russian rockets.",
+        "NASA plans to bring it down into the Pacific in 2031."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/International_Space_Station",
+      "wikidataQid": "Q25271",
+      "externalIds": {
+        "nasa": "iss"
+      },
+      "copyrighted": false,
+      "asset": {
+        "kind": "model",
+        "currentVersionId": "nasa-iss-v1",
+        "versions": [
+          {
+            "id": "nasa-iss-v1",
+            "original": {
+              "url": "https://science.nasa.gov/resource/international-space-station-3d-model/",
+              "format": "glb",
+              "bytes": 44495916,
+              "triangles": 247547
+            },
+            "rungs": [
+              {
+                "quality": "thumb",
+                "url": "/assets/nasa-iss/thumb.glb",
+                "bytes": 1747836,
+                "triangles": 124596,
+                "textureSize": 512,
+                "draco": true
+              },
+              {
+                "quality": "low",
+                "url": "/assets/nasa-iss/low.glb",
+                "bytes": 3316844,
+                "triangles": 132826,
+                "textureSize": 1024,
+                "draco": true
+              },
+              {
+                "quality": "medium",
+                "url": "/assets/nasa-iss/medium.glb",
+                "bytes": 3495936,
+                "triangles": 166255,
+                "textureSize": 1024,
+                "draco": true
+              },
+              {
+                "quality": "high",
+                "url": "/assets/nasa-iss/high.glb",
+                "bytes": 3737768,
+                "triangles": 247547,
+                "textureSize": 1024,
+                "draco": true
+              }
+            ],
+            "scale": 1,
+            "bounds": {
+              "width": 111.988,
+              "height": 68.784,
+              "depth": 58.627
+            },
+            "credit": {
+              "author": "NASA Visualization Technology Applications and Development (VTAD)",
+              "license": {
+                "name": "Public domain (NASA)",
+                "url": "https://www.nasa.gov/nasa-brand-center/images-and-media/"
+              },
+              "sourcePage": "https://science.nasa.gov/resource/international-space-station-3d-model/"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-09T00:00:00Z",
+              "note": "NASA's 3D model of the station, 22 April 2019, by the Visualization Technology Applications and Development group, from the NASA 3D Resources library (glb, 131 meshes, 26 textures of 1024 px, 44 MB; NASA media are not copyrighted). Already in metres: 112 m across the solar arrays, 69 m along the truss, matching the real 109 by 73. Shown at true size, hung 42 m up to the west of the lane, as a landmark, since nothing that large fits on it. Downloaded 2026-10-10."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "nasa",
+            "representation": "reconstruction"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": 10,
+        "back": "none",
+        "yaw": null,
+        "fallbackWidthM": 1.2
+      },
+      "tags": [
+        "space",
+        "NASA",
+        "spacecraft",
+        "landmark",
+        "walk under"
+      ],
+      "pageviews": null,
+      "importance": 0.95,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-09T00:00:00Z",
+      "updatedAt": "2026-10-11T16:12:51.894Z",
+      "landmark": {
+        "side": "west",
+        "distance": 170
+      }
     },
     {
       "id": "yt-dQw4w9WgXcQ",
@@ -23154,7 +24183,7 @@
     {
       "id": "sf-485c51878bc7449e81379a863ec862f5",
       "kind": "model",
-      "title": "iPhone (1st generation)",
+      "title": "iPhone",
       "titleOriginal": null,
       "altTitles": [],
       "creators": [
@@ -23250,7 +24279,7 @@
               {
                 "quality": "thumb",
                 "url": "/assets/sf-485c51878bc7449e81379a863ec862f5/thumb.glb",
-                "bytes": 100196,
+                "bytes": 93996,
                 "triangles": 11062,
                 "textureSize": 512,
                 "draco": true
@@ -23258,7 +24287,7 @@
               {
                 "quality": "low",
                 "url": "/assets/sf-485c51878bc7449e81379a863ec862f5/low.glb",
-                "bytes": 354772,
+                "bytes": 348708,
                 "triangles": 77436,
                 "textureSize": 1024,
                 "draco": true
@@ -23266,7 +24295,7 @@
               {
                 "quality": "medium",
                 "url": "/assets/sf-485c51878bc7449e81379a863ec862f5/medium.glb",
-                "bytes": 628892,
+                "bytes": 618688,
                 "triangles": 132748,
                 "textureSize": 2048,
                 "draco": true
@@ -23274,7 +24303,7 @@
               {
                 "quality": "high",
                 "url": "/assets/sf-485c51878bc7449e81379a863ec862f5/high.glb",
-                "bytes": 638972,
+                "bytes": 635760,
                 "triangles": 221248,
                 "textureSize": 2048,
                 "draco": true
@@ -23334,7 +24363,1287 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-09T19:23:14.513Z"
+      "updatedAt": "2026-10-11T16:12:54.257Z"
+    },
+    {
+      "id": "sim-gw150914-merger",
+      "kind": "sim",
+      "title": "Two black holes become one",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "LIGO Scientific Collaboration and Virgo Collaboration",
+          "slug": null,
+          "wikidataQid": "Q1370749",
+          "wikipediaUrl": null,
+          "birthYear": null,
+          "deathYear": null,
+          "role": "observers"
+        }
+      ],
+      "date": {
+        "year": 2015,
+        "month": 9,
+        "day": 14,
+        "yearStart": null,
+        "yearEnd": null,
+        "label": "14 September 2015, 09:50:45 UTC",
+        "precision": "year"
+      },
+      "madeIn": {
+        "name": "Hanford and Livingston",
+        "region": "Washington and Louisiana",
+        "country": "United States",
+        "point": {
+          "lat": 46.455,
+          "lon": -119.408
+        },
+        "wikidataQid": null
+      },
+      "location": {
+        "name": "Everywhere it is computed",
+        "region": null,
+        "country": null,
+        "point": null,
+        "wikidataQid": null,
+        "institution": null,
+        "inventoryNumber": null
+      },
+      "culture": null,
+      "movement": null,
+      "periodSlug": null,
+      "medium": "Two black holes merging, computed live; the detectors' recording at the moment of merger",
+      "materials": [],
+      "genre": [
+        "physics"
+      ],
+      "subjects": [
+        "gravitational waves",
+        "black holes",
+        "LIGO",
+        "general relativity"
+      ],
+      "physical": {
+        "widthCm": null,
+        "heightCm": null,
+        "depthCm": null,
+        "weightKg": null
+      },
+      "description": "At 09:50:45 on the morning of 14 September 2015, two detectors four thousand kilometres apart, in Louisiana and in Washington State, each four kilometres long, flexed by a fraction of the width of a proton, seven milliseconds apart. The signal rose in pitch and strength for a fifth of a second and stopped: two black holes, of thirty-six and twenty-nine times the mass of the sun, 1.3 billion light-years away, had spiralled together and merged, turning three suns' worth of mass into a ripple in the shape of space. Einstein had predicted such waves in 1916 and thought them too faint ever to detect.\n\nWhat you see is the event run again, not a film of it, slowed a hundred times: the masses circling faster and closer, the sheet of space dented and rippling, the strain drawn as the detectors drew it, and at the merger, LIGO's recording of the chirp. The event is catalogued as GW150914, for the date.",
+      "facts": [
+        "The detection came four days after the upgraded detectors switched on, before their official observing run began.",
+        "The waves' speed and the time difference between the two sites fix where in the sky they came from, roughly: the southern hemisphere.",
+        "Three solar masses of energy left as gravitational waves; for a tenth of a second the merger outshone all the stars in the observable universe combined.",
+        "Rainer Weiss, Barry Barish and Kip Thorne received the 2017 Nobel Prize for it."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/First_observation_of_gravitational_waves",
+      "wikidataQid": "Q21715155",
+      "externalIds": {},
+      "copyrighted": false,
+      "asset": {
+        "kind": "sim",
+        "currentVersionId": "sim-gw150914-merger-v1",
+        "versions": [
+          {
+            "id": "sim-gw150914-merger-v1",
+            "program": "merger",
+            "params": {
+              "period": 14,
+              "radius": 1.1,
+              "sound": "/assets/sim-gw150914-merger/chirp.mp3"
+            },
+            "bounds": {
+              "width": 3.2,
+              "height": 2.2,
+              "depth": 3.2
+            },
+            "credit": {
+              "author": "20watts",
+              "license": {
+                "name": "CC0 1.0",
+                "url": null
+              },
+              "sourcePage": null
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-09T00:00:00Z",
+              "note": "Run live by src/sims/merger.ts: two masses inspiral on the leading-order chirp, slowed a hundredfold, denting a sheet that ripples with their quadrupole wave; a panel draws the strain, and at the merger LIGO's own recording of GW150914, pitched into hearing, is played (chirp.mp3 served beside the record, from the Gravitational Wave Open Science Center, CC BY 4.0). The program is the museum's own, CC0."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "procedural"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": 0.1,
+        "back": "none",
+        "yaw": null,
+        "fallbackWidthM": 1.2
+      },
+      "tags": [
+        "physics",
+        "gravitational waves",
+        "LIGO",
+        "black holes",
+        "simulation"
+      ],
+      "pageviews": null,
+      "importance": 0.95,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-09T00:00:00Z",
+      "updatedAt": "2026-10-09T00:00:00Z"
+    },
+    {
+      "id": "sf-394f7cf52d124bbd9db69f24d1ff2f08",
+      "kind": "model",
+      "title": "Falcon 9",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "SpaceX",
+          "slug": null,
+          "wikidataQid": "Q193701",
+          "wikipediaUrl": null,
+          "birthYear": null,
+          "deathYear": null,
+          "role": "builders"
+        }
+      ],
+      "date": {
+        "year": 2015,
+        "month": 12,
+        "day": 21,
+        "yearStart": null,
+        "yearEnd": null,
+        "label": "first landing of an orbital booster, 21 December 2015",
+        "precision": "year"
+      },
+      "madeIn": {
+        "name": "Hawthorne",
+        "region": "California",
+        "country": "United States",
+        "point": {
+          "lat": 33.9207,
+          "lon": -118.3277
+        },
+        "wikidataQid": "Q488118"
+      },
+      "location": {
+        "name": "Everywhere it is computed",
+        "region": null,
+        "country": null,
+        "point": null,
+        "wikidataQid": null,
+        "institution": null,
+        "inventoryNumber": null
+      },
+      "culture": null,
+      "movement": null,
+      "periodSlug": null,
+      "medium": "An artist's 3D model, at true size",
+      "materials": [],
+      "genre": [
+        "spacecraft",
+        "engineering"
+      ],
+      "subjects": [
+        "rocket",
+        "reusable launch vehicle",
+        "SpaceX",
+        "landing"
+      ],
+      "physical": {
+        "widthCm": 520,
+        "heightCm": 7000,
+        "depthCm": 520,
+        "weightKg": null
+      },
+      "description": "On the evening of 21 December 2015 a Falcon 9 put eleven satellites into orbit and then its first stage, 42 metres of it, turned round, flew back to Cape Canaveral, and set down upright on its legs on a concrete pad ten minutes after it had left. Rockets had always been thrown away; from here on the expensive part came home. Nine kerosene engines, a body built by a company that was thirteen years old, and a landing, controlled by grid fins and a single engine relit three times, that engineers had called impossible for sixty years. Boosters have since flown more than twenty times each, and the cost of reaching orbit fell by more than half. It stands here at its full 70 metres, off to the east, on its legs as it landed.",
+      "facts": [
+        "The first stage comes back at Mach 6 and slows itself with its own engines; the grid fins steer it like a dart.",
+        "By 2025 the Falcon 9 had flown more than 500 times, more than any other orbital rocket.",
+        "A booster first flew twice in March 2017; the record stands above twenty flights.",
+        "The fairing halves are caught at sea and reused too."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Falcon_9",
+      "wikidataQid": "Q193701",
+      "externalIds": {
+        "sketchfab": "394f7cf52d124bbd9db69f24d1ff2f08"
+      },
+      "copyrighted": false,
+      "asset": {
+        "kind": "model",
+        "currentVersionId": "sf-394f7cf52d124bbd9db69f24d1ff2f08-v1",
+        "versions": [
+          {
+            "id": "sf-394f7cf52d124bbd9db69f24d1ff2f08-v1",
+            "original": {
+              "url": "https://sketchfab.com/3d-models/394f7cf52d124bbd9db69f24d1ff2f08",
+              "format": "glb",
+              "bytes": 3018322,
+              "triangles": 147215,
+              "unitScale": 0.01
+            },
+            "rungs": [
+              {
+                "quality": "thumb",
+                "url": "/assets/sf-394f7cf52d124bbd9db69f24d1ff2f08/thumb.glb",
+                "bytes": 183684,
+                "triangles": 26774,
+                "textureSize": 512,
+                "draco": true
+              },
+              {
+                "quality": "low",
+                "url": "/assets/sf-394f7cf52d124bbd9db69f24d1ff2f08/low.glb",
+                "bytes": 339116,
+                "triangles": 58717,
+                "textureSize": 1024,
+                "draco": true
+              },
+              {
+                "quality": "medium",
+                "url": "/assets/sf-394f7cf52d124bbd9db69f24d1ff2f08/medium.glb",
+                "bytes": 447256,
+                "triangles": 91095,
+                "textureSize": 2048,
+                "draco": true
+              },
+              {
+                "quality": "high",
+                "url": "/assets/sf-394f7cf52d124bbd9db69f24d1ff2f08/high.glb",
+                "bytes": 569920,
+                "triangles": 147215,
+                "textureSize": 2048,
+                "draco": true
+              }
+            ],
+            "scale": 1,
+            "bounds": {
+              "width": 5.208,
+              "height": 70.994,
+              "depth": 5.208
+            },
+            "credit": {
+              "author": "Stanley Creative",
+              "license": {
+                "name": "CC BY 4.0",
+                "url": "http://creativecommons.org/licenses/by/4.0/"
+              },
+              "sourcePage": "https://sketchfab.com/3d-models/394f7cf52d124bbd9db69f24d1ff2f08"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-09T00:00:00Z",
+              "note": "An artist's model of the Falcon 9 with fairing and landing legs (158,000 triangles, textured), made for the author's Rocket Explorer VR app; 7,100 units tall for the real 70 m, so the file is in centimetres; unitScale 0.0005 makes it a model at one twentieth, 3.5 m. License.txt in the download: CC-BY-4.0, author Stanley Creative (https://sketchfab.com/Stanley_Creative), 'Author must be credited. Commercial use is allowed.' Downloaded by the museum's owner from Sketchfab on 2026-10-11."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "sketchfab",
+            "representation": "reconstruction"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": 0,
+        "back": "none",
+        "yaw": null,
+        "fallbackWidthM": 1.2
+      },
+      "tags": [
+        "space",
+        "rocket",
+        "SpaceX",
+        "reusable",
+        "landmark"
+      ],
+      "pageviews": null,
+      "importance": 0.85,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-09T00:00:00Z",
+      "updatedAt": "2026-10-11T15:37:55.844Z",
+      "landmark": {
+        "side": "east",
+        "distance": 70
+      }
+    },
+    {
+      "id": "wm-158115852",
+      "kind": "image",
+      "title": "AlphaGo's rack",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "Google DeepMind",
+          "slug": null,
+          "wikidataQid": "Q15733006",
+          "wikipediaUrl": null,
+          "birthYear": null,
+          "deathYear": null,
+          "role": "builders"
+        }
+      ],
+      "date": {
+        "year": 2016,
+        "month": null,
+        "day": null,
+        "yearStart": null,
+        "yearEnd": null,
+        "label": "2016; photographed 2025",
+        "precision": "year"
+      },
+      "madeIn": {
+        "name": "London",
+        "region": null,
+        "country": "United Kingdom",
+        "point": {
+          "lat": 51.5072,
+          "lon": -0.1276
+        },
+        "wikidataQid": "Q84"
+      },
+      "location": {
+        "name": "On display, place not stated",
+        "region": null,
+        "country": null,
+        "point": null,
+        "wikidataQid": null,
+        "institution": null,
+        "inventoryNumber": null
+      },
+      "culture": null,
+      "movement": null,
+      "periodSlug": null,
+      "medium": "Photograph of a server rack",
+      "materials": [],
+      "genre": [
+        "photograph",
+        "computing"
+      ],
+      "subjects": [
+        "AlphaGo",
+        "hardware",
+        "tensor processing units",
+        "DeepMind"
+      ],
+      "physical": {
+        "widthCm": 120,
+        "heightCm": 90,
+        "depthCm": null,
+        "weightKg": null
+      },
+      "description": "One rack of the machine that played. The AlphaGo that beat Lee Sedol ran across Google's data centres on 1,920 processors and 280 graphics chips, and on a new kind of chip, the tensor processing unit, which Google had built in secret for exactly this sort of arithmetic and announced two months after the match. A later AlphaGo Zero needed only four of them. This is a retired rack, kept and labelled.",
+      "facts": [
+        "The match version used 48 TPUs; the program had been trained on thirty million positions from human games and then on games against itself.",
+        "Lee Sedol took the one game in five by finding a move the machine had thought one in ten thousand.",
+        "DeepMind retired AlphaGo from competition in 2017 after beating the world number one, Ke Jie, three games to none."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/AlphaGo",
+      "wikidataQid": "Q22044606",
+      "externalIds": {
+        "commons-curid": "158115852",
+        "commons-file": "AlphaGo computer rack.jpg"
+      },
+      "copyrighted": false,
+      "asset": {
+        "kind": "image",
+        "currentVersionId": "wm-158115852-v1",
+        "versions": [
+          {
+            "id": "wm-158115852-v1",
+            "original": {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/b/b3/AlphaGo_computer_rack.jpg",
+              "width": 4080,
+              "height": 3072,
+              "bytes": 6906438,
+              "mime": "image/jpeg"
+            },
+            "rungs": [
+              {
+                "width": 1280,
+                "height": 964,
+                "url": "/assets/wm-158115852/1280.jpg",
+                "bytes": 407090
+              },
+              {
+                "width": 3840,
+                "height": 2891,
+                "url": "/assets/wm-158115852/3840.jpg",
+                "bytes": 2057148
+              }
+            ],
+            "loop": null,
+            "credit": {
+              "author": "Immigrant laborer (Wikimedia Commons)",
+              "license": {
+                "name": "CC0 1.0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:AlphaGo_computer_rack.jpg"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-09T00:00:00Z",
+              "note": "A decommissioned AlphaGo backend rack, photographed 6 January 2025 on display with its AlphaGo nameplate, uploaded to Commons under CC0. Where it is displayed is not stated on the file page. Hung as a branch beside the replayed game."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "wikimedia-commons"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": null,
+        "back": "mirror",
+        "yaw": null,
+        "fallbackWidthM": 1.2
+      },
+      "tags": [
+        "AlphaGo",
+        "computer",
+        "hardware",
+        "photograph"
+      ],
+      "pageviews": null,
+      "importance": 0.6,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-09T00:00:00Z",
+      "updatedAt": "2026-10-11T15:12:14.372Z",
+      "branch": {
+        "of": "sim-alphago-move-37",
+        "step": 1,
+        "label": "the machine"
+      }
+    },
+    {
+      "id": "sim-alphago-move-37",
+      "kind": "sim",
+      "title": "AlphaGo, move 37",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "AlphaGo (DeepMind) and Lee Sedol",
+          "slug": null,
+          "wikidataQid": "Q22044606",
+          "wikipediaUrl": null,
+          "birthYear": null,
+          "deathYear": null,
+          "role": "players"
+        }
+      ],
+      "date": {
+        "year": 2016,
+        "month": 3,
+        "day": 10,
+        "yearStart": null,
+        "yearEnd": null,
+        "label": "10 March 2016",
+        "precision": "year"
+      },
+      "madeIn": {
+        "name": "Seoul",
+        "region": null,
+        "country": "South Korea",
+        "point": {
+          "lat": 37.5665,
+          "lon": 126.978
+        },
+        "wikidataQid": "Q8684"
+      },
+      "location": {
+        "name": "Everywhere it is computed",
+        "region": null,
+        "country": null,
+        "point": null,
+        "wikidataQid": null,
+        "institution": null,
+        "inventoryNumber": null
+      },
+      "culture": null,
+      "movement": null,
+      "periodSlug": null,
+      "medium": "A game of Go, replayed live; the record of the game",
+      "materials": [],
+      "genre": [
+        "computing"
+      ],
+      "subjects": [
+        "Go",
+        "artificial intelligence",
+        "deep learning",
+        "AlphaGo",
+        "Lee Sedol"
+      ],
+      "physical": {
+        "widthCm": null,
+        "heightCm": null,
+        "depthCm": null,
+        "weightKg": null
+      },
+      "description": "Go had been the game computers could not play. It has more possible positions than there are atoms in the universe, and the strength of a move is a matter of shape and feel that the best players could not put into rules. In March 2016 in Seoul, DeepMind's AlphaGo, a program that had learnt from thirty million human positions and then from millions of games against itself, played Lee Sedol, eighteen times a world champion, for a million dollars. In the second game, at move 37, it put a black stone on the fifth line at P10, a shoulder hit that no professional would play: the commentators thought it was a mistake, Lee left the room for a quarter of an hour, and the program had reckoned the odds of a human choosing it at one in ten thousand. It won the game, and the match 4 to 1.\n\nThe board here is playing the game through as you watch, stone by stone with the captures, as the demonstration boards in the commentary rooms showed it, and pauses at the move.",
+      "facts": [
+        "Lee Sedol said afterwards: \"I thought AlphaGo was based on probability calculation and that it was merely a machine. But when I saw this move, I changed my mind. Surely, AlphaGo is creative.\"",
+        "Fan Hui, the European champion who had lost to AlphaGo in secret the autumn before, said of move 37: \"It's not a human move. I've never seen a human play this move. So beautiful.\"",
+        "Lee won game 4 with a move of his own, the wedge at move 78, that AlphaGo had thought as unlikely as its own move 37.",
+        "The next year AlphaGo Zero learnt the game from nothing but the rules, in three days, and beat the version that played Lee 100 games to 0."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/AlphaGo_versus_Lee_Sedol",
+      "wikidataQid": "Q22924103",
+      "externalIds": {},
+      "copyrighted": false,
+      "asset": {
+        "kind": "sim",
+        "currentVersionId": "sim-alphago-move-37-v1",
+        "versions": [
+          {
+            "id": "sim-alphago-move-37-v1",
+            "program": "go",
+            "params": {
+              "moves": "pddpcdqpopoqnqpqcnfqmpqnicdjpoqocpcqbqcobpbodobndqepdrcmjpcgedqfqepfndpiojoinjmhgpgqdndmfohphoeoenfnemelfmgnflgoekdkdlclehdipjqirfrgkdhnomrerdsffigkhminhlkokpgcdfidjcgedgcfchbhdhbihdhegdfdhcfeecghfcgiiihkikilimijjljjifkmklljlklolikjcicjmjnrmrlqlpmqnplrlmkhhgqcqdrcpcsdggcebdqbhijghjobpbpanbdeeegjhhejnfmfmerkfhelnhnglglhmgogkgnijhnakimijincmbodmcockrmsioipjojnirhrqlrlqmrmaobmlnknmobeaeafadmalaoaddbglbpnonercrfpiqhqqjrjks",
+              "pause": 37,
+              "note": "Move 37: the shoulder hit",
+              "secondsPerMove": 1.1,
+              "size": 1.9
+            },
+            "bounds": {
+              "width": 1.9,
+              "height": 2.1,
+              "depth": 0.1
+            },
+            "credit": {
+              "author": "20watts",
+              "license": {
+                "name": "CC0 1.0",
+                "url": null
+              },
+              "sourcePage": null
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-09T00:00:00Z",
+              "note": "Run live by src/sims/go.ts: the record of game 2 of the Google DeepMind Challenge Match (Seoul, 10 March 2016), AlphaGo Black, Lee Sedol White, B+Resign after 211 moves, replayed on a demonstration board with captures, dwelling on move 37. The game record itself is a fact, not a work; the moves were checked against three SGF copies (A. E. Brouwer's go archive, DeepMind's commented SGF, Go Game Guru) and Wikipedia's diagrams. The program is the museum's own, CC0."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "procedural"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": 0.3,
+        "back": "none",
+        "yaw": null,
+        "fallbackWidthM": 1.2
+      },
+      "tags": [
+        "go",
+        "artificial intelligence",
+        "game",
+        "AlphaGo",
+        "simulation"
+      ],
+      "pageviews": null,
+      "importance": 0.9,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-09T00:00:00Z",
+      "updatedAt": "2026-10-09T00:00:00Z"
+    },
+    {
+      "id": "usr-lee-sedol-2016",
+      "kind": "image",
+      "title": "Lee Sedol",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "LG Electronics",
+          "slug": null,
+          "wikidataQid": "Q162345",
+          "wikipediaUrl": null,
+          "birthYear": null,
+          "deathYear": null,
+          "role": "photographer"
+        }
+      ],
+      "date": {
+        "year": 2016,
+        "month": 5,
+        "day": 26,
+        "yearStart": null,
+        "yearEnd": null,
+        "label": "26 May 2016",
+        "precision": "year"
+      },
+      "madeIn": {
+        "name": "Seoul",
+        "region": null,
+        "country": "South Korea",
+        "point": {
+          "lat": 37.5665,
+          "lon": 126.978
+        },
+        "wikidataQid": "Q8684"
+      },
+      "location": {
+        "name": "Everywhere; the file is public",
+        "region": null,
+        "country": null,
+        "point": null,
+        "wikidataQid": null,
+        "institution": null,
+        "inventoryNumber": null
+      },
+      "culture": null,
+      "movement": null,
+      "periodSlug": null,
+      "medium": "Photograph",
+      "materials": [],
+      "genre": [
+        "photograph",
+        "portrait"
+      ],
+      "subjects": [
+        "Lee Sedol",
+        "Go",
+        "portrait"
+      ],
+      "physical": {
+        "widthCm": 80,
+        "heightCm": 80,
+        "depthCm": null,
+        "weightKg": null
+      },
+      "description": "Lee Sedol, born 1983 on the island of Bigeumdo, a professional at twelve, eighteen times a world champion, and in March 2016 the man who sat down across from a machine for five games and a million dollars and lost four. Here he is ten weeks later, giving away what the match had paid him. He had said before the match that he would win five to nothing or four to one. He kept playing for three more years and retired in 2019, saying that with AI at the top there was an entity that could not be defeated.",
+      "facts": [
+        "His game 4 win, with the wedge at move 78 that AlphaGo had rated one in ten thousand, is the last time a human beat a top Go program in an even game.",
+        "He turned professional at twelve, the fifth-youngest ever in Korea.",
+        "He donated the LG sponsorship money for the match to a welfare centre for the developmentally disabled, where this photograph was taken."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Lee_Sedol",
+      "wikidataQid": "Q482797",
+      "externalIds": {},
+      "copyrighted": false,
+      "asset": {
+        "kind": "image",
+        "currentVersionId": "usr-lee-sedol-2016-v1",
+        "versions": [
+          {
+            "id": "usr-lee-sedol-2016-v1",
+            "original": {
+              "url": "https://commons.wikimedia.org/wiki/File:LG%EC%A0%84%EC%9E%90,_%EC%9D%B4%EC%84%B8%EB%8F%8C_9%EB%8B%A8%EA%B3%BC_%ED%95%A8%EA%BB%98_%ED%95%99%EC%83%9D%EB%93%A4%EC%9D%98_%EA%BF%88_%EA%B7%B8%EB%A6%B0%EB%8B%A4.jpg",
+              "width": 800,
+              "height": 800,
+              "bytes": 130953,
+              "mime": "image/jpeg"
+            },
+            "rungs": [
+              {
+                "width": 640,
+                "height": 640,
+                "url": "/assets/usr-lee-sedol-2016/640.jpg",
+                "bytes": 69208
+              },
+              {
+                "width": 800,
+                "height": 800,
+                "url": "/assets/usr-lee-sedol-2016/800.jpg",
+                "bytes": 108685
+              }
+            ],
+            "loop": null,
+            "credit": {
+              "author": "LG Electronics",
+              "license": {
+                "name": "CC BY 2.0",
+                "url": "https://creativecommons.org/licenses/by/2.0/"
+              },
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:LG%EC%A0%84%EC%9E%90,_%EC%9D%B4%EC%84%B8%EB%8F%8C_9%EB%8B%A8%EA%B3%BC_%ED%95%A8%EA%BB%98_%ED%95%99%EC%83%9D%EB%93%A4%EC%9D%98_%EA%BF%88_%EA%B7%B8%EB%A6%B0%EB%8B%A4.jpg"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-09T00:00:00Z",
+              "note": "Lee Sedol on 26 May 2016, ten weeks after the match, at a Seoul welfare centre where he gave away the sponsorship LG had paid him for the match; the photograph is LG Electronics' press release picture (Commons curid 49270591, CC BY 2.0, 2000 by 1300), cropped by the museum to him and the board he is holding, since no other free portrait of him near the match exists; the full frame is kept beside the crop in the originals."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "user-upload"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": null,
+        "back": "mirror",
+        "yaw": null,
+        "fallbackWidthM": 1.2
+      },
+      "tags": [
+        "Lee Sedol",
+        "Go",
+        "portrait",
+        "photograph"
+      ],
+      "pageviews": null,
+      "importance": 0.6,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-09T00:00:00Z",
+      "updatedAt": "2026-10-11T15:12:14.403Z",
+      "branch": {
+        "of": "sim-alphago-move-37",
+        "step": -1,
+        "label": "the man who played it"
+      }
+    },
+    {
+      "id": "nasa-jwst",
+      "kind": "model",
+      "title": "James Webb Space Telescope",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "NASA, ESA and CSA; Northrop Grumman; the Space Telescope Science Institute",
+          "slug": null,
+          "wikidataQid": "Q186447",
+          "wikipediaUrl": null,
+          "birthYear": null,
+          "deathYear": null,
+          "role": "builders"
+        }
+      ],
+      "date": {
+        "year": 2021,
+        "month": 12,
+        "day": 25,
+        "yearStart": null,
+        "yearEnd": null,
+        "label": "launched 25 December 2021",
+        "precision": "year"
+      },
+      "madeIn": {
+        "name": "Redondo Beach",
+        "region": "California",
+        "country": "United States",
+        "point": {
+          "lat": 33.8492,
+          "lon": -118.3884
+        },
+        "wikidataQid": "Q864949"
+      },
+      "location": {
+        "name": "The second Lagrange point, 1.5 million km from Earth",
+        "region": null,
+        "country": null,
+        "point": null,
+        "wikidataQid": null,
+        "institution": null,
+        "inventoryNumber": null
+      },
+      "culture": null,
+      "movement": null,
+      "periodSlug": null,
+      "medium": "NASA's 3D model, at true size",
+      "materials": [],
+      "genre": [
+        "instrument",
+        "engineering"
+      ],
+      "subjects": [
+        "telescope",
+        "infrared astronomy",
+        "early universe",
+        "exoplanets"
+      ],
+      "physical": {
+        "widthCm": 2120,
+        "heightCm": 800,
+        "depthCm": 1420,
+        "weightKg": 6500
+      },
+      "description": "A mirror six and a half metres across, eighteen gold-plated beryllium hexagons, folded to fit inside a rocket and opened in space over two weeks, standing on a sunshield the size of a tennis court that keeps it colder than minus 220 degrees so it can see in infrared: the heat-light of the first galaxies, stretched by the expansion of the universe past the reach of any eye or of Hubble. It was twenty-five years in the making and sits a million and a half kilometres away, where no one can go to fix it; 344 things had to deploy in order and every one did. Six months after launch it sent back the deepest picture of the universe ever taken, which hangs on the next row.",
+      "facts": [
+        "The mirror's gold is 48 grams in all, a layer a few hundred atoms thick; gold reflects infrared best.",
+        "It sees in infrared because light from the first galaxies has been stretched more than tenfold on its way to us.",
+        "Launched on an Ariane 5 from French Guiana so precisely that the fuel saved doubled its expected life, to twenty years.",
+        "It has found galaxies from 300 million years after the big bang, earlier and brighter than the models predicted."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/James_Webb_Space_Telescope",
+      "wikidataQid": "Q186447",
+      "externalIds": {
+        "nasa": "jwst"
+      },
+      "copyrighted": false,
+      "asset": {
+        "kind": "model",
+        "currentVersionId": "nasa-jwst-v1",
+        "versions": [
+          {
+            "id": "nasa-jwst-v1",
+            "original": {
+              "url": "https://science.nasa.gov/3d-resources/james-webb-space-telescope-a/",
+              "format": "glb",
+              "bytes": 4710016,
+              "triangles": 493785,
+              "materials": [
+                {
+                  "match": "mirror_blinn",
+                  "baseColor": [
+                    1,
+                    0.72,
+                    0.25
+                  ],
+                  "metallic": 0.6,
+                  "roughness": 0.3
+                },
+                {
+                  "match": "omnimirror",
+                  "baseColor": [
+                    0.85,
+                    0.85,
+                    0.88
+                  ],
+                  "metallic": 1,
+                  "roughness": 0.2
+                },
+                {
+                  "match": "shld_silv",
+                  "baseColor": [
+                    0.78,
+                    0.78,
+                    0.8
+                  ],
+                  "metallic": 0.9,
+                  "roughness": 0.3,
+                  "doubleSided": true
+                },
+                {
+                  "match": "shld_pink",
+                  "baseColor": [
+                    0.66,
+                    0.55,
+                    0.6
+                  ],
+                  "metallic": 0.7,
+                  "roughness": 0.3,
+                  "doubleSided": true
+                },
+                {
+                  "match": "pinkmli",
+                  "baseColor": [
+                    0.58,
+                    0.42,
+                    0.48
+                  ],
+                  "metallic": 0.4,
+                  "roughness": 0.45
+                },
+                {
+                  "match": "pmli",
+                  "baseColor": [
+                    0.58,
+                    0.42,
+                    0.48
+                  ],
+                  "metallic": 0.4,
+                  "roughness": 0.45
+                },
+                {
+                  "match": "pnkmli",
+                  "baseColor": [
+                    0.58,
+                    0.42,
+                    0.48
+                  ],
+                  "metallic": 0.4,
+                  "roughness": 0.45
+                },
+                {
+                  "match": "silver_mli",
+                  "baseColor": [
+                    0.6,
+                    0.6,
+                    0.64
+                  ],
+                  "metallic": 0.7,
+                  "roughness": 0.4
+                },
+                {
+                  "match": "silvermli",
+                  "baseColor": [
+                    0.6,
+                    0.6,
+                    0.64
+                  ],
+                  "metallic": 0.7,
+                  "roughness": 0.4
+                },
+                {
+                  "match": "smli",
+                  "baseColor": [
+                    0.6,
+                    0.6,
+                    0.64
+                  ],
+                  "metallic": 0.7,
+                  "roughness": 0.4
+                },
+                {
+                  "match": "alu",
+                  "baseColor": [
+                    0.55,
+                    0.6,
+                    0.66
+                  ],
+                  "metallic": 0.8,
+                  "roughness": 0.35
+                },
+                {
+                  "match": "sa_edge_gold",
+                  "baseColor": [
+                    0.9,
+                    0.7,
+                    0.3
+                  ],
+                  "metallic": 0.6,
+                  "roughness": 0.35
+                }
+              ],
+              "rotation": [
+                15,
+                -90,
+                0
+              ]
+            },
+            "rungs": [
+              {
+                "quality": "thumb",
+                "url": "/assets/nasa-jwst/thumb.glb",
+                "bytes": 419604,
+                "triangles": 92879,
+                "textureSize": null,
+                "draco": true
+              },
+              {
+                "quality": "low",
+                "url": "/assets/nasa-jwst/low.glb",
+                "bytes": 679492,
+                "triangles": 180010,
+                "textureSize": null,
+                "draco": true
+              },
+              {
+                "quality": "medium",
+                "url": "/assets/nasa-jwst/medium.glb",
+                "bytes": 943440,
+                "triangles": 297596,
+                "textureSize": null,
+                "draco": true
+              },
+              {
+                "quality": "high",
+                "url": "/assets/nasa-jwst/high.glb",
+                "bytes": 1185724,
+                "triangles": 493785,
+                "textureSize": null,
+                "draco": true
+              }
+            ],
+            "scale": 1,
+            "bounds": {
+              "width": 14.773,
+              "height": 12.362,
+              "depth": 26.08
+            },
+            "credit": {
+              "author": "NASA / Goddard Space Flight Center",
+              "license": {
+                "name": "Public domain (NASA)",
+                "url": "https://www.nasa.gov/nasa-brand-center/images-and-media/"
+              },
+              "sourcePage": "https://science.nasa.gov/3d-resources/james-webb-space-telescope-a/"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-09T00:00:00Z",
+              "note": "NASA's 3D model 'James Webb Space Telescope (A)' from the NASA 3D Resources library (glb, draco-compressed, 1,600 meshes, no textures, 4.7 MB; NASA media are not copyrighted). The file measures 27.4 by 12.0 by 14.8 units; the real sunshield is 21.2 by 14.2 m and the whole telescope about 21 m long, so the file is taken as metres and the mirror and sunshield are the right order of size. Shown deployed, under a night sky with the southern stars of the first deep field's patch of sky overhead. Downloaded 2026-10-10."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "nasa",
+            "representation": "reconstruction"
+          }
+        ]
+      },
+      "display": {
+        "scale": 1,
+        "baseHeight": 3,
+        "back": "none",
+        "yaw": null,
+        "fallbackWidthM": 1.2,
+        "spin": 120
+      },
+      "tags": [
+        "space",
+        "NASA",
+        "telescope",
+        "astronomy",
+        "landmark"
+      ],
+      "pageviews": null,
+      "importance": 0.9,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-09T00:00:00Z",
+      "updatedAt": "2026-10-11T16:09:09.792Z",
+      "landmark": {
+        "side": "east",
+        "distance": 90
+      }
+    },
+    {
+      "id": "wm-120346043",
+      "kind": "image",
+      "title": "Webb's First Deep Field",
+      "titleOriginal": null,
+      "altTitles": [],
+      "creators": [
+        {
+          "name": "NASA, ESA, CSA and the Space Telescope Science Institute",
+          "slug": null,
+          "wikidataQid": "Q112929016",
+          "wikipediaUrl": null,
+          "birthYear": null,
+          "deathYear": null,
+          "role": "observers"
+        }
+      ],
+      "date": {
+        "year": 2022,
+        "month": 7,
+        "day": 11,
+        "yearStart": null,
+        "yearEnd": null,
+        "label": "released 11 July 2022",
+        "precision": "year"
+      },
+      "madeIn": {
+        "name": "The second Lagrange point",
+        "region": null,
+        "country": null,
+        "point": null,
+        "wikidataQid": null
+      },
+      "location": {
+        "name": "Everywhere; the file is public",
+        "region": null,
+        "country": null,
+        "point": null,
+        "wikidataQid": null,
+        "institution": "Space Telescope Science Institute",
+        "inventoryNumber": null
+      },
+      "culture": null,
+      "movement": null,
+      "periodSlug": null,
+      "medium": "Composite of near-infrared exposures, 12.5 hours in all",
+      "materials": [],
+      "genre": [
+        "photograph",
+        "astronomy"
+      ],
+      "subjects": [
+        "galaxy cluster SMACS 0723",
+        "gravitational lensing",
+        "early universe",
+        "deep field"
+      ],
+      "physical": {
+        "widthCm": null,
+        "heightCm": null,
+        "depthCm": null,
+        "weightKg": null
+      },
+      "description": "The deepest picture of the universe anyone had taken, shown by the President of the United States on the evening of 11 July 2022, twelve and a half hours of infrared exposure on a patch of the southern sky the size of a grain of sand held at arm's length. Nearly everything in it is a galaxy. The cluster at the centre, SMACS 0723, is so massive that its gravity bends the space around it into a lens, smearing the galaxies behind into the arcs you can see curving round it, and bringing into view light that set out more than thirteen billion years ago, when the universe was a few hundred million years old. Hubble would have needed weeks for this. Stand close: the smallest red smudges are the oldest things ever photographed.",
+      "facts": [
+        "The cluster is 4.6 billion light-years away; the lensed arcs behind it are from the universe's first billion years.",
+        "The six-pointed spikes belong to the few stars in the field, in our own galaxy; they come from the mirror's hexagons and struts.",
+        "Thousands of galaxies in a patch of sky one could cover with a grain of sand; the whole sky holds some twenty million such patches.",
+        "Released a day early at the White House, then with four more pictures on 12 July: the Carina nebula, Stephan's Quintet, the Southern Ring and the spectrum of an exoplanet."
+      ],
+      "wikipediaUrl": "https://en.wikipedia.org/wiki/Webb%27s_First_Deep_Field",
+      "wikidataQid": "Q112929016",
+      "externalIds": {
+        "commons-curid": "120346043",
+        "commons-file": "Webb's First Deep Field.jpg"
+      },
+      "copyrighted": false,
+      "asset": {
+        "kind": "image",
+        "currentVersionId": "wm-120346043-v1",
+        "versions": [
+          {
+            "id": "wm-120346043-v1",
+            "original": {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Webb%27s_First_Deep_Field.jpg",
+              "width": 4537,
+              "height": 4630,
+              "bytes": 17227787,
+              "mime": "image/jpeg"
+            },
+            "rungs": [
+              {
+                "width": 1280,
+                "height": 1306,
+                "url": "/assets/wm-120346043/1280.jpg",
+                "bytes": 244201
+              },
+              {
+                "width": 3840,
+                "height": 3919,
+                "url": "/assets/wm-120346043/3840.jpg",
+                "bytes": 1923917
+              }
+            ],
+            "loop": null,
+            "credit": {
+              "author": "NASA, ESA, CSA, STScI",
+              "license": {
+                "name": "Public domain (NASA, ESA, CSA, STScI)",
+                "url": "https://webbtelescope.org/copyright"
+              },
+              "sourcePage": "https://commons.wikimedia.org/wiki/File:Webb%27s_First_Deep_Field.jpg"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-09T00:00:00Z",
+              "note": "The NIRCam composite of galaxy cluster SMACS 0723 released 11 and 12 July 2022, JPEG version on Commons (17 MB, 4537 by 4630), licensed PD-Webb (NASA, ESA, CSA, STScI material is free of copyright). Shown three times larger than a print, 4.5 m across, since the picture is the work."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "wikimedia-commons"
+          }
+        ]
+      },
+      "display": {
+        "scale": 5,
+        "baseHeight": 0.4,
+        "back": "mirror",
+        "yaw": null,
+        "fallbackWidthM": 1.2,
+        "sky": {
+          "radius": 12,
+          "stars": {
+            "year": 2022,
+            "latitude": -30,
+            "siderealHours": 7.4
+          }
+        }
+      },
+      "tags": [
+        "space",
+        "astronomy",
+        "galaxies",
+        "JWST",
+        "photograph"
+      ],
+      "pageviews": null,
+      "importance": 0.95,
+      "moderation": {
+        "status": "approved",
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "reason": null,
+        "flags": []
+      },
+      "source": "wikipedia-import",
+      "createdAt": "2026-10-09T00:00:00Z",
+      "updatedAt": "2026-10-11T02:22:22.663Z"
     }
   ]
 }

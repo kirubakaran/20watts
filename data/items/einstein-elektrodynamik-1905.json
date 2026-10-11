@@ -1,0 +1,94 @@
+{
+ "slug": "einstein-elektrodynamik-1905",
+ "title": "On the Electrodynamics of Moving Bodies",
+ "titleOriginal": "Zur Elektrodynamik bewegter Körper",
+ "kind": "image",
+ "flat": true,
+ "importance": 0.95,
+ "genre": [
+  "scientific paper",
+  "physics"
+ ],
+ "periodSlug": null,
+ "tags": [
+  "physics",
+  "relativity",
+  "Einstein",
+  "1905",
+  "paper",
+  "Annalen der Physik",
+  "Switzerland"
+ ],
+ "source": {
+  "type": "commons",
+  "fileTitle": "File:Einstein-Elektrodynamik.djvu",
+  "curid": 187922109,
+  "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Einstein-Elektrodynamik.djvu/page1-1920px-Einstein-Elektrodynamik.djvu.jpg",
+  "width": 1920,
+  "height": 3058,
+  "bytes": 897387,
+  "mime": "image/jpeg",
+  "licenseName": "Public domain",
+  "licenseUrl": null,
+  "author": "Albert Einstein; printed by Johann Ambrosius Barth, Leipzig; scan from the Internet Archive",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:Einstein-Elektrodynamik.djvu",
+  "notes": "Page 1 of the 31-page DjVu (Annalen der Physik, ser. 4, vol. 17, pp. 891-921), i.e. printed page 891 with the title '3. Zur Elektrodynamik bewegter Körper; von A. Einstein.' and the opening paragraphs. The DjVu original is 2500 x 3982 px per page (1156667 B, image/vnd.djvu); the URL above is MediaWiki's largest JPEG rendering of page 1 (1920 x 3058 px, 897387 B, HEAD 200 image/jpeg on both upload.wikimedia.org and thumb.wikimedia.org), since the pipeline wants a raster image, not a DjVu. Commons wikitext: {{Book}} with Permission = {{PD-old-auto-1923|deathyear=1955}}, Source = Internet Archive sim_annalen-der-physik_1905_17_5 (page 890), Wikisource = de:Zur Elektrodynamik bewegter Körper; extmetadata: LicenseShortName = 'Public domain', License = 'pd', Copyrighted = 'False', Artist = 'Albert Einstein', Credit = 'Internet Archive'; categories: PD-old-70-expired, CC-PD-Mark, Albert Einstein's works, Special relativity. Einstein died in 1955, so the text has been PD worldwide since 1 January 2026 (and in the US since 1923-era rules for a 1905 publication). Chosen over the E=mc2 paper because the museum already has a mass-energy equation item and this is the paper that founded special relativity; the drawback is the scan, from a serials microfilm: the page has a black border and a sliver of the facing page down the left edge, and is slightly skewed. The E=mc2 paper's first page (File:Einstein-Energieinhalt.djvu, curid 199522607, page 1 = p. 639 of Annalen der Physik vol. 18, {{PD-old-auto-1923|deathyear=1955}}, rendering https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Einstein-Energieinhalt.djvu/page1-1920px-Einstein-Energieinhalt.djvu.jpg, 1920 x 3189, 774285 B, HEAD 200) is a clean white scan from a different Internet Archive copy and would be the better-looking page if the parent prefers it. Physical size is an estimate: Annalen der Physik was a large octavo of roughly 23 x 14.5 cm; the figures below follow the scan's aspect."
+ },
+ "object": {
+  "year": 1905,
+  "month": 9,
+  "day": 26,
+  "yearStart": null,
+  "yearEnd": null,
+  "dateLabel": "received 30 June 1905, published 26 September 1905",
+  "madeIn": {
+   "name": "Bern",
+   "region": "Canton of Bern",
+   "country": "Switzerland",
+   "lat": 46.948,
+   "lon": 7.4474,
+   "wikidataQid": "Q70"
+  },
+  "location": {
+   "name": null,
+   "country": null,
+   "institution": "Printed journal (Annalen der Physik vol. 17, pp. 891-921); this scan is the Internet Archive's serials microfilm copy sim_annalen-der-physik_1905_17_5",
+   "inventoryNumber": null
+  },
+  "culture": null,
+  "medium": "Letterpress printing on paper, journal page",
+  "materials": [
+   "paper",
+   "printing ink"
+  ],
+  "subjects": [
+   "special relativity",
+   "electrodynamics",
+   "speed of light",
+   "simultaneity",
+   "Lorentz transformation",
+   "physics"
+  ],
+  "widthCm": 14.5,
+  "heightCm": 23.1,
+  "depthCm": null,
+  "weightKg": null,
+  "creator": {
+   "name": "Albert Einstein",
+   "role": "author",
+   "birthYear": 1879,
+   "deathYear": 1955,
+   "wikidataQid": "Q937"
+  },
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Annus_mirabilis_papers",
+  "wikidataQid": "Q3020388",
+  "description": "The first page of the paper in which a twenty-six-year-old patent clerk in Bern replaced Newton's absolute space and time. Einstein starts from an everyday puzzle: moving a magnet past a coil or the coil past the magnet gives the same current, yet the physics of the day described the two cases differently. From that he takes two assumptions, that the laws of physics are the same for every observer moving at constant speed and that light travels at the same speed for all of them, and works out the consequences in thirty pages: moving clocks run slow, moving rods shrink, events simultaneous for one observer are not for another, and nothing with mass reaches the speed of light. The paper cites no earlier work and thanks only his friend Michele Besso. It reached the Annalen der Physik on 30 June 1905 and appeared on 26 September; a three-page sequel in November added the equation later written as E = mc². The theory became known as special relativity when Einstein generalised it to gravity in 1915.",
+  "facts": [
+   "One of four papers Einstein published in 1905, his 'miracle year', alongside the photoelectric effect, Brownian motion and E = mc².",
+   "Written outside any university: Einstein was a 'technical expert, third class' at the Swiss patent office.",
+   "The word 'relativity' appears only as the 'principle of relativity'; Einstein did not name the theory.",
+   "The equations rediscovered Lorentz's transformations but gave them a wholly new meaning: there is no ether and no absolute rest."
+  ]
+ },
+ "scale": 5
+}

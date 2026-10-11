@@ -1,0 +1,109 @@
+{
+ "slug": "chacon-malaguena-1909",
+ "title": "Antonio Chacón sings a malagueña",
+ "titleOriginal": null,
+ "kind": "image",
+ "importance": 0.85,
+ "genre": [
+  "music"
+ ],
+ "tags": [
+  "music",
+  "Spain",
+  "flamenco",
+  "cante",
+  "recording",
+  "gramophone"
+ ],
+ "periodSlug": null,
+ "flat": false,
+ "baseHeight": null,
+ "source": {
+  "type": "commons",
+  "curid": 170712344,
+  "fileTitle": "File:Jerez de la Frontera - Busto del cantaor jerezano Antonio Chacón García.jpg",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Jerez_de_la_Frontera_-_Busto_del_cantaor_jerezano_Antonio_Chac%C3%B3n_Garc%C3%ADa.jpg",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:Jerez_de_la_Frontera_-_Busto_del_cantaor_jerezano_Antonio_Chacón_García.jpg",
+  "width": 1830,
+  "height": 2480,
+  "bytes": 845024,
+  "mime": "image/jpeg",
+  "licenseName": "CC0 1.0",
+  "licenseUrl": null,
+  "author": "Zarateman (photograph, 2025, CC0) of the bust of Antonio Chacón in Jerez de la Frontera",
+  "notes": "No public-domain portrait of Chacón from his lifetime is free to use, so this is the bust of him in his home town of Jerez de la Frontera, photographed in 2025 by Zarateman and released as CC0."
+ },
+ "object": {
+  "year": 1909,
+  "month": null,
+  "day": null,
+  "yearStart": 1908,
+  "yearEnd": 1909,
+  "dateLabel": "Spain, 1908-09",
+  "madeIn": {
+   "name": "Madrid",
+   "region": null,
+   "country": "Spain",
+   "lat": 40.4168,
+   "lon": -3.7038,
+   "wikidataQid": null
+  },
+  "location": {
+   "name": null,
+   "region": null,
+   "country": null,
+   "lat": null,
+   "lon": null,
+   "wikidataQid": null,
+   "institution": null,
+   "inventoryNumber": null
+  },
+  "creator": {
+   "name": "Antonio Chacón",
+   "role": "singer",
+   "birthYear": 1869,
+   "deathYear": 1929,
+   "wikidataQid": null
+  },
+  "culture": "Spanish (Andalusian, flamenco)",
+  "movement": null,
+  "medium": "Acoustic 78 rpm gramophone recording; malagueña, cante with guitar",
+  "materials": [
+   "shellac"
+  ],
+  "subjects": [
+   "music",
+   "flamenco",
+   "malagueñas",
+   "sound recording"
+  ],
+  "widthCm": null,
+  "heightCm": null,
+  "depthCm": null,
+  "weightKg": null,
+  "description": "The central figure of flamenco's classical age, from his first session. Antonio Chacón of Jerez was called Don Antonio in his lifetime, the only cantaor given the title; he had an unusually high, sweet voice, and used it to turn the malagueñas, granaínas and cartageneras into the long, ornamented forms that every singer since has measured themselves against. He sang in the Madrid cafés for thirty years and for the King, and his records, made in four blocks between 1908 and 1928, are the first great body of recorded cante. This malagueña is from the first of them, for Odeón, with the Granada guitarist Habichuela. The image is the bust of him in Jerez; no portrait of him is free to use.",
+  "facts": [
+   "He was the first flamenco singer to earn a fortune, and the first to lose one.",
+   "His pupil and rival was Manuel Vallejo; his guitarist in later years was Ramón Montoya.",
+   "The malagueña de Chacón is still a named style, sung as he set it."
+  ],
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Antonio_Chac%C3%B3n",
+  "wikidataQid": null
+ },
+ "fallbackWidthM": 0.6,
+ "audio": {
+  "type": "internet-archive",
+  "url": "https://archive.org/download/antonio-chacon-alli-fueron-mis-quebrantos/ANTONIO%20CHACON-ALLI%20FUERON%20MIS%20QUEBRANTOS-MALAGUE%C3%91A.mp3",
+  "bytes": 2030683,
+  "mime": "audio/mpeg",
+  "seconds": 126.6,
+  "start": 0,
+  "excerptSeconds": null,
+  "performers": "Antonio Chacón, voice, with Habichuela (José Carmona) on guitar; 'Allí fueron mis quebrantos', malagueña, from his first block of recordings for Odeón, 1908-09.",
+  "author": "Antonio Chacón, voice; Habichuela, guitar; Odeón, Spain, 1908-09",
+  "licenseName": "Public domain",
+  "licenseUrl": null,
+  "sourcePage": "https://archive.org/details/antonio-chacon-alli-fueron-mis-quebrantos",
+  "notes": "Public domain in the United States: the recording was first published before 1926 (Music Modernization Act schedule, as of 2026) and the composition before 1931 or is traditional. The cante is traditional. Transfer uploaded to the Internet Archive by the Centro Andaluz de Documentación del Flamenco; no licence field. Dating from José Manuel Martín Ballester, Don Antonio Chacón: obra grabada (2016)."
+ }
+}

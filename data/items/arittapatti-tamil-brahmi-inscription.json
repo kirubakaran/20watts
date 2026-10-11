@@ -1,0 +1,89 @@
+{
+ "slug": "arittapatti-tamil-brahmi-inscription",
+ "title": "Tamil-Brahmi inscription at Arittapatti",
+ "kind": "image",
+ "flat": false,
+ "importance": 0.7,
+ "genre": [
+  "inscription",
+  "epigraphy"
+ ],
+ "periodSlug": null,
+ "tags": [
+  "India",
+  "Tamil Nadu",
+  "Tamil",
+  "Tamil-Brahmi",
+  "writing",
+  "Jainism",
+  "Sangam period"
+ ],
+ "source": {
+  "type": "commons",
+  "fileTitle": "File:2nd century BCE Tamil Brahmi inscription Arittapatti Madurai India.jpg",
+  "curid": 73484131,
+  "url": "https://upload.wikimedia.org/wikipedia/commons/9/9a/2nd_century_BCE_Tamil_Brahmi_inscription_Arittapatti_Madurai_India.jpg",
+  "width": 4032,
+  "height": 3024,
+  "bytes": 3120251,
+  "mime": "image/jpeg",
+  "licenseName": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "author": "Ms Sarah Welch",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:2nd_century_BCE_Tamil_Brahmi_inscription_Arittapatti_Madurai_India.jpg",
+  "notes": "Photograph of the actual Tamil-Brahmi inscription cut into the rock at Arittapatti, 25 km north-east of Madurai, taken 1 September 2018. Commons API extmetadata: LicenseShortName = 'CC BY-SA 4.0', Artist = 'Ms Sarah Welch', Credit = 'Own work'; the uploader's description dates it to about the 2nd century BCE and cites K. V. Raman and Y. Subbarayalu (1971), 'A new Tamil-Brahmi Inscription in Arittapatti', Journal of Indian History XLIX, pp. 229-232. Substituted for the Mangulam inscription requested in the brief: the usable Mangulam photographs on Commons (page ids 20865429 and 46194395) are explicitly of a museum model at DakshinaChitra, Chennai, not the rock, and the two on-site Mangulam files by R.K.Lakshmi (51616516, 51616517) are described only as a hill and an ASI notice board. No Keeladi potsherd photograph with a verifiable free licence was found. Dimensions of the inscribed panel are not published, so they are left null. PJeganathan's CC BY-SA 4.0 frames (126060791, 126060794, 126060802) show the same hillside at higher resolution but are described as the temple and surroundings rather than the inscription."
+ },
+ "object": {
+  "year": -150,
+  "month": null,
+  "day": null,
+  "yearStart": -200,
+  "yearEnd": -100,
+  "dateLabel": "c. 2nd century BCE",
+  "madeIn": {
+   "name": "Arittapatti",
+   "region": "Tamil Nadu",
+   "country": "India",
+   "lat": 10.041,
+   "lon": 78.277,
+   "wikidataQid": "Q23743492"
+  },
+  "location": {
+   "name": "Arittapatti, Madurai district",
+   "country": "India",
+   "institution": "Archaeological Survey of India protected site (in situ)",
+   "inventoryNumber": null
+  },
+  "culture": "Tamil (Sangam period)",
+  "medium": "Letters chiselled into a granite rock shelter",
+  "materials": [
+   "granite"
+  ],
+  "subjects": [
+   "writing",
+   "Tamil-Brahmi script",
+   "Jain monks",
+   "donation"
+  ],
+  "widthCm": null,
+  "heightCm": null,
+  "depthCm": null,
+  "weightKg": null,
+  "creator": {
+   "name": "Unknown Tamil stone-cutter",
+   "role": "engraver",
+   "birthYear": null,
+   "deathYear": null,
+   "wikidataQid": null
+  },
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Tamil-Brahmi",
+  "wikidataQid": "Q3534666",
+  "description": "These letters, chiselled into the brow of a granite rock shelter at Arittapatti near Madurai, are among the earliest writing in the Tamil language. They are in Tamil-Brahmi (தமிழி, Tamili), a southern adaptation of the Brahmi script of Ashoka's edicts, with extra letters invented for the Tamil sounds ழ, ள, ற and ன that northern Brahmi could not write. Inscriptions like this one, found in dozens of caves around Madurai, record gifts of rock shelters and stone beds to Jain monks who lived on the hills during the Sangam age, and they name the donors, merchants, village headmen and the kings of the Pandya country. The script is dated to between the third century BCE and the first century CE, which makes it the oldest evidence of a written literary language in South India and the ancestor of the Tamil alphabet used today. Nearby Mangulam has the oldest group of all, naming the Pandya king Nedunchezhiyan, and the Keezhadi excavations have since found the same script scratched on everyday pottery.",
+  "facts": [
+   "Tamil-Brahmi adds letters for sounds that exist in Tamil but not in the Prakrit of the Ashokan edicts, which is how scholars identified it as Tamil in 1924.",
+   "The inscription was first published by K. V. Raman and Y. Subbarayalu in 1971.",
+   "The same hill has a Jain tirthankara relief with a much later Vatteluttu inscription and a 7th-century rock-cut Shiva temple.",
+   "Iravatham Mahadevan's corpus of 1966-2003 established the readings of nearly a hundred such cave inscriptions in Tamil Nadu."
+  ]
+ }
+}

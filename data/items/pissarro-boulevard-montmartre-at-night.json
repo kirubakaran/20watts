@@ -1,0 +1,108 @@
+{
+ "slug": "pissarro-boulevard-montmartre-at-night",
+ "title": "The Boulevard Montmartre at Night",
+ "titleOriginal": "Boulevard Montmartre, effet de nuit",
+ "kind": "image",
+ "flat": true,
+ "importance": 0.85,
+ "genre": [
+  "painting"
+ ],
+ "periodSlug": null,
+ "tags": [
+  "impressionism",
+  "Pissarro",
+  "Paris",
+  "boulevard",
+  "night",
+  "gaslight",
+  "France"
+ ],
+ "source": {
+  "type": "commons",
+  "fileTitle": "File:Camille Pissarro - Boulevard Montmartre at Night - c 1897 - National Gallery UK.jpg",
+  "curid": 92107171,
+  "url": "https://upload.wikimedia.org/wikipedia/commons/1/14/Camille_Pissarro_-_Boulevard_Montmartre_at_Night_-_c_1897_-_National_Gallery_UK.jpg",
+  "width": 6000,
+  "height": 4931,
+  "bytes": 20812084,
+  "mime": "image/jpeg",
+  "licenseName": "Public domain",
+  "licenseUrl": "https://commons.wikimedia.org/wiki/Template:PD-art",
+  "author": "Camille Pissarro; reproduction from the National Gallery, London, online collection",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:Camille_Pissarro_-_Boulevard_Montmartre_at_Night_-_c_1897_-_National_Gallery_UK.jpg",
+  "notes": "National Gallery London image, 6000 x 4931 px (20.8 MB), edge to edge, no frame. Commons licence template {{PD-Art|PD-old-100-expired}}; extmetadata LicenseShortName = 'Public domain', Copyrighted = 'False', Artist = 'Camille Pissarro', Credit = 'National Gallery London' (nationalgallery.org.uk/paintings/camille-pissarro-the-boulevard-montmartre-at-night), file page wikidata = Q3643151. A 15224 x 12533 px, 53 MB version of the same National Gallery image (curid 180429966) exists and is listed as an alternate; at 53.3 x 64.8 cm the 6000 px file is already about 92 px per cm. The night view was chosen over 'Boulevard Montmartre, matin de printemps' because that canvas (1897) is in the Israel Museum and its Commons copies are at most 3293 px; the night view is the National Gallery one the task names. Dimensions 53.3 x 64.8 cm from the National Gallery (Wikidata 53.5 x 65), NG4119, presented by the artist's son Lucien Pissarro in 1925. Painted in Paris from a room at the Grand Hôtel de Russie on the corner of the boulevard des Italiens and rue Drouot, February-April 1897 (Wikidata P1071 = Q90)."
+ },
+ "object": {
+  "year": 1897,
+  "month": null,
+  "day": null,
+  "yearStart": null,
+  "yearEnd": null,
+  "dateLabel": "1897",
+  "madeIn": {
+   "name": "Paris",
+   "region": "Île-de-France",
+   "country": "France",
+   "lat": 48.85667,
+   "lon": 2.35222,
+   "wikidataQid": "Q90"
+  },
+  "location": {
+   "name": "National Gallery",
+   "country": "United Kingdom",
+   "institution": "National Gallery, London",
+   "inventoryNumber": "NG4119"
+  },
+  "culture": "French",
+  "movement": "Impressionism",
+  "medium": "Oil on canvas",
+  "materials": [
+   "oil paint",
+   "canvas"
+  ],
+  "subjects": [
+   "Paris boulevard",
+   "night",
+   "gas lamps",
+   "shop windows",
+   "carriages",
+   "rain-wet street",
+   "view from a window"
+  ],
+  "widthCm": 64.8,
+  "heightCm": 53.3,
+  "depthCm": null,
+  "weightKg": null,
+  "creator": {
+   "name": "Camille Pissarro",
+   "role": "painter",
+   "birthYear": 1830,
+   "deathYear": 1903,
+   "wikidataQid": "Q134741"
+  },
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Boulevard_Montmartre_(Pissarro_series)",
+  "wikidataQid": "Q3643151",
+  "description": "The boulevard Montmartre seen from a hotel window at night, the wet roadway catching the glow of gas lamps, cab lanterns and lit shop windows, which run off in two converging rows of yellow and white dabs under a dark blue sky. Nothing is drawn: the carriages, the crowd on the pavements and the lamps are all touches of colour on a blue-grey ground. Pissarro, the oldest of the Impressionists and the only one to show at all eight of their exhibitions, took a room at the Grand Hôtel de Russie in February 1897, when an eye infection kept him indoors, and painted the boulevard fourteen times in two months, in morning mist, in sun, in rain, during Mardi Gras and here after dark. It is the only night scene of the series. The picture was not exhibited in his lifetime; his son Lucien gave it to the National Gallery in 1925.",
+  "facts": [
+   "One of fourteen views of the boulevard Montmartre painted from the same window between February and April 1897.",
+   "The only night view in the series, and never exhibited during Pissarro's life.",
+   "Pissarro showed at all eight Impressionist exhibitions from 1874 to 1886, the only painter to do so.",
+   "Presented to the National Gallery, London, by the painter's son Lucien Pissarro in 1925."
+  ]
+ },
+ "alternates": [
+  {
+   "fileTitle": "File:Pissarro - The Boulevard Montmartre at Night (1897).jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Pissarro_-_The_Boulevard_Montmartre_at_Night_%281897%29.jpg",
+   "licenseName": "Public domain",
+   "width": 15224,
+   "height": 12533,
+   "bytes": 53205179,
+   "mime": "image/jpeg",
+   "author": "Camille Pissarro; reproduction from the National Gallery, London",
+   "sourcePage": "https://commons.wikimedia.org/wiki/File:Pissarro_-_The_Boulevard_Montmartre_at_Night_(1897).jpg",
+   "notes": "The same National Gallery image at 15224 x 12533 px, 53 MB."
+  }
+ ]
+}

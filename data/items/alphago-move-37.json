@@ -1,0 +1,89 @@
+{
+ "slug": "alphago-move-37",
+ "title": "AlphaGo, move 37",
+ "kind": "sim",
+ "importance": 0.9,
+ "genre": [
+  "computing"
+ ],
+ "tags": [
+  "go",
+  "artificial intelligence",
+  "game",
+  "AlphaGo",
+  "simulation"
+ ],
+ "baseHeight": 0.3,
+ "source": {
+  "type": "procedural",
+  "program": "go",
+  "params": {
+   "moves": "pddpcdqpopoqnqpqcnfqmpqnicdjpoqocpcqbqcobpbodobndqepdrcmjpcgedqfqepfndpiojoinjmhgpgqdndmfohphoeoenfnemelfmgnflgoekdkdlclehdipjqirfrgkdhnomrerdsffigkhminhlkokpgcdfidjcgedgcfchbhdhbihdhegdfdhcfeecghfcgiiihkikilimijjljjifkmklljlklolikjcicjmjnrmrlqlpmqnplrlmkhhgqcqdrcpcsdggcebdqbhijghjobpbpanbdeeegjhhejnfmfmerkfhelnhnglglhmgogkgnijhnakimijincmbodmcockrmsioipjojnirhrqlrlqmrmaobmlnknmobeaeafadmalaoaddbglbpnonercrfpiqhqqjrjks",
+   "pause": 37,
+   "note": "Move 37: the shoulder hit",
+   "secondsPerMove": 1.1,
+   "size": 1.9
+  },
+  "bounds": {
+   "width": 1.9,
+   "height": 2.1,
+   "depth": 0.1
+  },
+  "licenseName": "CC0 1.0",
+  "author": "20watts",
+  "notes": "Run live by src/sims/go.ts: the record of game 2 of the Google DeepMind Challenge Match (Seoul, 10 March 2016), AlphaGo Black, Lee Sedol White, B+Resign after 211 moves, replayed on a demonstration board with captures, dwelling on move 37. The game record itself is a fact, not a work; the moves were checked against three SGF copies (A. E. Brouwer's go archive, DeepMind's commented SGF, Go Game Guru) and Wikipedia's diagrams. The program is the museum's own, CC0."
+ },
+ "object": {
+  "year": 2016,
+  "month": 3,
+  "day": 10,
+  "dateLabel": "10 March 2016",
+  "yearStart": null,
+  "yearEnd": null,
+  "madeIn": {
+   "name": "Seoul",
+   "region": null,
+   "country": "South Korea",
+   "lat": 37.5665,
+   "lon": 126.978,
+   "wikidataQid": "Q8684"
+  },
+  "location": {
+   "name": "Everywhere it is computed",
+   "country": null,
+   "institution": null
+  },
+  "culture": null,
+  "medium": "A game of Go, replayed live; the record of the game",
+  "materials": [],
+  "subjects": [
+   "Go",
+   "artificial intelligence",
+   "deep learning",
+   "AlphaGo",
+   "Lee Sedol"
+  ],
+  "weightKg": null,
+  "widthCm": null,
+  "heightCm": null,
+  "depthCm": null,
+  "creator": {
+   "name": "AlphaGo (DeepMind) and Lee Sedol",
+   "role": "players",
+   "birthYear": null,
+   "deathYear": null,
+   "wikidataQid": "Q22044606"
+  },
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/AlphaGo_versus_Lee_Sedol",
+  "wikidataQid": "Q22924103",
+  "description": "Go had been the game computers could not play. It has more possible positions than there are atoms in the universe, and the strength of a move is a matter of shape and feel that the best players could not put into rules. In March 2016 in Seoul, DeepMind's AlphaGo, a program that had learnt from thirty million human positions and then from millions of games against itself, played Lee Sedol, eighteen times a world champion, for a million dollars. In the second game, at move 37, it put a black stone on the fifth line at P10, a shoulder hit that no professional would play: the commentators thought it was a mistake, Lee left the room for a quarter of an hour, and the program had reckoned the odds of a human choosing it at one in ten thousand. It won the game, and the match 4 to 1.\n\nThe board here is playing the game through as you watch, stone by stone with the captures, as the demonstration boards in the commentary rooms showed it, and pauses at the move.",
+  "facts": [
+   "Lee Sedol said afterwards: \"I thought AlphaGo was based on probability calculation and that it was merely a machine. But when I saw this move, I changed my mind. Surely, AlphaGo is creative.\"",
+   "Fan Hui, the European champion who had lost to AlphaGo in secret the autumn before, said of move 37: \"It's not a human move. I've never seen a human play this move. So beautiful.\"",
+   "Lee won game 4 with a move of his own, the wedge at move 78, that AlphaGo had thought as unlikely as its own move 37.",
+   "The next year AlphaGo Zero learnt the game from nothing but the rules, in three days, and beat the version that played Lee 100 games to 0."
+  ]
+ },
+ "flat": false,
+ "periodSlug": null
+}

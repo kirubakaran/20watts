@@ -1,0 +1,103 @@
+{
+ "slug": "iphone-2007",
+ "title": "iPhone",
+ "titleOriginal": null,
+ "kind": "model",
+ "importance": 0.9,
+ "genre": [
+  "device",
+  "smartphone"
+ ],
+ "tags": [
+  "apple",
+  "smartphone",
+  "reconstruction"
+ ],
+ "periodSlug": "contemporary",
+ "flat": false,
+ "baseHeight": null,
+ "source": {
+  "type": "sketchfab",
+  "curid": "485c51878bc7449e81379a863ec862f5",
+  "fileTitle": null,
+  "url": "https://sketchfab.com/3d-models/iphone-1st-generation-485c51878bc7449e81379a863ec862f5",
+  "sourcePage": "https://sketchfab.com/3d-models/iphone-1st-generation-485c51878bc7449e81379a863ec862f5",
+  "width": null,
+  "height": null,
+  "bytes": null,
+  "mime": null,
+  "licenseName": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "author": "skjoldbroder (Sketchfab user skjoldbroder)",
+  "notes": "Artist-made CC BY 4.0 model by skjoldbroder on Sketchfab (uid 485c51878bc7449e81379a863ec862f5); not a scan. Download the glTF zip by hand into data/originals/sf-485c51878bc7449e81379a863ec862f5/ and run the pipeline."
+ },
+ "object": {
+  "year": 2007,
+  "month": 6,
+  "day": 29,
+  "yearStart": 2007,
+  "yearEnd": 2008,
+  "dateLabel": "2007",
+  "madeIn": {
+   "name": "Cupertino, California (designed; assembled by Foxconn in Shenzhen, China)",
+   "region": "California",
+   "country": "United States",
+   "lat": 37.3175,
+   "lon": -122.0419,
+   "wikidataQid": "Q189471"
+  },
+  "location": {
+   "name": null,
+   "region": null,
+   "country": null,
+   "lat": null,
+   "lon": null,
+   "wikidataQid": null,
+   "institution": null,
+   "inventoryNumber": null
+  },
+  "creator": {
+   "name": "Apple Inc.",
+   "role": "designer and developer",
+   "birthYear": null,
+   "deathYear": null,
+   "wikidataQid": "Q312"
+  },
+  "culture": "American",
+  "movement": null,
+  "medium": "Smartphone: aluminium and black polycarbonate body, 3.5-inch glass multi-touch display",
+  "materials": [
+   "aluminium",
+   "glass",
+   "polycarbonate",
+   "electronics"
+  ],
+  "subjects": [
+   "mobile phone",
+   "consumer electronics",
+   "industrial design",
+   "computing"
+  ],
+  "widthCm": 6.1,
+  "heightCm": 11.5,
+  "depthCm": 1.16,
+  "weightKg": 0.135,
+  "description": "Apple's first iPhone, unveiled by Steve Jobs at Macworld on 9 January 2007 and released that June, replaced the keypad of earlier phones with a 3.5-inch multi-touch screen and a single home button. Combining a phone, an iPod and an internet browser in one slab of aluminium and glass, it set the pattern that nearly every smartphone has followed since. This exhibit is a CC BY artist's model of the handset, not a scan of a particular example.",
+  "facts": [
+   "Announced on 9 January 2007 and released in the United States on 29 June 2007 at $499 for the 4 GB model and $599 for 8 GB.",
+   "It measures 115 x 61 x 11.6 mm and weighs 135 g, with a 3.5-inch 320x480 display and 128 MB of memory.",
+   "About 6.1 million units were sold before it was discontinued on 11 July 2008 in favour of the iPhone 3G."
+  ],
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/IPhone_(1st_generation)",
+  "wikidataQid": "Q621427"
+ },
+ "moderation": {
+  "status": "approved",
+  "reviewedBy": null,
+  "reviewedAt": "2026-10-09T00:00:00Z",
+  "reason": null,
+  "flags": []
+ },
+ "representation": "reconstruction",
+ "back": "none"
+}

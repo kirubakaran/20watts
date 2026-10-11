@@ -1,0 +1,93 @@
+{
+ "slug": "monet-water-lily-pond-1899",
+ "title": "The Water-Lily Pond",
+ "titleOriginal": "Le Bassin aux nymphéas",
+ "kind": "image",
+ "flat": true,
+ "importance": 0.9,
+ "genre": [
+  "painting"
+ ],
+ "periodSlug": null,
+ "tags": [
+  "impressionism",
+  "Monet",
+  "Giverny",
+  "water lilies",
+  "Japanese bridge",
+  "garden",
+  "France"
+ ],
+ "source": {
+  "type": "commons",
+  "fileTitle": "File:Claude Monet, The Water-Lily Pond (National Gallery, London).jpg",
+  "curid": 12695724,
+  "url": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Claude_Monet%2C_The_Water-Lily_Pond_%28National_Gallery%2C_London%29.jpg",
+  "width": 6000,
+  "height": 5821,
+  "bytes": 14837073,
+  "mime": "image/jpeg",
+  "licenseName": "Public domain",
+  "licenseUrl": "https://commons.wikimedia.org/wiki/Template:PD-art",
+  "author": "Claude Monet; reproduction from the National Gallery, London, online collection (via GalleriX)",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:Claude_Monet,_The_Water-Lily_Pond_(National_Gallery,_London).jpg",
+  "notes": "National Gallery London version (NG4240) chosen over the Musée d'Orsay 'Harmonie verte' (RF 2004) because the Orsay copies on Commons are 1300 px or smaller while this one is 6000 x 5821 px (14.8 MB), edge to edge with no frame. Commons licence template {{PD-Art|PD-old-auto-1923|deathyear=1926}}; extmetadata LicenseShortName = 'Public domain', Copyrighted = 'False', Artist = 'Claude Monet', Credit lists GalleriX, an unknown source and the National Gallery online collection page. The file page gives {{Size|cm|88.3|93.1}}, institution National Gallery London, accession NG4240, which agree with Wikidata Q26708368 (height 88.3, width 93.1 cm, collection Q180788 since 1927). Wikidata has no English Wikipedia sitelink for this canvas, so the series article is linked. Painted at Giverny (Wikidata Q165061)."
+ },
+ "object": {
+  "year": 1899,
+  "month": null,
+  "day": null,
+  "yearStart": null,
+  "yearEnd": null,
+  "dateLabel": "1899",
+  "madeIn": {
+   "name": "Giverny",
+   "region": "Normandy",
+   "country": "France",
+   "lat": 49.07611,
+   "lon": 1.52917,
+   "wikidataQid": "Q165061"
+  },
+  "location": {
+   "name": "National Gallery",
+   "country": "United Kingdom",
+   "institution": "National Gallery, London",
+   "inventoryNumber": "NG4240"
+  },
+  "culture": "French",
+  "movement": "Impressionism",
+  "medium": "Oil on canvas",
+  "materials": [
+   "oil paint",
+   "canvas"
+  ],
+  "subjects": [
+   "water lilies",
+   "pond",
+   "Japanese footbridge",
+   "willows",
+   "garden",
+   "Giverny"
+  ],
+  "widthCm": 93.1,
+  "heightCm": 88.3,
+  "depthCm": null,
+  "weightKg": null,
+  "creator": {
+   "name": "Claude Monet",
+   "role": "painter",
+   "birthYear": 1840,
+   "deathYear": 1926,
+   "wikidataQid": "Q296"
+  },
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Water_Lilies_(Monet_series)",
+  "wikidataQid": "Q26708368",
+  "description": "An arched wooden footbridge, painted pale green, crosses a pond so thick with lily pads that almost no open water shows. Willows and tall grasses close off the sky, so the whole square canvas is green, blue and pink, lit from above. This is the water garden Monet made at Giverny after 1893, diverting a stream to fill the pond and planting water lilies; he built the bridge in the Japanese style he knew from the prints he collected. In the summer of 1899 he painted the bridge from the same spot about twelve times, in a series he showed at Durand-Ruel's gallery in 1900, and this canvas, bought by the National Gallery in 1927, is one of them. It marks the point at which the garden became his only subject. Over the next quarter century the bridge disappeared from the pictures and the surface of the pond took over, ending in the panels of the Orangerie.",
+  "facts": [
+   "One of about twelve views of the Japanese bridge painted in the summer of 1899; others are in the Musée d'Orsay, the Metropolitan Museum and Philadelphia.",
+   "Monet dug the pond in 1893 on land across the road and railway from his house, and planted it with hybrid water lilies.",
+   "Almost square, 88.3 by 93.1 cm; bought by the National Gallery, London, in 1927."
+  ]
+ },
+ "alternates": []
+}

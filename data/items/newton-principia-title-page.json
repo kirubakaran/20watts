@@ -1,0 +1,96 @@
+{
+ "slug": "newton-principia-title-page",
+ "title": "Principia Mathematica",
+ "titleOriginal": "Philosophiæ Naturalis Principia Mathematica",
+ "kind": "image",
+ "flat": true,
+ "importance": 0.95,
+ "genre": [
+  "book",
+  "title page",
+  "physics",
+  "mathematics"
+ ],
+ "periodSlug": null,
+ "tags": [
+  "physics",
+  "mathematics",
+  "Newton",
+  "gravitation",
+  "book",
+  "England",
+  "Royal Society"
+ ],
+ "source": {
+  "type": "commons",
+  "fileTitle": "File:Newton - Principia (1687), title, p. 5, color.jpg",
+  "curid": 11812879,
+  "url": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Newton_-_Principia_%281687%29%2C_title%2C_p._5%2C_color.jpg",
+  "width": 2536,
+  "height": 2988,
+  "bytes": 1025407,
+  "mime": "image/jpeg",
+  "licenseName": "Public domain",
+  "licenseUrl": null,
+  "author": "Isaac Newton; printed by Joseph Streater, London; scan by the Service commun de la documentation, Université de Strasbourg",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:Newton_-_Principia_(1687),_title,_p._5,_color.jpg",
+  "notes": "Colour scan of the title page of the University of Strasbourg's copy of the 1687 first edition (docnum.u-strasbg.fr coll12,10982), cropped close to the page edges, with the library's shelf marks pencilled at the top right and bottom. Commons wikitext licence template: {{PD-old-100}}; extmetadata: LicenseShortName = 'Public domain', License = 'pd', Copyrighted = 'False', Artist = 'Isaac Newton', Credit = 'Service commun de la documentation de l'Université de Strasbourg', DateTimeOriginal = '1687'; categories: Author died more than 100 years ago public domain images, CC-PD-Mark, Philosophiae Naturalis Principia Mathematica (1687 edition), 1687 title pages. Alternative considered: File:Newton's Philosophiae Naturalis Principia Mathematica 1687 (presentation copy to James II).jpg, curid 82835976, 3047 x 4000 px, 3100449 B, {{PD-old-70-1923}}, a brighter Christie's auction photograph of the copy Newton presented to James II, but it shows the gutter and the book's fore-edge rather than a flat page. Physical size is an estimate: the first edition is a quarto with leaves of roughly 24 x 19 cm, and the figures below follow the scan's aspect (0.85, since the scan is trimmed to the page). HEAD 200, content-length 1025407, image/jpeg."
+ },
+ "object": {
+  "year": 1687,
+  "month": 7,
+  "day": 5,
+  "yearStart": null,
+  "yearEnd": null,
+  "dateLabel": "published 5 July 1687",
+  "madeIn": {
+   "name": "London",
+   "region": "England",
+   "country": "United Kingdom",
+   "lat": 51.5074,
+   "lon": -0.1278,
+   "wikidataQid": "Q84"
+  },
+  "location": {
+   "name": "Strasbourg",
+   "country": "France",
+   "institution": "Université de Strasbourg, Service commun de la documentation",
+   "inventoryNumber": "docnum coll12,10982"
+  },
+  "culture": null,
+  "medium": "Letterpress printing on paper, quarto",
+  "materials": [
+   "paper",
+   "printing ink"
+  ],
+  "subjects": [
+   "gravitation",
+   "laws of motion",
+   "mechanics",
+   "Royal Society",
+   "Samuel Pepys",
+   "Edmond Halley"
+  ],
+  "widthCm": 19.5,
+  "heightCm": 23,
+  "depthCm": null,
+  "weightKg": null,
+  "creator": {
+   "name": "Isaac Newton",
+   "role": "author",
+   "birthYear": 1642,
+   "deathYear": 1727,
+   "wikidataQid": "Q935"
+  },
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Philosophi%C3%A6_Naturalis_Principia_Mathematica",
+  "wikidataQid": "Q205921",
+  "description": "The title page of the book that gave physics its laws. Philosophiæ Naturalis Principia Mathematica, 'Mathematical Principles of Natural Philosophy', sets out Newton's three laws of motion and the law of universal gravitation, and uses them to derive Kepler's planetary orbits, the tides, the shape of the Earth, the precession of the equinoxes and the paths of comets, all from one inverse-square force. The page records how it came to be printed: 'Imprimatur, S. Pepys, Reg. Soc. Præses, Julii 5. 1686', the licence of the Royal Society under its president Samuel Pepys, and 'Jussu Societatis Regiæ ac Typis Josephi Streater', printed by Joseph Streater at the Society's order. In fact the Society had spent its money on a history of fishes, and the astronomer Edmond Halley, who had prodded Newton into writing the book, paid for the printing himself. Newton is named as Lucasian Professor at Trinity College, Cambridge. Only a few hundred copies were printed, in Latin, and they sold for about nine shillings.",
+  "facts": [
+   "Newton wrote the three books in about eighteen months, between 1685 and 1686.",
+   "Halley's prompt was a question in 1684: what orbit does an inverse-square force give? Newton answered 'an ellipse', and had already proved it.",
+   "Second and third editions followed in 1713 and 1726; Newton's own annotated first edition survives at Trinity College.",
+   "The first English translation, by Andrew Motte, appeared in 1729, two years after Newton's death."
+  ]
+ },
+ "scale": 4
+}

@@ -1,0 +1,88 @@
+{
+ "slug": "lilienthal-glider",
+ "title": "Lilienthal Normalsegelapparat",
+ "kind": "model",
+ "representation": "scan",
+ "baseHeight": 1.6,
+ "importance": 0.9,
+ "genre": [
+  "aircraft"
+ ],
+ "tags": [
+  "aviation",
+  "glider",
+  "replica",
+  "scan"
+ ],
+ "periodSlug": "modern",
+ "source": {
+  "type": "sketchfab",
+  "fileTitle": null,
+  "curid": "f70edeefea0a49e1ae6b7f5be21b626d",
+  "url": "https://sketchfab.com/3d-models/normal-segelapparat-von-otto-lilienthal-f70edeefea0a49e1ae6b7f5be21b626d",
+  "width": null,
+  "height": null,
+  "bytes": null,
+  "mime": "model/gltf+json",
+  "licenseName": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "author": "Deutsches Museum | Digital (Sketchfab user deutsches-museum)",
+  "sourcePage": "https://sketchfab.com/3d-models/normal-segelapparat-von-otto-lilienthal-f70edeefea0a49e1ae6b7f5be21b626d",
+  "notes": "Photogrammetry scan published by Deutsches Museum | Digital on 2021-03-01, CC BY-SA, of the museum's Normal-Segelapparat, inventory number 1976-817 (the Sketchfab description gives only the number and a link to digital.deutsches-museum.de/item/1976-817/, which was down for maintenance when checked). The Deutsches Museum's Flugwerft Schleissheim page says the glider on display is a replica built by the museum in 1958, after the original acquired from Lilienthal's estate in 1904 had decayed; the inventory year 1976 fits the replica, not the 1904 original, so the record calls it a replica. 282k faces, 15 meshes, nine 2048 px textures plus one 512 px, 57 MB unpacked; already in metres and Y-up, 6.89 m span by 4.80 m long by 3.07 m tall as scanned. Downloaded by the user on 2026-10-09. Dimensions and dates from the Deutsches Museum page and the English and German Wikipedia articles on the Normalsegelapparat."
+ },
+ "object": {
+  "year": 1894,
+  "month": null,
+  "day": null,
+  "yearStart": 1894,
+  "yearEnd": 1896,
+  "dateLabel": "1894 (replica built 1958)",
+  "madeIn": {
+   "name": "Berlin-Lichterfelde (Maschinenfabrik Otto Lilienthal)",
+   "region": "Berlin",
+   "country": "Germany",
+   "lat": 52.4333,
+   "lon": 13.3167,
+   "wikidataQid": "Q64"
+  },
+  "location": {
+   "name": "Oberschleißheim",
+   "country": "Germany",
+   "institution": "Deutsches Museum, Flugwerft Schleißheim",
+   "inventoryNumber": "1976-817"
+  },
+  "culture": "German",
+  "medium": "Hang glider: willow and bamboo frame covered with waxed cotton, folding wings",
+  "materials": [
+   "willow",
+   "bamboo",
+   "cotton",
+   "steel wire"
+  ],
+  "subjects": [
+   "aviation",
+   "glider",
+   "flight",
+   "Otto Lilienthal"
+  ],
+  "widthCm": 670,
+  "heightCm": null,
+  "depthCm": 530,
+  "weightKg": 20,
+  "creator": {
+   "name": "Otto Lilienthal",
+   "role": "designer and pilot",
+   "birthYear": 1848,
+   "deathYear": 1896,
+   "wikidataQid": "Q57162"
+  },
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Lilienthal_Normalsegelapparat",
+  "wikidataQid": null,
+  "description": "The first aircraft ever produced in series and sold: Otto Lilienthal's 'normal soaring apparatus' of 1894, a hang glider of willow, bamboo and waxed cotton weighing 20 kg, which he flew from an artificial hill he built in Berlin-Lichterfelde and from the Gollenberg near Stölln. Lilienthal made some two thousand glides in his machines, the first repeated, controlled flights by a human being, and sold at least nine of this model for 500 marks each. He died on 10 August 1896, the day after a crash in one. This is a scan of the Deutsches Museum's replica, built by the museum in 1958 after the original from Lilienthal's estate had decayed.",
+  "facts": [
+   "The Wright brothers began with Lilienthal's tables of lift; the 1903 Flyer in the next row is where his line of work led.",
+   "Buyers of the production glider included Nikolai Zhukovsky in Moscow and the publisher William Randolph Hearst; originals survive in London, Washington and Moscow.",
+   "The pilot hung by the forearms in the frame and steered by swinging the body; the wings fold for transport, and a bow at the front cushioned crashes."
+  ]
+ }
+}

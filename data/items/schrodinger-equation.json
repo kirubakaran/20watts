@@ -1,0 +1,87 @@
+{
+ "slug": "schrodinger-equation",
+ "title": "The Schrödinger equation",
+ "titleOriginal": null,
+ "kind": "image",
+ "importance": 0.9,
+ "genre": [
+  "equation"
+ ],
+ "tags": [
+  "equation",
+  "science",
+  "mathematics"
+ ],
+ "periodSlug": null,
+ "flat": true,
+ "baseHeight": null,
+ "source": {
+  "type": "typeset",
+  "curid": null,
+  "fileTitle": null,
+  "url": "data/originals/eq-schrodinger-equation/equation.svg",
+  "sourcePage": null,
+  "width": 2560,
+  "height": 2176,
+  "bytes": 6447,
+  "mime": "image/svg+xml",
+  "licenseName": "CC0 1.0",
+  "licenseUrl": null,
+  "author": "20watts",
+  "notes": "Typeset by 20watts from the TeX in the record with MathJax, with a figure drawn for this museum; the rendering is CC0, the equation itself is not subject to copyright.",
+  "tex": "i\\hbar\\,\\frac{\\partial}{\\partial t}\\Psi = \\hat{H}\\Psi",
+  "figure": "data/figures/schrodinger-equation.svg"
+ },
+ "object": {
+  "year": 1926,
+  "month": 6,
+  "day": 21,
+  "yearStart": 1926,
+  "yearEnd": 1926,
+  "dateLabel": "1926 (Quantisierung als Eigenwertproblem)",
+  "madeIn": {
+   "name": "Zürich",
+   "region": null,
+   "country": "Switzerland",
+   "lat": 47.3769,
+   "lon": 8.5417,
+   "wikidataQid": "Q72"
+  },
+  "location": {
+   "name": null,
+   "region": null,
+   "country": null,
+   "lat": null,
+   "lon": null,
+   "wikidataQid": null,
+   "institution": null,
+   "inventoryNumber": null
+  },
+  "creator": {
+   "name": "Erwin Schrödinger",
+   "role": "author",
+   "birthYear": 1887,
+   "deathYear": 1961,
+   "wikidataQid": "Q9130"
+  },
+  "culture": null,
+  "movement": null,
+  "medium": "Equation, typeset",
+  "materials": [],
+  "subjects": [
+   "equation"
+  ],
+  "widthCm": 100,
+  "heightCm": 85,
+  "depthCm": null,
+  "weightKg": null,
+  "description": "How the wave function Ψ of a quantum system changes in time: the Hamiltonian, the system's energy, drives it, with Planck's constant setting the scale. Schrödinger, a professor at the University of Zürich, published wave mechanics in four papers in 1926; the time-dependent form shown here is in the fourth, received on 21 June. It is the equation of chemistry: the periodic table, the shapes of molecules and the behaviour of the electrons in the chips further along this lane all come out of it.",
+  "facts": [
+   "Schrödinger conceived the equation over Christmas 1925 at a villa in Arosa; the first paper reached the Annalen der Physik on 27 January 1926.",
+   "Max Born showed the same year that |Ψ|² is a probability, the reading Schrödinger himself never liked.",
+   "Schrödinger shared the 1933 Nobel Prize in Physics with Paul Dirac; his cat, the thought experiment, came in 1935."
+  ],
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Schr%C3%B6dinger_equation",
+  "wikidataQid": "Q165498"
+ }
+}

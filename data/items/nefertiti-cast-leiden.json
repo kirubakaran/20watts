@@ -1,0 +1,86 @@
+{
+ "slug": "nefertiti-cast-leiden",
+ "title": "Bust of Nefertiti",
+ "kind": "model",
+ "representation": "scan",
+ "baseHeight": 1.1,
+ "back": "none",
+ "importance": 0.95,
+ "genre": [
+  "sculpture"
+ ],
+ "tags": [
+  "sculpture",
+  "scan"
+ ],
+ "periodSlug": null,
+ "flat": false,
+ "source": {
+  "type": "sketchfab",
+  "fileTitle": null,
+  "curid": "d148f771c3f44225b56cb7ce8d3c5ce6",
+  "url": "https://sketchfab.com/3d-models/d148f771c3f44225b56cb7ce8d3c5ce6",
+  "width": null,
+  "height": null,
+  "bytes": 162585076,
+  "mime": "model/gltf+json",
+  "licenseName": "CC0 1.0",
+  "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "author": "Rijksmuseum van Oudheden, Leiden (Sketchfab)",
+  "sourcePage": "https://sketchfab.com/3d-models/d148f771c3f44225b56cb7ce8d3c5ce6",
+  "unitScale": 0.001,
+  "notes": " The Leiden museum's scan of its cast, 4.5 million triangles, one 8192 px texture, in millimetres, with its square base. Raised 1.1 m so the face meets the eye; small enough to pick up in VR. The bust is 48 cm tall. Downloaded by the museum's owner from Sketchfab on 2026-10-10."
+ },
+ "object": {
+  "year": -1345,
+  "month": null,
+  "day": null,
+  "yearStart": null,
+  "yearEnd": null,
+  "dateLabel": "c. 1345 BCE; a cast of the Berlin bust",
+  "madeIn": {
+   "name": "Amarna",
+   "region": null,
+   "country": "Egypt",
+   "lat": 27.6467,
+   "lon": 30.9042,
+   "wikidataQid": null
+  },
+  "location": {
+   "name": "Leiden",
+   "country": "Netherlands",
+   "institution": "Rijksmuseum van Oudheden (cast); the original is in the Neues Museum, Berlin",
+   "inventoryNumber": null
+  },
+  "culture": "Egyptian (Amarna period)",
+  "medium": "Plaster cast of the painted limestone-and-stucco bust",
+  "materials": [
+   "plaster"
+  ],
+  "subjects": [
+   "queen",
+   "portrait",
+   "Amarna",
+   "Akhenaten"
+  ],
+  "widthCm": null,
+  "heightCm": 48,
+  "depthCm": null,
+  "weightKg": null,
+  "creator": {
+   "name": "Thutmose",
+   "role": "sculptor",
+   "birthYear": null,
+   "deathYear": null,
+   "wikidataQid": "Q927389"
+  },
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Nefertiti_Bust",
+  "wikidataQid": null,
+  "description": "The most famous face from the ancient world, found on 6 December 1912 on the floor of a sculptor's workshop at Amarna, the city Akhenaten built for his new religion of the sun. The workshop was Thutmose's; the bust was his model, kept on a shelf, for the queen's likeness in other works, which is why one eye was never inlaid. Painted limestone over a stucco core, 48 centimetres, 3,350 years old, and in Berlin since 1913, where Egypt has asked for it back since 1924. This is a cast of it, the Leiden museum's, released as public domain; the original has never been scanned under a free licence.",
+  "facts": [
+   "The missing left eye was never finished: no trace of inlay or glue has been found in the socket.",
+   "Ludwig Borchardt, who found it, wrote 'description is useless, must be seen' in his diary that night.",
+   "CT scans in 2009 found a second, differently carved face in the limestone under the stucco."
+  ]
+ }
+}

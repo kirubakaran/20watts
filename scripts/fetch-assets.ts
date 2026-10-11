@@ -28,7 +28,7 @@
  *    the source png or jpg is read from data/originals/<artwork id>/ and
  *    resized into a ladder of JPEG widths.
  *
- *  Models from a file, provenance "zenodo", "sketchfab" or "user-upload":
+ *  Models from a file, provenance "zenodo", "sketchfab", "nasa" or "user-upload":
  *    the source glb or glTF is read from data/originals/<artwork id>/. For
  *    "zenodo" (any direct glb URL) the pipeline downloads it there first;
  *    for the others put the unpacked download there by hand, and until it
@@ -56,7 +56,7 @@ import { readFile, writeFile, mkdir, stat } from "node:fs/promises";
 import path from "node:path";
 import { Document, NodeIO, Primitive, getBounds } from "@gltf-transform/core";
 import { ALL_EXTENSIONS } from "@gltf-transform/extensions";
-import { dedup, draco, mergeDocuments, prune, simplify, textureCompress, unpartition, weld } from "@gltf-transform/functions";
+import { dedup, draco, flatten, join, mergeDocuments, prune, simplify, textureCompress, unpartition, weld } from "@gltf-transform/functions";
 import { MeshoptSimplifier } from "meshoptimizer";
 import draco3d from "draco3dgltf";
 import sharp from "sharp";
@@ -65,7 +65,7 @@ import { execFile } from "node:child_process";
 import { promisify } from "node:util";
 
 const run = promisify(execFile);
-import type { Artwork, AudioVersion, Collection, ImageRung, ImageVersion, ModelRung, ModelVersion } from "../src/data/types";
+import type { MaterialFix, Artwork, AudioVersion, Collection, ImageRung, ImageVersion, ModelRung, ModelVersion } from "../src/data/types";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
 const COLLECTION = path.join(ROOT, "src/data/collection.json");
@@ -434,10 +434,22 @@ function eulerToQuat([xDeg, yDeg, zDeg]: [number, number, number]): [number, num
   ];
 }
 
-async function mergeParts(partFiles: string[], unitScale: number, dest: string, tier?: TierOptions, rotation?: [number, number, number], omit?: string[]) {
+async function mergeParts(partFiles: string[], unitScale: number, dest: string, tier?: TierOptions, rotation?: [number, number, number], omit?: string[], materials?: MaterialFix[]) {
   const nio = await io();
   const out = new Document();
   for (const file of partFiles) mergeDocuments(out, await nio.read(file));
+  if (materials?.length) {
+    for (const m of out.getRoot().listMaterials()) {
+      for (const fix of materials) {
+        if (!m.getName().includes(fix.match)) continue;
+        if (fix.baseColor) m.setBaseColorFactor([...fix.baseColor, m.getBaseColorFactor()[3] ?? 1]);
+        if (fix.metallic != null) m.setMetallicFactor(fix.metallic);
+        if (fix.roughness != null) m.setRoughnessFactor(fix.roughness);
+        if (fix.emissive) m.setEmissiveFactor(fix.emissive);
+        if (fix.doubleSided != null) m.setDoubleSided(fix.doubleSided);
+      }
+    }
+  }
   if (omit?.length) {
     for (const node of out.getRoot().listNodes()) {
       if (omit.some((o) => node.getName().includes(o))) node.setMesh(null);
@@ -505,6 +517,11 @@ async function mergeParts(partFiles: string[], unitScale: number, dest: string, 
     if (tier) {
       await MeshoptSimplifier.ready;
       await out.transform(
+        // A model of a thousand parts is a thousand draw calls: flatten the
+        // node tree and join primitives that share a material. The omit list
+        // was applied above, by node name, before the names go.
+        flatten(),
+        join({ keepNamed: false }),
         weld(),
         ...(tier.ratio < 1 ? [simplify({ simplifier: MeshoptSimplifier, ratio: tier.ratio, error: tier.error ?? 0.001 })] : []),
         textureCompress({ encoder: sharp, targetFormat: "webp", quality: 85, resize: [tier.textureSize, tier.textureSize] }),
@@ -595,7 +612,7 @@ async function buildLocalModel(artId: string, version: ModelVersion): Promise<bo
   let bounds = version.bounds;
   for (const quality of QUALITIES) {
     const file = `${quality}.glb`;
-    const r = await mergeParts([path.join(dir, src)], unitScale, path.join(OUT_DIR, artId, file), LOCAL_TIERS[quality], version.original.rotation, version.original.omit);
+    const r = await mergeParts([path.join(dir, src)], unitScale, path.join(OUT_DIR, artId, file), LOCAL_TIERS[quality], version.original.rotation, version.original.omit, version.original.materials);
     rungs.push({ quality, url: `/assets/${artId}/${file}`, bytes: r.bytes, triangles: r.triangles, ...(r.points != null ? { points: r.points } : {}), textureSize: r.textureSize, draco: r.points == null });
     bounds = r.bounds;
     console.log(`${artId}: ${quality} ${(r.bytes / 1024).toFixed(0)} KB, ${r.points != null ? `${r.points} points` : `${r.triangles} tris`}, ${r.textureSize ?? "no"} px textures`);
@@ -629,7 +646,7 @@ async function buildAsset(dir: string, asset: Artwork["asset"], art: Artwork): P
   } else {
     for (const version of asset.versions) {
       if (version.provenance === "smithsonian-3d") await fetchSmithsonianModel(dir, version);
-      else if (["zenodo", "sketchfab", "user-upload"].includes(version.provenance)) {
+      else if (["zenodo", "sketchfab", "user-upload", "nasa"].includes(version.provenance)) {
         if (!(await buildLocalModel(dir, version))) continue;
       } else continue;
       touched = true;

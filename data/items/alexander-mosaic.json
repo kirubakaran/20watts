@@ -1,0 +1,101 @@
+{
+ "slug": "alexander-mosaic",
+ "title": "Alexander Mosaic",
+ "titleOriginal": null,
+ "kind": "image",
+ "source": {
+  "type": "commons",
+  "fileTitle": "File:Alexander (Battle of Issus) Mosaic.jpg",
+  "curid": 23752160,
+  "url": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Alexander_%28Battle_of_Issus%29_Mosaic.jpg",
+  "width": 6000,
+  "height": 3730,
+  "bytes": 4345293,
+  "mime": "image/jpeg",
+  "licenseName": "Public domain",
+  "licenseUrl": "https://commons.wikimedia.org/wiki/Template:PD-art",
+  "author": "Unknown Roman mosaicist; reproduction credited to 'art database' (PD-Art)",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:Alexander_(Battle_of_Issus)_Mosaic.jpg",
+  "notes": "Flat frontal reproduction of the whole mosaic cropped to its border, 6000 px wide; licensed on Commons as public domain (PD-Art reproduction of a PD 2D work). Date and subject from en.wikipedia 'Alexander Mosaic'; dimensions 582 x 313 cm from it.wikipedia 'Battaglia di Isso (mosaico)' and de.wikipedia 'Alexandermosaik' (Wikidata Q841762 gives width 513 cm, which disagrees; the two Wikipedias agree on 582). Place of making: made for the floor of the House of the Faun, Pompeii (coordinates of the house from Wikidata Q1547308). Inventory number not verified, left null."
+ },
+ "object": {
+  "year": -110,
+  "yearStart": -120,
+  "yearEnd": -100,
+  "dateLabel": "c. 120–100 BC",
+  "madeIn": {
+   "name": "House of the Faun, Pompeii",
+   "region": "Campania",
+   "country": "Italy",
+   "lat": 40.75125,
+   "lon": 14.48458,
+   "wikidataQid": "Q1547308"
+  },
+  "location": {
+   "name": "Museo Archeologico Nazionale di Napoli",
+   "country": "Italy",
+   "institution": "National Archaeological Museum, Naples",
+   "inventoryNumber": null
+  },
+  "culture": "Roman",
+  "movement": "Hellenistic mosaic (Roman copy after a Hellenistic painting)",
+  "medium": "Floor mosaic, opus vermiculatum",
+  "materials": [
+   "stone tesserae",
+   "glass tesserae"
+  ],
+  "subjects": [
+   "Alexander the Great",
+   "Darius III",
+   "Battle of Issus",
+   "cavalry",
+   "chariot",
+   "horses"
+  ],
+  "widthCm": 582,
+  "heightCm": 313,
+  "depthCm": null,
+  "weightKg": null,
+  "creator": null,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Alexander_Mosaic",
+  "wikidataQid": "Q841762",
+  "description": "Roman floor mosaic from the House of the Faun at Pompeii, usually dated to about 120–100 BC and thought to copy a lost Hellenistic painting, perhaps by Philoxenus of Eretria. It shows Alexander the Great, bare-headed at the left, charging the Persian king Darius III, who turns in his chariot as his army breaks. Excavated in 1831 and moved to Naples in 1843, it is among the most detailed battle scenes to survive from antiquity. It shows the Battle of Issus, or possibly Gaugamela.",
+  "facts": [
+   "Discovered in 1831 in the House of the Faun, Pompeii, and transferred to Naples in September 1843.",
+   "Made of roughly one to one and a half million tesserae about 2 mm wide, laid in curving opus vermiculatum.",
+   "The scene depicts more than fifty figures; it is traditionally identified as the Battle of Issus (333 BC)."
+  ]
+ },
+ "alternatives": [
+  {
+   "fileTitle": "File:Battle of Issus mosaic - Museo Archeologico Nazionale - Naples 2013-05-16 16-25-06 BW.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/6/69/Battle_of_Issus_mosaic_-_Museo_Archeologico_Nazionale_-_Naples_2013-05-16_16-25-06_BW.jpg",
+   "licenseName": "Public domain",
+   "width": 3562,
+   "height": 2133,
+   "author": "Berthold Werner (self-photographed, released PD)",
+   "note": "Whole mosaic including its patterned border frame, photographed in the museum."
+  },
+  {
+   "fileTitle": "File:Battle of Issus mosaic (from Pompeii).jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Battle_of_Issus_mosaic_%28from_Pompeii%29.jpg",
+   "licenseName": "CC BY-SA 4.0",
+   "width": 4608,
+   "height": 2184,
+   "author": "Yair Haklai",
+   "note": "Museum photograph of the whole mosaic."
+  }
+ ],
+ "fallbackWidthM": 5.82,
+ "genre": [
+  "mosaic",
+  "history painting"
+ ],
+ "tags": [
+  "roman",
+  "pompeii",
+  "alexander"
+ ],
+ "periodSlug": "ancient-rome",
+ "importance": 0.95
+}

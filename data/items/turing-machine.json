@@ -1,0 +1,84 @@
+{
+ "title": "A Turing machine",
+ "kind": "sim",
+ "importance": 0.9,
+ "genre": [
+  "computing",
+  "mathematics"
+ ],
+ "tags": [
+  "computing",
+  "logic",
+  "mathematics",
+  "simulation"
+ ],
+ "baseHeight": 0.9,
+ "source": {
+  "type": "procedural",
+  "program": "turing",
+  "params": {
+   "stepsPerSecond": 2.5,
+   "cells": 24
+  },
+  "bounds": {
+   "width": 2.4,
+   "height": 1.2,
+   "depth": 0.05
+  },
+  "licenseName": "CC0 1.0",
+  "author": "20watts",
+  "notes": "Run live by src/sims/turing.ts: nine rules add one to a binary number on the tape, over and over, with the firing rule marked on the table. The machine is the museum's own, CC0; the idea is Turing's 1936 paper."
+ },
+ "object": {
+  "year": 1936,
+  "month": 11,
+  "dateLabel": "November 1936",
+  "madeIn": {
+   "name": "Cambridge",
+   "region": "England",
+   "country": "United Kingdom",
+   "lat": 52.205,
+   "lon": 0.119,
+   "wikidataQid": "Q350"
+  },
+  "location": {
+   "name": "Everywhere it is run",
+   "country": null,
+   "institution": null
+  },
+  "culture": null,
+  "medium": "A tape, a head and nine rules, run live",
+  "materials": [],
+  "subjects": [
+   "computation",
+   "logic",
+   "decidability"
+  ],
+  "creator": {
+   "name": "Alan Turing",
+   "role": "mathematician",
+   "birthYear": 1912,
+   "deathYear": 1954,
+   "wikidataQid": "Q7251"
+  },
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Turing_machine",
+  "wikidataQid": "Q163310",
+  "description": "A tape of cells, a head that reads the one beneath it, and a table of rules: in this state, seeing this symbol, write that, move left or right, go to that state. Alan Turing set this out in 1936, in On Computable Numbers, to pin down what it means to compute something at all. He showed that one such machine can imitate any other given its table on the tape, and that there are questions no machine can settle, whatever the table. Every computer since is this, at bottom.\n\nThe machine here is running as you watch, with nine rules. It walks to the end of the number on the tape, adds one in binary carrying to the left, walks home, and does it again; it will count for as long as the museum is open.",
+  "facts": [
+   "Turing's paper was written to answer Hilbert's Entscheidungsproblem: no, there is no procedure that decides every mathematical statement.",
+   "The universal machine, able to run any other, is the idea of software.",
+   "Alonzo Church reached the same limits the same year by a different road; the two are now one thesis.",
+   "The number on the tape is shown in decimal above it, and the rule that just fired is marked on the table."
+  ],
+  "day": null,
+  "yearStart": null,
+  "yearEnd": null,
+  "weightKg": null,
+  "widthCm": null,
+  "heightCm": null,
+  "depthCm": null
+ },
+ "slug": "turing-machine",
+ "flat": false,
+ "periodSlug": null
+}

@@ -1,0 +1,95 @@
+{
+ "slug": "cueva-de-las-manos",
+ "title": "Cueva de las Manos",
+ "titleOriginal": null,
+ "kind": "image",
+ "importance": 0.95,
+ "genre": [
+  "rock art",
+  "cave painting"
+ ],
+ "tags": [
+  "prehistoric",
+  "rock art",
+  "argentina",
+  "patagonia",
+  "hand stencil"
+ ],
+ "periodSlug": "mesolithic",
+ "flat": false,
+ "baseHeight": null,
+ "source": {
+  "type": "commons",
+  "curid": 265811,
+  "fileTitle": "File:SantaCruz-CuevaManos-P2210651b.jpg",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/f/f4/SantaCruz-CuevaManos-P2210651b.jpg",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:SantaCruz-CuevaManos-P2210651b.jpg",
+  "width": 1600,
+  "height": 1200,
+  "bytes": 1295940,
+  "mime": "image/jpeg",
+  "licenseName": "Public domain",
+  "licenseUrl": null,
+  "author": "Mariano Cecowski",
+  "notes": "Import from Wikimedia Commons; photograph released to the public domain by the photographer"
+ },
+ "object": {
+  "year": -7300,
+  "month": null,
+  "day": null,
+  "yearStart": -11000,
+  "yearEnd": -1000,
+  "dateLabel": "c. 7300 BCE",
+  "madeIn": {
+   "name": "Río Pinturas, Santa Cruz",
+   "region": "Patagonia",
+   "country": "Argentina",
+   "lat": -47.1553,
+   "lon": -70.6594,
+   "wikidataQid": "Q223385"
+  },
+  "location": {
+   "name": "Río Pinturas, Santa Cruz",
+   "region": "Patagonia",
+   "country": "Argentina",
+   "lat": -47.1553,
+   "lon": -70.6594,
+   "wikidataQid": "Q223385",
+   "institution": "Cueva de las Manos",
+   "inventoryNumber": null
+  },
+  "creator": {
+   "name": "Unknown Patagonian painters",
+   "role": "painter",
+   "birthYear": null,
+   "deathYear": null,
+   "wikidataQid": null
+  },
+  "culture": "Patagonian hunter-gatherers",
+  "movement": null,
+  "medium": "mineral pigment blown through bone pipes",
+  "materials": [
+   "iron oxide",
+   "kaolin",
+   "natrojarosite",
+   "manganese oxide"
+  ],
+  "subjects": [
+   "hands",
+   "hand stencils"
+  ],
+  "widthCm": null,
+  "heightCm": null,
+  "depthCm": null,
+  "weightKg": null,
+  "description": "Hundreds of hands stencilled in red, white, black and ochre on the wall of a cave above the Río Pinturas in Patagonia. The painters held a hand to the rock and blew pigment over it through a bone pipe; most are left hands, so the pipe was held in the right. Guanaco hunts and geometric patterns were painted around them over several thousand years.",
+  "facts": [
+   "The oldest layer has been dated to around 9,300 years ago.",
+   "Of about 830 hands, only 31 are right hands.",
+   "The cave was listed as a World Heritage Site in 1999."
+  ],
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Cueva_de_las_Manos",
+  "wikidataQid": "Q223385"
+ },
+ "fallbackWidthM": 2.2
+}

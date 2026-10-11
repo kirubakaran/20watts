@@ -1,0 +1,87 @@
+{
+ "slug": "newton-gravitation",
+ "title": "Newton's law of universal gravitation",
+ "titleOriginal": null,
+ "kind": "image",
+ "importance": 0.9,
+ "genre": [
+  "equation"
+ ],
+ "tags": [
+  "equation",
+  "science",
+  "mathematics"
+ ],
+ "periodSlug": null,
+ "flat": true,
+ "baseHeight": null,
+ "source": {
+  "type": "typeset",
+  "curid": null,
+  "fileTitle": null,
+  "url": "data/originals/eq-newton-gravitation/equation.svg",
+  "sourcePage": null,
+  "width": 2560,
+  "height": 2176,
+  "bytes": 5640,
+  "mime": "image/svg+xml",
+  "licenseName": "CC0 1.0",
+  "licenseUrl": null,
+  "author": "20watts",
+  "notes": "Typeset by 20watts from the TeX in the record with MathJax, with a figure drawn for this museum; the rendering is CC0, the equation itself is not subject to copyright.",
+  "tex": "F = G\\,\\frac{m_1 m_2}{r^2}",
+  "figure": "data/figures/newton-gravitation.svg"
+ },
+ "object": {
+  "year": 1687,
+  "month": 7,
+  "day": 5,
+  "yearStart": 1687,
+  "yearEnd": 1687,
+  "dateLabel": "5 July 1687 (Principia)",
+  "madeIn": {
+   "name": "Cambridge",
+   "region": "England",
+   "country": "United Kingdom",
+   "lat": 52.2053,
+   "lon": 0.1218,
+   "wikidataQid": "Q350"
+  },
+  "location": {
+   "name": null,
+   "region": null,
+   "country": null,
+   "lat": null,
+   "lon": null,
+   "wikidataQid": null,
+   "institution": null,
+   "inventoryNumber": null
+  },
+  "creator": {
+   "name": "Isaac Newton",
+   "role": "author",
+   "birthYear": 1642,
+   "deathYear": 1727,
+   "wikidataQid": "Q935"
+  },
+  "culture": null,
+  "movement": null,
+  "medium": "Equation, typeset",
+  "materials": [],
+  "subjects": [
+   "equation"
+  ],
+  "widthCm": 100,
+  "heightCm": 85,
+  "depthCm": null,
+  "weightKg": null,
+  "description": "Every mass attracts every other with a force proportional to the product of the masses and inversely proportional to the square of the distance between them. Newton set it out in the Principia, published in London on 5 July 1687, and showed that the same rule governs a falling apple, the Moon's orbit, the planets and the tides. It was the first law to hold for the whole universe at once, and it stood unchallenged for 228 years, until Einstein's field equations further along this lane.",
+  "facts": [
+   "Newton wrote the Principia in about eighteen months after Edmond Halley visited him in Cambridge in 1684 to ask what orbit an inverse-square force would produce.",
+   "The constant G was first measured in 1798, by Henry Cavendish, with a torsion balance in a shed; the symbol G came into use only in the 1890s.",
+   "Newton refused to explain what gravity is: 'Hypotheses non fingo', I frame no hypotheses, he wrote in the second edition."
+  ],
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Newton%27s_law_of_universal_gravitation",
+  "wikidataQid": "Q11412"
+ }
+}

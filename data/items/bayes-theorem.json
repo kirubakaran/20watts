@@ -1,0 +1,87 @@
+{
+ "slug": "bayes-theorem",
+ "title": "Bayes' theorem",
+ "titleOriginal": null,
+ "kind": "image",
+ "importance": 0.85,
+ "genre": [
+  "equation"
+ ],
+ "tags": [
+  "equation",
+  "science",
+  "mathematics"
+ ],
+ "periodSlug": null,
+ "flat": true,
+ "baseHeight": null,
+ "source": {
+  "type": "typeset",
+  "curid": null,
+  "fileTitle": null,
+  "url": "data/originals/eq-bayes-theorem/equation.svg",
+  "sourcePage": null,
+  "width": 2560,
+  "height": 2176,
+  "bytes": 5734,
+  "mime": "image/svg+xml",
+  "licenseName": "CC0 1.0",
+  "licenseUrl": null,
+  "author": "20watts",
+  "notes": "Typeset by 20watts from the TeX in the record with MathJax, with a figure drawn for this museum; the rendering is CC0, the equation itself is not subject to copyright.",
+  "tex": "P(A \\mid B) = \\frac{P(B \\mid A)\\,P(A)}{P(B)}",
+  "figure": "data/figures/bayes-theorem.svg"
+ },
+ "object": {
+  "year": 1763,
+  "month": 12,
+  "day": 23,
+  "yearStart": 1763,
+  "yearEnd": 1763,
+  "dateLabel": "1763 (read to the Royal Society 23 December 1763)",
+  "madeIn": {
+   "name": "Tunbridge Wells",
+   "region": "Kent",
+   "country": "United Kingdom",
+   "lat": 51.132,
+   "lon": 0.263,
+   "wikidataQid": null
+  },
+  "location": {
+   "name": null,
+   "region": null,
+   "country": null,
+   "lat": null,
+   "lon": null,
+   "wikidataQid": null,
+   "institution": null,
+   "inventoryNumber": null
+  },
+  "creator": {
+   "name": "Thomas Bayes",
+   "role": "author",
+   "birthYear": 1702,
+   "deathYear": 1761,
+   "wikidataQid": "Q208452"
+  },
+  "culture": null,
+  "movement": null,
+  "medium": "Equation, typeset",
+  "materials": [],
+  "subjects": [
+   "equation"
+  ],
+  "widthCm": 100,
+  "heightCm": 85,
+  "depthCm": null,
+  "weightKg": null,
+  "description": "How to update a belief when evidence arrives: the probability of a hypothesis given the data is the probability of the data given the hypothesis, times the prior, divided by the probability of the data. Thomas Bayes, a Presbyterian minister in Tunbridge Wells, worked it out and never published it; his friend Richard Price found the essay among his papers after his death and read it to the Royal Society on 23 December 1763. It is the equation every learning machine, and arguably every 20-watt brain, runs on.",
+  "facts": [
+   "Pierre-Simon Laplace rediscovered the rule independently in 1774 and gave it the general form used today.",
+   "Alan Turing's team at Bletchley Park used Bayesian reasoning to break Enigma; the bombe drums a few rows back are the hardware.",
+   "Bayes' original essay solved one problem: given the outcomes of some trials, what is the chance of success on the next?"
+  ],
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Bayes%27_theorem",
+  "wikidataQid": "Q182505"
+ }
+}

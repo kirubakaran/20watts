@@ -1,0 +1,61 @@
+{
+ "slug": "mozart-eine-kleine-nachtmusik",
+ "title": "Eine kleine Nachtmusik",
+ "kind": "image",
+ "flat": true,
+ "importance": 0.85,
+ "genre": ["music"],
+ "periodSlug": null,
+ "tags": ["music", "classical", "serenade"],
+ "source": {
+  "type": "commons",
+  "fileTitle": "File:Mozart - Eine kleine Nachtmusik K.525 autograph.png",
+  "curid": 178606096,
+  "url": "https://upload.wikimedia.org/wikipedia/commons/d/de/Mozart_-_Eine_kleine_Nachtmusik_K.525_autograph.png",
+  "width": 1045,
+  "height": 800,
+  "bytes": 527371,
+  "mime": "image/png",
+  "licenseName": "Public domain",
+  "licenseUrl": null,
+  "author": "Wolfgang Amadeus Mozart (autograph); scan via IMSLP",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:Mozart_-_Eine_kleine_Nachtmusik_K.525_autograph.png",
+  "notes": "First page of Mozart's autograph score of the Serenade in G, K. 525, headed 'Allegro' with the orchestral staves for two violins, viola, cello and bass. Commons API extmetadata: LicenseShortName 'Public domain'; Artist 'Wolfgang Amadeus Mozart'; Credit links the IMSLP scan of the autograph; ImageDescription 'First page from the manuscript of Eine kleine Nachtmusik, K. 525 by Mozart.'; DateTimeOriginal '10 August 1787'. The autograph is part of the former Prussian State Library collection now held at the Biblioteka Jagiellońska, Kraków."
+ },
+ "audio": {
+  "type": "commons",
+  "fileTitle": "File:Mozart - Eine kleine Nachtmusik - 1. Allegro.ogg",
+  "curid": 3536953,
+  "url": "https://upload.wikimedia.org/wikipedia/commons/2/24/Mozart_-_Eine_kleine_Nachtmusik_-_1._Allegro.ogg",
+  "bytes": 11470392,
+  "mime": "audio/ogg",
+  "seconds": 355.4,
+  "licenseName": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "author": "Advent Chamber Orchestra (Al Goldstein collection, Pandora Music repository, ibiblio.org)",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:Mozart_-_Eine_kleine_Nachtmusik_-_1._Allegro.ogg",
+  "performers": "The Advent Chamber Orchestra, Roxanna Pavel Goldstein, musical director; recorded in the 2005-06 season.",
+  "start": 0,
+  "excerptSeconds": 120,
+  "notes": "Commons API extmetadata: LicenseShortName 'CC BY-SA 2.0'; Artist 'Wolfgang Amadeus Mozart' (composer field); Credit 'The Al Goldstein collection in the Pandora Music repository at ibiblio.org.'; ImageDescription 'Selections from the season 05-06 of the Advent Chamber Orchestra, Roxanna Pavel Goldstein, Musical Director, Elias Goldstein, Managing Director.'; DateTimeOriginal 2005; Permission: EFF Open Audio License, treated as interchangeable with CC BY-SA 2.0. Attribution and share-alike required. Duration from API metadata: 355.41 s (first movement, Allegro)."
+ },
+ "object": {
+  "year": 1787, "month": 8, "day": 10, "yearStart": 1787, "yearEnd": 1787, "dateLabel": "10 August 1787 (date Mozart entered it in his own catalogue of works)",
+  "madeIn": {"name": "Vienna", "region": null, "country": "Austria", "lat": 48.2082, "lon": 16.3738, "wikidataQid": "Q1741"},
+  "location": {"name": "Kraków", "country": "Poland", "institution": "Biblioteka Jagiellońska (autograph, former Prussian State Library collection)", "inventoryNumber": null},
+  "culture": "Austrian",
+  "medium": "Serenade for strings; autograph score, ink on paper",
+  "materials": ["ink", "paper"],
+  "subjects": ["music", "classical", "serenade"],
+  "widthCm": null, "heightCm": null, "depthCm": null, "weightKg": null,
+  "creator": {"name": "Wolfgang Amadeus Mozart", "role": "composer", "birthYear": 1756, "deathYear": 1791, "wikidataQid": "Q254"},
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Eine_kleine_Nachtmusik",
+  "wikidataQid": null,
+  "description": "Mozart entered this serenade for strings in his personal catalogue on 10 August 1787 in Vienna, while he was in the middle of composing the opera Don Giovanni. He called it simply 'Eine kleine Nacht Musik', a little night music, meaning a short serenade of the kind played outdoors at evening entertainments. Nobody knows who commissioned it or when it was first played, and the work was not published until 1827, long after his death. Its opening fanfare, rising through a G major chord, has since become one of the most recognised phrases in Western music. The page shown is the first leaf of Mozart's own manuscript, written quickly and almost without corrections. The visitor hears the first movement, Allegro, in a recording by the Advent Chamber Orchestra from its 2005-06 season, released under a Creative Commons licence.",
+  "facts": [
+   "Mozart's catalogue lists five movements; the second, a minuet, is lost, so the serenade is almost always heard in four.",
+   "The manuscript was sold by Mozart's widow Constanze to the publisher Johann Anton André in 1799, and was first printed in 1827.",
+   "The title in Mozart's catalogue is 'Eine kleine Nacht Musik, bestehend in einem Allegro, Menuett und Trio, Romance, Menuett und Trio, und Finale'."
+  ]
+ }
+}

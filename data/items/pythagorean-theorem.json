@@ -1,0 +1,72 @@
+{
+ "slug": "pythagorean-theorem",
+ "title": "The Pythagorean theorem",
+ "kind": "image",
+ "flat": true,
+ "importance": 0.9,
+ "genre": [
+  "equation"
+ ],
+ "periodSlug": null,
+ "tags": [
+  "equation",
+  "science",
+  "mathematics"
+ ],
+ "source": {
+  "type": "typeset",
+  "tex": "a^2 + b^2 = c^2",
+  "licenseName": "CC0 1.0",
+  "author": "20watts",
+  "sourcePage": null,
+  "notes": "Typeset by 20watts from the TeX in the record with MathJax, with a figure drawn for this museum; the rendering is CC0, the equation itself is not subject to copyright.",
+  "figure": "data/figures/pythagorean-theorem.svg"
+ },
+ "object": {
+  "year": -300,
+  "month": null,
+  "day": null,
+  "yearStart": -1800,
+  "yearEnd": -300,
+  "dateLabel": "c. 300 BCE (Euclid, Elements I.47)",
+  "madeIn": {
+   "name": "Alexandria",
+   "region": null,
+   "country": "Egypt",
+   "lat": 31.2001,
+   "lon": 29.9187,
+   "wikidataQid": "Q87"
+  },
+  "location": {
+   "name": null,
+   "country": null,
+   "institution": null,
+   "inventoryNumber": null
+  },
+  "culture": null,
+  "medium": "Equation, typeset",
+  "materials": [],
+  "subjects": [
+   "equation"
+  ],
+  "widthCm": 100,
+  "heightCm": 85,
+  "depthCm": null,
+  "weightKg": null,
+  "creator": {
+   "name": "Euclid",
+   "role": "author of the Elements; the theorem is older",
+   "birthYear": null,
+   "deathYear": null,
+   "wikidataQid": "Q8747"
+  },
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Pythagorean_theorem",
+  "wikidataQid": "Q11518",
+  "description": "In a right triangle the square on the hypotenuse equals the squares on the other two sides. The relation was known to Babylonian scribes more than a thousand years before Pythagoras, and the proof that closes Book I of Euclid's Elements, written in Alexandria around 300 BCE, is the form in which the world learned it: Euclid's textbook stayed in use for over two thousand years. It is the first equation most people ever meet, and the one that turns geometry into arithmetic.",
+  "facts": [
+   "The Babylonian tablet Plimpton 322, from about 1800 BCE, lists whole-number triples such as 3, 4, 5 that satisfy the relation.",
+   "Pythagoras, who lived around 570 to 495 BCE, left no writings; the theorem was attached to his name by later Greek tradition.",
+   "Hundreds of proofs are known, including one published in 1876 by James Garfield, five years before he became president of the United States."
+  ]
+ }
+}

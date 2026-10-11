@@ -1,0 +1,99 @@
+{
+ "slug": "stonehenge",
+ "title": "Stonehenge",
+ "kind": "model",
+ "representation": "reconstruction",
+ "baseHeight": 0,
+ "threshold": 22,
+ "importance": 0.95,
+ "genre": [
+  "monument"
+ ],
+ "tags": [
+  "Neolithic",
+  "megalith",
+  "Britain",
+  "reconstruction",
+  "walk in"
+ ],
+ "periodSlug": "prehistoric",
+ "source": {
+  "type": "sketchfab",
+  "fileTitle": null,
+  "curid": "7e7febabef2045a68755cc39c8c7c91f",
+  "url": "https://sketchfab.com/3d-models/stonehenge-england-vr-7e7febabef2045a68755cc39c8c7c91f",
+  "width": null,
+  "height": null,
+  "bytes": null,
+  "mime": "model/gltf+json",
+  "licenseName": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "author": "Graphic solutions (Sketchfab user hermes3)",
+  "sourcePage": "https://sketchfab.com/3d-models/stonehenge-england-vr-7e7febabef2045a68755cc39c8c7c91f",
+  "omit": [
+   "Perimeter"
+  ],
+  "notes": "An artist's model of the monument as it stands today, with the surrounding land, by Sketchfab user hermes3 (Graphic solutions), CC BY 4.0; 352k faces, two 4096 px textures, 35 MB glTF. No open photogrammetry of the stones at walking detail exists: English Heritage does not permit drones over the stones and the open LiDAR landscapes are 1 m terrain. The file is 140 m across in metres with the trilithons about 7.3 m tall, which matches the real heights; the 'Perimeter' mesh, the surrounding land, is omitted so that only the 'Center' mesh, the stones and the ground among them, stands in the museum. Downloaded by the user on 2026-10-09. Dates, dimensions and facts from the English Wikipedia article 'Stonehenge'."
+ },
+ "object": {
+  "year": -2500,
+  "month": null,
+  "day": null,
+  "yearStart": -3000,
+  "yearEnd": -2000,
+  "dateLabel": "c. 2500 BCE (sarsen circle; the earthwork c. 3000 BCE)",
+  "madeIn": {
+   "name": "Salisbury Plain, Wiltshire",
+   "region": "Wiltshire",
+   "country": "United Kingdom",
+   "lat": 51.1789,
+   "lon": -1.8262,
+   "wikidataQid": "Q39671"
+  },
+  "location": {
+   "name": "Amesbury",
+   "country": "United Kingdom",
+   "institution": "English Heritage",
+   "inventoryNumber": null
+  },
+  "culture": "Neolithic Britain",
+  "medium": "Sarsen sandstone trilithons and circle, with bluestones from Wales, set in a circular earthwork",
+  "materials": [
+   "sarsen sandstone",
+   "bluestone (dolerite, rhyolite)"
+  ],
+  "subjects": [
+   "Neolithic",
+   "megalith",
+   "astronomy",
+   "solstice",
+   "monument"
+  ],
+  "widthCm": 3300,
+  "heightCm": 730,
+  "depthCm": 3300,
+  "weightKg": null,
+  "creator": {
+   "name": "Neolithic builders of Salisbury Plain",
+   "role": "builders",
+   "birthYear": null,
+   "deathYear": null,
+   "wikidataQid": null
+  },
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Stonehenge",
+  "wikidataQid": "Q39671",
+  "description": "Walk in among the stones. Around 2500 BCE, people with no metal, no wheel and no writing dragged sarsen blocks of up to 30 tonnes some 25 km across Salisbury Plain, shaped them with stone hammers, and raised them into a ring of thirty uprights capped by a continuous lintel, with five great trilithons in a horseshoe inside, all aligned so that the midsummer sun rises along its axis. The smaller bluestones had come 250 km from the hills of west Wales, centuries earlier. Nobody knows what the builders meant by it: a temple, a calendar, a place of the dead, a place of healing. This is an artist's model of the monument as it stands today, placed so you can walk through the circle; the fallen and missing stones are as they are. What stands here is a reconstruction, not a scan of the stones.",
+  "facts": [
+   "The largest trilithon stood 7.3 m above ground and weighed about 50 tonnes; the lintels are held by mortise-and-tenon joints, carpentry in stone.",
+   "The bluestones were quarried in the Preseli Hills of Pembrokeshire, and the giant Altar Stone, a 2024 study found, came from the far north-east of Scotland.",
+   "The whole monument was built and rebuilt over about 1,500 years, from the first ditch around 3000 BCE to the last rearrangement around 1600 BCE."
+  ]
+ },
+ "sky": {
+  "radius": 23,
+  "sunrise": {
+   "azimuth": 49.5
+  }
+ },
+ "yaw": 2.2777
+}

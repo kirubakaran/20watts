@@ -1,0 +1,87 @@
+{
+ "slug": "einstein-field-equations",
+ "title": "Einstein's field equations",
+ "titleOriginal": null,
+ "kind": "image",
+ "importance": 0.9,
+ "genre": [
+  "equation"
+ ],
+ "tags": [
+  "equation",
+  "science",
+  "mathematics"
+ ],
+ "periodSlug": null,
+ "flat": true,
+ "baseHeight": null,
+ "source": {
+  "type": "typeset",
+  "curid": null,
+  "fileTitle": null,
+  "url": "data/originals/eq-einstein-field-equations/equation.svg",
+  "sourcePage": null,
+  "width": 2560,
+  "height": 2176,
+  "bytes": 6745,
+  "mime": "image/svg+xml",
+  "licenseName": "CC0 1.0",
+  "licenseUrl": null,
+  "author": "20watts",
+  "notes": "Typeset by 20watts from the TeX in the record with MathJax, with a figure drawn for this museum; the rendering is CC0, the equation itself is not subject to copyright.",
+  "tex": "G_{\\mu\\nu} = \\frac{8\\pi G}{c^4}\\, T_{\\mu\\nu}",
+  "figure": "data/figures/einstein-field-equations.svg"
+ },
+ "object": {
+  "year": 1915,
+  "month": 11,
+  "day": 25,
+  "yearStart": 1915,
+  "yearEnd": 1915,
+  "dateLabel": "25 November 1915",
+  "madeIn": {
+   "name": "Berlin",
+   "region": null,
+   "country": "Germany",
+   "lat": 52.52,
+   "lon": 13.405,
+   "wikidataQid": "Q64"
+  },
+  "location": {
+   "name": null,
+   "region": null,
+   "country": null,
+   "lat": null,
+   "lon": null,
+   "wikidataQid": null,
+   "institution": null,
+   "inventoryNumber": null
+  },
+  "creator": {
+   "name": "Albert Einstein",
+   "role": "author",
+   "birthYear": 1879,
+   "deathYear": 1955,
+   "wikidataQid": "Q937"
+  },
+  "culture": null,
+  "movement": null,
+  "medium": "Equation, typeset",
+  "materials": [],
+  "subjects": [
+   "equation"
+  ],
+  "widthCm": 100,
+  "heightCm": 85,
+  "depthCm": null,
+  "weightKg": null,
+  "description": "Matter tells spacetime how to curve, and curved spacetime tells matter how to move. The left side is the geometry of spacetime, the right its content of matter and energy; the line stands for ten coupled equations. Einstein presented them to the Prussian Academy of Sciences in Berlin on 25 November 1915, after eight years of work and a final month of racing David Hilbert. They replaced Newton's law a few rows back, and they describe black holes, the expanding universe and the gravitational waves first heard a century later.",
+  "facts": [
+   "Karl Schwarzschild found the first exact solution, the one that describes a black hole, within weeks, while serving in the German army on the Russian front; he died in 1916.",
+   "The 1919 solar eclipse expeditions led by Arthur Eddington measured the bending of starlight the equations predict and made Einstein famous overnight.",
+   "In 1917 Einstein added a cosmological constant to keep the universe static; it was dropped when Hubble found the expansion, and brought back in 1998 for dark energy."
+  ],
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Einstein_field_equations",
+  "wikidataQid": "Q273711"
+ }
+}

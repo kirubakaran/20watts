@@ -1,0 +1,105 @@
+{
+ "slug": "manyalawi-sahi-al-jufun",
+ "title": "Yusuf al-Manyalawi sings 'Sahi al-jufun'",
+ "kind": "image",
+ "flat": false,
+ "fallbackWidthM": 0.7,
+ "importance": 0.85,
+ "genre": [
+  "music"
+ ],
+ "periodSlug": null,
+ "tags": [
+  "music",
+  "Egypt",
+  "Arab",
+  "Nahda",
+  "recording",
+  "gramophone"
+ ],
+ "source": {
+  "type": "user-upload",
+  "fileTitle": null,
+  "curid": null,
+  "url": "https://archive.org/details/78_sahil-guefoun-i_cheikh-youssef-el-menialawi-caire_gbia0299355a",
+  "width": null,
+  "height": null,
+  "bytes": null,
+  "mime": "image/jpeg",
+  "licenseName": "Public domain",
+  "licenseUrl": null,
+  "author": "Gramophone Company Monarch label, Cairo, 1909 (012508); photograph by the Internet Archive's Great 78 Project",
+  "sourcePage": "https://archive.org/details/78_sahil-guefoun-i_cheikh-youssef-el-menialawi-caire_gbia0299355a",
+  "notes": "The record's own label, since no public-domain portrait of him exists: the Gramophone Company's twelve-inch Monarch label 012508, Cairo, 1909, photographed by the Great 78 Project (item gbia0299355a, 2263 x 2263). The label is a 1909 printed design, public domain in the United States."
+ },
+ "audio": {
+  "type": "internet-archive",
+  "fileTitle": null,
+  "curid": null,
+  "url": "https://archive.org/download/78_sahil-guefoun-i_cheikh-youssef-el-menialawi-caire_gbia0299355a/SAHIL%20GUEFOUN%20I%20-%20Cheikh%20Youssef%20El%20Menialawi.mp3",
+  "bytes": 8018580,
+  "mime": "audio/mpeg",
+  "seconds": 250.1,
+  "licenseName": "Public domain",
+  "licenseUrl": null,
+  "author": "Shaykh Yusuf al-Manyalawi, voice, with the takht of Muhammad al-'Aqqad; Gramophone Company, Cairo, 1909; Monarch 012508",
+  "sourcePage": "https://archive.org/details/78_sahil-guefoun-i_cheikh-youssef-el-menialawi-caire_gbia0299355a",
+  "performers": "Shaykh Yusuf al-Manyalawi, voice, with the takht of Muhammad al-'Aqqad (qanun) and chorus, recorded in Cairo for the Gramophone Company in 1909; the first part of 'Sahi al-jufun' on a twelve-inch Monarch disc, 012508.",
+  "start": 0,
+  "excerptSeconds": null,
+  "notes": "Public domain in the United States: the recording was first published before 1926 (Music Modernization Act schedule, as of 2026) and the composition before 1931 or is traditional. The piece belongs to the Nahda repertoire of the nineteenth century. Transfer by the Internet Archive's Great 78 Project from a George Blood digitisation; no licence claim on the item."
+ },
+ "object": {
+  "year": 1909,
+  "month": null,
+  "day": null,
+  "yearStart": null,
+  "yearEnd": null,
+  "dateLabel": "Cairo, 1909",
+  "madeIn": {
+   "name": "Cairo",
+   "region": null,
+   "country": "Egypt",
+   "lat": 30.0444,
+   "lon": 31.2357,
+   "wikidataQid": null
+  },
+  "location": {
+   "name": null,
+   "country": null,
+   "institution": null,
+   "inventoryNumber": null
+  },
+  "culture": "Egyptian (Arab)",
+  "medium": "Acoustic 78 rpm gramophone recording; a dawr of the Nahda repertoire",
+  "materials": [
+   "shellac"
+  ],
+  "subjects": [
+   "music",
+   "Arab music",
+   "Nahda",
+   "maqam",
+   "sound recording"
+  ],
+  "widthCm": null,
+  "heightCm": null,
+  "depthCm": null,
+  "weightKg": null,
+  "creator": {
+   "name": "Yusuf al-Manyalawi",
+   "role": "singer",
+   "birthYear": 1847,
+   "deathYear": 1911,
+   "wikidataQid": null
+  },
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Yusuf_al-Manyalawi",
+  "wikidataQid": null,
+  "description": "The summit of the Egyptian Nahda, the renaissance of Arab art music in the last decades of the nineteenth century, caught on a twelve-inch disc two years before the singer's death. Yusuf al-Manyalawi was a Sufi shaykh of the Mevlevi order and a Quran reciter before he was the most admired singer in Cairo; the Gramophone Company paid him more than any other artist in the Arab world and recorded him between 1905 and 1910 with the finest takht of the day, led by the qanun player Muhammad al-'Aqqad. Here he opens 'Sahi al-jufun', the singers of the chorus answering him, improvising on the maqam in the way that was lost when the song form shortened to fit three-minute records. The disc's own label stands in for a portrait.",
+  "facts": [
+   "His recordings were reissued in the 1920s by the Opera Disc Company of New York for the Arab diaspora.",
+   "The Nahda singers improvised within a dawr for twenty minutes or more; a twelve-inch disc gave them four.",
+   "The AMAR Foundation in Lebanon has reissued his complete recordings on ten CDs."
+  ]
+ }
+}

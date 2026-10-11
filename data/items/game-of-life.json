@@ -1,0 +1,84 @@
+{
+ "title": "The Game of Life",
+ "kind": "sim",
+ "importance": 0.85,
+ "genre": [
+  "mathematics",
+  "computing"
+ ],
+ "tags": [
+  "cellular automaton",
+  "mathematics",
+  "computing",
+  "simulation"
+ ],
+ "baseHeight": 0,
+ "source": {
+  "type": "procedural",
+  "program": "life",
+  "params": {
+   "cells": 96,
+   "stepsPerSecond": 6
+  },
+  "bounds": {
+   "width": 3,
+   "height": 0.02,
+   "depth": 3
+  },
+  "licenseName": "CC0 1.0",
+  "author": "20watts",
+  "notes": "Run live by src/sims/life.ts: a 96 by 96 toroidal board seeded with Gosper's glider gun and an R-pentomino, reseeded when it goes still. The rules are Conway's; the program is the museum's own, CC0."
+ },
+ "object": {
+  "year": 1970,
+  "month": 10,
+  "dateLabel": "October 1970",
+  "madeIn": {
+   "name": "Cambridge",
+   "region": "England",
+   "country": "United Kingdom",
+   "lat": 52.205,
+   "lon": 0.119,
+   "wikidataQid": "Q350"
+  },
+  "location": {
+   "name": "Everywhere it is run",
+   "country": null,
+   "institution": null
+  },
+  "culture": null,
+  "medium": "Cellular automaton, computed live",
+  "materials": [],
+  "subjects": [
+   "cellular automaton",
+   "emergence",
+   "computation"
+  ],
+  "creator": {
+   "name": "John Horton Conway",
+   "role": "mathematician",
+   "birthYear": 1937,
+   "deathYear": 2020,
+   "wikidataQid": "Q268961"
+  },
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life",
+  "wikidataQid": "Q244615",
+  "description": "A grid of cells, each alive or dead. At every tick a living cell with two or three living neighbours stays alive, a dead cell with exactly three is born, and everything else dies or stays empty. That is the whole of it. John Conway worked the rules out by hand with counters on a Go board, looking for the simplest system that was neither dull nor explosive, and Martin Gardner announced it in Scientific American in October 1970. From three rules come gliders that travel, guns that fire them, and patterns that compute: the Game of Life can run any program a computer can.\n\nThe slab is running it now, generation by generation as you watch, seeded with a glider gun at the top left and an R-pentomino that takes 1,103 generations to settle; when the board goes still, it starts over.",
+  "facts": [
+   "The rules fit in one sentence; the behaviour has never been fully catalogued.",
+   "Gosper's glider gun, found in November 1970, was the first pattern shown to grow without limit.",
+   "Life is Turing complete: a computer can be built inside it out of gliders.",
+   "Conway said he came to dislike how the game overshadowed the rest of his mathematics."
+  ],
+  "day": null,
+  "yearStart": null,
+  "yearEnd": null,
+  "weightKg": null,
+  "widthCm": null,
+  "heightCm": null,
+  "depthCm": null
+ },
+ "slug": "game-of-life",
+ "flat": false,
+ "periodSlug": null
+}

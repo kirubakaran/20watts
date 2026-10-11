@@ -1,0 +1,91 @@
+{
+ "slug": "lascaux-deer-facsimile",
+ "title": "The great deer, Lascaux",
+ "kind": "model",
+ "representation": "scan",
+ "baseHeight": 0,
+ "importance": 0.8,
+ "genre": [
+  "cave painting"
+ ],
+ "tags": [
+  "Lascaux",
+  "Palaeolithic",
+  "facsimile",
+  "scan"
+ ],
+ "periodSlug": "prehistoric",
+ "branch": {
+  "of": "wm-6909701",
+  "step": 1,
+  "label": "a wall of the cave, cast"
+ },
+ "source": {
+  "type": "sketchfab",
+  "fileTitle": null,
+  "curid": "e8f121d0545247318781ef3981fdfdaa",
+  "url": "https://sketchfab.com/3d-models/scene-with-large-deer-from-the-lascaux-cave-e8f121d0545247318781ef3981fdfdaa",
+  "width": null,
+  "height": null,
+  "bytes": null,
+  "mime": "model/gltf+json",
+  "licenseName": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "author": "3dhdscan (Sketchfab)",
+  "sourcePage": "https://sketchfab.com/3d-models/scene-with-large-deer-from-the-lascaux-cave-e8f121d0545247318781ef3981fdfdaa",
+  "notes": "Photogrammetry from 18 images, by Sketchfab user 3dhdscan, CC BY 4.0, of the facsimile panel of the large deer from Lascaux in the Anthropos Pavilion of the Moravian Museum, Brno (the Sketchfab description cites the pavilion's permanent exhibition). 91k faces, 8192 px colour and normal textures, 46 MB glTF. The file is 2.05 m by 2.06 m by 0.10 m in metres after its 0.000587 root scale, upright. Downloaded by the user on 2026-10-09."
+ },
+ "object": {
+  "year": -15000,
+  "month": null,
+  "day": null,
+  "yearStart": -17000,
+  "yearEnd": -15000,
+  "dateLabel": "c. 17,000 years ago (the painting); facsimile 20th century",
+  "madeIn": {
+   "name": "Lascaux, Montignac",
+   "region": "Dordogne",
+   "country": "France",
+   "lat": 45.0539,
+   "lon": 1.1704,
+   "wikidataQid": "Q173714"
+  },
+  "location": {
+   "name": "Brno",
+   "country": "Czech Republic",
+   "institution": "Anthropos Pavilion, Moravian Museum",
+   "inventoryNumber": null
+  },
+  "culture": "Magdalenian",
+  "medium": "Cast of the cave wall with the painting reproduced; original in manganese and ochre on limestone",
+  "materials": [
+   "plaster",
+   "pigment"
+  ],
+  "subjects": [
+   "deer",
+   "cave painting",
+   "Palaeolithic",
+   "Lascaux"
+  ],
+  "widthCm": 205,
+  "heightCm": 206,
+  "depthCm": 10,
+  "weightKg": null,
+  "creator": {
+   "name": "Unknown Magdalenian painter",
+   "role": "painter",
+   "birthYear": null,
+   "deathYear": null,
+   "wikidataQid": null
+  },
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Lascaux",
+  "wikidataQid": "Q173714",
+  "description": "A piece of the cave wall you can stand in front of: a scan of a facsimile panel of one of Lascaux's great deer, a stag with its antlers thrown back, painted about 17,000 years ago in a few sure strokes of black manganese, with the rock's own bulges used for the body. Lascaux has been closed to visitors since 1963, when the breath of a thousand people a day began to grow algae and mould on the paintings, so the cave is known today through casts and facsimiles like this one, in the Anthropos Pavilion in Brno. The photograph beside it shows the Megaloceros in the cave itself.",
+  "facts": [
+   "Lascaux holds some 600 painted animals and nearly 1,500 engravings, found in 1940 by four teenagers and a dog named Robot.",
+   "The painters worked by lamplight, on scaffolding in the higher galleries, with pigments ground from manganese oxides and iron ochres.",
+   "The casts are made from precise surveys of the wall so that the relief the painters used, a bulge for a shoulder, a crack for a line, is kept."
+  ]
+ }
+}

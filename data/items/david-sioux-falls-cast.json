@@ -1,0 +1,87 @@
+{
+ "slug": "david-sioux-falls-cast",
+ "title": "David, after Michelangelo",
+ "kind": "model",
+ "representation": "scan",
+ "baseHeight": 0.5,
+ "back": "none",
+ "importance": 0.9,
+ "genre": [
+  "sculpture"
+ ],
+ "tags": [
+  "sculpture",
+  "scan",
+  "cast"
+ ],
+ "periodSlug": null,
+ "flat": false,
+ "source": {
+  "type": "sketchfab",
+  "fileTitle": null,
+  "curid": "8f4827cf36964a17b90bad11f48298ac",
+  "url": "https://sketchfab.com/3d-models/8f4827cf36964a17b90bad11f48298ac",
+  "width": null,
+  "height": null,
+  "bytes": 13264727,
+  "mime": "model/gltf+json",
+  "licenseName": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "author": "jerryfisher (Sketchfab)",
+  "sourcePage": "https://sketchfab.com/3d-models/8f4827cf36964a17b90bad11f48298ac",
+  "unitScale": 0.707,
+  "notes": " Photogrammetry of the bronze cast with vertex colours and no textures, 366,000 triangles, with the sculpture's own rock base and no pedestal; scaled so base and figure together stand 5.17 m, the conventional height of the original, and raised 0.5 m. The figure is 517 cm tall, as the original is without its base. Downloaded by the museum's owner from Sketchfab on 2026-10-10."
+ },
+ "object": {
+  "year": 1504,
+  "month": null,
+  "day": null,
+  "yearStart": null,
+  "yearEnd": null,
+  "dateLabel": "1501-1504; a full-size bronze cast of 1971",
+  "madeIn": {
+   "name": "Florence",
+   "region": null,
+   "country": "Italy",
+   "lat": 43.7696,
+   "lon": 11.2558,
+   "wikidataQid": null
+  },
+  "location": {
+   "name": "Sioux Falls",
+   "country": "United States",
+   "institution": "Fawick Park, Sioux Falls (bronze cast); the marble is in the Galleria dell'Accademia, Florence",
+   "inventoryNumber": null
+  },
+  "culture": "Italian (High Renaissance)",
+  "medium": "Scan of a bronze cast of the marble",
+  "materials": [
+   "bronze"
+  ],
+  "subjects": [
+   "David",
+   "Goliath",
+   "Florence",
+   "Renaissance"
+  ],
+  "widthCm": null,
+  "heightCm": 517,
+  "depthCm": null,
+  "weightKg": null,
+  "creator": {
+   "name": "Michelangelo",
+   "role": "sculptor",
+   "birthYear": 1475,
+   "deathYear": 1564,
+   "wikidataQid": "Q5592"
+  },
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/David_(Michelangelo)",
+  "wikidataQid": null,
+  "description": "Five metres of marble, carved from a block two sculptors had already given up on, by a man of twenty-six. David before the fight, not after it: the sling over his shoulder, the stone in his hand, his weight on one leg and his eyes on Goliath, the body a little too large in the hands and head because it was meant to be seen from below. Florence put it in front of the town hall in 1504 as the emblem of the republic and moved it indoors in 1873. The original has not been scanned under a free licence, but the moulds taken from it in the 1960s produced full-size bronze casts, and this is one of them, in Sioux Falls, South Dakota, scanned by a resident. The form is Michelangelo's; the surface is bronze.",
+  "facts": [
+   "The block had been quarried in 1464 and left standing in the cathedral yard for forty years.",
+   "It was moved to the Piazza della Signoria over four days on rollers in May 1504, and stoned by republic's enemies on the way.",
+   "The Sioux Falls cast was a 1971 gift of the newspaper publisher Thomas Fawick, who gave a Moses as well."
+  ]
+ }
+}

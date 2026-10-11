@@ -1,0 +1,99 @@
+{
+ "slug": "falcon-9-model",
+ "title": "Falcon 9",
+ "titleOriginal": null,
+ "kind": "model",
+ "importance": 0.85,
+ "genre": [
+  "spacecraft",
+  "engineering"
+ ],
+ "tags": [
+  "space",
+  "rocket",
+  "SpaceX",
+  "reusable",
+  "landmark"
+ ],
+ "periodSlug": null,
+ "flat": false,
+ "baseHeight": 0,
+ "source": {
+  "type": "sketchfab",
+  "curid": "394f7cf52d124bbd9db69f24d1ff2f08",
+  "fileTitle": null,
+  "url": "https://sketchfab.com/3d-models/394f7cf52d124bbd9db69f24d1ff2f08",
+  "sourcePage": "https://sketchfab.com/3d-models/394f7cf52d124bbd9db69f24d1ff2f08",
+  "width": null,
+  "height": null,
+  "bytes": 3018322,
+  "mime": null,
+  "licenseName": "CC BY 4.0",
+  "licenseUrl": "http://creativecommons.org/licenses/by/4.0/",
+  "author": "Stanley Creative",
+  "notes": "An artist's model of the Falcon 9 with fairing and landing legs (158,000 triangles, textured), made for the author's Rocket Explorer VR app; 7,100 units tall for the real 70 m, so the file is in centimetres; unitScale 0.0005 makes it a model at one twentieth, 3.5 m. License.txt in the download: CC-BY-4.0, author Stanley Creative (https://sketchfab.com/Stanley_Creative), 'Author must be credited. Commercial use is allowed.' Downloaded by the museum's owner from Sketchfab on 2026-10-11.",
+  "unitScale": 0.01
+ },
+ "object": {
+  "year": 2015,
+  "month": 12,
+  "day": 21,
+  "yearStart": null,
+  "yearEnd": null,
+  "dateLabel": "first landing of an orbital booster, 21 December 2015",
+  "madeIn": {
+   "name": "Hawthorne",
+   "region": "California",
+   "country": "United States",
+   "lat": 33.9207,
+   "lon": -118.3277,
+   "wikidataQid": "Q488118"
+  },
+  "location": {
+   "name": "Everywhere it is computed",
+   "region": null,
+   "country": null,
+   "lat": null,
+   "lon": null,
+   "wikidataQid": null,
+   "institution": null,
+   "inventoryNumber": null
+  },
+  "creator": {
+   "name": "SpaceX",
+   "role": "builders",
+   "birthYear": null,
+   "deathYear": null,
+   "wikidataQid": "Q193701"
+  },
+  "culture": null,
+  "movement": null,
+  "medium": "An artist's 3D model, at true size",
+  "materials": [],
+  "subjects": [
+   "rocket",
+   "reusable launch vehicle",
+   "SpaceX",
+   "landing"
+  ],
+  "widthCm": 520,
+  "heightCm": 7000,
+  "depthCm": 520,
+  "weightKg": null,
+  "description": "On the evening of 21 December 2015 a Falcon 9 put eleven satellites into orbit and then its first stage, 42 metres of it, turned round, flew back to Cape Canaveral, and set down upright on its legs on a concrete pad ten minutes after it had left. Rockets had always been thrown away; from here on the expensive part came home. Nine kerosene engines, a body built by a company that was thirteen years old, and a landing, controlled by grid fins and a single engine relit three times, that engineers had called impossible for sixty years. Boosters have since flown more than twenty times each, and the cost of reaching orbit fell by more than half. It stands here at its full 70 metres, off to the east, on its legs as it landed.",
+  "facts": [
+   "The first stage comes back at Mach 6 and slows itself with its own engines; the grid fins steer it like a dart.",
+   "By 2025 the Falcon 9 had flown more than 500 times, more than any other orbital rocket.",
+   "A booster first flew twice in March 2017; the record stands above twenty flights.",
+   "The fairing halves are caught at sea and reused too."
+  ],
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Falcon_9",
+  "wikidataQid": "Q193701"
+ },
+ "representation": "reconstruction",
+ "back": "none",
+ "landmark": {
+  "side": "east",
+  "distance": 70
+ }
+}

@@ -1,0 +1,105 @@
+{
+ "slug": "nebra-sky-disc",
+ "title": "Nebra sky disc",
+ "kind": "image",
+ "source": {
+  "type": "commons",
+  "fileTitle": "File:Himmelsscheibe von Nebra - Landesmuseum für Vorgeschichte in Halle - HD.jpg",
+  "curid": 164288965,
+  "url": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Himmelsscheibe_von_Nebra_-_Landesmuseum_f%C3%BCr_Vorgeschichte_in_Halle_-_HD.jpg",
+  "width": 9061,
+  "height": 8941,
+  "bytes": 39440311,
+  "mime": "image/jpeg",
+  "licenseName": "CC0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "author": "Shonagon",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:Himmelsscheibe_von_Nebra_-_Landesmuseum_für_Vorgeschichte_in_Halle_-_HD.jpg",
+  "notes": "Original disc photographed in its permanent display at the Landesmuseum für Vorgeschichte, Halle, square frontal view on a dark ground; 39 MB original, so fetch via Commons thumbnail widths. The widely used 'Nebra disc 1.jpg' (Frank Vincentz, PD) was taken at the Gasometer Oberhausen 'Der schöne Schein' show, which exhibited replicas, so it is avoided. File metadata from the Commons imageinfo API. Object data: Date c. 1800-1600 BCE, culture, diameter about 30 cm and weight 2.2 kg: Wikipedia lead and infobox (citing the Halle museum). Wikidata Q157094 instead gives 32 cm and 2,050 g; the museum's own page could not be scraped for numbers. Find-spot coordinates 51.28389, 11.52 (Mittelberg): Wikipedia infobox coord and Wikidata P625. Halle inventory number not published on Wikipedia/Wikidata."
+ },
+ "object": {
+  "year": -1600,
+  "yearStart": -1800,
+  "yearEnd": -1600,
+  "dateLabel": "c. 1800–1600 BCE (Early Bronze Age)",
+  "madeIn": {
+   "name": "Mittelberg hill near Nebra (Unstrut)",
+   "region": "Saxony-Anhalt",
+   "country": "Germany",
+   "lat": 51.28389,
+   "lon": 11.52,
+   "wikidataQid": "Q504051"
+  },
+  "location": {
+   "name": "Landesmuseum für Vorgeschichte, Halle (Saale)",
+   "country": "Germany",
+   "institution": "Halle State Museum of Prehistory",
+   "inventoryNumber": null
+  },
+  "culture": "Únětice culture (Early Bronze Age)",
+  "medium": "Bronze disc with gold inlays",
+  "materials": [
+   "bronze",
+   "gold"
+  ],
+  "subjects": [
+   "sun",
+   "crescent moon",
+   "stars",
+   "Pleiades",
+   "solar boat",
+   "astronomy"
+  ],
+  "widthCm": 30.0,
+  "heightCm": 30.0,
+  "depthCm": null,
+  "weightKg": 2.2,
+  "creator": null,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Nebra_sky_disc",
+  "wikidataQid": "Q157094",
+  "description": "A bronze disc with a blue-green patina inlaid with gold symbols: a full sun or moon, a crescent, a cluster of seven stars read as the Pleiades, two horizon arcs marking the solstice sunrise and sunset, and a boat. Buried on the Mittelberg near Nebra with swords, axes and arm spirals, it is the oldest known concrete depiction of the night sky.",
+  "facts": [
+   "Found in 1999 by two unlicensed metal-detectorists and recovered by police in a sting in Basel in 2002.",
+   "About 30 cm across and 2.2 kg; 38 to 40 holes were punched around the rim before burial.",
+   "Added to the UNESCO Memory of the World Register in 2013."
+  ]
+ },
+ "alternatives": [
+  {
+   "fileTitle": "File:1600 Himmelsscheibe von Nebra sky disk anagoria.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/9/96/1600_Himmelsscheibe_von_Nebra_sky_disk_anagoria.jpg",
+   "licenseName": "Public domain (author release)",
+   "author": "Anagoria",
+   "size": "2724x2724",
+   "note": "Taken at the 2012 Pergamon Museum loan exhibition 'Jenseits des Horizonts'; slightly oblique, warm lighting."
+  },
+  {
+   "fileTitle": "File:Nebra disc 1.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Nebra_disc_1.jpg",
+   "licenseName": "Public domain (author release)",
+   "author": "Frank Vincentz",
+   "size": "4177x3385",
+   "note": "Clean cut-out on black and the Wikipedia infobox image, but photographed at a replica exhibition in Oberhausen; use only if labelled as a replica."
+  }
+ ],
+ "fallbackWidthM": 0.6,
+ "genre": [
+  "artefact",
+  "astronomy"
+ ],
+ "tags": [
+  "bronze age",
+  "unetice",
+  "astronomy"
+ ],
+ "periodSlug": "bronze-age",
+ "importance": 0.9,
+ "sky": {
+  "radius": 9,
+  "stars": {
+   "year": -1600,
+   "latitude": 51.28,
+   "siderealHours": 5.7
+  }
+ }
+}

@@ -1,0 +1,111 @@
+{
+ "slug": "nagarathnamma-nityakalyani",
+ "title": "Bangalore Nagarathnamma sings a Dikshitar kriti",
+ "titleOriginal": null,
+ "kind": "image",
+ "importance": 0.9,
+ "genre": [
+  "music"
+ ],
+ "tags": [
+  "music",
+  "India",
+  "Carnatic",
+  "Tamil Nadu",
+  "recording",
+  "gramophone"
+ ],
+ "periodSlug": null,
+ "flat": false,
+ "baseHeight": null,
+ "source": {
+  "type": "commons",
+  "curid": 37813429,
+  "fileTitle": "File:Bangalore Nagarathnamma.jpg",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/0/05/Bangalore_Nagarathnamma.jpg",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:Bangalore_Nagarathnamma.jpg",
+  "width": 298,
+  "height": 412,
+  "bytes": 81413,
+  "mime": "image/jpeg",
+  "licenseName": "Public domain",
+  "licenseUrl": null,
+  "author": "Unknown photographer; published in Gruhalakshmi, 1929",
+  "notes": "Portrait published in the Telugu magazine Gruhalakshmi in 1929; public domain (PD-India, published before 1930 and public domain in the United States). Small file, the only free portrait."
+ },
+ "object": {
+  "year": 1905,
+  "month": null,
+  "day": null,
+  "yearStart": null,
+  "yearEnd": null,
+  "dateLabel": "Madras, 1905",
+  "madeIn": {
+   "name": "Madras",
+   "region": "Tamil Nadu",
+   "country": "India",
+   "lat": 13.0827,
+   "lon": 80.2707,
+   "wikidataQid": null
+  },
+  "location": {
+   "name": null,
+   "region": null,
+   "country": null,
+   "lat": null,
+   "lon": null,
+   "wikidataQid": null,
+   "institution": null,
+   "inventoryNumber": null
+  },
+  "creator": {
+   "name": "Bangalore Nagarathnamma",
+   "role": "singer",
+   "birthYear": 1878,
+   "deathYear": 1952,
+   "wikidataQid": null
+  },
+  "culture": "Indian (Carnatic)",
+  "movement": null,
+  "medium": "Acoustic 78 rpm gramophone recording; a kriti by Muthuswami Dikshitar",
+  "materials": [
+   "shellac"
+  ],
+  "subjects": [
+   "music",
+   "Carnatic music",
+   "kriti",
+   "Tyagaraja Aradhana",
+   "sound recording"
+  ],
+  "widthCm": null,
+  "heightCm": null,
+  "depthCm": null,
+  "weightKg": null,
+  "description": "One of the first Carnatic recordings ever made, from the Gramophone Company's 1905 Madras sessions, and the voice is that of a remarkable woman. Nagarathnamma was a devadasi, a Sanskrit scholar, a singer who performed for the Mysore court, and later the richest musician in Madras; she spent that fortune building the memorial over Tyagaraja's grave at Thiruvaiyaru and founding the Aradhana festival there, which is still the largest gathering in Carnatic music. In 1910 she published the erotic Telugu poem Radhika Santvanam by the eighteenth-century poet Muddupalani, and fought the colonial government's ban on it. The kriti here is by Muthuswami Dikshitar, one of the trinity of Carnatic composers, sung as a garland of ragas.",
+  "facts": [
+   "The 1905 Madras sessions were the Gramophone & Typewriter Company's first in South India.",
+   "Her edition of Radhika Santvanam was banned in 1911 and not freely published again until 1947.",
+   "The Tyagaraja Aradhana she founded is held each January on the banks of the Kaveri."
+  ],
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Bangalore_Nagarathnamma",
+  "wikidataQid": null
+ },
+ "fallbackWidthM": 0.5,
+ "order": 1,
+ "audio": {
+  "type": "internet-archive",
+  "url": "https://archive.org/download/g-c-13985-nritya-kalyani-bangalore-nagaratnam/G%20C%2013985%20NRITYA%20KALYANI%20-%20BANGALORE%20NAGARATNAM.mp3",
+  "bytes": 6217142,
+  "mime": "audio/mpeg",
+  "seconds": 155.4,
+  "start": 0,
+  "excerptSeconds": null,
+  "performers": "Bangalore Nagarathnamma singing 'Nityakalyani', a kriti by Muthuswami Dikshitar as a ragamalika, part II; recorded in Madras by the Gramophone & Typewriter Company in 1905 (G.C.-13985, matrix 3346h), reissued as HMV P.50 in 1916.",
+  "author": "Bangalore Nagarathnamma, voice; Gramophone & Typewriter Ltd, Madras, 1905, G.C.-13985, matrix 3346h",
+  "licenseName": "Public domain",
+  "licenseUrl": null,
+  "sourcePage": "https://archive.org/details/g-c-13985-nritya-kalyani-bangalore-nagaratnam",
+  "notes": "Public domain in the United States: the recording was first published before 1926 (Music Modernization Act schedule, as of 2026) and the composition before 1931 or is traditional. Muthuswami Dikshitar died in 1835. Catalogue data from Kinnear, p. 201. Internet Archive item uploaded by a collector with the label photographed; no licence field."
+ }
+}

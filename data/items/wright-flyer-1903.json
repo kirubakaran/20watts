@@ -1,0 +1,96 @@
+{
+ "slug": "wright-flyer-1903",
+ "title": "Wright Flyer",
+ "titleOriginal": null,
+ "kind": "model",
+ "importance": 1,
+ "genre": [
+  "aircraft",
+  "machine"
+ ],
+ "tags": [
+  "aviation",
+  "wright brothers",
+  "first flight"
+ ],
+ "periodSlug": "modern",
+ "flat": false,
+ "baseHeight": 0.2,
+ "source": {
+  "type": "smithsonian-3d",
+  "curid": "nasm_A19610048000",
+  "format": "voyager-document",
+  "fileTitle": null,
+  "url": "https://3d-api.si.edu/content/document/d8c62e5e-4ebc-11ea-b77f-2e728ce88125/document.json",
+  "sourcePage": "https://3d.si.edu/object/3d/1903-wright-flyer:d8c62e5e-4ebc-11ea-b77f-2e728ce88125",
+  "width": null,
+  "height": null,
+  "bytes": 94029,
+  "mime": null,
+  "licenseName": "CC0 1.0",
+  "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "author": "Smithsonian Institution, Digitization Program Office",
+  "notes": "Voyager document (scene units cm) with three sub-models (engine, filler, wings), each with Thumb/Low/Medium/High Draco glb tiers on cdn.3d-api.si.edu, so it goes straight through the existing smithsonian-3d pipeline. document.json is 94 kB; the High tier is three glbs (wright_flyer_engine_mesh-53k-4096-high.glb etc.). EDAN record edanmdm:nasm_A19610048000. Licence: the Smithsonian publishes the same scan as CC0 on its official Sketchfab account (uid c91467735c6743af872e65107a79beda, 'This media file is in the public domain') and a Commons STL export is tagged CC0; the 3d.si.edu object page itself returned HTTP 403 to scripted requests today, so confirm the CC0 badge there by eye before import. Dimensions and date from the NASM collection record (airandspace.si.edu/collection-objects/1903-wright-flyer/nasm_A19610048000): wingspan 12.3 m, length 6.4 m, height 2.8 m, empty weight 274 kg, gross 341 kg. First-flight facts from Wikipedia 'Wright Flyer'."
+ },
+ "object": {
+  "year": 1903,
+  "month": 12,
+  "day": 17,
+  "yearStart": 1903,
+  "yearEnd": 1903,
+  "dateLabel": "1903",
+  "madeIn": {
+   "name": "Dayton, Ohio",
+   "region": "Ohio",
+   "country": "United States",
+   "lat": 39.7667,
+   "lon": -84.2,
+   "wikidataQid": "Q34739"
+  },
+  "location": {
+   "name": "National Air and Space Museum, Washington, D.C.",
+   "region": null,
+   "country": "United States",
+   "lat": null,
+   "lon": null,
+   "wikidataQid": null,
+   "institution": "Smithsonian National Air and Space Museum",
+   "inventoryNumber": "A19610048000"
+  },
+  "creator": {
+   "name": "Wilbur and Orville Wright",
+   "role": "designers and builders",
+   "birthYear": null,
+   "deathYear": null,
+   "wikidataQid": "Q35820"
+  },
+  "culture": "American",
+  "movement": null,
+  "medium": "Aircraft: spruce and ash airframe covered in muslin, cast-aluminium crankcase engine",
+  "materials": [
+   "wood",
+   "muslin",
+   "aluminium",
+   "steel wire"
+  ],
+  "subjects": [
+   "aviation",
+   "first powered flight",
+   "engineering"
+  ],
+  "widthCm": 1230,
+  "heightCm": 280,
+  "depthCm": 640,
+  "weightKg": 274,
+  "description": "The Wright Flyer is the biplane in which Orville and Wilbur Wright made the first sustained, controlled flights of a powered, heavier-than-air aircraft at Kill Devil Hills, North Carolina, on 17 December 1903. Built in the brothers' Dayton bicycle shop, it combined a wing-warping control system with a purpose-built 12-horsepower petrol engine and twin pusher propellers. This is the Smithsonian's laser scan of the original aircraft as it hangs in the National Air and Space Museum.",
+  "facts": [
+   "Four flights were made on 17 December 1903; the longest covered 852 ft (260 m) in 59 seconds.",
+   "The 12-horsepower engine was built from scratch in six weeks by the Wrights' mechanic Charlie Taylor, with a cast-aluminium crankcase.",
+   "The Flyer joined the Smithsonian collection in 1948 after a long dispute between Orville Wright and the Institution over who flew first."
+  ],
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Wright_Flyer",
+  "wikidataQid": "Q688605"
+ },
+ "representation": "scan",
+ "back": "none"
+}

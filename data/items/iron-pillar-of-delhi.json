@@ -1,0 +1,89 @@
+{
+ "slug": "iron-pillar-of-delhi",
+ "title": "Iron Pillar of Delhi",
+ "kind": "image",
+ "flat": false,
+ "importance": 0.8,
+ "genre": [
+  "metalwork",
+  "monument"
+ ],
+ "periodSlug": null,
+ "tags": [
+  "India",
+  "Delhi",
+  "Gupta",
+  "iron",
+  "metallurgy",
+  "inscription"
+ ],
+ "source": {
+  "type": "commons",
+  "fileTitle": "File:The Iron pillar of Delhi 01.jpg",
+  "curid": 110598443,
+  "url": "https://upload.wikimedia.org/wikipedia/commons/8/8c/The_Iron_pillar_of_Delhi_01.jpg",
+  "width": 5184,
+  "height": 3456,
+  "bytes": 4418215,
+  "mime": "image/jpeg",
+  "licenseName": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "author": "Hridya08",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:The_Iron_pillar_of_Delhi_01.jpg",
+  "notes": "Hridya08's photograph of the pillar framed by the arch of the Quwwat-ul-Islam mosque in evening light, with nobody in the frame; chosen on 2026-10-10 over Aiwok's 2010 photograph (curid 11952242), which had visitors around the railing. Hung at 14 m wide so the pillar in it stands near its true height of about 7 m. Commons API extmetadata: LicenseShortName = 'CC BY-SA 4.0', Artist = 'Hridya08', DateTimeOriginal = '2021-09-28 08:00:32'. Portrait photograph of the whole pillar in the Qutb complex, Mehrauli, taken 27 September 2010 with a Nikon D90. Commons API extmetadata: LicenseShortName = 'CC BY-SA 3.0', Artist = 'Aiwok', Credit = 'Own work'; also tagged GFDL. The English Wikipedia lead image (File:Iron Pillar, Delhi, May 2008.jpg, public domain, Mark A. Wilson) was passed over because it is only 1000 x 1347 px, too small for a 7.2 m object at true size. Larger CC BY-SA 4.0 alternatives: File:Iron Pillar of Delhi-Q543419N -Mehrauli -Delhi -DL-161.jpg (82522408, 4000 x 5000, described by its author as a low-angle shot) and File:The Iron pillar of Delhi.jpg (110598442, 2660 x 3011). The pillar is in situ in Delhi; its place of manufacture is uncertain, and madeIn below follows the hypothesis that it was first erected at Udayagiri near Vidisha."
+ },
+ "object": {
+  "year": 400,
+  "month": null,
+  "day": null,
+  "yearStart": 375,
+  "yearEnd": 415,
+  "dateLabel": "c. 375–415 CE",
+  "madeIn": {
+   "name": "Udayagiri, Vidisha (probable)",
+   "region": "Madhya Pradesh",
+   "country": "India",
+   "lat": 23.539,
+   "lon": 77.772,
+   "wikidataQid": "Q4250472"
+  },
+  "location": {
+   "name": "Mehrauli, Delhi",
+   "country": "India",
+   "institution": "Qutb complex (in situ)",
+   "inventoryNumber": null
+  },
+  "culture": "Indian (Gupta)",
+  "medium": "Forge-welded wrought iron",
+  "materials": [
+   "wrought iron"
+  ],
+  "subjects": [
+   "Vishnu",
+   "Chandragupta II",
+   "metallurgy",
+   "corrosion resistance"
+  ],
+  "widthCm": 41,
+  "heightCm": 721,
+  "depthCm": 41,
+  "weightKg": 6000,
+  "creator": {
+   "name": "Unknown Gupta ironsmiths (patron Chandragupta II)",
+   "role": "smith",
+   "birthYear": null,
+   "deathYear": null,
+   "wikidataQid": "Q844536"
+  },
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Iron_pillar_of_Delhi",
+  "wikidataQid": "Q543419",
+  "description": "A column of solid wrought iron 7.21 metres tall, 41 centimetres across and over six tonnes in weight, standing in the courtyard of the Qutb complex in Delhi. A Sanskrit inscription in Gupta script says it was raised as a standard of Vishnu by a king called Chandra, almost certainly Chandragupta II, who reigned from about 375 to 415 CE; it was probably first set up at Udayagiri in central India and moved to Delhi in the eleventh century, two hundred years before the Qutb Minar was built beside it. No one else in the world could make a single iron object this large for another thousand years: it was built up by forge-welding many lumps of hot iron, hammered together by hand. Most famously, it has stood in the open for sixteen centuries without rusting. The reason is the metal itself: a high phosphorus content, a product of the ancient Indian smelting process, lets a thin protective film of iron hydrogen phosphate form on the surface and seal it. Scientists did not understand this until the 1990s.",
+  "facts": [
+   "7.21 m tall including 1.12 m below ground; 41 cm in diameter at the base; estimated weight over six tonnes.",
+   "The oldest inscription names King Chandra and dedicates the pillar to Vishnu; it covers about 65 by 27 cm of the surface.",
+   "Its rust resistance comes from phosphorus in the iron, which forms a protective crystalline layer (misawite).",
+   "Moved to Delhi by the Tomar king Anangpal II in the 11th century, long before the mosque now around it."
+  ]
+ },
+ "fallbackWidthM": 14
+}

@@ -1,0 +1,95 @@
+{
+ "slug": "rosetta-stone",
+ "title": "Rosetta Stone",
+ "kind": "image",
+ "source": {
+  "type": "commons",
+  "fileTitle": "File:Rosetta Stone.JPG",
+  "curid": 3153928,
+  "url": "https://upload.wikimedia.org/wikipedia/commons/2/23/Rosetta_Stone.JPG",
+  "width": 3665,
+  "height": 4288,
+  "bytes": 7199616,
+  "mime": "image/jpeg",
+  "licenseName": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "author": "Hans Hillewaert",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:Rosetta_Stone.JPG",
+  "notes": "Original stele in the British Museum, frontal view with the background cut to black; all three scripts legible, no visitors or glass reflections. Wikipedia infobox image. File metadata from the Commons imageinfo API. Object data: Date 196 BCE, dimensions 112.3 x 75.7 x 28.4 cm and weight c. 760 kg: Wikipedia Description section (citing the British Museum) and Wikidata. Inventory EA24: Wikidata P217. Find-spot: Fort Julien, Wikidata Q3077898 coordinates; the stele was probably originally set up in a temple, possibly at Sais, per Wikipedia, so madeIn records the find-spot."
+ },
+ "object": {
+  "year": -196,
+  "yearStart": -196,
+  "yearEnd": -196,
+  "dateLabel": "196 BCE (Ptolemaic period)",
+  "madeIn": {
+   "name": "Fort Julien near Rashid (Rosetta), Nile Delta",
+   "region": "Beheira Governorate",
+   "country": "Egypt",
+   "lat": 31.43972,
+   "lon": 30.38944,
+   "wikidataQid": "Q3077898"
+  },
+  "location": {
+   "name": "British Museum, London",
+   "country": "United Kingdom",
+   "institution": "British Museum",
+   "inventoryNumber": "EA24"
+  },
+  "culture": "Ptolemaic Egypt",
+  "medium": "Granodiorite stele, incised",
+  "materials": [
+   "granodiorite"
+  ],
+  "subjects": [
+   "hieroglyphs",
+   "Demotic script",
+   "Greek script",
+   "royal decree",
+   "Ptolemy V"
+  ],
+  "widthCm": 75.7,
+  "heightCm": 112.3,
+  "depthCm": 28.4,
+  "weightKg": 760,
+  "creator": null,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Rosetta_Stone",
+  "wikidataQid": "Q48584",
+  "description": "A broken granodiorite stele carrying a priestly decree issued at Memphis in 196 BCE for the young king Ptolemy V, written three times: in Egyptian hieroglyphs, in Demotic and in Greek. Found by French soldiers in 1799 built into Fort Julien at Rashid, it passed to Britain in 1801 and gave scholars the key to reading Egyptian hieroglyphs.",
+  "facts": [
+   "Found in July 1799 by Pierre-François Bouchard during the French campaign in Egypt and ceded to Britain under the Capitulation of Alexandria in 1801.",
+   "Measures 112.3 by 75.7 by 28.4 cm and weighs about 760 kg; the stone is granodiorite, not basalt as long assumed.",
+   "Jean-François Champollion announced the decipherment of the Egyptian scripts in 1822, building on Thomas Young's work."
+  ]
+ },
+ "alternatives": [
+  {
+   "fileTitle": "File:Stein von Rosetta -196.JPG",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Stein_von_Rosetta_-196.JPG",
+   "licenseName": "CC BY-SA 3.0",
+   "author": "Aiwok",
+   "size": "2621x3953",
+   "note": "Frontal in the gallery; dim lighting and a visible background."
+  },
+  {
+   "fileTitle": "File:Rosetta Stone, British Museum.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/3/35/Rosetta_Stone%2C_British_Museum.jpg",
+   "licenseName": "CC BY 4.0",
+   "author": "APK",
+   "size": "2133x2482",
+   "note": "CC BY (no SA) but shot through the case with visitors reflected."
+  }
+ ],
+ "fallbackWidthM": 0.8,
+ "genre": [
+  "stele",
+  "inscription"
+ ],
+ "tags": [
+  "ptolemaic",
+  "hieroglyphs",
+  "decipherment"
+ ],
+ "periodSlug": "ancient-egypt",
+ "importance": 1.0
+}

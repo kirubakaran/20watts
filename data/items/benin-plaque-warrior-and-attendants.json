@@ -1,0 +1,106 @@
+{
+ "slug": "benin-plaque-warrior-and-attendants",
+ "title": "Plaque with Warrior and Attendants",
+ "titleOriginal": null,
+ "kind": "image",
+ "source": {
+  "type": "commons",
+  "fileTitle": "File:Plaque- Warrior and Attendants MET DT1231.jpg",
+  "curid": 55983942,
+  "url": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Plaque-_Warrior_and_Attendants_MET_DT1231.jpg",
+  "width": 2978,
+  "height": 3722,
+  "bytes": 2564487,
+  "mime": "image/jpeg",
+  "licenseName": "CC0 1.0",
+  "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "author": "The Metropolitan Museum of Art (Open Access photograph DT1231)",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:Plaque-_Warrior_and_Attendants_MET_DT1231.jpg",
+  "notes": "Met Open Access studio photograph on a plain grey ground, donated to Commons by the Met; the same file is served by the Met at https://images.metmuseum.org/CRDImages/ao/original/DT1231.jpg (object 316393, a Met highlight). Title, date 'ca. 1540–70', medium, dimensions, culture, geography and credit line from the Met collection API; Wikidata Q29384362 dates it more broadly to the 16th–17th century. The Met web page, which carries the object-specific provenance chain, returned HTTP 429 on every attempt, so the chain before the 1990 Perls gift is not confirmed here; the 1897 context is from en.wikipedia 'Benin Bronzes'. Coordinates are Benin City (Wikidata Q320704), seat of the royal court where the brass-casting guild worked."
+ },
+ "object": {
+  "year": 1555,
+  "yearStart": 1540,
+  "yearEnd": 1570,
+  "dateLabel": "ca. 1540–70",
+  "madeIn": {
+   "name": "Benin City (royal court of the Kingdom of Benin)",
+   "region": "Edo State",
+   "country": "Nigeria",
+   "lat": 6.3176,
+   "lon": 5.6145,
+   "wikidataQid": "Q320704"
+  },
+  "location": {
+   "name": "The Metropolitan Museum of Art",
+   "country": "United States",
+   "institution": "The Metropolitan Museum of Art, New York (Michael C. Rockefeller Wing)",
+   "inventoryNumber": "1990.332"
+  },
+  "culture": "Edo peoples, Court of Benin",
+  "movement": "Benin court art",
+  "medium": "Cast brass (lost-wax)",
+  "materials": [
+   "brass"
+  ],
+  "subjects": [
+   "warrior chief",
+   "attendants",
+   "shields",
+   "ceremonial sword",
+   "coral-bead regalia",
+   "river-leaf background pattern"
+  ],
+  "widthCm": 38.1,
+  "heightCm": 47.6,
+  "depthCm": 10.8,
+  "weightKg": null,
+  "creator": {
+   "name": "Ìgùn Ẹ́rọ̀nwwọ̀n (royal brass-casting guild) artists",
+   "role": "caster",
+   "birthYear": null,
+   "deathYear": null,
+   "wikidataQid": null
+  },
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Benin_Bronzes",
+  "wikidataQid": "Q29384362",
+  "description": "A high-relief brass plaque from the royal palace of Benin showing a warrior chief in coral-bead regalia, flanked by two shield-bearing soldiers and smaller attendants, against a background incised with the river-leaf pattern. Plaques of this kind were cast by the royal brass guild around 1540–70 and nailed to the pillars of the palace. Benin's palace plaques and heads were seized by the British punitive expedition of 1897 and dispersed to museums and collectors; this one entered the Metropolitan Museum as a gift of Mr. and Mrs. Klaus G. Perls in 1990.",
+  "facts": [
+   "Cast in brass by the lost-wax method by the Ìgùn Ẹ́rọ̀nwwọ̀n guild of the Oba's court, about 1540–70.",
+   "The British expedition of 1897 removed thousands of objects from Benin City; the British Museum alone acquired 203 plaques in 1898.",
+   "Height 47.6 cm, width 38.1 cm, depth 10.8 cm; the holes at the corners held the nails that fixed it to a palace pillar."
+  ]
+ },
+ "alternatives": [
+  {
+   "fileTitle": "File:Ùhúnmwèlaò (head of an ọ́bà), front view.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/a/a0/%C3%99h%C3%BAnmw%C3%A8la%C3%B2_%28head_of_an_%E1%BB%8D%CC%81b%C3%A0%29%2C_front_view.jpg",
+   "licenseName": "CC0 1.0",
+   "width": 1697,
+   "height": 2000,
+   "author": "The Metropolitan Museum of Art (Open Access, DP231468)",
+   "note": "Commemorative head of an Oba, early 15th–mid 16th century, Met 1979.206.86; clean studio shot but under 2000 px."
+  },
+  {
+   "fileTitle": "File:British Museum Room 25 Head of an Oba 19th century 17022019 5122.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/b/b6/British_Museum_Room_25_Head_of_an_Oba_19th_century_17022019_5122.jpg",
+   "licenseName": "CC0 1.0",
+   "width": 2482,
+   "height": 4333,
+   "author": "Vassil (own work)",
+   "note": "Head of an Oba, British Museum Af1944,04.1; 19th century, so outside the 16th–17th-century brief; gallery photograph."
+  }
+ ],
+ "fallbackWidthM": 0.45,
+ "genre": [
+  "relief",
+  "sculpture"
+ ],
+ "tags": [
+  "benin",
+  "brass",
+  "edo"
+ ],
+ "periodSlug": "benin-kingdom",
+ "importance": 0.9
+}

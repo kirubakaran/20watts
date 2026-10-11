@@ -1,0 +1,86 @@
+{
+ "title": "The Lorenz attractor",
+ "kind": "sim",
+ "importance": 0.85,
+ "genre": [
+  "mathematics",
+  "physics"
+ ],
+ "tags": [
+  "chaos",
+  "dynamical systems",
+  "weather",
+  "simulation"
+ ],
+ "baseHeight": 0,
+ "source": {
+  "type": "procedural",
+  "program": "lorenz",
+  "params": {
+   "sigma": 10,
+   "rho": 28,
+   "beta": 2.6667,
+   "speed": 1.2
+  },
+  "bounds": {
+   "width": 1.8,
+   "height": 2.1,
+   "depth": 2.4
+  },
+  "licenseName": "CC0 1.0",
+  "author": "20watts",
+  "notes": "Run live by src/sims/lorenz.ts: a long run of the equations is drawn once as a tube, and a point integrates them with fourth-order Runge-Kutta in real time, trailing its path. The program is the museum's own, CC0."
+ },
+ "object": {
+  "year": 1963,
+  "dateLabel": "1963",
+  "madeIn": {
+   "name": "Cambridge",
+   "region": "Massachusetts",
+   "country": "United States",
+   "lat": 42.36,
+   "lon": -71.092,
+   "wikidataQid": "Q49111"
+  },
+  "location": {
+   "name": "Everywhere it is computed",
+   "country": null,
+   "institution": null
+  },
+  "culture": null,
+  "medium": "Three differential equations, integrated live",
+  "materials": [],
+  "subjects": [
+   "chaos",
+   "convection",
+   "dynamical systems"
+  ],
+  "creator": {
+   "name": "Edward Norton Lorenz",
+   "role": "meteorologist",
+   "birthYear": 1917,
+   "deathYear": 2008,
+   "wikidataQid": "Q174808"
+  },
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Lorenz_system",
+  "wikidataQid": "Q899844",
+  "description": "Three equations in three variables, boiled down by Edward Lorenz from a model of air rising in a heated layer. Their solutions never settle and never repeat, yet they never leave this shape of two wings, circling one and then, unpredictably, crossing to the other. Lorenz found in 1961 that restarting a weather computation from rounded-off numbers gave a completely different forecast: tiny differences grow exponentially, so a system can be fully determined and still unpredictable. His 1963 paper, Deterministic Nonperiodic Flow, is where chaos begins as a science, and the attractor is its emblem.\n\nThe dark tube is a long run of the equations. The red point is flying them now, as you watch and not from a recording, from a slightly different start, and you can watch it choose a wing.",
+  "facts": [
+   "The butterfly effect takes its name from a 1972 talk of Lorenz's: could a butterfly's wings in Brazil set off a tornado in Texas?",
+   "The attractor has fractional dimension, about 2.06.",
+   "Lorenz's 1963 paper was cited fewer than ten times in its first decade.",
+   "Warwick Tucker proved in 2002 that the attractor Lorenz saw on his screen really exists."
+  ],
+  "month": null,
+  "day": null,
+  "yearStart": null,
+  "yearEnd": null,
+  "weightKg": null,
+  "widthCm": null,
+  "heightCm": null,
+  "depthCm": null
+ },
+ "slug": "lorenz-attractor",
+ "flat": false,
+ "periodSlug": null
+}

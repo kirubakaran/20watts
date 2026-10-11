@@ -1,0 +1,107 @@
+{
+ "slug": "fan-kuan-travelers-among-mountains-and-streams",
+ "title": "Travelers Among Mountains and Streams",
+ "titleOriginal": "谿山行旅圖",
+ "kind": "image",
+ "source": {
+  "type": "commons",
+  "fileTitle": "File:谿山行旅图轴.溪山行旅图.宋.范宽.绢本浅设色.台北故宫博物院藏.jpg",
+  "curid": 140519854,
+  "url": "https://upload.wikimedia.org/wikipedia/commons/b/b1/%E8%B0%BF%E5%B1%B1%E8%A1%8C%E6%97%85%E5%9B%BE%E8%BD%B4.%E6%BA%AA%E5%B1%B1%E8%A1%8C%E6%97%85%E5%9B%BE.%E5%AE%8B.%E8%8C%83%E5%AE%BD.%E7%BB%A2%E6%9C%AC%E6%B5%85%E8%AE%BE%E8%89%B2.%E5%8F%B0%E5%8C%97%E6%95%85%E5%AE%AB%E5%8D%9A%E7%89%A9%E9%99%A2%E8%97%8F.jpg",
+  "width": 11105,
+  "height": 24176,
+  "bytes": 71898645,
+  "mime": "image/jpeg",
+  "licenseName": "Public domain",
+  "licenseUrl": "https://commons.wikimedia.org/wiki/Template:PD-art",
+  "author": "Fan Kuan (painter); scan via shuge.org from the National Palace Museum open data",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:谿山行旅图轴.溪山行旅图.宋.范宽.绢本浅设色.台北故宫博物院藏.jpg",
+  "notes": "Very large (11105 x 24176 px, 72 MB) scan of the whole hanging scroll including the silk mounting and the Qianlong-era title slip; PD-Art of a c. 1000 painting. The 800 px preview was checked and is clean. Dimensions 206.3 x 103.3 cm, dates (1000–1020) and NPM inventory 故畫000826 from Wikidata Q15907822 and zh.wikipedia '谿山行旅圖'. Fan Kuan's dates from en.wikipedia (c. 960 – c. 1030; Wikidata gives 956–1026, zh.wikipedia c. 950 – c. 1032). Place of painting is not recorded; madeIn uses the painter's native Huayuan (today Yaozhou District, Tongchuan, Shaanxi, per zh.wikipedia), coordinates from Wikidata Q1201033. No English Wikipedia article exists for the painting, so the painter's article is linked."
+ },
+ "object": {
+  "year": 1000,
+  "yearStart": 1000,
+  "yearEnd": 1020,
+  "dateLabel": "c. 1000 (Northern Song)",
+  "madeIn": {
+   "name": "Huayuan (Yaozhou District, Tongchuan)",
+   "region": "Shaanxi",
+   "country": "China",
+   "lat": 34.91378,
+   "lon": 108.97299,
+   "wikidataQid": "Q1201033"
+  },
+  "location": {
+   "name": "National Palace Museum",
+   "country": "Taiwan",
+   "institution": "National Palace Museum, Taipei",
+   "inventoryNumber": "故畫000826"
+  },
+  "culture": "Chinese, Northern Song",
+  "movement": "Northern Song monumental landscape (Northern Landscape style)",
+  "medium": "Hanging scroll, ink and light colour on silk",
+  "materials": [
+   "silk",
+   "ink",
+   "mineral pigments"
+  ],
+  "subjects": [
+   "mountains",
+   "waterfall",
+   "travellers with mules",
+   "temple roofs among trees",
+   "landscape"
+  ],
+  "widthCm": 103.3,
+  "heightCm": 206.3,
+  "depthCm": null,
+  "weightKg": null,
+  "creator": {
+   "name": "Fan Kuan",
+   "role": "painter",
+   "birthYear": 960,
+   "deathYear": 1030,
+   "wikidataQid": "Q1278559"
+  },
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Fan_Kuan",
+  "wikidataQid": "Q15907822",
+  "description": "A single cliff face rises almost the full height of the silk, with a thread of waterfall at its right and a mule train and travellers reduced to specks along the stream at its foot. Fan Kuan, a recluse who studied the mountains of Shaanxi directly, painted it around 1000; it is the defining work of Northern Song monumental landscape. The painter's signature, hidden among the foliage at lower right, was only rediscovered in 1958.",
+  "facts": [
+   "Ink and light colour on silk, 206.3 by 103.3 cm, in the National Palace Museum, Taipei.",
+   "Fan Kuan's half-hidden signature in the leaves at the lower right was rediscovered in 1958.",
+   "The Ming painter-critic Dong Qichang is said to have called it the finest painting of the Song dynasty."
+  ]
+ },
+ "alternatives": [
+  {
+   "fileTitle": "File:Fan Kuan - Travelers Among Mountains and Streams - Google Art Project.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Fan_Kuan_-_Travelers_Among_Mountains_and_Streams_-_Google_Art_Project.jpg",
+   "licenseName": "Public domain",
+   "width": 2809,
+   "height": 5633,
+   "author": "Google Art Project / National Palace Museum",
+   "note": "Smaller (6.8 MB) scan of the same scroll with mounting; easier to fetch."
+  },
+  {
+   "fileTitle": "File:Guo Xi - Early Spring (large).jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/8/86/Guo_Xi_-_Early_Spring_%28large%29.jpg",
+   "licenseName": "Public domain",
+   "width": 1952,
+   "height": 2839,
+   "author": "Guo Xi; scan from npm.gov.tw",
+   "note": "Different work: Guo Xi, Early Spring (1072), National Palace Museum; painting only, no mounting, under 2000 px wide."
+  }
+ ],
+ "fallbackWidthM": 1.1,
+ "genre": [
+  "landscape",
+  "hanging scroll"
+ ],
+ "tags": [
+  "song dynasty",
+  "shan shui",
+  "chinese painting"
+ ],
+ "periodSlug": "song-dynasty",
+ "importance": 0.95
+}

@@ -1,0 +1,73 @@
+{
+ "slug": "madhava-series",
+ "title": "Madhava's series for π",
+ "kind": "image",
+ "flat": true,
+ "importance": 0.85,
+ "genre": [
+  "equation"
+ ],
+ "periodSlug": null,
+ "tags": [
+  "equation",
+  "mathematics",
+  "India"
+ ],
+ "source": {
+  "type": "typeset",
+  "tex": "\\frac{\\pi}{4} = 1 - \\frac{1}{3} + \\frac{1}{5} - \\frac{1}{7} + \\cdots",
+  "figure": "data/figures/madhava-series.svg",
+  "licenseName": "CC0 1.0",
+  "author": "20watts",
+  "sourcePage": null,
+  "notes": "Typeset by 20watts from the TeX in the record with MathJax, with a figure drawn for this museum; the rendering is CC0, the equation itself is not subject to copyright."
+ },
+ "object": {
+  "year": 1400,
+  "month": null,
+  "day": null,
+  "yearStart": 1380,
+  "yearEnd": 1420,
+  "dateLabel": "c. 1400 (Kerala school)",
+  "madeIn": {
+   "name": "Sangamagrama (Irinjalakuda)",
+   "region": "Kerala",
+   "country": "India",
+   "lat": 10.34,
+   "lon": 76.21,
+   "wikidataQid": null
+  },
+  "location": {
+   "name": null,
+   "country": null,
+   "institution": null,
+   "inventoryNumber": null
+  },
+  "culture": "Indian",
+  "medium": "Equation, typeset",
+  "materials": [],
+  "subjects": [
+   "equation",
+   "mathematics"
+  ],
+  "widthCm": 100,
+  "heightCm": 85,
+  "depthCm": null,
+  "weightKg": null,
+  "creator": {
+   "name": "Madhava of Sangamagrama",
+   "role": "author",
+   "birthYear": 1340,
+   "deathYear": 1425,
+   "wikidataQid": null
+  },
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Madhava_series",
+  "wikidataQid": null,
+  "description": "An infinite sum for π, and the first steps of calculus, from Kerala around 1400. Madhava of Sangamagrama found that the odd fractions, added and subtracted in turn, close in on a quarter of π, and he found the same kind of endless series for the sine and cosine; he even worked out correction terms that gave π to eleven decimal places. His own writings are lost, but his school kept them, in Sanskrit and in Malayalam verse, in Nilakantha's Tantrasangraha of 1501 and Jyeshthadeva's Yuktibhāṣā of about 1530. Europe reached the same series through Gregory in 1671 and Leibniz in 1674, nearly three centuries later.",
+  "facts": [
+   "The series converges painfully slowly, a few hundred terms for two decimal places; Madhava's correction terms fixed that, which is why his school had π to eleven places.",
+   "The Yuktibhāṣā, written in Malayalam, gives proofs as well as results, and is counted among the first texts of calculus anywhere.",
+   "The Kerala school ran for two centuries, from Madhava to Achyuta Pisharati around 1600, in a cluster of villages along the Nila river."
+  ]
+ }
+}

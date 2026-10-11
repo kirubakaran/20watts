@@ -1,0 +1,96 @@
+{
+ "slug": "darwin-i-think-tree-sketch",
+ "title": "Darwin's 'I think' sketch",
+ "titleOriginal": null,
+ "kind": "image",
+ "flat": true,
+ "importance": 0.9,
+ "genre": [
+  "manuscript",
+  "notebook",
+  "biology",
+  "diagram"
+ ],
+ "periodSlug": null,
+ "tags": [
+  "biology",
+  "evolution",
+  "Darwin",
+  "notebook",
+  "sketch",
+  "tree of life",
+  "England"
+ ],
+ "source": {
+  "type": "commons",
+  "fileTitle": "File:Darwin Tree 1837.png",
+  "curid": 36638808,
+  "url": "https://upload.wikimedia.org/wikipedia/commons/1/10/Darwin_Tree_1837.png",
+  "width": 1390,
+  "height": 2265,
+  "bytes": 4423231,
+  "mime": "image/png",
+  "licenseName": "Public domain",
+  "licenseUrl": null,
+  "author": "Charles Darwin; image from Darwin Online (Cambridge University Library, DAR 121)",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:Darwin_Tree_1837.png",
+  "notes": "The whole of page 36 of Notebook B, the first 'transmutation' notebook, as photographed for Darwin Online (darwin-online.org.uk, item CUL-DAR121, page sequence 1); the page number '36' is visible top right, 'I think' top left, the branching sketch with '1' at its base and the branches labelled A, B, C, D. Commons wikitext licence template: {{PD-old-70-1923}}; extmetadata: LicenseShortName = 'Public domain', License = 'pd', Copyrighted = 'False', Artist = 'Charles Darwin' (Creator template), Credit = 'Page 36 of Notebook B [Transmutation of Species (1837-1838)], \"commenced... July 1837\"; from Darwin Online', DateTimeOriginal = '1837'; categories: PD-old-70-expired, CC-PD-Mark, Notebooks by Charles Darwin, Phylogenetic trees. Other versions on Commons are small crops from a 1990s web page (File:Darwins first tree.jpg, 695 x 616) or a 3876 x 3936 crop of the same photograph (File:Darwin Tree 1837 cropped.png, curid 128583433, 12 MB) showing only the sketch, not the page. Physical size is an estimate: Darwin's transmutation notebooks are small leather-bound pocket books of roughly 16.5 x 10 cm, and the figures below follow the image's aspect. HEAD 200, content-length 4423231, image/png."
+ },
+ "object": {
+  "year": 1837,
+  "month": 7,
+  "day": null,
+  "yearStart": null,
+  "yearEnd": null,
+  "dateLabel": "July 1837",
+  "madeIn": {
+   "name": "London (36 Great Marlborough Street)",
+   "region": "England",
+   "country": "United Kingdom",
+   "lat": 51.5137,
+   "lon": -0.1391,
+   "wikidataQid": "Q84"
+  },
+  "location": {
+   "name": "Cambridge",
+   "country": "United Kingdom",
+   "institution": "Cambridge University Library, Darwin Archive",
+   "inventoryNumber": "DAR 121, p. 36"
+  },
+  "culture": null,
+  "medium": "Pen and ink in a leather-bound pocket notebook",
+  "materials": [
+   "paper",
+   "ink"
+  ],
+  "subjects": [
+   "evolution",
+   "common descent",
+   "extinction",
+   "phylogenetic tree",
+   "species",
+   "natural history"
+  ],
+  "widthCm": 10,
+  "heightCm": 16.3,
+  "depthCm": null,
+  "weightKg": null,
+  "creator": {
+   "name": "Charles Darwin",
+   "role": "author",
+   "birthYear": 1809,
+   "deathYear": 1882,
+   "wikidataQid": "Q1035"
+  },
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Tree_of_life_(biology)",
+  "wikidataQid": null,
+  "description": "'I think', and then a spindly branching diagram: a page from the pocket notebook Darwin opened in July 1837, nine months after the Beagle brought him home. He was twenty-eight and writing only for himself. The '1' at the base is a common ancestor; the branches ending in cross-bars are living species, the bare ones have died out. Underneath he reasons it through: if one ancestor is to give rise to as many living forms as exist now, and to groups of similar species, then extinction must be part of the process, and the gaps between living genera, 'A and B', 'C and B', record how long ago their lines parted. It is the first drawing of the tree of life as a genealogy rather than a ladder of perfection, and it came twenty-two years before On the Origin of Species, whose single illustration is a tidied version of this sketch. Darwin kept the notebooks all his life; this one is now in Cambridge University Library. It is in Notebook B, the tree of life.",
+  "facts": [
+   "Notebook B is the first of a series Darwin lettered B to E on the 'transmutation of species', kept from 1837 to 1839.",
+   "Darwin did not read Malthus, whose essay on population gave him the mechanism of natural selection, until September 1838, after this sketch.",
+   "The notebook measures about the size of a hand and travelled in Darwin's pocket; some pages were later cut out and reused.",
+   "The one figure in On the Origin of Species (1859) is a branching diagram descended from this page."
+  ]
+ },
+ "scale": 6
+}

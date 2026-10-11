@@ -1,0 +1,93 @@
+{
+ "slug": "x-ray-turtle-kakadu",
+ "title": "X-ray turtle, Kakadu",
+ "titleOriginal": null,
+ "kind": "image",
+ "importance": 0.8,
+ "genre": [
+  "rock art",
+  "cave painting"
+ ],
+ "tags": [
+  "prehistoric",
+  "rock art",
+  "australia",
+  "kakadu",
+  "x-ray style"
+ ],
+ "periodSlug": "aboriginal-rock-art",
+ "flat": false,
+ "baseHeight": null,
+ "source": {
+  "type": "commons",
+  "curid": 845223,
+  "fileTitle": "File:Rock-painting-turtle.jpg",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/7/74/Rock-painting-turtle.jpg",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:Rock-painting-turtle.jpg",
+  "width": 3038,
+  "height": 2012,
+  "bytes": 877420,
+  "mime": "image/jpeg",
+  "licenseName": "Public domain",
+  "licenseUrl": null,
+  "author": "PanBK",
+  "notes": "Import from Wikimedia Commons; photograph tagged PD-Art there, also released under GFDL by the photographer"
+ },
+ "object": {
+  "year": 500,
+  "month": null,
+  "day": null,
+  "yearStart": -1500,
+  "yearEnd": 1900,
+  "dateLabel": "c. 500 CE",
+  "madeIn": {
+   "name": "Kakadu",
+   "region": "Northern Territory",
+   "country": "Australia",
+   "lat": -12.67,
+   "lon": 132.85,
+   "wikidataQid": "Q189657"
+  },
+  "location": {
+   "name": "Kakadu",
+   "region": "Northern Territory",
+   "country": "Australia",
+   "lat": -12.67,
+   "lon": 132.85,
+   "wikidataQid": "Q189657",
+   "institution": "Kakadu National Park",
+   "inventoryNumber": null
+  },
+  "creator": {
+   "name": "Unknown Bininj painters",
+   "role": "painter",
+   "birthYear": null,
+   "deathYear": null,
+   "wikidataQid": null
+  },
+  "culture": "Aboriginal Australian, Arnhem Land",
+  "movement": null,
+  "medium": "ochre on sandstone",
+  "materials": [
+   "ochre",
+   "white clay"
+  ],
+  "subjects": [
+   "turtle",
+   "internal organs"
+  ],
+  "widthCm": null,
+  "heightCm": null,
+  "depthCm": null,
+  "weightKg": null,
+  "description": "A long-necked turtle painted in the X-ray style of western Arnhem Land, with its backbone and organs drawn inside the outline. The X-ray convention appears in Kakadu's galleries over the last two or three thousand years, at the end of a painting tradition that goes back more than 20,000 years, and shows the food animals of the wetlands: barramundi, catfish, goannas, wallabies and turtles.",
+  "facts": [
+   "Kakadu's rock art tradition is one of the longest continuous ones in the world, and the Bininj and Mungguy custodians still know the stories behind many paintings.",
+   "X-ray paintings show what you learn by butchering the animal: which parts are eaten and how.",
+   "Kakadu was listed as a World Heritage Site in 1981 for both its nature and its culture."
+  ],
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Kakadu_National_Park",
+  "wikidataQid": "Q189657"
+ },
+ "fallbackWidthM": 1
+}

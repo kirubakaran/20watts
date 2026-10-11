@@ -1,4 +1,4 @@
-import { ACESFilmicToneMapping, AudioListener, PCFShadowMap, PerspectiveCamera, Scene, Timer, Vector3, WebGLRenderer } from "three";
+import { ACESFilmicToneMapping, AudioListener, type Mesh, PCFShadowMap, PerspectiveCamera, Scene, Timer, Vector3, WebGLRenderer } from "three";
 import { VRButton } from "three/addons/webxr/VRButton.js";
 import type { Collection } from "./data/types";
 import collectionJson from "./data/collection.json";
@@ -84,7 +84,7 @@ scene.add(axisCues);
 // Hops between eras and cells, and jumps to a work.
 const stops = visible.map((a) => {
   const p = layout.placements.get(a.id)!.position;
-  return { id: a.id, x: p.x, z: p.z, footprint: footprintOf(a), overhead: baseHeightOf(a) > 2, threshold: a.display.threshold };
+  return { id: a.id, x: p.x, z: p.z, footprint: footprintOf(a), overhead: baseHeightOf(a) > 2, threshold: a.display.threshold, landmark: !!a.landmark, lift: baseHeightOf(a) };
 });
 const nav = new Navigator(layout, stops);
 // The gateway stands across the spine a few metres before the viewing spot
@@ -174,8 +174,10 @@ const spawnParam = params.get("spawn");
 const atParam = params.get("at");
 if (spawnParam === "start") clearPlace();
 if (spawnParam && spawnParam !== "start") {
-  const [x = 0, z = 0, yawDeg = 0] = spawnParam.split(",").map(Number);
+  // x, z, yaw in degrees (0 faces the future), and pitch in degrees, positive looking up.
+  const [x = 0, z = 0, yawDeg = 0, pitchDeg = 0] = spawnParam.split(",").map(Number);
   player.spawn(x, z, (yawDeg * Math.PI) / 180);
+  if (pitchDeg) player.look(0, (-pitchDeg * Math.PI) / 180);
 } else if (params.has("tour")) {
   tour.start();
 } else if (atParam && nav.goTo(player, resolveAt(atParam))) {
@@ -199,6 +201,55 @@ function resolveAt(at: string): string {
     return lane.reduce((best, a) => (Math.abs(a.date.year - year) < Math.abs(best.date.year - year) ? a : best)).id;
   }
   return at;
+}
+
+// Idle: after twenty seconds without a touch, draw every third frame, so a
+// tab left open does not keep a GPU busy for nothing; the simulations still
+// advance. Never in a headset, where every frame matters.
+const IDLE_AFTER = 20;
+let idleSeconds = 0;
+let frameNo = 0;
+const wake = () => { idleSeconds = 0; };
+for (const ev of ["keydown", "mousemove", "mousedown", "wheel", "touchstart", "pointerdown"]) window.addEventListener(ev, wake, { passive: true });
+
+// ?probe hands the walk script (scripts/dev/walk.mjs) a way to hop the lane
+// and read what the museum is holding and how fast it is drawing.
+const frameMs: number[] = [];
+if (params.has("probe")) {
+  (window as unknown as { __20watts: unknown }).__20watts = {
+    hop: (dir: 1 | -1) => { wake(); return nav.hopEra(player, dir); },
+    goTo: (id: string) => { wake(); return nav.goTo(player, id); },
+    ids: () => visible.map((a) => a.id),
+    titles: () => visible.map((a) => [a.id, a.title]),
+    tour: () => tour.ids,
+    models: () => visible.filter((a) => a.asset.kind === "model" && a.asset.versions[0]?.rungs.length).map((a) => ({ id: a.id, title: a.title, url: a.asset.kind === "model" ? a.asset.versions[0]!.rungs.at(-1)!.url : "" })),
+    eye: () => eye.toArray(),
+    stats: () => {
+      const frames = frameMs.splice(0);
+      const sorted = [...frames].sort((p, q) => p - q);
+      const mem = (performance as unknown as { memory?: { usedJSHeapSize: number; totalJSHeapSize: number } }).memory;
+      return {
+        heapMB: mem ? mem.usedJSHeapSize / 1048576 : null,
+        residentMB: streamer.residentBytes / 1048576,
+        budgetMB: DEFAULT_STREAM.budgetBytes / 1048576,
+        live: streamer.liveCount,
+        geometries: renderer.info.memory.geometries,
+        textures: renderer.info.memory.textures,
+        programs: renderer.info.programs?.length ?? 0,
+        calls: renderer.info.render.calls,
+        triangles: renderer.info.render.triangles,
+        frames: frames.length,
+        frameMsAvg: frames.length ? frames.reduce((a, b) => a + b, 0) / frames.length : null,
+        frameMsP95: sorted.length ? sorted[Math.floor(sorted.length * 0.95)] : null,
+        holders: streamer.report(eye, 3),
+        // Who is drawing the most: renderable objects per exhibit in range, since each is a draw call or more.
+        objects: [...streamer.exhibitsWithin(eye.x, eye.z, 300), ...landmarks]
+          .map((e) => { let n = 0; e.group.traverse((o) => { if ((o as Mesh).isMesh || (o as unknown as { isLine?: boolean }).isLine || (o as unknown as { isPoints?: boolean }).isPoints || (o as unknown as { isSprite?: boolean }).isSprite) n += 1; }); return { id: e.artwork.id, n }; })
+          .sort((p, q) => q.n - p.n).slice(0, 4),
+        labels: (() => { let n = 0; axisCues.traverse((o) => { if ((o as Mesh).isMesh) n += 1; }); return n; })(),
+      };
+    },
+  };
 }
 
 // ?debug logs what the streamer holds, for checking the budget on a device.
@@ -279,6 +330,10 @@ const eye = new Vector3();
 renderer.setAnimationLoop((time) => {
   timer.update(time);
   const dt = Math.min(timer.getDelta(), 0.1);
+  if (frameMs.length < 4096) frameMs.push(dt * 1000);
+  idleSeconds += dt;
+  frameNo += 1;
+  const skipDraw = !renderer.xr.isPresenting && idleSeconds > IDLE_AFTER && frameNo % 3 !== 0;
   player.update(dt);
   grabber.update(dt);
   savePlace(dt);
@@ -296,5 +351,5 @@ renderer.setAnimationLoop((time) => {
     e.setNight(skyState.night);
     e.setPlacards(eye.distanceTo(e.worldCentre) < DEFAULT_STREAM.placardRadius + footprintOf(e.artwork).depth / 2);
   }
-  renderer.render(scene, camera);
+  if (!skipDraw) renderer.render(scene, camera);
 });

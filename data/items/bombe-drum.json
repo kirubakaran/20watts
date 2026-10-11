@@ -1,0 +1,102 @@
+{
+ "slug": "bombe-drum",
+ "title": "Bombe drums",
+ "kind": "image",
+ "source": {
+  "type": "commons",
+  "fileTitle": "File:Bombe Drums and Mounting Plate.jpg",
+  "curid": 14902369,
+  "url": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Bombe_Drums_and_Mounting_Plate.jpg",
+  "width": 2093,
+  "height": 3140,
+  "bytes": 389000,
+  "mime": "image/jpeg",
+  "licenseName": "CC0 1.0",
+  "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "author": "Ted Coles (TedColes)",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:Bombe_Drums_and_Mounting_Plate.jpg",
+  "notes": "REPLICA: this shows drums on the working bombe rebuilt by John Harper's 'Phoenix' team of the BCS Computer Conservation Society (1994–2008), now at The National Museum of Computing on the Bletchley Park estate. All wartime bombes were dismantled after 1945 and no free photograph of a surviving original drum was found on Commons (Category:Bletchley Park Bombe has 62 files, all of the rebuild or wartime prints) or in the Science Museum Group collection; no 3D scan exists on Smithsonian, Met, SMG or Sketchfab. Chosen because it shows one Enigma-equivalent's three drums beside the bare mounting plates with their 104 contacts, which explains the mechanism; photographed 2011 at Bletchley Park. The physical size of a drum is not given by Wikipedia or the museum, so dimensions are null. Dates and mechanism facts from Wikipedia 'Bombe' (first bombe 'Victory' installed 18 March 1940; 108 drum positions; 104 brushes per drum; rebuild switched on 17 July 2008)."
+ },
+ "object": {
+  "year": 1940,
+  "yearStart": 1940,
+  "yearEnd": 1945,
+  "dateLabel": "1940 (original design; drums shown are a 1995–2008 rebuild)",
+  "madeIn": {
+   "name": "Letchworth, Hertfordshire",
+   "region": "Hertfordshire, England",
+   "country": "United Kingdom",
+   "lat": 51.978,
+   "lon": -0.23,
+   "wikidataQid": "Q19801"
+  },
+  "location": {
+   "name": "The National Museum of Computing, Bletchley Park",
+   "country": "United Kingdom",
+   "institution": "The National Museum of Computing",
+   "inventoryNumber": null
+  },
+  "culture": "British",
+  "medium": "Electromechanical cipher-breaking machine component: Bakelite and metal rotor drum with 104 wire brushes",
+  "materials": [
+   "Bakelite",
+   "brass",
+   "steel",
+   "copper wire"
+  ],
+  "subjects": [
+   "cryptography",
+   "Second World War",
+   "computing",
+   "Enigma"
+  ],
+  "widthCm": null,
+  "heightCm": null,
+  "depthCm": null,
+  "weightKg": null,
+  "creator": {
+   "name": "Alan Turing",
+   "role": "designer (with Gordon Welchman's diagonal board; engineered by Harold Keen, British Tabulating Machine Company)",
+   "birthYear": 1912,
+   "deathYear": 1954,
+   "wikidataQid": "Q7251"
+  },
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Bombe",
+  "wikidataQid": "Q480476",
+  "description": "The bombe was the electromechanical machine with which Bletchley Park found the daily settings of German Enigma cipher machines. Designed by Alan Turing, refined by Gordon Welchman and engineered by Harold Keen at the British Tabulating Machine Company, each bombe carried 108 spinning drums, every drum wired to mimic one Enigma rotor. The drums shown here belong to the working reconstruction completed at Bletchley Park in 2008; the wartime machines were all broken up after the war. These are from the rebuilt bombe at Bletchley Park.",
+  "facts": [
+   "The first bombe, named 'Victory', was installed in Hut 1 at Bletchley Park on 18 March 1940.",
+   "Each bombe was about 7 ft wide, 6 ft 6 in tall and 2 ft deep, weighed about a ton, and had 108 positions for drums arranged in 36 triplets.",
+   "Each drum carried 104 wire brushes in four concentric circles of 26, giving two sets of input and output contacts on its mounting plate."
+  ]
+ },
+ "alternatives": [
+  {
+   "title": "Commons photo: drums on the rebuilt bombe in motion (upper 'fast' drum blurred)",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/6/60/Rotating_upper_bombe_drum.jpg",
+   "licenseName": "CC0 1.0",
+   "author": "TedColes",
+   "notes": "curid 14902742, 2736x4104, 473 kB; six drums front-on, green/yellow/red; replica."
+  },
+  {
+   "title": "Commons photo: wire brushes on the back of one rebuilt bombe drum",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/5/57/WireBrushesOnBombeDrum.jpg",
+   "licenseName": "CC0 1.0",
+   "author": "Ted Coles",
+   "notes": "curid 15464156, 3264x2176, 1.3 MB; close-up of a single drum's brush rings; replica."
+  }
+ ],
+ "fallbackWidthM": 0.6,
+ "genre": [
+  "machine part",
+  "cryptography"
+ ],
+ "tags": [
+  "bombe",
+  "enigma",
+  "bletchley park",
+  "replica"
+ ],
+ "periodSlug": "modern",
+ "importance": 0.8
+}

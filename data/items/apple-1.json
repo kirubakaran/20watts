@@ -1,0 +1,96 @@
+{
+ "slug": "apple-1",
+ "title": "Apple I",
+ "titleOriginal": null,
+ "kind": "image",
+ "importance": 0.9,
+ "genre": [
+  "computer"
+ ],
+ "tags": [
+  "apple",
+  "personal computer",
+  "wozniak"
+ ],
+ "periodSlug": "modern",
+ "flat": false,
+ "baseHeight": null,
+ "source": {
+  "type": "commons",
+  "curid": 159435417,
+  "fileTitle": "File:Apple Computer 1 (Apple I) from Smithsonian National Museum of American History.png",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Apple_Computer_1_%28Apple_I%29_from_Smithsonian_National_Museum_of_American_History.png",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:Apple_Computer_1_(Apple_I)_from_Smithsonian_National_Museum_of_American_History.png",
+  "width": 6409,
+  "height": 3752,
+  "bytes": 46390079,
+  "mime": "image/png",
+  "licenseName": "CC0 1.0",
+  "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "author": "Blakespot",
+  "notes": "Photograph of the real Apple I board (NMAH 2015.0001.01) on its wooden base, by Blakespot, CC0. Straight-on, evenly lit, sharp photograph of the complete NMAH board (2015.0001.01) on its wooden base; the 'Apple Computer 1 / Palo Alto, Ca. Copyright 1976' silkscreen is legible. Best immediate fallback if the model is not downloaded; use kind image with location NMAH, Washington DC."
+ },
+ "object": {
+  "year": 1976,
+  "month": 7,
+  "day": null,
+  "yearStart": 1976,
+  "yearEnd": 1977,
+  "dateLabel": "1976",
+  "madeIn": {
+   "name": "Palo Alto",
+   "region": "California",
+   "country": "United States",
+   "lat": 37.4444,
+   "lon": -122.16,
+   "wikidataQid": "Q47265"
+  },
+  "location": {
+   "name": "Washington, D.C.",
+   "region": null,
+   "country": "United States",
+   "lat": null,
+   "lon": null,
+   "wikidataQid": null,
+   "institution": "National Museum of American History, Smithsonian Institution",
+   "inventoryNumber": "2015.0001.01"
+  },
+  "creator": {
+   "name": "Steve Wozniak",
+   "role": "designer",
+   "birthYear": 1950,
+   "deathYear": null,
+   "wikidataQid": "Q483382"
+  },
+  "culture": "American",
+  "movement": null,
+  "medium": "Single-board microcomputer: printed circuit board with integrated circuits",
+  "materials": [
+   "printed circuit board",
+   "silicon integrated circuits",
+   "electrolytic capacitors",
+   "wood (base, as sold by some dealers)"
+  ],
+  "subjects": [
+   "personal computer",
+   "microcomputer",
+   "Apple",
+   "Silicon Valley",
+   "computing history",
+   "Homebrew Computer Club"
+  ],
+  "widthCm": null,
+  "heightCm": null,
+  "depthCm": null,
+  "weightKg": null,
+  "description": "The Apple Computer 1 is an 8-bit personal computer designed by Steve Wozniak and sold from July 1976 by the newly founded Apple Computer Company, with Steve Jobs handling the business side. Unlike most hobbyist computers of its day it was delivered as a fully assembled and tested circuit board, built around a MOS 6502 processor; the buyer still had to add a power supply, keyboard, cassette recorder and television. The board shown here is an artist's reconstruction of a complete Apple I set-up, including the optional wooden case and Apple-1 Operation Manual.",
+  "facts": [
+   "Sold for $666.66; Wozniak chose the price because he liked repeating digits.",
+   "Only about 175 to 200 boards were made before the Apple II replaced it; production ended on 30 September 1977.",
+   "Ran a MOS 6502 processor at 1 MHz with 4 KB of RAM (expandable to 8 KB) and displayed 40 x 24 characters on a television."
+  ],
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Apple_I",
+  "wikidataQid": "Q18981"
+ },
+ "fallbackWidthM": 1.4
+}

@@ -1,0 +1,109 @@
+{
+ "slug": "sun-juxian-zhongchen",
+ "title": "Sun Juxian sings Peking opera",
+ "titleOriginal": null,
+ "kind": "image",
+ "importance": 0.8,
+ "genre": [
+  "music"
+ ],
+ "tags": [
+  "music",
+  "China",
+  "Peking opera",
+  "recording",
+  "gramophone"
+ ],
+ "periodSlug": null,
+ "flat": false,
+ "baseHeight": null,
+ "source": {
+  "type": "user-upload",
+  "curid": null,
+  "fileTitle": null,
+  "url": "https://archive.org/details/SunJuxianzhongchenbupasis1905VictorRecordC54719B10inch",
+  "sourcePage": "https://archive.org/details/SunJuxianzhongchenbupasis1905VictorRecordC54719B10inch",
+  "width": 448,
+  "height": 448,
+  "bytes": 76229,
+  "mime": "image/jpeg",
+  "licenseName": "Public domain",
+  "licenseUrl": null,
+  "author": "Victor China label (54719-B); photograph by the Internet Archive contributor, CC0",
+  "notes": "The record's own label, since no public-domain portrait exists: Victor's later ten-inch China reissue 54719-B of the 1905 recording, photographed by the contributor who uploaded the transfer (item file B.jpg, about 450 x 450, CC0)."
+ },
+ "object": {
+  "year": 1905,
+  "month": null,
+  "day": null,
+  "yearStart": null,
+  "yearEnd": null,
+  "dateLabel": "China, 1905",
+  "madeIn": {
+   "name": "Shanghai",
+   "region": null,
+   "country": "China",
+   "lat": 31.2304,
+   "lon": 121.4737,
+   "wikidataQid": null
+  },
+  "location": {
+   "name": null,
+   "region": null,
+   "country": null,
+   "lat": null,
+   "lon": null,
+   "wikidataQid": null,
+   "institution": null,
+   "inventoryNumber": null
+  },
+  "creator": {
+   "name": "Sun Juxian",
+   "role": "singer",
+   "birthYear": 1841,
+   "deathYear": 1931,
+   "wikidataQid": null
+  },
+  "culture": "Chinese",
+  "movement": null,
+  "medium": "Acoustic 78 rpm gramophone recording; a xipi aria of the Peking opera",
+  "materials": [
+   "shellac"
+  ],
+  "subjects": [
+   "music",
+   "Peking opera",
+   "jingju",
+   "sound recording"
+  ],
+  "widthCm": null,
+  "heightCm": null,
+  "depthCm": null,
+  "weightKg": null,
+  "description": "One of the three great old-man voices of the Peking opera, recorded at sixty-four when the gramophone first reached China. Sun Juxian was, with Tan Xinpei and Wang Guifen, among the laosheng who fixed the mature style of the jingju in the last decades of the Qing; he had been a soldier before he was a singer, and his delivery kept something of the parade ground. 'Zhongchen bu pa si', a loyal minister does not fear death, is a xipi aria, the brighter of the opera's two melodic modes, sung over the jinghu fiddle. Victor's first expedition to China cut it in 1905; what survives is a later Victor reissue, re-recorded from a worn disc, and the hiss is the price of hearing him at all.",
+  "facts": [
+   "Victor's 1905 Chinese catalogue was the first commercial recording of the Peking opera.",
+   "The laosheng role, the dignified older man, is sung in a natural voice, unlike the falsetto dan.",
+   "He lived to ninety, long enough to see Mei Lanfang make the opera a world art."
+  ],
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Sun_Juxian",
+  "wikidataQid": null
+ },
+ "fallbackWidthM": 0.45,
+ "order": 2,
+ "audio": {
+  "type": "internet-archive",
+  "url": "https://archive.org/download/SunJuxianzhongchenbupasis1905VictorRecordC54719B10inch/Sun%20Juxian%E3%80%8Azhongchenbupasi%E3%80%8B1905Victor%20Record%20C54719-B%EF%BC%8810inch%EF%BC%89.mp3",
+  "bytes": 2841408,
+  "mime": "audio/mpeg",
+  "seconds": 177.1,
+  "start": 0,
+  "excerptSeconds": null,
+  "performers": "Sun Juxian, laosheng, with the jinghu fiddle and percussion of the Peking opera, recorded by Victor's first expedition to China in 1905; this transfer is from Victor's later ten-inch reissue, 54719-B, speed-corrected.",
+  "author": "Sun Juxian, voice, with jinghu; Victor Talking Machine Company, China, 1905; from the reissue Victor 54719-B",
+  "licenseName": "Public domain",
+  "licenseUrl": null,
+  "sourcePage": "https://archive.org/details/SunJuxianzhongchenbupasis1905VictorRecordC54719B10inch",
+  "notes": "Public domain in the United States: the recording was first published before 1926 (Music Modernization Act schedule, as of 2026) and the composition before 1931 or is traditional. The aria is traditional. Internet Archive item tagged CC0 by the uploader; the 1905 date rests on the uploader and on Victor's China series numbering, and the transfer is a later dub of the reissue, so the sound is rougher than the others here."
+ }
+}

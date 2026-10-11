@@ -42,12 +42,18 @@ export const TOUR: Stop[] = [
   { id: "usr-coimbatore-thayi-tevaram", line: "A Tamil hymn twelve centuries old, sung in 1910 by Coimbatore Thayi, the first Tamil singer the gramophone made famous. Come close and it plays." },
   { id: "wm-22628920", line: "Monet's water lilies, in the room he made them for. Walk to the middle and turn: the pond goes all the way round, as he asked." },
   { id: "sim-lorenz-attractor", line: "The Lorenz attractor, 1963: three equations whose solutions never repeat and never leave this shape. The red point is flying them now, and no one can say which wing it takes next." },
+  { id: "nasa-saturn-v", line: "The Saturn V at its full 110 metres, off to the east: it burned thirteen tonnes of fuel a second. Thirteen flights, twenty-four people to the Moon." },
   { id: "wm-91010657", line: "The first step on the Moon, 21 July 1969, as six hundred million people saw it on television. It plays as you come close." },
   { id: "sim-the-moon-mapped", line: "The whole Moon, mapped; no one had seen its far side before 1959. The red dot is Tranquility Base. Above is the evening sky of 20 July 1969, the Moon a crescent in the west." },
   { id: "sim-game-of-life", line: "Conway's Game of Life, 1970: three rules on a grid, and out of them gliders, guns, and anything a computer can compute. It is running." },
+  { id: "sim-black-hole-accretion-disc", line: "A black hole, as Luminet first drew it in 1979: the far side of the glowing disc lifted into view over the top, because light bends. Walk round it." },
   { id: "sim-mandelbrot-set", line: "The Mandelbrot set, 1980: a simple sum repeated for every point, and an edge with no end. It is computed afresh, and zooming, as you watch." },
   { id: "sf-5f7176a2ae284d6b99fc970c9d265c04", line: "Space Shuttle Discovery, 39 flights, more than any other spacecraft. Under the wing, the tiles: each fitted by hand, no two alike." },
+  { id: "nasa-iss", line: "The International Space Station, true size, off to the west: a football pitch of solar arrays, lived in without a break since 2000. Walk out under it." },
   { id: "sf-485c51878bc7449e81379a863ec862f5", line: "The first iPhone, 2007, at its true 11 centimetres." },
+  { id: "sim-gw150914-merger", line: "Two black holes becoming one, 14 September 2015, slowed a hundred times. Space itself ripples; at the merger you hear what LIGO recorded." },
+  { id: "sim-alphago-move-37", line: "AlphaGo against Lee Sedol, game 2, replayed stone by stone. At move 37 a shoulder hit no professional would play; the machine won." },
+  { id: "wm-120346043", line: "Webb's First Deep Field, 2022: a grain of sand's worth of sky, and nearly everything in it is a galaxy. The arcs are light bent round the cluster." },
 ];
 
 const KEY = "20watts.tour.v1";
@@ -74,6 +80,11 @@ export class Tour {
   }
 
   /** From the beginning. */
+  /** The stops in order, for tools that photograph them. */
+  get ids(): string[] {
+    return this.stops.map((s) => s.id);
+  }
+
   start() {
     this.at = -1;
     this.step(1);

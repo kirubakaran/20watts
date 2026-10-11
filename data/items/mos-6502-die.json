@@ -1,0 +1,97 @@
+{
+ "slug": "mos-6502-die",
+ "title": "MOS 6502, the die",
+ "titleOriginal": null,
+ "kind": "image",
+ "importance": 0.8,
+ "genre": [
+  "electronic component"
+ ],
+ "tags": [
+  "computing",
+  "microprocessor",
+  "die shot"
+ ],
+ "periodSlug": "modern",
+ "flat": false,
+ "baseHeight": null,
+ "source": {
+  "type": "commons",
+  "curid": 53469085,
+  "fileTitle": "File:MOS 6502 die.jpg",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/8/8b/MOS_6502_die.jpg",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:MOS_6502_die.jpg",
+  "width": 2696,
+  "height": 2998,
+  "bytes": 9710860,
+  "mime": "image/jpeg",
+  "licenseName": "CC BY 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "author": "Pauli Rautakorpi",
+  "notes": "Die photograph of a MOS Technology 6502, revision A, taken 2016-11-17 by Commons user Pauli Rautakorpi (own work), CC BY 3.0 per the Commons API extmetadata; 2696 x 2998 px, 9.7 MB. The package was opened and the silicon photographed through a microscope. Shown enlarged: the die is a few millimetres across and hangs at about a metre. Served at 1280 px only: the 2048 px rendering of this noise-like image is 9.5 MB."
+ },
+ "object": {
+  "year": 1975,
+  "month": 9,
+  "day": null,
+  "yearStart": 1975,
+  "yearEnd": 1975,
+  "dateLabel": "September 1975",
+  "madeIn": {
+   "name": "MOS Technology, Norristown",
+   "region": "Pennsylvania",
+   "country": "United States",
+   "lat": 40.1215,
+   "lon": -75.3399,
+   "wikidataQid": "Q1010236"
+  },
+  "location": {
+   "name": null,
+   "region": null,
+   "country": null,
+   "lat": null,
+   "lon": null,
+   "wikidataQid": null,
+   "institution": null,
+   "inventoryNumber": null
+  },
+  "creator": {
+   "name": "Chuck Peddle and the MOS Technology design team",
+   "role": "designers",
+   "birthYear": null,
+   "deathYear": null,
+   "wikidataQid": "Q1089191"
+  },
+  "culture": "American",
+  "movement": null,
+  "medium": "Silicon die, NMOS, photographed through a microscope",
+  "materials": [
+   "silicon",
+   "aluminium"
+  ],
+  "subjects": [
+   "microprocessor",
+   "integrated circuit",
+   "die shot",
+   "very-large-scale integration"
+  ],
+  "widthCm": null,
+  "heightCm": null,
+  "depthCm": null,
+  "weightKg": null,
+  "description": "The silicon inside the 6502, with the package cut away. Every line was drawn by hand: the layout team, led by Bill Mensch and Rod Orgill, laid out the chip on paper and film with rubylith, and the first run of masks worked well enough to ship. The regular blocks are the decode ROM and registers; the irregular region is the random logic that sequences each instruction. In 2010 the Visual6502 project photographed a die like this one layer by layer and rebuilt the whole processor as a simulation of its transistors, which runs in a browser today.",
+  "facts": [
+   "Roughly 3,500 transistors on about 4 mm by 4 mm of silicon, in an 8-micrometre NMOS process; a modern phone chip has about five million times as many.",
+   "The layout was drawn by hand; the hand-drawn masks of the first revision had a bug in the ROR instruction, so early datasheets left it out.",
+   "The Visual6502 project (2010) imaged a 6502 die and turned it into a transistor-level simulation anyone can run."
+  ],
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/MOS_Technology_6502",
+  "wikidataQid": "Q255528"
+ },
+ "fallbackWidthM": 1.1,
+ "branch": {
+  "of": "wm-153446594",
+  "step": 1,
+  "label": "inside the chip"
+ }
+}

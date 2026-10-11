@@ -1,0 +1,97 @@
+{
+ "slug": "altamira-ceiling-replica",
+ "title": "The ceiling of Altamira",
+ "titleOriginal": null,
+ "kind": "model",
+ "importance": 0.95,
+ "genre": [
+  "cave painting"
+ ],
+ "tags": [
+  "altamira",
+  "palaeolithic",
+  "cave painting",
+  "bison",
+  "replica",
+  "scan"
+ ],
+ "periodSlug": "paleolithic",
+ "flat": false,
+ "baseHeight": 2.4,
+ "source": {
+  "type": "sketchfab",
+  "curid": "af6cbb6cfcc14cfeb1387ac50dc824ae",
+  "fileTitle": null,
+  "url": "https://sketchfab.com/3d-models/deckenmalerei-der-altamira-hohle-nachbildung-af6cbb6cfcc14cfeb1387ac50dc824ae",
+  "sourcePage": "https://sketchfab.com/3d-models/deckenmalerei-der-altamira-hohle-nachbildung-af6cbb6cfcc14cfeb1387ac50dc824ae",
+  "width": null,
+  "height": null,
+  "bytes": null,
+  "mime": null,
+  "licenseName": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "author": "Deutsches Museum | Digital (Sketchfab user deutsches-museum)",
+  "notes": "Photogrammetry scan by the Deutsches Museum of its own full-size replica of the Altamira polychrome ceiling (inventory number 75270, shown in the museum's Altamira cave on the Museumsinsel, https://www.deutsches-museum.de/museumsinsel/ausstellung/altamira). 1.2 million faces, 12 meshes, two 8192 px colour textures, 127 MB glTF unpacked; downloaded by the user from Sketchfab on 2026-10-09. The scan is a slab; it is hung overhead in the museum as a ceiling, with the painted face down. Date and place as for the photograph record wm-3513129 (Magdalenian, c. 12,500 BCE, Santillana del Mar), which this replaces.",
+  "rotation": [
+   0,
+   0,
+   180
+  ]
+ },
+ "object": {
+  "year": -12500,
+  "month": null,
+  "day": null,
+  "yearStart": -14000,
+  "yearEnd": -11000,
+  "dateLabel": "c. 12,500 BCE (replica, Deutsches Museum)",
+  "madeIn": {
+   "name": "Santillana del Mar",
+   "region": "Cantabria",
+   "country": "Spain",
+   "lat": 43.3825,
+   "lon": -4.1203,
+   "wikidataQid": "Q133575"
+  },
+  "location": {
+   "name": "Munich",
+   "region": null,
+   "country": "Germany",
+   "lat": null,
+   "lon": null,
+   "wikidataQid": null,
+   "institution": "Deutsches Museum (replica; the original is in the Cave of Altamira)",
+   "inventoryNumber": "75270"
+  },
+  "creator": null,
+  "culture": "Magdalenian",
+  "movement": null,
+  "medium": "Replica of a painted limestone cave ceiling: ochre and charcoal on rock, reproduced in relief",
+  "materials": [
+   "ochre",
+   "charcoal",
+   "limestone"
+  ],
+  "subjects": [
+   "bison",
+   "horse",
+   "deer",
+   "cave painting",
+   "Palaeolithic art"
+  ],
+  "widthCm": null,
+  "heightCm": null,
+  "depthCm": null,
+  "weightKg": null,
+  "description": "The great ceiling of Altamira, where a herd of bison is painted in red ochre and outlined in black over the natural bulges of the rock, so that each animal stands out as if in relief. Found in 1879 by Marcelino Sanz de Sautuola and his young daughter María, it was the first Palaeolithic cave art recognised as such. The cave is closed to protect the paintings; this is a scan of the full-size replica in the Deutsches Museum in Munich, hung overhead as the original is, so look up.",
+  "facts": [
+   "The painters used the bulges of the ceiling for the bodies of the bison, so the animals stand out in relief in raking light.",
+   "Sautuola's claim that the paintings were prehistoric was dismissed as a forgery; he died in 1888, fourteen years before the experts conceded he was right.",
+   "The ceiling is about 18 by 9 metres; the Deutsches Museum's replica was made in 1962 and is itself now a historic object."
+  ],
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Cave_of_Altamira",
+  "wikidataQid": "Q133575"
+ },
+ "representation": "scan",
+ "back": "none"
+}

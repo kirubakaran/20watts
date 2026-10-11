@@ -1,14 +1,12 @@
 /**
  * The entrance: a stone gateway across the spine that a new visitor stands
  * outside of, looking through at the oldest work. One line is cut into the
- * lintel, and a small plaque on the left pier says how to read the floor.
+ * lintel; the piers are bare.
  * It is the only construction in the museum, and the only text that is
  * not about a work.
  */
-import { BoxGeometry, CanvasTexture, FrontSide, Group, Mesh, MeshStandardMaterial, SRGBColorSpace } from "three";
-import { Text } from "troika-three-text";
+import { BoxGeometry, CanvasTexture, Group, Mesh, MeshStandardMaterial, SRGBColorSpace } from "three";
 
-const FONT_REGULAR = "/fonts/inter-400.woff";
 const FONT_BOLD = "/fonts/inter-600.woff";
 
 export const INSCRIPTION = "BEHOLD THE WORKS OF 20-WATT BRAINS";
@@ -25,22 +23,6 @@ export const GATE_HEIGHT = PIER.h + LINTEL.h + CAP.h;
 const STONE = 0xd9d3c6;
 const PX_PER_M = 400;
 
-function plaqueText(str: string, width: number): Text {
-  const t = new Text();
-  t.material.side = FrontSide;
-  t.text = str;
-  t.font = FONT_REGULAR;
-  t.fontSize = 0.042;
-  t.lineHeight = 1.3;
-  t.maxWidth = width;
-  t.color = 0x5a554c;
-  t.anchorX = "center";
-  t.anchorY = "middle";
-  t.textAlign = "left";
-  t.depthOffset = -1;
-  t.sync();
-  return t;
-}
 
 function block(w: number, h: number, d: number, material: MeshStandardMaterial | MeshStandardMaterial[]): Mesh {
   const m = new Mesh(new BoxGeometry(w, h, d), material);
@@ -143,14 +125,6 @@ export function buildEntrance(): Group {
   const cap = block(span + 2 * CAP.overhang, CAP.h, LINTEL.d + 2 * CAP.overhang, stone);
   cap.position.set(0, PIER.h + LINTEL.h + CAP.h / 2, 0);
   g.add(cap);
-
-  // How to read the floor, on the left pier at eye height.
-  const plaque = plaqueText(
-    "Forward is later in time.\nSide quests stand off to the right.\nEvery work stands at its true size.\nThe years are written on the floor.",
-    PIER.w - 0.12,
-  );
-  plaque.position.set(-HALF_SPAN, 1.5, PIER.d / 2 + 0.003);
-  g.add(plaque);
 
   return g;
 }

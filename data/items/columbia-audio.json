@@ -1,0 +1,20 @@
+{
+ "attachAudioTo": "si-nasm_A19700102000",
+ "audio": {
+  "type": "nasa",
+  "fileTitle": null,
+  "curid": null,
+  "url": "https://apollojournals.org/alsj/a11/a11a1023114-4746.mp3",
+  "bytes": 15825187,
+  "mime": "audio/mpeg",
+  "seconds": 992,
+  "licenseName": "Public domain (NASA)",
+  "licenseUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+  "author": "NASA; Apollo 11 Public Affairs loop recording, clip prepared by John Stoll, ACR Senior Technician, NASA Johnson Space Center, for the Apollo Lunar Surface Journal",
+  "sourcePage": "https://apollojournals.org/alsj/a11/a11.landing.html",
+  "performers": "Neil Armstrong and Buzz Aldrin aboard the lunar module Eagle; Charlie Duke, capsule communicator in Houston; NASA Public Affairs commentary.",
+  "start": 850,
+  "excerptSeconds": 100,
+  "notes": "Apollo 11 landing, 20 July 1969. The clip is the NASA Public Affairs Office loop (air-to-ground plus PAO commentary) from mission time 102:31:14 to 102:47:46, as the file name indicates; it is linked from the Apollo Lunar Surface Journal landing page with the caption 'Audio Clip from the Public Affairs loop starting at about 102:31:14. Clip courtesy John Stoll, ACR Senior Technician at NASA Johnson.' Touchdown ('Contact Light') is at 102:45:40 and 'Houston, Tranquility Base here. The Eagle has landed.' at 102:45:58, i.e. roughly 866 s and 884 s into the clip; start=850 with a 100 s excerpt covers the final descent, the landing and Duke's 'You got a bunch of guys about to turn blue' reply. Duration (992 s) is derived from the time span in the file name and matches the 15,825,187-byte size at 128 kbit/s; verify after download. HTTP HEAD on 2026-10-09 returned 200, content-type audio/mpeg. The ALSJ was hosted at history.nasa.gov/alsj and www.nasa.gov/history/alsj; both now redirect to apollojournals.org, which is operated for the NASA History Office (the nasa.gov page 'The Apollo Lunar Surface Journal and Apollo Flight Journal' links to it). NASA audio is not protected by copyright. The journal's transcript and commentary text is copyright Eric M. Jones, but the audio is NASA's own recording. A 5.3 s NASA ringtone excerpt of the same exchange is also on Commons under Public domain / PD-USGov-NASA: File:Apollo 11 Eagle Has Landed.mp3 (curid 80595007, 26,388 bytes, Credit 'https://www.nasa.gov/connect/sounds/index.html'), usable as a fallback if the long clip is not wanted."
+ }
+}

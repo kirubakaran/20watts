@@ -101,7 +101,10 @@ export class Player {
     if (this.renderer.xr.isPresenting) {
       this.rig.rotation.y += yaw - this.headYaw();
     } else {
+      // A hop is a fresh look: facing the row, eyes level.
       this.rig.rotation.y = yaw;
+      this.pitch = 0;
+      this.camera.rotation.x = 0;
     }
     this.rig.updateMatrixWorld(true);
     const head = this.camera.getWorldPosition(this.tmpV);

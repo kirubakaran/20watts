@@ -1,0 +1,93 @@
+{
+ "slug": "apple-iic",
+ "title": "Apple IIc",
+ "titleOriginal": null,
+ "kind": "image",
+ "importance": 0.75,
+ "genre": [
+  "computer"
+ ],
+ "tags": [
+  "apple",
+  "personal computer",
+  "snow white"
+ ],
+ "periodSlug": "modern",
+ "flat": false,
+ "baseHeight": null,
+ "source": {
+  "type": "commons",
+  "curid": 11118452,
+  "fileTitle": "File:Apple IIc with monitor.jpg",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/4/48/Apple_IIc_with_monitor.jpg",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:Apple_IIc_with_monitor.jpg",
+  "width": 2500,
+  "height": 2500,
+  "bytes": 1571292,
+  "mime": "image/jpeg",
+  "licenseName": "CC BY 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+  "author": "Bilby (Wikimedia Commons user)",
+  "notes": "Photograph of a complete Apple IIc with its matching Apple Monitor IIc on the monitor stand, taken 2010-08-08 by Commons user Bilby (own work), CC BY 3.0 per the Commons API extmetadata. This is the image used in the Wikipedia infobox and as Wikidata P18 for Q420782. Original URL verified HTTP 200, content-length 1571292. No 3D model was found: Zenodo API queries for 'apple iic', '\"apple iic\"', 'apple //c', 'apple 2c' and title:\"Apple II\" return only an ACMI scan of the 1977 Apple II (record 10367591, uid 7ec665750b06445cba88da02ad1b7025), not a IIc; the Sketchfab search API (queries apple iic, apple //c, apple2c, appleiic, apple iic plus, tags=iic, category electronics-gadgets) lists only Apple II, IIe, Lisa and Macintosh models, none a IIc; the Smithsonian NMAH holds an Apple IIc CPU (1994.0348.01, CC0) but the record has no online media or 3D scan. Dimensions (overall 6.1 cm x 29 cm x 30.2 cm) come from the NMAH record 'Microcomputer, Apple IIc CPU', ark:/65665/ng49ca746a5-2106-704b-e053-15f76fa0b4fa; weight 7.5 lb (3.4 kg), release date 24 April 1984, discontinuation August 1988, price, CPU and RAM come from the English Wikipedia article infobox and text."
+ },
+ "object": {
+  "year": 1984,
+  "month": 4,
+  "day": null,
+  "yearStart": 1984,
+  "yearEnd": 1988,
+  "dateLabel": "1984",
+  "madeIn": {
+   "name": "Cupertino",
+   "region": "California",
+   "country": "United States",
+   "lat": 37.3175,
+   "lon": -122.0419,
+   "wikidataQid": "Q189471"
+  },
+  "location": {
+   "name": null,
+   "region": null,
+   "country": null,
+   "lat": null,
+   "lon": null,
+   "wikidataQid": null,
+   "institution": null,
+   "inventoryNumber": null
+  },
+  "creator": {
+   "name": "Apple Computer, Inc.",
+   "role": "manufacturer",
+   "birthYear": 1976,
+   "deathYear": null,
+   "wikidataQid": "Q312"
+  },
+  "culture": "American",
+  "movement": null,
+  "medium": "Personal computer with built-in keyboard and 5.25-inch floppy drive",
+  "materials": [
+   "Plastic housing",
+   "Electronic components"
+  ],
+  "subjects": [
+   "personal computer",
+   "Apple II series",
+   "Snow White design language",
+   "industrial design",
+   "home computing"
+  ],
+  "widthCm": null,
+  "heightCm": null,
+  "depthCm": null,
+  "weightKg": null,
+  "description": "The Apple IIc, introduced by Apple Computer in April 1984, packed a complete Apple IIe-compatible system, including a 5.25-inch floppy drive, into a compact housing with a fold-out carrying handle; the c stands for compact. It was the first product in Apple's Snow White design language, created with Hartmut Esslinger's frog design, and its off-white Fog colour and ribbed styling set the look of Apple hardware for the rest of the decade. The machine was usually sold with the matching 9-inch Monitor IIc shown here.",
+  "facts": [
+   "Released on 24 April 1984 at Apple's 'Apple II Forever' event, priced at US$1,295.",
+   "Weighs 7.5 lb (3.4 kg) and runs a 65C02 at 1.023 MHz with 128 KB of RAM.",
+   "First Apple product in the Snow White design language by Hartmut Esslinger of frog design; discontinued in August 1988 in favour of the IIc Plus."
+  ],
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Apple_IIc",
+  "wikidataQid": "Q420782"
+ },
+ "fallbackWidthM": 1
+}

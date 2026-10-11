@@ -1,0 +1,86 @@
+{
+ "slug": "bernini-medusa",
+ "title": "Bust of Medusa",
+ "kind": "model",
+ "representation": "scan",
+ "baseHeight": 0.45,
+ "back": "none",
+ "importance": 0.8,
+ "genre": [
+  "sculpture"
+ ],
+ "tags": [
+  "sculpture",
+  "scan"
+ ],
+ "periodSlug": null,
+ "flat": false,
+ "source": {
+  "type": "sketchfab",
+  "fileTitle": null,
+  "curid": "adf56b25e96e4675b27e0f59348978b0",
+  "url": "https://sketchfab.com/3d-models/adf56b25e96e4675b27e0f59348978b0",
+  "width": null,
+  "height": null,
+  "bytes": 14820649,
+  "mime": "model/gltf+json",
+  "licenseName": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "author": "ZeuxisVR (Sketchfab)",
+  "sourcePage": "https://sketchfab.com/3d-models/adf56b25e96e4675b27e0f59348978b0",
+  "unitScale": 0.39,
+  "notes": " Photogrammetry of the marble itself with its socle, two 4096 px textures; the bust is 0.68 m on a 0.69 m socle, raised 0.45 m so the face meets the eye. The bust is 68 cm tall without its socle. Downloaded by the museum's owner from Sketchfab on 2026-10-10."
+ },
+ "object": {
+  "year": 1645,
+  "month": null,
+  "day": null,
+  "yearStart": 1644,
+  "yearEnd": 1648,
+  "dateLabel": "c. 1644-1648",
+  "madeIn": {
+   "name": "Rome",
+   "region": null,
+   "country": "Italy",
+   "lat": 41.8933,
+   "lon": 12.4828,
+   "wikidataQid": null
+  },
+  "location": {
+   "name": "Rome",
+   "country": "Italy",
+   "institution": "Capitoline Museums",
+   "inventoryNumber": null
+  },
+  "culture": "Italian (Baroque)",
+  "medium": "Marble",
+  "materials": [
+   "marble"
+  ],
+  "subjects": [
+   "mythology",
+   "Medusa",
+   "Baroque",
+   "portrait"
+  ],
+  "widthCm": null,
+  "heightCm": 68,
+  "depthCm": null,
+  "weightKg": null,
+  "creator": {
+   "name": "Gian Lorenzo Bernini",
+   "role": "sculptor",
+   "birthYear": 1598,
+   "deathYear": 1680,
+   "wikidataQid": "Q160538"
+  },
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Bust_of_Medusa_(Bernini)",
+  "wikidataQid": null,
+  "description": "Not the monster but the woman, at the moment she understands what she has become. Medusa's snakes are waking in her hair; her mouth is open, her brow knotted; she is turning, perhaps, to stone herself. Bernini carved it in the 1640s, in the years after his patron Urban VIII died and his own fortunes fell, and it has been read as a portrait of his disgrace. It is the only one of his works with a woman's face in pain that is not religious, and the Capitoline has had it since 1731. The scan is of the marble itself.",
+  "facts": [
+   "The snakes were carved from the same block as the head, undercut so deeply that light passes behind them.",
+   "Bernini's own mistress, Costanza Bonarelli, whose bust he also carved, had her face slashed on his order in 1638.",
+   "It is displayed in the Capitoline Museums' Hall of the Geese."
+  ]
+ }
+}

@@ -1,0 +1,100 @@
+{
+ "slug": "space-shuttle-stack-model",
+ "title": "Space Shuttle",
+ "titleOriginal": null,
+ "kind": "model",
+ "importance": 0.8,
+ "genre": [
+  "spacecraft",
+  "engineering"
+ ],
+ "tags": [
+  "space",
+  "NASA",
+  "spacecraft",
+  "rocket",
+  "landmark"
+ ],
+ "periodSlug": null,
+ "flat": false,
+ "baseHeight": 0,
+ "source": {
+  "type": "sketchfab",
+  "curid": "69cba9fe15ff428eaaba57bf61941109",
+  "fileTitle": null,
+  "url": "https://sketchfab.com/3d-models/69cba9fe15ff428eaaba57bf61941109",
+  "sourcePage": "https://sketchfab.com/3d-models/69cba9fe15ff428eaaba57bf61941109",
+  "width": null,
+  "height": null,
+  "bytes": 43355278,
+  "mime": null,
+  "licenseName": "CC BY 4.0",
+  "licenseUrl": "http://creativecommons.org/licenses/by/4.0/",
+  "author": "Michél",
+  "notes": "An artist's model of the full stack, orbiter, external tank and two solid boosters (484,000 triangles, three 8192 px textures), 55.0 units tall for the real 56.1 m, so the file is in metres; unitScale 0.05 makes it a model at one twentieth, 2.75 m. The orbiter Discovery itself stands at true size three rows on. License.txt in the download: CC-BY-4.0, author Michél (https://sketchfab.com/Michel.Laborda.Gonzalez), 'Author must be credited. Commercial use is allowed.' Downloaded by the museum's owner from Sketchfab on 2026-10-11.",
+  "unitScale": 1
+ },
+ "object": {
+  "year": 1981,
+  "month": 4,
+  "day": 12,
+  "yearStart": null,
+  "yearEnd": null,
+  "dateLabel": "first launch 12 April 1981",
+  "madeIn": {
+   "name": "Kennedy Space Center",
+   "region": "Florida",
+   "country": "United States",
+   "lat": 28.573,
+   "lon": -80.649,
+   "wikidataQid": "Q48894"
+  },
+  "location": {
+   "name": "Everywhere it is computed",
+   "region": null,
+   "country": null,
+   "lat": null,
+   "lon": null,
+   "wikidataQid": null,
+   "institution": null,
+   "inventoryNumber": null
+  },
+  "creator": {
+   "name": "NASA and Rockwell International",
+   "role": "builders",
+   "birthYear": null,
+   "deathYear": null,
+   "wikidataQid": "Q48806"
+  },
+  "culture": null,
+  "movement": null,
+  "medium": "An artist's 3D model, at true size",
+  "materials": [],
+  "subjects": [
+   "Space Shuttle",
+   "rocket",
+   "reusable spacecraft",
+   "NASA"
+  ],
+  "widthCm": 2460,
+  "heightCm": 5610,
+  "depthCm": 2700,
+  "weightKg": null,
+  "description": "The whole stack as it stood on the pad: the orbiter riding a tank of liquid hydrogen and oxygen the size of a grain silo, with two solid boosters strapped alongside that burned for two minutes and came down by parachute to be used again. Two million kilograms at lift-off, seven million pounds of thrust, and the first spacecraft to fly to orbit and land on a runway, 135 times from 1981 to 2011. It built the space station, carried Hubble up and fixed it five times, and lost two crews, Challenger in 1986 and Columbia in 2003. It stands here at its full 56 metres, off to the east; the orbiter Discovery, the real one, stands on the lane a little further on.",
+  "facts": [
+   "The external tank was the only part thrown away each flight; it was painted white twice, then left orange to save 270 kg.",
+   "The main engines burned hydrogen at 3,300 degrees inside chambers cooled by the same hydrogen flowing through their walls.",
+   "Five orbiters flew: Columbia, Challenger, Discovery, Atlantis and Endeavour; Enterprise flew only glide tests.",
+   "The programme cost about 200 billion dollars; a launch cost around 450 million."
+  ],
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Space_Shuttle",
+  "wikidataQid": "Q48806"
+ },
+ "representation": "reconstruction",
+ "back": "none",
+ "yaw": 3.1416,
+ "landmark": {
+  "side": "east",
+  "distance": 80
+ }
+}

@@ -1,0 +1,96 @@
+{
+ "slug": "khufu-ship",
+ "title": "Khufu's ship",
+ "kind": "model",
+ "representation": "scan",
+ "baseHeight": 0,
+ "back": "none",
+ "importance": 0.9,
+ "genre": [
+  "ship",
+  "engineering"
+ ],
+ "tags": [
+  "Egypt",
+  "ship",
+  "boat",
+  "scan",
+  "point cloud"
+ ],
+ "periodSlug": null,
+ "flat": false,
+ "source": {
+  "type": "sketchfab",
+  "fileTitle": null,
+  "curid": "5c56a4feeb8e4c67b5a4d903b4a96e5a",
+  "url": "https://sketchfab.com/3d-models/khufu-solar-ship-egypt-5c56a4feeb8e4c67b5a4d903b4a96e5a",
+  "width": null,
+  "height": null,
+  "bytes": 255317204,
+  "mime": "model/gltf+json",
+  "licenseName": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "author": "Arqueomodel3D (juanbrualla, Sketchfab)",
+  "sourcePage": "https://sketchfab.com/3d-models/khufu-solar-ship-egypt-5c56a4feeb8e4c67b5a4d903b4a96e5a",
+  "unitScale": 0.676,
+  "pointSize": 0.03,
+  "notes": "Laser-scan point cloud of the reassembled ship, published on Sketchfab by Arqueomodel3D (user juanbrualla) under CC BY 4.0 (license.txt: author Arqueomodel3D, license type CC-BY-4.0). 6,379,495 coloured points, no mesh and no textures; the museum's pipeline thins it to a ladder of a quarter, an eighth, a twenty-fifth and a hundredth of the points and draws them as sized dots. The file is 64.5 units long; the ship is 43.6 m, so unitScale 0.676 (the beam comes out 5.4 m against the real 5.9). Bow at -X in the file, so it lies broadside to the lane with the bow to the west; upright, hull bottom at the base. Downloaded by the museum's owner from Sketchfab on 2026-10-10."
+ },
+ "object": {
+  "year": -2560,
+  "month": null,
+  "day": null,
+  "yearStart": -2580,
+  "yearEnd": -2560,
+  "dateLabel": "c. 2560 BCE",
+  "madeIn": {
+   "name": "Giza",
+   "region": null,
+   "country": "Egypt",
+   "lat": 29.979,
+   "lon": 31.134,
+   "wikidataQid": "Q81788"
+  },
+  "location": {
+   "name": "Giza",
+   "country": "Egypt",
+   "institution": "Grand Egyptian Museum",
+   "inventoryNumber": null
+  },
+  "culture": "Ancient Egyptian (Fourth Dynasty)",
+  "medium": "Lebanese cedar planks sewn together with halfa-grass rope, with acacia and sycamore fittings",
+  "materials": [
+   "cedar",
+   "rope",
+   "acacia",
+   "sycamore"
+  ],
+  "subjects": [
+   "ship",
+   "boat",
+   "burial",
+   "Khufu",
+   "Nile"
+  ],
+  "widthCm": 4360,
+  "heightCm": 780,
+  "depthCm": 590,
+  "weightKg": 45000,
+  "creator": {
+   "name": "Shipwrights of Khufu's court",
+   "role": "builder",
+   "birthYear": null,
+   "deathYear": null,
+   "wikidataQid": null
+  },
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Khufu_ship",
+  "wikidataQid": "Q604153",
+  "description": "The oldest intact large ship in the world, and one of the oldest surviving things built by people on this scale. It was taken apart into 1,224 pieces and sealed in a limestone pit at the foot of the Great Pyramid around 2560 BCE, found there in 1954, and put back together over fourteen years by the restorer Ahmed Youssef Moustafa. Forty-three metres of cedar from Lebanon, the planks sewn to each other with rope through holes bored along their edges rather than nailed, so the hull tightened as the wood swelled; the join lines and the rope are still there. It had no mast: it was rowed, or towed, and was perhaps the barge that carried the king's body down the Nile, or a boat for his use in the next world. Here it is a laser scan drawn as a cloud of coloured points, lying broadside to the lane with the bow to the west. Walk the length of it.",
+  "facts": [
+   "43.6 m long, 5.9 m in the beam, about 45 tonnes; it draws only 1.5 m of water.",
+   "Found by the archaeologist Kamal el-Mallakh in May 1954 under a row of limestone blocks beside the pyramid's south face.",
+   "A second, similar ship lay in a pit beside it, excavated from 2011.",
+   "It moved to the Grand Egyptian Museum in 2021, carried whole across Giza on a remote-controlled vehicle."
+  ]
+ }
+}

@@ -1,0 +1,105 @@
+{
+ "slug": "plaatje-nkosi-sikelel-iafrika",
+ "title": "Sol Plaatje sings 'Nkosi Sikelel' iAfrika'",
+ "kind": "image",
+ "flat": false,
+ "fallbackWidthM": 1.2,
+ "importance": 0.9,
+ "genre": [
+  "music"
+ ],
+ "periodSlug": null,
+ "tags": [
+  "music",
+  "Africa",
+  "South Africa",
+  "anthem",
+  "recording",
+  "gramophone"
+ ],
+ "source": {
+  "type": "commons",
+  "fileTitle": "File:Sol Plaatje (centre) in Cradle of the World 1923.jpg",
+  "curid": 36145030,
+  "url": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Sol_Plaatje_%28centre%29_in_Cradle_of_the_World_1923.jpg",
+  "width": 1090,
+  "height": 431,
+  "bytes": 146773,
+  "mime": "image/jpeg",
+  "licenseName": "Public domain",
+  "licenseUrl": null,
+  "author": "Unknown photographer, London, August 1923",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:Sol_Plaatje_(centre)_in_Cradle_of_the_World_1923.jpg",
+  "notes": "Sol Plaatje, centre, with the cast of 'Cradle of the World' in London in August 1923, the show whose run led to the recording session two months later. Anonymous British press photograph, public domain."
+ },
+ "audio": {
+  "type": "commons",
+  "fileTitle": null,
+  "curid": null,
+  "url": "https://upload.wikimedia.org/wikipedia/commons/0/04/%22Nkosi_Sikelel%27_iAfrika%22_sung_by_Sol_T._Plaatje_in_October_1923.mp3",
+  "bytes": 1030686,
+  "mime": "audio/mpeg",
+  "seconds": 64.4,
+  "licenseName": "Public domain",
+  "licenseUrl": null,
+  "author": "Sol T. Plaatje, voice, with Sylvia Colenso, piano; Gramophone Company, Hayes, 16 October 1923; Zonophone 4168, matrix Bb3640-2",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:%22Nkosi_Sikelel%27_iAfrika%22_sung_by_Sol_T._Plaatje_in_October_1923.mp3",
+  "performers": "Sol Plaatje, voice, with Sylvia Colenso at the piano, recorded at the Gramophone Company's studio at Hayes, Middlesex, on 16 October 1923 (Zonophone 4168, matrix Bb3640-2).",
+  "start": 0,
+  "excerptSeconds": null,
+  "notes": "Public domain in the United States: the recording was first published before 1926 (Music Modernization Act schedule, as of 2026) and the composition before 1931 or is traditional. Enoch Sontonga's hymn was published in 1897. Commons file curid 135186365, tagged public domain (PD-old-80-record-expired); transfer from the South African Music Archive Project at the University of KwaZulu-Natal, whose site disclaimer about non-commercial use does not bind a public-domain 1923 recording."
+ },
+ "object": {
+  "year": 1923,
+  "month": 10,
+  "day": 16,
+  "yearStart": null,
+  "yearEnd": null,
+  "dateLabel": "Hayes, Middlesex, 16 October 1923",
+  "madeIn": {
+   "name": "Hayes",
+   "region": "Middlesex",
+   "country": "United Kingdom",
+   "lat": 51.5048,
+   "lon": -0.4209,
+   "wikidataQid": null
+  },
+  "location": {
+   "name": null,
+   "country": null,
+   "institution": null,
+   "inventoryNumber": null
+  },
+  "culture": "South African (Xhosa, Tswana)",
+  "medium": "Acoustic 78 rpm gramophone recording; a hymn by Enoch Sontonga, 1897",
+  "materials": [
+   "shellac"
+  ],
+  "subjects": [
+   "music",
+   "anthem",
+   "South Africa",
+   "African National Congress",
+   "sound recording"
+  ],
+  "widthCm": null,
+  "heightCm": null,
+  "depthCm": null,
+  "weightKg": null,
+  "creator": {
+   "name": "Sol Plaatje",
+   "role": "singer",
+   "birthYear": 1876,
+   "deathYear": 1932,
+   "wikidataQid": null
+  },
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Nkosi_Sikelel%27_iAfrika",
+  "wikidataQid": null,
+  "description": "The earliest known recording of 'Nkosi Sikelel' iAfrika', God Bless Africa, the hymn Enoch Sontonga wrote in Johannesburg in 1897 and which became the anthem of the African National Congress in 1925, of the struggle against apartheid, and in 1994 of South Africa itself; it is sung today, in one form or another, by five countries. The singer is not a musician by trade. Solomon Plaatje was a journalist, a novelist, a translator of Shakespeare into Tswana and the first secretary-general of the ANC; he was in London in 1923 campaigning against the Natives Land Act, appearing in a show at the Philharmonic Hall, and used the visit to put the hymn on record, with Sylvia Colenso, a bishop's granddaughter, at the piano.",
+  "facts": [
+   "Sontonga wrote the first verse and the tune in 1897; the poet Samuel Mqhayi added seven more in 1927.",
+   "Plaatje's 'Native Life in South Africa' (1916) is the founding document of the land question.",
+   "Tanzania, Zambia and Zimbabwe have all used the tune; Namibia's anthem borrows from it."
+  ]
+ }
+}

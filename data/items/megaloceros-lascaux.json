@@ -1,0 +1,94 @@
+{
+ "slug": "megaloceros-lascaux",
+ "title": "Megaloceros, Lascaux",
+ "titleOriginal": null,
+ "kind": "image",
+ "importance": 0.95,
+ "genre": [
+  "rock art",
+  "cave painting"
+ ],
+ "tags": [
+  "prehistoric",
+  "rock art",
+  "lascaux",
+  "magdalenian",
+  "replica"
+ ],
+ "periodSlug": "paleolithic",
+ "flat": false,
+ "baseHeight": null,
+ "source": {
+  "type": "commons",
+  "curid": 6909701,
+  "fileTitle": "File:Lascaux, Megaloceros.jpg",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Lascaux%2C_Megaloceros.jpg",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:Lascaux,_Megaloceros.jpg",
+  "width": 1775,
+  "height": 1744,
+  "bytes": 3361181,
+  "mime": "image/jpeg",
+  "licenseName": "Public domain",
+  "licenseUrl": null,
+  "author": "HTO",
+  "notes": "Import from Wikimedia Commons; photograph of a museum replica, released to the public domain by the photographer"
+ },
+ "object": {
+  "year": -15000,
+  "month": null,
+  "day": null,
+  "yearStart": -16000,
+  "yearEnd": -14000,
+  "dateLabel": "c. 15,000 BCE",
+  "madeIn": {
+   "name": "Montignac-Lascaux",
+   "region": "Dordogne",
+   "country": "France",
+   "lat": 45.0536,
+   "lon": 1.17,
+   "wikidataQid": "Q172125"
+  },
+  "location": {
+   "name": "Montignac-Lascaux",
+   "region": "Dordogne",
+   "country": "France",
+   "lat": 45.0536,
+   "lon": 1.17,
+   "wikidataQid": "Q172125",
+   "institution": "Grotte de Lascaux (sealed; replica photographed at the Anthropos museum, Brno)",
+   "inventoryNumber": null
+  },
+  "creator": {
+   "name": "Unknown Magdalenian painters",
+   "role": "painter",
+   "birthYear": null,
+   "deathYear": null,
+   "wikidataQid": null
+  },
+  "culture": "Magdalenian",
+  "movement": null,
+  "medium": "mineral pigment on limestone",
+  "materials": [
+   "manganese oxide",
+   "ochre"
+  ],
+  "subjects": [
+   "giant deer",
+   "Megaloceros",
+   "dots"
+  ],
+  "widthCm": null,
+  "heightCm": null,
+  "depthCm": null,
+  "weightKg": null,
+  "description": "A giant deer with its enormous antlers thrown back, painted in black manganese with a red ochre ground and a line of black dots beneath. It stands near the end of the Axial Gallery of Lascaux, among the horses and aurochs that made the cave famous after four teenagers found it in 1940. The cave was closed in 1963 because visitors' breath was growing algae and calcite over the paintings; this is a museum replica.",
+  "facts": [
+   "Megaloceros giganteus, the Irish elk, carried antlers up to 3.6 metres across and died out about 7,700 years ago.",
+   "Lascaux holds about 600 painted animals and nearly 1,500 engravings.",
+   "The dots and squares scattered around the animals have never been decoded."
+  ],
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Lascaux",
+  "wikidataQid": "Q172125"
+ },
+ "fallbackWidthM": 2
+}

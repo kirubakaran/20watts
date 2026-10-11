@@ -1,0 +1,91 @@
+{
+ "slug": "painted-figures-serra-da-capivara",
+ "title": "Painted figures, Serra da Capivara",
+ "titleOriginal": null,
+ "kind": "image",
+ "importance": 0.75,
+ "genre": [
+  "rock art",
+  "cave painting"
+ ],
+ "tags": [
+  "prehistoric",
+  "rock art",
+  "brazil",
+  "nordeste"
+ ],
+ "periodSlug": "mesolithic",
+ "flat": false,
+ "baseHeight": null,
+ "source": {
+  "type": "commons",
+  "curid": 80059616,
+  "fileTitle": "File:Pintura rupestre no Parque Nacional Serra da Capivara (0356).jpg",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Pintura_rupestre_no_Parque_Nacional_Serra_da_Capivara_%280356%29.jpg",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:Pintura_rupestre_no_Parque_Nacional_Serra_da_Capivara_(0356).jpg",
+  "width": 5184,
+  "height": 3456,
+  "bytes": 12399571,
+  "mime": "image/jpeg",
+  "licenseName": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "author": "Mateus S. Figueiredo",
+  "notes": "Import from Wikimedia Commons; photograph of the shelter wall"
+ },
+ "object": {
+  "year": -8000,
+  "month": null,
+  "day": null,
+  "yearStart": -10000,
+  "yearEnd": -4000,
+  "dateLabel": "c. 8000 BCE",
+  "madeIn": {
+   "name": "Serra da Capivara",
+   "region": "Piauí",
+   "country": "Brazil",
+   "lat": -8.6667,
+   "lon": -42.55,
+   "wikidataQid": "Q267394"
+  },
+  "location": {
+   "name": "Serra da Capivara",
+   "region": "Piauí",
+   "country": "Brazil",
+   "lat": -8.6667,
+   "lon": -42.55,
+   "wikidataQid": "Q267394",
+   "institution": "Parque Nacional Serra da Capivara",
+   "inventoryNumber": null
+  },
+  "creator": {
+   "name": "Unknown painters of the Nordeste tradition",
+   "role": "painter",
+   "birthYear": null,
+   "deathYear": null,
+   "wikidataQid": null
+  },
+  "culture": "Nordeste tradition",
+  "movement": null,
+  "medium": "red ochre on sandstone",
+  "materials": [
+   "ochre"
+  ],
+  "subjects": [
+   "deer",
+   "hunters"
+  ],
+  "widthCm": null,
+  "heightCm": null,
+  "depthCm": null,
+  "weightKg": null,
+  "description": "A red deer-like animal and small human figures on a sandstone shelter in the Serra da Capivara, where more than a thousand painted shelters record hunting, dancing and sex in the lively Nordeste style. The park is at the centre of the argument over when people reached the Americas: its excavator Niède Guidon claims hearths over 30,000 years old, far older than most archaeologists accept.",
+  "facts": [
+   "Serra da Capivara holds the largest concentration of rock art in the Americas.",
+   "The Nordeste tradition is usually dated between about 12,000 and 6,000 years ago.",
+   "Capivara means capybara, the park's name animal."
+  ],
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Serra_da_Capivara_National_Park",
+  "wikidataQid": "Q267394"
+ },
+ "fallbackWidthM": 1.6
+}

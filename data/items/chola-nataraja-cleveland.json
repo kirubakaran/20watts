@@ -1,0 +1,98 @@
+{
+ "slug": "chola-nataraja-cleveland",
+ "title": "Nataraja",
+ "titleOriginal": null,
+ "kind": "model",
+ "importance": 0.95,
+ "genre": [
+  "sculpture"
+ ],
+ "tags": [
+  "India",
+  "Tamil Nadu",
+  "Tamil",
+  "Chola",
+  "bronze",
+  "Hinduism",
+  "Shiva"
+ ],
+ "periodSlug": null,
+ "flat": false,
+ "baseHeight": null,
+ "source": {
+  "type": "sketchfab",
+  "curid": "6862a3c673d4434a8dc39ced2a5b5720",
+  "fileTitle": null,
+  "url": "https://sketchfab.com/3d-models/1930331-nataraja-shiva-as-the-lord-of-dance-6862a3c673d4434a8dc39ced2a5b5720",
+  "sourcePage": "https://clevelandart.org/art/1930.331",
+  "width": null,
+  "height": null,
+  "bytes": null,
+  "mime": null,
+  "licenseName": "CC0 1.0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/",
+  "author": "Cleveland Museum of Art (model by Dale Utt)",
+  "notes": "Photogrammetry scan of the Cleveland Museum of Art's Chola bronze Nataraja, accession 1930.331, published by the museum's own Sketchfab account (user 'clevelandart', display name 'Cleveland Museum of Art'). Sketchfab API /v3/models/6862a3c673d4434a8dc39ced2a5b5720: license.label = 'CC0 Public Domain', license.slug = 'cc0', isDownloadable = true, 98,795 faces / 49,376 vertices. Cleveland open-access API (accession_number=1930.331): share_license_status = 'CC0', creation_date '1000s', culture 'South India, Tamil Nadu, Chola period (900-1200s)', measurements 'Overall: 113 x 102 x 30 cm; Base: 35 x 24 cm'. Chosen over the Met's CC0 photograph of its own Nataraja (Met object 39328, 1987.80.1, 68.3 cm) because this is a real scan of a real Chola bronze and is larger; the Met's Sketchfab account (user 'metmuseum') currently lists 0 models, so no Met CC0 3D Nataraja was found. The Minneapolis Institute of Art also publishes CC0 scans of its c. 1100 Nataraja (uids 5bc151d954f74b238079726bf2205c23 and 227d1524875042ce90176129ba98de6c) as an alternative. The scan includes the prabha (ring of fire) and lotus base. Downloaded by the user on 2026-10-09: 112 MB glTF, one mesh, three 8192 px textures, already in metres and upright, 1.01 x 1.12 x 0.36 m."
+ },
+ "object": {
+  "year": 1050,
+  "month": null,
+  "day": null,
+  "yearStart": 1000,
+  "yearEnd": 1099,
+  "dateLabel": "11th century CE",
+  "madeIn": {
+   "name": "Thanjavur region",
+   "region": "Tamil Nadu",
+   "country": "India",
+   "lat": 10.787,
+   "lon": 79.138,
+   "wikidataQid": "Q41496"
+  },
+  "location": {
+   "name": "Cleveland",
+   "region": null,
+   "country": "United States",
+   "lat": null,
+   "lon": null,
+   "wikidataQid": null,
+   "institution": "The Cleveland Museum of Art",
+   "inventoryNumber": "1930.331"
+  },
+  "creator": {
+   "name": "Unknown Chola bronze-caster",
+   "role": "sculptor",
+   "birthYear": null,
+   "deathYear": null,
+   "wikidataQid": null
+  },
+  "culture": "Tamil (Chola)",
+  "movement": null,
+  "medium": "Bronze (copper alloy), lost-wax cast",
+  "materials": [
+   "bronze"
+  ],
+  "subjects": [
+   "Shiva",
+   "Nataraja",
+   "dance",
+   "Hinduism",
+   "cosmic cycle"
+  ],
+  "widthCm": 102,
+  "heightCm": 113,
+  "depthCm": 30,
+  "weightKg": null,
+  "description": "Shiva as Nataraja, the Lord of Dance (Tamil: நடராஜர், Nataraja; also ஆடவல்லான், Adavallan), cast in bronze in Tamil Nadu in the eleventh century, at the height of the Chola empire. The god dances inside a ring of fire. His upper right hand beats a small drum, the sound that begins creation; his upper left holds the flame that will end it. The lower right hand is raised in the gesture that says 'do not fear', and the lower left points to the lifted foot, where release is found. The other foot presses down on Apasmara, the dwarf of ignorance. The whole figure, with its halo and lotus base, stands over a metre tall and was made by the lost-wax method, in which a wax model is coated in clay, melted out and replaced with molten metal, so each bronze is unique. Images like this were carried in procession at temple festivals, dressed and garlanded. The Nataraja is the most famous form of South Indian art, and the one that Tamil people most readily recognise as their own.",
+  "facts": [
+   "Made in Tamil Nadu under the Chola dynasty, whose bronze-casters produced the finest metal sculpture in India between the 9th and 13th centuries.",
+   "Cast by the lost-wax process, so the mould was destroyed and every Chola bronze is a one-off.",
+   "The Cleveland Museum of Art scanned the bronze itself and released the model under CC0; it measures 113 by 102 by 30 cm with its ring of fire.",
+   "A Nataraja of this type stands outside CERN in Geneva, given by India in 2004 as an image of the cosmic dance of matter."
+  ],
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Nataraja",
+  "wikidataQid": "Q23641297"
+ },
+ "representation": "scan",
+ "back": "none"
+}

@@ -1,0 +1,107 @@
+{
+ "slug": "monet-woman-with-a-parasol",
+ "title": "Woman with a Parasol",
+ "titleOriginal": "La Promenade. La Femme à l'ombrelle",
+ "kind": "image",
+ "flat": true,
+ "importance": 0.9,
+ "genre": [
+  "painting"
+ ],
+ "periodSlug": null,
+ "tags": [
+  "impressionism",
+  "Monet",
+  "Argenteuil",
+  "plein air",
+  "portrait",
+  "France"
+ ],
+ "source": {
+  "type": "commons",
+  "fileTitle": "File:Claude Monet, Woman with a Parasol - Madame Monet and Her Son, 1875, NGA 61379.jpg",
+  "curid": 81309412,
+  "url": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Claude_Monet%2C_Woman_with_a_Parasol_-_Madame_Monet_and_Her_Son%2C_1875%2C_NGA_61379.jpg",
+  "width": 3227,
+  "height": 4000,
+  "bytes": 20291573,
+  "mime": "image/jpeg",
+  "licenseName": "Public domain",
+  "licenseUrl": "https://commons.wikimedia.org/wiki/Template:PD-art",
+  "author": "Claude Monet; open-access image from the National Gallery of Art, Washington (NGA object 61379)",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:Claude_Monet,_Woman_with_a_Parasol_-_Madame_Monet_and_Her_Son,_1875,_NGA_61379.jpg",
+  "notes": "The National Gallery of Art's own open-access scan, donated to Commons by the NGA (3227 x 4000 px, 20.3 MB, edge to edge, no frame). The painting is public domain (PD-Art); the NGA released its photograph under CC0: Commons extmetadata LicenseShortName = 'CC0', License = 'cc0', LicenseUrl = creativecommons.org/publicdomain/zero/1.0, UsageTerms = 'Creative Commons Zero, Public Domain Dedication', Credit = 'donated to Wikimedia Commons as part of a project by the National Gallery of Art', Artist = 'Claude Monet'. Chosen over the larger Google Art Project file (curid 22174454, 6001 x 7455 px, a Commons Featured Picture, also scanned at the NGA) because this is the museum's own colour-managed image; the GAP file is a touch warmer and is listed as an alternate. Dimensions 100 x 81 cm from the NGA object page (Wikidata Q2395218 gives 100 x 82); accession 1983.1.29. Painted at Argenteuil, where the Monets lived 1871-1878 (Wikidata Q181946)."
+ },
+ "object": {
+  "year": 1875,
+  "month": null,
+  "day": null,
+  "yearStart": null,
+  "yearEnd": null,
+  "dateLabel": "1875",
+  "madeIn": {
+   "name": "Argenteuil",
+   "region": "Île-de-France",
+   "country": "France",
+   "lat": 48.94778,
+   "lon": 2.24889,
+   "wikidataQid": "Q181946"
+  },
+  "location": {
+   "name": "National Gallery of Art",
+   "country": "United States",
+   "institution": "National Gallery of Art, Washington",
+   "inventoryNumber": "1983.1.29"
+  },
+  "culture": "French",
+  "movement": "Impressionism",
+  "medium": "Oil on canvas",
+  "materials": [
+   "oil paint",
+   "canvas"
+  ],
+  "subjects": [
+   "Camille Monet",
+   "Jean Monet",
+   "parasol",
+   "meadow",
+   "clouds",
+   "wind",
+   "summer"
+  ],
+  "widthCm": 81,
+  "heightCm": 100,
+  "depthCm": null,
+  "weightKg": null,
+  "creator": {
+   "name": "Claude Monet",
+   "role": "painter",
+   "birthYear": 1840,
+   "deathYear": 1926,
+   "wikidataQid": "Q296"
+  },
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Woman_with_a_Parasol_%E2%80%93_Madame_Monet_and_Her_Son",
+  "wikidataQid": "Q2395218",
+  "description": "Seen from below against a windy sky, a woman in a white dress turns on the crest of a meadow, a green parasol tilted over her shoulder and her veil blowing across her face. Her shadow falls on the grass towards us; a small boy in a straw hat stands further off, half hidden by the slope. The woman is Camille, Monet's wife, and the boy their son Jean, aged seven. Monet painted the canvas outdoors in a single session near their house at Argenteuil in the summer of 1875, which is why the brushwork is so fast: the clouds, the flowers and the folds of the dress are all made of the same quick strokes, and the underside of the parasol takes the green of the grass. It was shown at the second Impressionist exhibition in 1876. Camille died in 1879; Monet repainted the pose twice in 1886 with a model, faces turned away, and those two canvases are in the Musée d'Orsay. The woman is Camille Monet, the child their son Jean.",
+  "facts": [
+   "Shown at the second Impressionist exhibition in April 1876 under the title La Promenade.",
+   "Camille Doncieux, Monet's model since 1865 and wife from 1870, died in 1879 at the age of 32.",
+   "Monet revisited the composition in 1886 with two 'Essai de figure en plein air' canvases, now in the Musée d'Orsay.",
+   "Given to the National Gallery of Art by Mr and Mrs Paul Mellon in 1983."
+  ]
+ },
+ "alternates": [
+  {
+   "fileTitle": "File:Claude Monet - Woman with a Parasol - Madame Monet and Her Son - Google Art Project.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Claude_Monet_-_Woman_with_a_Parasol_-_Madame_Monet_and_Her_Son_-_Google_Art_Project.jpg",
+   "licenseName": "Public domain",
+   "width": 6001,
+   "height": 7455,
+   "bytes": 17241228,
+   "mime": "image/jpeg",
+   "author": "Claude Monet; Google Art Project scan at the National Gallery of Art",
+   "sourcePage": "https://commons.wikimedia.org/wiki/File:Claude_Monet_-_Woman_with_a_Parasol_-_Madame_Monet_and_Her_Son_-_Google_Art_Project.jpg",
+   "notes": "Larger Google Art Project scan of the same painting (Commons Featured Picture, PD-Art), slightly warmer in tone than the NGA open-access file."
+  }
+ ]
+}

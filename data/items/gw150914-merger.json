@@ -1,0 +1,86 @@
+{
+ "slug": "gw150914-merger",
+ "title": "Two black holes become one",
+ "kind": "sim",
+ "importance": 0.95,
+ "genre": [
+  "physics"
+ ],
+ "tags": [
+  "physics",
+  "gravitational waves",
+  "LIGO",
+  "black holes",
+  "simulation"
+ ],
+ "baseHeight": 0.1,
+ "source": {
+  "type": "procedural",
+  "program": "merger",
+  "params": {
+   "period": 14,
+   "radius": 1.1,
+   "sound": "/assets/sim-gw150914-merger/chirp.mp3"
+  },
+  "bounds": {
+   "width": 3.2,
+   "height": 2.2,
+   "depth": 3.2
+  },
+  "licenseName": "CC0 1.0",
+  "author": "20watts",
+  "notes": "Run live by src/sims/merger.ts: two masses inspiral on the leading-order chirp, slowed a hundredfold, denting a sheet that ripples with their quadrupole wave; a panel draws the strain, and at the merger LIGO's own recording of GW150914, pitched into hearing, is played (chirp.mp3 served beside the record, from the Gravitational Wave Open Science Center, CC BY 4.0). The program is the museum's own, CC0."
+ },
+ "object": {
+  "year": 2015,
+  "month": 9,
+  "day": 14,
+  "dateLabel": "14 September 2015, 09:50:45 UTC",
+  "madeIn": {
+   "name": "Hanford and Livingston",
+   "region": "Washington and Louisiana",
+   "country": "United States",
+   "lat": 46.455,
+   "lon": -119.408,
+   "wikidataQid": null
+  },
+  "location": {
+   "name": "Everywhere it is computed",
+   "country": null,
+   "institution": null
+  },
+  "culture": null,
+  "medium": "Two black holes merging, computed live; the detectors' recording at the moment of merger",
+  "materials": [],
+  "subjects": [
+   "gravitational waves",
+   "black holes",
+   "LIGO",
+   "general relativity"
+  ],
+  "creator": {
+   "name": "LIGO Scientific Collaboration and Virgo Collaboration",
+   "role": "observers",
+   "birthYear": null,
+   "deathYear": null,
+   "wikidataQid": "Q1370749"
+  },
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/First_observation_of_gravitational_waves",
+  "wikidataQid": "Q21715155",
+  "description": "At 09:50:45 on the morning of 14 September 2015, two detectors four thousand kilometres apart, in Louisiana and in Washington State, each four kilometres long, flexed by a fraction of the width of a proton, seven milliseconds apart. The signal rose in pitch and strength for a fifth of a second and stopped: two black holes, of thirty-six and twenty-nine times the mass of the sun, 1.3 billion light-years away, had spiralled together and merged, turning three suns' worth of mass into a ripple in the shape of space. Einstein had predicted such waves in 1916 and thought them too faint ever to detect.\n\nWhat you see is the event run again, not a film of it, slowed a hundred times: the masses circling faster and closer, the sheet of space dented and rippling, the strain drawn as the detectors drew it, and at the merger, LIGO's recording of the chirp. The event is catalogued as GW150914, for the date.",
+  "facts": [
+   "The detection came four days after the upgraded detectors switched on, before their official observing run began.",
+   "The waves' speed and the time difference between the two sites fix where in the sky they came from, roughly: the southern hemisphere.",
+   "Three solar masses of energy left as gravitational waves; for a tenth of a second the merger outshone all the stars in the observable universe combined.",
+   "Rainer Weiss, Barry Barish and Kip Thorne received the 2017 Nobel Prize for it."
+  ],
+  "yearStart": null,
+  "yearEnd": null,
+  "weightKg": null,
+  "widthCm": null,
+  "heightCm": null,
+  "depthCm": null
+ },
+ "flat": false,
+ "periodSlug": null
+}

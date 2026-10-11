@@ -1,0 +1,88 @@
+{
+ "slug": "acheulean-hand-axe",
+ "title": "Acheulean hand axe",
+ "titleOriginal": null,
+ "kind": "model",
+ "importance": 0.95,
+ "genre": [
+  "tool",
+  "hand axe"
+ ],
+ "tags": [
+  "acheulean",
+  "stone tool",
+  "homo erectus"
+ ],
+ "periodSlug": "paleolithic",
+ "flat": false,
+ "baseHeight": null,
+ "source": {
+  "type": "zenodo",
+  "curid": "21530762",
+  "fileTitle": null,
+  "url": "https://zenodo.org/api/records/21530762/files/ab5a9c0862974e2b99a951ac4776257e.glb/content",
+  "sourcePage": "https://zenodo.org/records/21530762",
+  "width": null,
+  "height": null,
+  "bytes": 2283092,
+  "mime": null,
+  "licenseName": "CC0 1.0",
+  "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "author": "Research Laboratories of Archaeology, University of North Carolina at Chapel Hill (model by Kay Waller)",
+  "notes": "Photogrammetry scan of a real flint hand axe, catalogue 516a5, published CC0 by UNC's Research Laboratories of Archaeology on Sketchfab (https://sketchfab.com/3d-models/acheulean-hand-axe-516a5-ab5a9c0862974e2b99a951ac4776257e, uid ab5a9c0862974e2b99a951ac4776257e, user rla-archaeology) and mirrored as a glb on Zenodo ('Source: Objaverse 1.0 / Sketchfab', DOI 10.5281/zenodo.21530762); anonymous download verified. The RLA description gives the findspot as 'Montieres Amiens, France'; the old collector's ink label visible on the scan reads 'AMIENS - ST. ACHEUL ... Ach. 516A5', i.e. the Acheulean type site (Montières and Saint-Acheul are quarters of Amiens). Raw glb: 60,000 triangles, one texture, bounding box 2.6514 x 1.0572 x 1.5256 units; real length 99.3 mm, so scale = 0.0993/2.6514 = 0.03745 m per unit. Use the raw '<uid>.glb', not the '_normalized' variants. Dimensions (99.3 x 60.6 x 31.4 mm), material and 'Lower Paleolithic (before 300,000 years ago)' from the RLA description; the broader Acheulean range (c. 1.6 million to 100,000 years ago) from Wikipedia 'Hand axe'. Collected 1929 by James Bell Bullitt, donated to UNC. No Smithsonian/Met scan found.",
+  "unitScale": 0.03745
+ },
+ "object": {
+  "year": -300000,
+  "month": null,
+  "day": null,
+  "yearStart": -1500000,
+  "yearEnd": -300000,
+  "dateLabel": "Lower Palaeolithic, Acheulean (before 300,000 years ago)",
+  "madeIn": {
+   "name": "Saint-Acheul, Amiens",
+   "region": "Somme, Hauts-de-France",
+   "country": "France",
+   "lat": 49.8919,
+   "lon": 2.2978,
+   "wikidataQid": "Q41604"
+  },
+  "location": {
+   "name": "Chapel Hill, North Carolina",
+   "region": null,
+   "country": "United States",
+   "lat": null,
+   "lon": null,
+   "wikidataQid": null,
+   "institution": "Research Laboratories of Archaeology, University of North Carolina at Chapel Hill (North Carolina Archaeological Collection)",
+   "inventoryNumber": "516a5"
+  },
+  "creator": null,
+  "culture": "Acheulean (Homo erectus / Homo heidelbergensis)",
+  "movement": null,
+  "medium": "Bifacially knapped flint",
+  "materials": [
+   "flint"
+  ],
+  "subjects": [
+   "stone tool",
+   "hand axe",
+   "Lower Palaeolithic",
+   "human evolution"
+  ],
+  "widthCm": 6.06,
+  "heightCm": 9.93,
+  "depthCm": 3.14,
+  "weightKg": null,
+  "description": "The hand axe is the signature tool of the Acheulean, a tradition that early humans sustained for well over a million years across Africa, Europe and Asia. Each one was shaped by striking flakes from both faces of a flint nodule until a symmetrical, teardrop cutting edge remained. This example comes from the gravel pits of Saint-Acheul at Amiens, the site that gave the industry its name, and still bears its 1920s collector's label.",
+  "facts": [
+   "The Acheulean is named after Saint-Acheul, a suburb of Amiens, where hand axes were found in the Somme river gravels in the 19th century.",
+   "Hand axes were made from roughly 1.6 million to about 100,000 years ago, chiefly by Homo erectus and its successors, and only rarely by Homo sapiens.",
+   "Jacques Boucher de Perthes's finds in the Somme gravels in the 1840s helped establish that humans had coexisted with extinct Ice Age animals."
+  ],
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Hand_axe",
+  "wikidataQid": "Q479448"
+ },
+ "representation": "scan",
+ "back": "none"
+}

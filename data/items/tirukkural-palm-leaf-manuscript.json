@@ -1,0 +1,91 @@
+{
+ "slug": "tirukkural-palm-leaf-manuscript",
+ "title": "Tirukkural",
+ "kind": "image",
+ "flat": true,
+ "importance": 0.85,
+ "genre": [
+  "manuscript",
+  "literature"
+ ],
+ "periodSlug": null,
+ "tags": [
+  "India",
+  "Tamil Nadu",
+  "Tamil",
+  "literature",
+  "ethics",
+  "palm leaf",
+  "manuscript"
+ ],
+ "source": {
+  "type": "commons",
+  "fileTitle": "File:Tirukkural manuscript.jpg",
+  "curid": 47597960,
+  "url": "https://upload.wikimedia.org/wikipedia/commons/9/94/Tirukkural_manuscript.jpg",
+  "width": 1505,
+  "height": 245,
+  "bytes": 416347,
+  "mime": "image/jpeg",
+  "licenseName": "Public domain",
+  "licenseUrl": null,
+  "author": "Unknown scribe; digitised by Tamil Virtual Academy",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:Tirukkural_manuscript.jpg",
+  "notes": "One palm leaf (folio 2 recto, described on Commons as containing kurals 1 and 2 with commentary) of a Tirukkural manuscript. Commons API extmetadata: LicenseShortName = 'Public domain', Artist = 'Unknown author', Credit = 'Tamil Virtual Academy (http://www.tamilvu.org/library/suvadi/s210/html/s2100003.htm)', DateTimeOriginal = 'Unknown date, 19th century or earlier'; Commons categories include 'PD-Art (PD-old-100)', 'PD-1996' and 'Palm-leaf manuscripts in Tamil Nadu'. I fetched the cited Tamil Virtual Academy page: it is leaf (ஓலை) number 3 of their digitised Kural manuscript and the transcribed text is kural 1 (அகர முதல எழுத்தெல்லாம்...) and kural 2 with Parimelalhagar's commentary, which matches the image. The licence rests on the PD-Art rule for a faithful scan of a pre-20th-century manuscript; the physical repository of the leaf is not stated by the Academy, so the 'location' below is the digital library. Image is small (1505 x 245 px) but a palm leaf is small too. Physical size is NOT recorded; the dimensions below are an estimate from the leaf's aspect ratio (6.1:1) and typical Tamil palm leaves (about 40 x 6 cm) and should be treated as approximate. Alternative: File:Thiruvaymoli palm manuscript.jpg (CC0, 4098 x 600 px) is a larger, clearly licensed Tamil palm-leaf but of a different text."
+ },
+ "object": {
+  "year": 450,
+  "month": null,
+  "day": null,
+  "yearStart": 450,
+  "yearEnd": 500,
+  "dateLabel": "c. 450–500 CE (text); this copy 19th century or earlier",
+  "madeIn": {
+   "name": "Mylapore, Chennai (traditional)",
+   "region": "Tamil Nadu",
+   "country": "India",
+   "lat": 13.033,
+   "lon": 80.268,
+   "wikidataQid": "Q1646915"
+  },
+  "location": {
+   "name": "Chennai",
+   "country": "India",
+   "institution": "Tamil Virtual Academy digital library",
+   "inventoryNumber": "suvadi s210, leaf 3"
+  },
+  "culture": "Tamil",
+  "medium": "Ink-rubbed incised script on dried palm leaf",
+  "materials": [
+   "palm leaf"
+  ],
+  "subjects": [
+   "ethics",
+   "virtue",
+   "Tamil poetry",
+   "Tirukkural",
+   "aram"
+  ],
+  "widthCm": 40,
+  "heightCm": 6.5,
+  "depthCm": null,
+  "weightKg": null,
+  "creator": {
+   "name": "Thiruvalluvar",
+   "role": "author",
+   "birthYear": null,
+   "deathYear": null,
+   "wikidataQid": "Q2353373"
+  },
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Kural",
+  "wikidataQid": "Q2167085",
+  "description": "A single leaf of a palm-leaf manuscript of the Tirukkural (திருக்குறள்), the most loved book in the Tamil language. The Kural is a collection of 1,330 couplets, each of just seven words, on virtue, wealth and love, written by the poet Valluvar (திருவள்ளுவர்) around the fifth century CE, perhaps earlier. This leaf carries the first two couplets, beginning 'As the letter A is the first of all letters, so the primal God is first in the world', with the commentary of the thirteenth-century scholar Parimelalhagar written between the lines of verse. For over a thousand years the text survived only this way: letters scratched with a stylus into strips of dried palmyra leaf, the grooves rubbed with soot or lamp-black, the leaves strung together and recopied every century or two before they crumbled. The Kural was the first book printed in Tamil, in 1812, from blocks cut to imitate leaves like this one. It is quoted in Tamil homes, courts and parliaments to this day.",
+  "facts": [
+   "1,330 couplets in 133 chapters of ten; every couplet has exactly seven words in the kural metre.",
+   "Nothing certain is known about the author; the honorific Thiruvalluvar means 'the revered Valluvar'.",
+   "Dated by linguists to about 450–500 CE; traditional accounts place it earlier, in the Sangam age.",
+   "Translated into more than forty languages; the first English selection appeared in 1794."
+  ]
+ },
+ "scale": 4
+}

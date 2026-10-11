@@ -1,0 +1,123 @@
+{
+ "slug": "command-module-columbia",
+ "title": "Command Module Columbia",
+ "titleOriginal": null,
+ "altTitles": [
+  "Columbia",
+  "CM-107"
+ ],
+ "kind": "model",
+ "importance": 0.9,
+ "genre": [
+  "spacecraft",
+  "engineering"
+ ],
+ "tags": [
+  "spacecraft",
+  "apollo",
+  "nasa"
+ ],
+ "periodSlug": null,
+ "flat": false,
+ "baseHeight": 0.3,
+ "source": {
+  "type": "smithsonian-3d",
+  "curid": "nasm_A19700102000",
+  "format": "voyager-document",
+  "fileTitle": null,
+  "url": "https://3d-api.si.edu/content/document/d8c6457e-4ebc-11ea-b77f-2e728ce88125/document.json",
+  "sourcePage": "https://3d.si.edu/object/3d/d8c6457e-4ebc-11ea-b77f-2e728ce88125",
+  "width": null,
+  "height": null,
+  "bytes": null,
+  "mime": null,
+  "licenseName": "CC0 1.0",
+  "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "author": "Smithsonian Institution, Digitization Program Office",
+  "notes": "Initial import from Smithsonian 3D (exterior scan)"
+ },
+ "object": {
+  "year": 1969,
+  "month": 7,
+  "day": null,
+  "yearStart": 1968,
+  "yearEnd": 1969,
+  "dateLabel": "1969",
+  "datePrecision": "year",
+  "madeIn": {
+   "name": "Downey",
+   "region": "California",
+   "country": "United States",
+   "lat": 33.9401,
+   "lon": -118.1332,
+   "wikidataQid": "Q488064"
+  },
+  "location": {
+   "name": "Washington, D.C.",
+   "region": null,
+   "country": "United States",
+   "lat": 38.8882,
+   "lon": -77.0199,
+   "wikidataQid": "Q61",
+   "institution": "Smithsonian National Air and Space Museum",
+   "inventoryNumber": "A19700102000"
+  },
+  "creator": {
+   "name": "North American Rockwell",
+   "role": "manufacturer",
+   "birthYear": null,
+   "deathYear": null,
+   "wikidataQid": "Q1356326",
+   "wikipediaUrl": "https://en.wikipedia.org/wiki/North_American_Aviation",
+   "slug": "north-american-rockwell"
+  },
+  "culture": "American",
+  "movement": null,
+  "medium": "aluminium honeycomb, stainless steel honeycomb, ablative heat shield",
+  "materials": [
+   "aluminium",
+   "stainless steel",
+   "phenolic epoxy resin"
+  ],
+  "subjects": [
+   "Apollo 11",
+   "Moon landing",
+   "spaceflight"
+  ],
+  "widthCm": 391,
+  "heightCm": 323,
+  "depthCm": 391,
+  "weightKg": 5557,
+  "description": "Columbia is the command module of Apollo 11, the first mission to land humans on the Moon, and the only part of that spacecraft to return to Earth. Michael Collins orbited the Moon alone in it while Armstrong and Aldrin were on the surface; all three rode it home through re-entry on 24 July 1969. The scan shows the exterior as it stands today, with the heat shield charred from re-entry.",
+  "facts": [
+   "The crew wrote on the cabin walls during the flight, including a calendar Collins kept and the words \"Spacecraft 107, alias Apollo 11, alias Columbia. The Best Ship to Come Down the Line. God Bless Her.\"",
+   "Collins named it after Jules Verne's cannon Columbiad and the ship Columbia Rediviva, the first American vessel to circle the globe.",
+   "After the flight it toured all fifty state capitals before coming to the Smithsonian in 1971.",
+   "The ablative heat shield reached about 2,800 °C during re-entry."
+  ],
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Command_module_Columbia",
+  "wikidataQid": "Q85753536"
+ },
+ "externalIds": {
+  "si-edan": "edanmdm:nasm_A19700102000",
+  "si-3d-exterior": "d8c6457e-4ebc-11ea-b77f-2e728ce88125",
+  "si-3d-interior": "d8c63e8a-4ebc-11ea-b77f-2e728ce88125"
+ },
+ "representation": "scan",
+ "back": "none",
+ "audio": {
+  "type": "nasa",
+  "url": "https://apollojournals.org/alsj/a11/a11a1023114-4746.mp3",
+  "bytes": 15825187,
+  "mime": "audio/mpeg",
+  "seconds": 989,
+  "start": 850,
+  "excerptSeconds": 100,
+  "performers": "Neil Armstrong and Buzz Aldrin aboard the lunar module Eagle; Charlie Duke, capsule communicator in Houston; NASA Public Affairs commentary.",
+  "author": "NASA; Apollo 11 Public Affairs loop recording, clip prepared by John Stoll, ACR Senior Technician, NASA Johnson Space Center, for the Apollo Lunar Surface Journal",
+  "licenseName": "Public domain (NASA)",
+  "licenseUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+  "sourcePage": "https://apollojournals.org/alsj/a11/a11.landing.html",
+  "notes": "Apollo 11 landing, 20 July 1969. The clip is the NASA Public Affairs Office loop (air-to-ground plus PAO commentary) from mission time 102:31:14 to 102:47:46, as the file name indicates; it is linked from the Apollo Lunar Surface Journal landing page with the caption 'Audio Clip from the Public Affairs loop starting at about 102:31:14. Clip courtesy John Stoll, ACR Senior Technician at NASA Johnson.' Touchdown ('Contact Light') is at 102:45:40 and 'Houston, Tranquility Base here. The Eagle has landed.' at 102:45:58, i.e. roughly 866 s and 884 s into the clip; start=850 with a 100 s excerpt covers the final descent, the landing and Duke's 'You got a bunch of guys about to turn blue' reply. Duration (992 s) is derived from the time span in the file name and matches the 15,825,187-byte size at 128 kbit/s; verify after download. HTTP HEAD on 2026-10-09 returned 200, content-type audio/mpeg. The ALSJ was hosted at history.nasa.gov/alsj and www.nasa.gov/history/alsj; both now redirect to apollojournals.org, which is operated for the NASA History Office (the nasa.gov page 'The Apollo Lunar Surface Journal and Apollo Flight Journal' links to it). NASA audio is not protected by copyright. The journal's transcript and commentary text is copyright Eric M. Jones, but the audio is NASA's own recording. A 5.3 s NASA ringtone excerpt of the same exchange is also on Commons under Public domain / PD-USGov-NASA: File:Apollo 11 Eagle Has Landed.mp3 (curid 80595007, 26,388 bytes, Credit 'https://www.nasa.gov/connect/sounds/index.html'), usable as a fallback if the long clip is not wanted."
+ }
+}

@@ -1,0 +1,142 @@
+{
+ "slug": "rickroll",
+ "title": "Rickroll",
+ "titleOriginal": "Never Gonna Give You Up",
+ "altTitles": [
+  "Rickrolling",
+  "Rick Astley - Never Gonna Give You Up (Official Video)"
+ ],
+ "kind": "image",
+ "importance": 0.7,
+ "genre": [
+  "music video",
+  "internet meme",
+  "prank"
+ ],
+ "tags": [
+  "meme",
+  "internet",
+  "music-video",
+  "rickroll"
+ ],
+ "periodSlug": null,
+ "flat": true,
+ "baseHeight": 0.7,
+ "source": {
+  "type": "youtube",
+  "curid": "dQw4w9WgXcQ",
+  "fileTitle": null,
+  "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+  "sourcePage": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+  "width": 1280,
+  "height": 720,
+  "bytes": 17593076,
+  "mime": "video/mp4",
+  "licenseName": "Fair use",
+  "licenseUrl": null,
+  "author": "Rick Astley; directed by Simon West; © RCA Records / Sony Music Entertainment",
+  "notes": "Still and silent loop cut from the official upload at 0:44"
+ },
+ "object": {
+  "year": 2007,
+  "month": 5,
+  "day": null,
+  "yearStart": 1987,
+  "yearEnd": 2007,
+  "dateLabel": "video 1987 · meme since 2007",
+  "datePrecision": "year",
+  "madeIn": {
+   "name": "London",
+   "region": "England",
+   "country": "United Kingdom",
+   "lat": 51.5074,
+   "lon": -0.1278,
+   "wikidataQid": "Q84"
+  },
+  "location": {
+   "name": null,
+   "region": null,
+   "country": null,
+   "lat": null,
+   "lon": null,
+   "wikidataQid": null,
+   "institution": "YouTube, 1.6 billion views and counting",
+   "inventoryNumber": "dQw4w9WgXcQ"
+  },
+  "creator": {
+   "name": "Rick Astley",
+   "role": "performer",
+   "birthYear": 1966,
+   "deathYear": null,
+   "wikidataQid": "Q219237",
+   "wikipediaUrl": "https://en.wikipedia.org/wiki/Rick_Astley",
+   "slug": "rick-astley"
+  },
+  "creators": [
+   {
+    "name": "Rick Astley",
+    "role": "performer",
+    "birthYear": 1966,
+    "deathYear": null,
+    "wikidataQid": "Q219237",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Rick_Astley",
+    "slug": "rick-astley"
+   },
+   {
+    "name": "Simon West",
+    "role": "director",
+    "birthYear": 1961,
+    "deathYear": null,
+    "wikidataQid": null,
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Simon_West",
+    "slug": "simon-west"
+   },
+   {
+    "name": "Stock Aitken Waterman",
+    "role": "songwriters",
+    "birthYear": null,
+    "deathYear": null,
+    "wikidataQid": null,
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Stock_Aitken_Waterman",
+    "slug": "stock-aitken-waterman"
+   }
+  ],
+  "culture": "Internet",
+  "movement": "Internet meme",
+  "medium": "music video, 3:33, shown as a silent three-second loop",
+  "materials": [],
+  "subjects": [
+   "Rick Astley",
+   "bait and switch",
+   "4chan",
+   "YouTube"
+  ],
+  "widthCm": 243.5,
+  "heightCm": 137,
+  "depthCm": null,
+  "weightKg": null,
+  "description": "The rickroll: a link that promises one thing and delivers Rick Astley's 1987 video for \"Never Gonna Give You Up\". It began on 4chan in May 2007 as a twist on an older duck-themed prank, spread through the whole internet within a year, and has never gone away. The video itself was shot in London by Simon West and became, through the prank, one of the most-watched clips on YouTube. Shown here at the size of a 110-inch screen, frozen until you come close.",
+  "facts": [
+   "On 1 April 2008 YouTube rickrolled its own front page: every featured video linked to this one.",
+   "Rick Astley himself rickrolled the 2008 Macy's Thanksgiving Day Parade, popping out of a float mid-song.",
+   "The video's YouTube id, dQw4w9WgXcQ, is recognised on sight by enough people that it is a meme in its own right.",
+   "The still and the loop are shown under fair use; the video and song remain the property of their owners."
+  ],
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Rickrolling",
+  "wikidataQid": "Q695677"
+ },
+ "externalIds": {
+  "wikidata-video": "Q66084859",
+  "wikidata-song": "Q57"
+ },
+ "copyrighted": true,
+ "flags": [
+  "fair-use"
+ ],
+ "recordSource": "admin",
+ "fallbackWidthM": 1.22,
+ "loop": {
+  "start": 44,
+  "seconds": 3
+ }
+}

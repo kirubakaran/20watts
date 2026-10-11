@@ -1,0 +1,86 @@
+{
+ "slug": "laocoon-cast",
+ "title": "Laocoön and His Sons",
+ "kind": "model",
+ "representation": "scan",
+ "baseHeight": 0.5,
+ "back": "none",
+ "importance": 0.9,
+ "genre": [
+  "sculpture"
+ ],
+ "tags": [
+  "sculpture",
+  "scan"
+ ],
+ "periodSlug": null,
+ "flat": false,
+ "source": {
+  "type": "sketchfab",
+  "fileTitle": null,
+  "curid": "4e253a98bfc842cabfe7610c38daa7ab",
+  "url": "https://sketchfab.com/3d-models/4e253a98bfc842cabfe7610c38daa7ab",
+  "width": null,
+  "height": null,
+  "bytes": 123047093,
+  "mime": "model/gltf+json",
+  "licenseName": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "author": "bcdh (Sketchfab)",
+  "sourcePage": "https://sketchfab.com/3d-models/4e253a98bfc842cabfe7610c38daa7ab",
+  "unitScale": 1.13,
+  "notes": " Photogrammetry of a cast with its integral altar block, 400,000 triangles, 8192 px colour, roughness and normal maps (the originals are 63 and 30 MB; the pipeline resizes them). Scaled to 2.08 m and raised 0.5 m. The group is 208 cm tall; the cast adds a base. Downloaded by the museum's owner from Sketchfab on 2026-10-10."
+ },
+ "object": {
+  "year": -40,
+  "month": null,
+  "day": null,
+  "yearStart": -200,
+  "yearEnd": 70,
+  "dateLabel": "c. 40-30 BCE (or later); a cast of the Vatican group",
+  "madeIn": {
+   "name": "Rome",
+   "region": null,
+   "country": "Italy",
+   "lat": 41.9065,
+   "lon": 12.4536,
+   "wikidataQid": null
+  },
+  "location": {
+   "name": null,
+   "country": null,
+   "institution": "A cast, scanned by the Bonn Center for Digital Humanities; the marble is in the Vatican Museums",
+   "inventoryNumber": null
+  },
+  "culture": "Hellenistic Greek, in Rome",
+  "medium": "Plaster cast of the marble group",
+  "materials": [
+   "plaster"
+  ],
+  "subjects": [
+   "mythology",
+   "Troy",
+   "agony",
+   "Hellenistic"
+  ],
+  "widthCm": null,
+  "heightCm": 208,
+  "depthCm": null,
+  "weightKg": null,
+  "creator": {
+   "name": "Agesander, Athenodoros and Polydorus of Rhodes",
+   "role": "sculptor",
+   "birthYear": null,
+   "deathYear": null,
+   "wikidataQid": null
+  },
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Laoco%C3%B6n_and_His_Sons",
+  "wikidataQid": null,
+  "description": "The priest of Troy who warned against the wooden horse, and the sea serpents sent to silence him, dying with his sons. Pliny saw it in the palace of Titus and called it the finest work of art in the world; it was dug up in a vineyard on the Esquiline on 14 January 1506, Michelangelo went to watch, and the Pope bought it within a month. Its agony taught the Renaissance and the Baroque what a body could express, Lessing wrote the founding essay of modern aesthetics about why its mouth is not screaming, and Bernini and Blake and Goethe all took it as the measure. This is a cast of the Vatican marble; the arm bent back over the head is the right one, found in 1906, replacing the straight arm the Renaissance had guessed.",
+  "facts": [
+   "Michelangelo refused to restore it, saying no one could; Montorsoli's straight arm stood until 1957.",
+   "Napoleon took it to Paris in 1798; it came back in 1816.",
+   "Lessing's 'Laocoön' (1766) argues that sculpture must choose the moment before the climax, not the climax."
+  ]
+ }
+}

@@ -1,0 +1,105 @@
+{
+ "slug": "abdel-hay-hilmi-agibtu",
+ "title": "'Abd al-Hayy Hilmi sings a qasida",
+ "kind": "image",
+ "flat": false,
+ "fallbackWidthM": 0.7,
+ "importance": 0.8,
+ "genre": [
+  "music"
+ ],
+ "periodSlug": null,
+ "tags": [
+  "music",
+  "Egypt",
+  "Arab",
+  "Nahda",
+  "recording",
+  "gramophone"
+ ],
+ "source": {
+  "type": "user-upload",
+  "fileTitle": null,
+  "curid": null,
+  "url": "https://archive.org/details/78_aguibtou-lisay-el-dahr-i_abdel-hay-eff-hilmy_gbia0299679a",
+  "width": null,
+  "height": null,
+  "bytes": null,
+  "mime": "image/jpeg",
+  "licenseName": "Public domain",
+  "licenseUrl": null,
+  "author": "Opera Disc Company label, New York, 1921-23 (60036), pressing of a Gramophone Company Cairo master of 1909-10; photograph by the Internet Archive's Great 78 Project",
+  "sourcePage": "https://archive.org/details/78_aguibtou-lisay-el-dahr-i_abdel-hay-eff-hilmy_gbia0299679a",
+  "notes": "The record's own label: the Opera Disc Company of New York's 1921-23 pressing (60036) of the Gramophone Company's Cairo master 012520, photographed by the Great 78 Project (2263 x 2263). A printed label of the early 1920s, public domain in the United States."
+ },
+ "audio": {
+  "type": "internet-archive",
+  "fileTitle": null,
+  "curid": null,
+  "url": "https://archive.org/download/78_aguibtou-lisay-el-dahr-i_abdel-hay-eff-hilmy_gbia0299679a/Aguibtou%20Lisay%20El%20Dahr%20I%20-%20Abdel%20Hay%20Eff.%20Hilmy.mp3",
+  "bytes": 7129617,
+  "mime": "audio/mpeg",
+  "seconds": 255.8,
+  "licenseName": "Public domain",
+  "licenseUrl": null,
+  "author": "'Abd al-Hayy Hilmi, voice, with the takht of Sami al-Shawwa; Gramophone Company, Cairo, 1909-10 (012520), pressed by Opera Disc 1921-23 as 60036",
+  "sourcePage": "https://archive.org/details/78_aguibtou-lisay-el-dahr-i_abdel-hay-eff-hilmy_gbia0299679a",
+  "performers": "'Abd al-Hayy Hilmi, voice, with the takht led by the violinist Sami al-Shawwa; the qasida ''Agibtu li-sa'y al-dahr', first part, recorded in Cairo for the Gramophone Company in 1909-10 (012520) and pressed in New York by the Opera Disc Company in 1921-23 (60036).",
+  "start": 0,
+  "excerptSeconds": null,
+  "notes": "Public domain in the United States: the recording was first published before 1926 (Music Modernization Act schedule, as of 2026) and the composition before 1931 or is traditional. The qasida is on a classical Arabic poem. Transfer by the Internet Archive's Great 78 Project from a George Blood digitisation; no licence claim on the item."
+ },
+ "object": {
+  "year": 1909,
+  "month": null,
+  "day": null,
+  "yearStart": 1909,
+  "yearEnd": 1910,
+  "dateLabel": "Cairo, 1909-10",
+  "madeIn": {
+   "name": "Cairo",
+   "region": null,
+   "country": "Egypt",
+   "lat": 30.0444,
+   "lon": 31.2357,
+   "wikidataQid": null
+  },
+  "location": {
+   "name": null,
+   "country": null,
+   "institution": null,
+   "inventoryNumber": null
+  },
+  "culture": "Egyptian (Arab)",
+  "medium": "Acoustic 78 rpm gramophone recording; a qasida with takht",
+  "materials": [
+   "shellac"
+  ],
+  "subjects": [
+   "music",
+   "Arab music",
+   "Nahda",
+   "qasida",
+   "sound recording"
+  ],
+  "widthCm": null,
+  "heightCm": null,
+  "depthCm": null,
+  "weightKg": null,
+  "creator": {
+   "name": "'Abd al-Hayy Hilmi",
+   "role": "singer",
+   "birthYear": 1857,
+   "deathYear": 1912,
+   "wikidataQid": null
+  },
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Abd_al-Hayy_Hilmi",
+  "wikidataQid": null,
+  "description": "The most popular singer in Egypt in the first decade of the century, in a form the gramophone could barely hold. 'Abd al-Hayy Hilmi was the wild one of the Nahda, a drinker and a genius, who would stop a performance when the mood left him and sing for an hour when it came; he died at fifty-five in 1912. The qasida is the oldest Arab song form, a classical poem sung line by line with the singer improvising on each, and here he has behind him the violin of Sami al-Shawwa, 'the prince of the violin', then at the start of a career that lasted into the age of Umm Kulthum. The side was cut in Cairo around 1909 and pressed a decade later in New York for the Arab communities of the Americas. The label stands in for a portrait.",
+  "facts": [
+   "Opera Disc of New York reissued the Gramophone Company's Arab masters without licence in the early 1920s; it is why many survive.",
+   "Sami al-Shawwa (1885-1965) later accompanied Umm Kulthum and toured the Americas.",
+   "The Nahda singers' improvisation, the layali and mawwal, is the ancestor of the long tarab performances of the mid-century."
+  ]
+ }
+}

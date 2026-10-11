@@ -1,0 +1,101 @@
+{
+ "slug": "debussy-clair-de-lune",
+ "title": "Clair de lune",
+ "kind": "image",
+ "flat": true,
+ "importance": 0.8,
+ "genre": [
+  "music"
+ ],
+ "periodSlug": null,
+ "tags": [
+  "music",
+  "impressionism",
+  "piano"
+ ],
+ "source": {
+  "type": "commons",
+  "fileTitle": "File:Clair de lune (Debussy) - first edition, 1905.jpg",
+  "curid": 200510653,
+  "url": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Clair_de_lune_%28Debussy%29_-_first_edition%2C_1905.jpg",
+  "width": 3256,
+  "height": 3946,
+  "bytes": 1931094,
+  "mime": "image/jpeg",
+  "licenseName": "Public domain",
+  "licenseUrl": null,
+  "author": "Claude Debussy (composer); E. Fromont, Paris (publisher, 1905)",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:Clair_de_lune_(Debussy)_-_first_edition,_1905.jpg",
+  "notes": "First page of 'Clair de lune', third movement of the Suite bergamasque, cropped from a scan of the first edition published by E. Fromont, Paris, 1905. Commons API extmetadata: LicenseShortName 'Public domain'; Artist 'Claude Debussy'; Credit 'This image has been extracted from another file'; ImageDescription 'First page of Clair de lune, the third movement of Claude Debussy's Suite bergamasque, cropped from a scan of the first edition published by E. Fromont in Paris in 1905.'; DateTimeOriginal 1905. Debussy died in 1918, so the work and this 1905 printing are public domain worldwide."
+ },
+ "audio": {
+  "type": "commons",
+  "fileTitle": "File:Clair de lune (Claude Debussy) Suite bergamasque.ogg",
+  "curid": 35176940,
+  "url": "https://upload.wikimedia.org/wikipedia/commons/b/be/Clair_de_lune_%28Claude_Debussy%29_Suite_bergamasque.ogg",
+  "bytes": 15740765,
+  "mime": "audio/ogg",
+  "seconds": 304.1,
+  "licenseName": "CC BY 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "author": "Laurens Goedhart, piano",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:Clair_de_lune_(Claude_Debussy)_Suite_bergamasque.ogg",
+  "performers": "Laurens Goedhart, piano, recorded 20 August 2011.",
+  "start": 0,
+  "excerptSeconds": null,
+  "notes": "Licence verified from the file page wikitext, which uses {{Copyright information|recording={{cc-by-3.0}}|musical composition={{PD-old-auto-expired|deathyear=1918}}}} and quotes the SoundCloud permission statement: 'Claude Debussy's Clair de Lune by Laurens Goedhart is licensed under a Creative Commons License' linking to creativecommons.org/licenses/by/3.0/. The Commons API extmetadata reports LicenseShortName 'Public domain' because the template summarises the composition rather than the recording; the recording itself is CC BY 3.0, so credit 'Laurens Goedhart' when serving it. extmetadata: Artist 'Claude Debussy'; Credit 'https://soundcloud.com/laurensgoedhart/claude-debussys-clair-de-lune'; ImageDescription '\"Clair de lune\" in the Suite bergamasque by Claude Debussy performed by Laurens Goedhart (pf) in 2011.'; DateTimeOriginal 2011-08-20. Duration from API metadata: 304.09 s."
+ },
+ "object": {
+  "year": 1905,
+  "month": null,
+  "day": null,
+  "yearStart": 1890,
+  "yearEnd": 1905,
+  "dateLabel": "1905 (publication, Paris; first drafted about 1890)",
+  "madeIn": {
+   "name": "Paris",
+   "region": "Île-de-France",
+   "country": "France",
+   "lat": 48.8566,
+   "lon": 2.3522,
+   "wikidataQid": "Q90"
+  },
+  "location": {
+   "name": null,
+   "country": null,
+   "institution": null,
+   "inventoryNumber": null
+  },
+  "culture": "French",
+  "medium": "Piece for solo piano, third movement of the Suite bergamasque; engraved first edition",
+  "materials": [
+   "ink",
+   "paper"
+  ],
+  "subjects": [
+   "music",
+   "piano",
+   "impressionism"
+  ],
+  "widthCm": null,
+  "heightCm": null,
+  "depthCm": null,
+  "weightKg": null,
+  "creator": {
+   "name": "Claude Debussy",
+   "role": "composer",
+   "birthYear": 1862,
+   "deathYear": 1918,
+   "wikidataQid": "Q4700"
+  },
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Suite_bergamasque",
+  "wikidataQid": null,
+  "description": "Debussy sketched the four pieces of his Suite bergamasque around 1890, when he was twenty-eight and almost unknown, but he put them aside. Fifteen years later, now famous for Pelléas et Mélisande and La mer, he was persuaded by the publisher Fromont to revise and release them, and the suite appeared in Paris in 1905. The third piece, originally called 'Promenade sentimentale', was renamed 'Clair de lune' after a poem by Paul Verlaine in which masked revellers sing 'in the calm moonlight, sad and beautiful'. Its hushed opening in D-flat major, with chords that float rather than progress, became the best-known example of the new harmonic language later called impressionist, and one of the most loved piano pieces ever written. The page shown is the first page of the 1905 Fromont edition. The visitor hears the piece played by the Dutch pianist Laurens Goedhart, who released his 2011 recording under a Creative Commons Attribution licence.",
+  "facts": [
+   "The title comes from Verlaine's poem 'Clair de lune' in Fêtes galantes (1869), which Debussy also set twice as a song.",
+   "The word 'bergamasque' refers to a rustic dance from Bergamo mentioned in the same poem.",
+   "Debussy never recorded the piece; his few piano rolls, made in 1913, are of other works."
+  ]
+ },
+ "order": 0
+}

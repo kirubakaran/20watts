@@ -1,0 +1,93 @@
+{
+ "slug": "space-shuttle-discovery",
+ "title": "Space Shuttle Discovery",
+ "kind": "model",
+ "representation": "scan",
+ "baseHeight": 0,
+ "back": "none",
+ "importance": 0.95,
+ "genre": [
+  "spacecraft",
+  "engineering"
+ ],
+ "tags": [
+  "space",
+  "NASA",
+  "spacecraft",
+  "scan",
+  "walk under"
+ ],
+ "periodSlug": null,
+ "source": {
+  "type": "sketchfab",
+  "fileTitle": null,
+  "curid": "5f7176a2ae284d6b99fc970c9d265c04",
+  "url": "https://sketchfab.com/3d-models/orbiter-space-shuttle-ov-103-discovery-5f7176a2ae284d6b99fc970c9d265c04",
+  "width": null,
+  "height": null,
+  "bytes": 45793821,
+  "mime": "model/gltf+json",
+  "licenseName": "CC0 1.0",
+  "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "author": "Smithsonian Institution",
+  "sourcePage": "https://sketchfab.com/3d-models/orbiter-space-shuttle-ov-103-discovery-5f7176a2ae284d6b99fc970c9d265c04",
+  "notes": "Smithsonian Institution 3D scan of the orbiter Discovery (OV-103) as displayed at the Udvar-Hazy Center, published on Sketchfab under CC0 1.0 (license.txt in the download: author The Smithsonian Institution, license type CC0-1.0, 'Credit is not mandatory. Commercial use is allowed.'). glTF with 150,000 triangles and three 4096 px textures (base colour, metallic-roughness, normal), already in metres: measured wingspan 23.81 m (real 23.8), height on its gear 17.73 m, length 35.87 m (real 37.2, the scan is a little short at the tips). Nose faces +Z in the file, upright on its landing gear, no surroundings to strip. Downloaded by the museum's owner from Sketchfab on 2026-10-10."
+ },
+ "object": {
+  "year": 1984,
+  "month": 8,
+  "day": 30,
+  "yearStart": 1979,
+  "yearEnd": 1984,
+  "dateLabel": "First flight 30 August 1984",
+  "madeIn": {
+   "name": "Palmdale",
+   "region": "California",
+   "country": "United States",
+   "lat": 34.58,
+   "lon": -118.12,
+   "wikidataQid": "Q486898"
+  },
+  "location": {
+   "name": "Chantilly, Virginia",
+   "country": "United States",
+   "institution": "Smithsonian National Air and Space Museum, Steven F. Udvar-Hazy Center",
+   "inventoryNumber": "A20120325000"
+  },
+  "culture": null,
+  "medium": "Aluminium airframe under 24,000 silica heat-shield tiles and reinforced carbon-carbon leading edges",
+  "materials": [
+   "aluminium",
+   "silica tiles",
+   "reinforced carbon-carbon",
+   "Nomex felt"
+  ],
+  "subjects": [
+   "spaceflight",
+   "orbiter",
+   "reusable spacecraft",
+   "NASA"
+  ],
+  "widthCm": 2380,
+  "heightCm": 1720,
+  "depthCm": 3720,
+  "weightKg": 78000,
+  "creator": {
+   "name": "Rockwell International, for NASA",
+   "role": "builder",
+   "birthYear": null,
+   "deathYear": null,
+   "wikidataQid": null
+  },
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Space_Shuttle_Discovery",
+  "wikidataQid": "Q182536",
+  "description": "The most flown spacecraft there has ever been: thirty-nine missions between 1984 and 2011, a year of her life in orbit all told, 148 million miles. Discovery carried the Hubble Space Telescope up in 1990 and went back twice to service it, flew the first woman to pilot a shuttle, the first Russian cosmonaut on an American vehicle and John Glenn at seventy-seven, and was the ship chosen to return to flight after both the Challenger and Columbia losses. She is the Smithsonian's own scan, at true size, standing on her gear: 37 metres long, a 24 metre wingspan, 78 tonnes empty. Walk under the wing and look up at the tiles; each was fitted by hand and no two are alike.",
+  "facts": [
+   "Thirty-nine flights, more than any other spacecraft; 5,830 orbits of the Earth.",
+   "Her last flight, STS-133 in March 2011, delivered a storage module and a humanoid robot to the International Space Station.",
+   "The black tiles on her underside shed the heat of re-entry, 1,650 °C, and are cool enough to hold a minute later.",
+   "She was flown to Washington on the back of a 747 in April 2012 and has been at the Udvar-Hazy Center since."
+  ]
+ },
+ "flat": false
+}

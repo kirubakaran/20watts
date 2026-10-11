@@ -1,0 +1,85 @@
+{
+ "slug": "black-hole-accretion-disc",
+ "title": "A black hole",
+ "kind": "sim",
+ "importance": 0.9,
+ "genre": [
+  "physics"
+ ],
+ "tags": [
+  "physics",
+  "black hole",
+  "relativity",
+  "simulation"
+ ],
+ "baseHeight": 0.3,
+ "source": {
+  "type": "procedural",
+  "program": "blackhole",
+  "params": {
+   "radius": 0.22,
+   "steps": 110,
+   "discOuter": 8
+  },
+  "bounds": {
+   "width": 4.6,
+   "height": 3.0,
+   "depth": 0.1
+  },
+  "licenseName": "CC0 1.0",
+  "author": "20watts",
+  "notes": "Run live by src/sims/blackhole.ts: for every pixel of a square held up facing the visitor, a ray is traced back from the eye and bent through Schwarzschild spacetime around a mass at the square's centre, crossing a thin glowing disc; the method is Luminet's of 1979, done on the graphics chip. The stars behind are made up. The program is the museum's own, CC0."
+ },
+ "object": {
+  "year": 1979,
+  "dateLabel": "1979",
+  "madeIn": {
+   "name": "Meudon",
+   "region": "Île-de-France",
+   "country": "France",
+   "lat": 48.8054,
+   "lon": 2.2316,
+   "wikidataQid": null
+  },
+  "location": {
+   "name": "Everywhere it is computed",
+   "country": null,
+   "institution": null
+  },
+  "culture": null,
+  "medium": "Light traced through curved spacetime, computed live on the graphics processor",
+  "materials": [],
+  "subjects": [
+   "black hole",
+   "accretion disc",
+   "gravitational lensing",
+   "general relativity"
+  ],
+  "creator": {
+   "name": "Jean-Pierre Luminet",
+   "role": "astrophysicist",
+   "birthYear": 1951,
+   "deathYear": null,
+   "wikidataQid": "Q3163898"
+  },
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Black_hole#Accretion_of_matter",
+  "wikidataQid": null,
+  "description": "What a black hole looks like, worked out before anyone had seen one. In 1979 Jean-Pierre Luminet, at the Paris Observatory at Meudon, traced rays of light backward from an observer's eye through the bent space around a black hole, on an IBM 7040 with punched cards, and plotted the result by hand with India ink, dot by dot. The picture surprised everyone: the far side of the glowing disc of gas around the hole is lifted into view above and below it, because light from behind bends over the top, and a thin ring of light rims the black shadow. Forty years later the Event Horizon Telescope's image of M87 showed the same ring.\n\nWhat hangs here is not an image but the calculation itself, run afresh for every point of the window every frame as you move, so you can walk round it. The side of the disc coming toward you is brighter, as his was.",
+  "facts": [
+   "Luminet's 1979 picture is the first scientific image of a black hole; it was computed, not observed.",
+   "Light from the far side of the disc reaches you over the top of the hole: that is why the ring seems to stand up behind it.",
+   "The film Interstellar's black hole of 2014 was made the same way, with Kip Thorne checking the equations.",
+   "The real thing, M87's black hole, was imaged in 2019 and hangs nearby."
+  ],
+  "month": null,
+  "day": null,
+  "yearStart": null,
+  "yearEnd": null,
+  "weightKg": null,
+  "widthCm": null,
+  "heightCm": null,
+  "depthCm": null
+ },
+ "flat": false,
+ "periodSlug": null
+}

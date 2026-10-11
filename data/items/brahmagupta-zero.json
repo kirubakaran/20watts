@@ -1,0 +1,73 @@
+{
+ "slug": "brahmagupta-zero",
+ "title": "Brahmagupta's rules for zero",
+ "kind": "image",
+ "flat": true,
+ "importance": 0.9,
+ "genre": [
+  "equation"
+ ],
+ "periodSlug": null,
+ "tags": [
+  "equation",
+  "mathematics",
+  "India"
+ ],
+ "source": {
+  "type": "typeset",
+  "tex": "a + 0 = a, \\qquad a - a = 0, \\qquad a \\cdot 0 = 0",
+  "figure": "data/figures/brahmagupta-zero.svg",
+  "licenseName": "CC0 1.0",
+  "author": "20watts",
+  "sourcePage": null,
+  "notes": "Typeset by 20watts from the TeX in the record with MathJax, with a figure drawn for this museum; the rendering is CC0, the equation itself is not subject to copyright."
+ },
+ "object": {
+  "year": 628,
+  "month": null,
+  "day": null,
+  "yearStart": 628,
+  "yearEnd": 628,
+  "dateLabel": "628 CE (Brāhmasphuṭasiddhānta)",
+  "madeIn": {
+   "name": "Bhinmal (Bhillamala)",
+   "region": "Rajasthan",
+   "country": "India",
+   "lat": 25.0,
+   "lon": 72.26,
+   "wikidataQid": null
+  },
+  "location": {
+   "name": null,
+   "country": null,
+   "institution": null,
+   "inventoryNumber": null
+  },
+  "culture": "Indian",
+  "medium": "Equation, typeset",
+  "materials": [],
+  "subjects": [
+   "equation",
+   "mathematics"
+  ],
+  "widthCm": 100,
+  "heightCm": 85,
+  "depthCm": null,
+  "weightKg": null,
+  "creator": {
+   "name": "Brahmagupta",
+   "role": "author",
+   "birthYear": 598,
+   "deathYear": 668,
+   "wikidataQid": null
+  },
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Brahmagupta",
+  "wikidataQid": null,
+  "description": "Zero as a number, with rules for doing arithmetic on it. Counting systems had used an empty place for centuries, but in 628 CE Brahmagupta, writing the Brāhmasphuṭasiddhānta in Bhinmal in what is now Rajasthan, was the first to treat śūnya, zero, as a number in its own right: adding it changes nothing, a number less itself is zero, anything times zero is zero. In the same chapter he gave the rules for negative numbers, which he called debts, and for positives, fortunes. Together with the place-value numerals India had already invented, this is the arithmetic the whole world now uses, carried west through Baghdad in the ninth century and into Europe as 'Arabic' numerals.",
+  "facts": [
+   "Brahmagupta's one wrong rule was that zero divided by zero is zero; division by zero stayed a puzzle for a thousand years.",
+   "The Bakhshali manuscript, a birch-bark text from near Peshawar, carries a dot for zero that radiocarbon dating in 2017 placed in the third or fourth century, the oldest known.",
+   "Al-Khwarizmi's ninth-century treatise on the Indian numerals brought the system to the Islamic world; Fibonacci's Liber Abaci of 1202 brought it to Europe."
+  ]
+ }
+}

@@ -1,0 +1,90 @@
+{
+ "slug": "benin-queen-mother-head",
+ "title": "Head of a Queen Mother, Benin",
+ "kind": "model",
+ "representation": "scan",
+ "baseHeight": null,
+ "back": "none",
+ "importance": 0.9,
+ "genre": [
+  "sculpture"
+ ],
+ "tags": [
+  "sculpture",
+  "scan"
+ ],
+ "periodSlug": null,
+ "flat": false,
+ "source": {
+  "type": "sketchfab",
+  "fileTitle": null,
+  "curid": "af911c4416ef4798a1803a0aa588534a",
+  "url": "https://sketchfab.com/3d-models/af911c4416ef4798a1803a0aa588534a",
+  "width": null,
+  "height": null,
+  "bytes": 86130362,
+  "mime": "model/gltf+json",
+  "licenseName": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "author": "Muzeum Narodowe w Szczecinie (Sketchfab)",
+  "sourcePage": "https://sketchfab.com/3d-models/af911c4416ef4798a1803a0aa588534a",
+  "unitScale": 1,
+  "notes": " The museum's photogrammetry in metres, 2 million triangles, one 8192 px texture; the head is 41.5 cm. The photogrammetry scale bar on the floor (node material0) is stripped. Small enough to pick up in VR. Benin Queen Mother heads are about 50 cm tall; the file's units are checked against that. Downloaded by the museum's owner from Sketchfab on 2026-10-10.",
+  "omit": [
+   "material0"
+  ]
+ },
+ "object": {
+  "year": 1800,
+  "month": null,
+  "day": null,
+  "yearStart": 1752,
+  "yearEnd": 1897,
+  "dateLabel": "Benin kingdom, 18th-19th century",
+  "madeIn": {
+   "name": "Benin City",
+   "region": null,
+   "country": "Nigeria",
+   "lat": 6.335,
+   "lon": 5.627,
+   "wikidataQid": null
+  },
+  "location": {
+   "name": "Szczecin",
+   "country": "Poland",
+   "institution": "Muzeum Narodowe w Szczecinie, MNS/AF/2237",
+   "inventoryNumber": null
+  },
+  "culture": "Edo (Benin kingdom)",
+  "medium": "Cast brass (lost wax)",
+  "materials": [
+   "brass",
+   "bronze"
+  ],
+  "subjects": [
+   "queen mother",
+   "portrait",
+   "royal ancestor",
+   "West Africa"
+  ],
+  "widthCm": null,
+  "heightCm": null,
+  "depthCm": null,
+  "weightKg": null,
+  "creator": {
+   "name": "Benin royal brass-casters' guild (Igun Eronmwon)",
+   "role": "caster",
+   "birthYear": null,
+   "deathYear": null,
+   "wikidataQid": null
+  },
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Benin_Bronzes",
+  "wikidataQid": null,
+  "description": "A head for the altar of a king's mother. In the kingdom of Benin, in what is now southern Nigeria, the Iyoba, the Queen Mother, held a court of her own, and when she died her son the Oba had a head cast in brass by the royal guild to stand on her altar, with the tall pointed crown of coral beads that was hers alone. The lost-wax casting of Benin was the finest in Africa for five centuries; its brass came from Europe through trade. This head, dated by the museum to between 1752 and 1897, came to Szczecin by way of a German collection after the British looting of Benin City in 1897, which scattered some three thousand such works across the museums of Europe and America; the museum scanned it and released the scan.",
+  "facts": [
+   "The first Iyoba was Idia, mother of Oba Esigie, around 1504; the title and the altar heads were created for her.",
+   "The 1897 punitive expedition burned the palace and took its brasses; their return is now a live question in Nigeria and Europe.",
+   "The coral crown's beads were the Oba's gift, and the right to wear them a mark of rank."
+  ]
+ }
+}

@@ -1,0 +1,228 @@
+{
+ "slug": "james-webb-space-telescope",
+ "title": "James Webb Space Telescope",
+ "titleOriginal": null,
+ "kind": "model",
+ "importance": 0.9,
+ "genre": [
+  "instrument",
+  "engineering"
+ ],
+ "tags": [
+  "space",
+  "NASA",
+  "telescope",
+  "astronomy",
+  "landmark"
+ ],
+ "periodSlug": null,
+ "flat": false,
+ "baseHeight": 3,
+ "source": {
+  "type": "nasa",
+  "curid": "jwst",
+  "fileTitle": null,
+  "url": "https://science.nasa.gov/3d-resources/james-webb-space-telescope-a/",
+  "sourcePage": "https://science.nasa.gov/3d-resources/james-webb-space-telescope-a/",
+  "width": null,
+  "height": null,
+  "bytes": 4710016,
+  "mime": null,
+  "licenseName": "Public domain (NASA)",
+  "licenseUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+  "author": "NASA / Goddard Space Flight Center",
+  "notes": "NASA's 3D model 'James Webb Space Telescope (A)' from the NASA 3D Resources library (glb, draco-compressed, 1,600 meshes, no textures, 4.7 MB; NASA media are not copyrighted). The file measures 27.4 by 12.0 by 14.8 units; the real sunshield is 21.2 by 14.2 m and the whole telescope about 21 m long, so the file is taken as metres and the mirror and sunshield are the right order of size. Shown deployed, under a night sky with the southern stars of the first deep field's patch of sky overhead. Downloaded 2026-10-10.",
+  "rotation": [
+   15,
+   -90,
+   0
+  ],
+  "materials": [
+   {
+    "match": "mirror_blinn",
+    "baseColor": [
+     1,
+     0.72,
+     0.25
+    ],
+    "metallic": 0.6,
+    "roughness": 0.3
+   },
+   {
+    "match": "omnimirror",
+    "baseColor": [
+     0.85,
+     0.85,
+     0.88
+    ],
+    "metallic": 1,
+    "roughness": 0.2
+   },
+   {
+    "match": "shld_silv",
+    "baseColor": [
+     0.78,
+     0.78,
+     0.8
+    ],
+    "metallic": 0.9,
+    "roughness": 0.3,
+    "doubleSided": true
+   },
+   {
+    "match": "shld_pink",
+    "baseColor": [
+     0.66,
+     0.55,
+     0.6
+    ],
+    "metallic": 0.7,
+    "roughness": 0.3,
+    "doubleSided": true
+   },
+   {
+    "match": "pinkmli",
+    "baseColor": [
+     0.58,
+     0.42,
+     0.48
+    ],
+    "metallic": 0.4,
+    "roughness": 0.45
+   },
+   {
+    "match": "pmli",
+    "baseColor": [
+     0.58,
+     0.42,
+     0.48
+    ],
+    "metallic": 0.4,
+    "roughness": 0.45
+   },
+   {
+    "match": "pnkmli",
+    "baseColor": [
+     0.58,
+     0.42,
+     0.48
+    ],
+    "metallic": 0.4,
+    "roughness": 0.45
+   },
+   {
+    "match": "silver_mli",
+    "baseColor": [
+     0.6,
+     0.6,
+     0.64
+    ],
+    "metallic": 0.7,
+    "roughness": 0.4
+   },
+   {
+    "match": "silvermli",
+    "baseColor": [
+     0.6,
+     0.6,
+     0.64
+    ],
+    "metallic": 0.7,
+    "roughness": 0.4
+   },
+   {
+    "match": "smli",
+    "baseColor": [
+     0.6,
+     0.6,
+     0.64
+    ],
+    "metallic": 0.7,
+    "roughness": 0.4
+   },
+   {
+    "match": "alu",
+    "baseColor": [
+     0.55,
+     0.6,
+     0.66
+    ],
+    "metallic": 0.8,
+    "roughness": 0.35
+   },
+   {
+    "match": "sa_edge_gold",
+    "baseColor": [
+     0.9,
+     0.7,
+     0.3
+    ],
+    "metallic": 0.6,
+    "roughness": 0.35
+   }
+  ]
+ },
+ "object": {
+  "year": 2021,
+  "month": 12,
+  "day": 25,
+  "yearStart": null,
+  "yearEnd": null,
+  "dateLabel": "launched 25 December 2021",
+  "madeIn": {
+   "name": "Redondo Beach",
+   "region": "California",
+   "country": "United States",
+   "lat": 33.8492,
+   "lon": -118.3884,
+   "wikidataQid": "Q864949"
+  },
+  "location": {
+   "name": "The second Lagrange point, 1.5 million km from Earth",
+   "region": null,
+   "country": null,
+   "lat": null,
+   "lon": null,
+   "wikidataQid": null,
+   "institution": null,
+   "inventoryNumber": null
+  },
+  "creator": {
+   "name": "NASA, ESA and CSA; Northrop Grumman; the Space Telescope Science Institute",
+   "role": "builders",
+   "birthYear": null,
+   "deathYear": null,
+   "wikidataQid": "Q186447"
+  },
+  "culture": null,
+  "movement": null,
+  "medium": "NASA's 3D model, at true size",
+  "materials": [],
+  "subjects": [
+   "telescope",
+   "infrared astronomy",
+   "early universe",
+   "exoplanets"
+  ],
+  "widthCm": 2120,
+  "heightCm": 800,
+  "depthCm": 1420,
+  "weightKg": 6500,
+  "description": "A mirror six and a half metres across, eighteen gold-plated beryllium hexagons, folded to fit inside a rocket and opened in space over two weeks, standing on a sunshield the size of a tennis court that keeps it colder than minus 220 degrees so it can see in infrared: the heat-light of the first galaxies, stretched by the expansion of the universe past the reach of any eye or of Hubble. It was twenty-five years in the making and sits a million and a half kilometres away, where no one can go to fix it; 344 things had to deploy in order and every one did. Six months after launch it sent back the deepest picture of the universe ever taken, which hangs on the next row.",
+  "facts": [
+   "The mirror's gold is 48 grams in all, a layer a few hundred atoms thick; gold reflects infrared best.",
+   "It sees in infrared because light from the first galaxies has been stretched more than tenfold on its way to us.",
+   "Launched on an Ariane 5 from French Guiana so precisely that the fuel saved doubled its expected life, to twenty years.",
+   "It has found galaxies from 300 million years after the big bang, earlier and brighter than the models predicted."
+  ],
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/James_Webb_Space_Telescope",
+  "wikidataQid": "Q186447"
+ },
+ "representation": "reconstruction",
+ "back": "none",
+ "spin": 120,
+ "landmark": {
+  "side": "east",
+  "distance": 90
+ }
+}

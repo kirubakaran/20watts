@@ -1,0 +1,87 @@
+{
+ "slug": "maxwell-equations",
+ "title": "Maxwell's equations",
+ "titleOriginal": null,
+ "kind": "image",
+ "importance": 0.95,
+ "genre": [
+  "equation"
+ ],
+ "tags": [
+  "equation",
+  "science",
+  "mathematics"
+ ],
+ "periodSlug": null,
+ "flat": true,
+ "baseHeight": null,
+ "source": {
+  "type": "typeset",
+  "curid": null,
+  "fileTitle": null,
+  "url": "data/originals/eq-maxwell-equations/equation.svg",
+  "sourcePage": null,
+  "width": 2560,
+  "height": 2944,
+  "bytes": 11739,
+  "mime": "image/svg+xml",
+  "licenseName": "CC0 1.0",
+  "licenseUrl": null,
+  "author": "20watts",
+  "notes": "Typeset by 20watts from the TeX in the record with MathJax, with a figure drawn for this museum; the rendering is CC0, the equation itself is not subject to copyright.",
+  "tex": "\\begin{aligned} \\nabla \\cdot \\mathbf{E} &= \\frac{\\rho}{\\varepsilon_0} \\\\[0.4em] \\nabla \\cdot \\mathbf{B} &= 0 \\\\[0.4em] \\nabla \\times \\mathbf{E} &= -\\frac{\\partial \\mathbf{B}}{\\partial t} \\\\[0.4em] \\nabla \\times \\mathbf{B} &= \\mu_0 \\mathbf{J} + \\mu_0 \\varepsilon_0 \\frac{\\partial \\mathbf{E}}{\\partial t} \\end{aligned}",
+  "figure": "data/figures/maxwell-equations.svg"
+ },
+ "object": {
+  "year": 1865,
+  "month": null,
+  "day": null,
+  "yearStart": 1865,
+  "yearEnd": 1865,
+  "dateLabel": "1865 (A Dynamical Theory of the Electromagnetic Field)",
+  "madeIn": {
+   "name": "King's College London",
+   "region": "England",
+   "country": "United Kingdom",
+   "lat": 51.5115,
+   "lon": -0.116,
+   "wikidataQid": "Q84"
+  },
+  "location": {
+   "name": null,
+   "region": null,
+   "country": null,
+   "lat": null,
+   "lon": null,
+   "wikidataQid": null,
+   "institution": null,
+   "inventoryNumber": null
+  },
+  "creator": {
+   "name": "James Clerk Maxwell",
+   "role": "author",
+   "birthYear": 1831,
+   "deathYear": 1879,
+   "wikidataQid": "Q9095"
+  },
+  "culture": null,
+  "movement": null,
+  "medium": "Equation, typeset",
+  "materials": [],
+  "subjects": [
+   "equation"
+  ],
+  "widthCm": 100,
+  "heightCm": 115,
+  "depthCm": null,
+  "weightKg": null,
+  "description": "Electricity, magnetism and light in four lines: charges make electric fields, there are no magnetic charges, a changing magnetic field makes an electric one, and currents or changing electric fields make magnetic ones. Maxwell read the theory to the Royal Society in December 1864 and published it in 1865; from the equations fell a wave travelling at the speed of light, so light had to be an electromagnetic wave. Radio, the transistor further along, and every screen this museum is seen on, follow from here.",
+  "facts": [
+   "Maxwell's own paper had twenty equations in twenty variables; the four vector equations shown are Oliver Heaviside's recasting of 1884 and 1885.",
+   "Heinrich Hertz produced and detected the predicted waves in 1887, eight years after Maxwell's death, and said they were of no use whatsoever.",
+   "Einstein kept a portrait of Maxwell on his study wall, beside Faraday and Newton, and called the theory 'the most profound and fruitful that physics has experienced since Newton'."
+  ],
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Maxwell%27s_equations",
+  "wikidataQid": "Q51501"
+ }
+}

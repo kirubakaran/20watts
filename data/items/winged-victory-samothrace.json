@@ -1,0 +1,86 @@
+{
+ "slug": "winged-victory-samothrace",
+ "title": "Winged Victory of Samothrace",
+ "kind": "model",
+ "representation": "scan",
+ "baseHeight": 0.8,
+ "back": "none",
+ "importance": 0.9,
+ "genre": [
+  "sculpture"
+ ],
+ "tags": [
+  "sculpture",
+  "scan"
+ ],
+ "periodSlug": null,
+ "flat": false,
+ "source": {
+  "type": "sketchfab",
+  "fileTitle": null,
+  "curid": "4edd6459f2834e7ab0b395e71cee2513",
+  "url": "https://sketchfab.com/3d-models/4edd6459f2834e7ab0b395e71cee2513",
+  "width": null,
+  "height": null,
+  "bytes": 24025787,
+  "mime": "model/gltf+json",
+  "licenseName": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "author": "Cosmo Wenman (Sketchfab), from the Skulpturhalle Basel cast",
+  "sourcePage": "https://sketchfab.com/3d-models/4edd6459f2834e7ab0b395e71cee2513",
+  "unitScale": 0.0575,
+  "notes": " Photogrammetry of the Basel cast, nine 8192 px textures; the file holds the cast's rectangular plinth block but not the ship's prow. Scaled so the figure is 2.44 m, raised 0.8 m to stand as she does above a stair. The statue is 244 cm tall without the ship's prow it stands on at the Louvre. Downloaded by the museum's owner from Sketchfab on 2026-10-10."
+ },
+ "object": {
+  "year": -190,
+  "month": null,
+  "day": null,
+  "yearStart": null,
+  "yearEnd": null,
+  "dateLabel": "c. 190 BCE",
+  "madeIn": {
+   "name": "Samothrace",
+   "region": null,
+   "country": "Greece",
+   "lat": 40.5,
+   "lon": 25.5,
+   "wikidataQid": null
+  },
+  "location": {
+   "name": "Basel",
+   "country": "Switzerland",
+   "institution": "Skulpturhalle Basel (cast); the marble is in the Musée du Louvre, Paris",
+   "inventoryNumber": null
+  },
+  "culture": "Greek (Hellenistic)",
+  "medium": "Plaster cast of the Parian marble statue",
+  "materials": [
+   "plaster"
+  ],
+  "subjects": [
+   "Nike",
+   "victory",
+   "Hellenistic",
+   "ship"
+  ],
+  "widthCm": null,
+  "heightCm": 244,
+  "depthCm": null,
+  "weightKg": null,
+  "creator": {
+   "name": "Unknown Rhodian sculptor",
+   "role": "sculptor",
+   "birthYear": null,
+   "deathYear": null,
+   "wikidataQid": null
+  },
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Winged_Victory_of_Samothrace",
+  "wikidataQid": null,
+  "description": "Nike, the goddess of victory, alighting on the prow of a warship, her wings still spread, her dress blown flat against her by the wind of the sea. It was set up in the sanctuary of the Great Gods on Samothrace about 190 BCE, probably by Rhodes to mark a naval victory, and was found in pieces there in 1863 by a French consul; it has stood at the top of the Louvre's great staircase since 1884, without its head and arms, which were never found. A hand turned up in 1950. The cast here is the Skulpturhalle Basel's, scanned by Cosmo Wenman in 2013; the wind in the marble survives the plaster.",
+  "facts": [
+   "The marble is Parian, the prow is Rhodian grey marble, and the whole was set in a pool so the ship seemed to sail.",
+   "The right hand, found in 1950, is open: she held nothing, and was probably cupping it to her mouth to cry the victory.",
+   "Marinetti's Futurist manifesto of 1909 declared a racing car more beautiful than her, which is how famous she was."
+  ]
+ }
+}

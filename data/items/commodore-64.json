@@ -1,0 +1,102 @@
+{
+ "slug": "commodore-64",
+ "title": "Commodore 64",
+ "titleOriginal": null,
+ "kind": "model",
+ "importance": 0.85,
+ "genre": [
+  "computer"
+ ],
+ "tags": [
+  "commodore",
+  "home computer",
+  "8-bit"
+ ],
+ "periodSlug": "modern",
+ "flat": false,
+ "baseHeight": null,
+ "source": {
+  "type": "zenodo",
+  "curid": "10232172",
+  "fileTitle": null,
+  "url": "https://zenodo.org/api/records/10232172/files/2e829285eaf74ba391b8e41149f09f25.glb/content",
+  "sourcePage": "https://zenodo.org/records/10232172",
+  "width": null,
+  "height": null,
+  "bytes": 1913956,
+  "mime": null,
+  "licenseName": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "author": "Digital Heritage Australia (Sketchfab user digitalheritageaustralia), developed with the Australian Centre for the Moving Image (ACMI)",
+  "notes": "Zenodo record 10232172 is the Objaverse 1.0 / Sketchfab mirror of Sketchfab model 2e829285eaf74ba391b8e41149f09f25 (https://sketchfab.com/3d-models/commodore-64-2e829285eaf74ba391b8e41149f09f25, published 2020-01-17, CC BY 4.0 confirmed via the Sketchfab v3 API and embedded in the glb asset.extras). File 2e829285eaf74ba391b8e41149f09f25.glb (not the _normalized one): curl -sI returned HTTP 200, content-length 1913956. Photogrammetry scan of a real machine: the thumbnails show the original beige 'breadbin' case with dark brown keys, the four f-keys at the right, and the rainbow 'commodore 64' badge, i.e. the 1982-84 breadbin, not the C64C. glTF 2.0, generator Sketchfab-12.65.0, 1 mesh, 1 material (baseColor JPEG texture, 423607 bytes embedded), 48042 triangles (Sketchfab reports 48360 faces, 24051 vertices), 3 nodes with one rotation-only matrix (no scale). Axis-aligned bbox in local mesh space is 3.219 x 2.421 x 1.428 units; PCA (oriented) extents of the vertices are 2.942 x 1.524 x 0.694 units. The file is unitless. unitScale 0.138 m/unit = 0.4064 m (NMAH width of a breadbin C64, 16 in) / 2.942 units (longest oriented extent); the depth check gives 0.2032 / 1.524 = 0.133, the difference being scan noise around the base, so 0.138 is within about 4 %. The underside and rear ports are not scanned cleanly (photogrammetry skirt), so display it keyboard-up on a plinth. Dimensions in object come from the Smithsonian NMAH object 1989.0544.01.1 ('overall: 3 in x 16 in x 8 in; 7.62 cm x 40.64 cm x 20.32 cm', Smithsonian Open Access API record nmah_334636, https://americanhistory.si.edu/collections/object/nmah_334636); no weight is given there or on Wikipedia, so weightKg is null. Dates from the English Wikipedia infobox (release August 1982, first shown at CES January 1982, discontinued April 1994) and Wikidata Q99775/Q208305 (Commodore International founded 1958-10-10, dissolved 1994-04-29). Coordinates for West Chester from Wikidata Q1010244 (Commodore's headquarters, P159 of Q208305).",
+  "unitScale": 0.138,
+  "rotation": [
+   -44.42,
+   -12.28,
+   -3.04
+  ]
+ },
+ "object": {
+  "year": 1982,
+  "month": 8,
+  "day": null,
+  "yearStart": 1982,
+  "yearEnd": 1994,
+  "dateLabel": "1982 (produced until 1994)",
+  "madeIn": {
+   "name": "West Chester, Pennsylvania",
+   "region": "Pennsylvania",
+   "country": "United States",
+   "lat": 39.9586,
+   "lon": -75.605,
+   "wikidataQid": "Q1010244"
+  },
+  "location": {
+   "name": null,
+   "region": null,
+   "country": null,
+   "lat": null,
+   "lon": null,
+   "wikidataQid": null,
+   "institution": null,
+   "inventoryNumber": null
+  },
+  "creator": {
+   "name": "Commodore International",
+   "role": "manufacturer (designed at its MOS Technology subsidiary)",
+   "birthYear": 1958,
+   "deathYear": 1994,
+   "wikidataQid": "Q208305"
+  },
+  "culture": "American",
+  "movement": null,
+  "medium": "Home computer: moulded plastic case with integrated keyboard over a printed circuit board",
+  "materials": [
+   "plastic",
+   "metal",
+   "silicon integrated circuits"
+  ],
+  "subjects": [
+   "computing",
+   "home computer",
+   "8-bit",
+   "1980s",
+   "consumer electronics",
+   "video games"
+  ],
+  "widthCm": 40.64,
+  "heightCm": 7.62,
+  "depthCm": 20.32,
+  "weightKg": null,
+  "description": "The Commodore 64 is an 8-bit home computer introduced by Commodore International in January 1982 and sold from August of that year for US$595. Built around the MOS Technology 6510 processor with 64 KB of RAM, the VIC-II graphics chip and the SID sound chip, it undercut the Apple II, IBM PC and Atari machines and was sold in department and toy stores as well as computer dealers. This scan shows the original beige 'breadbin' case of 1982-84, before the slimmer C64C restyle.",
+  "facts": [
+   "First shown at the Consumer Electronics Show in Las Vegas on 7-10 January 1982; marketed from August 1982 at US$595.",
+   "Guinness World Records lists it as the best-selling desktop computer model of all time, with estimates of 12.5 to 17 million units sold.",
+   "Its MOS 6510 CPU, VIC-II video chip and SID 6581 sound chip were all made by Commodore's own chip subsidiary MOS Technology; production ended with Commodore's bankruptcy in April 1994."
+  ],
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Commodore_64",
+  "wikidataQid": "Q99775"
+ },
+ "representation": "scan",
+ "back": "none"
+}

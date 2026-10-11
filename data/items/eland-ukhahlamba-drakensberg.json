@@ -1,0 +1,93 @@
+{
+ "slug": "eland-ukhahlamba-drakensberg",
+ "title": "Eland, uKhahlamba-Drakensberg",
+ "titleOriginal": null,
+ "kind": "image",
+ "importance": 0.8,
+ "genre": [
+  "rock art",
+  "cave painting"
+ ],
+ "tags": [
+  "prehistoric",
+  "rock art",
+  "south africa",
+  "san",
+  "drakensberg",
+  "eland"
+ ],
+ "periodSlug": "san-rock-art",
+ "flat": false,
+ "baseHeight": null,
+ "source": {
+  "type": "commons",
+  "curid": 2653186,
+  "fileTitle": "File:San Painting, Ukalamba Drakensberge 1.JPG",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/9/9b/San_Painting%2C_Ukalamba_Drakensberge_1.JPG",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:San_Painting,_Ukalamba_Drakensberge_1.JPG",
+  "width": 2986,
+  "height": 1494,
+  "bytes": 2166865,
+  "mime": "image/jpeg",
+  "licenseName": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "author": "Lukas Kaffer",
+  "notes": "Import from Wikimedia Commons; photograph of the shelter wall"
+ },
+ "object": {
+  "year": 1000,
+  "month": null,
+  "day": null,
+  "yearStart": -1000,
+  "yearEnd": 1850,
+  "dateLabel": "c. 1000 CE (undated)",
+  "madeIn": {
+   "name": "uKhahlamba-Drakensberg",
+   "region": "KwaZulu-Natal",
+   "country": "South Africa",
+   "lat": -29,
+   "lon": 29.4,
+   "wikidataQid": "Q6744547"
+  },
+  "location": {
+   "name": "uKhahlamba-Drakensberg",
+   "region": "KwaZulu-Natal",
+   "country": "South Africa",
+   "lat": -29,
+   "lon": 29.4,
+   "wikidataQid": "Q6744547",
+   "institution": "Maloti-Drakensberg Park",
+   "inventoryNumber": null
+  },
+  "creator": {
+   "name": "Unknown San painters",
+   "role": "painter",
+   "birthYear": null,
+   "deathYear": null,
+   "wikidataQid": null
+  },
+  "culture": "San",
+  "movement": null,
+  "medium": "ochre, blood and egg binder on sandstone",
+  "materials": [
+   "ochre",
+   "haematite"
+  ],
+  "subjects": [
+   "eland",
+   "antelope"
+  ],
+  "widthCm": null,
+  "heightCm": null,
+  "depthCm": null,
+  "weightKg": null,
+  "description": "An eland in shaded red and white on a sandstone shelter in the Drakensberg, painted by the San with a fine brush and a polychrome technique that modelled the animal's bulk. The eland is the animal that appears most often in San painting; it was the creature of greatest spiritual power, and the trance dance of the healers drew on its potency.",
+  "facts": [
+   "The Drakensberg holds some 35,000 to 40,000 painted images in over 600 shelters.",
+   "Most of the paintings are less than 2,000 years old and some show horses and guns from the 1800s.",
+   "The park was listed as a World Heritage Site in 2000."
+  ],
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Maloti-Drakensberg_Park",
+  "wikidataQid": "Q6744547"
+ }
+}

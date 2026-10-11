@@ -1,0 +1,102 @@
+{
+ "slug": "apollo-11-first-step-broadcast",
+ "title": "The first step on the Moon",
+ "titleOriginal": null,
+ "kind": "image",
+ "importance": 0.95,
+ "genre": [
+  "television",
+  "documentary footage",
+  "spaceflight"
+ ],
+ "tags": [
+  "Moon",
+  "Apollo",
+  "NASA",
+  "television",
+  "spaceflight",
+  "Armstrong",
+  "1969"
+ ],
+ "periodSlug": null,
+ "flat": true,
+ "baseHeight": 0.9,
+ "source": {
+  "type": "video-still",
+  "curid": "91010657",
+  "fileTitle": null,
+  "url": "https://upload.wikimedia.org/wikipedia/commons/8/83/Restored_Apollo_11_Moonwalk_-_Original_NASA_EVA_Mission_Video_-_Walking_on_the_Moon.webm",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:Restored_Apollo_11_Moonwalk_-_Original_NASA_EVA_Mission_Video_-_Walking_on_the_Moon.webm",
+  "width": 960,
+  "height": 720,
+  "bytes": 506637984,
+  "mime": "video/mp4",
+  "licenseName": "Public domain",
+  "licenseUrl": null,
+  "author": "NASA (Westinghouse lunar television camera; 2009 restoration by NASA Johnson Space Center and Lowry Digital)",
+  "notes": "WebM with audio, 1920 x 1080 px, 3 h 02 min (10950 s), 1.0 GB: NASA's own 2009 restoration of the whole EVA broadcast as aired, transferred from the NASA YouTube channel (video S9HdPi9Ikhk, confirmed via oEmbed: 'Restored Apollo 11 Moonwalk - Original NASA EVA Mission Video - Walking on the Moon' by NASA). The 4:3 picture is pillarboxed inside the 16:9 frame; the pipeline may crop the bars (240 x 180 cm). A Commons Featured Media and Media of the Day (30 June 2020). Commons wikitext licence templates: {{NASA}} (= PD-USGov-NASA) with {{YouTubeReview|ChannelName=NASA|ChannelID=UCLA_DiR1FfKNvjuUpBHmylQ|date=2020-06-07}}; extmetadata: LicenseShortName = 'Public domain', License = 'pd', Copyrighted = 'False', Artist = 'NASA', Credit = 'YouTube: S9HdPi9Ikhk', DateTimeOriginal = 'Taken in July 1969'; categories: PD NASA, License reviewed by YouTubeReviewBot, Videos from the NASA YouTube channel, Lunar extra-vehicular activity of Apollo 11. Licence reasoning: a work of NASA, a US federal agency, is in the public domain under 17 U.S.C. 105; the 2009 restoration was commissioned by NASA and released by NASA without a copyright claim. Loop 186-200 s, found by sampling the 480p transcode at 1 fps: the video opens with a title card and Mission Control (0-65 s), the television picture begins at about 68 s, Armstrong is on the ladder from about 85 s and at the footpad from about 150 s, and a figure is clearly off to the left of the ladder base by about 200 s, so the step onto the surface ('That's one small step...') falls at roughly 190-200 s; please check the exact cut when the pipeline runs, as the picture is very low in contrast. A lightweight alternative, if 1 GB is too much to fetch for a 14-second loop: the Commons 1080p transcode of this file (898394897 B) or the one-minute unrestored clip File:Apollo 11 Landing - first steps on the moon.ogv, curid 4150049, 320 x 240 px, 61.5 s, 4568753 B, {{PD-USGov-NASA}}, from the Apollo Lunar Surface Journal, in which the step is at about 50-58 s. Not to be confused with the command module record si-nasm_A19700102000 already in the collection. HEAD 200, content-length 1004160886, video/webm."
+ },
+ "object": {
+  "year": 1969,
+  "month": 7,
+  "day": 21,
+  "yearStart": null,
+  "yearEnd": null,
+  "dateLabel": "21 July 1969, 02:56 UTC (20 July, 10:56 p.m. EDT)",
+  "madeIn": {
+   "name": "Tranquility Base, Mare Tranquillitatis, the Moon",
+   "region": null,
+   "country": null,
+   "lat": null,
+   "lon": null,
+   "wikidataQid": null
+  },
+  "location": {
+   "name": "Houston",
+   "region": null,
+   "country": "United States",
+   "lat": null,
+   "lon": null,
+   "wikidataQid": null,
+   "institution": "NASA Johnson Space Center (restored broadcast tapes); the camera itself was left on the Moon",
+   "inventoryNumber": null
+  },
+  "creator": {
+   "name": "National Aeronautics and Space Administration (NASA)",
+   "role": "broadcaster",
+   "birthYear": null,
+   "deathYear": null,
+   "wikidataQid": "Q23548"
+  },
+  "culture": null,
+  "movement": null,
+  "medium": "Live slow-scan television, 320 lines at 10 frames a second, scan-converted for broadcast; shown as a silent loop from NASA's 2009 restoration",
+  "materials": [],
+  "subjects": [
+   "Moon landing",
+   "Neil Armstrong",
+   "Lunar Module Eagle",
+   "spaceflight",
+   "television",
+   "Apollo program"
+  ],
+  "widthCm": 240,
+  "heightCm": 180,
+  "depthCm": null,
+  "weightKg": null,
+  "description": "At 02:56 UTC on 21 July 1969 Neil Armstrong stepped off the footpad of the Lunar Module Eagle onto the Sea of Tranquility, and about 600 million people watched him do it. The pictures came from a small Westinghouse camera mounted upside down on a fold-down equipment bay on the lander's side, which Armstrong released by pulling a lanyard as he climbed down the ladder. It transmitted a slow-scan signal of 320 lines at ten frames a second, received at Goldstone in California and at Honeysuckle Creek and Parkes in Australia, where it was converted for broadcast by pointing an ordinary television camera at a monitor. That double conversion, and the harsh lunar light, give the famous ghostly image. The original slow-scan tapes were later reused and lost; in 2009 NASA gathered the best surviving broadcast recordings and had them cleaned up, and that restoration is what is shown here. Armstrong's words as he stepped down, 'That's one small step for man, one giant leap for mankind', are the most quoted sentence of the twentieth century.",
+  "facts": [
+   "Armstrong said he intended 'one small step for a man'; the 'a' is not audible in the recording.",
+   "The Lunar Module camera had a single 7-pound body, two lenses and no viewfinder; the astronauts aimed it by hand after the first steps.",
+   "Buzz Aldrin followed Armstrong down the ladder nineteen minutes later; Michael Collins, orbiting above, could not see the broadcast at all.",
+   "The moonwalk lasted two hours and thirty-one minutes and the two men never went more than about sixty metres from the lander."
+  ],
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Apollo_11",
+  "wikidataQid": null
+ },
+ "loop": {
+  "start": 186,
+  "seconds": 14,
+  "aspect": 1.3333333333333333
+ }
+}

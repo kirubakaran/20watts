@@ -1,0 +1,101 @@
+{
+ "slug": "book-of-kells-chi-rho",
+ "title": "Book of Kells, Chi Rho page",
+ "titleOriginal": "Codex Cenannensis",
+ "kind": "image",
+ "source": {
+  "type": "commons",
+  "fileTitle": "File:KellsFol034rChiRhoMonogram.jpg",
+  "curid": 44550,
+  "url": "https://upload.wikimedia.org/wikipedia/commons/e/ee/KellsFol034rChiRhoMonogram.jpg",
+  "width": 1123,
+  "height": 1558,
+  "bytes": 478526,
+  "mime": "image/jpeg",
+  "licenseName": "Public domain",
+  "licenseUrl": "https://commons.wikimedia.org/wiki/Template:PD-art",
+  "author": "Unknown Columban scribes/illuminators, c. 800; reproduction uploader not stated (PD-Art)",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:KellsFol034rChiRhoMonogram.jpg",
+  "notes": "Best colour reproduction of the Chi Rho page on Commons; only 1123 x 1558 px, below the 2000 px target. Every other Commons copy of fol. 34r is smaller (484 x 641 PNG) or a black-and-white lantern slide (KU Leuven GD017031, 3797 x 3230). A larger scan of a different full-page illumination (fol. 32v, 2202 x 2918, from Trinity College Dublin's digital collections) is listed as alternative 1. Trinity's own digital collection is not used because its image licence was not verified as free. Dates, size (33 x 25.5 cm), vellum and shelfmark from Wikidata Q204221 and en.wikipedia 'Book of Kells'; place of creation is uncertain (a Columban monastery in Ireland or Scotland), Iona chosen with coordinates from Wikidata Q610."
+ },
+ "object": {
+  "year": 800,
+  "yearStart": 800,
+  "yearEnd": 800,
+  "dateLabel": "c. 800",
+  "madeIn": {
+   "name": "Iona Abbey (or Kells), Columban monastery",
+   "region": "Inner Hebrides, Scotland (or County Meath, Ireland)",
+   "country": "United Kingdom",
+   "lat": 56.33,
+   "lon": -6.41,
+   "wikidataQid": "Q610"
+  },
+  "location": {
+   "name": "Library of Trinity College Dublin",
+   "country": "Ireland",
+   "institution": "Trinity College Dublin",
+   "inventoryNumber": "MS A. I. [58] (MS 58), folio 34r"
+  },
+  "culture": "Insular (Irish/Scottish)",
+  "movement": "Insular illumination",
+  "medium": "Ink and pigments on calf vellum",
+  "materials": [
+   "vellum",
+   "ink",
+   "pigments"
+  ],
+  "subjects": [
+   "Chi Rho monogram",
+   "Gospel of Matthew",
+   "interlace",
+   "spirals",
+   "angels",
+   "cats and mice"
+  ],
+  "widthCm": 25.5,
+  "heightCm": 33.0,
+  "depthCm": null,
+  "weightKg": null,
+  "creator": null,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Book_of_Kells",
+  "wikidataQid": "Q204221",
+  "description": "The Chi Rho page opens the account of Christ's birth in Matthew's Gospel: the Greek letters Chi, Rho and Iota, the abbreviation of 'Christ', fill the page with spirals, interlace, animals and tiny human figures. The Book of Kells, a Latin Gospel book made in a Columban monastery around 800, is the most elaborately decorated of the Insular manuscripts. It has been at Trinity College Dublin since the seventeenth century. The page is folio 34r.",
+  "facts": [
+   "The manuscript has 340 folios of calf vellum, each page about 33 by 25 cm, bound since 1953 in four volumes.",
+   "It contains ten full-page illustrations and was made in a Columban monastery in Ireland or Scotland around 800.",
+   "UNESCO added the Book of Kells to its Memory of the World Register in 2011."
+  ]
+ },
+ "alternatives": [
+  {
+   "fileTitle": "File:Book of Kells fol 32v - Faksimile Verlag.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Book_of_Kells_fol_32v_-_Faksimile_Verlag.jpg",
+   "licenseName": "Public domain",
+   "width": 2202,
+   "height": 2918,
+   "author": "Abbey of Kells; scan credited to Trinity College Dublin digital collections (MS58_003v)",
+   "note": "Folio 32v, Christ Enthroned: the largest Kells full-page illumination on Commons, including the vellum margins."
+  },
+  {
+   "fileTitle": "File:Meister des Book of Kells 001.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/6/62/Meister_des_Book_of_Kells_001.jpg",
+   "licenseName": "Public domain",
+   "width": 1576,
+   "height": 2148,
+   "author": "The Yorck Project (2002), 10.000 Meisterwerke der Malerei",
+   "note": "Another reproduction of the Chi Rho page, slightly larger but with a strong red-orange colour cast."
+  }
+ ],
+ "fallbackWidthM": 0.255,
+ "genre": [
+  "illuminated manuscript"
+ ],
+ "tags": [
+  "insular",
+  "manuscript",
+  "gospel"
+ ],
+ "periodSlug": "early-medieval",
+ "importance": 0.95
+}

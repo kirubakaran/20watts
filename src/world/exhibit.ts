@@ -31,6 +31,7 @@ import {
 } from "three";
 import { Text } from "troika-three-text";
 import type { Material } from "three";
+import { standoffOf } from "../layout/layout";
 import type { Artwork } from "../data/types";
 import { assetsOf, baseHeightOf, currentAudioVersion, currentImageVersion, currentModelVersion, currentSimVersion, imageDisplaySize, footprintOf, type ImageAsset } from "../data/types";
 import { PROGRAMS, type Sim } from "../sims";
@@ -196,6 +197,8 @@ export class Exhibit {
   /** Whether the museum wants this recording heard now (one at a time), and how loud it is on its way there. */
   private soundWanted = false;
   private soundLevel = 0;
+  /** Where a slowly turning work has got to, radians; kept across rung swaps. */
+  private spinAngle = 0;
   private sim: Sim | null = null;
   private modelRoot: Group | null = null;
   /** Shown from inside only: how far the walls have risen, 0 cut at the ankle to 1 whole. */
@@ -308,11 +311,14 @@ export class Exhibit {
     const base = baseHeightOf(this.artwork);
     const threshold = this.artwork.display.threshold;
     const tag = makeTag(this.artwork);
-    // Above the work; a tall one gets it low in front instead, like a label on the floor; at a door, beside the door.
+    // Above the work; a tall one gets it low in front instead, like a label on the floor, and larger,
+    // since the visitor stands further back from a tall thing; at a door, beside the door.
     const top = base + fp.height + 0.22;
     if (threshold != null) tag.position.set(-1.6, 1.6, threshold - 0.5);
-    else if (top > 2.7) tag.position.set(0, 0.35, fp.depth / 2 + 0.6);
-    else tag.position.set(0, Math.max(top, 0.9), fp.depth / 2 + 0.05);
+    else if (top > 3.4) {
+      tag.position.set(0, 0.35, fp.depth / 2 + 0.6);
+      tag.scale.setScalar(Math.max(1, standoffOf(fp) / 2.2));
+    } else tag.position.set(0, Math.max(top, 0.9), fp.depth / 2 + 0.05);
     this.tag = tag;
     this.group.add(tag);
     this.placards = [tag as unknown as Group];
@@ -723,7 +729,12 @@ export class Exhibit {
       this.tag.getWorldPosition(tagPos);
       this.tag.rotation.y = Math.atan2(viewerWorldPos.x - tagPos.x, viewerWorldPos.z - tagPos.z) - this.group.rotation.y;
     }
+    this.sim?.setEye?.(viewerWorldPos);
     this.sim?.update(dt, d);
+    if (this.artwork.display.spin && this.modelRoot && !this.held && d < 400) {
+      this.spinAngle = (this.spinAngle + (dt * 2 * Math.PI) / this.artwork.display.spin) % (2 * Math.PI);
+      this.modelRoot.rotation.y = this.spinAngle;
+    }
     this.updateReveal(Math.hypot(viewerWorldPos.x - this.worldCentre.x, viewerWorldPos.z - this.worldCentre.z), dt);
     if (this.sound) {
       // Cross-fade toward what is wanted: a second to come up, a second to go.

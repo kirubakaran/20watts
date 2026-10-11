@@ -1,0 +1,87 @@
+{
+ "slug": "alphago-rack",
+ "title": "AlphaGo's rack",
+ "kind": "image",
+ "flat": true,
+ "importance": 0.6,
+ "periodSlug": null,
+ "genre": [
+  "photograph",
+  "computing"
+ ],
+ "tags": [
+  "AlphaGo",
+  "computer",
+  "hardware",
+  "photograph"
+ ],
+ "branch": {
+  "of": "sim-alphago-move-37",
+  "step": 1,
+  "label": "the machine"
+ },
+ "source": {
+  "type": "commons",
+  "fileTitle": "File:AlphaGo computer rack.jpg",
+  "curid": 158115852,
+  "url": "https://upload.wikimedia.org/wikipedia/commons/b/b3/AlphaGo_computer_rack.jpg",
+  "width": 4080,
+  "height": 3072,
+  "bytes": 6906438,
+  "mime": "image/jpeg",
+  "licenseName": "CC0",
+  "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "author": "Immigrant laborer (Wikimedia Commons)",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:AlphaGo_computer_rack.jpg",
+  "notes": "A decommissioned AlphaGo backend rack, photographed 6 January 2025 on display with its AlphaGo nameplate, uploaded to Commons under CC0. Where it is displayed is not stated on the file page. Hung as a branch beside the replayed game."
+ },
+ "object": {
+  "month": null,
+  "day": null,
+  "yearStart": null,
+  "yearEnd": null,
+  "weightKg": null,
+  "widthCm": 120,
+  "heightCm": 90,
+  "depthCm": null,
+  "culture": null,
+  "materials": [],
+  "wikidataQid": "Q22044606",
+  "year": 2016,
+  "dateLabel": "2016; photographed 2025",
+  "madeIn": {
+   "name": "London",
+   "region": null,
+   "country": "United Kingdom",
+   "lat": 51.5072,
+   "lon": -0.1276,
+   "wikidataQid": "Q84"
+  },
+  "location": {
+   "name": "On display, place not stated",
+   "country": null,
+   "institution": null
+  },
+  "medium": "Photograph of a server rack",
+  "subjects": [
+   "AlphaGo",
+   "hardware",
+   "tensor processing units",
+   "DeepMind"
+  ],
+  "creator": {
+   "name": "Google DeepMind",
+   "role": "builders",
+   "birthYear": null,
+   "deathYear": null,
+   "wikidataQid": "Q15733006"
+  },
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/AlphaGo",
+  "description": "One rack of the machine that played. The AlphaGo that beat Lee Sedol ran across Google's data centres on 1,920 processors and 280 graphics chips, and on a new kind of chip, the tensor processing unit, which Google had built in secret for exactly this sort of arithmetic and announced two months after the match. A later AlphaGo Zero needed only four of them. This is a retired rack, kept and labelled.",
+  "facts": [
+   "The match version used 48 TPUs; the program had been trained on thirty million positions from human games and then on games against itself.",
+   "Lee Sedol took the one game in five by finding a move the machine had thought one in ten thousand.",
+   "DeepMind retired AlphaGo from competition in 2017 after beating the world number one, Ke Jie, three games to none."
+  ]
+ }
+}

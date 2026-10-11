@@ -1,0 +1,92 @@
+{
+ "slug": "the-great-gallery-horseshoe-canyon",
+ "title": "The Great Gallery, Horseshoe Canyon",
+ "titleOriginal": null,
+ "kind": "image",
+ "importance": 0.8,
+ "genre": [
+  "rock art",
+  "cave painting"
+ ],
+ "tags": [
+  "prehistoric",
+  "rock art",
+  "utah",
+  "barrier canyon style",
+  "pictograph"
+ ],
+ "periodSlug": "archaic",
+ "flat": false,
+ "baseHeight": null,
+ "source": {
+  "type": "commons",
+  "curid": 7203375,
+  "fileTitle": "File:GreatGalleryPanel.jpg",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/8/8b/GreatGalleryPanel.jpg",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:GreatGalleryPanel.jpg",
+  "width": 2969,
+  "height": 1000,
+  "bytes": 1697825,
+  "mime": "image/jpeg",
+  "licenseName": "CC BY 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+  "author": "Surfsupusa",
+  "notes": "Import from Wikimedia Commons; photograph of a section of the panel"
+ },
+ "object": {
+  "year": 500,
+  "month": null,
+  "day": null,
+  "yearStart": 1,
+  "yearEnd": 1100,
+  "dateLabel": "c. 1–1100 CE",
+  "madeIn": {
+   "name": "Horseshoe Canyon, Canyonlands",
+   "region": "Utah",
+   "country": "United States",
+   "lat": 38.4714,
+   "lon": -110.2,
+   "wikidataQid": "Q4500201"
+  },
+  "location": {
+   "name": "Horseshoe Canyon, Canyonlands",
+   "region": "Utah",
+   "country": "United States",
+   "lat": 38.4714,
+   "lon": -110.2,
+   "wikidataQid": "Q4500201",
+   "institution": "Canyonlands National Park",
+   "inventoryNumber": null
+  },
+  "creator": {
+   "name": "Unknown painters of the Barrier Canyon style",
+   "role": "painter",
+   "birthYear": null,
+   "deathYear": null,
+   "wikidataQid": null
+  },
+  "culture": "Barrier Canyon style",
+  "movement": null,
+  "medium": "mineral pigment on sandstone",
+  "materials": [
+   "ochre"
+  ],
+  "subjects": [
+   "anthropomorphs",
+   "spirit figures"
+  ],
+  "widthCm": null,
+  "heightCm": null,
+  "depthCm": null,
+  "weightKg": null,
+  "description": "A line of tall, armless, hollow-eyed figures painted in dark red along sixty metres of a sandstone alcove in Horseshoe Canyon, Utah. The Great Gallery is the finest panel of the Barrier Canyon style, named after this canyon; its largest figure, the Holy Ghost, stands over two metres tall and was painted by spraying pigment, with smaller animals and figures around it.",
+  "facts": [
+   "Geologists dated the panel in 2014 by the age of the rockfall it was painted on and the sediment that later buried its base: between about 1 and 1100 CE.",
+   "The full panel is about 61 metres long and 4.6 metres high.",
+   "Horseshoe Canyon was renamed from Barrier Canyon, but the style kept the old name."
+  ],
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Horseshoe_Canyon_(Utah)",
+  "wikidataQid": "Q4500201"
+ },
+ "fallbackWidthM": 10
+}

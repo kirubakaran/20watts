@@ -1,0 +1,87 @@
+{
+ "slug": "euler-identity",
+ "title": "Euler's identity",
+ "titleOriginal": null,
+ "kind": "image",
+ "importance": 0.85,
+ "genre": [
+  "equation"
+ ],
+ "tags": [
+  "equation",
+  "science",
+  "mathematics"
+ ],
+ "periodSlug": null,
+ "flat": true,
+ "baseHeight": null,
+ "source": {
+  "type": "typeset",
+  "curid": null,
+  "fileTitle": null,
+  "url": "data/originals/eq-euler-identity/equation.svg",
+  "sourcePage": null,
+  "width": 2560,
+  "height": 2176,
+  "bytes": 3742,
+  "mime": "image/svg+xml",
+  "licenseName": "CC0 1.0",
+  "licenseUrl": null,
+  "author": "20watts",
+  "notes": "Typeset by 20watts from the TeX in the record with MathJax, with a figure drawn for this museum; the rendering is CC0, the equation itself is not subject to copyright.",
+  "tex": "e^{i\\pi} + 1 = 0",
+  "figure": "data/figures/euler-identity.svg"
+ },
+ "object": {
+  "year": 1748,
+  "month": null,
+  "day": null,
+  "yearStart": 1748,
+  "yearEnd": 1748,
+  "dateLabel": "1748 (Introductio in analysin infinitorum)",
+  "madeIn": {
+   "name": "Berlin",
+   "region": null,
+   "country": "Germany",
+   "lat": 52.52,
+   "lon": 13.405,
+   "wikidataQid": "Q64"
+  },
+  "location": {
+   "name": null,
+   "region": null,
+   "country": null,
+   "lat": null,
+   "lon": null,
+   "wikidataQid": null,
+   "institution": null,
+   "inventoryNumber": null
+  },
+  "creator": {
+   "name": "Leonhard Euler",
+   "role": "author",
+   "birthYear": 1707,
+   "deathYear": 1783,
+   "wikidataQid": "Q7604"
+  },
+  "culture": null,
+  "movement": null,
+  "medium": "Equation, typeset",
+  "materials": [],
+  "subjects": [
+   "equation"
+  ],
+  "widthCm": 100,
+  "heightCm": 85,
+  "depthCm": null,
+  "weightKg": null,
+  "description": "Five constants from five corners of mathematics, e from growth, i from the square roots of negatives, π from circles, and 1 and 0, bound in one line. It is the special case at x = π of Euler's formula e^{ix} = cos x + i sin x, which Euler published in 1748 in his Introductio in analysin infinitorum, written while he led the mathematics class of the Berlin Academy. Mathematicians have voted it the most beautiful theorem in the subject more than once.",
+  "facts": [
+   "Euler was the most prolific mathematician in history, with some 850 works; he kept writing after going blind in 1771, dictating to assistants.",
+   "Richard Feynman called the underlying formula 'our jewel' and 'the most remarkable formula in mathematics'.",
+   "Euler introduced much of the notation on this sheet: e for the base of natural logarithms, i for the square root of minus one, and the use of π."
+  ],
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Euler%27s_identity",
+  "wikidataQid": null
+ }
+}

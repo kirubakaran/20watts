@@ -1,0 +1,86 @@
+{
+ "slug": "discobolus-smk",
+ "title": "Discobolus",
+ "kind": "model",
+ "representation": "scan",
+ "baseHeight": 0,
+ "back": "none",
+ "importance": 0.9,
+ "genre": [
+  "sculpture"
+ ],
+ "tags": [
+  "sculpture",
+  "scan"
+ ],
+ "periodSlug": null,
+ "flat": false,
+ "source": {
+  "type": "sketchfab",
+  "fileTitle": null,
+  "curid": "50f50abf45414ad8a658325df7a5fcb3",
+  "url": "https://sketchfab.com/3d-models/50f50abf45414ad8a658325df7a5fcb3",
+  "width": null,
+  "height": null,
+  "bytes": 5564954,
+  "mime": "model/gltf+json",
+  "licenseName": "CC0 1.0",
+  "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "author": "SMK, National Gallery of Denmark (Sketchfab)",
+  "sourcePage": "https://sketchfab.com/3d-models/50f50abf45414ad8a658325df7a5fcb3",
+  "unitScale": 1,
+  "notes": " The museum's downscaled scan of its plaster cast, in millimetres in the file with a root scale to metres; untextured plaster white. Integral oval base. The figure is about 155 cm tall; the Royal Cast Collection's cast adds a base. Downloaded by the museum's owner from Sketchfab on 2026-10-10."
+ },
+ "object": {
+  "year": -450,
+  "month": null,
+  "day": null,
+  "yearStart": null,
+  "yearEnd": null,
+  "dateLabel": "Original c. 450 BCE; a cast of a Roman marble copy",
+  "madeIn": {
+   "name": "Athens",
+   "region": null,
+   "country": "Greece",
+   "lat": 37.9838,
+   "lon": 23.7275,
+   "wikidataQid": null
+  },
+  "location": {
+   "name": "Copenhagen",
+   "country": "Denmark",
+   "institution": "SMK, National Gallery of Denmark, Royal Cast Collection (cast KAS1549); the Lancellotti marble is in the Museo Nazionale Romano",
+   "inventoryNumber": null
+  },
+  "culture": "Greek (Classical)",
+  "medium": "Plaster cast of a Roman marble copy of a lost bronze",
+  "materials": [
+   "plaster"
+  ],
+  "subjects": [
+   "athlete",
+   "discus",
+   "classical Greece",
+   "movement"
+  ],
+  "widthCm": null,
+  "heightCm": 155,
+  "depthCm": null,
+  "weightKg": null,
+  "creator": {
+   "name": "Myron",
+   "role": "sculptor",
+   "birthYear": null,
+   "deathYear": null,
+   "wikidataQid": "Q190052"
+  },
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Discobolus",
+  "wikidataQid": null,
+  "description": "An athlete at the top of his wind-up, the instant before the discus flies: the first sculpture in the world to catch a body in the middle of a movement. Myron of Eleutherae cast the bronze around 450 BCE in Athens; it is lost, and what we know of it is the Roman marble copies, above all the Lancellotti statue found on the Esquiline in 1781. This is a plaster cast of that copy, from the Royal Cast Collection in Copenhagen, which the National Gallery of Denmark scanned and released as public domain. Casts were how the world learned Greek sculpture for two centuries, and they are often in better condition than the marbles.",
+  "facts": [
+   "The pose is impossible: no thrower winds up like this; Myron composed it for the eye, not the stadium.",
+   "Hitler bought the Lancellotti Discobolus in 1938 for five million lire; it went back to Rome in 1948.",
+   "Riefenstahl's Olympia film of 1938 opens with the statue dissolving into a living athlete."
+  ]
+ }
+}

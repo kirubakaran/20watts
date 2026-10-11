@@ -1,0 +1,93 @@
+{
+ "slug": "v2-rocket-model",
+ "title": "V-2",
+ "titleOriginal": null,
+ "kind": "model",
+ "importance": 0.8,
+ "genre": [
+  "engineering",
+  "weapon"
+ ],
+ "tags": [
+  "rocket",
+  "space",
+  "Second World War"
+ ],
+ "periodSlug": null,
+ "flat": false,
+ "baseHeight": 0,
+ "source": {
+  "type": "sketchfab",
+  "curid": "d09fc8ebe9c141a18704b478544191b8",
+  "fileTitle": null,
+  "url": "https://sketchfab.com/3d-models/d09fc8ebe9c141a18704b478544191b8",
+  "sourcePage": "https://sketchfab.com/3d-models/d09fc8ebe9c141a18704b478544191b8",
+  "width": null,
+  "height": null,
+  "bytes": 1065071,
+  "mime": null,
+  "licenseName": "CC BY 4.0",
+  "licenseUrl": "http://creativecommons.org/licenses/by/4.0/",
+  "author": "person",
+  "notes": "An artist's model of the A4/V-2 (28,000 triangles, no textures, materials only), 13.7 units tall for the real 14 m, so the file is in metres; unitScale 0.05 makes it a model at one twentieth, 69 cm, small enough to pick up. License.txt in the download: CC-BY-4.0, author person (https://sketchfab.com/person_person_person), 'Author must be credited. Commercial use is allowed.' Downloaded by the museum's owner from Sketchfab on 2026-10-11.",
+  "unitScale": 1
+ },
+ "object": {
+  "year": 1942,
+  "month": 10,
+  "day": 3,
+  "yearStart": null,
+  "yearEnd": null,
+  "dateLabel": "first flight to the edge of space, 3 October 1942",
+  "madeIn": {
+   "name": "Peenemünde",
+   "region": "Mecklenburg-Vorpommern",
+   "country": "Germany",
+   "lat": 54.137,
+   "lon": 13.775,
+   "wikidataQid": "Q156734"
+  },
+  "location": {
+   "name": "Everywhere it is computed",
+   "region": null,
+   "country": null,
+   "lat": null,
+   "lon": null,
+   "wikidataQid": null,
+   "institution": null,
+   "inventoryNumber": null
+  },
+  "creator": {
+   "name": "Wernher von Braun and the Peenemünde Army Research Centre",
+   "role": "designers",
+   "birthYear": null,
+   "deathYear": null,
+   "wikidataQid": "Q57284"
+  },
+  "culture": null,
+  "movement": null,
+  "medium": "An artist's 3D model, at true size",
+  "materials": [],
+  "subjects": [
+   "rocket",
+   "ballistic missile",
+   "spaceflight",
+   "Second World War"
+  ],
+  "widthCm": 360,
+  "heightCm": 1400,
+  "depthCm": 360,
+  "weightKg": null,
+  "description": "The first thing people made that reached space, and a weapon of terror. On 3 October 1942 an A4 rose from Peenemünde on the Baltic to 84 kilometres, the edge of space, on an engine burning alcohol and liquid oxygen with 25 tonnes of thrust, steered by gyroscopes and graphite vanes in its exhaust: every large rocket since is its descendant. Renamed the V-2, Vergeltungswaffe, it was fired at London and Antwerp from September 1944, three thousand of them, killing some nine thousand people; it was built underground at Mittelwerk by concentration-camp prisoners, of whom more died making it than died from it. Its designers went to America and Russia in 1945 and built the rockets that went to the Moon. It stands here at its full fourteen metres.",
+  "facts": [
+   "Fourteen metres tall, 12.5 tonnes fuelled, a tonne of explosive, Mach 4 on arrival: there was no warning and no defence.",
+   "About 12,000 forced labourers died building V-2s at Mittelwerk; about 9,000 people were killed by them.",
+   "Von Braun, its chief designer and an SS officer, led the Saturn V team twenty years later.",
+   "Captured V-2s launched the first photographs of Earth from space, from New Mexico in 1946."
+  ],
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/V-2_rocket",
+  "wikidataQid": "Q57284"
+ },
+ "representation": "reconstruction",
+ "back": "none"
+}

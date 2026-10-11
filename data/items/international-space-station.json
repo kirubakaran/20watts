@@ -1,0 +1,98 @@
+{
+ "slug": "international-space-station",
+ "title": "International Space Station",
+ "titleOriginal": null,
+ "kind": "model",
+ "importance": 0.95,
+ "genre": [
+  "spacecraft",
+  "engineering"
+ ],
+ "tags": [
+  "space",
+  "NASA",
+  "spacecraft",
+  "landmark",
+  "walk under"
+ ],
+ "periodSlug": null,
+ "flat": false,
+ "baseHeight": 10,
+ "source": {
+  "type": "nasa",
+  "curid": "iss",
+  "fileTitle": null,
+  "url": "https://science.nasa.gov/resource/international-space-station-3d-model/",
+  "sourcePage": "https://science.nasa.gov/resource/international-space-station-3d-model/",
+  "width": null,
+  "height": null,
+  "bytes": 44495916,
+  "mime": null,
+  "licenseName": "Public domain (NASA)",
+  "licenseUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+  "author": "NASA Visualization Technology Applications and Development (VTAD)",
+  "notes": "NASA's 3D model of the station, 22 April 2019, by the Visualization Technology Applications and Development group, from the NASA 3D Resources library (glb, 131 meshes, 26 textures of 1024 px, 44 MB; NASA media are not copyrighted). Already in metres: 112 m across the solar arrays, 69 m along the truss, matching the real 109 by 73. Shown at true size, hung 42 m up to the west of the lane, as a landmark, since nothing that large fits on it. Downloaded 2026-10-10."
+ },
+ "object": {
+  "year": 2000,
+  "month": 11,
+  "day": 2,
+  "yearStart": null,
+  "yearEnd": null,
+  "dateLabel": "crewed without a break since 2 November 2000",
+  "madeIn": {
+   "name": "Low Earth orbit",
+   "region": null,
+   "country": null,
+   "lat": null,
+   "lon": null,
+   "wikidataQid": null
+  },
+  "location": {
+   "name": "Low Earth orbit, 400 km up",
+   "region": null,
+   "country": null,
+   "lat": null,
+   "lon": null,
+   "wikidataQid": null,
+   "institution": null,
+   "inventoryNumber": null
+  },
+  "creator": {
+   "name": "NASA, Roscosmos, ESA, JAXA and the Canadian Space Agency",
+   "role": "builders",
+   "birthYear": null,
+   "deathYear": null,
+   "wikidataQid": "Q25271"
+  },
+  "culture": null,
+  "movement": null,
+  "medium": "NASA's 3D model, at true size",
+  "materials": [],
+  "subjects": [
+   "spaceflight",
+   "orbit",
+   "international cooperation",
+   "engineering"
+  ],
+  "widthCm": 10900,
+  "heightCm": 2000,
+  "depthCm": 7300,
+  "weightKg": 420000,
+  "description": "The largest thing people have built off the Earth: a football pitch of solar arrays and a truss the length of one, with pressurised modules strung along it that fifteen nations sent up piece by piece over thirteen years, beginning with a Russian module in November 1998 and an American one a fortnight later. It has been lived in without a break since 2 November 2000; some 280 people from 23 countries have been aboard, and it circles the Earth sixteen times a day at 28,000 kilometres an hour, 400 kilometres up, bright enough to be the third-brightest thing in the night sky when it passes over. It was built by two countries that had spent fifty years aiming missiles at each other. It hangs here to the west of the lane, at true size, as high as it is wide; walk out under it.",
+  "facts": [
+   "Mass 420 tonnes; pressurised volume about that of a six-bedroom house.",
+   "The crew see sixteen sunrises a day. Experiments aboard have covered fire in weightlessness, protein crystals, and what a year in orbit does to a human body.",
+   "Forty-two assembly flights: thirty-seven by the Space Shuttle, five by Russian rockets.",
+   "NASA plans to bring it down into the Pacific in 2031."
+  ],
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/International_Space_Station",
+  "wikidataQid": "Q25271"
+ },
+ "representation": "reconstruction",
+ "back": "none",
+ "landmark": {
+  "side": "west",
+  "distance": 170
+ }
+}

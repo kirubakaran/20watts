@@ -75,6 +75,64 @@ export class Clicker {
   }
 }
 
+/**
+ * A sound played once from where a work stands, at a moment a simulation
+ * chooses: the chirp of two black holes at their merger. Fetched and
+ * decoded the first time it is played.
+ */
+export class OneShot {
+  readonly node: PositionalAudio | null;
+  private buffer: AudioBuffer | null = null;
+  private loading: Promise<AudioBuffer | null> | null = null;
+
+  constructor(private readonly url: string) {
+    if (!listener) {
+      this.node = null;
+      return;
+    }
+    const node = new PositionalAudio(listener);
+    node.setDistanceModel("inverse");
+    node.setRefDistance(3);
+    node.setRolloffFactor(1.4);
+    this.node = node;
+  }
+
+  private load(): Promise<AudioBuffer | null> {
+    if (this.buffer) return Promise.resolve(this.buffer);
+    if (!this.loading) {
+      this.loading = fetch(assetUrl(this.url))
+        .then((r) => r.arrayBuffer())
+        .then((b) => listener!.context.decodeAudioData(b))
+        .then((buf) => (this.buffer = buf))
+        .catch((e) => (console.warn("one-shot:", e), null));
+    }
+    return this.loading;
+  }
+
+  play(volume = 0.8) {
+    if (!this.node || !listener || listener.context.state !== "running") return;
+    void this.load().then((buf) => {
+      if (!buf || !this.node) return;
+      const ctx = listener!.context;
+      const src = ctx.createBufferSource();
+      src.buffer = buf;
+      const g = ctx.createGain();
+      g.gain.value = volume;
+      src.connect(g).connect(this.node.gain);
+      src.start();
+      src.onended = () => {
+        src.disconnect();
+        g.disconnect();
+      };
+    });
+  }
+
+  dispose() {
+    this.node?.disconnect();
+    this.node?.removeFromParent();
+  }
+}
+
 export class Sound {
   private element: HTMLAudioElement | null = null;
   private node: PositionalAudio | null = null;

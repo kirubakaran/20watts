@@ -1,0 +1,104 @@
+{
+ "slug": "muybridge-horse-in-motion",
+ "title": "The Horse in Motion",
+ "titleOriginal": "The Horse in Motion. \"Sallie Gardner,\" owned by Leland Stanford; running at a 1:40 gait over the Palo Alto track, 19th June 1878",
+ "kind": "image",
+ "importance": 0.85,
+ "genre": [
+  "film",
+  "photography",
+  "chronophotography"
+ ],
+ "tags": [
+  "film",
+  "photography",
+  "motion",
+  "horse",
+  "Muybridge",
+  "Stanford",
+  "animation"
+ ],
+ "periodSlug": null,
+ "flat": true,
+ "baseHeight": 0.9,
+ "source": {
+  "type": "video-still",
+  "curid": "146612026",
+  "fileTitle": null,
+  "url": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Horse_in_Motion_-_Sallie_Gardner_%28animation%29.webm",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:Horse_in_Motion_-_Sallie_Gardner_(animation).webm",
+  "width": 1440,
+  "height": 960,
+  "bytes": 591857,
+  "mime": "video/mp4",
+  "licenseName": "Public domain",
+  "licenseUrl": null,
+  "author": "Eadweard Muybridge; animation by Commons user Avelludo (2024) from the Library of Congress scan of the 1878 cabinet card",
+  "notes": "Silent WebM, 1440 x 960 px, 1.292 s, 11 frames: a reconstructed animation of Muybridge's 'Sallie Gardner' sequence of 19 June 1878, made from File:Eadweard Muybridge-Sallie Gardner 1878.jpg (the Library of Congress scan of the Morse's Gallery cabinet card); frames 1-11 are used, frame 12 (a different gait) is left out. Commons wikitext licence template: {{PD-old-100-expired}}; extmetadata: LicenseShortName = 'Public domain', License = 'pd', Copyrighted = 'False', Artist = 'Eadweard Muybridge', Credit = 'Created from File:Eadweard Muybridge-Sallie Gardner 1878.jpg', DateTimeOriginal = '1878-06-19'; {{Retouched picture|Increased contrast, black and white, turned into animation|editor=Avelludo}}; categories: PD-old-100-expired, CC-PD-Mark, Retouched pictures, Sallie Gardner at a Gallop. The animation is a 2024 user reconstruction, not a period film: Muybridge himself projected these frames with his zoopraxiscope from 1880. There is no original moving-image file; a GIF of the same reconstruction exists (File:Horse in Motion - Sallie Gardner (animation).gif, curid 146612027, 967 x 673 px, 1686624 B) and an older 340 x 230 GIF (File:The Horse in Motion-anim.gif, curid 3828100). The clip is only 1.29 s long, so the loop is the whole clip rather than the 8-15 s asked for; the pipeline should loop it seamlessly. The source still (the cabinet card) is File:The Horse in Motion high res.jpg, curid 57260211, if a static fallback is wanted. HEAD 200, content-length 591857, video/webm."
+ },
+ "object": {
+  "year": 1878,
+  "month": 6,
+  "day": 19,
+  "yearStart": null,
+  "yearEnd": null,
+  "dateLabel": "19 June 1878",
+  "madeIn": {
+   "name": "Palo Alto Stock Farm (Leland Stanford's farm, now the Stanford campus)",
+   "region": "California",
+   "country": "United States",
+   "lat": 37.4275,
+   "lon": -122.1697,
+   "wikidataQid": "Q47265"
+  },
+  "location": {
+   "name": "Washington, D.C.",
+   "region": null,
+   "country": "United States",
+   "lat": null,
+   "lon": null,
+   "wikidataQid": null,
+   "institution": "Library of Congress, Prints and Photographs Division (cabinet card; this animation was made from its scan)",
+   "inventoryNumber": "LC-DIG-ppmsca-23778 / cph.3a45870"
+  },
+  "creator": {
+   "name": "Eadweard Muybridge",
+   "role": "photographer",
+   "birthYear": 1830,
+   "deathYear": 1904,
+   "wikidataQid": "Q190568"
+  },
+  "culture": null,
+  "movement": null,
+  "medium": "Twelve wet-plate photographs taken by electrically tripped cameras, published as a cabinet card; shown here as a reconstructed silent animation",
+  "materials": [
+   "albumen print",
+   "glass negative"
+  ],
+  "subjects": [
+   "horse",
+   "gallop",
+   "motion study",
+   "photography",
+   "Leland Stanford",
+   "Sallie Gardner"
+  ],
+  "widthCm": 240,
+  "heightCm": 160,
+  "depthCm": null,
+  "weightKg": null,
+  "description": "On 19 June 1878, at Leland Stanford's stock farm at Palo Alto, Eadweard Muybridge lined up twelve cameras along a track, each with a shutter tripped by a thread the horse broke as it passed. The mare Sallie Gardner, running at about forty kilometres an hour, took the twelve pictures herself in under half a second. Stanford wanted to settle an old argument: does a galloping horse ever have all four feet off the ground? The plates showed that it does, but with the legs gathered under the body, not stretched out fore and aft as painters had always drawn them. Muybridge sold the sequence as a cabinet card and, from 1880, spun the frames on a glass disc in his zoopraxiscope so that audiences could watch the horse run. That projector is a direct ancestor of cinema, and the stop-motion study of movement he began here filled the eleven volumes of Animal Locomotion in 1887. What is shown here is a modern animation of the eleven usable frames of the 1878 card.",
+  "facts": [
+   "The exposures were about a thousandth of a second, far faster than any studio portrait of the day.",
+   "Stanford paid for the work; the legend that it settled a $25,000 bet is unproven.",
+   "Muybridge's zoopraxiscope projections of 1880 were among the first moving pictures shown to a paying public.",
+   "Muybridge had been acquitted of murdering his wife's lover in 1875, three years before this sequence."
+  ],
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Sallie_Gardner_at_a_Gallop",
+  "wikidataQid": "Q3924909"
+ },
+ "loop": {
+  "start": 0,
+  "seconds": 1.29
+ }
+}

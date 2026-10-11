@@ -1,0 +1,87 @@
+{
+ "slug": "shannon-entropy",
+ "title": "Shannon entropy",
+ "titleOriginal": null,
+ "kind": "image",
+ "importance": 0.85,
+ "genre": [
+  "equation"
+ ],
+ "tags": [
+  "equation",
+  "science",
+  "mathematics"
+ ],
+ "periodSlug": null,
+ "flat": true,
+ "baseHeight": null,
+ "source": {
+  "type": "typeset",
+  "curid": null,
+  "fileTitle": null,
+  "url": "data/originals/eq-shannon-entropy/equation.svg",
+  "sourcePage": null,
+  "width": 2560,
+  "height": 2176,
+  "bytes": 7485,
+  "mime": "image/svg+xml",
+  "licenseName": "CC0 1.0",
+  "licenseUrl": null,
+  "author": "20watts",
+  "notes": "Typeset by 20watts from the TeX in the record with MathJax, with a figure drawn for this museum; the rendering is CC0, the equation itself is not subject to copyright.",
+  "tex": "H = -\\sum_{i} p_i \\log_2 p_i",
+  "figure": "data/figures/shannon-entropy.svg"
+ },
+ "object": {
+  "year": 1948,
+  "month": 7,
+  "day": null,
+  "yearStart": 1948,
+  "yearEnd": 1948,
+  "dateLabel": "July 1948 (A Mathematical Theory of Communication)",
+  "madeIn": {
+   "name": "Bell Telephone Laboratories, Murray Hill, New Jersey",
+   "region": "New Jersey",
+   "country": "United States",
+   "lat": 40.6833,
+   "lon": -74.4003,
+   "wikidataQid": null
+  },
+  "location": {
+   "name": null,
+   "region": null,
+   "country": null,
+   "lat": null,
+   "lon": null,
+   "wikidataQid": null,
+   "institution": null,
+   "inventoryNumber": null
+  },
+  "creator": {
+   "name": "Claude Shannon",
+   "role": "author",
+   "birthYear": 1916,
+   "deathYear": 2001,
+   "wikidataQid": "Q92760"
+  },
+  "culture": null,
+  "movement": null,
+  "medium": "Equation, typeset",
+  "materials": [],
+  "subjects": [
+   "equation"
+  ],
+  "widthCm": 100,
+  "heightCm": 85,
+  "depthCm": null,
+  "weightKg": null,
+  "description": "How much information a message carries, measured in bits: the average surprise of its symbols. Shannon published it in July 1948 in 'A Mathematical Theory of Communication', the paper that founded information theory, written at Bell Labs in Murray Hill, the building where the transistor a few rows back had been made the winter before. The formula sets the limit for compressing any data and, with his channel theorem, for sending it through noise; every file, call and stream since has lived inside those limits.",
+  "facts": [
+   "The word 'bit' first appeared in print in this paper; Shannon credits John Tukey with coining it.",
+   "Shannon said John von Neumann advised him to call the quantity entropy, since 'no one knows what entropy really is, so in a debate you will always have the advantage'.",
+   "The paper also proved that error-free communication is possible over a noisy channel up to a definite capacity, which took forty years of coding theory to reach in practice."
+  ],
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Entropy_(information_theory)",
+  "wikidataQid": null
+ }
+}

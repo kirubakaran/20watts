@@ -1,0 +1,126 @@
+{
+ "slug": "ford-model-t-runabout",
+ "title": "Ford Model T Runabout",
+ "titleOriginal": null,
+ "altTitles": [
+  "Tin Lizzie",
+  "Model T"
+ ],
+ "kind": "model",
+ "importance": 0.8,
+ "genre": [
+  "automobile",
+  "engineering"
+ ],
+ "tags": [
+  "automobile",
+  "ford",
+  "mass-production"
+ ],
+ "periodSlug": null,
+ "flat": false,
+ "baseHeight": null,
+ "source": {
+  "type": "sketchfab",
+  "curid": "895fd0fbc7cc42aab8f3300a85420b91",
+  "format": "gltf-zip",
+  "fileTitle": null,
+  "url": "https://sketchfab.com/3d-models/1924-ford-model-t-3d-model-with-interior-895fd0fbc7cc42aab8f3300a85420b91",
+  "sourcePage": "https://sketchfab.com/3d-models/1924-ford-model-t-3d-model-with-interior-895fd0fbc7cc42aab8f3300a85420b91",
+  "width": null,
+  "height": null,
+  "bytes": null,
+  "mime": null,
+  "licenseName": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "author": "shubhankar.arch.3d",
+  "notes": "Downloaded from Sketchfab by hand; artist-made model, not a scan"
+ },
+ "object": {
+  "year": 1924,
+  "month": null,
+  "day": null,
+  "yearStart": 1908,
+  "yearEnd": 1927,
+  "dateLabel": "1924 (produced 1908–1927)",
+  "datePrecision": "year",
+  "madeIn": {
+   "name": "Highland Park",
+   "region": "Michigan",
+   "country": "United States",
+   "lat": 42.4106,
+   "lon": -83.0969,
+   "wikidataQid": "Q5758972"
+  },
+  "location": {
+   "name": null,
+   "region": null,
+   "country": null,
+   "lat": null,
+   "lon": null,
+   "wikidataQid": null,
+   "institution": null,
+   "inventoryNumber": null
+  },
+  "creator": {
+   "name": "Ford Motor Company",
+   "role": "manufacturer",
+   "birthYear": null,
+   "deathYear": null,
+   "wikidataQid": "Q44294",
+   "wikipediaUrl": "https://en.wikipedia.org/wiki/Ford_Motor_Company",
+   "slug": "ford-motor-company"
+  },
+  "creators": [
+   {
+    "name": "Ford Motor Company",
+    "role": "manufacturer",
+    "birthYear": null,
+    "deathYear": null,
+    "wikidataQid": "Q44294",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/Ford_Motor_Company",
+    "slug": "ford-motor-company"
+   },
+   {
+    "name": "Joseph A. Galamb",
+    "role": "engineer",
+    "birthYear": 1881,
+    "deathYear": 1955,
+    "wikidataQid": "Q717474",
+    "wikipediaUrl": "https://en.wikipedia.org/wiki/J%C3%B3zsef_Galamb",
+    "slug": "joseph-galamb"
+   }
+  ],
+  "culture": "American",
+  "movement": null,
+  "medium": "steel body on wood frame, wooden spoke wheels",
+  "materials": [
+   "steel",
+   "vanadium steel",
+   "wood",
+   "rubber",
+   "brass"
+  ],
+  "subjects": [
+   "mass production",
+   "assembly line",
+   "motoring"
+  ],
+  "widthCm": 168,
+  "heightCm": 180,
+  "depthCm": 340,
+  "weightKg": 550,
+  "description": "The car that put the world on wheels. Ford built more than fifteen million Model Ts between 1908 and 1927, and the moving assembly line at Highland Park cut the price from $780 in 1910 to $290 in 1924, when this two-seat runabout was the cheapest car in the catalogue. Simple, tough and endlessly adaptable, it was voted the most influential car of the twentieth century. This is an artist's reconstruction of the type, not a scan of a particular car.",
+  "facts": [
+   "The assembly line cut the time to build a chassis from twelve and a half hours to ninety-three minutes.",
+   "\"Any customer can have a car painted any colour that he wants, so long as it is black\": from 1914 to 1925, black japan enamel was the only paint that dried fast enough for the line.",
+   "The engine ran on petrol, kerosene or ethanol, and farmers belted the rear wheel to saws, pumps and threshers.",
+   "Pedals, not a gear lever: the Model T's two-speed planetary transmission was worked with the feet."
+  ],
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Ford_Model_T",
+  "wikidataQid": "Q182323"
+ },
+ "recordSource": "admin",
+ "representation": "reconstruction",
+ "back": "none"
+}

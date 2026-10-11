@@ -1,0 +1,94 @@
+{
+ "slug": "first-transistor",
+ "title": "The first transistor",
+ "titleOriginal": null,
+ "kind": "image",
+ "importance": 0.9,
+ "genre": [
+  "electronic component"
+ ],
+ "tags": [
+  "transistor",
+  "bell labs",
+  "semiconductor"
+ ],
+ "periodSlug": "modern",
+ "flat": false,
+ "baseHeight": null,
+ "source": {
+  "type": "commons",
+  "curid": 24825633,
+  "fileTitle": "File:The First Transistor ever made, built in 1947 - Bell Labs.jpg",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/e/e5/The_First_Transistor_ever_made%2C_built_in_1947_-_Bell_Labs.jpg",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:The_First_Transistor_ever_made,_built_in_1947_-_Bell_Labs.jpg",
+  "width": 2048,
+  "height": 1535,
+  "bytes": 920490,
+  "mime": "image/jpeg",
+  "licenseName": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+  "author": "Windell Oskay",
+  "notes": "PROBABLY A REPLICA: the photo (Flickr 'Bell Labs 004', 2012) shows the point-contact transistor display at Bell Labs, Murray Hill, New Jersey; Commons titles it 'the first transistor ever made' and a second Commons photo of the same display (File:1st-Transistor.jpg, geotagged at Murray Hill) says 'original exhibited in Bell Laboratories', but the IEEE milestone page describes the Bell Labs Technology Showcase item as 'a replica of Bell Labs' first point-contact transistor' and Invention & Technology credits a 1997 Lucent replica, so treat it as a replica unless Nokia Bell Labs confirms otherwise; no free photo of a confirmed original was found, and no 3D scan exists (Smithsonian, Met, SMG, Sketchfab searched). The device is a germanium slab with two gold-foil contacts on a plastic wedge pressed by a spring, in a Perspex mount about the size of a hand; dimensions are not published by Wikipedia or Bell Labs, so null. Dates from Wikipedia 'Point-contact transistor' (first worked 16 December 1947, demonstrated 23 December 1947)."
+ },
+ "object": {
+  "year": 1947,
+  "month": 12,
+  "day": null,
+  "yearStart": 1947,
+  "yearEnd": 1947,
+  "dateLabel": "December 1947",
+  "madeIn": {
+   "name": "Bell Telephone Laboratories, Murray Hill, New Jersey",
+   "region": "New Jersey",
+   "country": "United States",
+   "lat": 40.6833,
+   "lon": -74.4003,
+   "wikidataQid": "Q984466"
+  },
+  "location": {
+   "name": "Nokia Bell Labs, Murray Hill, New Jersey",
+   "region": null,
+   "country": "United States",
+   "lat": null,
+   "lon": null,
+   "wikidataQid": null,
+   "institution": "Nokia Bell Labs",
+   "inventoryNumber": null
+  },
+  "creator": {
+   "name": "John Bardeen and Walter Brattain",
+   "role": "inventors (Bell Labs, under William Shockley's group)",
+   "birthYear": null,
+   "deathYear": null,
+   "wikidataQid": null
+  },
+  "culture": "American",
+  "movement": null,
+  "medium": "Germanium point-contact transistor: germanium slab, gold-foil contacts on a plastic wedge, spring, Perspex mount",
+  "materials": [
+   "germanium",
+   "gold",
+   "plastic",
+   "Perspex"
+  ],
+  "subjects": [
+   "electronics",
+   "semiconductors",
+   "invention",
+   "computing"
+  ],
+  "widthCm": null,
+  "heightCm": null,
+  "depthCm": null,
+  "weightKg": null,
+  "description": "On 16 December 1947 John Bardeen and Walter Brattain of Bell Telephone Laboratories made a slab of germanium amplify an electrical signal by pressing two closely spaced gold contacts against its surface. Their point-contact transistor, demonstrated to Bell executives a week later, was the first working transistor and the ancestor of every semiconductor device since. The device shown is the display at Bell Labs in Murray Hill, generally identified as a replica of the original.",
+  "facts": [
+   "The critical experiment on 16 December 1947 used a block of germanium with two very closely spaced gold contacts held against it by a spring.",
+   "Brattain made the two contacts by slitting a strip of gold foil wrapped over the point of a plastic triangle, leaving a gap of less than 0.1 mm.",
+   "The invention was demonstrated to Bell Labs management on 23 December 1947 and announced publicly in June 1948."
+  ],
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Point-contact_transistor",
+  "wikidataQid": "Q1515631"
+ },
+ "fallbackWidthM": 0.6
+}

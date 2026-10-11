@@ -1,0 +1,83 @@
+{
+ "title": "The Mandelbrot set",
+ "kind": "sim",
+ "importance": 0.85,
+ "genre": [
+  "mathematics"
+ ],
+ "tags": [
+  "fractal",
+  "mathematics",
+  "complex numbers",
+  "simulation"
+ ],
+ "baseHeight": 0.6,
+ "source": {
+  "type": "procedural",
+  "program": "mandelbrot",
+  "params": {
+   "period": 120,
+   "zoom": 8000
+  },
+  "bounds": {
+   "width": 2,
+   "height": 2,
+   "depth": 0.05
+  },
+  "licenseName": "CC0 1.0",
+  "author": "20watts",
+  "notes": "Run live by src/sims/mandelbrot.ts: a fragment shader iterates z squared plus c up to 300 times for every pixel every frame, zooming into the seahorse valley and back out over two minutes. The program is the museum's own, CC0."
+ },
+ "object": {
+  "year": 1980,
+  "month": 3,
+  "day": 1,
+  "dateLabel": "1 March 1980",
+  "madeIn": {
+   "name": "Yorktown Heights",
+   "region": "New York",
+   "country": "United States",
+   "lat": 41.21,
+   "lon": -73.8,
+   "wikidataQid": null
+  },
+  "location": {
+   "name": "Everywhere it is computed",
+   "country": null,
+   "institution": null
+  },
+  "culture": null,
+  "medium": "Fractal, computed live on the graphics processor",
+  "materials": [],
+  "subjects": [
+   "fractal",
+   "complex dynamics",
+   "iteration"
+  ],
+  "creator": {
+   "name": "Benoit Mandelbrot",
+   "role": "mathematician",
+   "birthYear": 1924,
+   "deathYear": 2010,
+   "wikidataQid": "Q101740"
+  },
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Mandelbrot_set",
+  "wikidataQid": "Q257",
+  "description": "Take a number c in the complex plane, start z at zero, and repeat z = z² + c. For some c the value stays bounded forever; for others it runs off to infinity. The set of c that stay is the black shape here, and its edge is infinitely detailed: zoom in anywhere on the boundary and new copies of the whole appear among seahorses, spirals and filaments, with no end to it. Benoit Mandelbrot made the first crude pictures at IBM on 1 March 1980, on a printer; Robert Brooks and Peter Matelski had drawn a rough one two years earlier.\n\nNothing here is a picture. The panel computes the set afresh every frame on the graphics chip as you watch, zooming slowly into the boundary and back out, as far as single-precision arithmetic allows.",
+  "facts": [
+   "Every point of the boundary is a point where the behaviour of z changes from bounded to runaway; the boundary has dimension 2.",
+   "The set is connected, which Mandelbrot doubted from his pictures and Douady and Hubbard proved in 1982.",
+   "Along the real axis it contains the bifurcation cascade of the logistic map.",
+   "The zoom here stops at about eight thousand times; beyond that the GPU's arithmetic runs out of digits."
+  ],
+  "yearStart": null,
+  "yearEnd": null,
+  "weightKg": null,
+  "widthCm": null,
+  "heightCm": null,
+  "depthCm": null
+ },
+ "slug": "mandelbrot-set",
+ "flat": false,
+ "periodSlug": null
+}

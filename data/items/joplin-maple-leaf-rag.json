@@ -1,0 +1,61 @@
+{
+ "slug": "joplin-maple-leaf-rag",
+ "title": "Maple Leaf Rag",
+ "kind": "image",
+ "flat": true,
+ "importance": 0.8,
+ "genre": ["music"],
+ "periodSlug": null,
+ "tags": ["music", "ragtime", "piano", "american"],
+ "source": {
+  "type": "commons",
+  "fileTitle": "File:Maple Leaf Rag 1st ed.jpg",
+  "curid": 4647249,
+  "url": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Maple_Leaf_Rag_1st_ed.jpg",
+  "width": 1024,
+  "height": 1250,
+  "bytes": 373461,
+  "mime": "image/jpeg",
+  "licenseName": "Public domain",
+  "licenseUrl": null,
+  "author": "John Stark & Son, Sedalia, Missouri (publisher, 1899); scan from the Library of Congress",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:Maple_Leaf_Rag_1st_ed.jpg",
+  "notes": "Cover of the first edition of Scott Joplin's 'Maple Leaf Rag', published by John Stark & Son in Sedalia, Missouri, in 1899, from the Library of Congress copy (call number M31.J). Commons API extmetadata: LicenseShortName 'Public domain'; Artist 'Scott Joplin'; Credit 'Library of Congress Call Number M31.J case'; ImageDescription '\"Maple Leaf Rag\" first edition sheet music. Cover page: part 1 of 4.'; DateTimeOriginal 1899. Published in the United States in 1899, so public domain. A smaller alternative scan of the same cover is File:MapleLeafSedaliaPrinting99.jpg (curid 4100147, 467x600)."
+ },
+ "audio": {
+  "type": "commons",
+  "fileTitle": "File:1906 - Scott Joplin's Maple Leaf Rag (1899) played by the United States Marine Band.ogg",
+  "curid": 15863260,
+  "url": "https://upload.wikimedia.org/wikipedia/commons/3/3a/1906_-_Scott_Joplin%27s_Maple_Leaf_Rag_%281899%29_played_by_the_United_States_Marine_Band.ogg",
+  "bytes": 1840346,
+  "mime": "audio/ogg",
+  "seconds": 114.8,
+  "licenseName": "Public domain",
+  "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+  "author": "United States Marine Band (1906 acoustic recording)",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:1906_-_Scott_Joplin%27s_Maple_Leaf_Rag_(1899)_played_by_the_United_States_Marine_Band.ogg",
+  "performers": "The United States Marine Band, 'The President's Own', in an acoustic recording made in 1906, one of the earliest recordings of the piece.",
+  "start": 0,
+  "excerptSeconds": null,
+  "notes": "Commons API extmetadata: LicenseShortName 'Public domain'; UsageTerms 'Public domain'; Copyrighted 'False'; Credit 'https://archive.org/details/UnitedStatesMarineBand' plus citations to Berlin, King of Ragtime (1994) and Jasen's discography of 78 rpm Joplin recordings; ImageDescription 'A 1906 recording of American composer Scott Joplin's Maple Leaf Rag (1899) played by the United States Marine Band. This is one of the earliest known recordings of this work ... Converted from MP3 to Ogg Vorbis with a slight trim of the beginning and end by Major Bloodnok.'; Permission text includes 'This work is in the public domain in the United States because it was published ... before January 1, 1931' and the Creative Commons Public Domain Mark 1.0. Doubly public domain: a sound recording published before 1926 and a performance by a US federal military band. Duration from API metadata: 114.84 s. Alternative on Commons: Joplin's own 1916 piano roll (Uni-Record / Aeolian) rendered from a scanned roll to MIDI and then to audio, File:Maple leaf rag - played by Scott Joplin 1916 V2.ogg (curid 16836563, Public domain, 130 s); it is a synthesised rendering of the roll rather than a sound recording, which is why the Marine Band disc is used here."
+ },
+ "object": {
+  "year": 1899, "month": 9, "day": null, "yearStart": 1899, "yearEnd": 1899, "dateLabel": "September 1899 (publication, Sedalia, Missouri)",
+  "madeIn": {"name": "Sedalia", "region": "Missouri", "country": "United States", "lat": 38.7045, "lon": -93.2283, "wikidataQid": null},
+  "location": {"name": "Washington, D.C.", "country": "United States", "institution": "Library of Congress (first-edition copy shown)", "inventoryNumber": "M31.J"},
+  "culture": "American",
+  "medium": "Rag for solo piano; printed sheet music",
+  "materials": ["ink", "paper"],
+  "subjects": ["music", "ragtime", "piano", "american"],
+  "widthCm": null, "heightCm": null, "depthCm": null, "weightKg": null,
+  "creator": {"name": "Scott Joplin", "role": "composer", "birthYear": 1868, "deathYear": 1917, "wikidataQid": "Q208009"},
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Maple_Leaf_Rag",
+  "wikidataQid": null,
+  "description": "Scott Joplin, the son of a formerly enslaved railway labourer, was playing piano in the Maple Leaf Club in Sedalia, Missouri, when the local music dealer John Stark published his 'Maple Leaf Rag' in September 1899. Joplin's contract gave him a royalty of one cent a copy, unusual for a Black composer at the time, and the piece went on to sell hundreds of thousands of copies, the first instrumental sheet music to do so. Its four sixteen-bar strains, with a syncopated right hand bouncing over a steady marching left hand, became the pattern for classic ragtime and the first distinctly American popular music to spread around the world. The cover shown is the 1899 Sedalia first edition. The visitor hears the United States Marine Band's 1906 recording, among the earliest ever made of the piece, which as a pre-1926 federal recording is in the public domain.",
+  "facts": [
+   "Joplin's royalty contract with Stark, signed on 10 August 1899, is one of the earliest surviving royalty agreements for a Black American composer.",
+   "Joplin himself recorded the rag on piano rolls in 1916, a year before his death, when illness had already affected his playing.",
+   "The rag was published in Sedalia; Stark moved his firm to St. Louis the next year as sales took off."
+  ]
+ }
+}

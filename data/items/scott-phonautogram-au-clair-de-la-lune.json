@@ -1,0 +1,61 @@
+{
+ "slug": "scott-phonautogram-au-clair-de-la-lune",
+ "title": "'Au clair de la lune' phonautogram",
+ "kind": "image",
+ "flat": true,
+ "importance": 0.9,
+ "genre": ["music", "technology"],
+ "periodSlug": null,
+ "tags": ["music", "sound recording", "invention", "phonautograph"],
+ "source": {
+  "type": "commons",
+  "fileTitle": "File:Phonautograph - Scott 1859.jpg",
+  "curid": 8853276,
+  "url": "https://upload.wikimedia.org/wikipedia/commons/0/09/Phonautograph_-_Scott_1859.jpg",
+  "width": 1200,
+  "height": 1212,
+  "bytes": 205797,
+  "mime": "image/jpeg",
+  "licenseName": "Public domain",
+  "licenseUrl": null,
+  "author": "Édouard-Léon Scott de Martinville (drawing, 1859); from the certificate of addition to French patent no. 31470, preserved by INPI; scan via firstsounds.org",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:Phonautograph_-_Scott_1859.jpg",
+  "notes": "Scott's own pen drawing of his phonautograph, the barrel-shaped horn, membrane and stylus writing on a soot-blackened paper wrapped round a hand-cranked cylinder, with his annotation 'Planche 1re annexée à ma demande du 29 juillet 1859 d'un certificat d'addition au brevet d'invention ... no 31470'. This is the model of the machine on which the 1860 'Au clair de la lune' sheet was made. Commons API extmetadata: LicenseShortName 'Public domain'; Artist 'Édouard-Léon Scott de Martinville (1817-1879)'; Credit 'Certificate of addition to Scott de Martinville's patent #31470 (dated 29 July 1859 and preserved by INPI, the French patent office). Downloaded from firstsounds.org'; ImageDescription 'A phonautograph drawn by Édouard-Léon Scott de Martinville'; DateTimeOriginal 1859. Licence doubt / substitution: an image of the 9 April 1860 'Au clair de la lune' phonautogram sheet itself was NOT found on Commons (searches for phonautogram 1860, Category:Phonautographs and Category:Édouard-Léon Scott de Martinville checked on 2026-10-09; the sheet is held by the Académie des sciences in Paris and First Sounds publishes scans on firstsounds.org, but not under a licence verified here). The only actual Scott trace on Commons is File:The phonautogram of Notes played on a guitar.png (curid 97906182, CC0, 1440x963, 1853-54 guitar notes, a low-quality video-frame reproduction) and a tiny 83x764 detail of an 1859 trace, File:Phonautogram - Scott 1859.jpg (curid 8853442, Public domain). Swap in a scan of the 1860 sheet if one with a verified licence is obtained."
+ },
+ "audio": {
+  "type": "commons",
+  "fileTitle": "File:Au Clair de la Lune (1860).ogg",
+  "curid": 3785265,
+  "url": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Au_Clair_de_la_Lune_%281860%29.ogg",
+  "bytes": 102140,
+  "mime": "audio/ogg",
+  "seconds": 11.1,
+  "licenseName": "Public domain",
+  "licenseUrl": null,
+  "author": "Édouard-Léon Scott de Martinville (recording, 9 April 1860); audio recovered by First Sounds (David Giovannoni, Patrick Feaster, Richard Martin, Meagan Hennessey) with Carl Haber and Earl Cornell at Lawrence Berkeley National Laboratory, March 2008",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:Au_Clair_de_la_Lune_(1860).ogg",
+  "performers": "An unidentified singer, probably Scott himself, singing the folk song 'Au clair de la lune' in Paris on 9 April 1860; sound recovered from the paper trace by First Sounds in 2008.",
+  "start": 0,
+  "excerptSeconds": null,
+  "notes": "Commons API extmetadata: LicenseShortName 'Public domain'; UsageTerms 'Public domain'; Copyrighted 'False'; Artist 'Au Clair de la Lune is an old French folk song that is public domain / Song was sung and recorded on paper with a phonautograph in 1860 by Édouard-Léon Scott de Martinville / It was converted back to sound in 2008 by David Giovannoni's team at First Sounds.'; Credit 'Phonoautogram reconstructed as audio via https://www.firstsounds.org/sounds/ The original file is at: https://www.firstsounds.org/sounds/1860-Scott-Au-Clair-de-la-Lune.mp3'; ImageDescription 'An excerpt from the song \"Au clair de la lune\", originally recorded as a phonautogram on paper. As of May 2009, this is believed to be the oldest recognizable recording of a human voice in existence...'; DateTimeOriginal 'Recording: 9 April 1860 - Restoration: March 2008'. Commons tags the file PD as a pre-1926 sound recording. Licence doubt, minor: the derivative file File:Au Clair de la Lune (1860) new.ogg (curid 7155118, speed/pitch corrected, noise reduced) carries the note that the restored sound 'may fall under First Sounds licensing terms', which First Sounds states as Creative Commons Attribution ('These sounds are licensed under Creative Commons Attribution (by) license and may be redistributed or sampled; all we ask is that you provide First Sounds with a copy of your work'). Either way redistribution is permitted; credit First Sounds to be safe. A later 2009 restoration at corrected speed is File:1860-Scott-Au-Clair-de-la-Lune-05-09.ogg (curid 8859651, Public domain, 206,467 bytes). Duration from API metadata: 11.12 s; serve the whole file, perhaps looped."
+ },
+ "object": {
+  "year": 1860, "month": 4, "day": 9, "yearStart": 1860, "yearEnd": 1860, "dateLabel": "9 April 1860 (date written on the phonautogram sheet)",
+  "madeIn": {"name": "Paris", "region": "Île-de-France", "country": "France", "lat": 48.8566, "lon": 2.3522, "wikidataQid": "Q90"},
+  "location": {"name": "Paris", "country": "France", "institution": "Académie des sciences (the 1860 phonautogram sheets, deposited by Scott in 1861)", "inventoryNumber": null},
+  "culture": "French",
+  "medium": "Phonautogram: sound-wave trace scratched by a stylus into lampblack on paper; recovered as audio in 2008",
+  "materials": ["paper", "lampblack"],
+  "subjects": ["sound recording", "invention", "acoustics", "music"],
+  "widthCm": null, "heightCm": null, "depthCm": null, "weightKg": null,
+  "creator": {"name": "Édouard-Léon Scott de Martinville", "role": "inventor", "birthYear": 1817, "deathYear": 1879, "wikidataQid": null},
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Phonautograph",
+  "wikidataQid": null,
+  "description": "Seventeen years before Edison's phonograph, a Parisian typesetter and amateur scientist, Édouard-Léon Scott de Martinville, built a machine that wrote sound down. His phonautograph gathered sound in a horn, let it shake a membrane, and had a hog's bristle scratch the vibration into lampblack on paper turning on a cylinder. Scott wanted a way to read speech from the squiggle; he never imagined playing it back. On 9 April 1860 he sang a few seconds of the folk song 'Au clair de la lune' into the horn and dated the sheet. In 2008 the First Sounds group had the trace scanned at high resolution and turned back into sound by computer at Lawrence Berkeley National Laboratory, and the thin, wavering voice that emerged is the oldest recording of a human voice that can be recognised. The drawing shown is Scott's own sketch of his machine from his 1859 patent papers. The visitor hears the eleven-second 2008 recovery.",
+  "facts": [
+   "The sheet was deposited with the Académie des sciences in Paris in 1861 and lay unplayed for 147 years.",
+   "The first 2008 playback ran at the wrong speed and was taken for a girl's voice; correcting the cylinder speed revealed a slow male voice, probably Scott's own.",
+   "Scott patented the phonautograph on 25 March 1857; Edison's phonograph, the first machine that could play sound back, followed in 1877."
+  ]
+ }
+}

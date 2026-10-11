@@ -1,0 +1,109 @@
+{
+ "slug": "gauhar-jaan-aan-baan",
+ "title": "Gauhar Jaan sings a thumri",
+ "titleOriginal": null,
+ "kind": "image",
+ "importance": 0.85,
+ "genre": [
+  "music"
+ ],
+ "tags": [
+  "music",
+  "India",
+  "Hindustani",
+  "thumri",
+  "recording",
+  "gramophone"
+ ],
+ "periodSlug": null,
+ "flat": false,
+ "baseHeight": null,
+ "source": {
+  "type": "commons",
+  "curid": 117053583,
+  "fileTitle": "File:Gohar Jaan.jpg",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Gohar_Jaan.jpg",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:Gohar_Jaan.jpg",
+  "width": 737,
+  "height": 1200,
+  "bytes": 192883,
+  "mime": "image/jpeg",
+  "licenseName": "Public domain",
+  "licenseUrl": null,
+  "author": "D. A. Ahuja, Rangoon (postcard, c. 1910)",
+  "notes": "A photographic postcard of Gauhar Jaan by D. A. Ahuja of Rangoon, about 1910; published before 1930 and public domain in the United States. The Commons upload is tagged CC BY 4.0 by the scanning site; a faithful reproduction of a public-domain photograph carries no new copyright in the US."
+ },
+ "object": {
+  "year": 1904,
+  "month": 11,
+  "day": null,
+  "yearStart": null,
+  "yearEnd": null,
+  "dateLabel": "Calcutta, late 1904",
+  "madeIn": {
+   "name": "Calcutta",
+   "region": "Bengal",
+   "country": "India",
+   "lat": 22.5726,
+   "lon": 88.3639,
+   "wikidataQid": null
+  },
+  "location": {
+   "name": null,
+   "region": null,
+   "country": null,
+   "lat": null,
+   "lon": null,
+   "wikidataQid": null,
+   "institution": null,
+   "inventoryNumber": null
+  },
+  "creator": {
+   "name": "Gauhar Jaan",
+   "role": "singer",
+   "birthYear": 1873,
+   "deathYear": 1930,
+   "wikidataQid": null
+  },
+  "culture": "Indian (Hindustani)",
+  "movement": null,
+  "medium": "Acoustic 78 rpm gramophone recording; a thumri in raga Gara",
+  "materials": [
+   "shellac"
+  ],
+  "subjects": [
+   "music",
+   "Hindustani classical music",
+   "thumri",
+   "sound recording"
+  ],
+  "widthCm": null,
+  "heightCm": null,
+  "depthCm": null,
+  "weightKg": null,
+  "description": "On 8 November 1902, in a Calcutta hotel room, Gauhar Jaan sang into Fred Gaisberg's horn and ended with the words 'My name is Gauhar Jaan': the first recording made in India by an Indian artist. Two years later the Gramophone Company came back and recorded her again; this thumri in raga Gara is from that 1904 session. She was the subcontinent's first gramophone star, cut some six hundred sides in a dozen languages, charged three thousand rupees a session and toured in a carriage with a retinue. Before her, a performance in Calcutta ended when the singer stopped. After her, it could be heard in Madras, in London, and a hundred and twenty years later here. The piece is 'Aan baan jiya mein lago'.",
+  "facts": [
+   "The 1902 sessions used wax masters shipped to Hanover for pressing; the first Indian discs went on sale in 1903.",
+   "She recorded in Hindustani, Bengali, Persian, Arabic, English and more, usually ending with her spoken name so the Hanover engineers could label the record.",
+   "Her thumri style, light-classical and emotional, was the gramophone's first Indian idiom."
+  ],
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Gauhar_Jaan",
+  "wikidataQid": null
+ },
+ "fallbackWidthM": 0.55,
+ "audio": {
+  "type": "commons",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Aan_Baan_Jiya_Mein_Lago.ogg",
+  "bytes": 2447410,
+  "mime": "audio/ogg",
+  "seconds": 167.1,
+  "start": 0,
+  "excerptSeconds": null,
+  "performers": "Gauhar Jaan, with sarangi and tabla, recorded in Calcutta by the Gramophone & Typewriter Company's second Indian expedition, late 1904 (G.C.-13856, matrix 2588h).",
+  "author": "Gauhar Jaan, voice, with sarangi and tabla; Gramophone & Typewriter Ltd, Calcutta, late 1904, G.C.-13856, matrix 2588h",
+  "licenseName": "Public domain",
+  "licenseUrl": null,
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:Aan_Baan_Jiya_Mein_Lago.ogg",
+  "notes": "Public domain in the United States: the recording was first published before 1926 (Music Modernization Act schedule, as of 2026) and the composition before 1931 or is traditional. Commons file curid 70512982, tagged Public domain (PD-old-70-1923); transfer from the Bibliothèque nationale de France, Gallica ark bpt6k1298570. Catalogue data from Michael Kinnear, The Gramophone Company's First Indian Recordings."
+ }
+}

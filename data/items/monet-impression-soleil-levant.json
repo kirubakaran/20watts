@@ -1,0 +1,94 @@
+{
+ "slug": "monet-impression-soleil-levant",
+ "title": "Impression, Sunrise",
+ "titleOriginal": "Impression, soleil levant",
+ "kind": "image",
+ "flat": true,
+ "importance": 0.95,
+ "genre": [
+  "painting"
+ ],
+ "periodSlug": null,
+ "tags": [
+  "impressionism",
+  "Monet",
+  "Le Havre",
+  "harbour",
+  "sunrise",
+  "France"
+ ],
+ "source": {
+  "type": "commons",
+  "fileTitle": "File:Monet - Impression, Sunrise.jpg",
+  "curid": 23750619,
+  "url": "https://upload.wikimedia.org/wikipedia/commons/5/59/Monet_-_Impression%2C_Sunrise.jpg",
+  "width": 5773,
+  "height": 4478,
+  "bytes": 7105965,
+  "mime": "image/jpeg",
+  "licenseName": "Public domain",
+  "licenseUrl": "https://commons.wikimedia.org/wiki/Template:PD-art",
+  "author": "Claude Monet; reproduction credited on Commons only as 'art database'",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:Monet_-_Impression,_Sunrise.jpg",
+  "notes": "Largest clean reproduction of the painting on Commons (5773 x 4478 px, 7.1 MB), a Commons Valued Image (promoted 2013-10); no frame or wall, colour matches the Marmottan's published reproduction. Commons licence template {{PD-old-auto-1996|deathyear=1926}}; extmetadata LicenseShortName = 'Public domain', License = 'pd', Copyrighted = 'False', Artist = 'Claude Monet', Credit = 'art database', DateTimeOriginal = 1872. Not a museum scan: the Musée Marmottan Monet has no open-access programme and no Google Art Project scan of this work exists; the other Commons copies are 1600 px or smaller or are visitor photographs under CC BY-SA. Dimensions 48 x 63 cm, inventory 4014 and Marmottan location from Wikidata Q328523; painted from a window of the Hôtel de l'Amirauté looking over the outer harbour of Le Havre (Wikidata P1071 = Q42810). Day and month from Donald Olson's 2014 astronomical dating of the view (13 November 1872, about 7:35 am), widely reported and accepted by the Marmottan; the canvas itself is signed and dated only '72'."
+ },
+ "object": {
+  "year": 1872,
+  "month": 11,
+  "day": 13,
+  "yearStart": null,
+  "yearEnd": null,
+  "dateLabel": "1872",
+  "madeIn": {
+   "name": "Le Havre",
+   "region": "Normandy",
+   "country": "France",
+   "lat": 49.49417,
+   "lon": 0.10806,
+   "wikidataQid": "Q42810"
+  },
+  "location": {
+   "name": "Musée Marmottan Monet",
+   "country": "France",
+   "institution": "Musée Marmottan Monet, Paris",
+   "inventoryNumber": "4014"
+  },
+  "culture": "French",
+  "movement": "Impressionism",
+  "medium": "Oil on canvas",
+  "materials": [
+   "oil paint",
+   "canvas"
+  ],
+  "subjects": [
+   "harbour",
+   "sunrise",
+   "rowing boats",
+   "ships",
+   "cranes",
+   "fog",
+   "Le Havre"
+  ],
+  "widthCm": 63,
+  "heightCm": 48,
+  "depthCm": null,
+  "weightKg": null,
+  "creator": {
+   "name": "Claude Monet",
+   "role": "painter",
+   "birthYear": 1840,
+   "deathYear": 1926,
+   "wikidataQid": "Q296"
+  },
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Impression,_Sunrise",
+  "wikidataQid": "Q328523",
+  "description": "A small orange sun hangs in grey-blue mist over the harbour of Le Havre, its reflection a few broken strokes of red on the water. Two rowing boats are dark shapes in the foreground; behind them, masts, cranes and smoking chimneys dissolve into the haze. Monet painted it in a single sitting from a hotel window in November 1872, working so quickly that the canvas shows through in places. When it was shown at the first independent group exhibition in Paris in 1874, the critic Louis Leroy mocked its title in a satirical review headed 'Exhibition of the Impressionists', and the painters adopted the insult as their name. The picture is therefore the one that gave Impressionism its label. It is less a view than a record of a moment of light, which is what the group was after. Stolen from the Musée Marmottan in 1985, it was recovered in Corsica in 1990 and has hung there since.",
+  "facts": [
+   "Shown in April 1874 at the first Impressionist exhibition, in the former studio of the photographer Nadar on the boulevard des Capucines.",
+   "Louis Leroy's review in Le Charivari, 'Exhibition of the Impressionists', gave the movement its name.",
+   "Astronomical analysis of the sun's height and the tide dates the view to about 7:35 am on 13 November 1872.",
+   "Stolen in October 1985 with eight other paintings and recovered in Corsica in December 1990."
+  ]
+ },
+ "alternates": []
+}

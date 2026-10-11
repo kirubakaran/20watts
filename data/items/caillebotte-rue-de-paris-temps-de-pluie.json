@@ -1,0 +1,95 @@
+{
+ "slug": "caillebotte-rue-de-paris-temps-de-pluie",
+ "title": "Paris Street; Rainy Day",
+ "titleOriginal": "Rue de Paris, temps de pluie",
+ "kind": "image",
+ "flat": true,
+ "importance": 0.9,
+ "genre": [
+  "painting"
+ ],
+ "periodSlug": null,
+ "tags": [
+  "impressionism",
+  "Caillebotte",
+  "Paris",
+  "Haussmann",
+  "umbrellas",
+  "rain",
+  "France"
+ ],
+ "source": {
+  "type": "commons",
+  "fileTitle": "File:Gustave Caillebotte - Paris Street; Rainy Day - Google Art Project.jpg",
+  "curid": 21909139,
+  "url": "https://upload.wikimedia.org/wikipedia/commons/1/17/Gustave_Caillebotte_-_Paris_Street%3B_Rainy_Day_-_Google_Art_Project.jpg",
+  "width": 5982,
+  "height": 4531,
+  "bytes": 5370449,
+  "mime": "image/jpeg",
+  "licenseName": "Public domain",
+  "licenseUrl": "https://commons.wikimedia.org/wiki/Template:PD-art",
+  "author": "Gustave Caillebotte; Google Art Project scan at the Art Institute of Chicago",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:Gustave_Caillebotte_-_Paris_Street;_Rainy_Day_-_Google_Art_Project.jpg",
+  "notes": "Google Art Project scan made at the Art Institute of Chicago, maximum zoom level, 5982 x 4531 px (5.4 MB), a Featured Picture on English Wikipedia, cropped to the paint surface. Commons licence template PD-Art (PD-old-100-expired); extmetadata LicenseShortName = 'Public domain', Copyrighted = 'False', Artist = 'Gustave Caillebotte', Credit = '5wEUCOlEf-EaVQ at Google Cultural Institute maximum zoom level'; file page gives accession 1964.336, Wikidata Q1452762. The AIC's own CC0 image was also uploaded to Commons (curid 74083427, 'Gustave Caillebotte - Paris Street, Rainy Day - 1964.336 - Art Institute of Chicago.jpg') but only at 2898 x 2250 px, so the larger Google scan of the same museum's canvas is used; the AIC IIIF image at artic.edu/artworks/20684 is CC0 if a bigger museum original is ever wanted. Dimensions 212.2 x 276.2 cm from Wikidata (AIC: 212.2 x 276.2 cm). Painted in Paris; the scene is the Place de Dublin seen from the rue de Turin, in the Europe quarter behind the Gare Saint-Lazare."
+ },
+ "object": {
+  "year": 1877,
+  "month": null,
+  "day": null,
+  "yearStart": null,
+  "yearEnd": null,
+  "dateLabel": "1877",
+  "madeIn": {
+   "name": "Paris",
+   "region": "Île-de-France",
+   "country": "France",
+   "lat": 48.85667,
+   "lon": 2.35222,
+   "wikidataQid": "Q90"
+  },
+  "location": {
+   "name": "Art Institute of Chicago",
+   "country": "United States",
+   "institution": "Art Institute of Chicago",
+   "inventoryNumber": "1964.336"
+  },
+  "culture": "French",
+  "movement": "Impressionism",
+  "medium": "Oil on canvas",
+  "materials": [
+   "oil paint",
+   "canvas"
+  ],
+  "subjects": [
+   "Paris street",
+   "rain",
+   "umbrellas",
+   "cobblestones",
+   "Haussmann apartment blocks",
+   "lamp post",
+   "Place de Dublin"
+  ],
+  "widthCm": 276.2,
+  "heightCm": 212.2,
+  "depthCm": null,
+  "weightKg": null,
+  "creator": {
+   "name": "Gustave Caillebotte",
+   "role": "painter",
+   "birthYear": 1848,
+   "deathYear": 1894,
+   "wikidataQid": "Q295144"
+  },
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Paris_Street;_Rainy_Day",
+  "wikidataQid": "Q1452762",
+  "description": "A wet afternoon at a crossroads in the new quarter behind the Gare Saint-Lazare. A couple under one umbrella walk towards us, the man in a top hat and frock coat, the woman veiled; a third figure, cut off by the frame, is about to collide with them, and the cobbles shine with rain all the way back to the wedge-shaped apartment block in the distance. The painting is nearly three metres wide and the figures in front are life size, so a visitor stands on the same pavement. Caillebotte, a wealthy engineer-painter who financed the group's exhibitions and bought his friends' pictures, showed it at the third Impressionist exhibition in 1877 with Renoir's Moulin de la Galette. Its careful perspective and smooth finish are not Monet's broken touch, but its subject, the ordinary modern city seen at an odd angle like a photograph, is the Impressionist subject exactly. The street layout is Haussmann's Paris, barely twenty years old when it was painted.",
+  "facts": [
+   "Shown at the third Impressionist exhibition in April 1877, which Caillebotte largely organised and paid for.",
+   "The crossroads is the Place de Dublin, where the rue de Turin, rue de Moscou and rue Clapeyron meet; the buildings still stand.",
+   "212.2 by 276.2 cm, the largest canvas Caillebotte painted; bought by the Art Institute of Chicago in 1964.",
+   "Caillebotte's bequest of 1894 gave the French state the Impressionist paintings now at the heart of the Musée d'Orsay."
+  ]
+ },
+ "alternates": []
+}

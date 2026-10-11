@@ -1,0 +1,105 @@
+{
+ "slug": "alhambra-courtyard",
+ "title": "A courtyard of the Alhambra",
+ "kind": "model",
+ "representation": "scan",
+ "baseHeight": 0,
+ "back": "backing",
+ "threshold": 0,
+ "importance": 0.9,
+ "genre": [
+  "building"
+ ],
+ "tags": [
+  "architecture",
+  "Islamic art",
+  "Spain",
+  "Granada",
+  "scan",
+  "walk in",
+  "UNESCO World Heritage"
+ ],
+ "periodSlug": null,
+ "source": {
+  "type": "sketchfab",
+  "fileTitle": null,
+  "curid": "da8c663b974f4902bf79bb9595e76d5e",
+  "url": "https://sketchfab.com/3d-models/palacio-de-la-alhambra-primer-patio-da8c663b974f4902bf79bb9595e76d5e",
+  "width": null,
+  "height": null,
+  "bytes": 74317496,
+  "mime": "model/gltf+json",
+  "licenseName": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "author": "EternalEchoesVR (Sketchfab)",
+  "sourcePage": "https://sketchfab.com/3d-models/palacio-de-la-alhambra-primer-patio-da8c663b974f4902bf79bb9595e76d5e",
+  "unitScale": 0.9,
+  "rotation": [
+   0,
+   -20,
+   0
+  ],
+  "notes": "Photogrammetry of the first courtyard on the visitor's way through the Nasrid palaces ('Primer Patio'), by Sketchfab user EternalEchoesVR, CC BY 4.0 (license.txt: author EternalEchoesVR, license type CC-BY-4.0). One million triangles, one 8192 px texture, unlit material. Measured 26.8 x 18.4 x 30.5 units; doorways come out 10-20% over Nasrid sizes, so unitScale 0.9. The plan sits about 20 degrees off the axes in the file; rotated back. The decorated two-storey facade with the large arched portal and the gallery of three arches faces into the courtyard from its -Z end; the +Z end is a low six-arch arcade, which is the way in. Flaws of the scan, left as they are: a grey low-polygon blob of badly reconstructed roof over one corner (it is inside the same mesh chunks as real walls, so it cannot be stripped by name), a cut-out silhouette of a visitor at the foot of the far facade, and the black backs of the exterior walls, drawn double-sided. Downloaded by the museum's owner from Sketchfab on 2026-10-10."
+ },
+ "object": {
+  "year": 1370,
+  "month": null,
+  "day": null,
+  "yearStart": 1333,
+  "yearEnd": 1391,
+  "dateLabel": "14th century, under Yusuf I and Muhammad V",
+  "madeIn": {
+   "name": "Granada",
+   "region": "Andalusia",
+   "country": "Spain",
+   "lat": 37.177,
+   "lon": -3.589,
+   "wikidataQid": "Q8810"
+  },
+  "location": {
+   "name": "Granada",
+   "country": "Spain",
+   "institution": "Patronato de la Alhambra y Generalife (in situ)",
+   "inventoryNumber": null
+  },
+  "culture": "Nasrid (Moorish Spain)",
+  "medium": "Brick, lime plaster carved in relief, glazed tile and carved wood",
+  "materials": [
+   "brick",
+   "stucco",
+   "tile",
+   "wood",
+   "marble"
+  ],
+  "subjects": [
+   "architecture",
+   "courtyard",
+   "Islamic art",
+   "Nasrid dynasty",
+   "muqarnas"
+  ],
+  "widthCm": null,
+  "heightCm": null,
+  "depthCm": null,
+  "weightKg": null,
+  "creator": {
+   "name": "Nasrid court workshops, for Yusuf I and Muhammad V",
+   "role": "builder",
+   "birthYear": null,
+   "deathYear": null,
+   "wikidataQid": null
+  },
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Alhambra",
+  "wikidataQid": "Q3399",
+  "description": "Walk in. The Alhambra is the palace city of the Nasrid emirs of Granada, the last Muslim state in Spain, and its palaces of the fourteenth century are the finest thing Islamic Spain left behind: courtyards of water and shade, walls of carved plaster that dissolve into pattern, ceilings of wooden geometry and muqarnas that hang like honeycomb. Nothing in them is heavy; the materials are brick and plaster and tile, cheap stuff, and the whole art is in the surface and the proportion. This is one of the first courtyards on the way in, scanned by a visitor with a camera; stand in it and look at the facade with its carved eave and the gallery of arches above the door. The scan has holes and a rough patch over one corner, as scans do. The rest is as it stands in Granada.",
+  "facts": [
+   "The Nasrids ruled Granada from 1238 until Ferdinand and Isabella took the city on 2 January 1492.",
+   "The plaster was carved wet, in panels, and painted; traces of blue and red survive in the recesses.",
+   "Inscriptions on the walls repeat the Nasrid motto, 'There is no victor but God', hundreds of times.",
+   "Washington Irving lived in the half-ruined palace in 1829 and wrote the book that brought the world to it."
+  ]
+ },
+ "flat": false,
+ "reveal": 11,
+ "invitation": "Step into the Alhambra"
+}

@@ -1,0 +1,114 @@
+{
+ "slug": "gutenberg-bible-genesis-page",
+ "title": "Gutenberg Bible",
+ "titleOriginal": "Biblia latina (42-line Bible)",
+ "kind": "image",
+ "flat": true,
+ "importance": 0.95,
+ "genre": [
+  "book",
+  "printing",
+  "incunabulum",
+  "illuminated page"
+ ],
+ "periodSlug": null,
+ "tags": [
+  "printing",
+  "Gutenberg",
+  "Bible",
+  "Mainz",
+  "Germany",
+  "incunabula",
+  "movable type",
+  "illumination"
+ ],
+ "source": {
+  "type": "commons",
+  "fileTitle": "File:Gutenberg Bible B42 Genesis.JPG",
+  "curid": 38733061,
+  "url": "https://upload.wikimedia.org/wikipedia/commons/5/56/Gutenberg_Bible_B42_Genesis.JPG",
+  "width": 6843,
+  "height": 9616,
+  "bytes": 30616368,
+  "mime": "image/jpeg",
+  "licenseName": "Public domain",
+  "licenseUrl": null,
+  "author": "Johannes Gutenberg (printer); illuminator unknown; scan by Commons user Jossi2 from a facsimile",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:Gutenberg_Bible_B42_Genesis.JPG",
+  "notes": "Folio 5 recto of volume 1 of the illuminated vellum copy in the Staatsbibliothek zu Berlin: the first page of Genesis ('Incipit liber bresith quem nos genesim dicimus. In principio creavit deus celum et terram...'), two columns of 42 lines, with the painted initial I running down the left margin, the running head GENESIS, and the border of flowers, birds and a peacock. 6843 x 9616 px, 30.6 MB, the largest single Gutenberg page on Commons; the uploader describes it as scanned from a facsimile (a printed reproduction of the Berlin leaf), so the colour is that of the facsimile, not a library photograph, and fine detail may show print screen. Commons wikitext licence template: {{PD-old-70-expired}} (extmetadata: LicenseShortName = 'Public domain', License = 'pd', Copyrighted = 'False', Artist = 'Original by Johannes Gutenberg (printer), Scan by Jossi', Credit = 'Facsimile of a page from 42-line Gutenberg Bible', DateTimeOriginal = 'circa 1455'); categories: PD-old-70-expired, CC-PD-Mark, Gutenberg Bible (Berlin copy), Book of Genesis, First Page, Medieval miniatures of peacocks. Alternate below: the Harry Ransom Center's own scan of the first page of its paper copy (Jerome's prefatory epistle), a library photograph of the real leaf, 2009 x 2877 px. Also seen: File:Württembergische Landesbibliothek Stuttgart Gutenberg Genesis.png, curid 82797473, the Stuttgart copy's Genesis page, {{PD-old-70-expired}}, but only 969 x 1421 px; File:Gutenberg Bible WDL4102.jpg (Bavarian State Library, World Digital Library) 1024 x 1369. Physical size: a 42-line Bible leaf is about 40-42 x 29-30 cm (the Bodleian copy's leaves measure 40 x 28.6 cm); the figures below follow the scan's aspect. The Berlin shelfmark given below should be checked against the library's catalogue. HEAD 200, content-length 30616368, image/jpeg."
+ },
+ "object": {
+  "year": 1455,
+  "month": null,
+  "day": null,
+  "yearStart": 1454,
+  "yearEnd": 1455,
+  "dateLabel": "c. 1454-1455",
+  "madeIn": {
+   "name": "Mainz",
+   "region": "Rhineland-Palatinate",
+   "country": "Germany",
+   "lat": 49.9929,
+   "lon": 8.2473,
+   "wikidataQid": "Q1720"
+  },
+  "location": {
+   "name": "Berlin",
+   "country": "Germany",
+   "institution": "Staatsbibliothek zu Berlin",
+   "inventoryNumber": "2° Inc. 1511 (vellum copy)"
+  },
+  "culture": null,
+  "medium": "Letterpress printing in Textura type on vellum, with hand-painted initial, border and rubrication",
+  "materials": [
+   "vellum",
+   "printing ink",
+   "pigments",
+   "gold"
+  ],
+  "subjects": [
+   "Genesis",
+   "creation",
+   "Bible",
+   "Latin Vulgate",
+   "printing",
+   "movable type",
+   "illumination"
+  ],
+  "widthCm": 29,
+  "heightCm": 40.7,
+  "depthCm": null,
+  "weightKg": null,
+  "creator": {
+   "name": "Johannes Gutenberg",
+   "role": "printer",
+   "birthYear": 1400,
+   "deathYear": 1468,
+   "wikidataQid": "Q8958"
+  },
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Gutenberg_Bible",
+  "wikidataQid": "Q158075",
+  "description": "'In the beginning God created the heaven and the earth': the opening of Genesis in the first substantial book printed in Europe with movable metal type. Johannes Gutenberg, a goldsmith's son from Mainz, worked out how to cast thousands of identical letters in a hand mould, how to mix an oil-based ink that would stick to metal, and how to adapt a wine press to print a sheet. Around 1454 and 1455 his workshop printed about 180 copies of the Latin Bible, some on paper and some, like this one, on calfskin, in two volumes of 1,286 pages with two columns of 42 lines each. Only the black text came off the press; the great initial, the border with its birds and peacock, the red headings and the coloured capitals were painted in afterwards by hand, so that no two copies look alike. The whole enterprise was financed by a loan from Johann Fust, who foreclosed before the Bibles were sold. Forty-nine copies survive; this page is from the illuminated vellum copy in Berlin.",
+  "facts": [
+   "Printed in a Textura typeface of some 290 different sorts, including ligatures and abbreviations, to imitate a scribe's hand.",
+   "A scribe took about three years to copy a Bible; Gutenberg's press produced the whole edition in about two.",
+   "Twenty-one complete copies survive; the Berlin copy is one of about a dozen printed on vellum.",
+   "Aeneas Silvius Piccolomini, the future Pope Pius II, saw sheets at Frankfurt in October 1454 and reported that they could be read without spectacles."
+  ]
+ },
+ "alternates": [
+  {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/2/27/Gutenberg_bible_Old_Testament_Epistle_of_St_Jerome.jpg",
+   "width": 2009,
+   "height": 2877,
+   "bytes": 1195134,
+   "mime": "image/jpeg",
+   "licenseName": "Public domain",
+   "licenseUrl": null,
+   "author": "Johannes Gutenberg (printer); scan by the Harry Ransom Center, University of Texas at Austin",
+   "sourcePage": "https://commons.wikimedia.org/wiki/File:Gutenberg_bible_Old_Testament_Epistle_of_St_Jerome.jpg",
+   "notes": "The first page of volume 1 of the Ransom Center's paper copy: Jerome's prefatory letter to Paulinus, with the large painted initial F and foliage border, the library's own digitisation (hrc.contentdm.oclc.org p15878coll100 id 2664). Commons curid 409361; wikitext licence template {{PD-art|PD-old-100}} with a note that the university's copyright claim is rejected because scanning is not a creative act; extmetadata: LicenseShortName = 'Public domain', License = 'pd', Copyrighted = 'False', Artist = 'Johannes Gutenberg', DateTimeOriginal = '1454/55'; categories: PD-Art (PD-old-100), CC-PD-Mark, Jerome's first epistle to Paulinus (Gutenberg Bible preface), University of Texas at Austin. HEAD 200, content-length 1195134, image/jpeg."
+  }
+ ],
+ "scale": 3
+}

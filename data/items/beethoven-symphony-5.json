@@ -1,0 +1,100 @@
+{
+ "slug": "beethoven-symphony-5",
+ "title": "Symphony No. 5",
+ "kind": "image",
+ "flat": true,
+ "importance": 0.95,
+ "genre": [
+  "music"
+ ],
+ "periodSlug": null,
+ "tags": [
+  "music",
+  "classical",
+  "symphony"
+ ],
+ "source": {
+  "type": "commons",
+  "fileTitle": "File:Beethoven 5th Symphony Holograph manuscript.jpg",
+  "curid": 180634712,
+  "url": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Beethoven_5th_Symphony_Holograph_manuscript.jpg",
+  "width": 1200,
+  "height": 873,
+  "bytes": 144590,
+  "mime": "image/jpeg",
+  "licenseName": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "author": "Ludwig van Beethoven (autograph); reproduction via IMSLP, uploaded under CC BY-SA 4.0",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:Beethoven_5th_Symphony_Holograph_manuscript.jpg",
+  "notes": "First page of Beethoven's autograph score of the Fifth Symphony, showing the 'Allegro con brio' heading and the famous four-note opening across the full orchestral system. The autograph is held by the Staatsbibliothek zu Berlin (Mus.ms.autogr. Beethoven 8). Commons API extmetadata: LicenseShortName 'CC BY-SA 4.0'; Artist 'Beethoven'; Credit 'IMSLP'; ImageDescription 'Beethoven 5th Symphony Holograph manuscript 1807'. The uploader applied CC BY-SA 4.0 to the reproduction; the 1808 manuscript itself is public domain, so the image is free to use either way (attribute Beethoven / IMSLP / Staatsbibliothek zu Berlin). Resolution is modest (1200 px wide)."
+ },
+ "audio": {
+  "type": "commons",
+  "fileTitle": "File:Ludwig van Beethoven - Symphonie 5 c-moll - 1. Allegro con brio.ogg",
+  "curid": 61547,
+  "url": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Ludwig_van_Beethoven_-_Symphonie_5_c-moll_-_1._Allegro_con_brio.ogg",
+  "bytes": 7242148,
+  "mime": "audio/ogg",
+  "seconds": 436.0,
+  "licenseName": "Public domain",
+  "licenseUrl": null,
+  "author": "Fulda Symphonic Orchestra, conducted by Simon Schindler",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:Ludwig_van_Beethoven_-_Symphonie_5_c-moll_-_1._Allegro_con_brio.ogg",
+  "performers": "The Fulda Symphonic Orchestra conducted by Simon Schindler, recorded in the Grosser Saal of the Orangerie, Fulda, on 10 March 2002.",
+  "start": 0,
+  "excerptSeconds": 120,
+  "notes": "Commons API extmetadata: LicenseShortName 'Public domain'; UsageTerms 'Public domain'; Copyrighted 'False'; Artist 'user:OldakQuill' (uploader); Credit 'http://www-plan.cs.colorado.edu/henkel/fso/index-en.html' (the orchestra's free-download page); ImageDescription 'Performance / Conductor: Simon Schindler / Ensemble: Fulda Symphonic Orchestra / Location: Grosser Saal der Orangerie Fulda'; DateTimeOriginal 2002-03-10. The orchestra released these recordings into the public domain. Duration from API metadata: 436.02 s. Alternative on Commons with the same licence: Musopen's recording, File:Ludwig van Beethoven - symphony no. 5 in c minor, op. 67 - i. allegro con brio.ogg (curid 2993942, Public domain, performers not named)."
+ },
+ "object": {
+  "year": 1808,
+  "month": 12,
+  "day": 22,
+  "yearStart": 1804,
+  "yearEnd": 1808,
+  "dateLabel": "22 December 1808 (premiere, Theater an der Wien); composed 1804-1808",
+  "madeIn": {
+   "name": "Vienna",
+   "region": null,
+   "country": "Austria",
+   "lat": 48.2082,
+   "lon": 16.3738,
+   "wikidataQid": "Q1741"
+  },
+  "location": {
+   "name": "Berlin",
+   "country": "Germany",
+   "institution": "Staatsbibliothek zu Berlin (autograph score)",
+   "inventoryNumber": "Mus.ms.autogr. Beethoven 8"
+  },
+  "culture": "German / Austrian",
+  "medium": "Symphony for orchestra; autograph score, ink on paper",
+  "materials": [
+   "ink",
+   "paper"
+  ],
+  "subjects": [
+   "music",
+   "classical",
+   "symphony"
+  ],
+  "widthCm": null,
+  "heightCm": null,
+  "depthCm": null,
+  "weightKg": null,
+  "creator": {
+   "name": "Ludwig van Beethoven",
+   "role": "composer",
+   "birthYear": 1770,
+   "deathYear": 1827,
+   "wikidataQid": "Q255"
+  },
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Symphony_No._5_(Beethoven)",
+  "wikidataQid": null,
+  "description": "Beethoven worked on his Fifth Symphony between 1804 and 1808, in the years when his deafness was becoming impossible to hide. It was first played on 22 December 1808 at the Theater an der Wien in Vienna, in a freezing hall, as part of a four-hour concert of his new music. The opening, three short notes and a long one hammered out by the whole orchestra, is the most famous beginning in music, and the symphony's journey from that C minor storm to a blazing C major finale with trombones and piccolo became the model for a century of symphonies that end in triumph. The page shown is the first leaf of Beethoven's own manuscript, kept at the Berlin State Library. The visitor hears the first movement, Allegro con brio, played by the Fulda Symphonic Orchestra under Simon Schindler in a 2002 recording the orchestra released into the public domain.",
+  "facts": [
+   "The 1808 premiere concert also introduced the Sixth Symphony, the Fourth Piano Concerto and the Choral Fantasy, with Beethoven himself at the piano.",
+   "Beethoven's secretary Anton Schindler claimed the composer said of the opening, 'Thus Fate knocks at the door', a story most scholars doubt.",
+   "The autograph score is one of the treasures of the Staatsbibliothek zu Berlin, which has digitised it page by page."
+  ]
+ }
+}

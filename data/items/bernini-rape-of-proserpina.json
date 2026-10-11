@@ -1,0 +1,98 @@
+{
+ "slug": "bernini-rape-of-proserpina",
+ "title": "The Rape of Proserpina",
+ "titleOriginal": null,
+ "kind": "model",
+ "importance": 0.9,
+ "genre": [
+  "sculpture"
+ ],
+ "tags": [
+  "sculpture",
+  "scan"
+ ],
+ "periodSlug": null,
+ "flat": false,
+ "baseHeight": 0,
+ "source": {
+  "type": "sketchfab",
+  "curid": "465b5cb888d54a88aadf5d0c1b35a517",
+  "fileTitle": null,
+  "url": "https://sketchfab.com/3d-models/465b5cb888d54a88aadf5d0c1b35a517",
+  "sourcePage": "https://sketchfab.com/3d-models/465b5cb888d54a88aadf5d0c1b35a517",
+  "width": null,
+  "height": null,
+  "bytes": 63490233,
+  "mime": null,
+  "licenseName": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "author": "Grooveholmes (Sketchfab)",
+  "notes": " Textured photogrammetry, one million triangles, one 8192 px texture. The file includes the museum's tall plinth (0.87 m after scaling); the figure group is 2.55 m. Front faced -X in the file, turned 90 degrees. A few floating photogrammetry fragments near the plinth share the statue's node name and could not be stripped. The marble group is 255 cm tall. Downloaded by the museum's owner from Sketchfab on 2026-10-10.",
+  "unitScale": 1.13,
+  "rotation": [
+   0,
+   90,
+   0
+  ]
+ },
+ "object": {
+  "year": 1622,
+  "month": null,
+  "day": null,
+  "yearStart": 1621,
+  "yearEnd": 1622,
+  "dateLabel": "1621-1622",
+  "madeIn": {
+   "name": "Rome",
+   "region": null,
+   "country": "Italy",
+   "lat": 41.9142,
+   "lon": 12.4922,
+   "wikidataQid": null
+  },
+  "location": {
+   "name": "Rome",
+   "region": null,
+   "country": "Italy",
+   "lat": null,
+   "lon": null,
+   "wikidataQid": null,
+   "institution": "Galleria Borghese",
+   "inventoryNumber": null
+  },
+  "creator": {
+   "name": "Gian Lorenzo Bernini",
+   "role": "sculptor",
+   "birthYear": 1598,
+   "deathYear": 1680,
+   "wikidataQid": "Q160538"
+  },
+  "culture": "Italian (Baroque)",
+  "movement": null,
+  "medium": "Carrara marble",
+  "materials": [
+   "marble"
+  ],
+  "subjects": [
+   "mythology",
+   "Pluto",
+   "Proserpina",
+   "Baroque"
+  ],
+  "widthCm": null,
+  "heightCm": 255,
+  "depthCm": null,
+  "weightKg": null,
+  "description": "Pluto carries Proserpina down to the underworld; Cerberus barks at his feet. Bernini was twenty-three when he carved it, in 1621 and 1622, for Cardinal Scipione Borghese, and one detail has stood for the whole of Baroque sculpture ever since: where Pluto's fingers grip Proserpina's thigh, the marble gives like flesh. Her tears are carved. She pushes his face away with her open hand, and the struggle turns in space so that each side of the group tells a different part of it, the god from the front, the girl from the side, the dog behind. The subject is the Roman myth of the seasons: her mother's grief makes the winter, her return each year the spring.",
+  "facts": [
+   "The marble was quarried at Carrara and the group weighs some three tonnes.",
+   "Scipione Borghese gave it away in 1623 to Cardinal Ludovisi; it came back to the Borghese collection in 1908.",
+   "The pressing fingers were the detail that made Bernini's name at the Roman court."
+  ],
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/The_Rape_of_Proserpina_(Bernini)",
+  "wikidataQid": null
+ },
+ "representation": "scan",
+ "back": "none",
+ "yaw": 3.1416
+}

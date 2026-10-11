@@ -1,0 +1,151 @@
+{
+ "slug": "monet-nympheas-orangerie-room-1",
+ "title": "Les Nymphéas",
+ "kind": "image",
+ "flat": true,
+ "importance": 0.95,
+ "genre": [
+  "painting"
+ ],
+ "periodSlug": null,
+ "tags": [
+  "painting",
+  "Impressionism",
+  "Monet",
+  "water lilies",
+  "Giverny",
+  "walk in"
+ ],
+ "baseHeight": 0.25,
+ "threshold": 0,
+ "ring": {
+  "radius": 7.6,
+  "gap": 1.5,
+  "panels": [
+   {
+    "widthCm": 600,
+    "heightCm": 200
+   },
+   {
+    "widthCm": 1275,
+    "heightCm": 200
+   },
+   {
+    "widthCm": 850,
+    "heightCm": 200
+   },
+   {
+    "widthCm": 1275,
+    "heightCm": 200
+   }
+  ]
+ },
+ "source": {
+  "type": "commons",
+  "fileTitle": "File:Claude Monet - The Water Lilies - Setting Sun - Google Art Project.jpg",
+  "curid": 22628920,
+  "url": "https://upload.wikimedia.org/wikipedia/commons/6/66/Claude_Monet_-_The_Water_Lilies_-_Setting_Sun_-_Google_Art_Project.jpg",
+  "width": 8714,
+  "height": 2892,
+  "bytes": 8988372,
+  "mime": "image/jpeg",
+  "licenseName": "Public domain",
+  "licenseUrl": null,
+  "author": "Claude Monet",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:Claude_Monet_-_The_Water_Lilies_-_Setting_Sun_-_Google_Art_Project.jpg",
+  "notes": "Soleil couchant (Setting Sun), 200 x 600 cm, INV 20103, the west wall of Salle 1; the unpainted strip at lower right is Monet's own. PD-Art (PD-old-auto, PD-1996); Commons extmetadata LicenseShortName 'Public domain'. Google Art Project scan of the panel at the Musée de l'Orangerie, whole panel, flat, no gallery distortion. The room's four panels are this record and its three alternates, hung in the museum's clockwise order from the entrance (Soleil couchant west, Les Nuages north, Reflets verts east, Le Matin south) around a ring 7.6 m in radius, which is the straight-walled circle nearest the Orangerie's oval of about 20 by 12 m; the opening in the ring faces the lane. Hung with the paint starting 25 cm above the floor, 2 m tall as in the room."
+ },
+ "alternates": [
+  {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Claude_Monet_-_The_Water_Lilies_-_The_Clouds_-_Google_Art_Project.jpg",
+   "width": 8889,
+   "height": 1345,
+   "bytes": 3198989,
+   "mime": "image/jpeg",
+   "licenseName": "Public domain",
+   "licenseUrl": null,
+   "author": "Claude Monet",
+   "sourcePage": "https://commons.wikimedia.org/wiki/File:Claude_Monet_-_The_Water_Lilies_-_The_Clouds_-_Google_Art_Project.jpg",
+   "notes": "Les Nuages (The Clouds), 200 x 1275 cm, INV 20100, the north wall of Salle 1; the scan's proportions suggest about 4 percent of the height is trimmed. PD-Art (PD-old-auto, PD-1996); Commons extmetadata LicenseShortName 'Public domain'. Google Art Project scan of the panel at the Musée de l'Orangerie, whole panel, flat, no gallery distortion."
+  },
+  {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Claude_Monet_-_The_Water_Lilies_-_Green_Reflections_-_Google_Art_Project.jpg",
+   "width": 8826,
+   "height": 2034,
+   "bytes": 4700013,
+   "mime": "image/jpeg",
+   "licenseName": "Public domain",
+   "licenseUrl": null,
+   "author": "Claude Monet",
+   "sourcePage": "https://commons.wikimedia.org/wiki/File:Claude_Monet_-_The_Water_Lilies_-_Green_Reflections_-_Google_Art_Project.jpg",
+   "notes": "Reflets verts (Green Reflections), 200 x 850 cm, INV 20102, the east wall of Salle 1. PD-Art (PD-old-auto, PD-1996); Commons extmetadata LicenseShortName 'Public domain'. Google Art Project scan of the panel at the Musée de l'Orangerie, whole panel, flat, no gallery distortion."
+  },
+  {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Claude_Monet_-_The_Water_Lilies_-_Morning_-_Google_Art_Project.jpg",
+   "width": 8902,
+   "height": 1402,
+   "bytes": 4182040,
+   "mime": "image/jpeg",
+   "licenseName": "Public domain",
+   "licenseUrl": null,
+   "author": "Claude Monet",
+   "sourcePage": "https://commons.wikimedia.org/wiki/File:Claude_Monet_-_The_Water_Lilies_-_Morning_-_Google_Art_Project.jpg",
+   "notes": "Le Matin (Morning), 200 x 1275 cm, INV 20101, the south wall of Salle 1. PD-Art (PD-old-auto, PD-1996); Commons extmetadata LicenseShortName 'Public domain'. Google Art Project scan of the panel at the Musée de l'Orangerie, whole panel, flat, no gallery distortion."
+  }
+ ],
+ "object": {
+  "year": 1926,
+  "month": null,
+  "day": null,
+  "yearStart": 1914,
+  "yearEnd": 1926,
+  "dateLabel": "1914-1926, installed 1927",
+  "madeIn": {
+   "name": "Giverny",
+   "region": "Normandy",
+   "country": "France",
+   "lat": 49.0756,
+   "lon": 1.5336,
+   "wikidataQid": "Q165061"
+  },
+  "location": {
+   "name": "Paris",
+   "country": "France",
+   "institution": "Musée de l'Orangerie, Salle 1",
+   "inventoryNumber": "INV 20100-20103"
+  },
+  "culture": "French",
+  "medium": "Oil on canvas, four panels glued to the curved walls of an oval room",
+  "materials": [
+   "oil paint",
+   "canvas"
+  ],
+  "subjects": [
+   "water lilies",
+   "Giverny",
+   "pond",
+   "reflection",
+   "Impressionism"
+  ],
+  "widthCm": 600,
+  "heightCm": 200,
+  "depthCm": null,
+  "weightKg": null,
+  "creator": {
+   "name": "Claude Monet",
+   "role": "painter",
+   "birthYear": 1840,
+   "deathYear": 1926,
+   "wikidataQid": "Q296"
+  },
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Water_Lilies_(Monet_series)",
+  "wikidataQid": "Q3345703",
+  "description": "Step in. Monet spent the last twelve years of his life on these, in a studio he built at Giverny to hold them, painting his pond with no shore and no horizon, only water, lilies, reflected sky and the hanging willows, on canvases two metres tall and up to thirteen metres long. He gave them to France the day after the Armistice of 1918, on condition that they be shown in two oval rooms lit from above, where a visitor would stand surrounded by water, and the Orangerie rooms opened in May 1927, five months after his death. This is the first of the two rooms with its four panels in their places: Setting Sun at the entrance, Clouds to the north, Green Reflections to the east, Morning to the south. Turn in the middle; the pond goes round. His eyes were failing from cataracts as he painted them, and the late colours are partly what he could still see.",
+  "facts": [
+   "Monet called them his 'grandes décorations'; the eight panels in the two rooms run to ninety-one metres of canvas.",
+   "He refused to let them leave his studio until they were installed exactly as he had specified, so they arrived after he died.",
+   "The rooms were lit by daylight from skylights in 1927, boarded over in the 1960s, and restored to daylight in 2006.",
+   "The pond itself still exists at Giverny, dug in 1893 by diverting a branch of the river Epte, over the objections of his neighbours."
+  ]
+ }
+}

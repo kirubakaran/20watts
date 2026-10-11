@@ -1,0 +1,91 @@
+{
+ "title": "Great Pyramid of Giza",
+ "kind": "sim",
+ "importance": 0.95,
+ "genre": [
+  "architecture"
+ ],
+ "tags": [
+  "Egypt",
+  "architecture",
+  "pyramid",
+  "UNESCO World Heritage"
+ ],
+ "baseHeight": 0,
+ "landmark": {
+  "side": "east",
+  "distance": 600
+ },
+ "source": {
+  "type": "procedural",
+  "program": "pyramid",
+  "params": {
+   "base": 230.3,
+   "height": 146.6,
+   "courses": 210
+  },
+  "bounds": {
+   "width": 230.3,
+   "height": 146.6,
+   "depth": 230.3
+  },
+  "licenseName": "CC0 1.0",
+  "author": "20watts",
+  "notes": "Built live by src/sims/pyramid.ts from the published dimensions: a square base of 230.3 m and the original height of 146.6 m, with 210 stone courses drawn as lines. No scan of the monument is available under an open licence; this is a plain shape at true size, standing 600 m east of the lane. The program is the museum's own, CC0."
+ },
+ "object": {
+  "year": -2560,
+  "yearStart": -2580,
+  "yearEnd": -2560,
+  "dateLabel": "c. 2560 BCE",
+  "madeIn": {
+   "name": "Giza",
+   "region": null,
+   "country": "Egypt",
+   "lat": 29.979,
+   "lon": 31.134,
+   "wikidataQid": "Q81788"
+  },
+  "location": {
+   "name": "Giza",
+   "country": "Egypt",
+   "institution": "In situ, Giza plateau"
+  },
+  "culture": "Ancient Egyptian (Fourth Dynasty)",
+  "medium": "Limestone masonry, shown as a shape at true size",
+  "materials": [
+   "limestone",
+   "granite"
+  ],
+  "subjects": [
+   "tomb",
+   "pyramid",
+   "Khufu"
+  ],
+  "widthCm": 23030,
+  "heightCm": 14660,
+  "depthCm": 23030,
+  "creator": {
+   "name": "Khufu (patron)",
+   "role": "patron",
+   "birthYear": null,
+   "deathYear": null,
+   "wikidataQid": "Q161904"
+  },
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza",
+  "wikidataQid": "Q37200",
+  "description": "The tomb of the pharaoh Khufu, raised on the Giza plateau over about twenty years around 2560 BCE: some 2.3 million blocks of limestone, the largest weighing tens of tonnes, laid in 210 courses to a height of 146.6 metres on a base 230 metres square, level to within a few centimetres and aligned to true north within a twentieth of a degree. It was the tallest structure made by people for nearly four thousand years, until Lincoln Cathedral's spire, and it is the one wonder of the ancient world still standing.\n\nNo scan of it may be freely used, and a photograph cannot say how big it is, so it stands here as a plain shape at its true size, six hundred metres off the lane. Walk out to it, or look up from its foot.",
+  "facts": [
+   "Its base covers 5.3 hectares; its volume is about 2.6 million cubic metres.",
+   "The top 8 metres and the polished white casing are gone; it stands 138.5 m today.",
+   "The workforce was paid and fed, not enslaved: their bakeries, barracks and tombs lie beside it.",
+   "Its four sides face the cardinal directions to within 0.05 degrees."
+  ],
+  "month": null,
+  "day": null,
+  "weightKg": null
+ },
+ "slug": "great-pyramid-of-giza",
+ "flat": false,
+ "periodSlug": null
+}

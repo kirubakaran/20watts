@@ -1,0 +1,106 @@
+{
+ "slug": "ottoman-cifte-telli-gazel",
+ "title": "A gazel with ney, Constantinople",
+ "kind": "image",
+ "flat": false,
+ "fallbackWidthM": 0.5,
+ "importance": 0.75,
+ "genre": [
+  "music"
+ ],
+ "periodSlug": null,
+ "tags": [
+  "music",
+  "Turkey",
+  "Ottoman",
+  "gazel",
+  "ney",
+  "recording",
+  "gramophone"
+ ],
+ "source": {
+  "type": "user-upload",
+  "fileTitle": null,
+  "curid": null,
+  "url": "https://archive.org/details/odeon-46264-haffouz-tevfik-effende-et-safinaz-hanem-tchifte-telli-gazeli-avec-nei",
+  "width": null,
+  "height": null,
+  "bytes": null,
+  "mime": "image/jpeg",
+  "licenseName": "Public domain",
+  "licenseUrl": null,
+  "author": "Odeon label, International Talking Machine Co., Constantinople, c. 1911 (46264); photograph by the Internet Archive contributor",
+  "sourcePage": "https://archive.org/details/odeon-46264-haffouz-tevfik-effende-et-safinaz-hanem-tchifte-telli-gazeli-avec-nei",
+  "notes": "The record's own label: Odeon 46264 with the International Talking Machine Company imprint, which dates it to before Odeon's absorption into Lindström in 1911-12; photographed by the contributor who uploaded the transfer (832 x 835). The label is a printed design of about 1911, public domain in the United States."
+ },
+ "audio": {
+  "type": "internet-archive",
+  "fileTitle": null,
+  "curid": null,
+  "url": "https://archive.org/download/odeon-46264-haffouz-tevfik-effende-et-safinaz-hanem-tchifte-telli-gazeli-avec-nei/Odeon%2046264%20Haffouz%20Tevfik%20Effende%20Et%20Safinaz%20Hanem%20-%20Tchifte%20Telli%20Gazeli%20Avec%20Nei.mp3",
+  "bytes": 3194736,
+  "mime": "audio/mpeg",
+  "seconds": 206.6,
+  "licenseName": "Public domain",
+  "licenseUrl": null,
+  "author": "Hafız Tevfik Efendi and Safinaz Hanım, voices, with ney; Odeon, Constantinople, c. 1911; Odeon 46264",
+  "sourcePage": "https://archive.org/details/odeon-46264-haffouz-tevfik-effende-et-safinaz-hanem-tchifte-telli-gazeli-avec-nei",
+  "performers": "Hafız Tevfik Efendi and Safinaz Hanım, voices, with ney; a çifte telli gazel recorded for Odeon in Constantinople about 1911 (Odeon 46264).",
+  "start": 0,
+  "excerptSeconds": null,
+  "notes": "Public domain in the United States: the recording was first published before 1926 (Music Modernization Act schedule, as of 2026) and the composition before 1931 or is traditional. A gazel is an improvised vocal form on a classical poem; this one is traditional. Internet Archive item carries a Public Domain Mark; the date rests on the label's imprint."
+ },
+ "object": {
+  "year": 1911,
+  "month": null,
+  "day": null,
+  "yearStart": 1910,
+  "yearEnd": 1912,
+  "dateLabel": "Constantinople, c. 1911",
+  "madeIn": {
+   "name": "Constantinople",
+   "region": null,
+   "country": "Ottoman Empire (Turkey)",
+   "lat": 41.0082,
+   "lon": 28.9784,
+   "wikidataQid": null
+  },
+  "location": {
+   "name": null,
+   "country": null,
+   "institution": null,
+   "inventoryNumber": null
+  },
+  "culture": "Ottoman Turkish",
+  "medium": "Acoustic 78 rpm gramophone recording; a gazel, two voices and ney",
+  "materials": [
+   "shellac"
+  ],
+  "subjects": [
+   "music",
+   "Ottoman classical music",
+   "gazel",
+   "ney",
+   "sound recording"
+  ],
+  "widthCm": null,
+  "heightCm": null,
+  "depthCm": null,
+  "weightKg": null,
+  "creator": {
+   "name": "Hafız Tevfik Efendi and Safinaz Hanım",
+   "role": "singers",
+   "birthYear": null,
+   "deathYear": null,
+   "wikidataQid": null
+  },
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Ottoman_classical_music",
+  "wikidataQid": null,
+  "description": "Ottoman music in the last years of the empire. The gazel is the Turkish art of improvising a classical poem over a drone, the singer finding the maqam as he goes; here two voices trade it, a hafız, a man who has the Quran by heart and sings as part of that training, and a woman, Safinaz Hanım, one of the first Ottoman women to make records, over the breathy reed flute of the Mevlevi dervishes, the ney. Odeon's Constantinople catalogue of the years before the First World War is the founding corpus of recorded Turkish music, cut in the city while it was still the Ottoman capital. The disc's own label stands in for a portrait. The singers are Hafız Tevfik Efendi and Safinaz Hanım.",
+  "facts": [
+   "The ney is the instrument of Rumi's Masnavi, which opens with its lament at being cut from the reed bed.",
+   "Odeon's Istanbul recordings were made by the International Talking Machine Company of Berlin until 1911.",
+   "Women singers appeared on Ottoman records a generation before they could appear on an Ottoman stage."
+  ]
+ }
+}

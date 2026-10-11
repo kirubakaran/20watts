@@ -1,0 +1,91 @@
+{
+ "slug": "ajanta-padmapani",
+ "title": "Bodhisattva Padmapani, Ajanta",
+ "kind": "image",
+ "flat": true,
+ "importance": 0.85,
+ "genre": [
+  "painting",
+  "mural"
+ ],
+ "periodSlug": null,
+ "tags": [
+  "India",
+  "Maharashtra",
+  "Ajanta",
+  "Buddhism",
+  "mural",
+  "Vakataka",
+  "UNESCO World Heritage"
+ ],
+ "source": {
+  "type": "commons",
+  "fileTitle": "File:Ajanta Cave 1 Padmapani.jpg",
+  "curid": 63768037,
+  "url": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Ajanta_Cave_1_Padmapani.jpg",
+  "width": 4000,
+  "height": 6000,
+  "bytes": 6533984,
+  "mime": "image/jpeg",
+  "licenseName": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "author": "Photo Dharma from Sadao, Thailand",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:Ajanta_Cave_1_Padmapani.jpg",
+  "notes": "Clean copy of the same Photo Dharma photograph. The earlier choice, curid 63768039 'Ajanta Cave 1 Padmapani and attendants.jpg', is the same frame with two red rectangles drawn on it to mark the attendants for an article; it was replaced on 2026-10-10. Commons API extmetadata: LicenseShortName = 'CC BY 2.0', Artist = 'Photo Dharma from Sadao, Thailand', DateTimeOriginal = '2017-03-08 00:53:30'. Photograph of the Padmapani mural on the rear wall of Cave 1, with the attendants, by Anandajoti Bhikkhu of Photo Dharma, Flickr, 2017. Commons API extmetadata: LicenseShortName = 'CC BY 2.0', Artist = 'Photo Dharma from Sadao, Thailand', Credit = 'Rework of' (a reworked version of the photographer's own frame). Chosen over the public-domain reproductions on Commons (e.g. page ids 36247122 and 3411328) because those are small or of unstated photographic origin, and over several CC BY-SA 4.0 visitor shots because this is 4000 x 6000 px and from a photographer who documents Buddhist sites systematically. The real dimensions of the painted panel are not published in any source I could verify (Wikipedia says only 'over-lifesize'), so widthCm and heightCm are left null and will need to be measured or estimated by the curator; the figure is roughly life-size-plus, so a display height around 2 m would not be far wrong. The mural is in situ at Ajanta."
+ },
+ "object": {
+  "year": 475,
+  "month": null,
+  "day": null,
+  "yearStart": 460,
+  "yearEnd": 480,
+  "dateLabel": "c. 460–480 CE",
+  "madeIn": {
+   "name": "Ajanta",
+   "region": "Maharashtra",
+   "country": "India",
+   "lat": 20.553,
+   "lon": 75.7,
+   "wikidataQid": "Q184427"
+  },
+  "location": {
+   "name": "Ajanta Caves, Cave 1",
+   "country": "India",
+   "institution": "Archaeological Survey of India (in situ)",
+   "inventoryNumber": null
+  },
+  "culture": "Indian (Vakataka period)",
+  "medium": "Tempera on mud-and-lime plaster over rock",
+  "materials": [
+   "mineral pigment",
+   "lime plaster"
+  ],
+  "subjects": [
+   "Bodhisattva",
+   "Padmapani",
+   "Avalokiteshvara",
+   "lotus",
+   "Buddhism"
+  ],
+  "widthCm": null,
+  "heightCm": null,
+  "depthCm": null,
+  "weightKg": null,
+  "creator": {
+   "name": "Unknown Ajanta painters",
+   "role": "painter",
+   "birthYear": null,
+   "deathYear": null,
+   "wikidataQid": null
+  },
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Ajanta_Caves",
+  "wikidataQid": "Q184427",
+  "description": "The Bodhisattva Padmapani, 'he who holds the lotus', painted beside the shrine door of Cave 1 at Ajanta in the last decades of the fifth century. He stands over life size, his body swaying in a gentle curve, a blue lotus in his right hand, eyes half closed, surrounded by a crowd of smaller figures: attendants, a dark-skinned guard, musicians and animals. Ajanta is a horseshoe of thirty Buddhist monasteries and prayer halls cut into a cliff above a river gorge in the Deccan. The earliest date from the second century BCE; the great painted caves, including this one, were made in a single burst of patronage under the Vakataka king Harisena around 460 to 480 CE, then abandoned and forgotten in the jungle until a British hunting party found them in 1819. The paintings are tempera on a thin plaster of mud, lime and rice husk, and are the oldest surviving body of Indian painting. Padmapani is the single most reproduced image from them and has shaped how Indian art is pictured ever since.",
+  "facts": [
+   "Cave 1 was probably sponsored by the Vakataka emperor Harisena and was never formally consecrated: there is no lamp-soot on the shrine image.",
+   "Padmapani and his pair Vajrapani flank the entrance to the Buddha shrine on the rear wall; both are over life size.",
+   "The pigments are earth colours plus lapis lazuli blue imported from Afghanistan.",
+   "The caves were lost to the forest for roughly a thousand years before their rediscovery in 1819."
+  ]
+ }
+}

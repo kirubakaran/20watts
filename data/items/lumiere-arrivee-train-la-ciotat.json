@@ -1,0 +1,102 @@
+{
+ "slug": "lumiere-arrivee-train-la-ciotat",
+ "title": "Arrival of a Train at La Ciotat",
+ "titleOriginal": "L'Arrivée d'un train en gare de La Ciotat",
+ "kind": "image",
+ "importance": 0.9,
+ "genre": [
+  "film",
+  "actuality film",
+  "silent film"
+ ],
+ "tags": [
+  "film",
+  "cinema",
+  "Lumière",
+  "train",
+  "France",
+  "silent film"
+ ],
+ "periodSlug": null,
+ "flat": true,
+ "baseHeight": 0.9,
+ "source": {
+  "type": "video-still",
+  "curid": "143689173",
+  "fileTitle": null,
+  "url": "https://upload.wikimedia.org/wikipedia/commons/6/6e/L%27Arriv%C3%A9e_d%27un_train_en_gare_de_La_Ciotat_%281897%29_par_les_fr%C3%A8res_Lumi%C3%A8re.webm",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:L%27Arriv%C3%A9e_d%27un_train_en_gare_de_La_Ciotat_(1897)_par_les_fr%C3%A8res_Lumi%C3%A8re.webm",
+  "width": 2880,
+  "height": 2160,
+  "bytes": 101674422,
+  "mime": "video/mp4",
+  "licenseName": "Public domain",
+  "licenseUrl": null,
+  "author": "Auguste and Louis Lumière (Louis Lumière, operator)",
+  "notes": "Silent WebM, 3840 x 2160 px, 46.9 s, 101.7 MB, the largest copy on Commons. Transferred from YouTube video 1FAj9fJQRZA, whose title (via oEmbed) is '[Actual 4K Scan] The Arrival of a Train at La Ciotat Station - Lumière Brothers - 1896.' by Andy Myers, i.e. a scan of the restored 35 mm element, not an AI upscale; the 4:3 picture sits pillarboxed inside the 16:9 frame (black bars left and right), so the visible picture is about 2880 x 2160; the physical size below is for the whole 16:9 file and the pipeline may prefer to crop the bars (240 x 180 cm). Commons wikitext licence template: {{PD-old-70-expired}}; extmetadata: LicenseShortName = 'Public domain', License = 'pd', Copyrighted = 'False', Artist = 'Lumière Brothers', Credit = 'YouTube: 1FAj9fJQRZA', DateTimeOriginal = '1897'; categories: PD-old-70-expired, CC-PD-Mark, Media uploaded for Public Domain Day 2025, Undeleted in 2025 (Auguste Lumière died in 1954, so the film entered the public domain in France on 1 January 2025; Louis died in 1948), Videos of 1897 from France. Version: per catalogue-lumiere.com (entry 'Arrivée d'un train à La Ciotat', vue no. 653, research by Aubert and Seguin) the Lumières shot the subject three times on the same platform: an uncatalogued take of early 1896 (32 of its frames were printed in La Science française on 13 March 1896, and it is probably the version shown in Lyon on 25 January 1896), and catalogue no. 653, shot in summer 1897 with Lumière family children on the platform, which is the version in every anthology and the one in this file. The 1896 first version is on Commons only as a 540 x 360 YouTube transfer (File:L'Arrivée d'un train en gare de La Ciotat, Complete.webm, curid 157416095, 5590218 B, {{PD-old-70-expired}}). Other copies: File:L'Arrivée d'un train en gare de La Ciotat (1897).webm, curid 157414801, 1364 x 1022, 112.6 MB, from the 'Lumière! Le Cinématographe (1895-1905)' edition; File:L'Arrivee d'un train en gare de la Ciotat, summer 1897.ogv, curid 162945367, 962 x 720. Loop 2-15 s: the locomotive comes in from the far right and sweeps past the camera. HEAD 200, content-length 101674422, video/webm."
+ },
+ "object": {
+  "year": 1896,
+  "month": 1,
+  "day": null,
+  "yearStart": null,
+  "yearEnd": null,
+  "dateLabel": "first shown 25 January 1896, Lyon; this print is the summer 1897 remake (Lumière catalogue no. 653)",
+  "madeIn": {
+   "name": "La Ciotat railway station",
+   "region": "Provence-Alpes-Côte d'Azur",
+   "country": "France",
+   "lat": 43.1718,
+   "lon": 5.6125,
+   "wikidataQid": "Q231554"
+  },
+  "location": {
+   "name": "Lyon",
+   "region": null,
+   "country": "France",
+   "lat": null,
+   "lon": null,
+   "wikidataQid": null,
+   "institution": "Institut Lumière (Lumière negatives and prints)",
+   "inventoryNumber": "Lumière catalogue no. 653"
+  },
+  "creator": {
+   "name": "Louis Lumière (with Auguste Lumière)",
+   "role": "filmmaker",
+   "birthYear": 1864,
+   "deathYear": 1948,
+   "wikidataQid": "Q1962284"
+  },
+  "culture": null,
+  "movement": null,
+  "medium": "35 mm silent film, about 50 seconds, shot with the Cinématographe Lumière",
+  "materials": [
+   "nitrate film"
+  ],
+  "subjects": [
+   "train",
+   "railway station",
+   "La Ciotat",
+   "passengers",
+   "early cinema"
+  ],
+  "widthCm": 240,
+  "heightCm": 180,
+  "depthCm": null,
+  "weightKg": null,
+  "description": "Fifty seconds, one fixed camera, no cut: a steam train pulls into the station at La Ciotat, on the coast east of Marseille where the Lumière family had a summer house, and passengers step down onto the platform. Louis Lumière set the Cinématographe at the platform's edge so that the locomotive grows from a speck to fill the frame and passes within arm's reach, a diagonal that still makes audiences lean back. The story that the first viewers fled screaming is a legend; the film was not even on the programme of the Lumières' first public show in Paris on 28 December 1895, and was first screened in Lyon in January 1896. It was popular enough that the brothers reshot it twice on the same platform; the version seen here, catalogue number 653, was taken in the summer of 1897 with Lumière children among the waiting passengers. The Cinématographe weighed five kilograms, was cranked by hand, and served as camera, printer and projector.",
+  "facts": [
+   "Shown at about 16 frames a second from a reel of 17 metres: the length of one Lumière film.",
+   "Auguste and Louis Lumière ran their father's photographic-plate factory in Lyon; the camera was patented in February 1895.",
+   "By 1897 the Lumière catalogue listed over a thousand 'views' shot by operators across the world.",
+   "The film entered the public domain in France only on 1 January 2025, seventy years after Auguste Lumière's death."
+  ],
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/L%27Arriv%C3%A9e_d%27un_train_en_gare_de_La_Ciotat",
+  "wikidataQid": "Q761952"
+ },
+ "loop": {
+  "start": 2,
+  "seconds": 13,
+  "aspect": 1.3333333333333333
+ }
+}

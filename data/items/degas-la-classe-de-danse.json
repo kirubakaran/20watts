@@ -1,0 +1,107 @@
+{
+ "slug": "degas-la-classe-de-danse",
+ "title": "The Ballet Class",
+ "titleOriginal": "La Classe de danse",
+ "kind": "image",
+ "flat": true,
+ "importance": 0.9,
+ "genre": [
+  "painting"
+ ],
+ "periodSlug": null,
+ "tags": [
+  "impressionism",
+  "Degas",
+  "ballet",
+  "Paris Opera",
+  "dancers",
+  "France"
+ ],
+ "source": {
+  "type": "commons",
+  "fileTitle": "File:Edgar Degas - The Ballet Class - Google Art Project.jpg",
+  "curid": 21856240,
+  "url": "https://upload.wikimedia.org/wikipedia/commons/8/81/Edgar_Degas_-_The_Ballet_Class_-_Google_Art_Project.jpg",
+  "width": 3950,
+  "height": 4535,
+  "bytes": 6356158,
+  "mime": "image/jpeg",
+  "licenseName": "Public domain",
+  "licenseUrl": "https://commons.wikimedia.org/wiki/Template:PD-art",
+  "author": "Edgar Degas; Google Art Project scan at the Musée d'Orsay",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:Edgar_Degas_-_The_Ballet_Class_-_Google_Art_Project.jpg",
+  "notes": "Google Art Project scan at the Musée d'Orsay, maximum zoom level, 3950 x 4535 px (6.4 MB), cropped to the paint surface. Commons licence template {{PD-Art|PD-old-100-expired|deathyear=1917}}; extmetadata LicenseShortName = 'Public domain', Copyrighted = 'False', Artist = 'Edgar Degas', Credit = 'fwE5p5FTjV9Ezg at Google Cultural Institute maximum zoom level', DateTimeOriginal = '(1871 - 1874)'. Chosen over L'Absinthe (curid 20303082, also a Google Art Project scan at the Orsay, 3936 x 5400 px, PD-Art) because the two scans are of the same quality and the dance class is the subject Degas is known for and the one shown at the Impressionist exhibitions; the Absinthe file is an equally good fallback. Dimensions 85 x 75 cm and RF 1976 from the Orsay page via Wikidata Q3821820; the Orsay dates it 1873-1876 (begun 1873, finished 1875-76), hence yearStart/yearEnd; painted in Paris."
+ },
+ "object": {
+  "year": 1874,
+  "month": null,
+  "day": null,
+  "yearStart": 1873,
+  "yearEnd": 1876,
+  "dateLabel": "1873–1876",
+  "madeIn": {
+   "name": "Paris",
+   "region": "Île-de-France",
+   "country": "France",
+   "lat": 48.85667,
+   "lon": 2.35222,
+   "wikidataQid": "Q90"
+  },
+  "location": {
+   "name": "Musée d'Orsay",
+   "country": "France",
+   "institution": "Musée d'Orsay, Paris",
+   "inventoryNumber": "RF 1976"
+  },
+  "culture": "French",
+  "movement": "Impressionism",
+  "medium": "Oil on canvas",
+  "materials": [
+   "oil paint",
+   "canvas"
+  ],
+  "subjects": [
+   "ballet rehearsal",
+   "dancers",
+   "Jules Perrot",
+   "Paris Opera",
+   "rehearsal room",
+   "watering can",
+   "dog"
+  ],
+  "widthCm": 75,
+  "heightCm": 85,
+  "depthCm": null,
+  "weightKg": null,
+  "creator": {
+   "name": "Edgar Degas",
+   "role": "painter",
+   "birthYear": 1834,
+   "deathYear": 1917,
+   "wikidataQid": "Q46373"
+  },
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/The_Ballet_Class_(Degas,_Mus%C3%A9e_d%27Orsay)",
+  "wikidataQid": "Q3821820",
+  "description": "The end of a class in a rehearsal room of the Paris Opera. The old ballet master Jules Perrot, in a loose grey suit, leans on his long stick and watches one dancer finish a step; the others wait, stretch, scratch their backs, adjust a ribbon or fan themselves, and their mothers sit against the far wall. The floor runs away in a steep diagonal and a watering can, used to damp the boards against dust, stands in the corner. Degas took the room from the old Opera on the rue Le Peletier, which burned down in 1873 while he was working on the picture, and painted every figure from drawings made in his studio. He showed the canvas, begun in 1873 and reworked until 1876, at the second Impressionist exhibition in 1876. Unlike Monet he had no interest in landscape or in painting outdoors; what he shared with the group was the ordinary, unposed moment, seen as if by someone who happened to be standing at the door.",
+  "facts": [
+   "Jules Perrot (1810–1892), the ballet master shown, had been one of the great dancers and choreographers of the Romantic ballet.",
+   "Commissioned by the opera singer and collector Jean-Baptiste Faure, who had to wait until 1876 for it.",
+   "Shown at the second Impressionist exhibition in 1876; bequeathed to the state by Count Isaac de Camondo in 1911.",
+   "A close variant of the same composition is in the Metropolitan Museum of Art, New York."
+  ]
+ },
+ "alternates": [
+  {
+   "fileTitle": "File:Edgar Degas - In a Café - Google Art Project 2.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Edgar_Degas_-_In_a_Caf%C3%A9_-_Google_Art_Project_2.jpg",
+   "licenseName": "Public domain",
+   "width": 3936,
+   "height": 5400,
+   "bytes": 8314974,
+   "mime": "image/jpeg",
+   "author": "Edgar Degas; Google Art Project scan at the Musée d'Orsay",
+   "sourcePage": "https://commons.wikimedia.org/wiki/File:Edgar_Degas_-_In_a_Caf%C3%A9_-_Google_Art_Project_2.jpg",
+   "notes": "Different work: L'Absinthe (Dans un café), 1875–76, Musée d'Orsay RF 1984, 92 x 68.5 cm; Google Art Project scan, Featured Picture on English Wikipedia. Equally good scan, kept as the alternative choice for item 5."
+  }
+ ]
+}

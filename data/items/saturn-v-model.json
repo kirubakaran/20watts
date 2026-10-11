@@ -1,0 +1,99 @@
+{
+ "slug": "saturn-v-model",
+ "title": "Saturn V",
+ "titleOriginal": null,
+ "kind": "model",
+ "importance": 0.9,
+ "genre": [
+  "spacecraft",
+  "engineering"
+ ],
+ "tags": [
+  "space",
+  "NASA",
+  "rocket",
+  "Apollo",
+  "landmark"
+ ],
+ "periodSlug": null,
+ "flat": false,
+ "baseHeight": 0,
+ "source": {
+  "type": "nasa",
+  "curid": "saturn-v",
+  "fileTitle": null,
+  "url": "https://science.nasa.gov/3d-resources/saturn-v/",
+  "sourcePage": "https://science.nasa.gov/3d-resources/saturn-v/",
+  "width": null,
+  "height": null,
+  "bytes": 927212,
+  "mime": null,
+  "licenseName": "Public domain (NASA)",
+  "licenseUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+  "author": "NASA / Michael D. Carbajal",
+  "notes": "NASA's own 3D model of the Saturn V from the NASA 3D Resources library (science.nasa.gov/3d-resources/saturn-v, glb, 22 meshes, eight 1000 px textures; NASA media are not copyrighted). The file is 12.99 units tall; unitScale 0.42581 makes it the real 110.6 m at one twentieth, 5.53 m, a scale model as the museums show it. Downloaded 2026-10-10.",
+  "unitScale": 8.5158
+ },
+ "object": {
+  "year": 1967,
+  "month": 11,
+  "day": 9,
+  "yearStart": null,
+  "yearEnd": null,
+  "dateLabel": "first flight 9 November 1967",
+  "madeIn": {
+   "name": "Huntsville",
+   "region": "Alabama",
+   "country": "United States",
+   "lat": 34.7304,
+   "lon": -86.5861,
+   "wikidataQid": "Q79860"
+  },
+  "location": {
+   "name": "Everywhere it is computed",
+   "region": null,
+   "country": null,
+   "lat": null,
+   "lon": null,
+   "wikidataQid": null,
+   "institution": null,
+   "inventoryNumber": null
+  },
+  "creator": {
+   "name": "NASA Marshall Space Flight Center, under Wernher von Braun",
+   "role": "designers",
+   "birthYear": null,
+   "deathYear": null,
+   "wikidataQid": "Q188676"
+  },
+  "culture": null,
+  "movement": null,
+  "medium": "NASA's 3D model, at true size",
+  "materials": [],
+  "subjects": [
+   "rocket",
+   "Apollo programme",
+   "Moon landing",
+   "Wernher von Braun"
+  ],
+  "widthCm": 1010,
+  "heightCm": 11060,
+  "depthCm": 1010,
+  "weightKg": null,
+  "description": "The rocket that took people to the Moon: the real one stood 110 metres, a thirty-six storey building, and weighed 2,900 tonnes fuelled, almost all of it kerosene, hydrogen and liquid oxygen. The five F-1 engines of the first stage burned thirteen tonnes of propellant a second and lifted it, at first, slower than a person walks. It flew thirteen times from 1967 to 1973 without losing a crew, took twenty-four people to the Moon and twelve to its surface, and launched Skylab. Nothing as powerful flew again until 2022. It stands here at its full height, off to the east; walk out to its foot and look up.",
+  "facts": [
+   "Three stages: the first burned for two and a half minutes to 68 kilometres; the third fired twice, once to orbit and once, over the Pacific, toward the Moon.",
+   "Von Braun's team at Huntsville designed it; Boeing, North American and Douglas built the stages; 400,000 people worked on Apollo at its peak.",
+   "Fully fuelled it weighed 2,970 tonnes; the lunar module that landed weighed 15.",
+   "Three remain, on their sides, at Houston, Huntsville and the Kennedy Space Center."
+  ],
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Saturn_V",
+  "wikidataQid": "Q188676"
+ },
+ "representation": "reconstruction",
+ "back": "none",
+ "landmark": {
+  "side": "east",
+  "distance": 110
+ }
+}

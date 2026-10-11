@@ -13,11 +13,11 @@
  * then importance) to the west.
  *
  * The main lane runs along the spine (x = 0). A work with a `branch` does
- * not take a row of its own: it stands beside its anchor, to the east, as
- * a side quest, and a chain of them (the chip inside the computer, the die
- * inside the chip) runs further east in order. Branches are packed tight,
- * each step as close as the two works' widths allow, never closer than the
- * minimum pitch.
+ * not take a row of its own: it stands beside its anchor as a side quest,
+ * east for a positive step and west for a negative one, and a chain of
+ * them (the chip inside the computer, the die inside the chip) runs
+ * outward in order. Branches stand close, each step as near as the two
+ * works' widths and `branchGap` allow, never nearer than `branchPitchX`.
  *
  * Rows are spaced along time by what stands in them: at least `cellPitchZ`
  * apart, and further when a row is deep (a building) so that `rowGapZ` of
@@ -35,7 +35,7 @@
  */
 import { Vector3 } from "three";
 import type { Artwork } from "../data/types";
-import { footprintOf } from "../data/types";
+import { baseHeightOf, footprintOf } from "../data/types";
 
 export interface LayoutConfig {
   /** Months per time bin: 1 orders by month where known, 12 by year, 120 by decade. */
@@ -58,6 +58,10 @@ export interface LayoutConfig {
   cellPadding: number;
   /** Clear space between works inside a cell, metres. */
   itemGap: number;
+  /** Clear space between a branch work and the one it hangs beside, metres: close, since they belong together. */
+  branchGap: number;
+  /** Smallest distance between a branch work's centre and its neighbour's, metres. */
+  branchPitchX: number;
 }
 
 export const DEFAULT_LAYOUT: LayoutConfig = {
@@ -68,6 +72,8 @@ export const DEFAULT_LAYOUT: LayoutConfig = {
   standingClearance: 3,
   cellPitchX: 16,
   minPitchX: 6,
+  branchGap: 1,
+  branchPitchX: 2.5,
   cellGap: 2,
   cellPadding: 1.2,
   itemGap: 2,
@@ -172,9 +178,13 @@ function byDateOrder(p: Artwork, q: Artwork): number {
  * The branch works hanging off `anchor`, nearest first: its own steps in
  * order, each followed by the steps hanging off it.
  */
-function branchChain(anchor: string, children: Map<string, Artwork[]>): Artwork[] {
+function branchChain(anchor: string, children: Map<string, Artwork[]>, dir: 1 | -1, top = true): Artwork[] {
   const out: Artwork[] = [];
-  for (const b of children.get(anchor) ?? []) out.push(b, ...branchChain(b.id, children));
+  for (const b of children.get(anchor) ?? []) {
+    // The anchor's own steps pick a side by their sign; a branch of a branch follows its parent out.
+    if (top && (b.branch!.step < 0 ? -1 : 1) !== dir) continue;
+    out.push(b, ...branchChain(b.id, children, dir, false));
+  }
   return out;
 }
 
@@ -274,7 +284,7 @@ export function computeLayout(artworks: Artwork[], cfg: LayoutConfig = DEFAULT_L
     const anchor = main.find((a) => a.id === anchorId);
     if (!anchor) continue;
     const timeRank = tRank.get(timeBin(anchor, cfg))!;
-    for (const b of branchChain(anchorId, children)) rowDepth.set(timeRank, Math.max(rowDepth.get(timeRank) ?? 0, footprintOf(b).depth));
+    for (const b of [...branchChain(anchorId, children, 1), ...branchChain(anchorId, children, -1)]) rowDepth.set(timeRank, Math.max(rowDepth.get(timeRank) ?? 0, footprintOf(b).depth));
   }
   // A row with only a landmark in it is a stretch of clear lane with a pointer.
   for (const a of main) if (a.landmark) {
@@ -343,35 +353,41 @@ export function computeLayout(artworks: Artwork[], cfg: LayoutConfig = DEFAULT_L
     .sort((p, q) => p.p.position.x - q.p.position.x);
   for (const { a, p } of anchors) {
     const cell = cellList.find((c) => c.timeRank === p.cell.timeRank && c.geoRank === p.cell.geoRank && !c.branch)!;
-    const chain = branchChain(a.id, children);
-    let prevX = cell.x;
-    let prevW = cell.width;
     const added: LayoutCell[] = [];
-    for (const b of chain) {
-      const fp = footprintOf(b);
-      const w = fp.width + 2 * cfg.cellPadding;
-      const x = prevX + Math.max(cfg.minPitchX, (prevW + w) / 2 + cfg.cellGap);
-      const c: LayoutCell = {
-        timeRank: cell.timeRank, geoRank: cell.geoRank, x, z: cell.z, width: w, depth: fp.depth, height: fp.height, count: 1,
-        branch: { of: b.branch!.of, label: b.branch!.label },
-      };
-      added.push(c);
-      place(b, x, cell.z, p.cell, b.branch!.of);
-      prevX = x;
-      prevW = w;
-    }
-    timeCounts.set(cell.timeRank, (timeCounts.get(cell.timeRank) ?? 0) + chain.length);
-    // Make room: whatever stood east of the anchor's cell in this row moves
-    // over by the chain's reach, or further if the last step is wider than
-    // the row's cells.
-    const shift = Math.max(prevX - cell.x, prevX + prevW / 2 - (cell.x + cell.width / 2));
-    const inChain = new Set(chain.map((b) => b.id));
-    for (const c of cellList) {
-      if (c.timeRank === cell.timeRank && c.x > cell.x + 1e-6) c.x += shift;
-    }
-    for (const q of placements.values()) {
-      if (q.cell.timeRank === cell.timeRank && !inChain.has(q.id) && q.position.x > cell.x + cell.width / 2 - 1e-6) {
-        q.position.x += shift;
+    const inChain = new Set<string>();
+    for (const dir of [1, -1] as const) {
+      const chain = branchChain(a.id, children, dir);
+      if (!chain.length) continue;
+      let prevX = cell.x;
+      let prevW = cell.width;
+      for (const b of chain) {
+        const fp = footprintOf(b);
+        const w = fp.width + 2 * cfg.cellPadding;
+        // Close: by the works' own widths, not their padded cells.
+        const x = prevX + dir * Math.max(cfg.branchPitchX, (prevW - 2 * cfg.cellPadding + fp.width) / 2 + cfg.branchGap);
+        const c: LayoutCell = {
+          timeRank: cell.timeRank, geoRank: cell.geoRank, x, z: cell.z, width: w, depth: fp.depth, height: fp.height, count: 1,
+          branch: { of: b.branch!.of, label: b.branch!.label },
+        };
+        added.push(c);
+        place(b, x, cell.z, p.cell, b.branch!.of);
+        inChain.add(b.id);
+        prevX = x;
+        prevW = w;
+      }
+      timeCounts.set(cell.timeRank, (timeCounts.get(cell.timeRank) ?? 0) + chain.length);
+      // Make room: whatever stood beyond the anchor's cell on this side of the row
+      // moves out by the chain's reach, or further if the last step is wider than
+      // the row's cells.
+      const shift = dir > 0
+        ? Math.max(prevX - cell.x, prevX + prevW / 2 - (cell.x + cell.width / 2))
+        : Math.max(cell.x - prevX, cell.x - cell.width / 2 - (prevX - prevW / 2));
+      for (const c of cellList) {
+        if (c.timeRank === cell.timeRank && (dir > 0 ? c.x > cell.x + 1e-6 : c.x < cell.x - 1e-6)) c.x += dir * shift;
+      }
+      for (const q of placements.values()) {
+        if (q.cell.timeRank !== cell.timeRank || inChain.has(q.id)) continue;
+        if (dir > 0 ? q.position.x > cell.x + cell.width / 2 - 1e-6 : q.position.x < cell.x - cell.width / 2 + 1e-6) q.position.x += dir * shift;
       }
     }
     cellList.push(...added);
@@ -386,7 +402,8 @@ export function computeLayout(artworks: Artwork[], cfg: LayoutConfig = DEFAULT_L
     const x = a.landmark.side === "east" ? a.landmark.distance : -a.landmark.distance;
     const z = rowZ.get(timeRank)!;
     cellList.push({
-      timeRank, geoRank, x, z, width: fp.width + 2 * cfg.cellPadding, depth: fp.depth, height: fp.height, count: 1,
+      // A landmark hung in the air counts its lift as height, so its foot is set far enough back to look up at it.
+      timeRank, geoRank, x, z, width: fp.width + 2 * cfg.cellPadding, depth: fp.depth, height: fp.height + baseHeightOf(a), count: 1,
       landmark: { side: a.landmark.side, distance: a.landmark.distance, label: a.title },
     });
     place(a, x, z, { timeRank, geoRank });

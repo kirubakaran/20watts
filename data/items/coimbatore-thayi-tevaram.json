@@ -1,0 +1,111 @@
+{
+ "slug": "coimbatore-thayi-tevaram",
+ "title": "Coimbatore Thayi sings a Tevaram hymn",
+ "titleOriginal": null,
+ "kind": "image",
+ "importance": 0.85,
+ "genre": [
+  "music"
+ ],
+ "tags": [
+  "music",
+  "India",
+  "Tamil",
+  "Tamil Nadu",
+  "Tevaram",
+  "recording",
+  "gramophone"
+ ],
+ "periodSlug": null,
+ "flat": false,
+ "baseHeight": null,
+ "source": {
+  "type": "user-upload",
+  "curid": null,
+  "fileTitle": null,
+  "url": "https://archive.org/details/a_20210424",
+  "sourcePage": "https://archive.org/details/a_20210424",
+  "width": 974,
+  "height": 480,
+  "bytes": 280229,
+  "mime": "image/jpeg",
+  "licenseName": "Public domain",
+  "licenseUrl": null,
+  "author": "Gramophone Company label, Madras 1911 (G.C.-8-13777); photograph by the Internet Archive contributor",
+  "notes": "The record's own label, since no public-domain portrait of her exists: the violet Gramophone Company label of G.C.-8-13777, issued September 1911, photographed with the disc by the contributor who uploaded the transfer to the Internet Archive (item a_20210424, file A.jpg, 974 x 480). The label is a 1911 printed design, public domain in the United States."
+ },
+ "object": {
+  "year": 1910,
+  "month": null,
+  "day": null,
+  "yearStart": null,
+  "yearEnd": null,
+  "dateLabel": "Madras, 1910",
+  "madeIn": {
+   "name": "Madras",
+   "region": "Tamil Nadu",
+   "country": "India",
+   "lat": 13.0827,
+   "lon": 80.2707,
+   "wikidataQid": null
+  },
+  "location": {
+   "name": null,
+   "region": null,
+   "country": null,
+   "lat": null,
+   "lon": null,
+   "wikidataQid": null,
+   "institution": null,
+   "inventoryNumber": null
+  },
+  "creator": {
+   "name": "Coimbatore Thayi",
+   "role": "singer",
+   "birthYear": 1872,
+   "deathYear": 1917,
+   "wikidataQid": null
+  },
+  "culture": "Tamil",
+  "movement": null,
+  "medium": "Acoustic 78 rpm gramophone recording; a Tevaram hymn in raga Yadukulakambhoji",
+  "materials": [
+   "shellac"
+  ],
+  "subjects": [
+   "music",
+   "Tamil",
+   "Tevaram",
+   "Shaiva devotion",
+   "sound recording"
+  ],
+  "widthCm": null,
+  "heightCm": null,
+  "depthCm": null,
+  "weightKg": null,
+  "description": "A Tamil hymn twelve centuries old, sung by the first Tamil singer the gramophone made famous. The Tevaram are the songs of the Shaiva saints Appar, Sambandar and Sundarar, composed between the seventh and ninth centuries and still sung in the temples of Tamil Nadu; this one is in raga Yadukulakambhoji. Coimbatore Thayi, a devadasi from the Coimbatore temple tradition, was the Gramophone Company's best-selling South Indian artist of the 1910s and the first Tamil singer given a recording session of her own, in Madras in 1910. Her records were sold as far as Paris, where Maurice Delage heard them and wrote his Quatre poèmes hindous around her voice. The disc's own label stands in for a portrait; none that is free to use survives.",
+  "facts": [
+   "The 1910 Madras session was run by George Dillnutt, who recorded across India for the Gramophone Company from 1908.",
+   "The Tevaram, with the Tiruvachakam, make up the Tamil Shaiva canon, the Panniru Tirumurai.",
+   "Delage's 1912 Quatre poèmes hindous, with their imitated vocal slides, were his attempt to write what he heard on her records."
+  ],
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Coimbatore_Thayi",
+  "wikidataQid": null
+ },
+ "fallbackWidthM": 0.9,
+ "audio": {
+  "type": "internet-archive",
+  "url": "https://archive.org/download/a_20210424/G%20C-8-13777%2013159o%20-Yedukulakambhoji%20-%20Thevaram%20by%20Coimbtore%20Thayi%20-%20Tamil%20female%20song.mp3",
+  "bytes": 7258905,
+  "mime": "audio/mpeg",
+  "seconds": 181.4,
+  "start": 0,
+  "excerptSeconds": null,
+  "performers": "Coimbatore Thayi, singing a Tevaram hymn in raga Yadukulakambhoji, recorded in Madras by George Dillnutt for the Gramophone Company in 1910 (G.C.-8-13777, matrix 13159o), issued 1911.",
+  "author": "Coimbatore Thayi, voice, with harmonium and tabla; Gramophone Company, Madras, 1910, G.C.-8-13777, matrix 13159o",
+  "licenseName": "Public domain",
+  "licenseUrl": null,
+  "sourcePage": "https://archive.org/details/a_20210424",
+  "notes": "Public domain in the United States: the recording was first published before 1926 (Music Modernization Act schedule, as of 2026) and the composition before 1931 or is traditional. The Tevaram hymns are seventh to ninth century. Catalogue data from Kinnear, The Gramophone Company's Indian Recordings 1908-1910, p. 281. Internet Archive item a_20210424, uploaded by a collector with the label photographed; no licence field."
+ }
+}

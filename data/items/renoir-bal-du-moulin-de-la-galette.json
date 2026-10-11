@@ -1,0 +1,107 @@
+{
+ "slug": "renoir-bal-du-moulin-de-la-galette",
+ "title": "Dance at Le Moulin de la Galette",
+ "titleOriginal": "Bal du moulin de la Galette",
+ "kind": "image",
+ "flat": true,
+ "importance": 0.93,
+ "genre": [
+  "painting"
+ ],
+ "periodSlug": null,
+ "tags": [
+  "impressionism",
+  "Renoir",
+  "Montmartre",
+  "Paris",
+  "dance",
+  "dappled light",
+  "France"
+ ],
+ "source": {
+  "type": "commons",
+  "fileTitle": "File:Auguste Renoir - Dance at Le Moulin de la Galette - Google Art ProjectFXD.jpg",
+  "curid": 90608799,
+  "url": "https://upload.wikimedia.org/wikipedia/commons/6/68/Auguste_Renoir_-_Dance_at_Le_Moulin_de_la_Galette_-_Google_Art_ProjectFXD.jpg",
+  "width": 13453,
+  "height": 10000,
+  "bytes": 130101494,
+  "mime": "image/jpeg",
+  "licenseName": "Public domain",
+  "licenseUrl": "https://commons.wikimedia.org/wiki/Template:PD-art",
+  "author": "Pierre-Auguste Renoir; Google Art Project gigapixel scan at the Musée d'Orsay, scaled-down derivative",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:Auguste_Renoir_-_Dance_at_Le_Moulin_de_la_Galette_-_Google_Art_ProjectFXD.jpg",
+  "notes": "Google Art Project scan of the Orsay painting, in the 13453 x 10000 px (130 MB) derivative rather than the 40869 x 30379 px, 539 MB original (curid 21853299), which is too large to serve. Commons licence template {{PD-Art|PD-old-auto-expired}} (category PD-old-100-expired); extmetadata LicenseShortName = 'Public domain', Copyrighted = 'False', Artist = 'Pierre-Auguste Renoir', Credit = 'This file was derived from: Auguste Renoir - Dance at Le Moulin de la Galette - Google Art Project.jpg'. Doubt: the current revision of this derivative (2026-01-31, by user Yann) carries the upload comment 'HR, better colors', so its tone has been adjusted by a Commons user rather than by the museum; the 1000 px preview looks like the Orsay's published colour, but if fidelity is paramount the full-size GAP original should be fetched instead. The painting's own Orsay page gives RF 2739, 131 x 175 cm, which agree with Wikidata Q683274. Painted at the Moulin de la Galette dance garden on the butte Montmartre, Paris (Wikidata Q186115)."
+ },
+ "object": {
+  "year": 1876,
+  "month": null,
+  "day": null,
+  "yearStart": null,
+  "yearEnd": null,
+  "dateLabel": "1876",
+  "madeIn": {
+   "name": "Montmartre, Paris",
+   "region": "Île-de-France",
+   "country": "France",
+   "lat": 48.88694,
+   "lon": 2.34111,
+   "wikidataQid": "Q186115"
+  },
+  "location": {
+   "name": "Musée d'Orsay",
+   "country": "France",
+   "institution": "Musée d'Orsay, Paris",
+   "inventoryNumber": "RF 2739"
+  },
+  "culture": "French",
+  "movement": "Impressionism",
+  "medium": "Oil on canvas",
+  "materials": [
+   "oil paint",
+   "canvas"
+  ],
+  "subjects": [
+   "open-air dance",
+   "crowd",
+   "Montmartre",
+   "dappled sunlight",
+   "straw hats",
+   "Sunday afternoon"
+  ],
+  "widthCm": 175,
+  "heightCm": 131,
+  "depthCm": null,
+  "weightKg": null,
+  "creator": {
+   "name": "Pierre-Auguste Renoir",
+   "role": "painter",
+   "birthYear": 1841,
+   "deathYear": 1919,
+   "wikidataQid": "Q39931"
+  },
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Bal_du_moulin_de_la_Galette",
+  "wikidataQid": "Q683274",
+  "description": "A Sunday afternoon at the open-air dance hall by the old windmill on the hill of Montmartre. Couples turn under the trees and the gas lamps, and in the foreground young women in striped dresses sit at a table with Renoir's friends, who posed for him. Sunlight comes through the leaves in patches, falling as pink and violet spots on a jacket, a hat, the ground. That dappled light, painted exactly as it fell rather than smoothed over, is what made the picture modern: critics in 1877 complained that the dancers looked as if they were covered in mould. The canvas is large, 131 by 175 cm, and Renoir worked on it on the spot, renting a studio nearby and carrying it to the garden with help. It was shown at the third Impressionist exhibition in 1877 and bought by the painter Gustave Caillebotte, whose bequest brought it to the French state in 1894. The crowd is of working Montmartre: seamstresses, florists, painters and writers.",
+  "facts": [
+   "Exhibited at the third Impressionist exhibition in April 1877.",
+   "The models were Renoir's friends: the painters Franc-Lamy and Norbert Goeneutte, the writer Georges Rivière, and the sisters Estelle and Jeanne Samary among the women.",
+   "Part of Gustave Caillebotte's bequest of 1894; entered the Louvre in 1896 and the Musée d'Orsay in 1986.",
+   "A smaller version, 78 by 114 cm, sold at Sotheby's in 1990 for 78 million dollars, then the second-highest price for a painting."
+  ]
+ },
+ "alternates": [
+  {
+   "fileTitle": "File:Auguste Renoir - Dance at Le Moulin de la Galette - Google Art Project.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/5/56/Auguste_Renoir_-_Dance_at_Le_Moulin_de_la_Galette_-_Google_Art_Project.jpg",
+   "licenseName": "Public domain",
+   "width": 40869,
+   "height": 30379,
+   "bytes": 538790870,
+   "mime": "image/jpeg",
+   "author": "Pierre-Auguste Renoir; Google Art Project gigapixel scan at the Musée d'Orsay",
+   "sourcePage": "https://commons.wikimedia.org/wiki/File:Auguste_Renoir_-_Dance_at_Le_Moulin_de_la_Galette_-_Google_Art_Project.jpg",
+   "notes": "The untouched gigapixel Google Art Project file (539 MB); use if the colour of the derivative is doubted."
+  }
+ ]
+}

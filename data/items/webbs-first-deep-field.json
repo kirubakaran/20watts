@@ -1,0 +1,101 @@
+{
+ "slug": "webbs-first-deep-field",
+ "title": "Webb's First Deep Field",
+ "titleOriginal": null,
+ "kind": "image",
+ "importance": 0.95,
+ "genre": [
+  "photograph",
+  "astronomy"
+ ],
+ "tags": [
+  "space",
+  "astronomy",
+  "galaxies",
+  "JWST",
+  "photograph"
+ ],
+ "periodSlug": null,
+ "flat": false,
+ "baseHeight": 0.4,
+ "source": {
+  "type": "commons",
+  "curid": 120346043,
+  "fileTitle": "File:Webb's First Deep Field.jpg",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Webb%27s_First_Deep_Field.jpg",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:Webb%27s_First_Deep_Field.jpg",
+  "width": 4537,
+  "height": 4630,
+  "bytes": 17227787,
+  "mime": "image/jpeg",
+  "licenseName": "Public domain (NASA, ESA, CSA, STScI)",
+  "licenseUrl": "https://webbtelescope.org/copyright",
+  "author": "NASA, ESA, CSA, STScI",
+  "notes": "The NIRCam composite of galaxy cluster SMACS 0723 released 11 and 12 July 2022, JPEG version on Commons (17 MB, 4537 by 4630), licensed PD-Webb (NASA, ESA, CSA, STScI material is free of copyright). Shown three times larger than a print, 4.5 m across, since the picture is the work."
+ },
+ "object": {
+  "year": 2022,
+  "month": 7,
+  "day": 11,
+  "yearStart": null,
+  "yearEnd": null,
+  "dateLabel": "released 11 July 2022",
+  "madeIn": {
+   "name": "The second Lagrange point",
+   "region": null,
+   "country": null,
+   "lat": null,
+   "lon": null,
+   "wikidataQid": null
+  },
+  "location": {
+   "name": "Everywhere; the file is public",
+   "region": null,
+   "country": null,
+   "lat": null,
+   "lon": null,
+   "wikidataQid": null,
+   "institution": "Space Telescope Science Institute",
+   "inventoryNumber": null
+  },
+  "creator": {
+   "name": "NASA, ESA, CSA and the Space Telescope Science Institute",
+   "role": "observers",
+   "birthYear": null,
+   "deathYear": null,
+   "wikidataQid": "Q112929016"
+  },
+  "culture": null,
+  "movement": null,
+  "medium": "Composite of near-infrared exposures, 12.5 hours in all",
+  "materials": [],
+  "subjects": [
+   "galaxy cluster SMACS 0723",
+   "gravitational lensing",
+   "early universe",
+   "deep field"
+  ],
+  "widthCm": null,
+  "heightCm": null,
+  "depthCm": null,
+  "weightKg": null,
+  "description": "The deepest picture of the universe anyone had taken, shown by the President of the United States on the evening of 11 July 2022, twelve and a half hours of infrared exposure on a patch of the southern sky the size of a grain of sand held at arm's length. Nearly everything in it is a galaxy. The cluster at the centre, SMACS 0723, is so massive that its gravity bends the space around it into a lens, smearing the galaxies behind into the arcs you can see curving round it, and bringing into view light that set out more than thirteen billion years ago, when the universe was a few hundred million years old. Hubble would have needed weeks for this. Stand close: the smallest red smudges are the oldest things ever photographed.",
+  "facts": [
+   "The cluster is 4.6 billion light-years away; the lensed arcs behind it are from the universe's first billion years.",
+   "The six-pointed spikes belong to the few stars in the field, in our own galaxy; they come from the mirror's hexagons and struts.",
+   "Thousands of galaxies in a patch of sky one could cover with a grain of sand; the whole sky holds some twenty million such patches.",
+   "Released a day early at the White House, then with four more pictures on 12 July: the Carina nebula, Stephan's Quintet, the Southern Ring and the spectrum of an exoplanet."
+  ],
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Webb%27s_First_Deep_Field",
+  "wikidataQid": "Q112929016"
+ },
+ "sky": {
+  "radius": 12,
+  "stars": {
+   "year": 2022,
+   "latitude": -30,
+   "siderealHours": 7.4
+  }
+ },
+ "scale": 5
+}

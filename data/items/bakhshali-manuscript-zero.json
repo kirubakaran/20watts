@@ -1,0 +1,91 @@
+{
+ "slug": "bakhshali-manuscript-zero",
+ "title": "Bakhshali manuscript folio with the dot zero",
+ "titleOriginal": null,
+ "kind": "image",
+ "flat": true,
+ "importance": 0.85,
+ "genre": [
+  "manuscript",
+  "mathematics"
+ ],
+ "periodSlug": null,
+ "tags": [
+  "mathematics",
+  "zero",
+  "India",
+  "Pakistan",
+  "Gandhara",
+  "manuscript",
+  "birch bark",
+  "Sanskrit",
+  "numerals"
+ ],
+ "source": {
+  "type": "commons",
+  "fileTitle": "File:Bakhshali manuscript.jpg",
+  "curid": 73315787,
+  "url": "https://upload.wikimedia.org/wikipedia/commons/6/63/Bakhshali_manuscript.jpg",
+  "width": 1220,
+  "height": 698,
+  "bytes": 810116,
+  "mime": "image/jpeg",
+  "licenseName": "Public domain",
+  "licenseUrl": null,
+  "author": "Unknown scribe; image from a National Geographic video (2017), Bodleian Library manuscript",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:Bakhshali_manuscript.jpg",
+  "notes": "A single birch-bark folio on a black background, with several dot zeros visible (the row of numerals at the lower left is a sum with placeholder dots). The Commons file is a frame taken from National Geographic's 2017 news video on the Oxford dating (video.nationalgeographic.com ... 170915-origin-zero-bakshali-manuscript-vin-spd), uploaded 2018-10-02, 1220 x 698 px only. Commons wikitext licence template: {{PD-Art|1=PD-old-auto|deathyear=3-4th century CE|country=Pakistan}}, source note 'Non creative image of a 2D artifact from the 3-4th century CE'; extmetadata: LicenseShortName = 'Public domain', License = 'pd', Copyrighted = 'False', Artist = 'National Geographic', Credit = 'National Geographic [1]. Non creative image of a 2D artifact from the 3-4th century CE', DateTimeOriginal = '2018-10-02'; categories: PD-Art (PD-old-auto), CC-PD-Mark, PD Old, Bakhshali manuscript. Doubt: the PD claim is the PD-Art rule applied to a video frame of a flat manuscript, which Commons accepts; the Bodleian's own Digital Bodleian images of MS. Sansk. d. 14 are CC BY-NC 4.0 and so were not used, and no other PD photograph of a folio is on Commons (File:Bakhshali numerals 2.jpg, curid 12310185, is Hoernle's 1887 printed table of the numerals, not a folio). The file does not say which folio this is, so it cannot be tied to the radiocarbon-dated folio 16. Dating: Oxford's 2017 radiocarbon results gave 224-383 CE for folio 16, 680-779 for folio 17 and 885-993 for folio 33; the publication was criticised by Plofker, Keller, Hayashi, Montelle and Wujastyk, and in October 2024 the Bodleian revised the whole manuscript to 799-1102 CE (folio 16: 931-1032) after a second run of tests; Hayashi's palaeographic date is 8th-12th century. The date fields follow the brief (year 300, 224-383); the parent may prefer the 2024 range. Physical size is an estimate: the surviving leaves are roughly 17 x 10 cm, scaled here to the image's aspect. HEAD 200, content-length 810116, image/jpeg."
+ },
+ "object": {
+  "year": 300,
+  "month": null,
+  "day": null,
+  "yearStart": 224,
+  "yearEnd": 383,
+  "dateLabel": "224-383 CE (2017 radiocarbon date of folio 16; revised in 2024 to 799-1102 CE)",
+  "madeIn": {
+   "name": "Bakhshali, near Mardan (ancient Gandhara)",
+   "region": "Khyber Pakhtunkhwa",
+   "country": "Pakistan",
+   "lat": 34.29,
+   "lon": 72.15,
+   "wikidataQid": "Q4849390"
+  },
+  "location": {
+   "name": "Oxford",
+   "country": "United Kingdom",
+   "institution": "Bodleian Library, University of Oxford",
+   "inventoryNumber": "MS. Sansk. d. 14"
+  },
+  "culture": "Indian (Gandhara)",
+  "medium": "Ink on birch bark",
+  "materials": [
+   "birch bark",
+   "ink"
+  ],
+  "subjects": [
+   "zero",
+   "arithmetic",
+   "algebra",
+   "numerals",
+   "Sanskrit",
+   "Śāradā script",
+   "mathematics"
+  ],
+  "widthCm": 17,
+  "heightCm": 9.7,
+  "depthCm": null,
+  "weightKg": null,
+  "creator": null,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Bakhshali_manuscript",
+  "wikidataQid": "Q115690",
+  "description": "A leaf of birch bark from the oldest surviving manuscript of Indian mathematics, found by a farmer digging in a field near the village of Bakhshali, in the old region of Gandhara, in 1881. Seventy fragile leaves survive, written in Sanskrit in the Śāradā script. They are a working handbook rather than a treatise: problems in verse about profit and loss, the fineness of gold, wages, travellers meeting on a road, with worked solutions, rules for fractions, square roots and negative numbers, and checks that each answer is right. Dotted through the sums are hundreds of small black dots that stand for zero in a decimal place-value system, the ancestor of our 0. In 2017 radiocarbon tests at Oxford put one leaf in the third or fourth century CE, which would make these the oldest known written zeros; scholars objected that the leaves had been dated to different centuries, and in 2024 the Bodleian revised the whole manuscript to the ninth to eleventh century. Either way, the dots are among the earliest zeros that survive.",
+  "facts": [
+   "Zero as a placeholder appears here as a dot; the round 0 appears on the Gwalior temple inscription of 876 CE.",
+   "The manuscript came to Oxford in 1902 and has been in the Bodleian ever since; the leaves are too brittle to turn.",
+   "The language is a form of Sanskrit coloured by the local spoken dialect, and the problems mention goods and coins of the north-west frontier.",
+   "First studied by Rudolf Hoernle in the 1880s and edited by G. R. Kaye in 1927; Takao Hayashi's 1995 edition is the standard one."
+  ]
+ },
+ "skip": true
+}

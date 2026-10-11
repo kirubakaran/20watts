@@ -12,7 +12,7 @@
  * The palette is the museum's: ink on cream, the same sheet the equations
  * are set on, so a simulation reads as a page that happens to move.
  */
-import { CanvasTexture, Mesh, MeshBasicMaterial, Object3D, PlaneGeometry, SRGBColorSpace, DoubleSide } from "three";
+import { CanvasTexture, Mesh, MeshBasicMaterial, Object3D, PlaneGeometry, SRGBColorSpace, DoubleSide, type Vector3 } from "three";
 import { life } from "./life";
 import { mandelbrot } from "./mandelbrot";
 import { lorenz } from "./lorenz";
@@ -21,6 +21,10 @@ import { galton } from "./galton";
 import { turing } from "./turing";
 import { pyramid } from "./pyramid";
 import { moon } from "./moon";
+import { atom } from "./atom";
+import { blackhole } from "./blackhole";
+import { merger } from "./merger";
+import { go } from "./go";
 
 export type Params = Record<string, number | string | boolean>;
 export interface Bounds {
@@ -36,11 +40,13 @@ export interface Sim {
   dispose(): void;
   /** Estimated GPU bytes held, for the streamer's budget. */
   residentBytes: number;
+  /** A program that needs to know where the eyes are, in world metres, every frame. */
+  setEye?(p: Vector3): void;
 }
 
 export type Program = (params: Params, bounds: Bounds) => Sim;
 
-export const PROGRAMS: Record<string, Program> = { life, mandelbrot, lorenz, fourier, galton, turing, pyramid, moon };
+export const PROGRAMS: Record<string, Program> = { life, mandelbrot, lorenz, fourier, galton, turing, pyramid, moon, atom, blackhole, merger, go };
 
 export const CREAM = "#f3eee3";
 export const INK = "#2a2824";

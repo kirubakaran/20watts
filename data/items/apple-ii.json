@@ -1,0 +1,102 @@
+{
+ "slug": "apple-ii",
+ "title": "Apple II",
+ "kind": "model",
+ "representation": "reconstruction",
+ "source": {
+  "type": "sketchfab",
+  "fileTitle": null,
+  "curid": "b5d316548d634f16a72dd503db0aa01b",
+  "url": "https://sketchfab.com/3d-models/apple-ii-computer-b5d316548d634f16a72dd503db0aa01b",
+  "width": null,
+  "height": null,
+  "bytes": null,
+  "mime": "model/gltf+json",
+  "licenseName": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "author": "dark_igorek (Sketchfab user dark_igorek)",
+  "sourcePage": "https://sketchfab.com/3d-models/apple-ii-computer-b5d316548d634f16a72dd503db0aa01b",
+  "notes": "Artist's model of an Apple II set-up: the computer with an 'apple ][' badge, a monitor on a stand and two Disk II drives (the drives date the set-up to 1978 or later; the serial label on the model reads A2S2, the II Plus designation, so it is a type, not a specimen). glTF zip downloaded by the user from Sketchfab on 2026-10-09, 20 meshes, 9 PBR materials with 4096 px textures, 109 MB unpacked. Release date and price from the English Wikipedia 'Apple II (original)' infobox (on sale June 1977, US$1,298 with 4 KB, discontinued May 1979); no dimensions in the infobox or on Wikidata (Q201652), so they are left null and the display size comes from the model."
+ },
+ "object": {
+  "year": 1977,
+  "month": 6,
+  "day": null,
+  "yearStart": 1977,
+  "yearEnd": 1979,
+  "dateLabel": "June 1977 (shown with Disk II drives, 1978)",
+  "madeIn": {
+   "name": "Cupertino, California",
+   "region": "California",
+   "country": "United States",
+   "lat": 37.3175,
+   "lon": -122.0419,
+   "wikidataQid": "Q189471"
+  },
+  "location": {
+   "name": null,
+   "country": null,
+   "institution": null,
+   "inventoryNumber": null
+  },
+  "culture": null,
+  "medium": "Personal computer: beige injection-moulded plastic case with integrated keyboard, printed circuit board with MOS 6502; monitor and floppy drives",
+  "materials": [
+   "plastic",
+   "metal",
+   "silicon"
+  ],
+  "subjects": [
+   "personal computer",
+   "home computer",
+   "Apple"
+  ],
+  "widthCm": null,
+  "heightCm": null,
+  "depthCm": null,
+  "weightKg": null,
+  "creator": {
+   "name": "Steve Wozniak",
+   "role": "designer",
+   "birthYear": 1950,
+   "deathYear": null,
+   "wikidataQid": "Q483382"
+  },
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Apple_II_(original)",
+  "wikidataQid": "Q201652",
+  "description": "The Apple II was Steve Wozniak's second machine and Apple's first product for the home: a complete computer in a plastic case with a keyboard, colour graphics on an ordinary television and expansion slots inside. Introduced in April 1977 and on sale from June at US$1,298, it made Apple a company and, with VisiCalc in 1979, made the personal computer a business tool. The set-up shown adds the Disk II floppy drives of 1978 and a monitor; this is an artist's model of the type, not a particular machine.",
+  "facts": [
+   "Wozniak gave the Apple II colour and sound by driving the television signal directly from the 6502's timing, a trick that kept the chip count low.",
+   "The eight expansion slots inside the case were insisted on by Wozniak over Steve Jobs's wish for two; they let the Apple II take a floppy controller in 1978.",
+   "VisiCalc, the first spreadsheet, ran only on the Apple II for its first year and sold many of the machines to businesses."
+  ],
+  "creators": [
+   {
+    "name": "Steve Wozniak",
+    "role": "designer",
+    "birthYear": 1950,
+    "deathYear": null,
+    "wikidataQid": "Q483382"
+   },
+   {
+    "name": "Apple Computer",
+    "role": "manufacturer",
+    "birthYear": null,
+    "deathYear": null,
+    "wikidataQid": "Q312"
+   }
+  ]
+ },
+ "alternatives": [],
+ "genre": [
+  "computer"
+ ],
+ "tags": [
+  "apple",
+  "personal computer",
+  "wozniak",
+  "reconstruction"
+ ],
+ "periodSlug": "modern",
+ "importance": 0.85
+}

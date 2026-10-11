@@ -1,0 +1,107 @@
+{
+ "slug": "fado-da-severa-1919",
+ "title": "Manuel Carvalho sings 'Fado da Severa'",
+ "titleOriginal": null,
+ "kind": "image",
+ "importance": 0.8,
+ "genre": [
+  "music"
+ ],
+ "tags": [
+  "music",
+  "Portugal",
+  "fado",
+  "recording",
+  "gramophone"
+ ],
+ "periodSlug": null,
+ "flat": true,
+ "baseHeight": null,
+ "source": {
+  "type": "commons",
+  "curid": 256663,
+  "fileTitle": "File:Jose malhoa fado.jpg",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Jose_malhoa_fado.jpg",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:Jose_malhoa_fado.jpg",
+  "width": 1116,
+  "height": 952,
+  "bytes": 542884,
+  "mime": "image/jpeg",
+  "licenseName": "Public domain",
+  "licenseUrl": null,
+  "author": "José Malhoa (1855-1933), 'O Fado', 1910, Museu de Lisboa",
+  "notes": "José Malhoa's painting 'O Fado' of 1910, the most famous image of the fado: a guitarist and a woman in a Lisbon room; the painter died in 1933 and the work was published before 1930, public domain in the United States. The painting is 150 by 183 cm."
+ },
+ "object": {
+  "year": 1919,
+  "month": 12,
+  "day": 8,
+  "yearStart": null,
+  "yearEnd": null,
+  "dateLabel": "Camden, New Jersey, 8 December 1919",
+  "madeIn": {
+   "name": "Camden",
+   "region": "New Jersey",
+   "country": "United States",
+   "lat": 39.9259,
+   "lon": -75.1196,
+   "wikidataQid": null
+  },
+  "location": {
+   "name": null,
+   "region": null,
+   "country": null,
+   "lat": null,
+   "lon": null,
+   "wikidataQid": null,
+   "institution": null,
+   "inventoryNumber": null
+  },
+  "creator": {
+   "name": "Manuel Carvalho",
+   "role": "singer",
+   "birthYear": null,
+   "deathYear": null,
+   "wikidataQid": null
+  },
+  "culture": "Portuguese",
+  "movement": null,
+  "medium": "Acoustic 78 rpm gramophone recording; a traditional fado with orchestra",
+  "materials": [
+   "shellac"
+  ],
+  "subjects": [
+   "music",
+   "fado",
+   "Lisbon",
+   "sound recording"
+  ],
+  "widthCm": 183,
+  "heightCm": 150,
+  "depthCm": null,
+  "weightKg": null,
+  "description": "The fado's founding song, about the fado's founding singer. Maria Severa Onofriana, a Lisbon prostitute and guitarist of the Mouraria, died in 1846 at twenty-six and became the genre's legend within a generation; the Fado da Severa, sung to her memory, is the oldest piece in the repertoire still sung. No fado recorded in Lisbon before 1926 can be freely heard today, so this is the oldest fado that can: the Victor company's Portuguese series, cut in Camden, New Jersey, for the emigrant communities of New England, with Manuel Carvalho, Victor's house Portuguese singer from 1916 to 1925, and the studio orchestra where a Lisbon café would have had a guitarra. The painting is José Malhoa's 'O Fado' of 1910, which hangs in the Museu de Lisboa.",
+  "facts": [
+   "Severa's life became a novel in 1901, a play, and in 1931 the first Portuguese sound film, 'A Severa'.",
+   "Victor's immigrant catalogues of the 1910s and 20s preserved many traditions their home countries did not record.",
+   "Rosario Bourdon, the conductor, was a cellist who led hundreds of Victor sessions in these years."
+  ],
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Fado",
+  "wikidataQid": null
+ },
+ "audio": {
+  "type": "loc",
+  "url": "https://tile.loc.gov/storage-services/service/mbrsrs/mbrsjukebox/jvm_victor_72818_01_b23518_01/jvm_victor_72818_01_b23518_01.mp3",
+  "bytes": 6180056,
+  "mime": "audio/mpeg",
+  "seconds": 193.1,
+  "start": 0,
+  "excerptSeconds": null,
+  "performers": "Manuel Carvalho, baritone, with the Victor orchestra under Rosario Bourdon, recorded at Camden, New Jersey, on 8 December 1919 (Victor 72818, matrix B-23518-1).",
+  "author": "Manuel Carvalho, voice, with orchestra conducted by Rosario Bourdon; Victor Talking Machine Company, Camden, 8 December 1919; Victor 72818, matrix B-23518-1",
+  "licenseName": "Public domain",
+  "licenseUrl": null,
+  "sourcePage": "https://www.loc.gov/item/jukebox-34865/",
+  "notes": "Public domain in the United States: the recording was first published before 1926 (Music Modernization Act schedule, as of 2026) and the composition before 1931 or is traditional. The Fado da Severa is a traditional nineteenth-century fado. Transfer from the Library of Congress National Jukebox, which serves pre-1926 Victor recordings as public domain under the Music Modernization Act."
+ }
+}

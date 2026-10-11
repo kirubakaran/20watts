@@ -1,0 +1,95 @@
+{
+ "slug": "euclid-oxyrhynchus-papyrus-29",
+ "title": "Euclid's Elements",
+ "titleOriginal": "Στοιχεῖα, Book II, Proposition 5",
+ "kind": "image",
+ "flat": true,
+ "importance": 0.8,
+ "genre": [
+  "manuscript",
+  "papyrus",
+  "mathematics"
+ ],
+ "periodSlug": null,
+ "tags": [
+  "mathematics",
+  "geometry",
+  "Euclid",
+  "papyrus",
+  "Egypt",
+  "Greek",
+  "Oxyrhynchus"
+ ],
+ "source": {
+  "type": "commons",
+  "fileTitle": "File:P. Oxy. I 29.jpg",
+  "curid": 1259734,
+  "url": "https://upload.wikimedia.org/wikipedia/commons/8/8d/P._Oxy._I_29.jpg",
+  "width": 1694,
+  "height": 1032,
+  "bytes": 277900,
+  "mime": "image/jpeg",
+  "licenseName": "Public domain",
+  "licenseUrl": null,
+  "author": "Unknown scribe (text by Euclid); image via the Penn Museum / OPenN",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:P._Oxy._I_29.jpg",
+  "notes": "The recto of the fragment, with nine lines of Greek uncial and the rectangle diagram at the lower right; the red '29' at bottom left is the old inventory number. Source given as the Penn Museum's OPenN record https://openn.library.upenn.edu/Data/0016/html/e2748.html (call number P.Penn. Museum inv. E02748, 'Elements 2.5', extent 15.2 x 8.5 cm, papyrus, written on one side only, 9 lines, diagram to the lower right of lines 8-9, provenance Grenfell and Hunt 1896-97, donated 1901). Commons wikitext licence template: {{PD-old-100}} (Permission field 'N/A'); extmetadata: LicenseShortName = 'Public domain', License = 'pd', Copyrighted = 'False', Artist = 'Euclid', Credit = OPenN URL, DateTimeOriginal = '1994-10-07'; categories: Author died more than 100 years ago public domain images, CC-PD-Mark, Papyrus Oxyrhynchus 29, Mathematical proof. Doubt: OPenN states that the Penn Museum licenses its images CC BY-SA, so the Commons PD claim rests on the PD-Art rule (a faithful photograph of a flat public-domain object gains no new copyright in the US); the larger OPenN-derived file File:P.Penn. Museum inv. E02748 Euclid's Elements 2.5.jpg (curid 169166171, 3745 x 2322) is tagged CC BY-SA 4.0 on Commons and was therefore not used. Dating: Grenfell and Hunt put the hand at about 75-125 CE, which Wikipedia and most histories follow (c. 100 CE); the Penn Museum catalogue says 3rd-4th century CE. The physical height below is scaled from the 15.2 cm width by the image's aspect so the flat rendering is not distorted (the catalogue's 8.5 cm is the papyrus alone). HEAD 200, content-length 277900, image/jpeg."
+ },
+ "object": {
+  "year": 100,
+  "month": null,
+  "day": null,
+  "yearStart": 75,
+  "yearEnd": 125,
+  "dateLabel": "c. 75-125 CE (Penn Museum: 3rd-4th century CE); text composed c. 300 BCE",
+  "madeIn": {
+   "name": "Oxyrhynchus (el-Bahnasa)",
+   "region": "Minya Governorate",
+   "country": "Egypt",
+   "lat": 28.5333,
+   "lon": 30.6583,
+   "wikidataQid": "Q622640"
+  },
+  "location": {
+   "name": "Philadelphia",
+   "country": "United States",
+   "institution": "Penn Museum (University of Pennsylvania Museum of Archaeology and Anthropology)",
+   "inventoryNumber": "E 2748 (P.Oxy. I 29)"
+  },
+  "culture": "Greek (Roman Egypt)",
+  "medium": "Ink on papyrus",
+  "materials": [
+   "papyrus",
+   "ink"
+  ],
+  "subjects": [
+   "geometry",
+   "Euclid",
+   "proof",
+   "diagram",
+   "mathematics",
+   "Greek manuscript"
+  ],
+  "widthCm": 15.2,
+  "heightCm": 9.26,
+  "depthCm": null,
+  "weightKg": null,
+  "creator": {
+   "name": "Euclid",
+   "role": "author",
+   "birthYear": null,
+   "deathYear": null,
+   "wikidataQid": "Q8747"
+  },
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Papyrus_Oxyrhynchus_29",
+  "wikidataQid": "Q7133461",
+  "description": "A scrap of papyrus the size of a postcard, dug out of the rubbish mounds of Oxyrhynchus in Egypt by Grenfell and Hunt in 1896-97, carrying the oldest surviving diagram from Euclid's Elements. The nine lines of Greek state Proposition 5 of Book II: if a straight line is cut into equal and unequal parts, the rectangle contained by the unequal parts, together with the square on the line between the points of section, equals the square on the half. The little figure at the lower right is the rectangle and squares that prove it; in modern notation it is the identity ab + ((a+b)/2 - b)² = ((a+b)/2)². Euclid compiled the Elements in Alexandria around 300 BCE, and it was copied for two thousand years as the model of what a proof should be. This page was written some four centuries after his death, perhaps for a student, and about eight centuries before the oldest complete manuscript of the Elements, which was made in 888.",
+  "facts": [
+   "Written on one side only, in sloping capitals with a few spelling slips, probably from a roll or a loose sheet.",
+   "The Elements ran to thirteen books and was printed in more editions than any book but the Bible.",
+   "Grenfell and Hunt's Oxyrhynchus finds amount to about half a million papyrus fragments, most still unpublished.",
+   "The fragment came to Philadelphia in 1901 as thanks for the university's support of the Egypt Exploration Fund."
+  ]
+ },
+ "scale": 5
+}

@@ -1,0 +1,103 @@
+{
+ "slug": "vivaldi-spring",
+ "title": "The Four Seasons, Spring",
+ "kind": "image",
+ "flat": true,
+ "importance": 0.85,
+ "genre": [
+  "music"
+ ],
+ "periodSlug": null,
+ "tags": [
+  "music",
+  "baroque",
+  "concerto",
+  "violin"
+ ],
+ "source": {
+  "type": "commons",
+  "fileTitle": "File:Il cimento dell'armonia e dell'inventione - concerti a 4 e 5 consacrati - opera ottava - libro primo - da D. Antonio Vivaldi - btv1b52500229z (11 of 42).jpg",
+  "curid": 172577787,
+  "url": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Il_cimento_dell%27armonia_e_dell%27inventione_-_concerti_a_4_e_5_consacrati_-_opera_ottava_-_libro_primo_-_da_D._Antonio_Vivaldi_-_btv1b52500229z_%2811_of_42%29.jpg",
+  "width": 3828,
+  "height": 5176,
+  "bytes": 2406728,
+  "mime": "image/jpeg",
+  "licenseName": "Public domain",
+  "licenseUrl": null,
+  "author": "Michel-Charles Le Cène, Amsterdam (publisher, 1725); scan by the Bibliothèque nationale de France (Gallica)",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:Il_cimento_dell%27armonia_e_dell%27inventione_-_concerti_a_4_e_5_consacrati_-_opera_ottava_-_libro_primo_-_da_D._Antonio_Vivaldi_-_btv1b52500229z_(11_of_42).jpg",
+  "notes": "Engraved title page of 'Il cimento dell'armonia e dell'inventione, Concerti a 4 e 5 ... da D. Antonio Vivaldi ... Opera ottava, Libro primo, A Amsterdam, Spesa di Michele Carlo Le Cene, Libraro' (plate no. 520), the 1725 first edition whose first four concertos are the Four Seasons; this is the viola part-book from the BnF (shelfmark Vm7 1703), with an 18th-century ex-libris inscription and the BnF stamp. Pages 1-10 of the 42-page set are the vellum cover, blank leaves and flyleaves; page 11 is the title page (checked by thumbnail). Commons API extmetadata: LicenseShortName 'Public domain'; Artist 'Vivaldi, Antonio (1678-1741). Compositeur'; Credit 'Bibliothèque nationale de France'; ImageDescription 'Présentation musicale : Parties de violon principal, violon 1, violon 2, alto, violoncelle-orgue / Éditeur : Michele Carlo Le Cene, libraro (Amsterdam)'. A cleaner but lower-resolution scan of the Libro secondo title page of the same edition is File:Cimento dell' Armonia e dell' Inventione-v2-title page.jpg (curid 65167658, 1500x1981, Public domain)."
+ },
+ "audio": {
+  "type": "commons",
+  "fileTitle": "File:Vivaldi - Four Seasons 1 Spring mvt 1 Allegro - John Harrison violin.oga",
+  "curid": 80415,
+  "url": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Vivaldi_-_Four_Seasons_1_Spring_mvt_1_Allegro_-_John_Harrison_violin.oga",
+  "bytes": 4299414,
+  "mime": "audio/ogg",
+  "seconds": 215.3,
+  "licenseName": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+  "author": "John Harrison, violin; Wichita State University Chamber Players, Robert Turizziani, conductor",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:Vivaldi_-_Four_Seasons_1_Spring_mvt_1_Allegro_-_John_Harrison_violin.oga",
+  "performers": "John Harrison, violin, with the Wichita State University Chamber Players conducted by Robert Turizziani; live, unedited performance in Wiedemann Recital Hall, Wichita State University, 6 February 2000.",
+  "start": 0,
+  "excerptSeconds": null,
+  "notes": "Commons API extmetadata on 2026-10-09: LicenseShortName 'CC BY-SA 4.0' (the file is currently tagged 4.0, not the 3.0 sometimes cited); UsageTerms 'Creative Commons Attribution-Share Alike 4.0'; AttributionRequired true; Artist 'Antonio Vivaldi' (composer field); Credit 'Own work'; ImageDescription 'Concerto No. 1 in E major, Op. 8, RV 269, \"La primavera\" (Spring) - Movement 1: Allegro from The Four Seasons by Antonio Vivaldi. Live, Unedited performance - 3m:35.280s. Wiedemann Recital Hall, Wichita State University. John Harrison - Violin / Robert Turizziani - Conductor / Wichita State University Chamber Players'; DateTimeOriginal 'composed 1723 and published in 1725, performed on 2000-02-06'. Attribute John Harrison and the Wichita State University Chamber Players; share-alike applies. Duration from API metadata: 215.28 s. The Largo and the closing Allegro of Spring are on Commons from the same performance under the same licence (File:Vivaldi - Four Seasons 1 Spring mvt 2 Largo - John Harrison violin.oga, File:... mvt 3 Allegro - John Harrison violin.oga)."
+ },
+ "object": {
+  "year": 1725,
+  "month": null,
+  "day": null,
+  "yearStart": 1718,
+  "yearEnd": 1725,
+  "dateLabel": "1725 (first edition, Amsterdam); composed about 1718-1723",
+  "madeIn": {
+   "name": "Venice",
+   "region": "Veneto",
+   "country": "Italy",
+   "lat": 45.4408,
+   "lon": 12.3155,
+   "wikidataQid": "Q641"
+  },
+  "location": {
+   "name": "Paris",
+   "country": "France",
+   "institution": "Bibliothèque nationale de France (first-edition part-book shown)",
+   "inventoryNumber": "Vm7 1703"
+  },
+  "culture": "Venetian / Italian",
+  "medium": "Violin concerto in E major, RV 269, with strings and continuo; engraved first edition",
+  "materials": [
+   "ink",
+   "paper"
+  ],
+  "subjects": [
+   "music",
+   "baroque",
+   "concerto",
+   "violin",
+   "programme music"
+  ],
+  "widthCm": null,
+  "heightCm": null,
+  "depthCm": null,
+  "weightKg": null,
+  "creator": {
+   "name": "Antonio Vivaldi",
+   "role": "composer",
+   "birthYear": 1678,
+   "deathYear": 1741,
+   "wikidataQid": "Q1340"
+  },
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/The_Four_Seasons_(Vivaldi)",
+  "wikidataQid": null,
+  "description": "Antonio Vivaldi, a Venetian priest who taught the violin at the Ospedale della Pietà, an orphanage famous for its girls' orchestra, published twelve concertos in Amsterdam in 1725 under the title 'The Contest of Harmony and Invention'. The first four are the Four Seasons, and each is prefaced by a sonnet, probably by Vivaldi himself, whose lines are printed in the parts at the moments they describe. 'Spring' opens with birdsong traded between three violins, a murmuring brook, a thunderstorm, and then a sleeping goatherd, a barking dog in the violas, and a rustic bagpipe dance. It is among the earliest and most vivid examples of music telling a story, and today the most performed Baroque work of all. The sheet shown is the title page of the 1725 Le Cène edition from the Bibliothèque nationale de France. The visitor hears the first movement, played by John Harrison with the Wichita State University Chamber Players in a live recording from 2000, released under a Creative Commons licence.",
+  "facts": [
+   "The concertos were dedicated to the Bohemian count Wenzel von Morzin, and had probably been circulating in manuscript for several years before publication.",
+   "Each season carries a sonnet, with letters in the score linking lines of verse to passages of music, such as 'the barking dog' for the viola in the Largo.",
+   "Vivaldi's reputation collapsed after his death in 1741 and the Four Seasons were almost unknown until the 1940s, when the first recordings appeared."
+  ]
+ }
+}

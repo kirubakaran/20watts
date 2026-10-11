@@ -1,0 +1,94 @@
+{
+ "slug": "lion-man",
+ "title": "The Lion-man",
+ "kind": "image",
+ "source": {
+  "type": "commons",
+  "fileTitle": "File:Loewenmensch1.jpg",
+  "curid": 29686577,
+  "url": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Loewenmensch1.jpg",
+  "width": 2218,
+  "height": 3944,
+  "bytes": 2696761,
+  "mime": "image/jpeg",
+  "licenseName": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "author": "Dagmar Hollmann",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:Loewenmensch1.jpg",
+  "notes": "Original figurine photographed in Museum Ulm, frontal three-quarter view on a plain dark background; this is also the English Wikipedia infobox image. File metadata from the Commons imageinfo API. Object data: Dates: Wikipedia (35,000-41,000 years old; Wikidata inception c. 38,000 BCE). Dimensions 31.1 x 5.6 x 5.9 cm: Wikipedia lead. Find-spot coordinates: Wikidata Q1498134 (Hohlenstein-Stadel). Discovery date: Wikipedia/Wikidata. Museum Ulm inventory number not published on Wikipedia/Wikidata."
+ },
+ "object": {
+  "year": -38000,
+  "yearStart": -39000,
+  "yearEnd": -33000,
+  "dateLabel": "c. 40,000 years ago (Aurignacian)",
+  "madeIn": {
+   "name": "Hohlenstein-Stadel cave, Lone valley",
+   "region": "Asselfingen, Baden-Württemberg",
+   "country": "Germany",
+   "lat": 48.5493,
+   "lon": 10.1724,
+   "wikidataQid": "Q1498134"
+  },
+  "location": {
+   "name": "Museum Ulm",
+   "country": "Germany",
+   "institution": "Museum Ulm",
+   "inventoryNumber": null
+  },
+  "culture": "Aurignacian (Upper Palaeolithic)",
+  "medium": "Carved mammoth ivory",
+  "materials": [
+   "mammoth ivory"
+  ],
+  "subjects": [
+   "cave lion",
+   "human figure",
+   "therianthrope",
+   "figurine"
+  ],
+  "widthCm": 5.6,
+  "heightCm": 31.1,
+  "depthCm": 5.9,
+  "weightKg": null,
+  "creator": null,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Lion-man_of_Hohlenstein-Stadel",
+  "wikidataQid": "Q702658",
+  "description": "A standing figure with a human body and the head of a cave lion, carved from a mammoth tusk with flint tools. Found in fragments in the Hohlenstein-Stadel cave in the Swabian Jura in 1939, it was reassembled over decades from more than two hundred pieces and is among the oldest known figurative sculptures.",
+  "facts": [
+   "Discovered on 25 August 1939 by Otto Völzing, a week before the Second World War halted the dig.",
+   "Radiocarbon dating of its find layer places it between 35,000 and 41,000 years old.",
+   "Seven parallel transverse gouges are carved into the left arm; the 2012-13 restoration raised its height from 29.6 to 31.1 cm."
+  ]
+ },
+ "alternatives": [
+  {
+   "fileTitle": "File:Loewenmensch2.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Loewenmensch2.jpg",
+   "licenseName": "CC BY-SA 4.0",
+   "author": "Thilo Parg",
+   "size": "1812x3221",
+   "note": "Side view on dark background showing the gouges on the left arm."
+  },
+  {
+   "fileTitle": "File:Löwenmensch 2022 02.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/c/c5/L%C3%B6wenmensch_2022_02.jpg",
+   "licenseName": "CC BY-SA 3.0",
+   "author": "Chatsam",
+   "size": "4000x6000",
+   "note": "Larger but shot in the gallery with a busy, blurred background."
+  }
+ ],
+ "fallbackWidthM": 0.6,
+ "genre": [
+  "sculpture",
+  "figurine"
+ ],
+ "tags": [
+  "aurignacian",
+  "ivory",
+  "swabian jura"
+ ],
+ "periodSlug": "paleolithic",
+ "importance": 0.95
+}

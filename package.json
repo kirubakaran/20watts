@@ -9,7 +9,12 @@
     "typecheck": "tsc --noEmit",
     "fetch-assets": "NODE_EXTRA_CA_CERTS=scripts/certs/sectigo-ov-r36.pem tsx scripts/fetch-assets.ts",
     "deploy": "scripts/deploy.sh",
-    "test": "vitest run"
+    "test": "vitest run",
+    "walk": "node scripts/dev/walk.mjs",
+    "gallery": "node scripts/dev/gallery.mjs",
+    "ingest": "tsx scripts/ingest.ts",
+    "lint": "tsx scripts/lint.ts",
+    "where": "tsx scripts/dev/where.ts"
   },
   "keywords": [],
   "author": "",

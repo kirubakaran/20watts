@@ -1,0 +1,111 @@
+{
+ "slug": "lunar-rover",
+ "title": "Lunar Roving Vehicle",
+ "kind": "model",
+ "representation": "reconstruction",
+ "source": {
+  "type": "sketchfab",
+  "fileTitle": null,
+  "curid": "acb3f8645a69493cb211a62b40d66aab",
+  "url": "https://sketchfab.com/3d-models/mondfahrzeug-lunar-rover-acb3f8645a69493cb211a62b40d66aab",
+  "width": null,
+  "height": null,
+  "bytes": null,
+  "mime": "model/gltf+json",
+  "licenseName": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "author": "Deutsches Museum | Digital (Sketchfab user deutsches-museum)",
+  "sourcePage": "https://sketchfab.com/3d-models/mondfahrzeug-lunar-rover-acb3f8645a69493cb211a62b40d66aab",
+  "notes": "'Remodeled in 3D based on laser scans and photogrammetry of a replica and original drawings' (Sketchfab description), of the Deutsches Museum's Lunar Roving Vehicle replica, inventory number 2019-407, so representation is reconstruction. 464k faces, 12 meshes, 7 colour textures, 51 MB glTF unpacked; file in centimetres under a 0.01 node scale, so metres after the pipeline. Downloaded by the user from Sketchfab on 2026-10-09. Dimensions from the English Wikipedia 'Lunar Roving Vehicle' infobox: length 10 ft (3.0 m), height 3.6 ft (1.1 m), wheelbase 7.5 ft (2.3 m), range 57 mi; mass 210 kg and dates from the article body. Wikidata Q275816."
+ },
+ "object": {
+  "year": 1971,
+  "month": 7,
+  "day": 31,
+  "yearStart": 1971,
+  "yearEnd": 1972,
+  "dateLabel": "1971 (first driven on the Moon 31 July 1971)",
+  "madeIn": {
+   "name": "Kent, Washington",
+   "region": "Washington",
+   "country": "United States",
+   "lat": 47.3809,
+   "lon": -122.2348,
+   "wikidataQid": null
+  },
+  "location": {
+   "name": "Munich",
+   "country": "Germany",
+   "institution": "Deutsches Museum (replica; the originals are on the Moon)",
+   "inventoryNumber": "2019-407"
+  },
+  "culture": null,
+  "medium": "Electric vehicle: aluminium chassis, four wire-mesh wheels with individual motors, silver-zinc batteries, folding frame",
+  "materials": [
+   "aluminium",
+   "zinc-coated steel wire",
+   "titanium"
+  ],
+  "subjects": [
+   "Moon",
+   "Apollo program",
+   "vehicle",
+   "spaceflight"
+  ],
+  "widthCm": null,
+  "heightCm": 110,
+  "depthCm": 300,
+  "weightKg": 210,
+  "creator": {
+   "name": "Ferenc Pavlics",
+   "role": "designer",
+   "birthYear": 1928,
+   "deathYear": null,
+   "wikidataQid": null
+  },
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Lunar_Roving_Vehicle",
+  "wikidataQid": "Q275816",
+  "description": "The Lunar Roving Vehicle is the car the last three Apollo crews drove on the Moon. Built by Boeing with General Motors in under two years, it folded into a bay of the lunar module, weighed 210 kg on Earth and ran on silver-zinc batteries, with a motor in each wire-mesh wheel and a navigation system that always pointed the way home. Three were left on the Moon in 1971 and 1972; this is a 3D reconstruction, from scans and the original drawings, of the Deutsches Museum's replica.",
+  "facts": [
+   "On Apollo 15, 16 and 17 the rovers drove a total of about 90 km, and the Apollo 17 crew went 7.6 km from their lander, the furthest humans have walked or driven from safety on another world.",
+   "The wheels are woven from zinc-coated piano wire with titanium chevrons for tread, so they would not clog with dust or crack in the cold.",
+   "Gene Cernan set the lunar speed record of 18 km/h in the Apollo 17 rover, and its television camera filmed the lunar module's launch."
+  ],
+  "creators": [
+   {
+    "name": "Ferenc Pavlics",
+    "role": "designer",
+    "birthYear": 1928,
+    "deathYear": null,
+    "wikidataQid": null
+   },
+   {
+    "name": "Boeing",
+    "role": "manufacturer",
+    "birthYear": null,
+    "deathYear": null,
+    "wikidataQid": "Q66"
+   },
+   {
+    "name": "General Motors",
+    "role": "manufacturer",
+    "birthYear": null,
+    "deathYear": null,
+    "wikidataQid": "Q81965"
+   }
+  ]
+ },
+ "alternatives": [],
+ "genre": [
+  "vehicle"
+ ],
+ "tags": [
+  "apollo",
+  "moon",
+  "rover",
+  "nasa",
+  "reconstruction"
+ ],
+ "periodSlug": "modern",
+ "importance": 0.9
+}

@@ -1,0 +1,98 @@
+{
+ "slug": "descent-of-the-ganges-mamallapuram",
+ "title": "Descent of the Ganges, Mamallapuram",
+ "titleOriginal": null,
+ "kind": "image",
+ "importance": 0.85,
+ "genre": [
+  "sculpture",
+  "relief"
+ ],
+ "tags": [
+  "India",
+  "Tamil Nadu",
+  "Tamil",
+  "Pallava",
+  "rock relief",
+  "Hinduism",
+  "UNESCO World Heritage"
+ ],
+ "periodSlug": null,
+ "flat": true,
+ "baseHeight": null,
+ "source": {
+  "type": "commons",
+  "curid": 7280090,
+  "fileTitle": "File:Descent of the Ganges 01.jpg",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/6/69/Descent_of_the_Ganges_01.jpg",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:Descent_of_the_Ganges_01.jpg",
+  "width": 3933,
+  "height": 1703,
+  "bytes": 1443985,
+  "mime": "image/jpeg",
+  "licenseName": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "author": "Bernard Gagnon",
+  "notes": "Straight-on panoramic photograph of the entire relief across both boulders, with the central cleft, taken 29 January 2006. Commons API extmetadata: LicenseShortName = 'CC BY-SA 3.0', Artist = 'Bernard Gagnon', Credit = 'Own work'; also tagged GFDL. It is a Commons Valued Image and the lead image of the English Wikipedia article 'Descent of the Ganges (Mahabalipuram)'. Chosen because it shows the whole 29 x 13 m relief edge to edge, which is what the museum needs to show it at true size; Timothy A. Gonsalves (Tagooty) has higher-resolution CC BY-SA 4.0 quality images of individual panels (e.g. page ids 123071969, 123159426, 124252253) that could be used for details. No CC Sketchfab scan of the relief exists; the only Mamallapuram photogrammetry found (HAREX-STUDIO) is CC BY-NC and was rejected. The relief is in situ at Mamallapuram. Shown at the relief's real size, 29 m by 13 m, since the photograph covers it edge to edge."
+ },
+ "object": {
+  "year": 650,
+  "month": null,
+  "day": null,
+  "yearStart": 630,
+  "yearEnd": 668,
+  "dateLabel": "mid-7th century CE",
+  "madeIn": {
+   "name": "Mamallapuram",
+   "region": "Tamil Nadu",
+   "country": "India",
+   "lat": 12.617,
+   "lon": 80.192,
+   "wikidataQid": "Q208000"
+  },
+  "location": {
+   "name": "Mamallapuram",
+   "region": null,
+   "country": "India",
+   "lat": null,
+   "lon": null,
+   "wikidataQid": null,
+   "institution": "Group of Monuments at Mahabalipuram (in situ)",
+   "inventoryNumber": null
+  },
+  "creator": {
+   "name": "Unknown Pallava sculptors (patron Narasimhavarman I)",
+   "role": "sculptor",
+   "birthYear": null,
+   "deathYear": null,
+   "wikidataQid": "Q3537058"
+  },
+  "culture": "Tamil (Pallava)",
+  "movement": null,
+  "medium": "Relief carved into two granite boulders",
+  "materials": [
+   "granite"
+  ],
+  "subjects": [
+   "Ganges",
+   "Bhagiratha",
+   "Arjuna",
+   "elephants",
+   "nagas",
+   "Hinduism"
+  ],
+  "widthCm": 2900,
+  "heightCm": 1300,
+  "depthCm": null,
+  "weightKg": null,
+  "description": "Carved across two granite boulders at Mamallapuram on the Coromandel coast, this is the largest bas-relief in the world: 29 metres wide and 13 metres high, with more than a hundred figures of gods, people and animals. Tamils call it Arjunan Tapasu (அர்ச்சுனன் தபசு), Arjuna's Penance, after the gaunt figure standing on one leg beside the central cleft; the other reading is that he is Bhagiratha, whose austerities brought the river Ganges down from heaven to earth. The cleft between the boulders, which once carried real water from a tank above, stands for the river, and serpent-deities (nagas) rise in it. To its right walks a family of life-size elephants, among the most admired animal sculptures in India. The relief was cut in the mid-seventh century under the Pallava king Narasimhavarman I, called Mamalla, the great wrestler, from whom the town takes its name. It is part of the UNESCO World Heritage Group of Monuments at Mahabalipuram.",
+  "facts": [
+   "At about 29 by 13 metres it is the largest open-air rock relief in the world.",
+   "A cistern above the cleft once released water down the channel so that the Ganges actually flowed between the carved nagas.",
+   "The elephants are carved at life size; a sly cat 'doing penance' among mice beneath them is a famous joke in stone.",
+   "An unfinished copy of the same composition stands a few hundred metres away, abandoned by the Pallava carvers."
+  ],
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Descent_of_the_Ganges_(Mahabalipuram)",
+  "wikidataQid": "Q1753664"
+ }
+}

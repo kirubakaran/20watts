@@ -1,0 +1,107 @@
+{
+ "slug": "exekias-neck-amphora-met",
+ "title": "Wedding amphora, by Exekias",
+ "titleOriginal": null,
+ "kind": "image",
+ "source": {
+  "type": "commons",
+  "fileTitle": "File:Terracotta neck-amphora (jar) with lid and knob (27.16) MET DP218568.jpg",
+  "curid": 57852675,
+  "url": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Terracotta_neck-amphora_%28jar%29_with_lid_and_knob_%2827.16%29_MET_DP218568.jpg",
+  "width": 3208,
+  "height": 4000,
+  "bytes": 1823736,
+  "mime": "image/jpeg",
+  "licenseName": "CC0 1.0",
+  "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "author": "The Metropolitan Museum of Art (Open Access photograph DP218568)",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:Terracotta_neck-amphora_(jar)_with_lid_and_knob_(27.16)_MET_DP218568.jpg",
+  "notes": "Met Open Access studio photograph, donated to Commons by the Met; same file served by the Met at https://images.metmuseum.org/CRDImages/gr/original/DP218568.jpg (object 250551). Clean frontal view on a plain grey ground, lid in place. Date, dimensions, accession and culture from the Met collection API (object 250551); creator attribution and depicted subjects from Wikidata Q29383807; Exekias' active dates from en.wikipedia 'Exekias'. The Met page itself returned HTTP 429 during sourcing, so the curatorial text was not read."
+ },
+ "object": {
+  "year": -540,
+  "yearStart": -540,
+  "yearEnd": -540,
+  "dateLabel": "ca. 540 BC",
+  "madeIn": {
+   "name": "Athens",
+   "region": "Attica",
+   "country": "Greece",
+   "lat": 37.98417,
+   "lon": 23.72806,
+   "wikidataQid": "Q1524"
+  },
+  "location": {
+   "name": "The Metropolitan Museum of Art",
+   "country": "United States",
+   "institution": "The Metropolitan Museum of Art, New York",
+   "inventoryNumber": "17.230.14a, b"
+  },
+  "culture": "Greek, Attic",
+  "movement": "Archaic black-figure",
+  "medium": "Terracotta, black-figure",
+  "materials": [
+   "terracotta"
+  ],
+  "subjects": [
+   "wedding procession",
+   "chariot",
+   "horses",
+   "man",
+   "woman",
+   "kithara player",
+   "foot soldier"
+  ],
+  "widthCm": 24.8,
+  "heightCm": 47.0,
+  "depthCm": null,
+  "weightKg": null,
+  "creator": {
+   "name": "Exekias",
+   "role": "potter and painter (attributed)",
+   "birthYear": null,
+   "deathYear": null,
+   "wikidataQid": "Q358541"
+  },
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Exekias",
+  "wikidataQid": "Q29383807",
+  "description": "Lidded neck-amphora attributed to Exekias, the leading Athenian black-figure potter-painter of the mid sixth century BC. On the body a couple ride in a four-horse chariot in a procession, accompanied by a kithara player and a foot soldier, beneath a band of palmettes and lotus on the neck. Exekias' work is marked by precise incision and dignified, static compositions; the lid with its bud-shaped knob survives with the vase. It is a neck-amphora, and the scene is a wedding procession.",
+  "facts": [
+   "Exekias was active in Athens between roughly 545 and 530 BC and worked as both potter and painter.",
+   "The vase stands 47 cm high and 24.8 cm in diameter and is in the Metropolitan Museum of Art (Rogers Fund, 1917).",
+   "Black-figure decoration is painted in a clay slip that fires black, with details incised through to the red clay."
+  ]
+ },
+ "alternatives": [
+  {
+   "fileTitle": "File:Akhilleus Aias MGEt 16757.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Akhilleus_Aias_MGEt_16757.jpg",
+   "licenseName": "Public domain",
+   "width": 4288,
+   "height": 2848,
+   "author": "Jakob Bådagård (own work)",
+   "note": "Excellent close-up of the famous Achilles and Ajax panel on the Exekias amphora in the Vatican (Museo Gregoriano Etrusco inv. 16757), 540-530 BC; detail only, not the whole vase."
+  },
+  {
+   "fileTitle": "File:Achilles and Ajax playing dice, Attic black-figured amphora, signed by Exekias as both painter and potter, 540-530 BC, inv. 16757 - Museo Gregoriano Etrusco - Vatican Museums - DSC01049.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/4/47/Achilles_and_Ajax_playing_dice%2C_Attic_black-figured_amphora%2C_signed_by_Exekias_as_both_painter_and_potter%2C_540-530_BC%2C_inv._16757_-_Museo_Gregoriano_Etrusco_-_Vatican_Museums_-_DSC01049.jpg",
+   "licenseName": "Public domain",
+   "width": 3648,
+   "height": 5472,
+   "author": "Daderot (own work, released PD)",
+   "note": "Whole Vatican amphora, but shot through a vitrine with reflections, a busy gallery background and a label on the case."
+  }
+ ],
+ "fallbackWidthM": 0.5,
+ "genre": [
+  "pottery",
+  "vase painting"
+ ],
+ "tags": [
+  "greek",
+  "black-figure",
+  "exekias"
+ ],
+ "periodSlug": "ancient-greece",
+ "importance": 0.85
+}

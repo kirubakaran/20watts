@@ -166,6 +166,17 @@ export interface ModelRung {
   draco: boolean;
 }
 
+/** A material factor override applied by the pipeline, see `original.materials`. Colours are linear RGB 0..1. */
+export interface MaterialFix {
+  match: string;
+  baseColor?: [number, number, number];
+  metallic?: number;
+  roughness?: number;
+  emissive?: [number, number, number];
+  /** Drawn from both sides: a membrane or sail whose normals face away from the visitor. */
+  doubleSided?: boolean;
+}
+
 export interface ModelVersion {
   id: string;
   /** Where the model came from: a glb, or a scene manifest the pipeline understands. */
@@ -192,6 +203,13 @@ export interface ModelVersion {
      * pipeline; the original keeps them.
      */
     omit?: string[];
+    /**
+     * Material fixes baked into the rungs, for a file whose export lost its
+     * look (a reflective sunshield come out matte black): every material
+     * whose name contains `match` takes the factors given. The original is
+     * untouched, and the record's notes should say what was restored and why.
+     */
+    materials?: MaterialFix[];
   };
   /**
    * Ascending by quality. Each rung is one .glb, Y-up, in metres, with the
@@ -207,7 +225,7 @@ export interface ModelVersion {
   contributed: Contribution;
   moderation: Moderation;
   /**
-   * "smithsonian-3d" | "zenodo" | "sketchfab" | "user-upload" ...
+   * "smithsonian-3d" | "zenodo" | "sketchfab" | "nasa" | "user-upload" ...
    * "zenodo" (or any direct glb URL) is downloaded into data/originals.
    * Sources the pipeline cannot fetch itself (Sketchfab needs a login, uploads
    * arrive by hand) are read from data/originals/<artwork id>/ instead.
@@ -294,7 +312,8 @@ export interface SimAsset {
  * A side quest: this work stands beside another, off the main lane, because
  * the two belong together in a way time does not show: the chip inside a
  * computer, the manual that came in its box, the die inside the chip.
- * Steps count outward from the anchor, 1 nearest; a step's own date is kept
+ * Steps count outward from the anchor, 1 nearest, east; a negative step
+ * stands west, -1 nearest; a step's own date is kept
  * for the placard but does not place it. A branch of a branch is allowed
  * (the anchor may itself be a branch work); the chain stands in one row.
  */
@@ -384,6 +403,12 @@ export interface DisplayHints {
    * than 1.2 m that is not entered may be; everything else may not.
    */
   grab?: boolean;
+  /**
+   * Turns slowly on its vertical axis, one turn in this many seconds, so
+   * every side comes round: for a thing hung in the air that has no front
+   * a visitor could walk to.
+   */
+  spin?: number;
   /** How the sky changes as the visitor comes near. */
   sky?: SkyHint;
   /**

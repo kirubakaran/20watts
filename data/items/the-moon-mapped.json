@@ -1,0 +1,120 @@
+{
+ "slug": "the-moon-mapped",
+ "title": "The Moon",
+ "titleOriginal": null,
+ "kind": "sim",
+ "importance": 0.85,
+ "genre": [
+  "cartography",
+  "space"
+ ],
+ "tags": [
+  "Moon",
+  "NASA",
+  "map",
+  "space",
+  "Apollo",
+  "simulation"
+ ],
+ "periodSlug": null,
+ "flat": false,
+ "baseHeight": 1,
+ "source": {
+  "type": "procedural",
+  "curid": null,
+  "fileTitle": null,
+  "sourcePage": null,
+  "width": null,
+  "height": null,
+  "bytes": null,
+  "mime": null,
+  "licenseName": "Public domain",
+  "licenseUrl": null,
+  "author": "NASA / Goddard Space Flight Center Scientific Visualization Studio",
+  "notes": "A globe drawn by src/sims/moon.ts with the colour map from NASA's CGI Moon Kit (Lunar Reconnaissance Orbiter Camera, SVS 4720, lroc_color_poles_4k.tif, public domain as US government work; the 4 k TIFF is kept in data/originals/sky/ and served as public/sky/moon-4k.jpg and moon-2k.jpg). Tranquility Base is marked at 0.674 N, 23.473 E. The same map is on the Moon in the night sky near this work, drawn three degrees wide, six times the real size, lit from a sun below the horizon to the west-north-west so it shows the waxing crescent of the evening of 20 July 1969; the stars are Houston's that night, about 20:30 local.",
+  "program": "moon",
+  "params": {
+   "diameter": 1,
+   "turnSeconds": 90
+  },
+  "bounds": {
+   "width": 1,
+   "height": 1,
+   "depth": 1
+  }
+ },
+ "object": {
+  "year": 1969,
+  "month": 7,
+  "day": 20,
+  "yearStart": null,
+  "yearEnd": null,
+  "dateLabel": "20 July 1969",
+  "madeIn": {
+   "name": "Greenbelt",
+   "region": "Maryland",
+   "country": "United States",
+   "lat": 38.996,
+   "lon": -76.848,
+   "wikidataQid": null
+  },
+  "location": {
+   "name": "Everywhere it is computed",
+   "region": null,
+   "country": null,
+   "lat": null,
+   "lon": null,
+   "wikidataQid": null,
+   "institution": null,
+   "inventoryNumber": null
+  },
+  "creator": {
+   "name": "NASA, the Lunar Reconnaissance Orbiter team",
+   "role": "cartographer",
+   "birthYear": null,
+   "deathYear": null,
+   "wikidataQid": null
+  },
+  "culture": null,
+  "movement": null,
+  "medium": "A globe, from the LRO colour mosaic, computed live",
+  "materials": [],
+  "subjects": [
+   "Moon",
+   "cartography",
+   "Apollo 11",
+   "lunar reconnaissance"
+  ],
+  "widthCm": null,
+  "heightCm": null,
+  "depthCm": null,
+  "weightKg": null,
+  "description": "The Moon, as people finally saw all of it. For all of history one face was known and the other was not, until a Soviet probe photographed the far side in 1959 and the Lunar Reconnaissance Orbiter, circling since 2009, mapped the whole globe in colour at a resolution of a hundred metres. This is that map on a globe you can turn, and, in VR, hold.\n\nThe globe turns as you watch. The red dot is Tranquility Base, where Eagle landed on the evening of 20 July 1969, the day this work is placed on. Look up: the night sky here is Houston's that evening, with the Moon a waxing crescent in the west, drawn larger than life so it can be looked at. Two people were standing on it.",
+  "facts": [
+   "The map is the Lunar Reconnaissance Orbiter Camera's wide-angle colour mosaic, with the poles filled in from its narrow-angle images.",
+   "The far side has almost none of the dark plains that make the face we know; it is nearly all bright highland.",
+   "On 20 July 1969 the Moon was six days past new, a crescent setting in the west during the moonwalk in the Americas.",
+   "The red dot sits on the Sea of Tranquility, 0.67 degrees north, 23.47 degrees east."
+  ],
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Lunar_Reconnaissance_Orbiter",
+  "wikidataQid": "Q1076118"
+ },
+ "grab": true,
+ "sky": {
+  "radius": 16,
+  "stars": {
+   "year": 1969,
+   "latitude": 29.76,
+   "siderealHours": 17.5
+  },
+  "moon": {
+   "azimuth": 240,
+   "altitude": 20,
+   "size": 6,
+   "sun": {
+    "azimuth": 320,
+    "altitude": -20
+   }
+  }
+ }
+}

@@ -1,0 +1,91 @@
+{
+ "slug": "hand-stencils-leang-pettakere",
+ "title": "Hand stencils, Leang Pettakere",
+ "titleOriginal": null,
+ "kind": "image",
+ "importance": 0.85,
+ "genre": [
+  "rock art",
+  "cave painting"
+ ],
+ "tags": [
+  "prehistoric",
+  "rock art",
+  "sulawesi",
+  "hand stencil"
+ ],
+ "periodSlug": "paleolithic",
+ "flat": false,
+ "baseHeight": null,
+ "source": {
+  "type": "commons",
+  "curid": 31360759,
+  "fileTitle": "File:Hands in Pettakere Cave.jpg",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Hands_in_Pettakere_Cave.jpg",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:Hands_in_Pettakere_Cave.jpg",
+  "width": 3264,
+  "height": 2448,
+  "bytes": 1543487,
+  "mime": "image/jpeg",
+  "licenseName": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "author": "Cahyo Ramadhani",
+  "notes": "Import from Wikimedia Commons; photograph of the cave wall"
+ },
+ "object": {
+  "year": -35000,
+  "month": null,
+  "day": null,
+  "yearStart": -38000,
+  "yearEnd": -20000,
+  "dateLabel": "c. 35,000 BCE",
+  "madeIn": {
+   "name": "Leang-Leang, Maros",
+   "region": "South Sulawesi",
+   "country": "Indonesia",
+   "lat": -4.976,
+   "lon": 119.674,
+   "wikidataQid": null
+  },
+  "location": {
+   "name": "Leang-Leang, Maros",
+   "region": "South Sulawesi",
+   "country": "Indonesia",
+   "lat": -4.976,
+   "lon": 119.674,
+   "wikidataQid": null,
+   "institution": "Leang-Leang Prehistoric Site",
+   "inventoryNumber": null
+  },
+  "creator": {
+   "name": "Unknown Pleistocene painters of Sulawesi",
+   "role": "painter",
+   "birthYear": null,
+   "deathYear": null,
+   "wikidataQid": null
+  },
+  "culture": "Sulawesi Pleistocene",
+  "movement": null,
+  "medium": "red ochre sprayed over the hand",
+  "materials": [
+   "ochre"
+  ],
+  "subjects": [
+   "hands",
+   "hand stencils"
+  ],
+  "widthCm": null,
+  "heightCm": null,
+  "depthCm": null,
+  "weightKg": null,
+  "description": "Hands held against the limestone and sprayed with red ochre, in one of the Maros-Pangkep karst caves of southern Sulawesi. A stencil in the neighbouring cave of Leang Timpuseng is at least 39,900 years old, which made the Sulawesi caves the oldest dated figurative rock art in the world when it was published in 2014, older than anything then dated in Europe.",
+  "facts": [
+   "The age comes from uranium-series dating of the calcite 'cave popcorn' that grew over the paintings, which gives a minimum age.",
+   "A nearby painting of a Sulawesi warty pig at Leang Tedongnge was later dated to at least 45,500 years.",
+   "The stencils are negative images: the hand is the unpainted part."
+  ],
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Prehistoric_rock_art_of_Maros-Pangkep",
+  "wikidataQid": null
+ },
+ "fallbackWidthM": 1.6
+}

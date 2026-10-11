@@ -1,0 +1,106 @@
+{
+ "slug": "cassatt-the-childs-bath",
+ "title": "The Child's Bath",
+ "titleOriginal": "La Toilette de l'enfant",
+ "kind": "image",
+ "flat": true,
+ "importance": 0.85,
+ "genre": [
+  "painting"
+ ],
+ "periodSlug": null,
+ "tags": [
+  "impressionism",
+  "Cassatt",
+  "mother and child",
+  "Japanese prints",
+  "American artists in Paris"
+ ],
+ "source": {
+  "type": "commons",
+  "fileTitle": "File:Mary Cassatt - The Child's Bath - Google Art Project.jpg",
+  "curid": 21909225,
+  "url": "https://upload.wikimedia.org/wikipedia/commons/7/72/Mary_Cassatt_-_The_Child%27s_Bath_-_Google_Art_Project.jpg",
+  "width": 3219,
+  "height": 4912,
+  "bytes": 3170157,
+  "mime": "image/jpeg",
+  "licenseName": "Public domain",
+  "licenseUrl": "https://commons.wikimedia.org/wiki/Template:PD-art",
+  "author": "Mary Cassatt; Google Art Project scan at the Art Institute of Chicago",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:Mary_Cassatt_-_The_Child's_Bath_-_Google_Art_Project.jpg",
+  "notes": "Google Art Project scan at the Art Institute of Chicago, 3219 x 4912 px (3.2 MB), a Featured Picture on Commons and on English, Chinese and Persian Wikipedia, cropped to the paint surface. Commons licence templates PD-Art (PD-old-auto-expired), PD-old-95-expired; extmetadata LicenseShortName = 'Public domain', Copyrighted = 'False', Artist = 'Mary Cassatt', Credit = 'Google Arts & Culture'; file page carries the AIC's full exhibition history and accession 1910.2, Wikidata Q3172226. The AIC's own CC0 image on Commons (curid 80482731) is only 1976 x 3000 px. Chosen over Little Girl in a Blue Armchair (NGA CC0 open-access file, curid 81328805, 4000 x 2680 px, 11.8 MB, for a 89.5 x 129.8 cm canvas) because this scan has about 49 px per cm against 31, is a Featured Picture, and the picture is the better-known work; the NGA file is listed as an alternate. Dimensions 100.3 x 66.1 cm from Wikidata (AIC: 100.3 x 66.1 cm). Painted in Paris, where Cassatt lived from 1874."
+ },
+ "object": {
+  "year": 1893,
+  "month": null,
+  "day": null,
+  "yearStart": null,
+  "yearEnd": null,
+  "dateLabel": "1893",
+  "madeIn": {
+   "name": "Paris",
+   "region": "Île-de-France",
+   "country": "France",
+   "lat": 48.85667,
+   "lon": 2.35222,
+   "wikidataQid": "Q90"
+  },
+  "location": {
+   "name": "Art Institute of Chicago",
+   "country": "United States",
+   "institution": "Art Institute of Chicago",
+   "inventoryNumber": "1910.2"
+  },
+  "culture": "American",
+  "movement": "Impressionism",
+  "medium": "Oil on canvas",
+  "materials": [
+   "oil paint",
+   "canvas"
+  ],
+  "subjects": [
+   "mother and child",
+   "washing",
+   "basin",
+   "pitcher",
+   "striped dress",
+   "patterned carpet",
+   "interior"
+  ],
+  "widthCm": 66.1,
+  "heightCm": 100.3,
+  "depthCm": null,
+  "weightKg": null,
+  "creator": {
+   "name": "Mary Cassatt",
+   "role": "painter",
+   "birthYear": 1844,
+   "deathYear": 1926,
+   "wikidataQid": "Q173223"
+  },
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/The_Child%27s_Bath",
+  "wikidataQid": "Q3172226",
+  "description": "A woman in a striped dress holds a child on her lap and washes its feet in a basin of water, both of them looking down at the foot in her hand. We look down too, from above, so that the floor, the carpet, the chest of drawers and the jug tip up towards us and the picture is nearly all pattern: stripes, flowers on the wallpaper, lozenges on the rug. The steep view and the flat shapes come from the Japanese woodcuts Cassatt had seen at a large exhibition in Paris in 1890, which changed her work. She was an American from Pittsburgh who settled in Paris in 1874, was invited by Degas to show with the Impressionists and did so four times. Mothers and children were her subject for thirty years, treated without sentiment; here the child's body has real weight and the mother's grip is firm. The Art Institute of Chicago bought the painting in 1910.",
+  "facts": [
+   "Shown at Cassatt's first solo exhibition, at Durand-Ruel in Paris in November 1893, as La Toilette de l'enfant.",
+   "The high viewpoint and flat patterning follow the Japanese prints shown at the École des Beaux-Arts in 1890; Cassatt made her own set of ten colour prints in reply in 1890–91.",
+   "Cassatt exhibited with the Impressionists in 1879, 1880, 1881 and 1886, the only American to do so.",
+   "100.3 by 66.1 cm; bought by the Art Institute of Chicago in 1910, the first of her paintings in a Chicago museum."
+  ]
+ },
+ "alternates": [
+  {
+   "fileTitle": "File:Mary Cassatt, Little Girl in a Blue Armchair, 1878, NGA 61368.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/7/74/Mary_Cassatt%2C_Little_Girl_in_a_Blue_Armchair%2C_1878%2C_NGA_61368.jpg",
+   "licenseName": "CC0",
+   "width": 4000,
+   "height": 2680,
+   "bytes": 11809312,
+   "mime": "image/jpeg",
+   "author": "Mary Cassatt; open-access image from the National Gallery of Art, Washington (NGA object 61368)",
+   "sourcePage": "https://commons.wikimedia.org/wiki/File:Mary_Cassatt,_Little_Girl_in_a_Blue_Armchair,_1878,_NGA_61368.jpg",
+   "notes": "Different work: Little Girl in a Blue Armchair, 1878, National Gallery of Art 1983.1.18, 89.5 x 129.8 cm; the NGA's CC0 open-access scan. Kept as the alternative choice for item 10."
+  }
+ ]
+}

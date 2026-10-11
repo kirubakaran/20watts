@@ -1,0 +1,93 @@
+{
+ "slug": "venus-of-willendorf",
+ "title": "Venus of Willendorf",
+ "kind": "image",
+ "source": {
+  "type": "commons",
+  "fileTitle": "File:Venus of Willendorf 03.jpg",
+  "curid": 1587877,
+  "url": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Venus_of_Willendorf_03.jpg",
+  "width": 2308,
+  "height": 3468,
+  "bytes": 1677975,
+  "mime": "image/jpeg",
+  "licenseName": "CC BY 2.5",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.5",
+  "author": "MatthiasKabel",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:Venus_of_Willendorf_03.jpg",
+  "notes": "Original figurine at the Naturhistorisches Museum Wien, frontal view on a black background. CC BY (no share-alike). File metadata from the Commons imageinfo API. Object data: Date c. 30,000 BP: Wikipedia infobox; yearStart/yearEnd span the Gravettian range Wikipedia gives (33,000-20,000 years ago). Height 11.1 cm: Wikipedia lead and Wikidata P2048; width/depth not given there. Find-spot coordinates: Wikidata Q9374772 (Willendorf II). NHM inventory number not given on Wikipedia/Wikidata."
+ },
+ "object": {
+  "year": -28000,
+  "yearStart": -31000,
+  "yearEnd": -18000,
+  "dateLabel": "c. 30,000 years ago (Gravettian)",
+  "madeIn": {
+   "name": "Willendorf II site, Willendorf in der Wachau",
+   "region": "Lower Austria",
+   "country": "Austria",
+   "lat": 48.32327,
+   "lon": 15.40412,
+   "wikidataQid": "Q9374772"
+  },
+  "location": {
+   "name": "Naturhistorisches Museum Wien",
+   "country": "Austria",
+   "institution": "Natural History Museum, Vienna",
+   "inventoryNumber": null
+  },
+  "culture": "Gravettian (Upper Palaeolithic)",
+  "medium": "Carved oolitic limestone with traces of red ochre",
+  "materials": [
+   "oolitic limestone",
+   "red ochre"
+  ],
+  "subjects": [
+   "female figure",
+   "Venus figurine",
+   "fertility"
+  ],
+  "widthCm": null,
+  "heightCm": 11.1,
+  "depthCm": null,
+  "weightKg": null,
+  "creator": null,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Venus_of_Willendorf",
+  "wikidataQid": "Q131397",
+  "description": "A palm-sized female figure with exaggerated breasts, belly and hips, a patterned head without a face, and no feet. It was carved from an oolitic limestone not found locally and once tinted with red ochre. Found in 1908 in loess deposits beside the Danube at Willendorf, it is the best-known of the Palaeolithic Venus figurines.",
+  "facts": [
+   "Recovered on 7 August 1908 during a dig led by Josef Szombathy, Hugo Obermaier and Josef Bayer.",
+   "Radiocarbon dates from the surrounding layers suggest it was buried about 30,000 years ago.",
+   "Its limestone is not local to the Wachau; the name Venus is a modern label, and some scholars prefer Woman of Willendorf."
+  ]
+ },
+ "alternatives": [
+  {
+   "fileTitle": "File:Venus of Willendorf, 20210730 1214 1255.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Venus_of_Willendorf%2C_20210730_1214_1255.jpg",
+   "licenseName": "CC BY-SA 4.0",
+   "author": "Jakub Hałun",
+   "size": "1832x2744",
+   "note": "Very clean, evenly lit frontal view; slightly under 2000 px wide."
+  },
+  {
+   "fileTitle": "File:Willendorf-Venus-1468.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Willendorf-Venus-1468.jpg",
+   "licenseName": "CC BY-SA 4.0",
+   "author": "Don Hitchcock",
+   "size": "2001x3177",
+   "note": "Frontal, tight crop, faint reflections in the background."
+  }
+ ],
+ "fallbackWidthM": 0.5,
+ "genre": [
+  "sculpture",
+  "figurine"
+ ],
+ "tags": [
+  "gravettian",
+  "venus figurine"
+ ],
+ "periodSlug": "paleolithic",
+ "importance": 0.95
+}

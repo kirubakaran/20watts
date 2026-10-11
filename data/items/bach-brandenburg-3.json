@@ -1,0 +1,61 @@
+{
+ "slug": "bach-brandenburg-3",
+ "title": "Brandenburg Concerto No. 3",
+ "kind": "image",
+ "flat": true,
+ "importance": 0.9,
+ "genre": ["music"],
+ "periodSlug": null,
+ "tags": ["music", "baroque", "concerto"],
+ "source": {
+  "type": "commons",
+  "fileTitle": "File:Title page of Brandenburg Concertos.png",
+  "curid": 110713109,
+  "url": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Title_page_of_Brandenburg_Concertos.png",
+  "width": 1866,
+  "height": 1125,
+  "bytes": 3160956,
+  "mime": "image/png",
+  "licenseName": "CC0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "author": "Johann Sebastian Bach (manuscript, 1721); uploader's reproduction released CC0",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:Title_page_of_Brandenburg_Concertos.png",
+  "notes": "Bach's handwritten French title page of the dedication score 'Six Concerts avec plusieurs instruments', signed 'Jean Sebastien Bach, Maitre de Chapelle de S.A.S. le Prince regnant d'Anhalt-Coethen'; the stamp at right is that of the Gymnasium Joachimsthal, whose library the score passed through. The dedication score is held by the Staatsbibliothek zu Berlin (Am.B. 78). Commons API extmetadata: LicenseShortName 'CC0'; Artist 'J.S. Bach or his writer'; ImageDescription 'Title page of Brandenburg Concertos written in French, composed by Johann Sebastian Bach, was dedicated to the Margraviate of Brandenburg on March 24, 1721.' The underlying 1721 manuscript is itself public domain."
+ },
+ "audio": {
+  "type": "commons",
+  "fileTitle": "File:Bach - Brandenburg Concerto No. 3 - 1. Allegro.ogg",
+  "curid": 3537300,
+  "url": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Bach_-_Brandenburg_Concerto_No._3_-_1._Allegro.ogg",
+  "bytes": 9900685,
+  "mime": "audio/ogg",
+  "seconds": 319.2,
+  "licenseName": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "author": "Advent Chamber Orchestra (Al Goldstein collection, Pandora Music repository, ibiblio.org)",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:Bach_-_Brandenburg_Concerto_No._3_-_1._Allegro.ogg",
+  "performers": "The Advent Chamber Orchestra, recorded live at its concert of December 2006.",
+  "start": 0,
+  "excerptSeconds": 120,
+  "notes": "Commons API extmetadata: LicenseShortName 'CC BY-SA 2.0'; Artist 'Johann Sebastian Bach' (composer field); Credit 'The Al Goldstein collection in the Pandora Music repository at ibiblio.org.'; ImageDescription 'Brandenburg Concerto No. 3 in G major, BWV 1048, 1st movement ... Selections from the concert of December 2006'; Permission note: released under the EFF Open Audio License, which Commons treats as interchangeable with CC BY-SA 2.0. Attribution and share-alike required. Duration from API metadata: 319.16 s."
+ },
+ "object": {
+  "year": 1721, "month": 3, "day": 24, "yearStart": 1721, "yearEnd": 1721, "dateLabel": "24 March 1721 (dedication of the fair-copy score)",
+  "madeIn": {"name": "Köthen", "region": "Anhalt", "country": "Germany", "lat": 51.75, "lon": 11.97, "wikidataQid": "Q7070"},
+  "location": {"name": "Berlin", "country": "Germany", "institution": "Staatsbibliothek zu Berlin (dedication score, Am.B. 78)", "inventoryNumber": "Am.B. 78"},
+  "culture": "German",
+  "medium": "Concerto for three violins, three violas, three cellos and continuo; autograph dedication score, ink on paper",
+  "materials": ["ink", "paper"],
+  "subjects": ["music", "baroque", "concerto"],
+  "widthCm": null, "heightCm": null, "depthCm": null, "weightKg": null,
+  "creator": {"name": "Johann Sebastian Bach", "role": "composer", "birthYear": 1685, "deathYear": 1750, "wikidataQid": "Q1339"},
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Brandenburg_Concertos",
+  "wikidataQid": null,
+  "description": "In March 1721 Johann Sebastian Bach, then Kapellmeister to the small court of Anhalt-Köthen, sent a beautifully copied set of six concertos to Christian Ludwig, Margrave of Brandenburg, with a flattering French dedication. The margrave seems never to have had them played; the score sat in his library and was valued at a few groschen when he died. Today the six are the most celebrated orchestral works of the Baroque. The third concerto, in G major, is written for three violins, three violas, three cellos and continuo, and Bach treats the nine string parts as a single shifting texture, passing figures between the groups in rapid conversation. The page shown here is Bach's own title page from the dedication score, now in the Berlin State Library. The visitor hears the first movement, played by the Advent Chamber Orchestra in a live concert recording from December 2006, released under a Creative Commons licence.",
+  "facts": [
+   "The dedication is dated 24 March 1721; the concertos themselves were probably composed over the preceding years at Köthen and Weimar.",
+   "The third concerto has no full slow movement, only two chords linking the two fast movements, which players often expand with a short improvised cadenza.",
+   "The dedication score survived in the Berlin Royal Library and is now Am.B. 78 at the Staatsbibliothek zu Berlin."
+  ]
+ }
+}

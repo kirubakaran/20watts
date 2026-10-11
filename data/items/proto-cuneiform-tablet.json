@@ -1,0 +1,96 @@
+{
+ "slug": "proto-cuneiform-tablet",
+ "title": "Proto-cuneiform tablet",
+ "kind": "image",
+ "source": {
+  "type": "commons",
+  "fileTitle": "File:Cuneiform tablet- administrative account of barley distribution with cylinder seal impression of a male figure, hunting dogs, and boars MET DT847.jpg",
+  "curid": 57854047,
+  "url": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Cuneiform_tablet-_administrative_account_of_barley_distribution_with_cylinder_seal_impression_of_a_male_figure%2C_hunting_dogs%2C_and_boars_MET_DT847.jpg",
+  "width": 3787,
+  "height": 3429,
+  "bytes": 2217720,
+  "mime": "image/jpeg",
+  "licenseName": "CC0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "author": "The Metropolitan Museum of Art (Open Access)",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:Cuneiform_tablet-_administrative_account_of_barley_distribution_with_cylinder_seal_impression_of_a_male_figure,_hunting_dogs,_and_boars_MET_DT847.jpg",
+  "notes": "Met studio photograph of the obverse on a plain grey ground, donated to Commons under CC0 as part of the Met Open Access programme. Met object 329081, accession 1988.433.1; the Met's current primary image is https://images.metmuseum.org/CRDImages/an/original/DP293243.jpg (also CC0). Dates, dimensions and period from the Met collection API. Object data: All object data from the Met collection API object 329081 (date ca. 3100-2900 BCE, Jemdet Nasr period, Sumerian, clay, 5.4 x 6 x 4.1 cm, accession 1988.433.1, credit line 'Purchase, Raymond and Beverly Sackler Gift, 1988'). The Met records only 'Mesopotamia' as geography, so no find-spot coordinates are given; if a geo position is required, Uruk (Wikidata Q168518, 31.3259, 45.6374), the main source of proto-cuneiform tablets, is a defensible approximation but should be labelled as such."
+ },
+ "object": {
+  "year": -3000,
+  "yearStart": -3100,
+  "yearEnd": -2900,
+  "dateLabel": "ca. 3100–2900 BCE (Jemdet Nasr period)",
+  "madeIn": {
+   "name": "Southern Mesopotamia (find-spot unrecorded; placed at Uruk)",
+   "region": "Mesopotamia",
+   "country": "Iraq",
+   "lat": 31.3259,
+   "lon": 45.6374,
+   "wikidataQid": null
+  },
+  "location": {
+   "name": "The Metropolitan Museum of Art, New York",
+   "country": "United States",
+   "institution": "The Metropolitan Museum of Art",
+   "inventoryNumber": "1988.433.1"
+  },
+  "culture": "Sumerian",
+  "medium": "Clay, impressed with a stylus and a cylinder seal",
+  "materials": [
+   "clay"
+  ],
+  "subjects": [
+   "writing",
+   "accounting",
+   "barley",
+   "cylinder seal impression",
+   "hunting dogs",
+   "boars"
+  ],
+  "widthCm": 6.0,
+  "heightCm": 5.4,
+  "depthCm": 4.1,
+  "weightKg": null,
+  "creator": null,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Proto-cuneiform",
+  "wikidataQid": null,
+  "description": "A small clay tablet recording the distribution of barley in the pictographic proto-cuneiform script, the earliest stage of writing in Mesopotamia. Numerical notations are pressed into the clay with the round end of a stylus beside signs for the commodity and its recipients. The reverse and edges were rolled with a cylinder seal showing a man with hunting dogs and boars.",
+  "facts": [
+   "Dated by the Met to about 3100-2900 BCE, the Jemdet Nasr period, when writing was still largely pictographic.",
+   "The tablet measures 5.4 by 6 by 4.1 cm and entered the Met in 1988 as a Raymond and Beverly Sackler gift purchase.",
+   "Proto-cuneiform tablets are almost all administrative records, listing goods, rations and labour rather than language as speech."
+  ]
+ },
+ "alternatives": [
+  {
+   "fileTitle": "File:Cuneiform tablet- administrative account concerning the distribution of barley and emmer MET DP297601.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Cuneiform_tablet-_administrative_account_concerning_the_distribution_of_barley_and_emmer_MET_DP297601.jpg",
+   "licenseName": "CC0",
+   "author": "The Metropolitan Museum of Art (Open Access)",
+   "size": "3000x4000",
+   "note": "Companion tablet Met 327384 (1988.433.2), same period, on a white ground; numerals more prominent than signs."
+  },
+  {
+   "fileTitle": "File:P1150884 Louvre Uruk III tablette écriture précunéiforme AO19936 rwk.jpg",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/1/1f/P1150884_Louvre_Uruk_III_tablette_%C3%A9criture_pr%C3%A9cun%C3%A9iforme_AO19936_rwk.jpg",
+   "licenseName": "CC BY 3.0",
+   "author": "Mbzt",
+   "size": "1500x1349",
+   "note": "Louvre AO 19936, Uruk III proto-cuneiform tablet; crisp signs but only 1500 px and mounting clips visible."
+  }
+ ],
+ "fallbackWidthM": 0.5,
+ "genre": [
+  "document",
+  "writing"
+ ],
+ "tags": [
+  "cuneiform",
+  "writing",
+  "sumer"
+ ],
+ "periodSlug": "ancient-near-east",
+ "importance": 0.9
+}

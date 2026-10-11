@@ -1,0 +1,95 @@
+{
+ "slug": "cray-1",
+ "title": "Cray-1",
+ "titleOriginal": null,
+ "kind": "image",
+ "importance": 0.85,
+ "genre": [
+  "computer",
+  "machine"
+ ],
+ "tags": [
+  "supercomputer",
+  "cray",
+  "computing"
+ ],
+ "periodSlug": "modern",
+ "flat": false,
+ "baseHeight": null,
+ "source": {
+  "type": "commons",
+  "curid": 14619982,
+  "fileTitle": "File:Cray 1 IMG 9126.jpg",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Cray_1_IMG_9126.jpg",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:Cray_1_IMG_9126.jpg",
+  "width": 5616,
+  "height": 3744,
+  "bytes": 1268587,
+  "mime": "image/jpeg",
+  "licenseName": "CC BY-SA 2.0 FR",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/fr/",
+  "author": "Rama (Wikimedia Commons)",
+  "notes": "No 3D scan of a real Cray-1 exists on the Smithsonian, Met, Science Museum Group or Sketchfab (the two Sketchfab Cray-1 models are artist-made, see alternatives), so a photograph is used. This is a Commons Quality Image: the complete machine, tower and padded power-supply bench, photographed in 2011 against a black background in the EPFL hallway in Lausanne; dual-licensed CeCILL / CC BY-SA 2.0 FR, attribution 'Photograph by Rama, Wikimedia Commons, Cc-by-sa-2.0-fr'. The serial number of the EPFL machine is not stated on Commons. Dimensions from Wikipedia 'Cray-1' infobox: height 196 cm, base diameter 263 cm, column diameter 145 cm, weight '5.5 tons' (Cray-1A; unit not specified, 4,990 kg if short tons). Date and sales figures from Wikipedia; 80 MHz clock from the Computer History Museum's Cray-1 exhibit page."
+ },
+ "object": {
+  "year": 1976,
+  "month": 3,
+  "day": null,
+  "yearStart": 1975,
+  "yearEnd": 1976,
+  "dateLabel": "1976 (announced 1975)",
+  "madeIn": {
+   "name": "Chippewa Falls, Wisconsin",
+   "region": "Wisconsin",
+   "country": "United States",
+   "lat": 44.9333,
+   "lon": -91.4,
+   "wikidataQid": "Q940349"
+  },
+  "location": {
+   "name": "EPFL, Lausanne",
+   "region": null,
+   "country": "Switzerland",
+   "lat": null,
+   "lon": null,
+   "wikidataQid": null,
+   "institution": "École polytechnique fédérale de Lausanne",
+   "inventoryNumber": null
+  },
+  "creator": {
+   "name": "Seymour Cray",
+   "role": "designer",
+   "birthYear": 1925,
+   "deathYear": 1996,
+   "wikidataQid": "Q92765"
+  },
+  "culture": "American",
+  "movement": null,
+  "medium": "Electronic computer: ECL integrated circuits on hand-wired modules in a Freon-cooled C-shaped cabinet",
+  "materials": [
+   "integrated circuits",
+   "copper",
+   "aluminium",
+   "stainless steel",
+   "vinyl upholstery"
+  ],
+  "subjects": [
+   "computing",
+   "supercomputer",
+   "industrial design"
+  ],
+  "widthCm": null,
+  "heightCm": null,
+  "depthCm": null,
+  "weightKg": null,
+  "description": "The Cray-1 was the first supercomputer built by Seymour Cray's Cray Research and the fastest computer in the world from 1976 to 1982. Its C-shaped tower kept every wire short, and the padded bench around the base hid the power supplies, while liquid Freon carried away the heat of its hand-wired logic. Eighty or more were sold to weapons laboratories, weather centres and universities; this one stands at EPFL in Lausanne.",
+  "facts": [
+   "The first Cray-1 was installed at Los Alamos National Laboratory in 1976, after being announced in 1975.",
+   "It ran at an 80 MHz clock (12.5 ns cycle) with 64-bit words and vector registers, and contained over 60 miles of wire, no piece longer than three feet.",
+   "Over 80 Cray-1s of all types were sold at $5–8 million each, making Seymour Cray a celebrity and Cray Research a success."
+  ],
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Cray-1",
+  "wikidataQid": "Q1093705"
+ },
+ "fallbackWidthM": 3
+}

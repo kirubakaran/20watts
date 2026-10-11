@@ -1,0 +1,109 @@
+{
+ "slug": "juan-breva-malaguenas",
+ "title": "Juan Breva sings malagueñas",
+ "titleOriginal": null,
+ "kind": "image",
+ "importance": 0.85,
+ "genre": [
+  "music"
+ ],
+ "tags": [
+  "music",
+  "Spain",
+  "flamenco",
+  "cante",
+  "recording",
+  "gramophone"
+ ],
+ "periodSlug": null,
+ "flat": false,
+ "baseHeight": null,
+ "source": {
+  "type": "commons",
+  "curid": 13570125,
+  "fileTitle": "File:Juan Breva.jpg",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/5/53/Juan_Breva.jpg",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:Juan_Breva.jpg",
+  "width": 197,
+  "height": 300,
+  "bytes": 15966,
+  "mime": "image/jpeg",
+  "licenseName": "Public domain",
+  "licenseUrl": null,
+  "author": "Unknown photographer, c. 1890",
+  "notes": "A photograph of Juan Breva from about 1890, public domain. A very small file; the only free image."
+ },
+ "object": {
+  "year": 1910,
+  "month": 11,
+  "day": 12,
+  "yearStart": null,
+  "yearEnd": null,
+  "dateLabel": "Madrid, 12 November 1910",
+  "madeIn": {
+   "name": "Madrid",
+   "region": null,
+   "country": "Spain",
+   "lat": 40.4168,
+   "lon": -3.7038,
+   "wikidataQid": null
+  },
+  "location": {
+   "name": null,
+   "region": null,
+   "country": null,
+   "lat": null,
+   "lon": null,
+   "wikidataQid": null,
+   "institution": null,
+   "inventoryNumber": null
+  },
+  "creator": {
+   "name": "Juan Breva (Antonio Ortega Escalona)",
+   "role": "singer",
+   "birthYear": 1844,
+   "deathYear": 1918,
+   "wikidataQid": null
+  },
+  "culture": "Spanish (Andalusian, flamenco)",
+  "movement": null,
+  "medium": "Acoustic 78 rpm gramophone recording; malagueñas, cante with guitar",
+  "materials": [
+   "shellac"
+  ],
+  "subjects": [
+   "music",
+   "flamenco",
+   "malagueñas",
+   "sound recording"
+  ],
+  "widthCm": null,
+  "heightCm": null,
+  "depthCm": null,
+  "weightKg": null,
+  "description": "The oldest voice in flamenco. Juan Breva was born in Vélez-Málaga in 1844, so he was singing in the cafés cantantes when the art was being made, before the word flamenco meant what it means now; he sang for Alfonso XII at the palace and was the first cantaor to be famous across Spain. His malagueñas, the cante of his own country, is the form he made his own, slow and ornamented over the guitar. He recorded it in Madrid in 1910 at sixty-six, one of the handful of sessions that carry the sound of the nineteenth century into ours; Lorca wrote a poem about him, blind and singing, 'with the voice of a girl'.",
+  "facts": [
+   "He is said to have been the first flamenco singer to perform standing up, with the guitar played for him rather than by him.",
+   "Lorca's 'Juan Breva' is in the Poema del cante jondo of 1921.",
+   "He died poor in Málaga in 1918; the city named a peña after him."
+  ],
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Juan_Breva",
+  "wikidataQid": null
+ },
+ "fallbackWidthM": 0.4,
+ "audio": {
+  "type": "internet-archive",
+  "url": "https://archive.org/download/desde-los-origenes-vol2-corte-37-juan-breva-malaguenas-552-135/37-Juan%20BREVA%20Malague%C3%B1as%20552.135.MP3",
+  "bytes": 6944652,
+  "mime": "audio/mpeg",
+  "seconds": 173.5,
+  "start": 0,
+  "excerptSeconds": null,
+  "performers": "Juan Breva, voice, with guitar, recorded in Madrid for the Gramophone Company on 12 November 1910 (matrix 16128u, catalogue 3-62143).",
+  "author": "Juan Breva, voice, with guitar; Gramophone Company, Madrid, 12 November 1910; matrix 16128u, Gramophone 3-62143",
+  "licenseName": "Public domain",
+  "licenseUrl": null,
+  "sourcePage": "https://archive.org/details/desde-los-origenes-vol2-corte-37-juan-breva-malaguenas-552-135",
+  "notes": "Public domain in the United States: the recording was first published before 1926 (Music Modernization Act schedule, as of 2026) and the composition before 1931 or is traditional. The cante is traditional. Transfer uploaded to the Internet Archive with a public-domain mark; session data from the Discography of American Historical Recordings."
+ }
+}

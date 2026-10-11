@@ -1,0 +1,112 @@
+{
+ "slug": "nina-de-los-peines-tarantas",
+ "title": "La Niña de los Peines sings tarantas",
+ "titleOriginal": null,
+ "kind": "image",
+ "importance": 0.9,
+ "genre": [
+  "music"
+ ],
+ "tags": [
+  "music",
+  "Spain",
+  "flamenco",
+  "cante",
+  "guitar",
+  "recording",
+  "gramophone"
+ ],
+ "periodSlug": null,
+ "flat": false,
+ "baseHeight": null,
+ "source": {
+  "type": "commons",
+  "curid": 15756540,
+  "fileTitle": "File:La niña de los peines by Julio Romero de Torres.jpg",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/a/a2/La_ni%C3%B1a_de_los_peines_by_Julio_Romero_de_Torres.jpg",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:La_niña_de_los_peines_by_Julio_Romero_de_Torres.jpg",
+  "width": 293,
+  "height": 356,
+  "bytes": 31447,
+  "mime": "image/jpeg",
+  "licenseName": "Public domain",
+  "licenseUrl": null,
+  "author": "Julio Romero de Torres (1874-1930), painted 1917-18",
+  "notes": "Julio Romero de Torres's portrait of Pastora Pavón, painted in 1917-18; the painter died in 1930 and the work is public domain. Small reproduction, the only free image of her from the period."
+ },
+ "object": {
+  "year": 1911,
+  "month": 11,
+  "day": 16,
+  "yearStart": 1911,
+  "yearEnd": 1911,
+  "dateLabel": "Madrid, 16 November 1911",
+  "datePrecision": "day",
+  "madeIn": {
+   "name": "Madrid",
+   "region": null,
+   "country": "Spain",
+   "lat": 40.4168,
+   "lon": -3.7038,
+   "wikidataQid": null
+  },
+  "location": {
+   "name": null,
+   "region": null,
+   "country": null,
+   "lat": null,
+   "lon": null,
+   "wikidataQid": null,
+   "institution": null,
+   "inventoryNumber": null
+  },
+  "creator": {
+   "name": "La Niña de los Peines (Pastora Pavón)",
+   "role": "singer",
+   "birthYear": 1890,
+   "deathYear": 1969,
+   "wikidataQid": null
+  },
+  "culture": "Spanish (Andalusian, flamenco)",
+  "movement": null,
+  "medium": "Acoustic 78 rpm gramophone recording; tarantas, cante with guitar",
+  "materials": [
+   "shellac"
+  ],
+  "subjects": [
+   "music",
+   "flamenco",
+   "cante jondo",
+   "guitar",
+   "sound recording"
+  ],
+  "widthCm": null,
+  "heightCm": null,
+  "depthCm": null,
+  "weightKg": null,
+  "description": "Flamenco's greatest female voice, recorded at twenty, with the man who invented the modern flamenco guitar. Pastora Pavón, called La Niña de los Peines after a tango she sang about combs, was from the Alameda in Seville and had been singing in cafés cantantes since she was eight; Lorca and Falla put her at the centre of their 1922 Concurso de Cante Jondo, and in 1999 her recordings were declared a Bien de Interés Cultural, a protected monument of Andalusia, the only sound recordings to be so. The tarantas is the cante of the mining country of Almería and Murcia, free in rhythm, a lament; behind her Ramón Montoya, whose playing turned the guitar from accompaniment into an art of its own. The disc was cut in Madrid about 1910.",
+  "facts": [
+   "Her records with Montoya, made between 1909 and the late 1920s, are the core of the flamenco canon.",
+   "The Concurso de Cante Jondo of Granada, 1922, organised by Falla and Lorca, took her as its measure of the cante.",
+   "Ramón Montoya's 1936 Paris recordings are the first flamenco guitar solos on disc."
+  ],
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/La_Ni%C3%B1a_de_los_Peines",
+  "wikidataQid": null
+ },
+ "fallbackWidthM": 0.55,
+ "audio": {
+  "type": "internet-archive",
+  "url": "https://archive.org/download/nina-de-los-peines-de-noche-y-dia-taranta/01%20Ni%C3%B1a%20de%20los%20Peines%20-%20De%20noche%20y%20d%C3%ADa%20%28taranta%29.mp3",
+  "bytes": 3728204,
+  "mime": "audio/mpeg",
+  "seconds": 153.7,
+  "start": 0,
+  "excerptSeconds": null,
+  "performers": "Pastora Pavón, La Niña de los Peines, voice, with Ramón Montoya, guitar; 'De noche y día', tarantas, recorded for the Gramophone Company in Madrid about 1910 (the discographies place her Zonophone tarantas between 1909 and 1911).",
+  "author": "La Niña de los Peines (Pastora Pavón), voice; Ramón Montoya, guitar; Gramophone/Zonophone, Madrid, c. 1910",
+  "licenseName": "Public domain",
+  "licenseUrl": null,
+  "sourcePage": "https://archive.org/details/nina-de-los-peines-de-noche-y-dia-taranta",
+  "notes": "Public domain in the United States: the recording was first published before 1926 (Music Modernization Act schedule, as of 2026) and the composition before 1931 or is traditional. The cante is traditional. Transfer uploaded to the Internet Archive by the Centro Andaluz de Documentación del Flamenco; no licence field."
+ }
+}

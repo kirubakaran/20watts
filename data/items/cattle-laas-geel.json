@@ -1,0 +1,93 @@
+{
+ "slug": "cattle-laas-geel",
+ "title": "Cattle, Laas Geel",
+ "titleOriginal": null,
+ "kind": "image",
+ "importance": 0.85,
+ "genre": [
+  "rock art",
+  "cave painting"
+ ],
+ "tags": [
+  "prehistoric",
+  "rock art",
+  "somaliland",
+  "laas geel",
+  "cattle"
+ ],
+ "periodSlug": "neolithic",
+ "flat": false,
+ "baseHeight": null,
+ "source": {
+  "type": "commons",
+  "curid": 146391319,
+  "fileTitle": "File:Laas Geel, 2024.jpg",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Laas_Geel%2C_2024.jpg",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:Laas_Geel,_2024.jpg",
+  "width": 7952,
+  "height": 5304,
+  "bytes": 35160064,
+  "mime": "image/jpeg",
+  "licenseName": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "author": "Mheidegger",
+  "notes": "Import from Wikimedia Commons; photograph of the shelter ceiling"
+ },
+ "object": {
+  "year": -3000,
+  "month": null,
+  "day": null,
+  "yearStart": -3500,
+  "yearEnd": -2500,
+  "dateLabel": "c. 3500–2500 BCE",
+  "madeIn": {
+   "name": "Laas Geel, near Hargeisa",
+   "region": "Maroodi Jeex",
+   "country": "Somaliland",
+   "lat": 9.6833,
+   "lon": 44.1667,
+   "wikidataQid": "Q1799347"
+  },
+  "location": {
+   "name": "Laas Geel, near Hargeisa",
+   "region": "Maroodi Jeex",
+   "country": "Somaliland",
+   "lat": 9.6833,
+   "lon": 44.1667,
+   "wikidataQid": "Q1799347",
+   "institution": "Laas Geel rock shelters",
+   "inventoryNumber": null
+  },
+  "creator": {
+   "name": "Unknown Neolithic painters of the Horn of Africa",
+   "role": "painter",
+   "birthYear": null,
+   "deathYear": null,
+   "wikidataQid": null
+  },
+  "culture": "Horn of Africa Neolithic",
+  "movement": null,
+  "medium": "ochre, white and black pigment on granite",
+  "materials": [
+   "ochre"
+  ],
+  "subjects": [
+   "cattle",
+   "cows",
+   "herders"
+  ],
+  "widthCm": null,
+  "heightCm": null,
+  "depthCm": null,
+  "weightKg": null,
+  "description": "Long-horned cows with decorated necks and ceremonial collars, painted in red, white and black on the ceiling of a granite shelter at Laas Geel, outside Hargeisa. The cows are shown with their udders and without legs below the knee, as if seen from the front, and small human figures stand beneath them with their arms raised. The site is among the best preserved rock art in Africa.",
+  "facts": [
+   "Local herders had always known the shelters; a French team recorded them for archaeology in 2002.",
+   "There are about twenty painted shelters on the granite outcrop.",
+   "Laas Geel means 'the camels' waterhole' in Somali."
+  ],
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Laas_Geel",
+  "wikidataQid": "Q1799347"
+ },
+ "fallbackWidthM": 2.5
+}

@@ -198,7 +198,8 @@ describe("synthetic collections", () => {
     n.goTo(walker, "before");
     expect(n.hopEra(walker, 1)).toBe(true);
     expect(pos.x).toBe(0);
-    expect(pos.z).toBe(p.z + 2.5);
+    // A landmark-only row: the hop stops short of its boundary, where the pointer is stencilled.
+    expect(pos.z).toBe(l.timeAxis.find((t) => t.rank === cell.timeRank)!.edge! + 4.5);
     expect(n.hopGeo(walker, -1)).toBe(true);
     expect(pos.x).toBe(-300);
     expect(pos.z).toBeGreaterThan(p.z + 230 / 2);

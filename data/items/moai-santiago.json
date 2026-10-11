@@ -1,0 +1,91 @@
+{
+ "slug": "moai-santiago",
+ "title": "Moai",
+ "kind": "model",
+ "representation": "scan",
+ "baseHeight": 0,
+ "back": "none",
+ "importance": 0.9,
+ "genre": [
+  "sculpture"
+ ],
+ "tags": [
+  "sculpture",
+  "scan"
+ ],
+ "periodSlug": null,
+ "flat": false,
+ "source": {
+  "type": "sketchfab",
+  "fileTitle": null,
+  "curid": "7099390468214c2dbcf283454e7b5c8a",
+  "url": "https://sketchfab.com/3d-models/7099390468214c2dbcf283454e7b5c8a",
+  "width": null,
+  "height": null,
+  "bytes": 8891784,
+  "mime": "model/gltf+json",
+  "licenseName": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "author": "Museo Nacional de Historia Natural de Chile (Sketchfab)",
+  "sourcePage": "https://sketchfab.com/3d-models/7099390468214c2dbcf283454e7b5c8a",
+  "unitScale": 0.00167,
+  "notes": " The museum's own photogrammetry with its plinth and metal frame included; one 4096 px texture of very dark basalt. Scaled so the moai itself is 2.45 m as the museum states. Face was toward -X in the file, turned 90 degrees. The museum gives the moai as about 2.45 m tall. Downloaded by the museum's owner from Sketchfab on 2026-10-10.",
+  "rotation": [
+   0,
+   90,
+   0
+  ]
+ },
+ "object": {
+  "year": 1400,
+  "month": null,
+  "day": null,
+  "yearStart": 1250,
+  "yearEnd": 1500,
+  "dateLabel": "c. 1250-1500",
+  "madeIn": {
+   "name": "Rapa Nui (Easter Island)",
+   "region": null,
+   "country": "Chile",
+   "lat": -27.1127,
+   "lon": -109.3497,
+   "wikidataQid": null
+  },
+  "location": {
+   "name": "Santiago",
+   "country": "Chile",
+   "institution": "Museo Nacional de Historia Natural de Chile",
+   "inventoryNumber": null
+  },
+  "culture": "Rapa Nui (Polynesian)",
+  "medium": "Volcanic tuff from Rano Raraku",
+  "materials": [
+   "tuff"
+  ],
+  "subjects": [
+   "ancestor",
+   "Polynesia",
+   "monolith",
+   "Rapa Nui"
+  ],
+  "widthCm": null,
+  "heightCm": 245,
+  "depthCm": null,
+  "weightKg": null,
+  "creator": {
+   "name": "Rapa Nui carvers",
+   "role": "sculptor",
+   "birthYear": null,
+   "deathYear": null,
+   "wikidataQid": null
+  },
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Moai",
+  "wikidataQid": null,
+  "description": "An ancestor, in stone, from the most remote inhabited place on earth. The people of Rapa Nui carved nearly a thousand moai between about 1250 and 1500 from the soft tuff of the Rano Raraku crater, walked them, standing, to platforms along the coast, and set them with their backs to the sea and their faces to the villages, the living dead watching over the living. This one left the island in January 1870 aboard the Chilean corvette O'Higgins and was the first to reach the National Museum of Natural History in Santiago, which scanned it. It is a small one; the largest raised stood ten metres.",
+  "facts": [
+   "The moai were moved upright, rocked from side to side with ropes: they 'walked', as the islanders always said.",
+   "Their eyes were set with white coral and red scoria pupils only once they stood on their platform.",
+   "All of them had been toppled by the 1860s, in the island's wars; those standing today were re-erected."
+  ]
+ }
+}

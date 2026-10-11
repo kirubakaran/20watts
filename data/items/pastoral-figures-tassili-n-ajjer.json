@@ -1,0 +1,93 @@
+{
+ "slug": "pastoral-figures-tassili-n-ajjer",
+ "title": "Pastoral figures, Tassili n'Ajjer",
+ "titleOriginal": null,
+ "kind": "image",
+ "importance": 0.8,
+ "genre": [
+  "rock art",
+  "cave painting"
+ ],
+ "tags": [
+  "prehistoric",
+  "rock art",
+  "sahara",
+  "algeria",
+  "tassili"
+ ],
+ "periodSlug": "neolithic",
+ "flat": false,
+ "baseHeight": null,
+ "source": {
+  "type": "commons",
+  "curid": 153807790,
+  "fileTitle": "File:The Tanzoumaitak cave painting in Tassili n'ajjer.jpg",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/7/75/The_Tanzoumaitak_cave_painting_in_Tassili_n%27ajjer.jpg",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:The_Tanzoumaitak_cave_painting_in_Tassili_n'ajjer.jpg",
+  "width": 5163,
+  "height": 2904,
+  "bytes": 12134851,
+  "mime": "image/jpeg",
+  "licenseName": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "author": "Issam Barhoumi",
+  "notes": "Import from Wikimedia Commons; photograph of the shelter wall"
+ },
+ "object": {
+  "year": -5000,
+  "month": null,
+  "day": null,
+  "yearStart": -6000,
+  "yearEnd": -2000,
+  "dateLabel": "c. 5000 BCE",
+  "madeIn": {
+   "name": "Tanzoumaitak, near Djanet",
+   "region": "Tassili n'Ajjer",
+   "country": "Algeria",
+   "lat": 24.555,
+   "lon": 9.4853,
+   "wikidataQid": "Q190048"
+  },
+  "location": {
+   "name": "Tanzoumaitak, near Djanet",
+   "region": "Tassili n'Ajjer",
+   "country": "Algeria",
+   "lat": 24.555,
+   "lon": 9.4853,
+   "wikidataQid": "Q190048",
+   "institution": "Tassili n'Ajjer National Park",
+   "inventoryNumber": null
+  },
+  "creator": {
+   "name": "Unknown painters of the Saharan Pastoral period",
+   "role": "painter",
+   "birthYear": null,
+   "deathYear": null,
+   "wikidataQid": null
+  },
+  "culture": "Saharan Pastoral",
+  "movement": null,
+  "medium": "ochre on sandstone",
+  "materials": [
+   "ochre"
+  ],
+  "subjects": [
+   "herders",
+   "cattle",
+   "figures"
+  ],
+  "widthCm": null,
+  "heightCm": null,
+  "depthCm": null,
+  "weightKg": null,
+  "description": "Running and dancing figures in ochre on a sandstone shelter at Tanzoumaitak, on the Tassili n'Ajjer plateau in the Algerian Sahara. When they were painted the Sahara was green: the plateau's 15,000 paintings and engravings show cattle herds, giraffes, hippos and swimmers where there is now only rock and sand.",
+  "facts": [
+   "Henri Lhote's expeditions in the 1950s, guided by the Tuareg Jebrine ag Mohamed, copied thousands of the paintings and made the site famous.",
+   "The Round Head period, the plateau's oldest painted style, may go back 10,000 years; the Pastoral period that follows is the richest.",
+   "Tassili n'Ajjer was listed as a World Heritage Site in 1982."
+  ],
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Tassili_n%27Ajjer",
+  "wikidataQid": "Q190048"
+ },
+ "fallbackWidthM": 3
+}

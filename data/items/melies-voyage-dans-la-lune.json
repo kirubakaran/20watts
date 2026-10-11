@@ -1,0 +1,105 @@
+{
+ "slug": "melies-voyage-dans-la-lune",
+ "title": "A Trip to the Moon",
+ "titleOriginal": "Le Voyage dans la Lune",
+ "kind": "image",
+ "importance": 0.9,
+ "genre": [
+  "film",
+  "science fiction",
+  "silent film"
+ ],
+ "tags": [
+  "film",
+  "cinema",
+  "Méliès",
+  "science fiction",
+  "Moon",
+  "France",
+  "silent film",
+  "special effects"
+ ],
+ "periodSlug": null,
+ "flat": true,
+ "baseHeight": 0.9,
+ "source": {
+  "type": "video-still",
+  "curid": "165000150",
+  "fileTitle": null,
+  "url": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Le_Voyage_dans_la_Lune_%281902%29.webm",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:Le_Voyage_dans_la_Lune_(1902).webm",
+  "width": 1440,
+  "height": 1080,
+  "bytes": 304389767,
+  "mime": "video/mp4",
+  "licenseName": "Public domain",
+  "licenseUrl": null,
+  "author": "Georges Méliès (Star Film)",
+  "notes": "Black-and-white WebM, 1440 x 1080 px (4:3, no bars), 766 s (12 min 46 s), a Commons Featured Media and Media of the Day (12 August 2025). The original upload is 2.29 GB (2294373601 B); Commons also serves a 1080p VP9 transcode of the same picture at https://upload.wikimedia.org/wikipedia/commons/transcoded/6/6d/Le_Voyage_dans_la_Lune_%281902%29.webm/Le_Voyage_dans_la_Lune_%281902%29.webm.1080p.vp9.webm (1440 x 1080, HEAD 200, 304389767 B), which the pipeline may prefer for a 14-second loop. Commons wikitext licence template: {{PD-old-auto-expired|1938}}; extmetadata: LicenseShortName = 'Public domain', License = 'pd', Copyrighted = 'False', Artist = 'Georges Méliès' (Creator template), Credit = 'A Trip to the Moon', DateTimeOriginal = '1902'; categories: PD-old-80-expired, CC-PD-Mark, Featured media, Videos of films from 1902, Le voyage dans la lune (film). The file page does not say which print or restoration was transferred (source is given only as 'A Trip to the Moon'); other versions listed there: Le Voyage dans la lune (black and white, 1902).webm, Le Voyage dans la Lune (Georges Méliès, 1902).ogv, Le Voyage Dans La Lune.ogv. Loop 360-374 s, checked frame by frame on the 480p transcode: the Moon's face grows larger from 358 s and the shell lands in its eye at about 371 s; the lunar surface scene follows at 376 s. HEAD 200, content-length 2294373601, video/webm."
+ },
+ "object": {
+  "year": 1902,
+  "month": 9,
+  "day": 1,
+  "yearStart": null,
+  "yearEnd": null,
+  "dateLabel": "released 1 September 1902",
+  "madeIn": {
+   "name": "Méliès's glass studio, Montreuil",
+   "region": "Île-de-France",
+   "country": "France",
+   "lat": 48.8638,
+   "lon": 2.4485,
+   "wikidataQid": "Q193370"
+  },
+  "location": {
+   "name": "Paris",
+   "region": null,
+   "country": "France",
+   "lat": null,
+   "lon": null,
+   "wikidataQid": null,
+   "institution": "Cinémathèque française and others; the only known hand-coloured print was restored by Lobster Films in 2011",
+   "inventoryNumber": "Star Film catalogue nos. 399-411"
+  },
+  "creator": {
+   "name": "Georges Méliès",
+   "role": "director",
+   "birthYear": 1861,
+   "deathYear": 1938,
+   "wikidataQid": "Q152272"
+  },
+  "culture": null,
+  "movement": null,
+  "medium": "35 mm silent film, about 14 minutes at 14 frames a second, 260 metres, with painted sets and in-camera effects",
+  "materials": [
+   "nitrate film"
+  ],
+  "subjects": [
+   "Moon",
+   "space travel",
+   "astronomers",
+   "Selenites",
+   "science fiction",
+   "special effects",
+   "Jules Verne"
+  ],
+  "widthCm": 240,
+  "heightCm": 180,
+  "depthCm": null,
+  "weightKg": null,
+  "description": "Six astronomers are fired from a giant cannon in a bullet-shaped shell, land in the eye of the Man in the Moon, fight the Selenites with umbrellas, and fall back to Earth to a hero's welcome. Georges Méliès, a Paris stage magician who had bought a projector in 1896, made it in his glass-walled studio at Montreuil over the summer of 1902, playing the lead astronomer himself and painting the cardboard Moon. At fourteen minutes and thirty tableaux it was the longest and most expensive film he had attempted, and it was his biggest success, sold worldwide and pirated almost at once in the United States by Thomas Edison's agents. The shot of the shell stuck in the Moon's eye has become the emblem of early cinema. Méliès's business collapsed in the 1910s; he burned many of his negatives and ended up selling toys at the Gare Montparnasse before he was rediscovered and honoured in 1929. A hand-coloured print, found in Barcelona in 1993, was restored in 2011.",
+  "facts": [
+   "Loosely based on Jules Verne's From the Earth to the Moon (1865) and H. G. Wells's The First Men in the Moon (1901).",
+   "Méliès used stop-substitution, dissolves and painted perspective; the Moon's approach was done by moving the camera on a trolley toward a painted face.",
+   "Edison's company copied the film and sold it in America without paying Méliès a cent, a loss he complained of all his life.",
+   "The film was added to the UNESCO Memory of the World register in 2002, its centenary year."
+  ],
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/A_Trip_to_the_Moon",
+  "wikidataQid": "Q244971"
+ },
+ "loop": {
+  "start": 360,
+  "seconds": 14
+ }
+}

@@ -1,0 +1,93 @@
+{
+ "slug": "rock-shelter-8-bhimbetka",
+ "title": "Rock Shelter 8, Bhimbetka",
+ "titleOriginal": null,
+ "kind": "image",
+ "importance": 0.85,
+ "genre": [
+  "rock art",
+  "cave painting"
+ ],
+ "tags": [
+  "prehistoric",
+  "rock art",
+  "india",
+  "bhimbetka"
+ ],
+ "periodSlug": "mesolithic",
+ "flat": false,
+ "baseHeight": null,
+ "source": {
+  "type": "commons",
+  "curid": 33749461,
+  "fileTitle": "File:Rock Shelter 8, Bhimbetka 02.jpg",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/9/91/Rock_Shelter_8%2C_Bhimbetka_02.jpg",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:Rock_Shelter_8,_Bhimbetka_02.jpg",
+  "width": 5184,
+  "height": 3456,
+  "bytes": 11030698,
+  "mime": "image/jpeg",
+  "licenseName": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "author": "Bernard Gagnon",
+  "notes": "Import from Wikimedia Commons; photograph of the shelter wall"
+ },
+ "object": {
+  "year": -8000,
+  "month": null,
+  "day": null,
+  "yearStart": -10000,
+  "yearEnd": -1000,
+  "dateLabel": "c. 8000 BCE",
+  "madeIn": {
+   "name": "Bhimbetka, Raisen",
+   "region": "Madhya Pradesh",
+   "country": "India",
+   "lat": 22.9384,
+   "lon": 77.6131,
+   "wikidataQid": "Q331603"
+  },
+  "location": {
+   "name": "Bhimbetka, Raisen",
+   "region": "Madhya Pradesh",
+   "country": "India",
+   "lat": 22.9384,
+   "lon": 77.6131,
+   "wikidataQid": "Q331603",
+   "institution": "Bhimbetka rock shelters",
+   "inventoryNumber": null
+  },
+  "creator": {
+   "name": "Unknown Mesolithic painters of central India",
+   "role": "painter",
+   "birthYear": null,
+   "deathYear": null,
+   "wikidataQid": null
+  },
+  "culture": "Indian Mesolithic",
+  "movement": null,
+  "medium": "ochre on sandstone",
+  "materials": [
+   "ochre",
+   "haematite"
+  ],
+  "subjects": [
+   "animals",
+   "hunters",
+   "dancers"
+  ],
+  "widthCm": null,
+  "heightCm": null,
+  "depthCm": null,
+  "weightKg": null,
+  "description": "A frieze of red animals and small hunters inside one of the sandstone shelters at Bhimbetka, south of Bhopal, where some 750 shelters were painted over and over from the Mesolithic to the medieval period. The oldest figures, like these, are red; later ones are white and show riders, elephants and battles.",
+  "facts": [
+   "The shelters were noticed by the archaeologist V. S. Wakankar from a train window in 1957.",
+   "Stone tools in the shelters go back 100,000 years, long before the paintings.",
+   "Bhimbetka was listed as a World Heritage Site in 2003."
+  ],
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Bhimbetka_rock_shelters",
+  "wikidataQid": "Q331603"
+ },
+ "fallbackWidthM": 3
+}

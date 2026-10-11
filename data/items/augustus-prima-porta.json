@@ -1,0 +1,86 @@
+{
+ "slug": "augustus-prima-porta",
+ "title": "Augustus of Prima Porta",
+ "kind": "model",
+ "representation": "scan",
+ "baseHeight": 0.3,
+ "back": "none",
+ "importance": 0.9,
+ "genre": [
+  "sculpture"
+ ],
+ "tags": [
+  "sculpture",
+  "scan"
+ ],
+ "periodSlug": null,
+ "flat": false,
+ "source": {
+  "type": "sketchfab",
+  "fileTitle": null,
+  "curid": "42b5fd63307b48cfb073370be3ff259b",
+  "url": "https://sketchfab.com/3d-models/42b5fd63307b48cfb073370be3ff259b",
+  "width": null,
+  "height": null,
+  "bytes": 90815799,
+  "mime": "model/gltf+json",
+  "licenseName": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "author": "Arqueomodel3D (juanbrualla, Sketchfab)",
+  "sourcePage": "https://sketchfab.com/3d-models/42b5fd63307b48cfb073370be3ff259b",
+  "unitScale": 2.05,
+  "notes": " Photogrammetry of the marble, 1.5 million triangles, three 4096 px maps (colour, roughness, normal), with only the statue's thin integral slab; scaled to 2.08 m and raised 0.3 m. The statue is 208 cm tall on its plinth. Downloaded by the museum's owner from Sketchfab on 2026-10-10."
+ },
+ "object": {
+  "year": -20,
+  "month": null,
+  "day": null,
+  "yearStart": -20,
+  "yearEnd": 14,
+  "dateLabel": "Marble copy of the early 1st century CE after a bronze of c. 20 BCE",
+  "madeIn": {
+   "name": "Rome",
+   "region": null,
+   "country": "Italy",
+   "lat": 42.0,
+   "lon": 12.49,
+   "wikidataQid": null
+  },
+  "location": {
+   "name": "Vatican City",
+   "country": "Vatican City",
+   "institution": "Vatican Museums, Braccio Nuovo",
+   "inventoryNumber": null
+  },
+  "culture": "Roman",
+  "medium": "Parian marble",
+  "materials": [
+   "marble"
+  ],
+  "subjects": [
+   "emperor",
+   "portrait",
+   "propaganda",
+   "Roman Empire"
+  ],
+  "widthCm": null,
+  "heightCm": 208,
+  "depthCm": null,
+  "weightKg": null,
+  "creator": {
+   "name": "Unknown Roman sculptor",
+   "role": "sculptor",
+   "birthYear": null,
+   "deathYear": null,
+   "wikidataQid": null
+  },
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Augustus_of_Prima_Porta",
+  "wikidataQid": null,
+  "description": "The first emperor, as he wished to be seen: barefoot like a god, young forever though he was fifty when the original was made, his arm raised to address the army, the cupid at his feet to say he was descended from Venus. The breastplate tells the story of the day in 20 BCE when the Parthians handed back the legionary standards lost by Crassus, the diplomatic victory Augustus chose to make the centre of his image. It was found in 1863 in the villa of his wife Livia at Prima Porta, north of Rome, and it set the type for every ruler's statue in Europe for two thousand years. Scanned in the Vatican Museums.",
+  "facts": [
+   "Traces of paint show the cloak was red, the breastplate's figures coloured; the white is a modern taste.",
+   "The pose is the Doryphoros of Polykleitos, the Greek canon of the ideal body, given a Roman face.",
+   "Augustus never let himself be shown as old; coins struck at seventy-six show the same young man."
+  ]
+ }
+}

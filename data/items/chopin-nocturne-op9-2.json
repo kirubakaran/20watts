@@ -1,0 +1,101 @@
+{
+ "slug": "chopin-nocturne-op9-2",
+ "title": "Nocturne, Op. 9 No. 2",
+ "kind": "image",
+ "flat": true,
+ "importance": 0.8,
+ "genre": [
+  "music"
+ ],
+ "periodSlug": null,
+ "tags": [
+  "music",
+  "romantic",
+  "piano"
+ ],
+ "source": {
+  "type": "commons",
+  "fileTitle": "File:Trois nocturnes pour le piano - Opera 9 - par Frédéric Chopin ; dédiés à Madame Camille Pleyel - btv1b525004199 (11 of 26).jpg",
+  "curid": 166228094,
+  "url": "https://upload.wikimedia.org/wikipedia/commons/3/39/Trois_nocturnes_pour_le_piano_-_Opera_9_-_par_Fr%C3%A9d%C3%A9ric_Chopin_%3B_d%C3%A9di%C3%A9s_%C3%A0_Madame_Camille_Pleyel_-_btv1b525004199_%2811_of_26%29.jpg",
+  "width": 3983,
+  "height": 5211,
+  "bytes": 1824347,
+  "mime": "image/jpeg",
+  "licenseName": "Public domain",
+  "licenseUrl": null,
+  "author": "Maurice Schlesinger, Paris (publisher); scan by the Bibliothèque nationale de France (Gallica)",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:Trois_nocturnes_pour_le_piano_-_Opera_9_-_par_Fr%C3%A9d%C3%A9ric_Chopin_;_d%C3%A9di%C3%A9s_%C3%A0_Madame_Camille_Pleyel_-_btv1b525004199_(11_of_26).jpg",
+  "notes": "Engraved title page of the French first edition, 'Trois Nocturnes pour le Piano dédiés à Madame Camille Pleyel par Frédéric Chopin, Oeuv. 9', published by Maurice Schlesinger in Paris in 1833, from the BnF copy (shelfmark Rés. F. 980) digitised on Gallica. Pages 1-10 of this 26-page set are binding and blank leaves; page 11 is the title page (checked by thumbnail). Commons API extmetadata: LicenseShortName 'Public domain'; Artist 'Chopin, Frédéric (1810-1849). Compositeur'; Credit 'Bibliothèque nationale de France'; ImageDescription '[3 nocturnes. Piano. CT 108-110] ... Éditeur : Maurice Schlesinger (Paris)'; DateTimeOriginal 1833."
+ },
+ "audio": {
+  "type": "commons",
+  "fileTitle": "File:Nocturne in E flat major, Op. 9 no. 2.mp3",
+  "curid": 106372243,
+  "url": "https://upload.wikimedia.org/wikipedia/commons/8/82/Nocturne_in_E_flat_major%2C_Op._9_no._2.mp3",
+  "bytes": 5175969,
+  "mime": "audio/mpeg",
+  "seconds": 271.5,
+  "licenseName": "CC0 1.0",
+  "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "author": "Frank Lévy, piano (Musopen)",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:Nocturne_in_E_flat_major,_Op._9_no._2.mp3",
+  "performers": "Frank Lévy, piano; recorded for Musopen's 'Set Chopin Free' project, circa 2014.",
+  "start": 0,
+  "excerptSeconds": null,
+  "notes": "Commons API extmetadata: LicenseShortName 'Public Domain'; UsageTerms 'Creative Commons Public Domain Dedication'; LicenseUrl (archived) https://creativecommons.org/licenses/publicdomain/; Credit 'This work comes from the non profit U.S. organization Musopen where it is available at the following link: https://musopen.org/music/108-nocturnes-op-9/'; ImageDescription 'The Nocturne Op. 9 no. 2, in E flat major, performed by Frank Levy'. Same performance also on Commons as a 62 MB FLAC, File:Chopin - Nocturne No. 2 in E-flat major, Op. 9 No. 2 (Frank Levy).flac (curid 155173375, LicenseShortName 'Public domain', Artist 'Frédéric Chopin / Frank Lévy', Credit: Musopen Kickstarter 'Set Chopin Free'). A further CC0 Musopen MP3 of the same nocturne with unnamed performer exists as File:Nocturne Op. 9 no. 2 in E flat major.mp3 (curid 67535725). Duration from API metadata: 271.49 s."
+ },
+ "object": {
+  "year": 1833,
+  "month": null,
+  "day": null,
+  "yearStart": 1830,
+  "yearEnd": 1833,
+  "dateLabel": "1833 (first edition, Paris; composed 1830-1832)",
+  "madeIn": {
+   "name": "Paris",
+   "region": "Île-de-France",
+   "country": "France",
+   "lat": 48.8566,
+   "lon": 2.3522,
+   "wikidataQid": "Q90"
+  },
+  "location": {
+   "name": "Paris",
+   "country": "France",
+   "institution": "Bibliothèque nationale de France (first-edition copy shown)",
+   "inventoryNumber": "Rés. F. 980"
+  },
+  "culture": "Polish / French",
+  "medium": "Nocturne for solo piano; engraved first edition",
+  "materials": [
+   "ink",
+   "paper"
+  ],
+  "subjects": [
+   "music",
+   "romantic",
+   "piano",
+   "nocturne"
+  ],
+  "widthCm": null,
+  "heightCm": null,
+  "depthCm": null,
+  "weightKg": null,
+  "creator": {
+   "name": "Frédéric Chopin",
+   "role": "composer",
+   "birthYear": 1810,
+   "deathYear": 1849,
+   "wikidataQid": "Q1268"
+  },
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Nocturnes,_Op._9_(Chopin)",
+  "wikidataQid": null,
+  "description": "Chopin wrote the three Nocturnes of Opus 9 between 1830 and 1832, in the years he left Warsaw for Vienna and then settled in Paris, and they were his first nocturnes to be published, in Leipzig and Paris in 1832-33. He dedicated them to Marie Pleyel, the pianist wife of his publisher and piano maker Camille Pleyel. The second, in E-flat major, is the most played piece he ever wrote: a slow waltz-like accompaniment under a singing melody that returns three times, each time more elaborately ornamented, in the manner of an Italian opera aria. It fixed the idea of the nocturne, a short night piece for piano, that John Field had invented. The sheet shown is the title page of the Paris first edition issued by Maurice Schlesinger. The visitor hears the nocturne played by Frank Lévy in a Musopen recording released into the public domain.",
+  "facts": [
+   "The nocturnes were printed by Kistner in Leipzig and Schlesinger in Paris in 1832-33, and by Wessel in London.",
+   "Chopin's pupils recorded many of his own improvised variants of the ornaments, so no two early editions agree on every note.",
+   "The dedicatee, Marie Pleyel (née Moke), was a celebrated virtuoso who had earlier been engaged to Berlioz."
+  ]
+ }
+}

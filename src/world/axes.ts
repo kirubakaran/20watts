@@ -86,7 +86,8 @@ export function buildAxisCues(layout: Layout, cfg: LayoutConfig = DEFAULT_LAYOUT
     if (cell.landmark) {
       const east = cell.landmark.side === "east";
       const t = stencil(east ? `${cell.landmark.label}  ${cell.landmark.distance} m  →` : `←  ${cell.landmark.distance} m  ${cell.landmark.label}`, 0.4, "bottom");
-      t.position.set(east ? 5 : -5, t.position.y, edgeOf.get(cell.timeRank)! - 0.5);
+      // Just beside the lane's centre line, on the row's edge, so it is in view facing down the lane from the hop point.
+      t.position.set(east ? 2.2 : -2.2, t.position.y, edgeOf.get(cell.timeRank)! - 0.5);
       t.anchorX = east ? "left" : "right";
       g.add(t);
       continue;

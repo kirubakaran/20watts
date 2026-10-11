@@ -1,0 +1,110 @@
+{
+ "slug": "toyotake-rosho-tsubosaka",
+ "title": "Toyotake Roshō sings gidayū",
+ "titleOriginal": null,
+ "kind": "image",
+ "importance": 0.8,
+ "genre": [
+  "music"
+ ],
+ "tags": [
+  "music",
+  "Japan",
+  "gidayū",
+  "shamisen",
+  "recording",
+  "gramophone"
+ ],
+ "periodSlug": null,
+ "flat": false,
+ "baseHeight": null,
+ "source": {
+  "type": "commons",
+  "curid": 71567439,
+  "fileTitle": "File:二月一日（初月）語物.jpg",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/b/b9/%E4%BA%8C%E6%9C%88%E4%B8%80%E6%97%A5%EF%BC%88%E5%88%9D%E6%9C%88%EF%BC%89%E8%AA%9E%E7%89%A9.jpg",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:二月一日（初月）語物.jpg",
+  "width": 1057,
+  "height": 765,
+  "bytes": 412624,
+  "mime": "image/jpeg",
+  "licenseName": "Public domain",
+  "licenseUrl": null,
+  "author": "Unknown; a theatre advertisement with her picture, before 1930",
+  "notes": "A printed advertisement for one of her Osaka appearances, with her portrait; published in Japan before 1930 and public domain in the United States."
+ },
+ "object": {
+  "year": 1906,
+  "month": 11,
+  "day": 30,
+  "yearStart": null,
+  "yearEnd": null,
+  "dateLabel": "Osaka, 30 November 1906",
+  "madeIn": {
+   "name": "Osaka",
+   "region": null,
+   "country": "Japan",
+   "lat": 34.6937,
+   "lon": 135.5023,
+   "wikidataQid": null
+  },
+  "location": {
+   "name": null,
+   "region": null,
+   "country": null,
+   "lat": null,
+   "lon": null,
+   "wikidataQid": null,
+   "institution": null,
+   "inventoryNumber": null
+  },
+  "creator": {
+   "name": "Toyotake Roshō",
+   "role": "singer",
+   "birthYear": 1874,
+   "deathYear": 1930,
+   "wikidataQid": null
+  },
+  "culture": "Japanese",
+  "movement": null,
+  "medium": "Acoustic 78 rpm gramophone recording; gidayū-bushi, voice and shamisen",
+  "materials": [
+   "shellac"
+  ],
+  "subjects": [
+   "music",
+   "gidayū",
+   "shamisen",
+   "Meiji Japan",
+   "sound recording"
+  ],
+  "widthCm": null,
+  "heightCm": null,
+  "depthCm": null,
+  "weightKg": null,
+  "description": "The pop star of Meiji Japan. Gidayū-bushi is the chanted narration of the puppet theatre, voice and shamisen telling the story and playing every part; in the 1890s young women took it up as a concert art, musume-gidayū, and became the first mass popular music of modern Japan, with fan clubs, riots and newspaper gossip. Toyotake Roshō of Osaka was the biggest of them. When the Gramophone Company's recording expedition reached Japan in 1906, she was among the first they cut, and this is that disc: the scene at Tsubosaka temple from an 1879 play, in which the blind Sawaichi and his wife are saved by the Kannon. It is one of the oldest recordings of Japanese music that can be heard anywhere.",
+  "facts": [
+   "The 1906-07 Gaisberg expedition made some 270 Japanese recordings, the first large body of them.",
+   "Musume-gidayū drew student audiences so fervent that the police treated them as a public-order problem.",
+   "The puppet theatre itself, bunraku, is on UNESCO's intangible heritage list."
+  ],
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Giday%C5%AB-bushi",
+  "wikidataQid": null
+ },
+ "fallbackWidthM": 0.9,
+ "audio": {
+  "type": "loc",
+  "url": "https://tile.loc.gov/streaming-services/iiif/service:mbrsrs:mbrsjukebox:ucsb_victor_11154_01_4815e_01:ucsb_victor_11154_01_4815e_01/full/full/0/full/default.mp3",
+  "bytes": 2542279,
+  "mime": "audio/mpeg",
+  "seconds": 158.8,
+  "start": 0,
+  "excerptSeconds": null,
+  "performers": "Toyotake Roshō, voice, with shamisen, recorded in Osaka by William Gaisberg for the Gramophone Company on 30 November 1906 (matrix 4815e), issued by Victor as 11154-A.",
+  "author": "Toyotake Roshō, voice, with shamisen; Gramophone Company, Osaka, November 1906, recorded by W. C. Gaisberg; matrix 4815e, issued as Victor 11154-A",
+  "licenseName": "Public domain",
+  "licenseUrl": null,
+  "sourcePage": "https://www.loc.gov/item/jukebox-326858/",
+  "notes": "Public domain in the United States: the recording was first published before 1926 (Music Modernization Act schedule, as of 2026) and the composition before 1931 or is traditional. The scene is from the gidayū play 'Tsubosaka reigenki' of 1879. Transfer from the Library of Congress National Jukebox (UCSB collection), public domain under the Music Modernization Act."
+ }
+}

@@ -1,0 +1,101 @@
+{
+ "slug": "the-bison-of-altamira",
+ "title": "The bison of Altamira",
+ "titleOriginal": null,
+ "kind": "image",
+ "importance": 0.95,
+ "genre": [
+  "rock art",
+  "cave painting"
+ ],
+ "tags": [
+  "prehistoric",
+  "rock art",
+  "altamira",
+  "magdalenian",
+  "replica"
+ ],
+ "periodSlug": "paleolithic",
+ "flat": false,
+ "baseHeight": null,
+ "source": {
+  "type": "commons",
+  "curid": 3513129,
+  "fileTitle": "File:Reproduction cave of Altamira 01.jpg",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Reproduction_cave_of_Altamira_01.jpg",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:Reproduction_cave_of_Altamira_01.jpg",
+  "width": 3456,
+  "height": 2304,
+  "bytes": 3157075,
+  "mime": "image/jpeg",
+  "licenseName": "CC BY 2.5",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.5/",
+  "author": "Matthias Kabel",
+  "notes": "Import from Wikimedia Commons; photograph of the Deutsches Museum reproduction"
+ },
+ "object": {
+  "year": -12500,
+  "month": null,
+  "day": null,
+  "yearStart": -14000,
+  "yearEnd": -11000,
+  "dateLabel": "c. 12,500 BCE",
+  "madeIn": {
+   "name": "Santillana del Mar",
+   "region": "Cantabria",
+   "country": "Spain",
+   "lat": 43.3825,
+   "lon": -4.1203,
+   "wikidataQid": "Q133575"
+  },
+  "location": {
+   "name": "Santillana del Mar",
+   "region": "Cantabria",
+   "country": "Spain",
+   "lat": 43.3825,
+   "lon": -4.1203,
+   "wikidataQid": "Q133575",
+   "institution": "Cueva de Altamira (closed; reproduction photographed at the Deutsches Museum, Munich)",
+   "inventoryNumber": null
+  },
+  "creator": {
+   "name": "Unknown Magdalenian painters",
+   "role": "painter",
+   "birthYear": null,
+   "deathYear": null,
+   "wikidataQid": null
+  },
+  "culture": "Magdalenian",
+  "movement": null,
+  "medium": "ochre and charcoal on limestone",
+  "materials": [
+   "ochre",
+   "charcoal"
+  ],
+  "subjects": [
+   "bison",
+   "horse",
+   "deer"
+  ],
+  "widthCm": null,
+  "heightCm": null,
+  "depthCm": null,
+  "weightKg": null,
+  "description": "The great ceiling of Altamira, where a herd of bison is painted in red ochre and outlined in black over the natural bulges of the rock, so that each animal stands out as if in relief. Found in 1879 by Marcelino Sanz de Sautuola and his young daughter María, it was the first Palaeolithic cave art recognised as such, after two decades of scholars dismissing it as a forgery. The cave is closed to protect the paintings; this is the full-size reproduction in Munich.",
+  "facts": [
+   "The polychrome bison date to around 14,500 years ago; the oldest marks in the cave are over 35,000 years old.",
+   "The ceiling is about 18 metres long and was painted lying down, under a roof little more than a metre high.",
+   "Picasso is often quoted as saying that after Altamira, all is decadence."
+  ],
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Cave_of_Altamira",
+  "wikidataQid": "Q133575"
+ },
+ "moderation": {
+  "status": "rejected",
+  "reviewedBy": null,
+  "reviewedAt": "2026-10-09T00:00:00Z",
+  "reason": "Superseded by the Deutsches Museum's scan of its replica ceiling (sf-af6cbb6cfcc14cfeb1387ac50dc824ae)",
+  "flags": []
+ },
+ "fallbackWidthM": 4
+}

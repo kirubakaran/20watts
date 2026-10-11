@@ -1,0 +1,87 @@
+{
+ "slug": "mass-energy",
+ "title": "Mass–energy equivalence",
+ "titleOriginal": null,
+ "kind": "image",
+ "importance": 0.95,
+ "genre": [
+  "equation"
+ ],
+ "tags": [
+  "equation",
+  "science",
+  "mathematics"
+ ],
+ "periodSlug": null,
+ "flat": true,
+ "baseHeight": null,
+ "source": {
+  "type": "typeset",
+  "curid": null,
+  "fileTitle": null,
+  "url": "data/originals/eq-mass-energy/equation.svg",
+  "sourcePage": null,
+  "width": 2560,
+  "height": 2176,
+  "bytes": 3688,
+  "mime": "image/svg+xml",
+  "licenseName": "CC0 1.0",
+  "licenseUrl": null,
+  "author": "20watts",
+  "notes": "Typeset by 20watts from the TeX in the record with MathJax, with a figure drawn for this museum; the rendering is CC0, the equation itself is not subject to copyright.",
+  "tex": "E = mc^2",
+  "figure": "data/figures/mass-energy.svg"
+ },
+ "object": {
+  "year": 1905,
+  "month": 9,
+  "day": 27,
+  "yearStart": 1905,
+  "yearEnd": 1905,
+  "dateLabel": "27 September 1905 (received by Annalen der Physik)",
+  "madeIn": {
+   "name": "Bern",
+   "region": null,
+   "country": "Switzerland",
+   "lat": 46.948,
+   "lon": 7.4474,
+   "wikidataQid": "Q70"
+  },
+  "location": {
+   "name": null,
+   "region": null,
+   "country": null,
+   "lat": null,
+   "lon": null,
+   "wikidataQid": null,
+   "institution": null,
+   "inventoryNumber": null
+  },
+  "creator": {
+   "name": "Albert Einstein",
+   "role": "author",
+   "birthYear": 1879,
+   "deathYear": 1955,
+   "wikidataQid": "Q937"
+  },
+  "culture": null,
+  "movement": null,
+  "medium": "Equation, typeset",
+  "materials": [],
+  "subjects": [
+   "equation"
+  ],
+  "widthCm": 100,
+  "heightCm": 85,
+  "depthCm": null,
+  "weightKg": null,
+  "description": "Mass and energy are the same thing in different units, and the exchange rate is the speed of light squared. Einstein, a 26-year-old examiner at the Swiss patent office in Bern, derived it in a three-page afterthought to his special relativity paper, received by Annalen der Physik on 27 September 1905. The rate is so large that the mass lost by the Sun each second lights the Earth, and a gram of matter, fully converted, would power a city for a day.",
+  "facts": [
+   "Einstein's paper is titled 'Does the inertia of a body depend on its energy content?' and writes the relation as L/V², with L for energy and V for the speed of light; the form E = mc² came later.",
+   "1905 was Einstein's annus mirabilis: four papers, on the photoelectric effect, Brownian motion, special relativity and this.",
+   "The first direct test came in 1932, when Cockcroft and Walton split lithium nuclei and found the energy released matched the mass lost."
+  ],
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Mass%E2%80%93energy_equivalence",
+  "wikidataQid": "Q35875"
+ }
+}

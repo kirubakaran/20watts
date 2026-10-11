@@ -1,0 +1,20 @@
+{
+ "attachAudioTo": "sf-acb3f8645a69493cb211a62b40d66aab",
+ "audio": {
+  "type": "nasa",
+  "fileTitle": null,
+  "curid": null,
+  "url": "https://apollojournals.org/alsj/a16/a16a1244820.mp3",
+  "bytes": 1710393,
+  "mime": "audio/mpeg",
+  "seconds": 859,
+  "licenseName": "Public domain (NASA)",
+  "licenseUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+  "author": "NASA; Apollo 16 air-to-ground recording, clip prepared by Roland Speth for the Apollo Lunar Surface Journal",
+  "sourcePage": "https://apollojournals.org/alsj/a16/a16.trvlm1.html",
+  "performers": "John Young driving the Lunar Roving Vehicle; Charlie Duke filming and commentating; Tony England, capsule communicator in Houston. Apollo 16 EVA-1, 21 April 1972, Descartes highlands.",
+  "start": 500,
+  "excerptSeconds": 120,
+  "notes": "The Apollo 16 'Grand Prix': after returning from Station 2, Young drove the rover through pre-planned manoeuvres while Duke filmed with the 16-mm camera. The clip is the ALSJ 'MP3 Audio Clip (14 min 19 sec)' starting at mission time 124:48:20 on the Grand Prix page ('Except where noted, audio clips by Roland Speth'). Duke calls for the stop at 124:52:30 ('Okay, John. We need to stop out here for the Grand Prix'); the drive itself with Duke's commentary, 'Man, you are really bouncing!' ... 'He's got about two wheels on the ground. There's a big rooster tail out of all four wheels. And as he turns, he skids', is at 124:57:10-124:57:20, about 530-540 s into the clip; England ends the run at 124:58:54 ('Call that a complete Grand Prix'), about 634 s in. start=500 with a 120 s excerpt covers the run. Duration 859 s is from the page caption and matches the 1,710,393-byte size at 128 kbit/s. HTTP HEAD on 2026-10-09 returned 200, content-type audio/mpeg. The ALSJ was hosted at history.nasa.gov/alsj and www.nasa.gov/history/alsj; both now redirect to apollojournals.org, operated for the NASA History Office. NASA air-to-ground audio is not protected by copyright; the journal's transcript text is copyright Eric M. Jones but the audio is NASA's. The following clip, a16a1250236.mp3 (994,325 bytes, 8 min 19 s from 125:02:36), covers the drive back to the LM. The museum's rover model (sf-acb3f8645a69493cb211a62b40d66aab) is the Deutsches Museum replica of the LRV, not tied to one mission; the Apollo 16 Grand Prix, the best-known rover drive on record, is attached rather than an Apollo 17 traverse clip, which would be a less self-contained excerpt (Apollo 17 traverse audio exists on the same site, e.g. https://apollojournals.org/alsj/a17/A17A1212628.mp3 from a17.trvsta1.html, if a Cernan drive is preferred)."
+ }
+}

@@ -1,0 +1,83 @@
+{
+ "title": "Fourier series",
+ "kind": "sim",
+ "importance": 0.85,
+ "genre": [
+  "mathematics"
+ ],
+ "tags": [
+  "mathematics",
+  "analysis",
+  "waves",
+  "simulation"
+ ],
+ "baseHeight": 0.95,
+ "source": {
+  "type": "procedural",
+  "program": "fourier",
+  "params": {
+   "terms": 7,
+   "speed": 0.12
+  },
+  "bounds": {
+   "width": 2.2,
+   "height": 1.3,
+   "depth": 0.05
+  },
+  "licenseName": "CC0 1.0",
+  "author": "20watts",
+  "notes": "Run live by src/sims/fourier.ts: seven circles turning at odd multiples of one speed, their radii shrinking as 1/n, the tip drawing a square wave. The program is the museum's own, CC0."
+ },
+ "object": {
+  "year": 1822,
+  "dateLabel": "1822",
+  "madeIn": {
+   "name": "Paris",
+   "region": null,
+   "country": "France",
+   "lat": 48.857,
+   "lon": 2.352,
+   "wikidataQid": "Q90"
+  },
+  "location": {
+   "name": "Everywhere it is computed",
+   "country": null,
+   "institution": null
+  },
+  "culture": null,
+  "medium": "Epicycles, drawn live",
+  "materials": [],
+  "subjects": [
+   "harmonic analysis",
+   "waves",
+   "heat"
+  ],
+  "creator": {
+   "name": "Joseph Fourier",
+   "role": "mathematician",
+   "birthYear": 1768,
+   "deathYear": 1830,
+   "wikidataQid": "Q8772"
+  },
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Fourier_series",
+  "wikidataQid": "Q179467",
+  "description": "Any repeating shape, Fourier claimed, is a sum of pure sine waves. He needed it to solve how heat spreads through a solid, and his 1822 Théorie analytique de la chaleur made the claim stick, though it took a century of analysis to say exactly when it is true. The panel shows it as circles riding on circles: the first turns once a cycle, the next three times as fast at a third the size, the next five times at a fifth, and so on. The same idea takes music apart into its overtones, images into frequencies, and is what every signal, from a phone call to a JPEG, passes through.\n\nThe circles here are turning as you watch, not replaying: the tip of the last one traces, as it goes, a square wave, the corners sharpening with every circle added.",
+  "facts": [
+   "Seven terms are drawn here; a perfect square wave would need infinitely many.",
+   "Ptolemy used circles on circles to predict planets; Fourier's are the same geometry, pointed at a different question.",
+   "Fourier was also the first, in 1824, to describe what is now called the greenhouse effect.",
+   "The fast Fourier transform of 1965 made the sum cheap enough to compute everywhere."
+  ],
+  "month": null,
+  "day": null,
+  "yearStart": null,
+  "yearEnd": null,
+  "weightKg": null,
+  "widthCm": null,
+  "heightCm": null,
+  "depthCm": null
+ },
+ "slug": "fourier-series",
+ "flat": false,
+ "periodSlug": null
+}

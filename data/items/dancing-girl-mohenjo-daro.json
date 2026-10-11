@@ -1,0 +1,87 @@
+{
+ "slug": "dancing-girl-mohenjo-daro",
+ "title": "Dancing Girl of Mohenjo-daro",
+ "kind": "image",
+ "flat": false,
+ "importance": 0.9,
+ "genre": [
+  "sculpture"
+ ],
+ "periodSlug": null,
+ "tags": [
+  "India",
+  "Pakistan",
+  "Indus Valley Civilisation",
+  "bronze",
+  "Harappan",
+  "Bronze Age"
+ ],
+ "source": {
+  "type": "commons",
+  "fileTitle": "File:Bronze \"Dancing Girl,\" Mohenjo-daro, c. 2500 BC.jpg",
+  "curid": 78233931,
+  "url": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Bronze_%22Dancing_Girl%2C%22_Mohenjo-daro%2C_c._2500_BC.jpg",
+  "width": 3456,
+  "height": 5184,
+  "bytes": 2798660,
+  "mime": "image/jpeg",
+  "licenseName": "CC0 1.0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "author": "Gary Todd",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:Bronze_%22Dancing_Girl,%22_Mohenjo-daro,_c._2500_BC.jpg",
+  "notes": "Museum photograph of the original statuette in the Harappan gallery of the National Museum, New Delhi, taken 12 November 2015 by Gary Todd (WorldHistoryPics) and released on Flickr under CC0. Commons API extmetadata: LicenseShortName = 'CC0', Artist = 'Gary Todd', Credit = 'https://www.flickr.com/photos/101561334@N08/22750621309/'. Portrait orientation suits the standing figure. Alternatives with the same licence: File:Dancing girl of Mohenjo-daro.jpg (78234005, CC0, Gary Todd, a crop) and File:Dancing girl. Mohenjodaro.jpg (18440307, CC0, Ismoon). The brief asked for a photo licence check of the National Museum object: the museum's own photography is not free, but these are visitors' own photographs of a 4,500-year-old object, so no copyright in the object itself. No downloadable CC scan of the Dancing Girl exists on Sketchfab (a 'Dancing Boy of Harappa' model found is an unrelated artist's work)."
+ },
+ "object": {
+  "year": -2500,
+  "month": null,
+  "day": null,
+  "yearStart": -2500,
+  "yearEnd": -1750,
+  "dateLabel": "c. 2500–1750 BCE",
+  "madeIn": {
+   "name": "Mohenjo-daro",
+   "region": "Sindh",
+   "country": "Pakistan",
+   "lat": 27.329,
+   "lon": 68.139,
+   "wikidataQid": "Q5725"
+  },
+  "location": {
+   "name": "New Delhi",
+   "country": "India",
+   "institution": "National Museum, New Delhi",
+   "inventoryNumber": null
+  },
+  "culture": "Indus Valley Civilisation (Harappan)",
+  "medium": "Bronze, lost-wax cast",
+  "materials": [
+   "bronze"
+  ],
+  "subjects": [
+   "woman",
+   "dance",
+   "bangles",
+   "Indus Valley"
+  ],
+  "widthCm": 5,
+  "heightCm": 10.5,
+  "depthCm": null,
+  "weightKg": null,
+  "creator": {
+   "name": "Unknown Indus bronze-caster",
+   "role": "sculptor",
+   "birthYear": null,
+   "deathYear": null,
+   "wikidataQid": null
+  },
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Dancing_Girl_(prehistoric_sculpture)",
+  "wikidataQid": "Q17008494",
+  "description": "A bronze figure of a girl, only 10.5 centimetres tall, found in 1926 in a house in the ruined city of Mohenjo-daro on the Indus, in what is now Pakistan. She stands with her weight on one leg, right hand on her hip, head tilted back, her left arm stacked with bangles from wrist to shoulder; John Marshall, who dug the city, thought she was beating time to music, hence her name. She was cast by the lost-wax process some 4,500 years ago, which makes her one of the earliest bronze figures in the world and the oldest known example of the technique in South Asia, a method Indian metalworkers would still be using for the Chola Natarajas four thousand years later. The Indus civilisation built planned brick cities with drains and baths while most of the world lived in villages, and its script is still unread; this small, confident figure is one of the few faces it left us. At Partition in 1947 the finds from Mohenjo-daro were divided between the two new countries, and she came to Delhi.",
+  "facts": [
+   "Excavated by Ernest Mackay in the 'HR area' of Mohenjo-daro in 1926.",
+   "10.5 cm high and 5 cm wide; she wears 24 or 25 bangles on her left arm and four on her right.",
+   "One of the earliest lost-wax bronze castings known anywhere.",
+   "Mortimer Wheeler called her his favourite statuette: 'There's nothing like her, I think, in the world.'"
+  ]
+ }
+}

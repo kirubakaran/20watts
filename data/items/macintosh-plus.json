@@ -1,0 +1,88 @@
+{
+ "slug": "macintosh-plus",
+ "title": "Macintosh Plus",
+ "kind": "model",
+ "representation": "scan",
+ "source": {
+  "type": "sketchfab",
+  "fileTitle": null,
+  "curid": "64319e3fd7dd44acb7d6d72cd8c395db",
+  "url": "https://sketchfab.com/3d-models/personal-computer-macintosh-plus-3-teilig-64319e3fd7dd44acb7d6d72cd8c395db",
+  "width": null,
+  "height": null,
+  "bytes": null,
+  "mime": "model/gltf+json",
+  "licenseName": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "author": "Deutsches Museum | Digital (Sketchfab user deutsches-museum)",
+  "sourcePage": "https://sketchfab.com/3d-models/personal-computer-macintosh-plus-3-teilig-64319e3fd7dd44acb7d6d72cd8c395db",
+  "notes": "Photogrammetry scan of the Deutsches Museum's own Macintosh Plus (inventory number 2000-468, 'Hersteller: Apple Computer Corporation, Herstellung: Cupertino, California, 1987' per the museum's Sketchfab description; its online catalogue at https://digital.deutsches-museum.de/item/2000-468/ was down for maintenance when checked). Three parts: computer, keyboard, mouse, one 200k-face mesh with one 4096 px texture. glTF zip downloaded by the user from Sketchfab on 2026-10-09, 15 MB unpacked. Dates, price and dimensions from the English Wikipedia 'Macintosh Plus' infobox: released 16 January 1986 at US$2,599, discontinued 15 October 1990, 13.6 x 9.6 x 10.9 in (34.5 x 24.4 x 27.7 cm), 16.5 lb (7.5 kg). Wikidata Q1255728."
+ },
+ "object": {
+  "year": 1986,
+  "month": 1,
+  "day": 16,
+  "yearStart": 1986,
+  "yearEnd": 1990,
+  "dateLabel": "January 1986 (this machine made 1987)",
+  "madeIn": {
+   "name": "Cupertino, California",
+   "region": "California",
+   "country": "United States",
+   "lat": 37.3175,
+   "lon": -122.0419,
+   "wikidataQid": "Q189471"
+  },
+  "location": {
+   "name": "Munich",
+   "country": "Germany",
+   "institution": "Deutsches Museum",
+   "inventoryNumber": "2000-468"
+  },
+  "culture": null,
+  "medium": "Personal computer: beige plastic all-in-one case with built-in 9-inch monochrome display, separate keyboard and mouse",
+  "materials": [
+   "plastic",
+   "glass",
+   "metal",
+   "silicon"
+  ],
+  "subjects": [
+   "personal computer",
+   "Macintosh",
+   "Apple",
+   "graphical user interface"
+  ],
+  "widthCm": 24.4,
+  "heightCm": 34.5,
+  "depthCm": 27.7,
+  "weightKg": 7.5,
+  "creator": {
+   "name": "Apple Computer",
+   "role": "manufacturer",
+   "birthYear": null,
+   "deathYear": null,
+   "wikidataQid": "Q312"
+  },
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Macintosh_Plus",
+  "wikidataQid": "Q1255728",
+  "description": "The Macintosh Plus of January 1986 is the first Macintosh in the original upright case to stay in production for years: the 1984 machine's 9-inch screen, mouse and windowed desktop, now with a megabyte of memory, a SCSI port and a keyboard with a numeric keypad. It sold until 1990, longer than any other classic Mac. This one belongs to the Deutsches Museum in Munich, which scanned it with its keyboard and mouse.",
+  "facts": [
+   "At US$2,599 it cost more than the original 128K Macintosh, but could take four megabytes of memory, sixteen times as much.",
+   "The Plus introduced the SCSI port to the Macintosh, which made fast external hard disks possible for the first time.",
+   "Its 512 by 342 pixel black-and-white screen is the same one the 1984 Macintosh used, in the same case; only the badge and keyboard give the model away."
+  ]
+ },
+ "alternatives": [],
+ "genre": [
+  "computer"
+ ],
+ "tags": [
+  "apple",
+  "macintosh",
+  "personal computer",
+  "scan"
+ ],
+ "periodSlug": "modern",
+ "importance": 0.85
+}

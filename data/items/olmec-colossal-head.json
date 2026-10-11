@@ -1,0 +1,86 @@
+{
+ "slug": "olmec-colossal-head",
+ "title": "Olmec colossal head",
+ "kind": "model",
+ "representation": "scan",
+ "baseHeight": 0,
+ "back": "none",
+ "importance": 0.9,
+ "genre": [
+  "sculpture"
+ ],
+ "tags": [
+  "sculpture",
+  "scan"
+ ],
+ "periodSlug": null,
+ "flat": false,
+ "source": {
+  "type": "sketchfab",
+  "fileTitle": null,
+  "curid": "abf31556e54849408ced19e58f3dc8f1",
+  "url": "https://sketchfab.com/3d-models/abf31556e54849408ced19e58f3dc8f1",
+  "width": null,
+  "height": null,
+  "bytes": 108476879,
+  "mime": "model/gltf+json",
+  "licenseName": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "author": "rmark (Sketchfab)",
+  "sourcePage": "https://sketchfab.com/3d-models/abf31556e54849408ced19e58f3dc8f1",
+  "unitScale": 2.25,
+  "notes": " Photogrammetry, 3.2 million triangles, one 4096 px texture, with the museum plinth included (0.8 m after scaling). The Sketchfab page gives no monument number or size; the head's proportions (1.29 tall to wide) fit the smaller San Lorenzo heads, and it is scaled to 2.0 m. The top of the head was not scanned. The Xalapa heads stand between 1.5 and 2.9 m; this one is scaled to the museum's measurement where the file gives none. Downloaded by the museum's owner from Sketchfab on 2026-10-10."
+ },
+ "object": {
+  "year": -900,
+  "month": null,
+  "day": null,
+  "yearStart": -1200,
+  "yearEnd": -900,
+  "dateLabel": "c. 1200-900 BCE",
+  "madeIn": {
+   "name": "San Lorenzo Tenochtitlán",
+   "region": "Veracruz",
+   "country": "Mexico",
+   "lat": 17.75,
+   "lon": -94.76,
+   "wikidataQid": null
+  },
+  "location": {
+   "name": "Xalapa",
+   "country": "Mexico",
+   "institution": "Museo de Antropología de Xalapa",
+   "inventoryNumber": null
+  },
+  "culture": "Olmec",
+  "medium": "Basalt",
+  "materials": [
+   "basalt"
+  ],
+  "subjects": [
+   "portrait",
+   "ruler",
+   "Mesoamerica",
+   "Olmec"
+  ],
+  "widthCm": null,
+  "heightCm": null,
+  "depthCm": null,
+  "weightKg": null,
+  "creator": {
+   "name": "Olmec sculptors",
+   "role": "sculptor",
+   "birthYear": null,
+   "deathYear": null,
+   "wikidataQid": null
+  },
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Olmec_colossal_heads",
+  "wikidataQid": null,
+  "description": "A head the height of a man, carved from a single boulder of basalt that was quarried in the Tuxtla mountains and moved, without wheels or draught animals, some sixty kilometres to the Olmec capital of San Lorenzo. Seventeen are known. Each face is different, the lips, the eyes, the helmet, and they are read as portraits of rulers, the oldest in the Americas, carved around 1200 to 900 BCE by the first civilisation of Mesoamerica, which gave the Maya and the Aztecs their calendars, their ballgame and their gods. This one is in the anthropology museum at Xalapa, scanned there by a visitor.",
+  "facts": [
+   "The boulders weigh up to forty tonnes; how they were moved across swamp and river is still argued.",
+   "Many heads were deliberately defaced or buried in antiquity, perhaps at a ruler's death.",
+   "The first was found in 1862 by a farmhand clearing a field at Tres Zapotes."
+  ]
+ }
+}

@@ -59,7 +59,13 @@ epicycles drawing a square wave, a Galton board filling in the bell curve,
 a Turing machine counting in binary, and the Great Pyramid of Giza at
 its true 146 m, built as a stair of 210 stone courses from its published
 figures, standing 600 m east of the lane where the
-floor points to it, to be seen on the horizon and walked to. Four early
+floor points to it, to be seen on the horizon and walked to. Four more
+run in the twentieth century and after: Bohr's hydrogen atom with its
+photons in the spectrum's colours, a black hole and its disc ray-traced
+through curved spacetime as Luminet first drew it in 1979, the two black
+holes of GW150914 spiralling together over a rippling sheet with LIGO's
+chirp at the merger, and game 2 of AlphaGo against Lee Sedol replayed on
+a demonstration board, dwelling on move 37. Four early
 films play as you approach: Muybridge's galloping horse, the Lumière
 train, Méliès's trip to the Moon and the Apollo 11 broadcast. Five pages
 hang at their true size: Euclid on a papyrus from Oxyrhynchus, a Gutenberg
@@ -118,8 +124,8 @@ spine in front of the nearest cell of the next row, facing the future, as
 if you had walked there. `?at=<work id>`, `?at=<year>` or `?at=newest`
 opens the museum in front of that work, which is handy for checking a new
 addition. A stone gateway across the spine, before the oldest work, carries
-one line cut into its lintel ("Behold the works of 20-watt brains") and a
-plaque on how to read the floor; a new visitor arrives outside it, looking
+one line cut into its lintel ("Behold the works of 20-watt brains"); a new
+visitor arrives outside it, looking
 through.
 
 You resume where you left off: the browser remembers your place, relative
@@ -132,6 +138,16 @@ To check a render without a headset, `node scripts/dev/screenshot.mjs
 <url> out.png` starts a headless Chrome, takes one capture and kills it.
 It is bounded on purpose: the museum renders continuously, and a stray
 headless Chrome on software GL will peg several cores until it is killed.
+
+To check that the whole lane stays within budget, `npm run walk` (with the
+dev server up) hops row by row through the museum in headless Chrome, waits
+for the streamer to settle at each, and samples the JS heap, the streamer's
+estimate of GPU bytes against its budget, live exhibits, textures and
+geometries, draw calls, triangles and frame times. It prints one line a
+row and a summary, writes `walk.json`, and exits non-zero if the budget was
+exceeded or the heap grew by more than a third; `REVERSE=1` walks back too,
+which is where a leak shows. It takes a few minutes, so run it after a
+session of additions rather than after every change.
 
 ## Streaming
 
@@ -156,7 +172,7 @@ src/data/collection.json the collection
 src/layout/layout.ts     time -> row, branches beside their anchors -> world position + facing
 src/world/floor.ts       ground, environment light, shadows; the sky and the lights follow sky.ts
 src/world/sky.ts         the sky dome; nights of stars and sunrises near works that ask for them
-src/sims/                programs run live: life, mandelbrot, lorenz, fourier, galton, turing, pyramid, moon
+src/sims/                programs run live: life, mandelbrot, lorenz, fourier, galton, turing, pyramid, moon, atom, blackhole, merger, go
 public/sky/moon-*.jpg    NASA's LRO colour map of the Moon, for the sky and the globe
 src/world/axes.ts        year and side-quest labels stencilled on the floor
 src/world/exhibit.ts     one work in the world: image, glTF or program, its name tag, shadow
@@ -179,6 +195,14 @@ test/sims.test.ts        every sim in the catalogue has a program; who may be pi
 test/sky.test.ts         how a sky hint fades with distance
 test/tour.test.ts        the tour names shown works, once each, forward in time
 scripts/dev/screenshot.mjs one bounded headless-Chrome capture, for checking renders
+scripts/dev/walk.mjs     walks the whole lane in headless Chrome and reports memory, draw calls and frame times by row
+scripts/dev/gallery.mjs  photographs every tour stop, work or model into a folder with an index page
+scripts/dev/chrome.mjs   the one bounded headless Chrome the three above share
+scripts/dev/where.ts     where a work stands, its standing point and neighbours, without a browser
+scripts/dev/meshlist.mts materials, primitives and triangles of a glb, for seeing what a model is made of
+scripts/ingest.ts        items in data/items/ to records in collection.json (src/data/ingest.ts)
+scripts/lint.ts          the collection's lint, also run by npm test (src/data/lint.ts)
+data/items/              one file per work: the source of truth for everything a person writes
 scripts/dev/preview.html four fixed views of one model rung, for checking orientation and scale
 scripts/dev/bounds.ts    bounds, root transforms and texture sizes of a glTF, before it goes in
 scripts/dev/modes.ts     whether a glTF is triangles or points
@@ -283,6 +307,10 @@ See `.env.example`.
   scan. Photogrammetry exports are often unitless; `original.unitScale`
   (metres per file unit) is baked into the rungs, as is `original.rotation`
   (XYZ Euler degrees) for a scan that is not upright or faces the wrong way.
+  `original.materials` fixes a file whose export lost its look (NASA's Webb
+  came through with its reflective sunshield matte black): each entry names
+  a material by substring and sets base colour, metalness, roughness,
+  emissive or double-sidedness in the rungs, and the notes say why.
   Check the result with `/scripts/dev/preview.html?model=/assets/<id>/high.glb`
   on the dev server, which shows front, left, top and back views on a grid.
 - **Point clouds**: a scan published as points rather than a mesh (the
@@ -306,8 +334,27 @@ See `.env.example`.
 
 ### Adding a work
 
-Append a record to `collection.json` following `src/data/types.ts`, run
-`npm run fetch-assets`, reload. For a Smithsonian scan, find the object on
+A work starts as an item: one JSON file in `data/items/`, in the shape of
+`src/data/item.ts`, with the thing described under `object`, the file and
+its licence under `source`, and how it stands as top-level hints. `npm run
+ingest` turns every item into its record in `collection.json` with
+`src/data/ingest.ts`, keeping whatever the asset pipeline has already
+built for it, so an item is the single source of truth for everything a
+person writes and re-running the ingest after an edit changes exactly that
+edit; `--diff` shows what would change and `--check` fails if anything
+would, for CI. Then `npm run fetch-assets -- <id>` builds the rungs, and
+`npm test` runs the lint in `src/data/lint.ts` over the whole collection:
+titles that are names rather than sentences, descriptions that carry what
+the title does not, licences, bounds the pipeline has measured, branches
+that point at something, simulations that say they are computed live.
+`npm run lint` prints the findings. The item format and these two modules
+are also what a contribution will be and go through once there is a
+backend. `npm run where <id or title>` says where a work stands and how to
+get there; `npm run gallery` photographs every tour stop (or `ALL=1` every
+work, or `MODELS=1` every model from four sides) into a folder with an
+index page, for looking a session's changes over in one scroll.
+
+Records follow `src/data/types.ts`. For a Smithsonian scan, find the object on
 [3d.si.edu](https://3d.si.edu), take the Voyager document id from its page,
 and use `https://3d-api.si.edu/content/document/<id>/document.json` as the
 model version's `original.url` with provenance `smithsonian-3d`. Only CC0
@@ -340,7 +387,7 @@ sheet uses when that came later, as it did for Maxwell's.
 
 A simulation is a record of kind `sim` whose version names a `program`
 from `src/sims/` (`life`, `mandelbrot`, `lorenz`, `fourier`, `galton`,
-`turing`, `pyramid`, `moon`), its `params`, and `bounds` in metres. Date it to the
+`turing`, `pyramid`, `moon`, `atom`, `blackhole`, `merger`, `go`), its `params`, and `bounds` in metres. Date it to the
 idea, not the code. A program is a small module returning an object with
 its base at y = 0 and an update called every frame with the time step and
 the visitor's distance; canvas programs redraw at most twenty times a
@@ -431,7 +478,10 @@ not on display is skipped. Not yet bound to a VR button.
 In VR a small work can be picked up: squeeze the grip or the trigger with
 a hand near it and it follows the hand; let go and it drifts home.
 `display.grab` says whether a work may be; absent, a model no bigger than
-1.2 m that is not entered may be, and nothing else.
+1.2 m that is not entered may be, and nothing else. `display.spin` turns
+a work slowly on its vertical axis, one turn in that many seconds, for a
+thing hung in the air with no front to walk round to, like the Webb
+telescope floating east of the lane.
 
 A recording goes in `audio` on the record: the original's URL (Commons,
 NASA, anything direct), the excerpt's `start` and `seconds`, the
@@ -573,6 +623,25 @@ Gutenberg leaf, the University of Strasbourg's Principia, Darwin Online's
 Notebook B and the Annalen der Physik microfilm of Einstein's paper. The
 night skies are drawn from the Yale Bright Star Catalogue, fifth edition,
 public domain; the simulations are this project's own code and CC0.
+The Saturn V, the International Space Station and the James Webb Space
+Telescope are NASA's own models from its 3D Resources library (credits
+NASA/Michael D. Carbajal, NASA/VTAD and NASA/Goddard Space Flight
+Center), not subject to copyright, all at true size; the Saturn V stands
+as a landmark east of the lane. Three more rockets come from Sketchfab
+under CC BY 4.0, all at true size, the V-2 on the lane and the Shuttle
+stack and Falcon 9 as landmarks east of it, a rocket garden along that
+side: "V-2 Rocket" by
+[person](https://sketchfab.com/person_person_person), "Space Shuttle" by
+[Michél](https://sketchfab.com/Michel.Laborda.Gonzalez) and "Falcon 9 -
+SpaceX" by [Stanley Creative](https://sketchfab.com/Stanley_Creative),
+all artists' models rather than scans, and the cards say so. Webb's First Deep Field is NASA, ESA,
+CSA and STScI material, public domain, via Wikimedia Commons. The chirp
+played at the GW150914 merger is the Hanford strain, whitened and shifted
+up 400 Hz, from the Gravitational Wave Open Science Center, CC BY 4.0.
+The AlphaGo game record was checked against three published SGF copies;
+a game's moves are facts and not a work. Beside it hang a retired AlphaGo
+rack, CC0 by Immigrant laborer on Commons, and Lee Sedol in May 2016, LG
+Electronics' press photograph, CC BY 2.0, cropped to him.
 The Pantheon interior is "The Pantheon Interior" by
 [artfletch](https://sketchfab.com/artfletch) on Sketchfab, CC BY 4.0, a
 photogrammetry scan with a reconstructed floor. Stonehenge is "Stonehenge

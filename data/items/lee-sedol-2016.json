@@ -1,0 +1,86 @@
+{
+ "slug": "lee-sedol-2016",
+ "title": "Lee Sedol",
+ "kind": "image",
+ "flat": true,
+ "importance": 0.6,
+ "periodSlug": null,
+ "genre": [
+  "photograph",
+  "portrait"
+ ],
+ "tags": [
+  "Lee Sedol",
+  "Go",
+  "portrait",
+  "photograph"
+ ],
+ "branch": {
+  "of": "sim-alphago-move-37",
+  "step": -1,
+  "label": "the man who played it"
+ },
+ "source": {
+  "type": "user-upload",
+  "fileTitle": null,
+  "curid": null,
+  "url": "https://commons.wikimedia.org/wiki/File:LG%EC%A0%84%EC%9E%90,_%EC%9D%B4%EC%84%B8%EB%8F%8C_9%EB%8B%A8%EA%B3%BC_%ED%95%A8%EA%BB%98_%ED%95%99%EC%83%9D%EB%93%A4%EC%9D%98_%EA%BF%88_%EA%B7%B8%EB%A6%B0%EB%8B%A4.jpg",
+  "width": 800,
+  "height": 800,
+  "bytes": null,
+  "mime": "image/jpeg",
+  "licenseName": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+  "author": "LG Electronics",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:LG%EC%A0%84%EC%9E%90,_%EC%9D%B4%EC%84%B8%EB%8F%8C_9%EB%8B%A8%EA%B3%BC_%ED%95%A8%EA%BB%98_%ED%95%99%EC%83%9D%EB%93%A4%EC%9D%98_%EA%BF%88_%EA%B7%B8%EB%A6%B0%EB%8B%A4.jpg",
+  "notes": "Lee Sedol on 26 May 2016, ten weeks after the match, at a Seoul welfare centre where he gave away the sponsorship LG had paid him for the match; the photograph is LG Electronics' press release picture (Commons curid 49270591, CC BY 2.0, 2000 by 1300), cropped by the museum to him and the board he is holding, since no other free portrait of him near the match exists; the full frame is kept beside the crop in the originals."
+ },
+ "object": {
+  "month": 5,
+  "day": 26,
+  "yearStart": null,
+  "yearEnd": null,
+  "weightKg": null,
+  "widthCm": 80,
+  "heightCm": 80,
+  "depthCm": null,
+  "culture": null,
+  "materials": [],
+  "wikidataQid": "Q482797",
+  "year": 2016,
+  "dateLabel": "26 May 2016",
+  "madeIn": {
+   "name": "Seoul",
+   "region": null,
+   "country": "South Korea",
+   "lat": 37.5665,
+   "lon": 126.978,
+   "wikidataQid": "Q8684"
+  },
+  "location": {
+   "name": "Everywhere; the file is public",
+   "country": null,
+   "institution": null
+  },
+  "medium": "Photograph",
+  "subjects": [
+   "Lee Sedol",
+   "Go",
+   "portrait"
+  ],
+  "creator": {
+   "name": "LG Electronics",
+   "role": "photographer",
+   "birthYear": null,
+   "deathYear": null,
+   "wikidataQid": "Q162345"
+  },
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Lee_Sedol",
+  "description": "Lee Sedol, born 1983 on the island of Bigeumdo, a professional at twelve, eighteen times a world champion, and in March 2016 the man who sat down across from a machine for five games and a million dollars and lost four. Here he is ten weeks later, giving away what the match had paid him. He had said before the match that he would win five to nothing or four to one. He kept playing for three more years and retired in 2019, saying that with AI at the top there was an entity that could not be defeated.",
+  "facts": [
+   "His game 4 win, with the wedge at move 78 that AlphaGo had rated one in ten thousand, is the last time a human beat a top Go program in an even game.",
+   "He turned professional at twelve, the fifth-youngest ever in Korea.",
+   "He donated the LG sponsorship money for the match to a welfare centre for the developmentally disabled, where this photograph was taken."
+  ]
+ }
+}

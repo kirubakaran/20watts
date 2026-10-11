@@ -1,0 +1,84 @@
+{
+ "title": "The Galton board",
+ "kind": "sim",
+ "importance": 0.8,
+ "genre": [
+  "mathematics",
+  "statistics"
+ ],
+ "tags": [
+  "statistics",
+  "probability",
+  "normal distribution",
+  "simulation"
+ ],
+ "baseHeight": 0.3,
+ "source": {
+  "type": "procedural",
+  "program": "galton",
+  "params": {
+   "rows": 12,
+   "perSecond": 6
+  },
+  "bounds": {
+   "width": 1.2,
+   "height": 1.8,
+   "depth": 0.05
+  },
+  "licenseName": "CC0 1.0",
+  "author": "20watts",
+  "notes": "Run live by src/sims/galton.ts: each ball takes twelve coin-flip turns through the pegs and lands in a bin; the binomial curve is drawn over the pile and the board empties when a bin fills. The program is the museum's own, CC0."
+ },
+ "object": {
+  "year": 1873,
+  "dateLabel": "1873",
+  "madeIn": {
+   "name": "London",
+   "region": "England",
+   "country": "United Kingdom",
+   "lat": 51.507,
+   "lon": -0.128,
+   "wikidataQid": "Q84"
+  },
+  "location": {
+   "name": "Everywhere it is computed",
+   "country": null,
+   "institution": null
+  },
+  "culture": null,
+  "medium": "Balls and pegs, simulated live",
+  "materials": [],
+  "subjects": [
+   "probability",
+   "normal distribution",
+   "central limit theorem"
+  ],
+  "creator": {
+   "name": "Francis Galton",
+   "role": "statistician",
+   "birthYear": 1822,
+   "deathYear": 1911,
+   "wikidataQid": "Q191026"
+  },
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Galton_board",
+  "wikidataQid": "Q139622",
+  "description": "Balls drop through rows of pegs, bouncing left or right at each with even odds, and pile up below. Each ball's fate is pure chance; the pile is not. It settles every time into the same bell-shaped curve, the normal distribution, because the sum of many small independent chances always does: that is the central limit theorem, and Francis Galton built this board in 1873 to make it something you could see. He called it the quincunx, after the pattern of the pegs. It is the shape of measurement error, of heights in a population, of noise in a signal, and the reason so much of statistics assumes a bell.\n\nThe balls are falling now, each one a fresh throw of the dice and not a film of one. The dashed line over the pile is the curve the arithmetic predicts; they are finding it on their own.",
+  "facts": [
+   "Twelve rows of pegs give thirteen bins; the odds of the far bins are one in 4,096.",
+   "Galton showed the board at the Royal Institution in 1874.",
+   "He also used it to argue, wrongly as it turned out, that human traits must revert to the mean of a fixed population.",
+   "The same curve appears when the pegs are replaced by anything random enough: dice, rounding errors, the heights of soldiers."
+  ],
+  "month": null,
+  "day": null,
+  "yearStart": null,
+  "yearEnd": null,
+  "weightKg": null,
+  "widthCm": null,
+  "heightCm": null,
+  "depthCm": null
+ },
+ "slug": "galton-board",
+ "flat": false,
+ "periodSlug": null
+}

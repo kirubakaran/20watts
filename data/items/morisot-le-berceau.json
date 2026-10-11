@@ -1,0 +1,93 @@
+{
+ "slug": "morisot-le-berceau",
+ "title": "The Cradle",
+ "titleOriginal": "Le Berceau",
+ "kind": "image",
+ "flat": true,
+ "importance": 0.85,
+ "genre": [
+  "painting"
+ ],
+ "periodSlug": null,
+ "tags": [
+  "impressionism",
+  "Morisot",
+  "motherhood",
+  "Paris",
+  "women artists",
+  "France"
+ ],
+ "source": {
+  "type": "commons",
+  "fileTitle": "File:Berthe Morisot - The Cradle - Google Art Project.jpg",
+  "curid": 21857470,
+  "url": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Berthe_Morisot_-_The_Cradle_-_Google_Art_Project.jpg",
+  "width": 4105,
+  "height": 5001,
+  "bytes": 11761246,
+  "mime": "image/jpeg",
+  "licenseName": "Public domain",
+  "licenseUrl": "https://commons.wikimedia.org/wiki/Template:PD-art",
+  "author": "Berthe Morisot; Google Art Project scan at the Musée d'Orsay",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:Berthe_Morisot_-_The_Cradle_-_Google_Art_Project.jpg",
+  "notes": "Google Art Project scan at the Musée d'Orsay, maximum zoom level, 4105 x 5001 px (11.8 MB), cropped to the paint surface. Commons licence template {{PD-Art|PD-old-100-1923|deathyear=1895}}; extmetadata LicenseShortName = 'Public domain', Copyrighted = 'False', Artist = 'Berthe Morisot', Credit = 'WAE_4Ek4Dn6EnA at Google Cultural Institute maximum zoom level', DateTimeOriginal = 1872. The file page's 'pretty_dimensions' field is wrongly written 'w460 x h560 cm'; the real size is 56 x 46 cm (Orsay; Wikidata Q5966403 gives 56 x 46.5), RF 2849. A second upload of the same scan, curid 198018700 (4104 x 5000 px), is a duplicate. Painted in Paris, where Morisot lived in Passy; the sitter is her sister Edma Pontillon with her daughter Blanche."
+ },
+ "object": {
+  "year": 1872,
+  "month": null,
+  "day": null,
+  "yearStart": null,
+  "yearEnd": null,
+  "dateLabel": "1872",
+  "madeIn": {
+   "name": "Paris",
+   "region": "Île-de-France",
+   "country": "France",
+   "lat": 48.85667,
+   "lon": 2.35222,
+   "wikidataQid": "Q90"
+  },
+  "location": {
+   "name": "Musée d'Orsay",
+   "country": "France",
+   "institution": "Musée d'Orsay, Paris",
+   "inventoryNumber": "RF 2849"
+  },
+  "culture": "French",
+  "movement": "Impressionism",
+  "medium": "Oil on canvas",
+  "materials": [
+   "oil paint",
+   "canvas"
+  ],
+  "subjects": [
+   "mother and child",
+   "cradle",
+   "muslin curtain",
+   "Edma Pontillon",
+   "sleeping baby",
+   "interior"
+  ],
+  "widthCm": 46,
+  "heightCm": 56,
+  "depthCm": null,
+  "weightKg": null,
+  "creator": {
+   "name": "Berthe Morisot",
+   "role": "painter",
+   "birthYear": 1841,
+   "deathYear": 1895,
+   "wikidataQid": "Q105320"
+  },
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/The_Cradle_(Morisot)",
+  "wikidataQid": "Q5966403",
+  "description": "A young mother sits beside a cradle hung with white muslin and looks down at her sleeping baby, one hand at her cheek, the other holding the edge of the curtain. The light comes through the gauze so that the child is only half seen, and the whole right of the picture is a cascade of white, painted in long transparent strokes. The woman is Edma, Berthe Morisot's sister and until her marriage her painting companion; the baby is Edma's daughter Blanche, born in late 1871. Morisot showed the canvas at the first Impressionist exhibition in 1874, the only woman among the founders of the group, and kept it when it did not sell. It is the first of her pictures of mothers and children, a subject she took from her own household as the men of the group took boulevards and railway stations. The Louvre bought it from the family in 1930.",
+  "facts": [
+   "Shown at the first Impressionist exhibition in April 1874; Morisot was the only woman among the exhibitors.",
+   "The sitters are the painter's sister Edma Pontillon and Edma's daughter Blanche, a few months old.",
+   "Morisot had married Eugène Manet, the painter's brother, by the time the picture was sold; it stayed in the family until 1930.",
+   "56 by 46 cm; Musée d'Orsay, RF 2849."
+  ]
+ },
+ "alternates": []
+}

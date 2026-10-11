@@ -1,0 +1,85 @@
+{
+ "slug": "bohr-atom",
+ "title": "Bohr's atom",
+ "kind": "sim",
+ "importance": 0.9,
+ "genre": [
+  "physics"
+ ],
+ "tags": [
+  "physics",
+  "atom",
+  "quantum",
+  "spectrum",
+  "simulation"
+ ],
+ "baseHeight": 0.2,
+ "source": {
+  "type": "procedural",
+  "program": "atom",
+  "params": {
+   "shells": 4,
+   "diameter": 2.6
+  },
+  "bounds": {
+   "width": 2.8,
+   "height": 2.8,
+   "depth": 0.3
+  },
+  "licenseName": "CC0 1.0",
+  "author": "20watts",
+  "notes": "Run live by src/sims/atom.ts: a nucleus, one electron on four allowed shells, and photons in and out coloured by the Rydberg formula for each jump. The shells are spaced to fit, not as n squared. The program is the museum's own, CC0."
+ },
+ "object": {
+  "year": 1913,
+  "month": 7,
+  "dateLabel": "July 1913",
+  "madeIn": {
+   "name": "Copenhagen",
+   "region": null,
+   "country": "Denmark",
+   "lat": 55.6761,
+   "lon": 12.5683,
+   "wikidataQid": "Q1748"
+  },
+  "location": {
+   "name": "Everywhere it is computed",
+   "country": null,
+   "institution": null
+  },
+  "culture": null,
+  "medium": "A hydrogen atom, computed live",
+  "materials": [],
+  "subjects": [
+   "atom",
+   "quantum theory",
+   "spectral lines",
+   "hydrogen"
+  ],
+  "creator": {
+   "name": "Niels Bohr",
+   "role": "physicist",
+   "birthYear": 1885,
+   "deathYear": 1962,
+   "wikidataQid": "Q7085"
+  },
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Bohr_model",
+  "wikidataQid": "Q172948",
+  "description": "An electron is allowed only certain orbits, and when it jumps from one to another it gives off or takes in a flash of light whose colour is fixed by the jump: that was Bohr's idea in 1913, and it explained in one stroke the lines hydrogen had been known to make for fifty years, the red, blue-green and violet of the Balmer series, to four decimal places. It was wrong in its details, there are no orbits, and right in everything that mattered, and it is where quantum theory begins to be about atoms.\n\nThe atom here is running, not drawn: the electron runs round its shells and every few seconds a photon comes in and lifts it, or it falls and a photon leaves, in hydrogen's own colours; the fall to the lowest shell is ultraviolet, shown faint and violet.",
+  "facts": [
+   "Balmer found the formula for hydrogen's visible lines in 1885 from four measured wavelengths; he was a schoolteacher in Basel.",
+   "The red line, 656 nanometres, is why hydrogen nebulae glow red in photographs.",
+   "Bohr was twenty-seven and had been in Rutherford's laboratory in Manchester the year before.",
+   "Sommerfeld, then Heisenberg and Schrödinger, replaced the orbits within thirteen years; the energy levels stayed."
+  ],
+  "day": null,
+  "yearStart": null,
+  "yearEnd": null,
+  "weightKg": null,
+  "widthCm": null,
+  "heightCm": null,
+  "depthCm": null
+ },
+ "flat": false,
+ "periodSlug": null
+}

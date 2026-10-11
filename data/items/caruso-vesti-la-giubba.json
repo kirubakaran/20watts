@@ -1,0 +1,61 @@
+{
+ "slug": "caruso-vesti-la-giubba",
+ "title": "Caruso sings 'Vesti la giubba'",
+ "kind": "image",
+ "flat": true,
+ "importance": 0.8,
+ "genre": ["music"],
+ "periodSlug": null,
+ "tags": ["music", "opera", "recording", "phonograph"],
+ "source": {
+  "type": "commons",
+  "fileTitle": "File:Caruso with phonograph2.jpg",
+  "curid": 6669356,
+  "url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Caruso_with_phonograph2.jpg",
+  "width": 3801,
+  "height": 5299,
+  "bytes": 8600546,
+  "mime": "image/jpeg",
+  "licenseName": "Public domain",
+  "licenseUrl": null,
+  "author": "Unknown photographer for Bain News Service; restored by Michel Vuijlsteke; Library of Congress, Prints and Photographs Division, ggbain.29837",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:Caruso_with_phonograph2.jpg",
+  "notes": "Enrico Caruso listening to a Victrola, a glass negative from the Bain News Service collection at the Library of Congress, c. 1910s. Commons API extmetadata: LicenseShortName 'Public domain'; Artist 'Unknown photographer; Bain News Service, publisher. Restored by Michel Vuijlsteke'; Credit 'This image is available from the United States Library of Congress's Prints and Photographs division under the digital ID ggbain.29837'; ImageDescription 'Enrico Caruso with a \"Victrola\" brand phonograph. Glass negative.'; DateTimeOriginal 'no date recorded on caption card. c. 1910s.' The Library of Congress states there are no known restrictions on publication of the Bain collection. An unrestored copy of a similar negative is File:Enrico Caruso with Victrola Bain.jpg (curid 18405216), and a 1912-13 Victor Red Seal label of a Caruso disc is File:RedSealCarusoLucevan.jpg (curid 15209263, Public domain)."
+ },
+ "audio": {
+  "type": "commons",
+  "fileTitle": "File:Vesti La Giubba.ogg",
+  "curid": 427479,
+  "url": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Vesti_La_Giubba.ogg",
+  "bytes": 2116093,
+  "mime": "audio/ogg",
+  "seconds": 194.4,
+  "licenseName": "Public domain",
+  "licenseUrl": null,
+  "author": "Enrico Caruso, tenor, with orchestra; Victor Talking Machine Company, recorded 17 March 1907",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:Vesti_La_Giubba.ogg",
+  "performers": "Enrico Caruso, tenor, with the Victor studio orchestra, recorded by the Victor Talking Machine Company on 17 March 1907.",
+  "start": 0,
+  "excerptSeconds": null,
+  "notes": "Commons API extmetadata: LicenseShortName 'Public domain'; UsageTerms 'Public domain'; Copyrighted 'False'; the file page has no Information template, so Artist/Credit are empty in the API; the page wikitext reads: 'Recording of Enrico Caruso (who died in 1921). March 17, 1907 recording of \"Vesti La Giubba\" from \"I Pagliacci\". Source: https://archive.org/download/Caruso_part1/Caruso-IPagliacci-VestiLaGiubbaMarch171907a.mp3 ... Licence: Public domain' with the {{PD-old}} tag, and it is in Category:Audio files from Victor Records and Category:Music in 1907. A sound recording published in the United States in 1907 is public domain under the Music Modernization Act (all pre-1923 recordings entered the public domain on 1 January 2022). Duration from API metadata: 194.43 s."
+ },
+ "object": {
+  "year": 1907, "month": 3, "day": 17, "yearStart": 1907, "yearEnd": 1907, "dateLabel": "17 March 1907 (recording session, Victor Talking Machine Company)",
+  "madeIn": {"name": "Camden", "region": "New Jersey", "country": "United States", "lat": 39.9259, "lon": -75.1196, "wikidataQid": null},
+  "location": {"name": null, "country": null, "institution": null, "inventoryNumber": null},
+  "culture": "Italian / American",
+  "medium": "Acoustic 78 rpm gramophone recording; aria from Leoncavallo's Pagliacci (1892)",
+  "materials": ["shellac"],
+  "subjects": ["music", "opera", "sound recording", "phonograph"],
+  "widthCm": null, "heightCm": null, "depthCm": null, "weightKg": null,
+  "creator": {"name": "Enrico Caruso", "role": "singer", "birthYear": 1873, "deathYear": 1921, "wikidataQid": null},
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Vesti_la_giubba",
+  "wikidataQid": null,
+  "description": "The accomplishment here is not the aria but the record. On 17 March 1907 the Neapolitan tenor Enrico Caruso stood before a recording horn in the Victor Talking Machine Company's studio and sang 'Vesti la giubba', the clown Canio's lament from Leoncavallo's Pagliacci, in which he must put on his costume and make the audience laugh while his heart breaks. The disc is generally reckoned the first gramophone record to sell a million copies. Caruso's warm, powerful voice suited the crude acoustic process better than anyone else's, and his Victor Red Seal discs, sold at premium prices, persuaded the public that a phonograph belonged in the home. He became the first star made by recordings, earning more from records than from the stage. The photograph, from the Bain News Service, shows him listening to a Victrola. The visitor hears the 1907 recording itself, now in the public domain.",
+  "facts": [
+   "Caruso made his first records in a Milan hotel room in 1902 for the Gramophone Company; he recorded 'Vesti la giubba' three times, in 1902, 1904 and 1907.",
+   "His Victor contract eventually guaranteed him $100,000 a year, and his records are said to have earned him some two million dollars over his career.",
+   "All United States sound recordings made before 1923 entered the public domain on 1 January 2022 under the Music Modernization Act."
+  ]
+ }
+}

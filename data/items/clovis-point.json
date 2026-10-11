@@ -1,0 +1,88 @@
+{
+ "slug": "clovis-point",
+ "title": "Clovis point",
+ "titleOriginal": null,
+ "kind": "model",
+ "importance": 0.85,
+ "genre": [
+  "tool",
+  "projectile point"
+ ],
+ "tags": [
+  "clovis",
+  "paleoindian",
+  "stone tool"
+ ],
+ "periodSlug": "paleolithic",
+ "flat": false,
+ "baseHeight": null,
+ "source": {
+  "type": "zenodo",
+  "curid": "21490444",
+  "fileTitle": null,
+  "url": "https://zenodo.org/api/records/21490444/files/f5a48834fc66497ebc416ef94ec2eeeb.glb/content",
+  "sourcePage": "https://zenodo.org/records/21490444",
+  "width": null,
+  "height": null,
+  "bytes": 3126688,
+  "mime": null,
+  "licenseName": "CC0 1.0",
+  "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "author": "Research Laboratories of Archaeology, University of North Carolina at Chapel Hill (model by Steve Davis)",
+  "notes": "Photogrammetry scan of a real Clovis point, published CC0 by UNC's Research Laboratories of Archaeology on Sketchfab (https://sketchfab.com/3d-models/clovis-lanceolate-f5a48834fc66497ebc416ef94ec2eeeb, uid f5a48834fc66497ebc416ef94ec2eeeb, user rla-archaeology) and mirrored as a glb on Zenodo ('Source: Objaverse 1.0 / Sketchfab', DOI 10.5281/zenodo.21490444), which downloads anonymously (verified HTTP 200, 3.1 MB). Raw Sketchfab-export glb: 87,188 triangles, one texture, no Draco; bounding box 2.5213 x 0.216 x 0.9737 units. Real length 84.5 mm (RLA description), so scale = 0.0845/2.5213 = 0.0335 m per unit; drop into data/originals/<id>/ with provenance 'sketchfab' and set scale accordingly. The record also carries '_normalized' variants (unit-cube rescaled) which should NOT be used. Dimensions (84.5 x 32.8 x 6.7 mm) and findspot from the RLA description; date range from Wikipedia 'Clovis point' (13,400-12,700 years ago). No Smithsonian or Met scan of a Clovis point was found (3d.si.edu blocked scripted access; the Smithsonian's Sketchfab mirror has none).",
+  "unitScale": 0.0335
+ },
+ "object": {
+  "year": -11000,
+  "month": null,
+  "day": null,
+  "yearStart": -11400,
+  "yearEnd": -10700,
+  "dateLabel": "c. 11,400–10,700 BCE (Early Paleoindian, Clovis)",
+  "madeIn": {
+   "name": "Piedmont region, North Carolina",
+   "region": "North Carolina",
+   "country": "United States",
+   "lat": 35.9073,
+   "lon": -79.0499,
+   "wikidataQid": null
+  },
+  "location": {
+   "name": "Chapel Hill, North Carolina",
+   "region": null,
+   "country": "United States",
+   "lat": null,
+   "lon": null,
+   "wikidataQid": null,
+   "institution": "Research Laboratories of Archaeology, University of North Carolina at Chapel Hill (North Carolina Archaeological Collection)",
+   "inventoryNumber": null
+  },
+  "creator": null,
+  "culture": "Clovis (Paleoindian)",
+  "movement": null,
+  "medium": "Knapped metavolcanic stone, fluted lanceolate projectile point",
+  "materials": [
+   "metavolcanic rock"
+  ],
+  "subjects": [
+   "stone tool",
+   "projectile point",
+   "Paleoindian",
+   "hunting"
+  ],
+  "widthCm": 3.28,
+  "heightCm": 8.45,
+  "depthCm": 0.67,
+  "weightKg": null,
+  "description": "Clovis points are the fluted, lance-shaped spear tips of the Clovis culture, the earliest widespread tool tradition in the Americas. A shallow channel, or flute, struck from the base on each face let the point be seated in a split wooden or bone shaft. This example, knapped from metavolcanic stone, was found in the Piedmont of North Carolina and donated to the University of North Carolina, whose archaeology laboratory made the scan. Archaeologists call the type the Clovis lanceolate point.",
+  "facts": [
+   "Clovis points are named after Clovis, New Mexico, where the first examples were found in 1929 by Ridgely Whiteman.",
+   "All known Clovis points date to roughly 13,400–12,700 years ago, often in association with mammoth and other Ice Age animal remains.",
+   "Finished points were fluted on both faces so they could be hafted; the technique was passed between knappers across the continent."
+  ],
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Clovis_point",
+  "wikidataQid": "Q140654"
+ },
+ "representation": "scan",
+ "back": "none"
+}

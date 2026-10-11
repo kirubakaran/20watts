@@ -1,0 +1,94 @@
+{
+ "slug": "panel-of-the-lions-chauvet",
+ "title": "Panel of the Lions, Chauvet",
+ "titleOriginal": null,
+ "kind": "image",
+ "importance": 0.95,
+ "genre": [
+  "rock art",
+  "cave painting"
+ ],
+ "tags": [
+  "prehistoric",
+  "rock art",
+  "chauvet",
+  "aurignacian",
+  "facsimile"
+ ],
+ "periodSlug": "paleolithic",
+ "flat": false,
+ "baseHeight": null,
+ "source": {
+  "type": "commons",
+  "curid": 47569433,
+  "fileTitle": "File:18 PanneauDesLions(PartieDroite)BisonsPoursuivisParDesLions.jpg",
+  "url": "https://upload.wikimedia.org/wikipedia/commons/5/5b/18_PanneauDesLions%28PartieDroite%29BisonsPoursuivisParDesLions.jpg",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:18_PanneauDesLions(PartieDroite)BisonsPoursuivisParDesLions.jpg",
+  "width": 2160,
+  "height": 1440,
+  "bytes": 2970039,
+  "mime": "image/jpeg",
+  "licenseName": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "author": "Claude Valette",
+  "notes": "Import from Wikimedia Commons; photograph of the Grotte Chauvet 2 facsimile"
+ },
+ "object": {
+  "year": -34000,
+  "month": null,
+  "day": null,
+  "yearStart": -35000,
+  "yearEnd": -31000,
+  "dateLabel": "c. 34,000 BCE",
+  "madeIn": {
+   "name": "Vallon-Pont-d'Arc",
+   "region": "Ardèche",
+   "country": "France",
+   "lat": 44.3875,
+   "lon": 4.4142,
+   "wikidataQid": "Q374096"
+  },
+  "location": {
+   "name": "Vallon-Pont-d'Arc",
+   "region": "Ardèche",
+   "country": "France",
+   "lat": 44.3875,
+   "lon": 4.4142,
+   "wikidataQid": "Q374096",
+   "institution": "Grotte Chauvet (sealed; shown from the Grotte Chauvet 2 facsimile)",
+   "inventoryNumber": null
+  },
+  "creator": {
+   "name": "Unknown Aurignacian painters",
+   "role": "painter",
+   "birthYear": null,
+   "deathYear": null,
+   "wikidataQid": null
+  },
+  "culture": "Aurignacian",
+  "movement": null,
+  "medium": "charcoal and scraping on limestone",
+  "materials": [
+   "charcoal",
+   "limestone"
+  ],
+  "subjects": [
+   "cave lions",
+   "bison",
+   "rhinoceros"
+  ],
+  "widthCm": null,
+  "heightCm": null,
+  "depthCm": null,
+  "weightKg": null,
+  "description": "The right part of the Panel of the Lions in the deepest chamber of Chauvet Cave: a pride of lions, drawn without manes, stalks a herd of bison. The charcoal was drawn on a wall first scraped clean, and the artists shaded with their fingers to round the bodies. This photograph is of the full-scale facsimile at Grotte Chauvet 2, since the cave itself has been closed to the public since its discovery in 1994.",
+  "facts": [
+   "Chauvet's oldest drawings are around 36,000 years old, twice the age of Lascaux.",
+   "A rockfall sealed the cave about 21,000 years ago, which is why the drawings survive so well.",
+   "Werner Herzog filmed the panels in 3D for Cave of Forgotten Dreams (2010)."
+  ],
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Chauvet_Cave",
+  "wikidataQid": "Q374096"
+ },
+ "fallbackWidthM": 3.5
+}

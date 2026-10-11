@@ -1,0 +1,93 @@
+{
+ "slug": "manet-le-dejeuner-sur-lherbe",
+ "title": "Luncheon on the Grass",
+ "titleOriginal": "Le Déjeuner sur l'herbe",
+ "kind": "image",
+ "flat": true,
+ "importance": 0.95,
+ "genre": [
+  "painting"
+ ],
+ "periodSlug": null,
+ "tags": [
+  "Manet",
+  "Salon des Refusés",
+  "modern painting",
+  "Paris",
+  "nude",
+  "France"
+ ],
+ "source": {
+  "type": "commons",
+  "fileTitle": "File:Edouard Manet - Luncheon on the Grass - Google Art Project.jpg",
+  "curid": 21855901,
+  "url": "https://upload.wikimedia.org/wikipedia/commons/9/90/Edouard_Manet_-_Luncheon_on_the_Grass_-_Google_Art_Project.jpg",
+  "width": 5649,
+  "height": 4389,
+  "bytes": 3896351,
+  "mime": "image/jpeg",
+  "licenseName": "Public domain",
+  "licenseUrl": "https://commons.wikimedia.org/wiki/Template:PD-art",
+  "author": "Édouard Manet; Google Art Project scan at the Musée d'Orsay",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:Edouard_Manet_-_Luncheon_on_the_Grass_-_Google_Art_Project.jpg",
+  "notes": "Google Art Project scan at the Musée d'Orsay, maximum zoom level, 5649 x 4389 px (3.9 MB), a Featured Picture on Commons and on English Wikipedia, cropped to the paint surface. Commons licence template {{PD-Art|PD-old-100-expired|deathyear=1883}}; extmetadata LicenseShortName = 'Public domain', Copyrighted = 'False', Artist = 'Édouard Manet', Credit = 'twELHYoc3ID_VA at Google Cultural Institute maximum zoom level'; file page gives 208 x 264.5 cm, Orsay id 904, Wikidata Q152509. Chosen over Olympia (Google Art Project, curid 21856196, 5876 x 3976 px) because the Déjeuner's rejection from the Salon of 1863 and its showing at the Salon des Refusés is where the story of Impressionism is usually begun, it is an outdoor scene, and it provoked Monet's own Déjeuner sur l'herbe of 1865-66; the two scans are of similar quality. Dimensions 208 x 264.5 cm, RF 1668 from Wikidata; painted in Manet's studio in Paris."
+ },
+ "object": {
+  "year": 1863,
+  "month": null,
+  "day": null,
+  "yearStart": null,
+  "yearEnd": null,
+  "dateLabel": "1863",
+  "madeIn": {
+   "name": "Paris",
+   "region": "Île-de-France",
+   "country": "France",
+   "lat": 48.85667,
+   "lon": 2.35222,
+   "wikidataQid": "Q90"
+  },
+  "location": {
+   "name": "Musée d'Orsay",
+   "country": "France",
+   "institution": "Musée d'Orsay, Paris",
+   "inventoryNumber": "RF 1668"
+  },
+  "culture": "French",
+  "movement": "Realism / precursor of Impressionism",
+  "medium": "Oil on canvas",
+  "materials": [
+   "oil paint",
+   "canvas"
+  ],
+  "subjects": [
+   "picnic",
+   "female nude",
+   "two men in modern dress",
+   "bather",
+   "woodland",
+   "still life of fruit and bread"
+  ],
+  "widthCm": 264.5,
+  "heightCm": 208,
+  "depthCm": null,
+  "weightKg": null,
+  "creator": {
+   "name": "Édouard Manet",
+   "role": "painter",
+   "birthYear": 1832,
+   "deathYear": 1883,
+   "wikidataQid": "Q40599"
+  },
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Le_D%C3%A9jeuner_sur_l%27herbe",
+  "wikidataQid": "Q152509",
+  "description": "Two young men in the clothes of 1863 sit on the grass with a naked woman who looks straight out at us, while a second woman in a shift bathes in the stream behind. A basket of fruit, a loaf and the woman's discarded blue dress lie in the corner. The pose is borrowed from a Renaissance engraving after Raphael, and the subject from a Giorgione in the Louvre, but Manet painted it flat and bright, with hardly any modelling, and gave the nude the face of his model Victorine Meurent, which is what offended. The Salon jury rejected it, and it hung instead at the Salon des Refusés that Napoleon III allowed that spring, where it was the most ridiculed picture in the show. The younger painters who became the Impressionists took it as a declaration that a picture need not tell a story or pretend to be a window. Monet began his own huge Déjeuner sur l'herbe in reply two years later. The canvas is over two and a half metres wide.",
+  "facts": [
+   "Rejected by the Salon jury of 1863 and shown at the Salon des Refusés, which opened on 15 May 1863.",
+   "The composition follows Marcantonio Raimondi's engraving of The Judgement of Paris after Raphael; the models were Victorine Meurent, Manet's brother Gustave or Eugène, and his future brother-in-law Ferdinand Leenhoff.",
+   "Manet called it Le Bain; the present title dates from 1867.",
+   "208 by 264.5 cm; Musée d'Orsay, RF 1668, from the Moreau-Nélaton gift of 1906."
+  ]
+ },
+ "alternates": []
+}

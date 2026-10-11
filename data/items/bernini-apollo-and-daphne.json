@@ -1,0 +1,91 @@
+{
+ "slug": "bernini-apollo-and-daphne",
+ "title": "Apollo and Daphne",
+ "kind": "model",
+ "representation": "scan",
+ "baseHeight": 0,
+ "back": "none",
+ "importance": 0.95,
+ "genre": [
+  "sculpture"
+ ],
+ "tags": [
+  "sculpture",
+  "scan"
+ ],
+ "periodSlug": null,
+ "flat": false,
+ "source": {
+  "type": "sketchfab",
+  "fileTitle": null,
+  "curid": "57333014332a49f4b3346bc73ef7fc16",
+  "url": "https://sketchfab.com/3d-models/57333014332a49f4b3346bc73ef7fc16",
+  "width": null,
+  "height": null,
+  "bytes": 40984450,
+  "mime": "model/gltf+json",
+  "licenseName": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "author": "apmcrory (Sketchfab)",
+  "sourcePage": "https://sketchfab.com/3d-models/57333014332a49f4b3346bc73ef7fc16",
+  "unitScale": 0.0208,
+  "notes": " Untextured photogrammetry mesh, 1.38 million triangles, 125 file units tall with the sculpture's own rocky base; scaled so the figures stand 2.43 m. The canonical view faced -Z in the file, so it is turned 180 degrees. No textures or vertex colours: it renders as plain white marble. The marble group is 243 cm tall. Downloaded by the museum's owner from Sketchfab on 2026-10-10.",
+  "rotation": [
+   0,
+   180,
+   0
+  ]
+ },
+ "object": {
+  "year": 1625,
+  "month": null,
+  "day": null,
+  "yearStart": 1622,
+  "yearEnd": 1625,
+  "dateLabel": "1622-1625",
+  "madeIn": {
+   "name": "Rome",
+   "region": null,
+   "country": "Italy",
+   "lat": 41.9142,
+   "lon": 12.4922,
+   "wikidataQid": null
+  },
+  "location": {
+   "name": "Rome",
+   "country": "Italy",
+   "institution": "Galleria Borghese",
+   "inventoryNumber": null
+  },
+  "culture": "Italian (Baroque)",
+  "medium": "Carrara marble",
+  "materials": [
+   "marble"
+  ],
+  "subjects": [
+   "mythology",
+   "Ovid",
+   "metamorphosis",
+   "Baroque"
+  ],
+  "widthCm": null,
+  "heightCm": 243,
+  "depthCm": null,
+  "weightKg": null,
+  "creator": {
+   "name": "Gian Lorenzo Bernini",
+   "role": "sculptor",
+   "birthYear": 1598,
+   "deathYear": 1680,
+   "wikidataQid": "Q160538"
+  },
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Apollo_and_Daphne_(Bernini)",
+  "wikidataQid": null,
+  "description": "The moment of change. Apollo, struck by Cupid's golden arrow, has chased the nymph Daphne, struck by the leaden one, to the river; she calls to her father to save her, and as his hand touches her she turns into a laurel: bark climbs her legs, her fingers split into twigs, her hair into leaves. Bernini carved it between 1622 and 1625, in his mid-twenties, for Cardinal Scipione Borghese, and it has never left the villa it was made for. Nothing in stone had moved like this before. Marble is drilled to the thinness of leaves, the two bodies are caught mid-stride, and the whole group is meant to be seen from one side, as a single instant seen once, the way Ovid's line is read once.",
+  "facts": [
+   "Ovid's Metamorphoses, Book I; the Latin couplet carved on the base was written by the future Pope Urban VIII.",
+   "The leaves and the hair were carved so thin that they ring when tapped, and the group has been handled with fear ever since.",
+   "Bernini was twenty-four when he began it; his David, in the same room, was made in the middle of the work."
+  ]
+ }
+}

@@ -1,0 +1,103 @@
+{
+ "slug": "brihadisvara-temple-thanjavur",
+ "title": "Brihadisvara Temple, Thanjavur",
+ "kind": "image",
+ "flat": false,
+ "importance": 0.9,
+ "genre": [
+  "architecture"
+ ],
+ "periodSlug": null,
+ "tags": [
+  "India",
+  "Tamil Nadu",
+  "Tamil",
+  "Chola",
+  "temple",
+  "Hinduism",
+  "UNESCO World Heritage"
+ ],
+ "source": {
+  "type": "commons",
+  "fileTitle": "File:Brihadeeswarar Temple 3522.jpg",
+  "curid": 50738349,
+  "url": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Brihadeeswarar_Temple_3522.jpg",
+  "width": 4000,
+  "height": 6000,
+  "bytes": 18776064,
+  "mime": "image/jpeg",
+  "licenseName": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "author": "Vengolis",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:Brihadeeswarar_Temple_3522.jpg",
+  "notes": "The vimana seen straight on from the courtyard, in daylight, no one but a few small figures at the plinth: a Commons Quality Image, taken 15 August 2016 (Sony ILCA-77M2, Sigma 18-35 mm). Commons API extmetadata: LicenseShortName = 'CC BY-SA 4.0', Artist = 'Vengolis', Credit = 'Own work'. Replaces the earlier choice (File:Vimana of the Brihadisvara Temple, Thanjavur, Tamil Nadu, India (2016).jpg, curid 51782341), which turned out to be a dark shot through the gateway with a police sign and visitors in the frame."
+ },
+ "object": {
+  "year": 1010,
+  "month": null,
+  "day": null,
+  "yearStart": 1003,
+  "yearEnd": 1010,
+  "dateLabel": "1003–1010 CE",
+  "madeIn": {
+   "name": "Thanjavur",
+   "region": "Tamil Nadu",
+   "country": "India",
+   "lat": 10.783,
+   "lon": 79.132,
+   "wikidataQid": "Q41496"
+  },
+  "location": {
+   "name": "Thanjavur",
+   "country": "India",
+   "institution": "Brihadisvara Temple (in situ)",
+   "inventoryNumber": null
+  },
+  "culture": "Tamil (Chola)",
+  "medium": "Granite masonry",
+  "materials": [
+   "granite"
+  ],
+  "subjects": [
+   "Shiva",
+   "temple",
+   "Dravidian architecture",
+   "Chola empire"
+  ],
+  "widthCm": 3018,
+  "heightCm": 6600,
+  "depthCm": 3018,
+  "weightKg": null,
+  "creator": {
+   "name": "Rajaraja I (patron)",
+   "role": "patron",
+   "birthYear": 947,
+   "deathYear": 1014,
+   "wikidataQid": "Q2128757"
+  },
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Brihadisvara_Temple,_Thanjavur",
+  "wikidataQid": "Q916943",
+  "description": "The Brihadisvara Temple, known to Tamils as Thanjai Periya Kovil (தஞ்சைப் பெரிய கோவில், the Big Temple of Thanjavur) and to its builder as Rajarajesvaram, was raised between 1003 and 1010 by the Chola emperor Rajaraja I, in the capital of an empire that then ruled most of South India and Sri Lanka. Its vimana, the pyramidal tower over the sanctum, rises about 66 metres from a square base 30 metres on a side, in sixteen storeys of carved granite: the tallest building in India for centuries, and still one of the tallest temple towers in the world. The sanctum holds a monolithic linga nearly nine metres high. The granite was quarried far away, since there is none near Thanjavur, and tradition says the eighty-tonne capstone was dragged up a ramp several kilometres long. Long inscriptions on the base record the dancers, musicians, accountants and lamp-lighters the temple employed, and the gifts of gold and villages that paid for them. It has been in continuous worship for a thousand years and is a UNESCO World Heritage Site.",
+  "facts": [
+   "Built in about seven years and consecrated in 1010 CE; the thousandth anniversary was celebrated in 2010.",
+   "The vimana is about 66 m tall on a 30 m square base; the sanctum's linga alone is 8.7 m high.",
+   "Chola inscriptions carved around the plinth name the temple's 400 dancers and list its endowments village by village.",
+   "The architect is named in inscriptions as Kunjara Mallan Raja Raja Perunthachan."
+  ]
+ },
+ "fallbackWidthM": 3,
+ "alternates": [
+  {
+   "url": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Brihadisvara_Temple_during_Maha_Shivaratri-WUS03611_%28edit%29.jpg",
+   "width": 5849,
+   "height": 3655,
+   "bytes": 17730998,
+   "mime": "image/jpeg",
+   "licenseName": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "author": "Rainer Halama (edit by UnpetitproleX)",
+   "sourcePage": "https://commons.wikimedia.org/wiki/File:Brihadisvara_Temple_during_Maha_Shivaratri-WUS03611_(edit).jpg",
+   "notes": "The whole complex at dusk during Maha Shivaratri 2025, the vimana and the Nandi mandapa lit: a Commons Featured Picture (Wiki Loves Monuments 2025 India) and the English Wikipedia lead image. Derivative edit of Rainer Halama's photograph, both CC BY-SA 4.0."
+  }
+ ]
+}
