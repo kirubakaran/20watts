@@ -188,7 +188,8 @@ src/assets/sound.ts      a recording heard from where a work stands, by distance
 public/sky/stars.json    the Yale Bright Star Catalogue to magnitude 5.5, public domain
 data/figures/            the drawings on the equation sheets, SVG
 src/locomotion/player.ts desktop and VR movement
-src/locomotion/touch.ts  phone controls: drag to look, a stick, hop buttons
+src/locomotion/touch.ts  phone controls: drag to look, tap a work to read or the floor to walk there, a stick, hop buttons
+src/locomotion/coach.ts  which controls the visitor has used, kept between visits; hints show until each has been
 src/locomotion/resume.ts remembers your place in the browser and restores it
 src/locomotion/navigate.ts hops between eras and cells, and jumps to a work
 src/locomotion/grab.ts   VR: pick a small work up and turn it in your hand
@@ -487,6 +488,17 @@ the top of the screen, `Shift T` goes back, a phone has tour buttons, and
 `?tour` starts at the first stop. Where you are in it is remembered in
 the browser. Stops are works by id, in time order, and a work that is
 not on display is skipped. Not yet bound to a VR button.
+
+Nobody is told how to use a control they have already used. On a phone a
+tap on a work reads about it and a tap on the floor walks there, so the
+stick, which carries chevrons, a "walk" label and a slow nudge of its own
+until first touched, is for those who want it. One short caption sits by
+each control until it has been used once: drag to look, tap to read, the
+stick or the floor to walk, the buttons to hop. In a headset the same
+lessons hang under the tag of the work in focus, one at a time: pull the
+trigger to read, A or B to hop, squeeze the grip to pick up a small
+thing. What has been learned is kept in the browser
+(`src/locomotion/coach.ts`), so a second visit starts clean.
 
 In VR a small work can be picked up: squeeze the grip or the trigger with
 a hand near it and it follows the hand; let go and it drifts home.

@@ -41,6 +41,7 @@ export class Grabber {
     player: Player,
     private readonly exhibitsNear: (x: number, z: number, radius: number) => Exhibit[],
     onRead: () => void,
+    private readonly onGrab: () => void = () => {},
   ) {
     for (const i of [0, 1]) {
       const controller = renderer.xr.getController(i);
@@ -78,6 +79,7 @@ export class Grabber {
     best.e.hold();
     hand.attach(body);
     this.held.set(hand, { exhibit: best.e, body, home });
+    this.onGrab();
   }
 
   private release(hand: Object3D) {

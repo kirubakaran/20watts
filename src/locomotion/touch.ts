@@ -7,6 +7,7 @@
  * only wires it.
  */
 import type { Action, Player } from "./player";
+import type { Coach } from "./coach";
 
 const STICK_RADIUS = 44;
 
@@ -14,10 +15,8 @@ export function hasTouch(): boolean {
   return matchMedia("(pointer: coarse)").matches || new URLSearchParams(location.search).has("touch");
 }
 
-export function setupTouch(player: Player, canvas: HTMLElement, onAction: (a: Action) => void) {
+export function setupTouch(player: Player, canvas: HTMLElement, onAction: (a: Action) => void, onTap: (x: number, y: number) => void, coach: Coach) {
   document.body.classList.add("touch");
-  // The hint has done its job once the visitor has touched anything.
-  window.addEventListener("pointerdown", () => document.body.classList.add("used"), { once: true });
 
   // Look: one finger dragging on the canvas. Only the first finger steers.
   let lookId: number | null = null;
@@ -35,14 +34,15 @@ export function setupTouch(player: Player, canvas: HTMLElement, onAction: (a: Ac
     // A full-height drag turns about a quarter turn.
     const k = (Math.PI / 2) / Math.min(window.innerWidth, window.innerHeight);
     player.look((e.clientX - lastX) * k, (e.clientY - lastY) * k);
+    if (Math.hypot(e.clientX - downX, e.clientY - downY) > 24) coach.learn("touch.look");
     lastX = e.clientX;
     lastY = e.clientY;
   });
   const lookEnd = (e: PointerEvent) => {
     if (e.pointerId !== lookId) return;
     lookId = null;
-    // A tap, not a drag: read about the work in view.
-    if (Math.hypot(e.clientX - downX, e.clientY - downY) < 12 && performance.now() - downAt < 350) onAction("read");
+    // A tap, not a drag: the museum decides whether it was on a work (read) or the floor (walk there).
+    if (Math.hypot(e.clientX - downX, e.clientY - downY) < 12 && performance.now() - downAt < 350) onTap(e.clientX, e.clientY);
   };
   canvas.addEventListener("pointerup", lookEnd);
   canvas.addEventListener("pointercancel", lookEnd);
@@ -72,6 +72,7 @@ export function setupTouch(player: Player, canvas: HTMLElement, onAction: (a: Ac
     const len = Math.hypot(dx, dy);
     if (len > STICK_RADIUS) { dx *= STICK_RADIUS / len; dy *= STICK_RADIUS / len; }
     setKnob(dx, dy);
+    if (len > STICK_RADIUS * 0.5) coach.learn("touch.walk");
   });
   const stickEnd = (e: PointerEvent) => {
     if (e.pointerId !== stickId) return;
@@ -84,6 +85,6 @@ export function setupTouch(player: Player, canvas: HTMLElement, onAction: (a: Ac
   // Hops.
   for (const b of document.querySelectorAll<HTMLButtonElement>("#hops button")) {
     b.addEventListener("pointerdown", (e) => e.preventDefault());
-    b.addEventListener("click", () => onAction(b.dataset.action as Action));
+    b.addEventListener("click", () => { coach.learn("touch.hop"); onAction(b.dataset.action as Action); });
   }
 }

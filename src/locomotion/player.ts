@@ -37,6 +37,8 @@ export class Player {
   private snapLatched = false;
   private readonly pressed = new Set<string>();
   private touchWalk = { strafe: 0, fwd: 0 };
+  /** Where a tap on the floor is taking the visitor, or null. */
+  private walkTarget: { x: number; z: number } | null = null;
   private onAction: ((a: Action) => void) | null = null;
   private readonly tmpQ = new Quaternion();
   private readonly tmpV = new Vector3();
@@ -84,6 +86,16 @@ export class Player {
   setTouchWalk(strafe: number, fwd: number) {
     this.touchWalk.strafe = strafe;
     this.touchWalk.fwd = fwd;
+    if (Math.hypot(strafe, fwd) > 0.1) this.walkTarget = null;
+  }
+
+  /** Walk to a point on the floor over a second or two; any other movement cancels it. */
+  walkTo(x: number, z: number) {
+    this.walkTarget = { x, z };
+  }
+
+  get isWalkingTo(): boolean {
+    return this.walkTarget !== null;
   }
 
   /** Put the visitor at ground position (x, z) facing `yaw` (0 = looking toward -Z, the future). */
@@ -136,6 +148,22 @@ export class Player {
 
   update(dt: number) {
     if (this.renderer.xr.isPresenting) this.updateXR(dt);
+    if (this.walkTarget) {
+      // Brisk at first, easing in over the last metres; stop short of the spot.
+      if (this.pressed.size) this.walkTarget = null;
+      else {
+        const here = this.floorPosition();
+        const dx = this.walkTarget.x - here.x, dz = this.walkTarget.z - here.z;
+        const dist = Math.hypot(dx, dz);
+        if (dist < 0.15) this.walkTarget = null;
+        else {
+          const speed = Math.min(WALK * 2, Math.max(WALK * 0.5, dist * 1.3));
+          const step = Math.min(dist, speed * dt);
+          this.rig.position.x += (dx / dist) * step;
+          this.rig.position.z += (dz / dist) * step;
+        }
+      }
+    }
     else this.updateDesktop(dt);
   }
 

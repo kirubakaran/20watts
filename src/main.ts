@@ -1,4 +1,4 @@
-import { ACESFilmicToneMapping, AudioListener, type Mesh, PCFShadowMap, PerspectiveCamera, Scene, Timer, Vector3, WebGLRenderer } from "three";
+import { ACESFilmicToneMapping, AudioListener, type Mesh, PCFShadowMap, PerspectiveCamera, Plane, Raycaster, Scene, Timer, Vector2, Vector3, WebGLRenderer } from "three";
 import { VRButton } from "three/addons/webxr/VRButton.js";
 import type { Collection } from "./data/types";
 import collectionJson from "./data/collection.json";
@@ -14,6 +14,8 @@ import { Grabber } from "./locomotion/grab";
 import { Card } from "./world/card";
 import { buildEntrance, GATE_HALF_WIDTH, GATE_HEIGHT } from "./world/sign";
 import { hasTouch, setupTouch } from "./locomotion/touch";
+import { Coach } from "./locomotion/coach";
+import { grabbable } from "./data/types";
 import { Tour } from "./world/tour";
 import { setAudioListener } from "./assets/sound";
 import { baseHeightOf, footprintOf, onDisplay } from "./data/types";
@@ -112,7 +114,14 @@ function entranceDistance(): number {
 const goToEntrance = () => entrance && player.teleport(entrance.x, entrance.z + ENTRANCE_SETBACK + entranceDistance(), 0);
 
 const tour = new Tour(visible, (id) => nav.goTo(player, id), document.getElementById("tour"));
+// What the visitor has learned to do, kept between visits; hints show until each control has been used once.
+const coach = new Coach();
+coach.reflect(document.body);
 const act = (a: Action) => {
+  if (renderer.xr.isPresenting) {
+    if (a === "read") coach.learn("vr.read");
+    if (a === "eraNext" || a === "eraPrev") coach.learn("vr.hop");
+  }
   if (a === "read") { if (focus) card.toggle(focus.artwork, camera); else card.hide(); }
   else if (a === "tourNext") tour.step(1);
   else if (a === "tourPrev") tour.step(-1);
@@ -124,9 +133,45 @@ const act = (a: Action) => {
   else nav.goLast(player);
 };
 player.setActionHandler(act);
-if (touch) setupTouch(player, renderer.domElement, act);
+/**
+ * A tap on the screen: on a work, read about it; on the floor, walk there.
+ * The floor point is where the tap's ray meets the ground; a work is hit if
+ * the point lies within a stride of its footprint.
+ */
+const tapRay = new Raycaster();
+const floorPlane = new Plane(new Vector3(0, 1, 0), 0);
+const tapNdc = new Vector2();
+const tapPoint = new Vector3();
+function onTap(x: number, y: number) {
+  tapNdc.set((x / window.innerWidth) * 2 - 1, -(y / window.innerHeight) * 2 + 1);
+  tapRay.setFromCamera(tapNdc, camera);
+  const hit = tapRay.ray.intersectPlane(floorPlane, tapPoint);
+  if (hit) {
+    for (const e of [...streamer.exhibitsWithin(hit.x, hit.z, 14), ...landmarks]) {
+      const fp = footprintOf(e.artwork);
+      if (Math.abs(hit.x - e.worldCentre.x) < fp.width / 2 + 0.8 && Math.abs(hit.z - e.worldCentre.z) < fp.depth / 2 + 0.8) {
+        coach.learn("touch.read");
+        act("read");
+        return;
+      }
+    }
+    // The floor: walk there, but no further than the eye can judge.
+    const eyeAt = player.floorPosition();
+    const dx = hit.x - eyeAt.x, dz = hit.z - eyeAt.z, dist = Math.hypot(dx, dz);
+    const k = Math.min(1, 40 / Math.max(dist, 1e-6));
+    if (dist > 0.5) {
+      player.walkTo(eyeAt.x + dx * k, eyeAt.z + dz * k);
+      coach.learn("touch.walk");
+      card.hide();
+      return;
+    }
+  }
+  // Looking at the sky, or at one's feet: a tap still reads what is in view.
+  if (focus) { coach.learn("touch.read"); act("read"); }
+}
+if (touch) setupTouch(player, renderer.domElement, act, onTap, coach);
 // In VR, small works can be picked up and turned in the hand; the trigger reads.
-const grabber = new Grabber(renderer, player, (x, z, r) => streamer.exhibitsWithin(x, z, r), () => act("read"));
+const grabber = new Grabber(renderer, player, (x, z, r) => streamer.exhibitsWithin(x, z, r), () => act("read"), () => coach.learn("vr.grab"));
 
 /**
  * Focus: the work the visitor is looking at, nearest the centre of their
@@ -161,6 +206,14 @@ function updateFocus(eye: Vector3) {
     focus?.setFocus(false);
     best?.setFocus(true);
     focus = best;
+  }
+  // In a headset the hints hang under the tag of the work in focus, one lesson at a time.
+  if (focus) {
+    focus.setHint(!renderer.xr.isPresenting ? null
+      : !coach.has("vr.read") ? "pull the trigger to read about this"
+      : !coach.has("vr.hop") ? "A or B hops between eras"
+      : !coach.has("vr.grab") && grabbable(focus.artwork) ? "squeeze the grip to pick it up"
+      : null);
   }
 }
 

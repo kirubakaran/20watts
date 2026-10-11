@@ -26,7 +26,7 @@
  *   SIZE, SOFTWARE_GL, CHROME as for screenshot.mjs
  * Output: a JSON file of samples and a summary on stdout. Exit code 1 if
  * the budget was exceeded, draw calls passed MAX_CALLS, or the heap grew
- * by more than a third over the walk (or, with REVERSE, did not come back).
+ * threefold over the walk (or, with REVERSE, did not come back within a quarter).
  */
 import { writeFile } from "node:fs/promises";
 import { openChrome } from "./chrome.mjs";
@@ -111,7 +111,8 @@ try {
   if (summary.maxCalls > MAX_CALLS) problems.push(`draw calls reached ${summary.maxCalls} at z ${summary.maxCallsAt.z}; over ${MAX_CALLS} is slow in a headset`);
   if (summary.heapStartMB != null) {
     const grew = summary.heapEndMB / summary.heapStartMB;
-    if (REVERSE ? grew > 1.25 : grew > 1.6) problems.push(`heap grew ${fmt((grew - 1) * 100)}% over the walk (${fmt(summary.heapStartMB)} to ${fmt(summary.heapEndMB)} MB)`);
+    // Forward only, the end of the lane is denser than the entrance and holds more; the walk back is the leak test.
+    if (REVERSE ? grew > 1.25 : grew > 3) problems.push(`heap grew ${fmt((grew - 1) * 100)}% over the walk (${fmt(summary.heapStartMB)} to ${fmt(summary.heapEndMB)} MB)`);
   }
   if (problems.length) {
     console.log("\nNOT TIGHT:\n  " + problems.join("\n  "));

@@ -162,8 +162,20 @@ function makeTag(a: Artwork): Text {
   year.anchorY = "top";
   year.position.y = -0.02;
   t.add(year);
+  // A line for the coach: how to use the control this work invites, until it has been used once.
+  const hint = new Text();
+  hint.name = "hint";
+  hint.font = FONT_REGULAR;
+  hint.fontSize = 0.03;
+  hint.color = 0xa8503a;
+  hint.fillOpacity = 0.9;
+  hint.anchorX = "center";
+  hint.anchorY = "top";
+  hint.position.y = -0.075;
+  t.add(hint);
   t.sync();
   year.sync();
+  hint.sync();
   return t;
 }
 
@@ -198,6 +210,7 @@ export class Exhibit {
   private qualityCap = Infinity;
   private placards: Group[] = [];
   private tag: Text | null = null;
+  private hint: string | null = null;
   private focused = false;
   private night = 0;
   private readonly footprint;
@@ -257,7 +270,7 @@ export class Exhibit {
     this.night = night;
     if (this.tag) {
       this.tag.color = tmpColour.copy(INK_DAY).lerp(INK_NIGHT, night).getHex();
-      for (const c of this.tag.children) if (c instanceof Text) c.color = tmpColour.copy(new Color(0x8a857c)).lerp(BODY_NIGHT, night).getHex();
+      for (const c of this.tag.children) if (c instanceof Text && c.name !== "hint") c.color = tmpColour.copy(new Color(0x8a857c)).lerp(BODY_NIGHT, night).getHex();
     }
   }
 
@@ -266,6 +279,15 @@ export class Exhibit {
     if (on === this.focused) return;
     this.focused = on;
     if (this.tag) this.tag.fillOpacity = on ? 0.95 : 0.55;
+    if (!on) this.setHint(null);
+  }
+
+  /** A line under the tag saying how to use a control, or nothing. */
+  setHint(text: string | null) {
+    if (text === this.hint) return;
+    this.hint = text;
+    const h = this.tag?.getObjectByName("hint") as Text | undefined;
+    if (h) { h.text = text ?? ""; h.sync(); }
   }
 
   /**
@@ -298,6 +320,7 @@ export class Exhibit {
     this.tag = tag;
     this.group.add(tag);
     this.placards = [tag as unknown as Group];
+    if (this.hint) { const h = tag.getObjectByName("hint") as Text; h.text = this.hint; h.sync(); }
     const n = this.night;
     this.night = -1;
     this.setNight(n);
@@ -533,7 +556,7 @@ export class Exhibit {
       if (desiredPx > this.lastRequestedPx * 1.25) {
         this.lastRequestedPx = desiredPx;
         this.ladder.request(desiredPx);
-      } else if (d > 25 && !this.held && !this.capped && desiredPx * 4 < this.lastRequestedPx) {
+      } else if (d > 25 && !this.held && !this.capped && desiredPx * 3 < this.lastRequestedPx) {
         // Walked well away from something seen close: let the sharp rung go and hold what this
         // distance needs, so a building looked at from inside does not keep its full textures
         // from a hundred metres off.

@@ -19,7 +19,6 @@
       }
       #hud .title b { font-weight: 600; letter-spacing: 0.01em; }
       #hud .touchhint { display: none; }
-      body.touch #hud .touchhint { display: inline; }
       #hud .rows { display: grid; grid-template-columns: max-content 1fr; column-gap: 12px; row-gap: 2px; padding: 4px 12px 9px; }
       #hud .rows + .rows { border-top: 1px solid rgba(58,56,50,0.12); margin-top: 2px; padding-top: 7px; }
       #hud .lead { color: #8a857c; }
@@ -30,7 +29,6 @@
         left: max(12px, env(safe-area-inset-left)); right: auto; top: max(10px, env(safe-area-inset-top)); bottom: auto;
         max-width: calc(100vw - 24px - env(safe-area-inset-left) - env(safe-area-inset-right)); font-size: 12px;
       }
-      body.touch.used #hud .touchhint { display: none; }
       body.touch #hud .rows { display: none; }
       body.touch #hud .title { margin: 0; border: 0; padding: 6px 10px; }
       body.touch #touch { display: block; }
@@ -48,6 +46,37 @@
         background: rgba(255,255,255,0.9); border: 1px solid rgba(58,56,50,0.35); box-shadow: 0 1px 2px rgba(0,0,0,0.15);
         pointer-events: none;
       }
+      /* Until it has been used: chevrons say it moves, and the knob nudges forward and back on its own. */
+      #stick .chev {
+        position: absolute; font: 11px/1 system-ui, sans-serif; color: rgba(58,56,50,0.55); pointer-events: none;
+      }
+      #stick .chev.n { left: 50%; top: 7px; transform: translateX(-50%); }
+      #stick .chev.s { left: 50%; bottom: 7px; transform: translateX(-50%); }
+      #stick .chev.w { left: 8px; top: 50%; transform: translateY(-50%); }
+      #stick .chev.e { right: 8px; top: 50%; transform: translateY(-50%); }
+      #stick .label {
+        position: absolute; left: 50%; top: 100%; transform: translateX(-50%); margin-top: 6px;
+        font: 11px/1 system-ui, sans-serif; letter-spacing: 0.06em; text-transform: uppercase; color: #5e584e; pointer-events: none;
+      }
+      @keyframes nudge { 0%, 100% { transform: translate(0, 0); } 30% { transform: translate(0, -14px); } 70% { transform: translate(0, 10px); } }
+      body.touch:not(.learned-touch-walk) #stick .knob { animation: nudge 2.6s ease-in-out infinite; }
+      body.learned-touch-walk #stick .chev { opacity: 0.35; }
+      /* The coach: one line by each control until it has been used once, remembered between visits. */
+      .coach {
+        position: fixed; z-index: 6; max-width: 190px; padding: 7px 10px; border-radius: 8px;
+        font: 12.5px/1.35 system-ui, sans-serif; color: #2a2824; background: rgba(255,255,255,0.9);
+        box-shadow: 0 1px 3px rgba(0,0,0,0.15); pointer-events: none; display: none;
+      }
+      .coach::after { content: ""; position: absolute; width: 10px; height: 10px; background: inherit; transform: rotate(45deg); }
+      body.touch .coach { display: block; }
+      #coach-walk { left: max(20px, env(safe-area-inset-left)); bottom: calc(max(24px, env(safe-area-inset-bottom)) + 150px); max-width: 160px; }
+      #coach-walk::after { left: 24px; bottom: -5px; }
+      #coach-hop { right: max(16px, env(safe-area-inset-right)); bottom: calc(max(24px, env(safe-area-inset-bottom)) + 174px); max-width: 170px; }
+      #coach-hop::after { right: 24px; bottom: -5px; }
+      #coach-look { left: 50%; top: 50%; transform: translate(-50%, -50%); text-align: center; max-width: 220px; }
+      #coach-look::after { display: none; }
+      body.learned-touch-walk #coach-walk, body.learned-touch-hop #coach-hop, body.learned-touch-look.learned-touch-read #coach-look { display: none; }
+      body.learned-touch-look #coach-look .look, body.learned-touch-read #coach-look .read { display: none; }
       #hops {
         position: fixed; right: max(16px, env(safe-area-inset-right)); bottom: max(24px, env(safe-area-inset-bottom)); z-index: 5;
         display: grid; grid-template-columns: repeat(4, 48px); gap: 8px; touch-action: none;
@@ -82,7 +111,7 @@
   </head>
   <body>
     <div id="hud">
-      <div class="title"><b>20watts</b> · Behold the works of 20-watt brains.<span class="touchhint"> Drag to look · tap to read · stick walks · buttons hop</span></div>
+      <div class="title"><b>20watts</b> · Behold the works of 20-watt brains.</div>
       <div class="rows">
         <span class="lead">In VR</span><span>sticks move · <span class="nw"><kbd>A</kbd> <kbd>B</kbd> eras</span> · <span class="nw"><kbd>X</kbd> <kbd>Y</kbd> sideways</span> · <span class="nw">trigger reads</span> · <span class="nw">grip near a small thing picks it up</span></span>
       </div>
@@ -95,8 +124,11 @@
       </div>
     </div>
     <div id="tour" aria-live="polite"></div>
+    <div class="coach" id="coach-walk">Drag the knob to walk, or tap the floor to walk there.</div>
+    <div class="coach" id="coach-hop">Hop between eras, or follow the tour.</div>
+    <div class="coach" id="coach-look"><span class="look">Drag the view to look around.</span> <span class="read">Tap a work to read about it.</span></div>
     <div id="touch">
-      <div id="stick"><div class="knob"></div></div>
+      <div id="stick"><span class="chev n">▲</span><span class="chev s">▼</span><span class="chev w">◀</span><span class="chev e">▶</span><div class="knob"></div><div class="label">walk</div></div>
       <div id="hops">
         <button data-action="start">⇤<small>start</small></button>
         <button data-action="eraPrev">◀<small>era</small></button>
