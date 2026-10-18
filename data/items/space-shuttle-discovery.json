@@ -1,5 +1,6 @@
 {
  "slug": "space-shuttle-discovery",
+ "aliases": ["discovery"],
  "title": "Space Shuttle Discovery",
  "kind": "model",
  "representation": "scan",

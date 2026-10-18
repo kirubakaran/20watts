@@ -1,5 +1,6 @@
 {
  "slug": "international-space-station",
+ "aliases": ["iss"],
  "title": "International Space Station",
  "titleOriginal": null,
  "kind": "model",

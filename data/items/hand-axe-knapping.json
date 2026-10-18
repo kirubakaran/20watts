@@ -1,0 +1,18 @@
+{
+ "attachAudioTo": "zen-21530762",
+ "audio": {
+  "type": "freesound",
+  "url": "data/originals/zen-21530762/knapping.mp3",
+  "bytes": null,
+  "mime": "audio/mpeg",
+  "seconds": 48,
+  "licenseName": "CC0 1.0",
+  "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "author": "Za-Games (one flint strike, Freesound 539973, CC0); sequenced into a knapping session by 20watts (scripts/dev/knapping.mjs)",
+  "sourcePage": "https://freesound.org/s/539973/",
+  "performers": "Stone on stone: a hammerstone striking flint, the blows of a hand axe being shaped. Not a recording of a knapper at work: one real strike, repeated the way knapping goes.",
+  "start": 0,
+  "excerptSeconds": null,
+  "notes": "There is no free recording of flint knapping (Freesound, Commons and the Crabtree collection at Idaho were checked on 2026-10-18; the Crabtree films are not free). The nearest thing was a single 0.6 s strike of stone on stone released CC0 on Freesound by Za-Games ('A short sound of stones being struck together that could be used for flint knapping'). scripts/dev/knapping.mjs downloads it, trims the leading silence, and lays 48 seconds of blows: runs of two to six, each at a random gain between 0.35 and 1 and a random playback rate between 0.85 and 1.25, 0.45-1.1 s apart, with 1.2-3 s pauses between runs for turning the core. The sequence is seeded, so the file is the same every time. The 'hq' preview (128 kbit/s mp3) is what Freesound serves without a login; the original is a wav of the same take. Played in a loop at the hand axe so that the first work on the lane has the sound of its own making."
+ }
+}

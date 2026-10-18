@@ -1,5 +1,6 @@
 {
  "slug": "commodore-64",
+ "aliases": ["c64"],
  "title": "Commodore 64",
  "titleOriginal": null,
  "kind": "model",

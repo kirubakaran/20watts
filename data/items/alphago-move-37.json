@@ -1,5 +1,6 @@
 {
  "slug": "alphago-move-37",
+ "aliases": ["move37"],
  "title": "AlphaGo, move 37",
  "kind": "sim",
  "importance": 0.9,

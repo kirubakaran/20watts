@@ -186,6 +186,8 @@ export function recordOf(item: Item, now: string): Artwork {
 
   const record: Artwork = {
     id: aid,
+    slug: item.slug,
+    aliases: item.aliases ?? [],
     kind: item.kind,
     title: item.title,
     titleOriginal: item.titleOriginal ?? null,

@@ -1,5 +1,6 @@
 {
  "slug": "alhambra-courtyard",
+ "aliases": ["alhambra"],
  "title": "A courtyard of the Alhambra",
  "kind": "model",
  "representation": "scan",

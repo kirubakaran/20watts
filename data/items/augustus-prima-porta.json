@@ -1,5 +1,6 @@
 {
  "slug": "augustus-prima-porta",
+ "aliases": ["augustus"],
  "title": "Augustus of Prima Porta",
  "kind": "model",
  "representation": "scan",

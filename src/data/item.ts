@@ -131,6 +131,8 @@ export interface ItemAlternate {
 
 export interface Item {
   slug: string;
+  /** Other short names a link may use, besides the slug: `?at=ligo`. */
+  aliases?: string[];
   title: string;
   titleOriginal?: string | null;
   altTitles?: string[];

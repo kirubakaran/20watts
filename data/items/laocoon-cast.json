@@ -1,5 +1,6 @@
 {
  "slug": "laocoon-cast",
+ "aliases": ["laocoon"],
  "title": "Laocoön and His Sons",
  "kind": "model",
  "representation": "scan",

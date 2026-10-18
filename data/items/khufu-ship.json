@@ -1,5 +1,6 @@
 {
  "slug": "khufu-ship",
+ "aliases": ["khufu"],
  "title": "Khufu's ship",
  "kind": "model",
  "representation": "scan",

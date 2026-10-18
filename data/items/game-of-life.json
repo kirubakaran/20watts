@@ -79,6 +79,7 @@
   "depthCm": null
  },
  "slug": "game-of-life",
+ "aliases": ["life"],
  "flat": false,
  "periodSlug": null,
  "tour": "Conway's Game of Life, 1970: three rules on a grid, and out of them gliders, guns, and anything a computer can compute. It is running."

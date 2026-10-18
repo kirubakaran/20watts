@@ -1,5 +1,6 @@
 {
  "slug": "lunar-rover",
+ "aliases": ["rover"],
  "title": "Lunar Roving Vehicle",
  "kind": "model",
  "representation": "reconstruction",

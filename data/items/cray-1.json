@@ -1,5 +1,6 @@
 {
  "slug": "cray-1",
+ "aliases": ["cray"],
  "title": "Cray-1",
  "titleOriginal": null,
  "kind": "image",

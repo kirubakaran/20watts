@@ -441,6 +441,10 @@ export interface DisplayHints {
 
 export interface Artwork {
   id: ArtworkId;
+  /** The item's short name, for links: `?at=stonehenge`. Unique across the collection. */
+  slug: string;
+  /** Other short names a link may use: `?at=ligo`. */
+  aliases: string[];
   kind: ArtworkKind;
   title: string;
   titleOriginal: string | null;

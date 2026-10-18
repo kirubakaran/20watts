@@ -1,5 +1,6 @@
 {
  "slug": "mos-6502",
+ "aliases": ["mos6502"],
  "title": "MOS 6502",
  "kind": "image",
  "importance": 0.85,

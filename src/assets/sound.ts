@@ -6,18 +6,45 @@
  * start after a gesture; the context is resumed on the first one.
  */
 import { AudioListener, PositionalAudio } from "three";
+import type { WebXRManager } from "three";
 import type { AudioVersion } from "../data/types";
 import { assetUrl } from "./base";
 
 let listener: AudioListener | null = null;
 
-/** Called once from main with the listener that rides on the camera. */
-export function setAudioListener(l: AudioListener) {
+/**
+ * Called once from main with the listener that rides on the camera. Any
+ * gesture on the page resumes the context; so does a trigger or grip in
+ * VR, where there is no page to touch and entering the session may not
+ * have counted as a gesture.
+ */
+export function setAudioListener(l: AudioListener, xr?: WebXRManager) {
   listener = l;
   const resume = () => {
     if (l.context.state !== "running") void l.context.resume();
   };
   for (const ev of ["pointerdown", "keydown", "touchstart"]) window.addEventListener(ev, resume, { passive: true });
+  if (xr) {
+    xr.addEventListener("sessionstart", resume);
+    for (const i of [0, 1]) {
+      const c = xr.getController(i);
+      c.addEventListener("selectstart", resume);
+      c.addEventListener("squeezestart", resume);
+    }
+  }
+}
+
+/** Whether sound can be heard yet, and a way to be told when that changes. */
+export function audible(): boolean {
+  return listener?.context.state === "running";
+}
+export function onAudible(cb: (on: boolean) => void) {
+  listener?.context.addEventListener("statechange", () => cb(audible()));
+}
+
+/** Ask for sound from a gesture the visitor just made (a button). */
+export function resumeAudio() {
+  if (listener && listener.context.state !== "running") void listener.context.resume();
 }
 
 /**

@@ -89,6 +89,15 @@
       #hops button:active { background: rgba(58,56,50,0.15); }
       #hops button small { display: block; font-size: 9px; color: #8a857c; margin-top: 3px; }
       #hops .wide { grid-column: span 2; }
+      /* Browsers keep audio silent until the visitor has touched the page; until then, one button says so. */
+      #sound {
+        position: fixed; right: max(16px, env(safe-area-inset-right)); top: max(14px, env(safe-area-inset-top)); z-index: 6;
+        padding: 9px 14px 9px 12px; border-radius: 999px; font: 13px/1 system-ui, sans-serif; color: #2a2824;
+        background: rgba(255,255,255,0.9); border: 1px solid rgba(58,56,50,0.3); box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+        cursor: pointer; -webkit-tap-highlight-color: transparent; user-select: none; -webkit-user-select: none;
+      }
+      #sound::before { content: "🔈"; margin-right: 6px; }
+      #sound:active { background: rgba(58,56,50,0.15); }
       /* The guided visit: a line about the stop you were just taken to, top centre, gone after a while. */
       #tour {
         position: fixed; left: 50%; top: max(14px, env(safe-area-inset-top)); transform: translateX(-50%); z-index: 6;
@@ -124,6 +133,7 @@
       </div>
     </div>
     <div id="tour" aria-live="polite"></div>
+    <button id="sound" hidden>Turn on sound</button>
     <div class="coach" id="coach-walk">Drag the knob to walk, or tap the floor to walk there.</div>
     <div class="coach" id="coach-hop">Hop between eras, or follow the tour.</div>
     <div class="coach" id="coach-look"><span class="look">Drag the view to look around.</span> <span class="read">Tap a work to read about it.</span></div>

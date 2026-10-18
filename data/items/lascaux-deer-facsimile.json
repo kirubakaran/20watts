@@ -1,5 +1,6 @@
 {
  "slug": "lascaux-deer-facsimile",
+ "aliases": ["lascauxdeer"],
  "title": "The great deer, Lascaux",
  "kind": "model",
  "representation": "scan",

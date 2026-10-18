@@ -1,5 +1,6 @@
 {
  "slug": "v2-rocket-model",
+ "aliases": ["v2"],
  "title": "V-2",
  "titleOriginal": null,
  "kind": "model",

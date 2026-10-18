@@ -1,5 +1,6 @@
 {
  "slug": "james-webb-space-telescope",
+ "aliases": ["jwst", "webb"],
  "title": "James Webb Space Telescope",
  "titleOriginal": null,
  "kind": "model",

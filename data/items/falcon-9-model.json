@@ -1,5 +1,6 @@
 {
  "slug": "falcon-9-model",
+ "aliases": ["falcon9"],
  "title": "Falcon 9",
  "titleOriginal": null,
  "kind": "model",

@@ -1,5 +1,6 @@
 {
  "slug": "discobolus-smk",
+ "aliases": ["discobolus"],
  "title": "Discobolus",
  "kind": "model",
  "representation": "scan",

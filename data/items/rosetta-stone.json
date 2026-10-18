@@ -1,5 +1,6 @@
 {
  "slug": "rosetta-stone",
+ "aliases": ["rosetta"],
  "title": "Rosetta Stone",
  "kind": "image",
  "source": {

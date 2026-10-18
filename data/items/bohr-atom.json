@@ -1,5 +1,6 @@
 {
  "slug": "bohr-atom",
+ "aliases": ["bohr"],
  "title": "Bohr's atom",
  "kind": "sim",
  "importance": 0.9,

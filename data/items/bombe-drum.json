@@ -1,5 +1,6 @@
 {
  "slug": "bombe-drum",
+ "aliases": ["bombe"],
  "title": "Bombe drums",
  "kind": "image",
  "source": {

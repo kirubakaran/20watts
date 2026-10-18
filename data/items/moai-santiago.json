@@ -1,5 +1,6 @@
 {
  "slug": "moai-santiago",
+ "aliases": ["moai"],
  "title": "Moai",
  "kind": "model",
  "representation": "scan",

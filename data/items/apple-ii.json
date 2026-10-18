@@ -1,5 +1,6 @@
 {
  "slug": "apple-ii",
+ "aliases": ["apple2"],
  "title": "Apple II",
  "kind": "model",
  "representation": "reconstruction",

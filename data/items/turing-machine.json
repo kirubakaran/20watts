@@ -79,6 +79,7 @@
   "depthCm": null
  },
  "slug": "turing-machine",
+ "aliases": ["turing"],
  "flat": false,
  "periodSlug": null
 }

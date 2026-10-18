@@ -1,5 +1,6 @@
 {
  "slug": "pantheon-rome",
+ "aliases": ["pantheon"],
  "title": "The Pantheon",
  "kind": "model",
  "representation": "scan",

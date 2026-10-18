@@ -1,9 +1,13 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-11T16:26:25.092Z",
+  "generatedAt": "2026-10-18T19:18:53.615Z",
   "artworks": [
     {
       "id": "zen-21530762",
+      "slug": "acheulean-hand-axe",
+      "aliases": [
+        "handaxe"
+      ],
       "kind": "model",
       "title": "Acheulean hand axe",
       "titleOriginal": null,
@@ -173,11 +177,58 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-08T00:00:00Z",
-      "updatedAt": "2026-10-11T16:25:44.973Z",
-      "tour": "A hand axe from Saint-Acheul, 300,000 years old. Someone chose this shape and worked stone to it, and so did a thousand generations after."
+      "updatedAt": "2026-10-18T19:18:55.006Z",
+      "tour": "A hand axe from Saint-Acheul, 300,000 years old. Someone chose this shape and worked stone to it, and so did a thousand generations after.",
+      "audio": {
+        "currentVersionId": "zen-21530762-audio-v1",
+        "versions": [
+          {
+            "id": "zen-21530762-audio-v1",
+            "original": {
+              "url": "data/originals/zen-21530762/knapping.mp3",
+              "bytes": 286974,
+              "mime": "audio/mpeg",
+              "seconds": 48
+            },
+            "encoded": {
+              "url": "/assets/zen-21530762/sound.mp3",
+              "bytes": 769087,
+              "seconds": 48
+            },
+            "start": 0,
+            "seconds": null,
+            "performers": "Stone on stone: a hammerstone striking flint, the blows of a hand axe being shaped. Not a recording of a knapper at work: one real strike, repeated the way knapping goes.",
+            "credit": {
+              "author": "Za-Games (one flint strike, Freesound 539973, CC0); sequenced into a knapping session by 20watts (scripts/dev/knapping.mjs)",
+              "license": {
+                "name": "CC0 1.0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "sourcePage": "https://freesound.org/s/539973/"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-18T19:18:53.615Z",
+              "note": "There is no free recording of flint knapping (Freesound, Commons and the Crabtree collection at Idaho were checked on 2026-10-18; the Crabtree films are not free). The nearest thing was a single 0.6 s strike of stone on stone released CC0 on Freesound by Za-Games ('A short sound of stones being struck together that could be used for flint knapping'). scripts/dev/knapping.mjs downloads it, trims the leading silence, and lays 48 seconds of blows: runs of two to six, each at a random gain between 0.35 and 1 and a random playback rate between 0.85 and 1.25, 0.45-1.1 s apart, with 1.2-3 s pauses between runs for turning the core. The sequence is seeded, so the file is the same every time. The 'hq' preview (128 kbit/s mp3) is what Freesound serves without a login; the original is a wav of the same take. Played in a loop at the hand axe so that the first work on the lane has the sound of its own making."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "freesound"
+          }
+        ]
+      }
     },
     {
       "id": "wm-29686577",
+      "slug": "lion-man",
+      "aliases": [
+        "lionman"
+      ],
       "kind": "image",
       "title": "The Lion-man",
       "titleOriginal": null,
@@ -322,11 +373,15 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-08T00:00:00Z",
-      "updatedAt": "2026-10-11T16:25:44.973Z",
+      "updatedAt": "2026-10-18T19:10:22.646Z",
       "tour": "The Lion-man, carved from mammoth ivory 40,000 years ago: a creature no one had ever seen. The oldest image of something imagined."
     },
     {
       "id": "wm-31360759",
+      "slug": "hand-stencils-leang-pettakere",
+      "aliases": [
+        "pettakere"
+      ],
       "kind": "image",
       "title": "Hand stencils, Leang Pettakere",
       "titleOriginal": null,
@@ -483,10 +538,14 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-08T00:00:00Z",
-      "updatedAt": "2026-10-09T19:22:27.297Z"
+      "updatedAt": "2026-10-18T19:10:22.646Z"
     },
     {
       "id": "wm-47569433",
+      "slug": "panel-of-the-lions-chauvet",
+      "aliases": [
+        "chauvet"
+      ],
       "kind": "image",
       "title": "Panel of the Lions, Chauvet",
       "titleOriginal": null,
@@ -646,10 +705,14 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-08T00:00:00Z",
-      "updatedAt": "2026-10-09T19:22:27.568Z"
+      "updatedAt": "2026-10-18T19:10:22.646Z"
     },
     {
       "id": "wm-1587877",
+      "slug": "venus-of-willendorf",
+      "aliases": [
+        "willendorf"
+      ],
       "kind": "image",
       "title": "Venus of Willendorf",
       "titleOriginal": null,
@@ -793,10 +856,14 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-08T00:00:00Z",
-      "updatedAt": "2026-10-09T19:22:27.812Z"
+      "updatedAt": "2026-10-18T19:10:22.646Z"
     },
     {
       "id": "wm-6909701",
+      "slug": "megaloceros-lascaux",
+      "aliases": [
+        "lascaux"
+      ],
       "kind": "image",
       "title": "Megaloceros, Lascaux",
       "titleOriginal": null,
@@ -950,10 +1017,57 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-08T00:00:00Z",
-      "updatedAt": "2026-10-09T19:22:27.942Z"
+      "updatedAt": "2026-10-18T19:19:03.141Z",
+      "audio": {
+        "currentVersionId": "wm-6909701-audio-v1",
+        "versions": [
+          {
+            "id": "wm-6909701-audio-v1",
+            "original": {
+              "url": "https://cdn.freesound.org/previews/420/420387_2061858-hq.mp3",
+              "bytes": 609408,
+              "mime": "audio/mpeg",
+              "seconds": 26.8
+            },
+            "encoded": {
+              "url": "/assets/wm-6909701/sound.mp3",
+              "bytes": 429705,
+              "seconds": 26.8
+            },
+            "start": 0,
+            "seconds": null,
+            "performers": "A bullroarer: a slat of wood on a cord, swung overhead. The oldest known ones are Magdalenian, carved from bone and reindeer antler; one from La Roche de Birol at Lalinde, in the Dordogne like Lascaux, is about 15,000 years old. This is a modern one, recorded outdoors.",
+            "credit": {
+              "author": "Garuda1982, field recording with a Zoom H2n (Freesound 420387, CC0)",
+              "license": {
+                "name": "CC0 1.0",
+                "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+              },
+              "sourcePage": "https://freesound.org/s/420387/"
+            },
+            "contributed": {
+              "by": null,
+              "at": "2026-10-18T19:18:53.615Z",
+              "note": "Bullroarers (rhombes) are among the few Palaeolithic instruments that survive: decorated bone and antler slats pierced at one end, from Magdalenian sites including La Roche de Birol (Lalinde, Dordogne, c. 15,000 BP, Musée d'Archéologie nationale) and Abri de Laugerie-Basse; replicas sound exactly like wooden ones, since the sound is made by the slat spinning in the air. No free recording of a replica exists (Commons has none; the Marsoulas conch recording in Fritz et al. 2021, Science Advances, is CC BY-NC). This 26.8 s CC0 field recording of a modern bullroarer by Garuda1982 on Freesound, played in a loop at the Megaloceros of Lascaux, the first Magdalenian work on the lane. 'hq' preview (mp3) as served by Freesound without a login; licence read from the sound page on 2026-10-18."
+            },
+            "moderation": {
+              "status": "approved",
+              "reviewedBy": null,
+              "reviewedAt": null,
+              "reason": null,
+              "flags": []
+            },
+            "provenance": "freesound"
+          }
+        ]
+      }
     },
     {
       "id": "sf-e8f121d0545247318781ef3981fdfdaa",
+      "slug": "lascaux-deer-facsimile",
+      "aliases": [
+        "lascauxdeer"
+      ],
       "kind": "model",
       "title": "The great deer, Lascaux",
       "titleOriginal": null,
@@ -1133,7 +1247,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-11T16:25:44.973Z",
+      "updatedAt": "2026-10-18T19:10:22.646Z",
       "tour": "A wall of Lascaux, cast from the cave. The deer's neck is one stroke, made 17,000 years ago by lamplight in the dark.",
       "branch": {
         "of": "wm-6909701",
@@ -1143,6 +1257,10 @@
     },
     {
       "id": "wm-3513129",
+      "slug": "the-bison-of-altamira",
+      "aliases": [
+        "bison"
+      ],
       "kind": "image",
       "title": "The bison of Altamira",
       "titleOriginal": null,
@@ -1302,10 +1420,14 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-08T00:00:00Z",
-      "updatedAt": "2026-10-11T16:02:01.128Z"
+      "updatedAt": "2026-10-18T19:10:22.646Z"
     },
     {
       "id": "sf-af6cbb6cfcc14cfeb1387ac50dc824ae",
+      "slug": "altamira-ceiling-replica",
+      "aliases": [
+        "altamira"
+      ],
       "kind": "model",
       "title": "The ceiling of Altamira",
       "titleOriginal": null,
@@ -1484,10 +1606,14 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-11T16:09:50.718Z"
+      "updatedAt": "2026-10-18T19:10:22.646Z"
     },
     {
       "id": "zen-21490444",
+      "slug": "clovis-point",
+      "aliases": [
+        "clovis"
+      ],
       "kind": "model",
       "title": "Clovis point",
       "titleOriginal": null,
@@ -1657,10 +1783,14 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-08T00:00:00Z",
-      "updatedAt": "2026-10-11T16:04:54.605Z"
+      "updatedAt": "2026-10-18T19:10:22.646Z"
     },
     {
       "id": "wm-80059616",
+      "slug": "painted-figures-serra-da-capivara",
+      "aliases": [
+        "capivara"
+      ],
       "kind": "image",
       "title": "Painted figures, Serra da Capivara",
       "titleOriginal": null,
@@ -1817,10 +1947,14 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-08T00:00:00Z",
-      "updatedAt": "2026-10-09T19:22:44.076Z"
+      "updatedAt": "2026-10-18T19:10:22.646Z"
     },
     {
       "id": "wm-33749461",
+      "slug": "rock-shelter-8-bhimbetka",
+      "aliases": [
+        "bhimbetka"
+      ],
       "kind": "image",
       "title": "Rock Shelter 8, Bhimbetka",
       "titleOriginal": null,
@@ -1979,10 +2113,14 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-08T00:00:00Z",
-      "updatedAt": "2026-10-09T19:22:44.461Z"
+      "updatedAt": "2026-10-18T19:10:22.646Z"
     },
     {
       "id": "wm-265811",
+      "slug": "cueva-de-las-manos",
+      "aliases": [
+        "manos"
+      ],
       "kind": "image",
       "title": "Cueva de las Manos",
       "titleOriginal": null,
@@ -2137,10 +2275,14 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-08T00:00:00Z",
-      "updatedAt": "2026-10-09T19:22:44.590Z"
+      "updatedAt": "2026-10-18T19:10:22.646Z"
     },
     {
       "id": "wm-153807790",
+      "slug": "pastoral-figures-tassili-n-ajjer",
+      "aliases": [
+        "tassili"
+      ],
       "kind": "image",
       "title": "Pastoral figures, Tassili n'Ajjer",
       "titleOriginal": null,
@@ -2299,10 +2441,14 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-08T00:00:00Z",
-      "updatedAt": "2026-10-09T19:22:44.987Z"
+      "updatedAt": "2026-10-18T19:10:22.646Z"
     },
     {
       "id": "wm-146391319",
+      "slug": "cattle-laas-geel",
+      "aliases": [
+        "laasgeel"
+      ],
       "kind": "image",
       "title": "Cattle, Laas Geel",
       "titleOriginal": null,
@@ -2461,10 +2607,14 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-08T00:00:00Z",
-      "updatedAt": "2026-10-09T19:22:45.360Z"
+      "updatedAt": "2026-10-18T19:10:22.646Z"
     },
     {
       "id": "wm-57854047",
+      "slug": "proto-cuneiform-tablet",
+      "aliases": [
+        "cuneiform"
+      ],
       "kind": "image",
       "title": "Proto-cuneiform tablet",
       "titleOriginal": null,
@@ -2611,10 +2761,14 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-08T00:00:00Z",
-      "updatedAt": "2026-10-09T19:22:45.632Z"
+      "updatedAt": "2026-10-18T19:10:22.646Z"
     },
     {
       "id": "sim-great-pyramid-of-giza",
+      "slug": "great-pyramid-of-giza",
+      "aliases": [
+        "giza"
+      ],
       "kind": "sim",
       "title": "Great Pyramid of Giza",
       "titleOriginal": null,
@@ -2756,7 +2910,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-09T00:00:00Z",
+      "updatedAt": "2026-10-18T19:10:22.646Z",
       "landmark": {
         "side": "east",
         "distance": 600
@@ -2764,6 +2918,10 @@
     },
     {
       "id": "sf-5c56a4feeb8e4c67b5a4d903b4a96e5a",
+      "slug": "khufu-ship",
+      "aliases": [
+        "khufu"
+      ],
       "kind": "model",
       "title": "Khufu's ship",
       "titleOriginal": null,
@@ -2955,11 +3113,13 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-11T16:25:44.973Z",
+      "updatedAt": "2026-10-18T19:10:22.646Z",
       "tour": "Khufu's ship, buried beside the Great Pyramid 4,500 years ago: 43 metres of cedar sewn together with rope, and still whole."
     },
     {
       "id": "sf-7e7febabef2045a68755cc39c8c7c91f",
+      "slug": "stonehenge",
+      "aliases": [],
       "kind": "model",
       "title": "Stonehenge",
       "titleOriginal": null,
@@ -3151,11 +3311,15 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-11T16:25:44.973Z",
+      "updatedAt": "2026-10-18T19:05:33.145Z",
       "tour": "Stonehenge. The stones were set so that at midsummer the sun comes up along their axis. Wait, and it does."
     },
     {
       "id": "wm-78233931",
+      "slug": "dancing-girl-mohenjo-daro",
+      "aliases": [
+        "dancinggirl"
+      ],
       "kind": "image",
       "title": "Dancing Girl of Mohenjo-daro",
       "titleOriginal": null,
@@ -3313,10 +3477,14 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-10T00:16:43.379Z"
+      "updatedAt": "2026-10-18T19:10:22.646Z"
     },
     {
       "id": "wm-164288965",
+      "slug": "nebra-sky-disc",
+      "aliases": [
+        "nebra"
+      ],
       "kind": "image",
       "title": "Nebra sky disc",
       "titleOriginal": null,
@@ -3472,11 +3640,15 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-08T00:00:00Z",
-      "updatedAt": "2026-10-11T16:25:44.973Z",
+      "updatedAt": "2026-10-18T19:10:22.646Z",
       "tour": "The Nebra sky disc, the oldest known picture of the heavens. Above is the sky it was made under; the Pleiades are low in the west, as they are on the disc."
     },
     {
       "id": "sf-d148f771c3f44225b56cb7ce8d3c5ce6",
+      "slug": "nefertiti-cast-leiden",
+      "aliases": [
+        "nefertiti"
+      ],
       "kind": "model",
       "title": "Bust of Nefertiti",
       "titleOriginal": null,
@@ -3654,11 +3826,15 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-11T16:25:44.973Z",
+      "updatedAt": "2026-10-18T19:10:22.646Z",
       "tour": "Nefertiti, carved in Thutmose's workshop at Amarna about 1345 BCE and left on a shelf when the city was abandoned. One eye was never finished."
     },
     {
       "id": "sf-abf31556e54849408ced19e58f3dc8f1",
+      "slug": "olmec-colossal-head",
+      "aliases": [
+        "olmec"
+      ],
       "kind": "model",
       "title": "Olmec colossal head",
       "titleOriginal": null,
@@ -3836,11 +4012,15 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-11T16:25:44.973Z",
+      "updatedAt": "2026-10-18T19:10:22.646Z",
       "tour": "An Olmec colossal head: a portrait of a ruler, cut from a forty-tonne boulder and moved sixty kilometres without wheels, three thousand years ago."
     },
     {
       "id": "wm-57852675",
+      "slug": "exekias-neck-amphora-met",
+      "aliases": [
+        "exekias"
+      ],
       "kind": "image",
       "title": "Wedding amphora, by Exekias",
       "titleOriginal": null,
@@ -3998,10 +4178,14 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-08T00:00:00Z",
-      "updatedAt": "2026-10-09T19:22:46.259Z"
+      "updatedAt": "2026-10-18T19:10:22.646Z"
     },
     {
       "id": "sf-50f50abf45414ad8a658325df7a5fcb3",
+      "slug": "discobolus-smk",
+      "aliases": [
+        "discobolus"
+      ],
       "kind": "model",
       "title": "Discobolus",
       "titleOriginal": null,
@@ -4179,11 +4363,15 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-11T16:25:44.973Z",
+      "updatedAt": "2026-10-18T19:10:22.646Z",
       "tour": "Myron's discus thrower, about 450 BCE: the first sculpture anywhere to catch a body in the middle of a movement."
     },
     {
       "id": "eq-pythagorean-theorem",
+      "slug": "pythagorean-theorem",
+      "aliases": [
+        "pythagoras"
+      ],
       "kind": "image",
       "title": "The Pythagorean theorem",
       "titleOriginal": null,
@@ -4337,11 +4525,15 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-11T16:25:44.973Z",
+      "updatedAt": "2026-10-18T19:10:22.646Z",
       "tour": "The Pythagorean theorem as Euclid proved it in Alexandria, around 300 BCE. Beside it, a scrap of papyrus with Euclid's own diagram, a few centuries on."
     },
     {
       "id": "wm-3153928",
+      "slug": "rosetta-stone",
+      "aliases": [
+        "rosetta"
+      ],
       "kind": "image",
       "title": "Rosetta Stone",
       "titleOriginal": null,
@@ -4487,10 +4679,14 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-08T00:00:00Z",
-      "updatedAt": "2026-10-09T19:22:46.555Z"
+      "updatedAt": "2026-10-18T19:10:22.646Z"
     },
     {
       "id": "sf-4edd6459f2834e7ab0b395e71cee2513",
+      "slug": "winged-victory-samothrace",
+      "aliases": [
+        "nike"
+      ],
       "kind": "model",
       "title": "Winged Victory of Samothrace",
       "titleOriginal": null,
@@ -4668,10 +4864,14 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-11T16:10:46.804Z"
+      "updatedAt": "2026-10-18T19:10:22.646Z"
     },
     {
       "id": "wm-73484131",
+      "slug": "arittapatti-tamil-brahmi-inscription",
+      "aliases": [
+        "arittapatti"
+      ],
       "kind": "image",
       "title": "Tamil-Brahmi inscription at Arittapatti",
       "titleOriginal": null,
@@ -4831,10 +5031,14 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-10T00:16:44.531Z"
+      "updatedAt": "2026-10-18T19:10:22.646Z"
     },
     {
       "id": "wm-23752160",
+      "slug": "alexander-mosaic",
+      "aliases": [
+        "alexander"
+      ],
       "kind": "image",
       "title": "Alexander Mosaic",
       "titleOriginal": null,
@@ -4982,10 +5186,14 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-08T00:00:00Z",
-      "updatedAt": "2026-10-09T19:22:46.920Z"
+      "updatedAt": "2026-10-18T19:10:22.646Z"
     },
     {
       "id": "sf-4e253a98bfc842cabfe7610c38daa7ab",
+      "slug": "laocoon-cast",
+      "aliases": [
+        "laocoon"
+      ],
       "kind": "model",
       "title": "Laocoön and His Sons",
       "titleOriginal": null,
@@ -5163,10 +5371,14 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-11T16:10:54.862Z"
+      "updatedAt": "2026-10-18T19:10:22.646Z"
     },
     {
       "id": "sf-42b5fd63307b48cfb073370be3ff259b",
+      "slug": "augustus-prima-porta",
+      "aliases": [
+        "augustus"
+      ],
       "kind": "model",
       "title": "Augustus of Prima Porta",
       "titleOriginal": null,
@@ -5344,10 +5556,14 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-11T16:11:06.261Z"
+      "updatedAt": "2026-10-18T19:10:22.646Z"
     },
     {
       "id": "wm-1259734",
+      "slug": "euclid-oxyrhynchus-papyrus-29",
+      "aliases": [
+        "euclid"
+      ],
       "kind": "image",
       "title": "Euclid's Elements",
       "titleOriginal": "Στοιχεῖα, Book II, Proposition 5",
@@ -5505,10 +5721,14 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-10T16:40:47.049Z"
+      "updatedAt": "2026-10-18T19:10:22.646Z"
     },
     {
       "id": "sf-5f35ab370082403e8c7829388f4e0c30",
+      "slug": "pantheon-rome",
+      "aliases": [
+        "pantheon"
+      ],
       "kind": "model",
       "title": "The Pantheon",
       "titleOriginal": null,
@@ -5716,11 +5936,15 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-11T16:25:44.973Z",
+      "updatedAt": "2026-10-18T19:10:22.646Z",
       "tour": "The Pantheon, Rome, 126 CE, still the largest dome of unreinforced concrete. At noon on 21 April the sun through the oculus lands on the arch over the door."
     },
     {
       "id": "wm-110598443",
+      "slug": "iron-pillar-of-delhi",
+      "aliases": [
+        "ironpillar"
+      ],
       "kind": "image",
       "title": "Iron Pillar of Delhi",
       "titleOriginal": null,
@@ -5879,10 +6103,14 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-10T16:49:00.200Z"
+      "updatedAt": "2026-10-18T19:10:22.646Z"
     },
     {
       "id": "wm-47597960",
+      "slug": "tirukkural-palm-leaf-manuscript",
+      "aliases": [
+        "tirukkural"
+      ],
       "kind": "image",
       "title": "Tirukkural",
       "titleOriginal": null,
@@ -6037,11 +6265,15 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-11T16:25:44.973Z",
+      "updatedAt": "2026-10-18T19:10:22.646Z",
       "tour": "The Tirukkural: 1,330 couplets on virtue, wealth and love, written in Tamil around 450 CE by Thiruvalluvar, on a palm leaf with the commentary that made it a classic."
     },
     {
       "id": "wm-63768037",
+      "slug": "ajanta-padmapani",
+      "aliases": [
+        "ajanta"
+      ],
       "kind": "image",
       "title": "Bodhisattva Padmapani, Ajanta",
       "titleOriginal": null,
@@ -6203,10 +6435,14 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-10T16:49:02.352Z"
+      "updatedAt": "2026-10-18T19:10:22.646Z"
     },
     {
       "id": "wm-7203375",
+      "slug": "the-great-gallery-horseshoe-canyon",
+      "aliases": [
+        "horseshoe"
+      ],
       "kind": "image",
       "title": "The Great Gallery, Horseshoe Canyon",
       "titleOriginal": null,
@@ -6364,10 +6600,14 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-08T00:00:00Z",
-      "updatedAt": "2026-10-09T19:22:47.216Z"
+      "updatedAt": "2026-10-18T19:10:22.646Z"
     },
     {
       "id": "wm-845223",
+      "slug": "x-ray-turtle-kakadu",
+      "aliases": [
+        "kakadu"
+      ],
       "kind": "image",
       "title": "X-ray turtle, Kakadu",
       "titleOriginal": null,
@@ -6526,10 +6766,14 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-08T00:00:00Z",
-      "updatedAt": "2026-10-09T19:22:47.454Z"
+      "updatedAt": "2026-10-18T19:10:22.646Z"
     },
     {
       "id": "eq-brahmagupta-zero",
+      "slug": "brahmagupta-zero",
+      "aliases": [
+        "brahmagupta"
+      ],
       "kind": "image",
       "title": "Brahmagupta's rules for zero",
       "titleOriginal": null,
@@ -6684,10 +6928,14 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-10T00:09:46.205Z"
+      "updatedAt": "2026-10-18T19:10:22.646Z"
     },
     {
       "id": "wm-7280090",
+      "slug": "descent-of-the-ganges-mamallapuram",
+      "aliases": [
+        "mamallapuram"
+      ],
       "kind": "image",
       "title": "Descent of the Ganges, Mamallapuram",
       "titleOriginal": null,
@@ -6849,10 +7097,14 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-10T00:16:48.760Z"
+      "updatedAt": "2026-10-18T19:10:22.646Z"
     },
     {
       "id": "wm-44550",
+      "slug": "book-of-kells-chi-rho",
+      "aliases": [
+        "kells"
+      ],
       "kind": "image",
       "title": "Book of Kells, Chi Rho page",
       "titleOriginal": "Codex Cenannensis",
@@ -6994,10 +7246,14 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-08T00:00:00Z",
-      "updatedAt": "2026-10-09T19:22:47.603Z"
+      "updatedAt": "2026-10-18T19:10:22.646Z"
     },
     {
       "id": "wm-2653186",
+      "slug": "eland-ukhahlamba-drakensberg",
+      "aliases": [
+        "drakensberg"
+      ],
       "kind": "image",
       "title": "Eland, uKhahlamba-Drakensberg",
       "titleOriginal": null,
@@ -7157,10 +7413,14 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-08T00:00:00Z",
-      "updatedAt": "2026-10-09T19:22:47.858Z"
+      "updatedAt": "2026-10-18T19:10:22.646Z"
     },
     {
       "id": "wm-140519854",
+      "slug": "fan-kuan-travelers-among-mountains-and-streams",
+      "aliases": [
+        "fankuan"
+      ],
       "kind": "image",
       "title": "Travelers Among Mountains and Streams",
       "titleOriginal": "谿山行旅圖",
@@ -7318,10 +7578,14 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-08T00:00:00Z",
-      "updatedAt": "2026-10-09T19:22:48.269Z"
+      "updatedAt": "2026-10-18T19:10:22.646Z"
     },
     {
       "id": "wm-50738349",
+      "slug": "brihadisvara-temple-thanjavur",
+      "aliases": [
+        "thanjavur"
+      ],
       "kind": "image",
       "title": "Brihadisvara Temple, Thanjavur",
       "titleOriginal": null,
@@ -7480,7 +7744,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-11T16:25:44.973Z",
+      "updatedAt": "2026-10-18T19:10:22.646Z",
       "tour": "The Big Temple at Thanjavur, 1010 CE: a 66 metre tower of granite on a plain with no granite in it, raised by the Chola emperor Rajaraja.",
       "alternates": [
         {
@@ -7539,6 +7803,10 @@
     },
     {
       "id": "sf-6862a3c673d4434a8dc39ced2a5b5720",
+      "slug": "chola-nataraja-cleveland",
+      "aliases": [
+        "nataraja"
+      ],
       "kind": "model",
       "title": "Nataraja",
       "titleOriginal": null,
@@ -7722,11 +7990,15 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-11T16:25:44.973Z",
+      "updatedAt": "2026-10-18T19:10:22.646Z",
       "tour": "Shiva as Lord of the Dance, cast in bronze by Chola craftsmen a thousand years ago. The ring of fire is the universe; the dwarf underfoot is ignorance."
     },
     {
       "id": "sf-da8c663b974f4902bf79bb9595e76d5e",
+      "slug": "alhambra-courtyard",
+      "aliases": [
+        "alhambra"
+      ],
       "kind": "model",
       "title": "A courtyard of the Alhambra",
       "titleOriginal": null,
@@ -7923,11 +8195,15 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-11T16:25:44.973Z",
+      "updatedAt": "2026-10-18T19:10:22.646Z",
       "tour": "A courtyard of the Alhambra, Granada: brick, plaster and tile, the cheapest materials, carrying the finest surfaces Islamic Spain ever made."
     },
     {
       "id": "eq-madhava-series",
+      "slug": "madhava-series",
+      "aliases": [
+        "madhava"
+      ],
       "kind": "image",
       "title": "Madhava's series for π",
       "titleOriginal": null,
@@ -8082,10 +8358,14 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-10T00:09:46.435Z"
+      "updatedAt": "2026-10-18T19:10:22.646Z"
     },
     {
       "id": "sf-7099390468214c2dbcf283454e7b5c8a",
+      "slug": "moai-santiago",
+      "aliases": [
+        "moai"
+      ],
       "kind": "model",
       "title": "Moai",
       "titleOriginal": null,
@@ -8268,10 +8548,14 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-11T16:11:31.209Z"
+      "updatedAt": "2026-10-18T19:10:22.646Z"
     },
     {
       "id": "wm-38733061",
+      "slug": "gutenberg-bible-genesis-page",
+      "aliases": [
+        "gutenberg"
+      ],
       "kind": "image",
       "title": "Gutenberg Bible",
       "titleOriginal": "Biblia latina (42-line Bible)",
@@ -8440,7 +8724,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-10T16:40:47.717Z",
+      "updatedAt": "2026-10-18T19:10:22.646Z",
       "alternates": [
         {
           "kind": "image",
@@ -8492,6 +8776,10 @@
     },
     {
       "id": "wm-50410532",
+      "slug": "the-last-supper",
+      "aliases": [
+        "lastsupper"
+      ],
       "kind": "image",
       "title": "The Last Supper",
       "titleOriginal": "Il Cenacolo",
@@ -8655,11 +8943,15 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-07T00:00:00Z",
-      "updatedAt": "2026-10-11T16:25:44.973Z",
+      "updatedAt": "2026-10-18T19:10:22.646Z",
       "tour": "Leonardo's Last Supper at its real size, nearly nine metres across: the moment after 'one of you will betray me'."
     },
     {
       "id": "sf-8f4827cf36964a17b90bad11f48298ac",
+      "slug": "david-sioux-falls-cast",
+      "aliases": [
+        "david"
+      ],
       "kind": "model",
       "title": "David, after Michelangelo",
       "titleOriginal": null,
@@ -8838,10 +9130,14 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-11T16:11:33.565Z"
+      "updatedAt": "2026-10-18T19:10:22.646Z"
     },
     {
       "id": "wm-55983942",
+      "slug": "benin-plaque-warrior-and-attendants",
+      "aliases": [
+        "beninplaque"
+      ],
       "kind": "image",
       "title": "Plaque with Warrior and Attendants",
       "titleOriginal": null,
@@ -8998,10 +9294,14 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-08T00:00:00Z",
-      "updatedAt": "2026-10-09T19:22:48.894Z"
+      "updatedAt": "2026-10-18T19:10:22.646Z"
     },
     {
       "id": "sf-465b5cb888d54a88aadf5d0c1b35a517",
+      "slug": "bernini-rape-of-proserpina",
+      "aliases": [
+        "proserpina"
+      ],
       "kind": "model",
       "title": "The Rape of Proserpina",
       "titleOriginal": null,
@@ -9184,10 +9484,14 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-11T16:11:41.874Z"
+      "updatedAt": "2026-10-18T19:10:22.646Z"
     },
     {
       "id": "sf-57333014332a49f4b3346bc73ef7fc16",
+      "slug": "bernini-apollo-and-daphne",
+      "aliases": [
+        "daphne"
+      ],
       "kind": "model",
       "title": "Apollo and Daphne",
       "titleOriginal": null,
@@ -9370,11 +9674,15 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-11T16:25:44.973Z",
+      "updatedAt": "2026-10-18T19:10:22.646Z",
       "tour": "Bernini's Apollo and Daphne: the instant she turns into a laurel, bark climbing her legs, her fingers splitting into leaves. He was twenty-four."
     },
     {
       "id": "sf-adf56b25e96e4675b27e0f59348978b0",
+      "slug": "bernini-medusa",
+      "aliases": [
+        "medusa"
+      ],
       "kind": "model",
       "title": "Bust of Medusa",
       "titleOriginal": null,
@@ -9552,10 +9860,14 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-11T16:11:51.393Z"
+      "updatedAt": "2026-10-18T19:10:22.646Z"
     },
     {
       "id": "eq-newton-gravitation",
+      "slug": "newton-gravitation",
+      "aliases": [
+        "gravity"
+      ],
       "kind": "image",
       "title": "Newton's law of universal gravitation",
       "titleOriginal": null,
@@ -9709,10 +10021,14 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-10T00:09:46.671Z"
+      "updatedAt": "2026-10-18T19:10:22.646Z"
     },
     {
       "id": "wm-11812879",
+      "slug": "newton-principia-title-page",
+      "aliases": [
+        "principia"
+      ],
       "kind": "image",
       "title": "Principia Mathematica",
       "titleOriginal": "Philosophiæ Naturalis Principia Mathematica",
@@ -9877,11 +10193,15 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-11T16:25:44.973Z",
+      "updatedAt": "2026-10-18T19:10:22.646Z",
       "tour": "Newton's Principia, 1687: three laws of motion and one of gravity, for everything that moves, in one book."
     },
     {
       "id": "wm-110713109",
+      "slug": "bach-brandenburg-3",
+      "aliases": [
+        "bach"
+      ],
       "kind": "image",
       "title": "Brandenburg Concerto No. 3",
       "titleOriginal": null,
@@ -10029,7 +10349,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-10T00:13:24.322Z",
+      "updatedAt": "2026-10-18T19:10:22.646Z",
       "audio": {
         "currentVersionId": "wm-110713109-audio-v1",
         "versions": [
@@ -10076,6 +10396,10 @@
     },
     {
       "id": "wm-172577787",
+      "slug": "vivaldi-spring",
+      "aliases": [
+        "vivaldi"
+      ],
       "kind": "image",
       "title": "The Four Seasons, Spring",
       "titleOriginal": null,
@@ -10232,7 +10556,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-11T15:58:18.650Z",
+      "updatedAt": "2026-10-18T19:10:22.646Z",
       "audio": {
         "currentVersionId": "wm-172577787-audio-v1",
         "versions": [
@@ -10279,6 +10603,10 @@
     },
     {
       "id": "eq-euler-identity",
+      "slug": "euler-identity",
+      "aliases": [
+        "euler"
+      ],
       "kind": "image",
       "title": "Euler's identity",
       "titleOriginal": null,
@@ -10432,10 +10760,14 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-10T00:09:46.909Z"
+      "updatedAt": "2026-10-18T19:10:22.646Z"
     },
     {
       "id": "eq-bayes-theorem",
+      "slug": "bayes-theorem",
+      "aliases": [
+        "bayes"
+      ],
       "kind": "image",
       "title": "Bayes' theorem",
       "titleOriginal": null,
@@ -10589,10 +10921,14 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-10T00:09:47.150Z"
+      "updatedAt": "2026-10-18T19:10:22.646Z"
     },
     {
       "id": "wm-178606096",
+      "slug": "mozart-eine-kleine-nachtmusik",
+      "aliases": [
+        "mozart"
+      ],
       "kind": "image",
       "title": "Eine kleine Nachtmusik",
       "titleOriginal": null,
@@ -10740,7 +11076,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-10T00:13:30.595Z",
+      "updatedAt": "2026-10-18T19:10:22.646Z",
       "audio": {
         "currentVersionId": "wm-178606096-audio-v1",
         "versions": [
@@ -10787,6 +11123,10 @@
     },
     {
       "id": "sf-af911c4416ef4798a1803a0aa588534a",
+      "slug": "benin-queen-mother-head",
+      "aliases": [
+        "benin"
+      ],
       "kind": "model",
       "title": "Head of a Queen Mother, Benin",
       "titleOriginal": null,
@@ -10968,10 +11308,14 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-11T16:12:04.425Z"
+      "updatedAt": "2026-10-18T19:10:22.646Z"
     },
     {
       "id": "wm-180634712",
+      "slug": "beethoven-symphony-5",
+      "aliases": [
+        "beethoven"
+      ],
       "kind": "image",
       "title": "Symphony No. 5",
       "titleOriginal": null,
@@ -11119,7 +11463,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-10T00:13:33.327Z",
+      "updatedAt": "2026-10-18T19:10:22.646Z",
       "audio": {
         "currentVersionId": "wm-180634712-audio-v1",
         "versions": [
@@ -11166,6 +11510,10 @@
     },
     {
       "id": "sim-fourier-series",
+      "slug": "fourier-series",
+      "aliases": [
+        "fourier"
+      ],
       "kind": "sim",
       "title": "Fourier series",
       "titleOriginal": null,
@@ -11303,11 +11651,15 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-11T16:25:44.973Z",
+      "updatedAt": "2026-10-18T19:10:22.646Z",
       "tour": "Fourier's claim of 1822: any repeating shape is a sum of pure waves. Circles riding on circles trace a square wave; every circle added sharpens the corners."
     },
     {
       "id": "wm-166228094",
+      "slug": "chopin-nocturne-op9-2",
+      "aliases": [
+        "chopin"
+      ],
       "kind": "image",
       "title": "Nocturne, Op. 9 No. 2",
       "titleOriginal": null,
@@ -11462,7 +11814,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-10T00:13:43.878Z",
+      "updatedAt": "2026-10-18T19:10:22.646Z",
       "audio": {
         "currentVersionId": "wm-166228094-audio-v1",
         "versions": [
@@ -11509,6 +11861,10 @@
     },
     {
       "id": "wm-36638808",
+      "slug": "darwin-i-think-tree-sketch",
+      "aliases": [
+        "darwin"
+      ],
       "kind": "image",
       "title": "Darwin's 'I think' sketch",
       "titleOriginal": null,
@@ -11667,10 +12023,14 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-10T16:40:48.224Z"
+      "updatedAt": "2026-10-18T19:10:22.646Z"
     },
     {
       "id": "wm-8853276",
+      "slug": "scott-phonautogram-au-clair-de-la-lune",
+      "aliases": [
+        "phonautogram"
+      ],
       "kind": "image",
       "title": "'Au clair de la lune' phonautogram",
       "titleOriginal": null,
@@ -11821,7 +12181,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-10T00:13:44.564Z",
+      "updatedAt": "2026-10-18T19:10:22.646Z",
       "audio": {
         "currentVersionId": "wm-8853276-audio-v1",
         "versions": [
@@ -11868,6 +12228,10 @@
     },
     {
       "id": "wm-21855901",
+      "slug": "manet-le-dejeuner-sur-lherbe",
+      "aliases": [
+        "manet"
+      ],
       "kind": "image",
       "title": "Luncheon on the Grass",
       "titleOriginal": "Le Déjeuner sur l'herbe",
@@ -12028,10 +12392,14 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-11T01:45:45.682Z"
+      "updatedAt": "2026-10-18T19:10:22.646Z"
     },
     {
       "id": "eq-maxwell-equations",
+      "slug": "maxwell-equations",
+      "aliases": [
+        "maxwell"
+      ],
       "kind": "image",
       "title": "Maxwell's equations",
       "titleOriginal": null,
@@ -12185,10 +12553,14 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-10T00:09:47.237Z"
+      "updatedAt": "2026-10-18T19:10:22.646Z"
     },
     {
       "id": "wm-21857470",
+      "slug": "morisot-le-berceau",
+      "aliases": [
+        "morisot"
+      ],
       "kind": "image",
       "title": "The Cradle",
       "titleOriginal": "Le Berceau",
@@ -12349,10 +12721,14 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-11T01:45:47.409Z"
+      "updatedAt": "2026-10-18T19:10:22.646Z"
     },
     {
       "id": "wm-23750619",
+      "slug": "monet-impression-soleil-levant",
+      "aliases": [
+        "impression"
+      ],
       "kind": "image",
       "title": "Impression, Sunrise",
       "titleOriginal": "Impression, soleil levant",
@@ -12514,11 +12890,15 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-11T16:25:44.973Z",
+      "updatedAt": "2026-10-18T19:10:22.646Z",
       "tour": "Impression, Sunrise: Le Havre at dawn, 1872. A critic used its title to mock the painters, and they kept the name."
     },
     {
       "id": "sim-galton-board",
+      "slug": "galton-board",
+      "aliases": [
+        "galton"
+      ],
       "kind": "sim",
       "title": "The Galton board",
       "titleOriginal": null,
@@ -12657,10 +13037,14 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-09T00:00:00Z"
+      "updatedAt": "2026-10-18T19:10:22.646Z"
     },
     {
       "id": "wm-21856240",
+      "slug": "degas-la-classe-de-danse",
+      "aliases": [
+        "degas"
+      ],
       "kind": "image",
       "title": "The Ballet Class",
       "titleOriginal": "La Classe de danse",
@@ -12822,7 +13206,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-11T01:45:51.118Z",
+      "updatedAt": "2026-10-18T19:10:22.646Z",
       "alternates": [
         {
           "kind": "image",
@@ -12880,6 +13264,10 @@
     },
     {
       "id": "wm-81309412",
+      "slug": "monet-woman-with-a-parasol",
+      "aliases": [
+        "parasol"
+      ],
       "kind": "image",
       "title": "Woman with a Parasol",
       "titleOriginal": "La Promenade. La Femme à l'ombrelle",
@@ -13041,7 +13429,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-11T01:45:57.093Z",
+      "updatedAt": "2026-10-18T19:10:22.646Z",
       "alternates": [
         {
           "kind": "image",
@@ -13099,6 +13487,10 @@
     },
     {
       "id": "wm-90608799",
+      "slug": "renoir-bal-du-moulin-de-la-galette",
+      "aliases": [
+        "renoir"
+      ],
       "kind": "image",
       "title": "Dance at Le Moulin de la Galette",
       "titleOriginal": "Bal du moulin de la Galette",
@@ -13260,7 +13652,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-11T01:45:59.706Z",
+      "updatedAt": "2026-10-18T19:10:22.646Z",
       "alternates": [
         {
           "kind": "image",
@@ -13318,6 +13710,10 @@
     },
     {
       "id": "eq-boltzmann-entropy",
+      "slug": "boltzmann-entropy",
+      "aliases": [
+        "boltzmann"
+      ],
       "kind": "image",
       "title": "Boltzmann's entropy formula",
       "titleOriginal": null,
@@ -13471,10 +13867,14 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-10T00:09:47.313Z"
+      "updatedAt": "2026-10-18T19:10:22.646Z"
     },
     {
       "id": "wm-21909139",
+      "slug": "caillebotte-rue-de-paris-temps-de-pluie",
+      "aliases": [
+        "caillebotte"
+      ],
       "kind": "image",
       "title": "Paris Street; Rainy Day",
       "titleOriginal": "Rue de Paris, temps de pluie",
@@ -13637,10 +14037,14 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-11T01:46:00.640Z"
+      "updatedAt": "2026-10-18T19:10:22.646Z"
     },
     {
       "id": "wm-146612026",
+      "slug": "muybridge-horse-in-motion",
+      "aliases": [
+        "muybridge"
+      ],
       "kind": "image",
       "title": "The Horse in Motion",
       "titleOriginal": "The Horse in Motion. \"Sallie Gardner,\" owned by Leland Stanford; running at a 1:40 gait over the Palo Alto track, 19th June 1878",
@@ -13816,10 +14220,14 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-10T16:44:27.912Z"
+      "updatedAt": "2026-10-18T19:10:22.646Z"
     },
     {
       "id": "wm-21909225",
+      "slug": "cassatt-the-childs-bath",
+      "aliases": [
+        "cassatt"
+      ],
       "kind": "image",
       "title": "The Child's Bath",
       "titleOriginal": "La Toilette de l'enfant",
@@ -13980,7 +14388,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-11T01:46:02.613Z",
+      "updatedAt": "2026-10-18T19:10:22.646Z",
       "alternates": [
         {
           "kind": "image",
@@ -14038,6 +14446,10 @@
     },
     {
       "id": "sf-f70edeefea0a49e1ae6b7f5be21b626d",
+      "slug": "lilienthal-glider",
+      "aliases": [
+        "lilienthal"
+      ],
       "kind": "model",
       "title": "Lilienthal Normalsegelapparat",
       "titleOriginal": null,
@@ -14219,10 +14631,14 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-11T16:12:11.237Z"
+      "updatedAt": "2026-10-18T19:10:22.646Z"
     },
     {
       "id": "wm-143689173",
+      "slug": "lumiere-arrivee-train-la-ciotat",
+      "aliases": [
+        "lumiere"
+      ],
       "kind": "image",
       "title": "Arrival of a Train at La Ciotat",
       "titleOriginal": "L'Arrivée d'un train en gare de La Ciotat",
@@ -14402,10 +14818,14 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-10T16:44:30.157Z"
+      "updatedAt": "2026-10-18T19:10:22.646Z"
     },
     {
       "id": "wm-92107171",
+      "slug": "pissarro-boulevard-montmartre-at-night",
+      "aliases": [
+        "pissarro"
+      ],
       "kind": "image",
       "title": "The Boulevard Montmartre at Night",
       "titleOriginal": "Boulevard Montmartre, effet de nuit",
@@ -14568,7 +14988,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-11T01:46:05.721Z",
+      "updatedAt": "2026-10-18T19:10:22.646Z",
       "alternates": [
         {
           "kind": "image",
@@ -14626,6 +15046,10 @@
     },
     {
       "id": "wm-12695724",
+      "slug": "monet-water-lily-pond-1899",
+      "aliases": [
+        "waterlilies"
+      ],
       "kind": "image",
       "title": "The Water-Lily Pond",
       "titleOriginal": "Le Bassin aux nymphéas",
@@ -14786,10 +15210,14 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-11T01:46:07.726Z"
+      "updatedAt": "2026-10-18T19:10:22.646Z"
     },
     {
       "id": "wm-4647249",
+      "slug": "joplin-maple-leaf-rag",
+      "aliases": [
+        "joplin"
+      ],
       "kind": "image",
       "title": "Maple Leaf Rag",
       "titleOriginal": null,
@@ -14939,7 +15367,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-10T00:13:45.790Z",
+      "updatedAt": "2026-10-18T19:10:22.646Z",
       "audio": {
         "currentVersionId": "wm-4647249-audio-v1",
         "versions": [
@@ -14986,6 +15414,10 @@
     },
     {
       "id": "wm-165000150",
+      "slug": "melies-voyage-dans-la-lune",
+      "aliases": [
+        "melies"
+      ],
       "kind": "image",
       "title": "A Trip to the Moon",
       "titleOriginal": "Le Voyage dans la Lune",
@@ -15162,10 +15594,14 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-10T16:44:30.991Z"
+      "updatedAt": "2026-10-18T19:10:22.646Z"
     },
     {
       "id": "si-nasm_A19610048000",
+      "slug": "wright-flyer-1903",
+      "aliases": [
+        "wright"
+      ],
       "kind": "model",
       "title": "Wright Flyer",
       "titleOriginal": null,
@@ -15346,11 +15782,15 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-08T00:00:00Z",
-      "updatedAt": "2026-10-11T16:25:44.973Z",
+      "updatedAt": "2026-10-18T19:10:22.646Z",
       "tour": "The 1903 Wright Flyer, the machine itself. Twelve seconds in the air at Kitty Hawk, the first powered flight with a person aboard."
     },
     {
       "id": "wm-117053583",
+      "slug": "gauhar-jaan-aan-baan",
+      "aliases": [
+        "gauharjaan"
+      ],
       "kind": "image",
       "title": "Gauhar Jaan sings a thumri",
       "titleOriginal": null,
@@ -15501,7 +15941,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-10T19:55:14.515Z",
+      "updatedAt": "2026-10-18T19:10:22.646Z",
       "audio": {
         "currentVersionId": "wm-117053583-audio-v1",
         "versions": [
@@ -15548,6 +15988,10 @@
     },
     {
       "id": "wm-200510653",
+      "slug": "debussy-clair-de-lune",
+      "aliases": [
+        "debussy"
+      ],
       "kind": "image",
       "title": "Clair de lune",
       "titleOriginal": null,
@@ -15701,7 +16145,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-10T00:13:53.090Z",
+      "updatedAt": "2026-10-18T19:10:22.646Z",
       "audio": {
         "currentVersionId": "wm-200510653-audio-v1",
         "versions": [
@@ -15749,6 +16193,10 @@
     },
     {
       "id": "wm-37813429",
+      "slug": "nagarathnamma-nityakalyani",
+      "aliases": [
+        "nagarathnamma"
+      ],
       "kind": "image",
       "title": "Bangalore Nagarathnamma sings a Dikshitar kriti",
       "titleOriginal": null,
@@ -15900,7 +16348,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-10T19:55:20.399Z",
+      "updatedAt": "2026-10-18T19:10:22.646Z",
       "audio": {
         "currentVersionId": "wm-37813429-audio-v1",
         "versions": [
@@ -15948,6 +16396,10 @@
     },
     {
       "id": "usr-sun-juxian-zhongchen",
+      "slug": "sun-juxian-zhongchen",
+      "aliases": [
+        "sunjuxian"
+      ],
       "kind": "image",
       "title": "Sun Juxian sings Peking opera",
       "titleOriginal": null,
@@ -16094,7 +16546,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-10T19:55:23.720Z",
+      "updatedAt": "2026-10-18T19:10:22.646Z",
       "audio": {
         "currentVersionId": "usr-sun-juxian-zhongchen-audio-v1",
         "versions": [
@@ -16142,6 +16594,10 @@
     },
     {
       "id": "eq-mass-energy",
+      "slug": "mass-energy",
+      "aliases": [
+        "emc2"
+      ],
       "kind": "image",
       "title": "Mass–energy equivalence",
       "titleOriginal": null,
@@ -16295,10 +16751,14 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-10T00:09:47.546Z"
+      "updatedAt": "2026-10-18T19:10:22.646Z"
     },
     {
       "id": "wm-187922109",
+      "slug": "einstein-elektrodynamik-1905",
+      "aliases": [
+        "einstein1905"
+      ],
       "kind": "image",
       "title": "On the Electrodynamics of Moving Bodies",
       "titleOriginal": "Zur Elektrodynamik bewegter Körper",
@@ -16455,10 +16915,14 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-10T16:40:49.287Z"
+      "updatedAt": "2026-10-18T19:10:22.646Z"
     },
     {
       "id": "wm-71567439",
+      "slug": "toyotake-rosho-tsubosaka",
+      "aliases": [
+        "rosho"
+      ],
       "kind": "image",
       "title": "Toyotake Roshō sings gidayū",
       "titleOriginal": null,
@@ -16610,7 +17074,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-10T19:55:26.470Z",
+      "updatedAt": "2026-10-18T19:10:22.646Z",
       "audio": {
         "currentVersionId": "wm-71567439-audio-v1",
         "versions": [
@@ -16657,6 +17121,10 @@
     },
     {
       "id": "wm-6669356",
+      "slug": "caruso-vesti-la-giubba",
+      "aliases": [
+        "caruso"
+      ],
       "kind": "image",
       "title": "Caruso sings 'Vesti la giubba'",
       "titleOriginal": null,
@@ -16811,7 +17279,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-10T00:13:57.463Z",
+      "updatedAt": "2026-10-18T19:10:22.646Z",
       "audio": {
         "currentVersionId": "wm-6669356-audio-v1",
         "versions": [
@@ -16858,6 +17326,10 @@
     },
     {
       "id": "usr-abdel-hay-hilmi-agibtu",
+      "slug": "abdel-hay-hilmi-agibtu",
+      "aliases": [
+        "hilmi"
+      ],
       "kind": "image",
       "title": "'Abd al-Hayy Hilmi sings a qasida",
       "titleOriginal": null,
@@ -17018,7 +17490,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-10T19:55:31.366Z",
+      "updatedAt": "2026-10-18T19:10:22.646Z",
       "audio": {
         "currentVersionId": "usr-abdel-hay-hilmi-agibtu-audio-v1",
         "versions": [
@@ -17065,6 +17537,10 @@
     },
     {
       "id": "wm-170712344",
+      "slug": "chacon-malaguena-1909",
+      "aliases": [
+        "chacon"
+      ],
       "kind": "image",
       "title": "Antonio Chacón sings a malagueña",
       "titleOriginal": null,
@@ -17215,7 +17691,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-10T19:55:36.709Z",
+      "updatedAt": "2026-10-18T19:10:22.646Z",
       "audio": {
         "currentVersionId": "wm-170712344-audio-v1",
         "versions": [
@@ -17262,6 +17738,10 @@
     },
     {
       "id": "usr-manyalawi-sahi-al-jufun",
+      "slug": "manyalawi-sahi-al-jufun",
+      "aliases": [
+        "manyalawi"
+      ],
       "kind": "image",
       "title": "Yusuf al-Manyalawi sings 'Sahi al-jufun'",
       "titleOriginal": null,
@@ -17422,7 +17902,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-10T19:55:44.794Z",
+      "updatedAt": "2026-10-18T19:10:22.646Z",
       "audio": {
         "currentVersionId": "usr-manyalawi-sahi-al-jufun-audio-v1",
         "versions": [
@@ -17469,6 +17949,10 @@
     },
     {
       "id": "usr-coimbatore-thayi-tevaram",
+      "slug": "coimbatore-thayi-tevaram",
+      "aliases": [
+        "thayi"
+      ],
       "kind": "image",
       "title": "Coimbatore Thayi sings a Tevaram hymn",
       "titleOriginal": null,
@@ -17624,7 +18108,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-11T16:25:44.973Z",
+      "updatedAt": "2026-10-18T19:10:22.646Z",
       "tour": "A Tamil hymn twelve centuries old, sung in 1910 by Coimbatore Thayi, the first Tamil singer the gramophone made famous. Come close and it plays.",
       "audio": {
         "currentVersionId": "usr-coimbatore-thayi-tevaram-audio-v1",
@@ -17672,6 +18156,10 @@
     },
     {
       "id": "wm-13570125",
+      "slug": "juan-breva-malaguenas",
+      "aliases": [
+        "breva"
+      ],
       "kind": "image",
       "title": "Juan Breva sings malagueñas",
       "titleOriginal": null,
@@ -17822,7 +18310,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-10T19:55:56.862Z",
+      "updatedAt": "2026-10-18T19:10:22.646Z",
       "audio": {
         "currentVersionId": "wm-13570125-audio-v1",
         "versions": [
@@ -17869,6 +18357,10 @@
     },
     {
       "id": "usr-ottoman-cifte-telli-gazel",
+      "slug": "ottoman-cifte-telli-gazel",
+      "aliases": [
+        "gazel"
+      ],
       "kind": "image",
       "title": "A gazel with ney, Constantinople",
       "titleOriginal": null,
@@ -18024,7 +18516,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-10T19:56:01.284Z",
+      "updatedAt": "2026-10-18T19:10:22.646Z",
       "audio": {
         "currentVersionId": "usr-ottoman-cifte-telli-gazel-audio-v1",
         "versions": [
@@ -18071,6 +18563,10 @@
     },
     {
       "id": "wm-15756540",
+      "slug": "nina-de-los-peines-tarantas",
+      "aliases": [
+        "peines"
+      ],
       "kind": "image",
       "title": "La Niña de los Peines sings tarantas",
       "titleOriginal": null,
@@ -18223,7 +18719,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-10T19:55:51.869Z",
+      "updatedAt": "2026-10-18T19:10:22.646Z",
       "audio": {
         "currentVersionId": "wm-15756540-audio-v1",
         "versions": [
@@ -18270,6 +18766,10 @@
     },
     {
       "id": "sim-bohr-atom",
+      "slug": "bohr-atom",
+      "aliases": [
+        "bohr"
+      ],
       "kind": "sim",
       "title": "Bohr's atom",
       "titleOriginal": null,
@@ -18409,10 +18909,14 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-09T00:00:00Z"
+      "updatedAt": "2026-10-18T19:10:22.646Z"
     },
     {
       "id": "eq-einstein-field-equations",
+      "slug": "einstein-field-equations",
+      "aliases": [
+        "einstein"
+      ],
       "kind": "image",
       "title": "Einstein's field equations",
       "titleOriginal": null,
@@ -18566,10 +19070,14 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-10T00:09:47.620Z"
+      "updatedAt": "2026-10-18T19:10:22.646Z"
     },
     {
       "id": "wm-256663",
+      "slug": "fado-da-severa-1919",
+      "aliases": [
+        "fado"
+      ],
       "kind": "image",
       "title": "Manuel Carvalho sings 'Fado da Severa'",
       "titleOriginal": null,
@@ -18719,7 +19227,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-10T19:56:03.888Z",
+      "updatedAt": "2026-10-18T19:10:22.646Z",
       "audio": {
         "currentVersionId": "wm-256663-audio-v1",
         "versions": [
@@ -18766,6 +19274,10 @@
     },
     {
       "id": "wm-36145030",
+      "slug": "plaatje-nkosi-sikelel-iafrika",
+      "aliases": [
+        "plaatje"
+      ],
       "kind": "image",
       "title": "Sol Plaatje sings 'Nkosi Sikelel' iAfrika'",
       "titleOriginal": null,
@@ -18917,7 +19429,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-10T19:56:04.790Z",
+      "updatedAt": "2026-10-18T19:10:22.646Z",
       "audio": {
         "currentVersionId": "wm-36145030-audio-v1",
         "versions": [
@@ -18964,6 +19476,10 @@
     },
     {
       "id": "sf-895fd0fbc7cc42aab8f3300a85420b91",
+      "slug": "ford-model-t-runabout",
+      "aliases": [
+        "modelt"
+      ],
       "kind": "model",
       "title": "Ford Model T Runabout",
       "titleOriginal": null,
@@ -19158,10 +19674,14 @@
       },
       "source": "admin",
       "createdAt": "2026-10-07T00:00:00Z",
-      "updatedAt": "2026-10-11T16:12:16.303Z"
+      "updatedAt": "2026-10-18T19:10:22.646Z"
     },
     {
       "id": "wm-22628920",
+      "slug": "monet-nympheas-orangerie-room-1",
+      "aliases": [
+        "orangerie"
+      ],
       "kind": "image",
       "title": "Les Nymphéas",
       "titleOriginal": null,
@@ -19344,7 +19864,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-11T16:25:44.973Z",
+      "updatedAt": "2026-10-18T19:10:22.646Z",
       "tour": "Monet's water lilies, in the room he made them for. Walk to the middle and turn: the pond goes all the way round, as he asked.",
       "alternates": [
         {
@@ -19507,6 +20027,10 @@
     },
     {
       "id": "eq-schrodinger-equation",
+      "slug": "schrodinger-equation",
+      "aliases": [
+        "schrodinger"
+      ],
       "kind": "image",
       "title": "The Schrödinger equation",
       "titleOriginal": null,
@@ -19660,10 +20184,14 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-10T00:09:47.820Z"
+      "updatedAt": "2026-10-18T19:10:22.646Z"
     },
     {
       "id": "sim-turing-machine",
+      "slug": "turing-machine",
+      "aliases": [
+        "turing"
+      ],
       "kind": "sim",
       "title": "A Turing machine",
       "titleOriginal": null,
@@ -19802,10 +20330,14 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-09T00:00:00Z"
+      "updatedAt": "2026-10-18T19:10:22.646Z"
     },
     {
       "id": "wm-14902369",
+      "slug": "bombe-drum",
+      "aliases": [
+        "bombe"
+      ],
       "kind": "image",
       "title": "Bombe drums",
       "titleOriginal": null,
@@ -19964,10 +20496,14 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-08T00:00:00Z",
-      "updatedAt": "2026-10-09T19:22:54.559Z"
+      "updatedAt": "2026-10-18T19:10:22.646Z"
     },
     {
       "id": "sf-d09fc8ebe9c141a18704b478544191b8",
+      "slug": "v2-rocket-model",
+      "aliases": [
+        "v2"
+      ],
       "kind": "model",
       "title": "V-2",
       "titleOriginal": null,
@@ -20146,10 +20682,14 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-11T16:12:17.208Z"
+      "updatedAt": "2026-10-18T19:10:22.646Z"
     },
     {
       "id": "wm-24825633",
+      "slug": "first-transistor",
+      "aliases": [
+        "transistor"
+      ],
       "kind": "image",
       "title": "The first transistor",
       "titleOriginal": null,
@@ -20300,10 +20840,14 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-08T00:00:00Z",
-      "updatedAt": "2026-10-09T19:22:54.670Z"
+      "updatedAt": "2026-10-18T19:10:22.646Z"
     },
     {
       "id": "eq-shannon-entropy",
+      "slug": "shannon-entropy",
+      "aliases": [
+        "shannon"
+      ],
       "kind": "image",
       "title": "Shannon entropy",
       "titleOriginal": null,
@@ -20457,10 +21001,14 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-10T00:09:47.893Z"
+      "updatedAt": "2026-10-18T19:10:22.646Z"
     },
     {
       "id": "sim-lorenz-attractor",
+      "slug": "lorenz-attractor",
+      "aliases": [
+        "lorenz"
+      ],
       "kind": "sim",
       "title": "The Lorenz attractor",
       "titleOriginal": null,
@@ -20601,11 +21149,15 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-11T16:25:44.973Z",
+      "updatedAt": "2026-10-18T19:10:22.646Z",
       "tour": "The Lorenz attractor, 1963: three equations whose solutions never repeat and never leave this shape. The red point is flying them now, and no one can say which wing it takes next."
     },
     {
       "id": "nasa-saturn-v",
+      "slug": "saturn-v-model",
+      "aliases": [
+        "saturnv"
+      ],
       "kind": "model",
       "title": "Saturn V",
       "titleOriginal": null,
@@ -20786,7 +21338,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-11T16:25:44.973Z",
+      "updatedAt": "2026-10-18T19:10:22.646Z",
       "tour": "The Saturn V at its full 110 metres, off to the east: it burned thirteen tonnes of fuel a second. Thirteen flights, twenty-four people to the Moon.",
       "landmark": {
         "side": "east",
@@ -20795,6 +21347,10 @@
     },
     {
       "id": "si-nasm_A19700102000",
+      "slug": "command-module-columbia",
+      "aliases": [
+        "columbia"
+      ],
       "kind": "model",
       "title": "Command Module Columbia",
       "titleOriginal": null,
@@ -20984,7 +21540,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-07T00:00:00Z",
-      "updatedAt": "2026-10-11T16:02:01.128Z",
+      "updatedAt": "2026-10-18T19:05:33.145Z",
       "audio": {
         "currentVersionId": "si-nasm_A19700102000-audio-v1",
         "versions": [
@@ -21031,6 +21587,10 @@
     },
     {
       "id": "wm-91010657",
+      "slug": "apollo-11-first-step-broadcast",
+      "aliases": [
+        "apollo11"
+      ],
       "kind": "image",
       "title": "The first step on the Moon",
       "titleOriginal": null,
@@ -21195,11 +21755,15 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-11T16:25:44.973Z",
+      "updatedAt": "2026-10-18T19:10:22.646Z",
       "tour": "The first step on the Moon, 21 July 1969, as six hundred million people saw it on television. It plays as you come close."
     },
     {
       "id": "sim-the-moon-mapped",
+      "slug": "the-moon-mapped",
+      "aliases": [
+        "moon"
+      ],
       "kind": "sim",
       "title": "The Moon",
       "titleOriginal": null,
@@ -21359,11 +21923,15 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-11T16:25:44.973Z",
+      "updatedAt": "2026-10-18T19:10:22.646Z",
       "tour": "The whole Moon, mapped; no one had seen its far side before 1959. The red dot is Tranquility Base. Above is the evening sky of 20 July 1969, the Moon a crescent in the west."
     },
     {
       "id": "sim-game-of-life",
+      "slug": "game-of-life",
+      "aliases": [
+        "life"
+      ],
       "kind": "sim",
       "title": "The Game of Life",
       "titleOriginal": null,
@@ -21502,11 +22070,15 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-11T16:25:44.973Z",
+      "updatedAt": "2026-10-18T19:10:22.646Z",
       "tour": "Conway's Game of Life, 1970: three rules on a grid, and out of them gliders, guns, and anything a computer can compute. It is running."
     },
     {
       "id": "sf-acb3f8645a69493cb211a62b40d66aab",
+      "slug": "lunar-rover",
+      "aliases": [
+        "rover"
+      ],
       "kind": "model",
       "title": "Lunar Roving Vehicle",
       "titleOriginal": null,
@@ -21706,7 +22278,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-11T16:12:23.765Z",
+      "updatedAt": "2026-10-18T19:10:22.646Z",
       "audio": {
         "currentVersionId": "sf-acb3f8645a69493cb211a62b40d66aab-audio-v1",
         "versions": [
@@ -21753,6 +22325,10 @@
     },
     {
       "id": "wm-53469085",
+      "slug": "mos-6502-die",
+      "aliases": [
+        "mos6502die"
+      ],
       "kind": "image",
       "title": "MOS 6502, the die",
       "titleOriginal": null,
@@ -21901,7 +22477,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-09T22:03:16.058Z",
+      "updatedAt": "2026-10-18T19:10:22.646Z",
       "branch": {
         "of": "wm-153446594",
         "step": 1,
@@ -21910,6 +22486,10 @@
     },
     {
       "id": "wm-153446594",
+      "slug": "mos-6502",
+      "aliases": [
+        "mos6502"
+      ],
       "kind": "image",
       "title": "MOS 6502",
       "titleOriginal": null,
@@ -22067,7 +22647,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-09T22:03:17.743Z",
+      "updatedAt": "2026-10-18T19:10:22.646Z",
       "branch": {
         "of": "wm-11118452",
         "step": 1,
@@ -22124,6 +22704,10 @@
     },
     {
       "id": "wm-14619982",
+      "slug": "cray-1",
+      "aliases": [
+        "cray"
+      ],
       "kind": "image",
       "title": "Cray-1",
       "titleOriginal": null,
@@ -22281,10 +22865,14 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-08T00:00:00Z",
-      "updatedAt": "2026-10-09T19:23:00.434Z"
+      "updatedAt": "2026-10-18T19:10:22.646Z"
     },
     {
       "id": "wm-159435417",
+      "slug": "apple-1",
+      "aliases": [
+        "apple1"
+      ],
       "kind": "image",
       "title": "Apple I",
       "titleOriginal": null,
@@ -22443,10 +23031,14 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-09T19:23:00.832Z"
+      "updatedAt": "2026-10-18T19:10:22.646Z"
     },
     {
       "id": "sf-b5d316548d634f16a72dd503db0aa01b",
+      "slug": "apple-ii",
+      "aliases": [
+        "apple2"
+      ],
       "kind": "model",
       "title": "Apple II",
       "titleOriginal": null,
@@ -22635,10 +23227,14 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-11T16:12:33.050Z"
+      "updatedAt": "2026-10-18T19:10:22.646Z"
     },
     {
       "id": "sim-black-hole-accretion-disc",
+      "slug": "black-hole-accretion-disc",
+      "aliases": [
+        "blackhole"
+      ],
       "kind": "sim",
       "title": "A black hole",
       "titleOriginal": null,
@@ -22778,11 +23374,15 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-11T16:25:44.973Z",
+      "updatedAt": "2026-10-18T19:10:22.646Z",
       "tour": "A black hole, as Luminet first drew it in 1979: the far side of the glowing disc lifted into view over the top, because light bends. Walk round it."
     },
     {
       "id": "sim-mandelbrot-set",
+      "slug": "mandelbrot-set",
+      "aliases": [
+        "mandelbrot"
+      ],
       "kind": "sim",
       "title": "The Mandelbrot set",
       "titleOriginal": null,
@@ -22920,11 +23520,15 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-11T16:25:44.973Z",
+      "updatedAt": "2026-10-18T19:10:22.646Z",
       "tour": "The Mandelbrot set, 1980: a simple sum repeated for every point, and an edge with no end. It is computed afresh, and zooming, as you watch."
     },
     {
       "id": "sf-69cba9fe15ff428eaaba57bf61941109",
+      "slug": "space-shuttle-stack-model",
+      "aliases": [
+        "shuttle"
+      ],
       "kind": "model",
       "title": "Space Shuttle",
       "titleOriginal": null,
@@ -23105,7 +23709,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-11T16:12:39.272Z",
+      "updatedAt": "2026-10-18T19:10:22.646Z",
       "landmark": {
         "side": "east",
         "distance": 80
@@ -23113,6 +23717,10 @@
     },
     {
       "id": "zen-10232172",
+      "slug": "commodore-64",
+      "aliases": [
+        "c64"
+      ],
       "kind": "model",
       "title": "Commodore 64",
       "titleOriginal": null,
@@ -23300,10 +23908,14 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-11T16:12:40.215Z"
+      "updatedAt": "2026-10-18T19:05:33.145Z"
     },
     {
       "id": "wm-11118452",
+      "slug": "apple-iic",
+      "aliases": [
+        "apple2c"
+      ],
       "kind": "image",
       "title": "Apple IIc",
       "titleOriginal": null,
@@ -23459,10 +24071,14 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-09T19:23:10.277Z"
+      "updatedAt": "2026-10-18T19:10:22.646Z"
     },
     {
       "id": "sf-5f7176a2ae284d6b99fc970c9d265c04",
+      "slug": "space-shuttle-discovery",
+      "aliases": [
+        "discovery"
+      ],
       "kind": "model",
       "title": "Space Shuttle Discovery",
       "titleOriginal": null,
@@ -23647,11 +24263,15 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-11T16:25:44.973Z",
+      "updatedAt": "2026-10-18T19:10:22.646Z",
       "tour": "Space Shuttle Discovery, 39 flights, more than any other spacecraft. Under the wing, the tiles: each fitted by hand, no two alike."
     },
     {
       "id": "sf-64319e3fd7dd44acb7d6d72cd8c395db",
+      "slug": "macintosh-plus",
+      "aliases": [
+        "mac"
+      ],
       "kind": "model",
       "title": "Macintosh Plus",
       "titleOriginal": null,
@@ -23833,10 +24453,14 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-11T16:12:47.681Z"
+      "updatedAt": "2026-10-18T19:10:22.646Z"
     },
     {
       "id": "nasa-iss",
+      "slug": "international-space-station",
+      "aliases": [
+        "iss"
+      ],
       "kind": "model",
       "title": "International Space Station",
       "titleOriginal": null,
@@ -24013,7 +24637,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-11T16:25:44.973Z",
+      "updatedAt": "2026-10-18T19:05:33.145Z",
       "tour": "The International Space Station, true size, off to the west: a football pitch of solar arrays, lived in without a break since 2000. Walk out under it.",
       "landmark": {
         "side": "west",
@@ -24022,6 +24646,8 @@
     },
     {
       "id": "yt-dQw4w9WgXcQ",
+      "slug": "rickroll",
+      "aliases": [],
       "kind": "image",
       "title": "Rickroll",
       "titleOriginal": "Never Gonna Give You Up",
@@ -24210,10 +24836,14 @@
       },
       "source": "admin",
       "createdAt": "2026-10-08T00:00:00Z",
-      "updatedAt": "2026-10-11T16:25:44.973Z"
+      "updatedAt": "2026-10-18T19:05:33.145Z"
     },
     {
       "id": "sf-485c51878bc7449e81379a863ec862f5",
+      "slug": "iphone-2007",
+      "aliases": [
+        "iphone"
+      ],
       "kind": "model",
       "title": "iPhone",
       "titleOriginal": null,
@@ -24395,11 +25025,15 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-11T16:25:44.973Z",
+      "updatedAt": "2026-10-18T19:10:22.646Z",
       "tour": "The first iPhone, 2007, at its true 11 centimetres."
     },
     {
       "id": "sim-gw150914-merger",
+      "slug": "gw150914-merger",
+      "aliases": [
+        "ligo"
+      ],
       "kind": "sim",
       "title": "Two black holes become one",
       "titleOriginal": null,
@@ -24540,11 +25174,15 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-11T16:25:44.973Z",
+      "updatedAt": "2026-10-18T19:05:33.145Z",
       "tour": "Two black holes becoming one, 14 September 2015, slowed a hundred times. Space itself ripples; at the merger you hear what LIGO recorded."
     },
     {
       "id": "sf-394f7cf52d124bbd9db69f24d1ff2f08",
+      "slug": "falcon-9-model",
+      "aliases": [
+        "falcon9"
+      ],
       "kind": "model",
       "title": "Falcon 9",
       "titleOriginal": null,
@@ -24725,7 +25363,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-11T15:37:55.844Z",
+      "updatedAt": "2026-10-18T19:10:22.646Z",
       "landmark": {
         "side": "east",
         "distance": 70
@@ -24733,6 +25371,10 @@
     },
     {
       "id": "wm-158115852",
+      "slug": "alphago-rack",
+      "aliases": [
+        "alphago"
+      ],
       "kind": "image",
       "title": "AlphaGo's rack",
       "titleOriginal": null,
@@ -24886,7 +25528,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-11T15:12:14.372Z",
+      "updatedAt": "2026-10-18T19:10:22.646Z",
       "branch": {
         "of": "sim-alphago-move-37",
         "step": 1,
@@ -24895,6 +25537,10 @@
     },
     {
       "id": "sim-alphago-move-37",
+      "slug": "alphago-move-37",
+      "aliases": [
+        "move37"
+      ],
       "kind": "sim",
       "title": "AlphaGo, move 37",
       "titleOriginal": null,
@@ -25038,11 +25684,15 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-11T16:25:44.973Z",
+      "updatedAt": "2026-10-18T19:10:22.646Z",
       "tour": "AlphaGo against Lee Sedol, game 2, replayed stone by stone. At move 37 a shoulder hit no professional would play; the machine won."
     },
     {
       "id": "usr-lee-sedol-2016",
+      "slug": "lee-sedol-2016",
+      "aliases": [
+        "sedol"
+      ],
       "kind": "image",
       "title": "Lee Sedol",
       "titleOriginal": null,
@@ -25192,7 +25842,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-11T15:12:14.403Z",
+      "updatedAt": "2026-10-18T19:10:22.646Z",
       "branch": {
         "of": "sim-alphago-move-37",
         "step": -1,
@@ -25201,6 +25851,11 @@
     },
     {
       "id": "nasa-jwst",
+      "slug": "james-webb-space-telescope",
+      "aliases": [
+        "jwst",
+        "webb"
+      ],
       "kind": "model",
       "title": "James Webb Space Telescope",
       "titleOriginal": null,
@@ -25289,6 +25944,11 @@
               "format": "glb",
               "bytes": 4710016,
               "triangles": 493785,
+              "rotation": [
+                15,
+                -90,
+                0
+              ],
               "materials": [
                 {
                   "match": "mirror_blinn",
@@ -25412,11 +26072,6 @@
                   "metallic": 0.6,
                   "roughness": 0.35
                 }
-              ],
-              "rotation": [
-                15,
-                -90,
-                0
               ]
             },
             "rungs": [
@@ -25510,7 +26165,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-11T16:09:09.792Z",
+      "updatedAt": "2026-10-18T19:05:33.145Z",
       "landmark": {
         "side": "east",
         "distance": 90
@@ -25518,6 +26173,10 @@
     },
     {
       "id": "wm-120346043",
+      "slug": "webbs-first-deep-field",
+      "aliases": [
+        "deepfield"
+      ],
       "kind": "image",
       "title": "Webb's First Deep Field",
       "titleOriginal": null,
@@ -25678,7 +26337,7 @@
       },
       "source": "wikipedia-import",
       "createdAt": "2026-10-09T00:00:00Z",
-      "updatedAt": "2026-10-11T16:26:25.092Z",
+      "updatedAt": "2026-10-18T19:10:22.646Z",
       "tour": "Webb's First Deep Field, 2022: a grain of sand's worth of sky, and nearly everything in it is a galaxy. The arcs are light bent round the cluster."
     }
   ]

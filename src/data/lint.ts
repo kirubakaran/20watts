@@ -91,8 +91,17 @@ export function lintCollection(artworks: Artwork[]): Finding[] {
   const all = new Map(artworks.map((a) => [a.id, a]));
   const out: Finding[] = [];
   const seen = new Map<string, string>();
+  // Slugs and aliases are what links use, so each must name one work and never look like a year.
+  const names = new Map<string, string>();
   for (const a of artworks) {
     out.push(...lintArtwork(a, all));
+    for (const n of [a.slug, ...a.aliases]) {
+      const key = n.toLowerCase();
+      if (!/^[a-z0-9][a-z0-9-]*$/.test(key)) out.push({ id: a.id, level: "error", field: "slug", message: `"${n}" is not a short name (lowercase letters, digits, hyphens)` });
+      else if (/^\d+$/.test(key)) out.push({ id: a.id, level: "error", field: "slug", message: `"${n}" reads as a year in ?at=` });
+      else if (names.has(key) && names.get(key) !== a.id) out.push({ id: a.id, level: "error", field: "slug", message: `"${n}" also names ${names.get(key)}` });
+      else names.set(key, a.id);
+    }
     if (a.moderation.status !== "approved") continue;
     const key = a.title.toLowerCase();
     if (seen.has(key)) out.push({ id: a.id, level: "warn", field: "title", message: `same title as ${seen.get(key)}` });

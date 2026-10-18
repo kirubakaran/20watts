@@ -1,5 +1,6 @@
 {
  "slug": "space-shuttle-stack-model",
+ "aliases": ["shuttle"],
  "title": "Space Shuttle",
  "titleOriginal": null,
  "kind": "model",

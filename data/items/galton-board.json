@@ -79,6 +79,7 @@
   "depthCm": null
  },
  "slug": "galton-board",
+ "aliases": ["galton"],
  "flat": false,
  "periodSlug": null
 }

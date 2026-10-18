@@ -1,5 +1,6 @@
 {
  "slug": "olmec-colossal-head",
+ "aliases": ["olmec"],
  "title": "Olmec colossal head",
  "kind": "model",
  "representation": "scan",

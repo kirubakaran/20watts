@@ -19,7 +19,8 @@
  *    the record's physical size, and rendered into a ladder of JPEG widths.
  *    The SVG is kept in data/originals/<artwork id>/equation.svg.
  *
- *  Recordings (`audio` on a record), any provenance with a direct URL:
+ *  Recordings (`audio` on a record), any provenance with a direct URL, or
+ *  a repo path under data/originals/ for one made here:
  *    the original is downloaded into data/originals/<artwork id>/ and
  *    ffmpeg cuts the excerpt (`start`, `seconds`), fades it in and out,
  *    and writes it as sound.mp3. Needs ffmpeg and ffprobe on the PATH.
@@ -198,9 +199,16 @@ async function probeSeconds(file: string): Promise<number | null> {
 
 async function buildAudio(artId: string, version: AudioVersion) {
   const origDir = path.join(ORIGINALS_DIR, artId);
-  const name = decodeURIComponent(path.basename(new URL(version.original.url).pathname)).replace(/[^\w.-]+/g, "_");
-  const src = path.join(origDir, name);
-  version.original.bytes = await download(version.original.url, src);
+  let src: string;
+  if (/^https?:/.test(version.original.url)) {
+    const name = decodeURIComponent(path.basename(new URL(version.original.url).pathname)).replace(/[^\w.-]+/g, "_");
+    src = path.join(origDir, name);
+    version.original.bytes = await download(version.original.url, src);
+  } else {
+    // Made here (scripts/dev/knapping.mjs): the original is a file in the repo.
+    src = path.join(ROOT, version.original.url);
+    version.original.bytes = (await stat(src)).size;
+  }
   version.original.seconds = (await probeSeconds(src)) ?? version.original.seconds;
   const dir = path.join(OUT_DIR, artId);
   await mkdir(dir, { recursive: true });

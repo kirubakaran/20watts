@@ -42,8 +42,9 @@ Hops, since walking the whole lane takes a while:
 | `Home` `End` | | the entrance, the latest era |
 | `T`, `Shift T` | | next and previous stop on the guided visit |
 
-URL parameters: `?at=<work id>`, `?at=<year>` or `?at=newest` opens in
-front of a work. `?tour` starts the guided visit. `?spawn=start` forgets
+URL parameters: `?at=<slug>` (the item file's name, or one of its
+`aliases`: `?at=ligo`), `?at=<year>` or `?at=newest` opens in front of a
+work. `?tour` starts the guided visit. `?spawn=start` forgets
 your remembered place; `?spawn=x,z,yawDegrees` puts you anywhere.
 `?view=world` spreads each row by longitude. `?debug` logs live exhibits
 and bytes held.
@@ -86,7 +87,7 @@ npm test                          # lint: titles, descriptions, licences, bounds
 npm run where <id>                # where it stands and how to get there
 ```
 
-Open `?at=<id>` to see it. `npm run gallery` photographs every tour stop
+Open `?at=<slug>` to see it. `npm run gallery` photographs every tour stop
 and diffs against the last run; `npm run walk` hops the whole lane in
 headless Chrome and fails if memory, draw calls or heap growth go over
 budget. Both take minutes, so run them after a batch of additions.
@@ -116,7 +117,10 @@ Fields that place or change a work, all under `display` unless noted:
   phase. Keep the radius short of the next row.
 - `hearing`: metres at which a recording starts (18 by default). The
   recording itself goes in `audio` with the source URL, `start`, `seconds`
-  and its own credit.
+  and its own credit; a recording made here (see `scripts/dev/knapping.mjs`)
+  gives a path under `data/originals/` instead. Browsers hold sound back
+  until the visitor has clicked, tapped or pressed a key; a button at the
+  top right says so until then, and a trigger or grip does it in VR.
 - `grab`, `spin`, `baseHeight`, `yaw`: whether it may be picked up in VR,
   slow rotation in seconds per turn, height override, facing.
 - `original.unitScale`, `original.rotation`, `original.materials`,

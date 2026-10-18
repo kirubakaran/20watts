@@ -1,5 +1,6 @@
 {
  "slug": "bernini-apollo-and-daphne",
+ "aliases": ["daphne"],
  "title": "Apollo and Daphne",
  "kind": "model",
  "representation": "scan",

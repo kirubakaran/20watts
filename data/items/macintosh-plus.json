@@ -1,5 +1,6 @@
 {
  "slug": "macintosh-plus",
+ "aliases": ["mac"],
  "title": "Macintosh Plus",
  "kind": "model",
  "representation": "scan",

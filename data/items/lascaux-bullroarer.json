@@ -1,0 +1,18 @@
+{
+ "attachAudioTo": "wm-6909701",
+ "audio": {
+  "type": "freesound",
+  "url": "https://cdn.freesound.org/previews/420/420387_2061858-hq.mp3",
+  "bytes": 609408,
+  "mime": "audio/mpeg",
+  "seconds": 26.8,
+  "licenseName": "CC0 1.0",
+  "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "author": "Garuda1982, field recording with a Zoom H2n (Freesound 420387, CC0)",
+  "sourcePage": "https://freesound.org/s/420387/",
+  "performers": "A bullroarer: a slat of wood on a cord, swung overhead. The oldest known ones are Magdalenian, carved from bone and reindeer antler; one from La Roche de Birol at Lalinde, in the Dordogne like Lascaux, is about 15,000 years old. This is a modern one, recorded outdoors.",
+  "start": 0,
+  "excerptSeconds": null,
+  "notes": "Bullroarers (rhombes) are among the few Palaeolithic instruments that survive: decorated bone and antler slats pierced at one end, from Magdalenian sites including La Roche de Birol (Lalinde, Dordogne, c. 15,000 BP, Mus\u00e9e d'Arch\u00e9ologie nationale) and Abri de Laugerie-Basse; replicas sound exactly like wooden ones, since the sound is made by the slat spinning in the air. No free recording of a replica exists (Commons has none; the Marsoulas conch recording in Fritz et al. 2021, Science Advances, is CC BY-NC). This 26.8 s CC0 field recording of a modern bullroarer by Garuda1982 on Freesound, played in a loop at the Megaloceros of Lascaux, the first Magdalenian work on the lane. 'hq' preview (mp3) as served by Freesound without a login; licence read from the sound page on 2026-10-18."
+ }
+}

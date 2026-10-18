@@ -78,6 +78,7 @@
   "depthCm": null
  },
  "slug": "mandelbrot-set",
+ "aliases": ["mandelbrot"],
  "flat": false,
  "periodSlug": null,
  "tour": "The Mandelbrot set, 1980: a simple sum repeated for every point, and an edge with no end. It is computed afresh, and zooming, as you watch."

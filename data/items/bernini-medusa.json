@@ -1,5 +1,6 @@
 {
  "slug": "bernini-medusa",
+ "aliases": ["medusa"],
  "title": "Bust of Medusa",
  "kind": "model",
  "representation": "scan",

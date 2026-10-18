@@ -1,5 +1,6 @@
 {
  "slug": "lilienthal-glider",
+ "aliases": ["lilienthal"],
  "title": "Lilienthal Normalsegelapparat",
  "kind": "model",
  "representation": "scan",

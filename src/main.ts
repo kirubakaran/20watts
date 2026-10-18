@@ -17,7 +17,8 @@ import { hasTouch, setupTouch } from "./locomotion/touch";
 import { Coach } from "./locomotion/coach";
 import { grabbable } from "./data/types";
 import { Tour } from "./world/tour";
-import { setAudioListener } from "./assets/sound";
+import { audible, onAudible, resumeAudio, setAudioListener } from "./assets/sound";
+import { resolveAt } from "./data/find";
 import { baseHeightOf, footprintOf, onDisplay } from "./data/types";
 import { Sky, type SkyState } from "./world/sky";
 
@@ -56,8 +57,18 @@ scene.add(player.rig);
 // Recordings play from where works stand; the listener rides on the camera.
 const listener = new AudioListener();
 camera.add(listener);
-setAudioListener(listener);
-renderer.xr.addEventListener("sessionstart", () => void listener.context.resume());
+setAudioListener(listener, renderer.xr);
+// Until the first gesture, browsers hold the sound back; a button says so, and is the gesture.
+{
+  const soundButton = document.getElementById("sound") as HTMLButtonElement | null;
+  const show = () => soundButton && (soundButton.hidden = audible() || renderer.xr.isPresenting);
+  onAudible(show);
+  renderer.xr.addEventListener("sessionstart", show);
+  renderer.xr.addEventListener("sessionend", show);
+  // A moment after load, so a visitor who clicks straight in never sees it.
+  setTimeout(show, 1500);
+  soundButton?.addEventListener("click", () => { resumeAudio(); soundButton.blur(); });
+}
 
 const world = buildWorld(scene, renderer);
 
@@ -220,7 +231,7 @@ function updateFocus(eye: Vector3) {
 // Where to start, in order of precedence:
 //   ?spawn=x,z,yawDegrees   anywhere, for debugging
 //   ?spawn=start            the entrance, forgetting the saved place
-//   ?at=<id> | <year> | newest   in front of that work
+//   ?at=<slug> | <id> | <year> | newest   in front of that work
 //   ?tour                   the first stop of the guided visit
 //   the saved place from last time, else the entrance.
 const spawnParam = params.get("spawn");
@@ -233,7 +244,7 @@ if (spawnParam && spawnParam !== "start") {
   if (pitchDeg) player.look(0, (-pitchDeg * Math.PI) / 180);
 } else if (params.has("tour")) {
   tour.start();
-} else if (atParam && nav.goTo(player, resolveAt(atParam))) {
+} else if (atParam && nav.goTo(player, resolveAt(visible, atParam))) {
   // placed in front of the requested work
 } else if (!restorePlace(player, stops) && entrance) {
   goToEntrance();
@@ -241,20 +252,6 @@ if (spawnParam && spawnParam !== "start") {
 const savePlace = trackPlace(player, stops);
 // ?read opens the card for whatever is in front on arrival, for checking renders.
 if (params.has("read")) setTimeout(() => act("read"), 2500);
-
-/** "newest" is the most recently added work; a number is the nearest year; anything else is an id. */
-function resolveAt(at: string): string {
-  if (at === "newest") {
-    return visible.reduce((best, a) => (a.createdAt >= best.createdAt ? a : best)).id;
-  }
-  const year = Number(at);
-  if (Number.isFinite(year) && at.trim() !== "") {
-    // On the lane: a branch work stands in its anchor's year, not its own.
-    const lane = visible.filter((a) => !a.branch);
-    return lane.reduce((best, a) => (Math.abs(a.date.year - year) < Math.abs(best.date.year - year) ? a : best)).id;
-  }
-  return at;
-}
 
 // Idle: after twenty seconds without a touch, draw every third frame, so a
 // tab left open does not keep a GPU busy for nothing; the simulations still

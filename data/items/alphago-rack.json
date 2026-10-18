@@ -1,5 +1,6 @@
 {
  "slug": "alphago-rack",
+ "aliases": ["alphago"],
  "title": "AlphaGo's rack",
  "kind": "image",
  "flat": true,
